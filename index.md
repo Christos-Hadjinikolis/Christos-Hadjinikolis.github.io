@@ -1,10 +1,7 @@
-## Welcome to GitHub Pages
+## About
+An ML Engineer driven by problem-solving and with a proven academic record in the field of Artificial Intelligence.
 
-You can use the [editor on GitHub](https://github.com/Christos-Hadjinikolis/Christos-Hadjinikolis.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
+### Christos Hadjinikolis
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
