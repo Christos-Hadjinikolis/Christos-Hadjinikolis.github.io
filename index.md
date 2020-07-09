@@ -1,5 +1,5 @@
 ## About
-An ML Engineer driven by problem-solving and with a proven academic record in the field of Artificial Intelligence.
+Lead ML Engineer with excellent presentation and communication skills. A passionate researcher with exposure to deep learning & evolutionary AI. A competent problem-solver with a proven academic record in the field of AI and with practical experience in Big Data engineering and advanced analytics. Specialised in graph-analytics.
 
 ### Christos Hadjinikolis
 
