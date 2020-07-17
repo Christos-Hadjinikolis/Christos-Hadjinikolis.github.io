@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b851bdf0-857e-4653-a960-f4b2806a8344" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1eoL3M3Tq9jsLJnULW7vQDaGUsX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b851bdf0-857e-4653-a960-f4b2806a8344" name="Default Changelist" comment="" />
+      <created>1594982798692</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594982798692</updated>
+      <workItem from="1594982801109" duration="418000" />
+      <workItem from="1594988957303" duration="668000" />
+      <workItem from="1594989657186" duration="1610000" />
+      <workItem from="1594991331512" duration="2089000" />
+      <workItem from="1594993877328" duration="416000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="603" y="306" key="#Notifications" timestamp="1594989827622">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state x="603" y="306" key="#Notifications/0.23.1440.821@0.23.1440.821" timestamp="1594989827622" />
+    <state x="337" y="89" key="SettingsEditor" timestamp="1594989285650">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="337" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1594989285650" />
+    <state x="421" y="82" width="598" height="735" key="find.popup" timestamp="1594992674264">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="421" y="82" width="598" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1594992674264" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1594992639131">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1594992639131" />
+  </component>
+</project>
