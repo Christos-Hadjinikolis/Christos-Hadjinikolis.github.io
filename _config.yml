@@ -1,3 +1,20 @@
+# Developer's Note: This is a sample _config.yml file offered with
+# jekyll-theme-prologue for your convenience. To use it, move it to your
+# project's root directory. Please note that the following lines are
+# NECESSARY for Prologue to work correctly:
+#
+# theme: jekyll-theme-prologue
+# collections: [sections]
+#
+# They activate the theme and tell Jekyll to find your homepage content
+# in /_sections. Note where "sections" starts with an underscore
+# and where it doesn't. The social settings will make links to
+# Twitter, etc., but only if you give the URL.
+#
+# Also, be sure to customize url and baseurl for your site.
+#
+# ---------------------------------------------------------------
+#
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -7,49 +24,42 @@
 #
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
+
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-
 title: ML-Engineering Affairs
-email: christos.hadjinikolis@gmail.com
+subtitle: ...the right place to be!
 description: >- # this means to ignore newlines until "baseurl:"
   Hi! I am Christos; welcome to my website. "ML Engineering Affairs" is the name and its sole purpose is to share my
   thoughts and challenges in the exciting area of Machine Learning, only from an engineering perspective. If you share my
-  passion for applied data science and are looking for a refresshing look at things, then you are at the right place. 
+  passion for applied data science and are looking for a refreshing look at things, then you are at the right place.
+author: Christos Hadjinikolis
+email: christos.hadjinikolis@gmail.com
+avatar: assets/images/profile.jpg
+
+# You'll want to customize url and baseurl for your own site:
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://github.com/Christos-Hadjinikolis" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: chatzinikolis
-github_username:  Christos-Hadjinikolis
+url: "https://github.com/Christos-Hadjinikolis"
 
-# Build settings
+# Social settings
+# Make sure to include the full url including protocol, e.g. https://github.com/chrisbobbe
+twitter_url: chatzinikolis
+facebook_url:
+googleplus_url:
+instagram_url:
+linkedin_url:
+github_url: Christos-Hadjinikolis
+stackoverflow_url:
+pinterest_url:
+slack_url:
+dribbble_url:
+
+# Google Analytics Tracking ID goes here:
+google_analytics:
+
+# The following settings are NECESSARY for the Prologue theme to run:
 theme: jekyll-theme-prologue
-plugins:
-  - jekyll-feed
-
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+collections: [sections]
