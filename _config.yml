@@ -21,7 +21,7 @@
 title: ML Engineering Affairs
 email: christos.hadjinikolis@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Hi! I am Christos; welcome to my website. "ML Engineering Affairs" is the name and its sole purpose is to share my
+  Hi! I am Christos; welcome to my website. <b>"ML Engineering Affairs"</b> is the name and its sole purpose is to share my
   thoughts and challenges in the exciting area of Machine Learning, only from an engineering perspective. If you share my
   passion for applied data science and are looking for a refresshing look at things, then you are at the right place. 
 baseurl: "" # the subpath of your site, e.g. /blog
