@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: ML Engineering Affairs
+title: ML-Engineering Affairs
 email: christos.hadjinikolis@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Hi! I am Christos; welcome to my website. <b>"ML Engineering Affairs"</b> is the name and its sole purpose is to share my
