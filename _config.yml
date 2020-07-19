@@ -31,9 +31,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: ML-Affairs
-subtitle: ...just do it!
+subtitle: Hadjinikolis, Christos
 description: >- # this means to ignore newlines until "baseurl:"
-  Hi! I am Christos; welcome to my website. "ML Engineering Affairs" is the name and its sole purpose is to share my
+  Hi! I am Christos; welcome to my website. "ML-Affairs" is the name and its sole purpose is to share my
   thoughts and challenges in the exciting area of Machine Learning, only from an engineering perspective. If you share my
   passion for applied data science and are looking for a refreshing look at things, then you are at the right place.
 author: Christos Hadjinikolis
