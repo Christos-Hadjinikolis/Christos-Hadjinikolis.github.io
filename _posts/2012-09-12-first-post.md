@@ -1,14 +1,19 @@
 ---
-title: First Post
-author: Chris
+title: Preparing & taking the AWS ML Specialty Certification 
+author: Christos Hadjinikolis
 layout: post
 ---
-Lorem ipsum dolor sit amet, iusto ridens dictas te sed. Error latine vis et. Ex cum munere definitiones, ne quas debitis contentiones cum, epicurei constituam ea sit. Dicant aeterno dolorum ex eum, qui everti iisque consectetuer ea! Duo in falli similique, nec tritani accusam te. Enim sapientem intellegat te pri, nam at atqui accumsan vituperata.
+I recently took the [AWS Certified Machine Learning - Specialty](https://aws.amazon.com/certification/certified-machine-learning-specialty/). I went through a lot of work in order to adequately prepare for this exam and I can tell you that it is indeed one of the hardest AWS certifications. Nevertheless, with proper preparation and a but of dedication you should be fine.
 
-Sed id graeci feugiat. No meis summo consequat vel! Albucius phaedrum omittantur eos an, ex sit lorem possim perpetua. Usu et sumo posidonium, ut qui dicat sapientem tincidunt, et has consul oporteat torquatos! In qui fabulas facilisis, justo nonumes an his, quo vidisse nusquam facilisis no. Eam iriure mediocrem suavitate an?
+## How long do I need to study for this?
+Well it depends; if you are an experienced Data Scientist and have been applying Data Science for about 3+ years then an hour per day for a month should be enough. This also holds if you are an engineer already exposed to the AWS infrastructure and services but are not familiar with Data Science topics. You see, this certification is labelled as hard simply because it is not just about AWS services. 50% of it is concerned with purely Data Science topics; the other 50% is about AWS services that support Data Science and ML activities. If you are neither exposed to Data Science nor to the AWS services then at least 2 months of studying is recommended.    
 
-Quo te solum malorum prompta, porro oblique senserit cum et! Pro wisi cetero periculis ei, nam ullum dicit accusam ne, ad quo apeirian principes dissentiunt. An mea mucius vocent iisque? Vel eu altera consetetur, clita perfecto mea ad. Eos in vero ullum regione, ei veniam disputando pro, nam et iuvaret detracto voluptua.
+## What does the exam cover?
 
-Ad tritani deleniti sit, ne per ubique habemus singulis. Pro at integre alienum mediocritatem, mea ad libris adipisci necessitatibus, nostro constituam sit te. Recusabo oportere et mea, case minimum deleniti no quo, deseruisse conclusionemque vis te. Nam ex iudicabit constituam accommodare, dicam singulis ex eos! Eu mea viderer ceteros repudiandae, id erat voluptatum mea, ut consul omittam convenire quo. Id justo ipsum mei, modus contentiones per et! At mel omnium lucilius instructior, vel quando graeco in, eos docendi periculis eloquentiam ut.
+## How should I prepare?
 
-Eam habemus aliquando ut. Id idque virtute antiopam duo, et idque falli incorrupte eos, in sea omnium instructior. Mei ex nostrud moderatius cotidieque, cu sea partiendo euripidis, eam no tollit doming! Has ne facilisi vulputate, aliquando disputationi mel eu. Ex pri diceret delectus intellegam, regione definiebas pro ex.
+## How long does the exam last?
+
+## Any tips? Advice?
+
+Good luck 
