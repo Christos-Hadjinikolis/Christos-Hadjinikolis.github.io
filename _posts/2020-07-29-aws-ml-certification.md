@@ -17,7 +17,7 @@ You see, this certification is labelled as hard simply because it is not just ab
 ## What does the exam cover?
 Data Engineering covers 20% of Examination, then Exploratory Data Analysis concerns another 24% of Examination, modelling is 36% and Machine Learning Implementation and Operations (20%).  
 
-I put together a brief list of bullets, summarising the content below:
+I put together a list below, in an attempt to summarise the content:
 * **Data Concepts**: Deals with data preparation routines; things like: Feature selection and feature engineering, PCA, dealing with missing data or unbalanced datasets, labels and one-hot encoding as well as splitting and randomisation of data.
 * **ML Concepts**: Covers:
     * Classical ML Categories of Algorithms
@@ -87,7 +87,7 @@ I put together a brief list of bullets, summarising the content below:
 This is by no means an exhaustive list, but you will at least get an idea about what is generally involved.
 
 ## How should I prepare?
-There many ways to prepare. Myself, I covered [the relative course on Linux academy](https://linuxacademy.com/cp/modules/view/id/340), which I highly recommend. 
+There are many ways to prepare. Myself, I covered [the relative course on Linux academy](https://linuxacademy.com/cp/modules/view/id/340), which I highly recommend. 
 
 Ideally I would recommend spending some time with Sagemaker and try to interact with services like lambda functions and step-functions as well as Kinesis, Glue and Athena. 
 However that would take a while to do plus, using these resources does not come for free.     
@@ -117,7 +117,7 @@ I would definitely recommend covering the Sagemalker [FAQs](https://aws.amazon.c
 
 Do cover the official AWS practice exam; it is just 20 questions, but it is enough to give you an idea about what you are up against. 
 
-Finally, I have put together this [Cheat-sheet](). It was quite useful to me and I hope that it will be to you too. Feel free to fork this repo and enrich it with additional material. 
+Finally, I have put together this [Cheat-sheet](https://github.com/Christos-Hadjinikolis/AWS-ML-cheatsheet/blob/master/README.md). It was quite useful to me and I hope that it will be to you too. Feel free to fork this repo and enrich it with additional material. 
 
 That's it! I really wish that this article will help you get started with your learning journey and I hope that soon enough you will be joining the [AWS Certified Global Community](https://www.linkedin.com/groups/6814264/) to share your badge with everyone. 
 
