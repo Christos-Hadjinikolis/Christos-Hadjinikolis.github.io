@@ -125,5 +125,5 @@ That's it! I really wish that this article will help you get started with your l
 
 Cheers!
 
-
+<blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">I successfully took the AWS Machine Learning Specialty Certification during the COVID-19 lockdown! <br><br>Here are my thoughts: <a href="https://t.co/WejGBrmDvy">https://t.co/WejGBrmDvy</a></p>&mdash; Christos Hadjinikoli (@chatzinikolis) <a href="https://twitter.com/chatzinikolis/status/1288507051824549888?ref_src=twsrc%5Etfw">July 29, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
