@@ -15,7 +15,7 @@ Well it depends; if you are an experienced Data Scientist and have been applying
 You see, this certification is labelled as hard simply because it is not just about AWS services. 50% of it is concerned with purely Data Science topics; the other 50% is about AWS services that support Data Science and ML activities. If you are neither exposed to Data Science nor to the AWS services then at least 2 months of studying is recommended.    
 
 ## What does the exam cover?
-Data Engineering covers 20% of Examination, then Exploratory Data Analysis concerns another 24% of Examination, modelling is 36% and Machine Learning Implementation and Operations (20%).  
+Data Engineering covers 20% of the exam, then Exploratory Data Analysis concerns another 24%, modelling is 36% and Machine Learning Implementation and Operations is 20%.  
 
 I put together a list below, in an attempt to summarise the content:
 * **Data Concepts**: Deals with data preparation routines; things like: Feature selection and feature engineering, PCA, dealing with missing data or unbalanced datasets, labels and one-hot encoding as well as splitting and randomisation of data.
@@ -89,35 +89,37 @@ This is by no means an exhaustive list, but you will at least get an idea about 
 ## How should I prepare?
 There are many ways to prepare. Myself, I covered [the relative course on Linux academy](https://linuxacademy.com/cp/modules/view/id/340), which I highly recommend. 
 
-Ideally I would recommend spending some time with Sagemaker and try to interact with services like lambda functions and step-functions as well as Kinesis, Glue and Athena. 
-However that would take a while to do plus, using these resources does not come for free.     
+Ideally I would recommend spending some time with `Sagemaker` and try to interact with services like `lambda` functions and `step-functions` as well as `Kinesis`, `Glue` and `Athena`. 
+However, that would take a while to do plus, using these resources does not come for free.     
 
-The linux academy course has a number of labs that will help you develop an adequate understanding of these services. You can worry about honing your skills and knowledge at a later point. 
+The Linux Academy Course has a number of labs that will help you develop an adequate understanding of these services. You can worry about honing your skills and knowledge at a later point. 
 
 ## How long does the exam last?
 The exam consists of 65 multiple-choice, multi-selection questions. It is 3 hours long, which I think is more than enough 
-to answer all questions and then review your responses. 
+to answer all questions and then review your responses (...or take a nap while waiting for your colleagues to finish; I do have a colleague who actually did this&ndash;myself I can never relax that much when it comes to exams). 
 
-In general, AWS exams are taken at authorised exam centers. Due to the COVID-19 commotion, this was adjusted to satisfy the high demand in exam takers and
-people can take the test from home. However, the process is equally string:
+In general, AWS exams are taken at authorised exam centers. Due to the COVID-19 lockdown, this was adjusted to satisfy the high demand in exam takers and
+people can take the test from home. However, the process is equally strict:
 * You need to provide information about the room you will be sitting in;
-* Provide pictures of your surroundings to show you have no notes or anything suspicious close to you;
-* A proctor will login at the time of the exam and will ask to inspect the space around you (he asked me to show him the back of my wall prio beginning and doing so with my iMac was quite a challenge... so if you have an option go for laptop).
+* Room needs to be completely quite during the exam session;
+* You need to be alone in the room;
+* You need to provide pictures of your surroundings to show you have no notes or anything suspicious close to you;
+* A proctor will login at the time of the exam and will ask to inspect the space around you (he asked me to show him the back of my wall prior beginning and doing so with my iMac was quite a challenge... so if you have an option go for laptop).
+* The exam session will be recorded. 
 
-Note that, as one would expect, looking away from the screen for more than a couple of seconds might prompt the proctor to give you a notice. TO be honest, as soon as the exam began it was quite easy to just focus on the screen. It took me 
-less than an hour to cover all questions and then used all the reamingin time reviewing my responses. I received notification that I passed on exam completion, but it was subject to a committee review. I guess that examiners inspect the video of 
+Note that, as one would expect, looking away from the screen for more than a couple of seconds might prompt the proctor to give you a notice. To be honest, as soon as the exam began it was quite easy to just focus on the screen. It took me 
+less than an hour to cover all questions and then used all the remaining time reviewing my responses. I received a positive notification that I passed on exam completion, but it was subject to a committee review. I guess that examiners inspect the video of 
 yourself taking the exam to identify if you tried cheating or something. In no more than 3 days I got the official certification. 
 
 ## Any tips? Advice?
-Well, tip number one is: "If you don't know which is the right answer, then just go for the AWS solution in the list of options". At large, this exams tests whether you are familiar with what is available to you. 
-If a client wants to use ML for content image moderation and you recommend anything other than Rekognition then you clearly don't know how Rekognition is used! This has generally worked for me as a way of filtering in and out
-options.  
+Well, tip number one is: "If you don't know which is the right answer, then just go for the AWS solution in the list of options". At large, this exam tests whether you are familiar with what is available to you through the AWS platform 
+If a client wants to use ML for image moderation and you recommend anything other than `Rekognition` then you clearly don't know how `Rekognition` is used! This has generally worked for me as a way of filtering in and out options.  
 
-I would definitely recommend covering the Sagemalker [FAQs](https://aws.amazon.com/sagemaker/faqs/) which I see as a wonderfull source for exam material. 
+I would definitely recommend covering the Sagemalker [FAQs](https://aws.amazon.com/sagemaker/faqs/) which I see as a wonderful source for exam material. 
 
 Do cover the official AWS practice exam; it is just 20 questions, but it is enough to give you an idea about what you are up against. 
 
-Finally, I have put together this [Cheat-sheet](https://github.com/Christos-Hadjinikolis/AWS-ML-cheatsheet/blob/master/README.md). It was quite useful to me and I hope that it will be to you too. Feel free to fork this repo and enrich it with additional material. 
+Finally, I have put together this [Cheat-sheet](https://github.com/Christos-Hadjinikolis/AWS-ML-cheatsheet/blob/master/README.md). It was quite useful to me and I hope that it will be to you too. Feel free to fork this repo, enrich it with additional material and issue a PR to include your changes. 
 
 That's it! I really wish that this article will help you get started with your learning journey and I hope that soon enough you will be joining the [AWS Certified Global Community](https://www.linkedin.com/groups/6814264/) to share your badge with everyone. 
 
