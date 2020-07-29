@@ -1,5 +1,5 @@
 ---
-title: AWS ML Specialty Certification 
+title: AWS ML Certification 
 author: Christos Hadjinikolis
 layout: post
 ---
