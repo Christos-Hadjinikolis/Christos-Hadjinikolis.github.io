@@ -18,3 +18,7 @@ If you encounter any errors during this process, see the troubleshooting page. A
 
 **Note**: *Installation might be different depending on your operating system. See our guides for OS specific instructions.*
 
+## Adding an RSS Feed
+Follow instructions here: https://learn.cloudcannon.com/jekyll/rss-feed/
+
+
