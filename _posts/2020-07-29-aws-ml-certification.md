@@ -7,6 +7,7 @@ I recently took the [AWS Certified Machine Learning - Specialty](https://aws.ama
 I went through a lot of work in order to adequately prepare for this exam and I can tell you that it is indeed one of 
 the hardest AWS certifications. Nevertheless, with proper preparation and a bit of dedication you should be fine.
 
+<meta property="og:image" content="assets/images/2020-07-29-AWS-Cert.png" />
 <span class="image center"><img src="{{ 'assets/images/2020-07-29-AWS-Cert.png' | relative_url }}" alt="" /></span>
 
 ## How long do I need to study for this?
@@ -56,23 +57,23 @@ I put together a list below, in an attempt to summarise the content:
     * Keras
     * Scikit-learn
 * **Amazon Serverless Services**: Not everything; think about the things that a Data Scientist of ML engineer would need to do.
-    * Simple Storage Services - S3
-    * Glue
-    * Athena
-    * Amazon Quicksight
-    * Kinesis, Streams, Firehose, Video & Analytics (S.O.S. this one ;) ) 
-    * EMR with Spark
-    * EC2 for ML
-    * Lambda Functions
-    * Step Functions
+    * `Simple Storage Services - S3`
+    * `Glue`
+    * `Athena`
+    * `Amazon Quicksight`
+    * `Kinesis`, Streams, Firehose, Video & Analytics (S.O.S. this one ;) ) 
+    * `EMR` with Spark
+    * `EC2` for ML
+    * `Lambda Functions`
+    * `Step Functions`
 * **Amazon Serverless ML Services**: These are out-of-the-box ML solutions offered by AWS.
-    * Rekognition (image/video)
-    * Amazon Poly (Text-to-Speech)
-    * Amazon Transcribe (Speech-to-Text)
-    * Amazon Translate
-    * Amazon Comprehend (Text Analysis Service)
-    * Amazon Lex (Conversation Interface Service - Chatbots)
-    * Amazon Service Chaining with AWS Step Functions
+    * `Rekognition` (image/video)
+    * `Amazon Poly` (Text-to-Speech)
+    * `Amazon Transcribe` (Speech-to-Text)
+    * `Amazon Translate`
+    * `Amazon Comprehend` (Text Analysis Service)
+    * `Amazon Lex` (Conversation Interface Service - Chatbots)
+    * `Amazon Service Chaining` with `AWS Step Functions`
 * **Sagemaker**: A service that you really need to spend time with!
     * What is it exactly?
     * Benefits? Advantages?
@@ -101,10 +102,10 @@ to answer all questions and then review your responses (...or take a nap while w
 In general, AWS exams are taken at authorised exam centers. Due to the COVID-19 lockdown, this was adjusted to satisfy the high demand in exam takers and
 people can take the test from home. However, the process is equally strict:
 * You need to provide information about the room you will be sitting in;
-* Room needs to be completely quite during the exam session;
+* Room needs to be completely quiet during the exam session;
 * You need to be alone in the room;
 * You need to provide pictures of your surroundings to show you have no notes or anything suspicious close to you;
-* A proctor will login at the time of the exam and will ask to inspect the space around you (he asked me to show him the back of my wall prior beginning and doing so with my iMac was quite a challenge... so if you have an option go for laptop).
+* A proctor will login at the time of the exam and will ask to inspect the space around you (he asked me to show him the back of my computer prior beginning and doing so with my iMac was quite a challenge... so if you have an option go for laptop).
 * The exam session will be recorded. 
 
 Note that, as one would expect, looking away from the screen for more than a couple of seconds might prompt the proctor to give you a notice. To be honest, as soon as the exam began it was quite easy to just focus on the screen. It took me 
@@ -112,8 +113,7 @@ less than an hour to cover all questions and then used all the remaining time re
 yourself taking the exam to identify if you tried cheating or something. In no more than 3 days I got the official certification. 
 
 ## Any tips? Advice?
-Well, tip number one is: "If you don't know which is the right answer, then just go for the AWS solution in the list of options". At large, this exam tests whether you are familiar with what is available to you through the AWS platform 
-If a client wants to use ML for image moderation and you recommend anything other than `Rekognition` then you clearly don't know how `Rekognition` is used! This has generally worked for me as a way of filtering in and out options.  
+Well, tip number one is: "If you don't know which is the right answer, then just go for the AWS solution in the list of options". At large, this exam tests whether you are familiar with what is available to you through the AWS platform. If a client wants to use ML for image moderation and you recommend anything other than `Rekognition` then you clearly don't know how `Rekognition` is used! This has generally worked for me as a way of filtering in and out options.  
 
 I would definitely recommend covering the Sagemalker [FAQs](https://aws.amazon.com/sagemaker/faqs/) which I see as a wonderful source for exam material. 
 
