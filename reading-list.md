@@ -12,13 +12,15 @@ Here are some books I would recommend:
 1. [Things you should never do](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/), Joel Spolsky
 2. [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/), by Chris Beams
 3. [The 5 Tribes of the ML world](https://medium.com/42ai/the-5-tribes-of-the-ml-world-670ebce96b4c), by Michaël Trazzi
-4. [How is search different than other machine learning problems?](https://opensourceconnections.com/blog/2017/08/03/search-as-machine-learning-prob/), by Doug Turnbull
-5.  
+4. [How is search different than other machine learning problems?](https://opensourceconnections.com/blog/2017/08/03/search-as-machine-learning-prob/), by Doug Turnbull 
 
 ## Bloggers I recommend
-1. [Renaissance Developer](https://exubero.com/about/), Joe Schmetzer
-2. [Open Source Connections](https://opensourceconnections.com/team/doug-turnbull/), Doug Turnbull 
+1. [Renaissance Developer](https://exubero.com/about/), by Joe Schmetzer
+2. [Open Source Connections](https://opensourceconnections.com/team/doug-turnbull/), by Doug Turnbull 
+3. [the morning paper](https://blog.acolyer.org/), by Adrian Colyer
 
+## Initiatives I support
+Check out the [UKRI Centre for Doctoral Training (CDT) in Safe and Trusted Artificial Intelligence (STAI)](https://www.kcl.ac.uk/informatics/research/safe-trusted-ai)
 
 ## Technical
 1. [The Phoenix Project](https://www.amazon.de/s/?ie=UTF8&keywords=the+phoenix+project&index=aps&tag=googdemozdesk-21&ref=pd_sl_ahc3gazpa_e&adgrpid=82016986236&hvpone=&hvptwo=&hvadid=394592758728&hvpos=&hvnetw=g&hvrand=12007918297408763142&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9061572&hvtargid=kwd-826183750&hydadcr=24469_1812055&gclid=EAIaIQobChMItdjysbzg6gIVyOF3Ch10HQKiEAAYASAAEgIr2vD_BwE&language=en_GB), Novel by Gene Kim, George Spafford, and Kevin Behr
