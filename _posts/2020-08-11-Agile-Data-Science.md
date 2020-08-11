@@ -93,6 +93,7 @@ See you soon!
 
 <p><a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml"><img src="//feedburner.google.com/fb/images/pub/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/></a>&nbsp;<a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml">Register to the ML-Affairs RSS Feed</a></p>
 
+<blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">I was recently interviewed by <a href="https://t.co/t4PaVxz4Y2">https://t.co/t4PaVxz4Y2</a> on &quot;doing data science the agile way&quot;. You can read their blog here: <a href="https://t.co/zkI9zNoEAR">https://t.co/zkI9zNoEAR</a></p>&mdash; Christos Hadjinikoli (@chatzinikolis) <a href="https://twitter.com/chatzinikolis/status/1293217047472734213?ref_src=twsrc%5Etfw">August 11, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
          
