@@ -7,3 +7,6 @@ title: Homepage
 icon: fa-home
 order: 1
 ---
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+</head>>

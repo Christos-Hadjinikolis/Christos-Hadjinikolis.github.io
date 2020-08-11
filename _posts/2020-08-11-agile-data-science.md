@@ -19,7 +19,7 @@ Around two weeks ago I was approached by [Dr. Tim Frey](https://www.linkedin.com
 
 I must admit this was a first for me! Then again, that talk in 2018 was quite an interesting one for me too. 
 
-## It's story time... 
+## How it all happened...
 You see, 3 years ago I was asked to join an exceptional team over at UBS to help with a graph analytics project. If you asked me then I would 
 proudly tell you that "...I am a Data Scientist"; that is how I saw myself. However, that was bound to change forever. 
 
