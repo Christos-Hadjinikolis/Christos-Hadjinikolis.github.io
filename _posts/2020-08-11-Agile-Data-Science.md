@@ -7,6 +7,7 @@ layout: post
 <meta property="og:image" content="assets/images/iunera-logo-shadow.png" />
 </head>
 Re-posting from [https://www.iunera.com/](https://www.iunera.com/kraken/big-data-science-strategy/the-agile-approach-in-data-science-explained-by-an-ml-expert/)
+
 Around two weeks ago I was approached by [Dr. Tim Frey](https://www.linkedin.com/in/dr-tim-frey-7b28171/), General Manager at Iunera GmbH & Co. KG. I was quite surprised to read his message:
 
 > Hi Christos, 
