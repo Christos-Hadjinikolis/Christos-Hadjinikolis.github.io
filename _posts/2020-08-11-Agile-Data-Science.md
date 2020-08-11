@@ -31,8 +31,8 @@ So, inevitably, my project manager approached me and asked "...how about we take
 I didn't have a clue about what that meant in reality, but I was about to find out. He said: "Well, don't worry, we will pair 
 you with an engineer and you both can get started on it". So we did! 
 
-This is basically the story about how I was exposed to software engineering and the Agile way of working&ndash;about how i was converrted into 
-a ML Engineer. Two years later I decided to take my learnings from this experience and share it with my community, and so I did at mcubed London in 2018:
+This is basically the story about how I was exposed to software engineering and the Agile way of working&ndash;about how I was converted into 
+a ML Engineer. Two years later I decided to take my learnings from this experience and share it with my community, and so I did at **mCubed** London in 2018:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nRsqFrutfSg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
