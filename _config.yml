@@ -61,5 +61,5 @@ dribbble_url:
 google_analytics: UA-173020434-1
 
 # The following settings are NECESSARY for the Prologue theme to run:
-theme: jekyll-theme-prologue
+remote_theme: jekyll-theme-prologue
 collections: [sections]
