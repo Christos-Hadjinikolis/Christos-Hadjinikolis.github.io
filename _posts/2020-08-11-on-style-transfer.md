@@ -96,9 +96,8 @@ What is now left is understanding $$\mathcal{L}_{content}$$ and $$\mathcal{L}_{s
 ### $\mathcal{L}_{content}$
 Here is where everything gets a bit complicated but at the same time, you get to piece everything together nicely. 
 
-$\mathcal{L}_{content}$ is
-described as the squared-error loss between two feature representations: one concerned with the random photograph $\overrightarrow{p}$ and the generated image $\overrightarrow{x}$ 
-which is originally a white noise image. 
+$\mathcal{L}_{content}$ is described as the squared-error loss between two feature representations: one concerned with the random photograph 
+$\overrightarrow{p}$ and the generated image $\overrightarrow{x}$ which is originally a white noise image. 
 <span class="image center"><img src="{{ 'assets/images/2020-08-11-style-transfer-paper-06.png' | relative_url }}" alt="" /></span>
 $P^l$ and $F^l$ are the respective feature representations for the two images in layer $l$. The authors used the feature space provided by the 16 convolutional and 5 pooling layers of the 19 layer `VGG` Network. 
 Here, $F^l$ represents an activation function ($F$) at a given layer $l$ or, plainly, a bank of non-linear filters for that layer. The complexity of these filters increases 
@@ -112,11 +111,46 @@ on the white noise image to find another image that matches the feature response
 So, the approach is to gradually changes the initially random image $\overrightarrow{x}$ until it generates the same response in a certain layer of the CNN as the original image. 
 
 ### $\mathcal{L}_{style}$ 
-    
+The style loss function is described by the following equation:
+<span class="image center"><img src="{{ 'assets/images/2020-08-11-style-transfer-paper-08.png' | relative_url }}" alt="" /></span>    
+which is basically a sum of the weighted distances between feature correlations across the different filter (layer) responses for two images:
 
+* the original image $\overrightarrow{a}$, and;
+* a white noise image $\overrightarrow{x}$, used to generate a style representation of the original image. 
+  
+Let's break this down a bit more; what are these feature correlations? Practically they are a way to express a relationship between a feature map $F$ and 
+the filters ($i$ and $j$) of the different layers ($l$) applied on it. This is beautifully expressed as a matrix of all possible inner 
+products between the generated set of feature vectors, called a ["Gram matrix $G$"](https://www.youtube.com/watch?v=DEK-W5cxG-g), as per the below equation:
+<span class="image center"><img src="{{ 'assets/images/2020-08-11-style-transfer-paper-09.png' | relative_url }}" alt="" /></span>
 
-For image synthesis they found that replacing the max-pooling operation by average pooling improves the gradient flow and one obtains slightly
+One such matrix is generated for each of the two images (the original $\overrightarrow{a}$ and $\overrightarrow{x}$), namely $A_{ij}^l$ and $G_{ij}^l$, and a squared 
+distance is calculated between these two. The objective is to minimise the distance. So, practically, as with every ML problem, what we have is an optimisation problem and 
+a cost function! Minimising this distance can be achieved through the application of gradient descent using standard error back-propagation 
+to adjust the weight values of equation $5$.     
+
+### Putting it all together
+Finally, in order to generate the final image with the style transfer, we return to equation 7, which practically jointly 
+minimises the distance of a white noise image from the content representation of the photograph in one layer of the network 
+and the style representation of the painting in a number of layers of the CNN. The authors also note that:
+> For image synthesis they found that replacing the max-pooling operation by average pooling improves the gradient flow and one obtains slightly
 more appealing results.
+
+That's it! So, what's left now is getting our hands dirty!
+
+## Using `PyTorch` for Style transfer
+If you following this [link](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html?highlight=style%20transfer) to the official 
+`PyTorch` website you will find a very well written tutorial on how to apply style transfer with `PyTorch`. I will tryn to provide here
+my own take of it. 
+
+<pre class="brush: python">
+class StyleTransfer(object):
+
+    def apply(self):
+        self.x = None
+</pre>
+
+   
+
 
 
 
