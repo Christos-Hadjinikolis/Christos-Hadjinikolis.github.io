@@ -10,7 +10,7 @@ layout: post
 <script type="text/javascript"
   src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
-<meta property="og:image" content="assets/images/2020-08-15-style-transfer-koules.png" />
+    <meta property="og:image" content="assets/images/2020-08-15-style-transfer-koules.png" />
 </head>
 I am currently in Crete for my annual get away. Crete is an amazing island with many beautiful places to visit and a vast 
 history that goes all the way back to the Minoans in 2700 BC.  
@@ -182,4 +182,5 @@ See you soon!
 
 <p><a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml"><img src="//feedburner.google.com/fb/images/pub/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/></a>&nbsp;<a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml">Register to the ML-Affairs RSS Feed</a></p>
 
+<blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">Just had a go at style-transfer <a href="https://twitter.com/hashtag/cnn?src=hash&amp;ref_src=twsrc%5Etfw">#cnn</a> <a href="https://twitter.com/hashtag/deep_learmning?src=hash&amp;ref_src=twsrc%5Etfw">#deep_learmning</a>. Have a look at my latest blog-post<a href="https://t.co/oTEdZIL1T0">https://t.co/oTEdZIL1T0</a></p>&mdash; Christos Hadjinikoli (@chatzinikolis) <a href="https://twitter.com/chatzinikolis/status/1294933589277237248?ref_src=twsrc%5Etfw">August 16, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
          
