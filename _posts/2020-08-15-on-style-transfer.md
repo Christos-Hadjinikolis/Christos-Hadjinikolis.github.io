@@ -4,7 +4,6 @@ author: Christos Hadjinikolis
 layout: post
 ---
 <head>
-<title>Style Transfer in Heraklion</title>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script>
@@ -141,7 +140,8 @@ That's it! So, what's left now is getting our hands dirty!
 If you following this [link](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html?highlight=style%20transfer) to the official 
 `PyTorch` website you will find a very well written tutorial on how to apply style transfer with `PyTorch`. I provide
 my own take of it [**$\rightarrow$here$\leftarrow$**](https://github.com/Christos-Hadjinikolis/style-transfer/blob/master/tests/experiments/Style_Transfer_Tutorial.ipynb). You 
-can follow the link to the python notebook and copy-paste the code to give it a try.   
+can follow the link to the python notebook and copy-paste the code to give it a try.
+<span class="image center"><img src="{{ 'assets/images/2020-08-15-style-transfer-paper-14.png' | relative_url }}" alt="" /></span>   
 
 I intend to work on creating a package for it and will provide an updated post on it once I do (it will be developed in the same repo as the link). The intention is
 to be able to style images through the packages through an intuitive api that would take the image to be styled as the 
@@ -159,7 +159,10 @@ pst.generate(
 </pre>   
 
 ## Enjoy some of the outputs:
-Here are some of the results of this work. I tried bledning the fortress of Koules with 4 different grafittis I was able to photograph. 
+Here are some of the results of this work. I tried blending the fortress of Koules with 4 different grafittis I was able to photograph.
+
+The original picture:
+<span class="image center"><img src="{{ 'assets/images/2020-08-15-style-transfer-koules-fortress.jpg' | relative_url }}" alt="" /></span>
 
 The result is not always great, but it was still very interesting to try:
 
