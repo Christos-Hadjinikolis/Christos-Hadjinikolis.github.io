@@ -14,7 +14,7 @@ Here are some very interesting readings I would recommend:
 3. [The 5 Tribes of the ML world](https://medium.com/42ai/the-5-tribes-of-the-ml-world-670ebce96b4c), by Michaël Trazzi
 4. [How is search different than other machine learning problems?](https://opensourceconnections.com/blog/2017/08/03/search-as-machine-learning-prob/), by Doug Turnbull 
 
-## Bloggers I recommend
+## Bloggers I recommend!
 1. [Renaissance Developer](https://exubero.com/about/), by Joe Schmetzer
 2. [Open Source Connections](https://opensourceconnections.com/team/doug-turnbull/), by Doug Turnbull 
 3. [the morning paper](https://blog.acolyer.org/), by Adrian Colyer
