@@ -11,7 +11,7 @@ layout: post
     <meta property="og:image" content="assets/images/2020-08-15-style-transfer-koules.png" />
 </head>
 I am currently in Crete for my annual get away. Crete is an amazing island with many beautiful places to visit and a vast 
-history that goes all the way back to the Minoans in 2700 BC.  
+history that goes all the way back to the Minoans in 3500 BC.  
 
 <span class="image center"><img src="{{ 'assets/images/2020-08-15-style-transfer-koules.png' | relative_url }}" alt="" /></span>
 One of the things I love doing whenever I am here is strolling around the city of Heraklion and taking pictures of the many hidden alleys, 
