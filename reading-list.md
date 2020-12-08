@@ -16,7 +16,7 @@ Here are some very interesting readings I would recommend:
 
 ## Bloggers I recommend!
 1. [Renaissance Developer](https://exubero.com/about/), by Joe Schmetzer
-2. [Open Source Connections](https://opensourceconnections.com/team/doug-turnbull/), by Doug Turnbull 
+2. [Open Source Connections](https://opensourceconnections.com/blog/author/doug-turnbull/), by Doug Turnbull 
 3. [the morning paper](https://blog.acolyer.org/), by Adrian Colyer
 
 ## Technical Books
