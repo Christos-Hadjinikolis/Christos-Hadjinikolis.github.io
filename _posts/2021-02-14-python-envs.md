@@ -264,11 +264,11 @@ $ pwd
 ```
 Then, if you do:
 ```shell
-~/GitHub $ cd project_a                           chadjinik@Christoss-iMac
+~/GitHub $ cd project_a
 created virtual environment CPython3.9.0.final.0-64 in 448ms
   creator CPython3Posix(dest=/Users/<username>/.pyenv/versions/3.9.0/envs/project-a-venvo, clear=False, no_vcs_ignore=False, global=False)
   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/Users/<username>/Library/Application Support/virtualenv)
-    added seed packages: pip==21.0.1, setuptools==52.0.0, wheel==0.36.2
+    added seed packages: pip==20.3.1, setuptools==51.3.3, wheel==0.36.2
   activators BashActivator,CShellActivator,FishActivator,PowerShellActivator,PythonActivator,XonshActivator
 (project-a-venv) --------------------------------------------------------------------------------
 ~/GitHub/project_a $
