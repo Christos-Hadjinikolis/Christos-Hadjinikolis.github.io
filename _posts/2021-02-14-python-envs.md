@@ -331,11 +331,15 @@ $ jupyter notebook
 I really hope that this was a helpful post and if you are new to python, I hope that I have helped you
 disambiguate some confusing aspects of configuring python at the start of your journey!  
 
+The bellow references were very helpful for putting together this post: 
+* [The right and wrong way to set Python 3 as default on a Mac](https://opensource.com/article/19/5/python-3-default-mac)
+* [Automatic activation of virtualenv (+ pyenv)](https://glhuilli.github.io/virtual-environments.html)
+
 Remember to like my post and re-share my post (if you really liked it)!
 
 See you soon!
 
 <p><a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml"><img src="//feedburner.google.com/fb/images/pub/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/></a>&nbsp;<a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml">Register to the ML-Affairs RSS Feed</a></p>   
 
-<blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">My first blog: <a href="https://t.co/JL1UkvYmyH">https://t.co/JL1UkvYmyH</a></p>&mdash; Christos Hadjinikoli (@chatzinikolis) <a href="https://twitter.com/chatzinikolis/status/1288427049485578241?ref_src=twsrc%5Etfw">July 29, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Here is my latest post on configuring `Python Envs`<a href="https://t.co/uaW70OrOyh">https://t.co/uaW70OrOyh</a></p>&mdash; Christos Hadjinikoli (@chatzinikolis) <a href="https://twitter.com/chatzinikolis/status/1361100382445912066?ref_src=twsrc%5Etfw">February 14, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  
    
