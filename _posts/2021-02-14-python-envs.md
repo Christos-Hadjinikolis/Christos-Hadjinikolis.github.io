@@ -102,7 +102,7 @@ Available versions:
 ...
   stackless-3.7.5
 ```
-You will see the full list of available python distributions available for installation. 
+You will see the full list of python distributions available for installation. 
 
 Choose the one you want and do, e.g. 3.9.0:
 ```shell
@@ -122,6 +122,7 @@ $ pyenv global 3.9.0
 ```
 At this point, one should be able to find the full executable path to each of these using `pyenv version`.
 ```shell
+$ pyenv version
 3.9.0 (set by /Users/<username>/.pyenv/version)
 ```
 
@@ -132,7 +133,7 @@ one to one mapping.
 
 Why you say? Well, for starters, this helps you maintain your system clean by not installing system-wide libraries
 that you are only going to need in a small project. It also allows you to use a certain version of
-a library for one project and a different version for another. Finally, it helps makes you project 
+a library for one project and a different version for another. Finally, it helps make your project 
 reproducible and ensures it is configured in an identical manner across local environments amongst
 collaborating developers. 
 
