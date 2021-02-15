@@ -152,7 +152,9 @@ you would like to automatically activate that virtual environment by means of si
 into that project. Let's see how we can do that. 
 
 First, I 'll assume you are using `.zshrc` as your default shell and have configured `oh-my-zsh`. 
-If not, then [just set it up](https://ohmyz.sh). 
+If not, then [just set it up](https://ohmyz.sh). Note that this is not a pre-requisite; it's more of a
+personal preference, but using `oh-my-zsh` does come with many benefits, like showing the current active 
+python environment on your console, which is why I am recommending it. 
 
 In order to enable the above automations, we will need two pre-requisites. The first, is to include 
 2 files in each project (you can version control these files). The first is `.python-version` and the
