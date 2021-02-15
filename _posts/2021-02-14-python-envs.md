@@ -35,7 +35,7 @@ by Matthew Broberg.
 
 ## How to avoid all these?
 The short answer is "use `pyenv`". `pyenv` will enable you to not only setup python properly on your machine, but
-to also manage different versions and python environments in a simple and straight forward way. As
+to also manage different versions and python environments in a simple and straightforward way. As
 explained on the [package's github page](https://github.com/pyenv/pyenv):
 
 > *"It's simple, unobtrusive, and follows the UNIX tradition of single-purpose tools that do one thing well."*
@@ -47,7 +47,7 @@ For me, its main benefits are:
 
 ## Let's get to it 
 Before you do anything make sure you start with a clean sheet. To do so, uninstall or remove any python distributions
-you already have. To do so, I strongly advise you to follow this [link](https://www.macupdate.com/app/mac/5880/python/uninstall).
+you already have. I strongly advise you to follow this [link](https://www.macupdate.com/app/mac/5880/python/uninstall).
 
 Now, assuming you have [`brew`](unintently) installed on your machine, do: 
 
