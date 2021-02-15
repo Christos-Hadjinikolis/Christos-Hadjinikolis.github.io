@@ -28,7 +28,7 @@ challenge, is usually not knowing, at any given time, what is the "default Pytho
 is using. Ideally, this is something you shouldn't care about, but if you don't set up things 
 properly, you end up installing packages for the wrong environment or the wrong active python interpreter,
 un-intentionally created from the wrong python distribution and... well, you get the point 
-(...this is pretty much summed up in the xkcd image above).
+(...this is pretty much summed up in the [xkcd image](https://xkcd.com/1987/) above).
 
 To find out more details, read this excellent [December 2020, post](https://opensource.com/article/19/5/python-3-default-mac),
 by Matthew Broberg. 
@@ -116,7 +116,7 @@ python-build: use readline from homebrew
 python-build: use zlib from xcode sdk
 Installed Python-3.9.0 to /Users/<username>/.pyenv/versions/3.9.0
 ```
-Once you, installation is complete, you can set this version as your global:
+Once installation is complete, you can set this version as your global:
 ```shell
 $ pyenv global 3.9.0
 ```
