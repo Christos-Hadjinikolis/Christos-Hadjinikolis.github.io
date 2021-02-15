@@ -337,7 +337,7 @@ The bellow references were very helpful for putting together this post:
 * [The right and wrong way to set Python 3 as default on a Mac](https://opensource.com/article/19/5/python-3-default-mac)
 * [Automatic activation of virtualenv (+ pyenv)](https://glhuilli.github.io/virtual-environments.html)
 
-Remember to like my post and re-share my post (if you really liked it)!
+Remember to like my post and re-share it (if you really liked it)!
 
 See you soon!
 

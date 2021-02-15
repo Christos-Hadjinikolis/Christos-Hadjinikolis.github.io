@@ -66,7 +66,7 @@ I hope that the ML community will make good use of it. It's 4 years after the re
 happen and unfortunately it remains a concerning issue. So, who knows, maybe someone wants to use this dataset in some 
 other equally interesting way.         
 
-Remember to like my post and re-share (if you really liked it)!
+Remember to like my post and re-share it (if you really liked it)!
 
 See you soon! 
 

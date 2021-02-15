@@ -174,7 +174,7 @@ The result is not always great, but it was still very interesting to try:
 
 That's it! 
 
-Remember to like my post and re-share (if you really liked it)!
+Remember to like my post and re-share it (if you really liked it)!
 
 See you soon! 
 

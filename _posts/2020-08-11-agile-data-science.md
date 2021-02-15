@@ -88,7 +88,7 @@ but I also felt like re-posting the interview on my personal blog too.
 
 Many thanks again to both Tim and Dhanhyaashri for their time and effort!
 
-Remember to like my post and re-share (if you really liked it)!
+Remember to like my post and re-share it (if you really liked it)!
 
 See you soon! 
 

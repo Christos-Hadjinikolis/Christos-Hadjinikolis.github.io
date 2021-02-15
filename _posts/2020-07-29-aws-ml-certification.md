@@ -123,7 +123,7 @@ Finally, I have put together this [Cheat-sheet](https://github.com/Christos-Hadj
 
 That's it! I really wish that this article will help you get started with your learning journey and I hope that soon enough you will be joining the [AWS Certified Global Community](https://www.linkedin.com/groups/6814264/) to share your badge with everyone. 
 
-Remember to like my post and re-share (if you really liked it)!
+Remember to like my post and re-share it (if you really liked it)!
 
 See you soon! 
 
