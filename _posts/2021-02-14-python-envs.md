@@ -8,7 +8,7 @@ layout: post
 </head>
 
 Configuring python on your machine for the first time is a definite headache for any software 
-engineering that decides to delve into the world of python. Doing it properly confuses a lot of 
+engineer that decides to delve into the world of python. Doing it properly confuses a lot of 
 people and can prove to be very challenging. 
 
 <span class="image center"><img src="{{ 'assets/images/python_environment_2x.png' | relative_url }}" alt="Python Envs" /></span>
@@ -16,7 +16,7 @@ people and can prove to be very challenging.
 It is often the case that many developers have numerous interpreters configured on their machines,
 without knowing where they live. 
 
-## Most common ways of installing Python (not recommended)
+## Most common ways of setting up Python
 Firstly, there is a Python version that ships with macOS, but it is usually v2.7, which is not
 just out of date but also deprecated. 
 
@@ -25,9 +25,10 @@ or use `brew install python3` (which does this for them).
 
 Both of these solutions can cause many problems that will not be evident straight away. The main 
 challenge, is usually not knowing, at any given time, what is the "default Python" that your system 
-is using. Ideally, this is something you shouldn't care about, but if you don't setup things 
-properly you end up installing packages for the wrong environment or the wrong active python interpreter,
-un-intently create from the wrong python distribution and... well, you get the point.
+is using. Ideally, this is something you shouldn't care about, but if you don't set up things 
+properly, you end up installing packages for the wrong environment or the wrong active python interpreter,
+un-intentionally created from the wrong python distribution and... well, you get the point 
+(...this is pretty much summed up in the xkcd image above).
 
 To find out more details, read this excellent [December 2020, post](https://opensource.com/article/19/5/python-3-default-mac),
 by Matthew Broberg. 
