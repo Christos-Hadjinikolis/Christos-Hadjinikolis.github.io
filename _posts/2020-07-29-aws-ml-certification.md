@@ -19,7 +19,14 @@ You see, this certification is labelled as hard simply because it is not just ab
 Data Engineering covers 20% of the exam, then Exploratory Data Analysis concerns another 24%, modelling is 36% and Machine Learning Implementation and Operations is 20%.  
 
 I put together a list below, in an attempt to summarise the content:
-* **Data Concepts**: Deals with data preparation routines; things like: Feature selection and feature engineering, PCA, dealing with missing data or unbalanced datasets, labels and one-hot encoding as well as splitting and randomisation of data.
+* **Data Concepts**: 
+    * Deals with data preparation routines; things like: 
+        * Feature selection and; 
+        * Feature engineering
+        * PCA, 
+        * dealing with missing data or unbalanced datasets, 
+        * labels and one-hot encoding as well as;
+        * splitting and randomisation of data.
 * **ML Concepts**: Covers:
     * Classical ML Categories of Algorithms
     * Deep Learning
