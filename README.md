@@ -2,9 +2,9 @@
 
 ## Instructions
 
-* Install a full Ruby development environment.
+* Install a full Ruby development environment with `brew install ruby`.
 * Install Jekyll and bundler gems.
-`gem install jekyll bundler`
+`gem install jekyll bundler --user-install `
 * Create a new Jekyll site at ./myblog.
 `jekyll new myblog`
 * Change into your new directory.
