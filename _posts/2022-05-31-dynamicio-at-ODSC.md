@@ -86,6 +86,8 @@ about how its adoption has helped us go beyond just achieving consistency across
 
 Remember to like my post and re-share it (if you really liked it)!
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Excited to be presenting at this year&#39;s <a href="https://twitter.com/hashtag/ODSCEurope?src=hash&amp;ref_src=twsrc%5Etfw">#ODSCEurope</a> on dynamicio, a brand new pandas I/O wrapper, which we intend to open source soon. read my latest blog to find out more: <a href="https://t.co/ynRvpGFVxJ">https://t.co/ynRvpGFVxJ</a> <a href="https://t.co/IkOQVC55dh">pic.twitter.com/IkOQVC55dh</a></p>&mdash; Christos Hadjinikoli (@chatzinikolis) <a href="https://twitter.com/chatzinikolis/status/1533033285433053184?ref_src=twsrc%5Etfw">June 4, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 See you soon!
 
 <p><a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml"><img src="//feedburner.google.com/fb/images/pub/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/></a>&nbsp;<a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml">Register to the ML-Affairs RSS Feed</a></p>   
