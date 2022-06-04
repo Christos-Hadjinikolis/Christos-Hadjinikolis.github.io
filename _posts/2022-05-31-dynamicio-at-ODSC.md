@@ -49,10 +49,10 @@ process into various tasks. You, usually, end up with something like this:
 <span class="image center"><img src="{{ 'assets/images/data-pipeline.png' | relative_url }}" alt="xkcd - data pipelines" /></span>
 
 You think about the structure of your codebase, about how everything will be deployed, how you want to decouple orchestration from the logic of your ML-pipeline, and then you start thinking 
-about domain driven development (DDD). You start thinking about abstractions and encapsulation and about testing. That's when it hits you&ndash;testing; you can unit test most things and build a 
-robust pipeline, but you also want fast feedback for when you introduce changes and improvements to your pipeline (shifting to the left)! What if you wanted to run a local regression
-test? With all data being read from external resources (databases, object storage service) you 'll have to mock all these calls (doable, but takes time) and replace actual data with sample
-input. And what about schema and data validations? How do you guarantee after data ingestion that all your expectations on the input are respected? 
+about domain driven development (DDD). You start thinking about abstractions and encapsulation, about testing and data validation. That's when it hits you&ndash;testing; you can unit test 
+most things and build a robust pipeline, but you also want fast feedback for when you introduce changes and improvements to your pipeline (shifting to the left)! What if you wanted to run a 
+local regression test? With all data being read from external resources (databases, object storage service) you 'll have to mock all these calls (doable, but takes time) and replace actual 
+data with sample input. And, finally, what about schema and data validations? How do you guarantee after data ingestion that all your expectations on the input are respected? 
 
 You have a look at the code again. Filled with various I/O operations. Sometimes it's `csv`, others `parquet`, and others it's `json`, sometimes you read from a database and others
 from an object storage service (`s3` or `gcp`). Different libraries used to facilitate all these: `gcsfs`, `s3fs` and `fsspec`, `boto3` `sql-alchemy`, `tables`; and `pandas`, of course, sits at the core
@@ -81,8 +81,8 @@ Wouldn't it be great if you could:
 
 Well, `dynamic(i/o)` is exactly that; a layer of indirection for pandas I/O operations. 
 
-If you want to find out more about it then [register to attend this year's `ODSC` and attend our presentation](https://odsc.com/europe/). Come and learn about how its adoption has helped us go beyond just achieving consistency across our ML 
-repos, effectively dealing with glue code and keeping our codebases DRY but also acting as an interface between different teams.
+If you want to find out more about it then [register to attend this year's `ODSC`](https://odsc.com/europe/) and [attend our presentation](https://odsc.com/speakers/dynamicio-a-pandas-i-o-wrapper-why-you-should-start-your-ml-ops-journey-with-wrapping-your-i-o/). Come and learn 
+about how its adoption has helped us go beyond just achieving consistency across our ML repos, effectively dealing with glue code and keeping our code-bases DRY but also acting as an interface between different teams.
 
 Remember to like my post and re-share it (if you really liked it)!
 
