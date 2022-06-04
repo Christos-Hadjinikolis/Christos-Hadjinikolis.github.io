@@ -81,8 +81,8 @@ Wouldn't it be great if you could:
 
 Well, `dynamic(i/o)` is exactly that; a layer of indirection for pandas I/O operations. 
 
-If you want to find out more about it then [register to attend this year's `ODSC`](https://odsc.com/europe/) and [attend our presentation](https://odsc.com/speakers/dynamicio-a-pandas-i-o-wrapper-why-you-should-start-your-ml-ops-journey-with-wrapping-your-i-o/). Come and learn 
-about how its adoption has helped us go beyond just achieving consistency across our ML repos, effectively dealing with glue code and keeping our code-bases DRY but also acting as an interface between different teams.
+If you want to find out more about it then [register to attend this year's `ODSC`](https://odsc.com/europe/) and [attend the presentation by myself and my colleague Tyler Ferguson on `dynamic(i/o)`](https://odsc.com/speakers/dynamicio-a-pandas-i-o-wrapper-why-you-should-start-your-ml-ops-journey-with-wrapping-your-i-o/). 
+Come and learn about how its implementation and adoption has helped us go beyond just achieving consistency across our ML repos, effectively dealing with glue code and keeping our code-bases DRY, but also acting as an interface between different teams.
 
 Remember to like my post and re-share it (if you really liked it)!
 
