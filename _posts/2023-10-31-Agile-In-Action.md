@@ -42,7 +42,7 @@ At Vortexa, we've hoisted the Agile flag high, not just to signify our methodolo
 
 Remember to like my post and re-share it (if you really liked it)!
 
-
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Sailing the ML seas with <a href="https://twitter.com/hashtag/Agile?src=hash&amp;ref_src=twsrc%5Etfw">#Agile</a> as our compass at <a href="https://twitter.com/Vortexa?ref_src=twsrc%5Etfw">@Vortexa</a> 🌊🧭 &#39;Failing fast&#39; is our voyage towards triumph. Thanks, Bill Raymond, for the insightful podcast chat. 🎙️ <a href="https://twitter.com/hashtag/MachineLearning?src=hash&amp;ref_src=twsrc%5Etfw">#MachineLearning</a> <a href="https://twitter.com/hashtag/DataScience?src=hash&amp;ref_src=twsrc%5Etfw">#DataScience</a> <a href="https://twitter.com/hashtag/Innovation?src=hash&amp;ref_src=twsrc%5Etfw">#Innovation</a> <a href="https://t.co/xphA2G2qVS">https://t.co/xphA2G2qVS</a></p>&mdash; Christos Hadjinikoli (@chatzinikolis) <a href="https://twitter.com/chatzinikolis/status/1720484208219447432?ref_src=twsrc%5Etfw">November 3, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 See you soon!
 
