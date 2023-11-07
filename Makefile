@@ -16,9 +16,24 @@ setup-local-env:
 	@if ! which brew &>/dev/null; then echo "Homebrew not found. Please install it."; exit 1; fi
 	@if ! which rbenv &>/dev/null; then brew install rbenv; fi
 	@if ! which ruby-build &>/dev/null; then brew install ruby-build; fi
+
+	# Initialize rbenv in the current shell session
 	@export PATH="$(RBENV_BIN_PATH):$$PATH" && eval "$$(rbenv init -)"
-	@rbenv install --skip-existing
-	@gem install jekyll bundler
+
+	# Install the Ruby version specified in the .ruby-version file if it's not already installed
+	@rbenv install --skip-existing `cat .ruby-version`
+
+	# Set the local (directory-specific) Ruby version
+	@rbenv local `cat .ruby-version`
+
+	# Make sure the shims are properly set
+	@rbenv rehash
+
+	# Install Jekyll and Bundler, ensuring we're using the user's gem bin directory
+	@export PATH="$(USER_BIN_PATH):$$PATH" && gem install jekyll bundler --user-install
+
+	# Rehash after installing gems to ensure binaries are available
+	@rbenv rehash
 
 # This target serves your Jekyll site locally
 serve-site:

@@ -1,4 +1,4 @@
----
+`---
 title: "Sailing Through Data Science: The Agile Journey at Vortexa"
 author: Christos Hadjinikolis
 layout: post
@@ -47,3 +47,4 @@ Remember to like my post and re-share it (if you really liked it)!
 See you soon!
 
 <p><a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml"><img src="//feedburner.google.com/fb/images/pub/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/></a>&nbsp;<a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml">Register to the ML-Affairs RSS Feed</a></p>   
+`
