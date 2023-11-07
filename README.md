@@ -21,4 +21,4 @@ If you encounter any errors during this process, see the troubleshooting page. A
 ## Adding an RSS Feed
 Follow instructions here: https://learn.cloudcannon.com/jekyll/rss-feed/
 
-
+For your tweet-blogues: https://publish.twitter.com/#
