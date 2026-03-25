@@ -32,7 +32,7 @@ you with an engineer and you both can get started on it". So we did!
 This is basically the story about how I was exposed to software engineering and the Agile way of working&ndash;about how I was converted into 
 a ML Engineer. Two years later I decided to take my learnings from this experience and share it with my community, and so I did at **mCubed** London in 2018:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nRsqFrutfSg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nRsqFrutfSg" title="Agile Data Science talk" frameborder="0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 That's where I also met Tim. Turns out that a year and half later a colleague of Tim's ([Dhanhyaashri Mahendran](https://www.linkedin.com/in/dhanhyaashri-mahendran/)) was doing a bit iof research on 
 "Doing Data Science the Agile way" and Tim suggested that she gets in touch with me to ask me some questions, which I welcomed.       

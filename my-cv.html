@@ -1,115 +1,244 @@
 ---
 title: My CV
-subtitle: Education & Skills
+subtitle: Staff-Level Snapshot
 layout: "page"
 icon: fa-book
 order: 2
 ---
-<div class="left">
-    <p>
-        <img src="assets/images/book-reading.jpeg" alt="Profile" width="25%">
-    </p>
-    <a href="assets/pdfs/cv.pdf" class="button scrolly">Download my CV</a>
-</div>
+<style>
+  .cv-page {
+    --cv-accent: #e27689;
+    --cv-accent-soft: rgba(226, 118, 137, 0.12);
+    --cv-accent-border: rgba(226, 118, 137, 0.28);
+    --cv-ink: #5f6368;
+    --cv-ink-strong: #3c4148;
+    --cv-panel: rgba(255, 255, 255, 0.92);
+    color: var(--cv-ink);
+  }
 
-<div class="right">
-    <h3>CV Highlights</h3>
-    <ul>
-        <li>Pod Lead and Lead ML Engineer at Vortexa since December 2020.</li>
-        <li>Active participant in industry standardization efforts.</li>
-        <li>Expertise in machine learning, data science, and software engineering.</li>
-        <li>Ph.D. in Computer Science from King's College London, specializing in persuasion dialogues and opponent modelling using graph-analytics.</li>
-        <li>Strong background in cloud computing, including GCP and AWS.</li>
-        <li>Proficient in Python, Java/Kotlin, and various technologies like Apache Spark, Kafka, Neo4J.</li>
-    </ul>
+  .cv-page h3,
+  .cv-page h4 {
+    color: var(--cv-ink-strong);
+    margin-bottom: 0.55em;
+  }
 
-    <h3>Professional Experience</h3>
-    <ul>
-        <li>Since 2020, Vortexa, Pod Lead and Lead ML Engineer</li>
-        <li>Since 2021, Active involvement in technology and industry standardization committees (JTC'21).</li>
-        <li>2016-2020, Data Reply UK, Lead ML Engineer</li>
-        <li>2012-2016, David Game College, Programming Teacher</li>
-        <li>2010-2014, King's College London, Visiting Researcher</li>
-    </ul>
+  .cv-hero,
+  .cv-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
 
-    <p><a href="{{ '/experience.html' | relative_url }}" class="button scrolly">Full Work Experience Timeline</a></p>
+  .cv-hero {
+    grid-template-columns: 1.4fr 1fr;
+    margin-bottom: 2rem;
+  }
 
-    <h3>Educational Qualifications</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>Qualification</th>
-                <th>Institution</th>
-                <th>Year</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Ph.D. in Computer Science</td>
-                <td>King's College London, UK</td>
-                <td>2014</td>
-            </tr>
-            <tr>
-                <td>Diploma (BEng) in Computer Engineering</td>
-                <td>University of Thessaly, GR</td>
-                <td>2010</td>
-            </tr>
-            <tr>
-                <td>Military Officer</td>
-                <td>National Guard, CY</td>
-                <td>2004</td>
-            </tr>
-        </tbody>
-    </table>
+  .cv-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
-    <h3>Technical Skills</h3>
-    <ul>
-        <li><strong>Cloud Computing:</strong> GCP & AWS</li>
-        <li><strong>Technologies & Frameworks:</strong> Apache Spark, Apache Flink, Apache Kafka, Elasticsearch, Neo4J, RDBMS-SQL</li>
-        <li><strong>Developer Skills:</strong> TDD, git + CI/CD (Jenkins/Team-City)</li>
-        <li><strong>Programming Skills:</strong> Python, Java, Matlab, SQL, Cypher</li>
-        <li><strong>Python Libs:</strong> pandas, numpy, sklearn, pyTorch</li>
-        <li><strong>Visualisations:</strong> Gephi, Seaborn, Kibana, Quicksight</li>
-    </ul>
+  .cv-panel {
+    background: var(--cv-panel);
+    border: 1px solid var(--cv-accent-border);
+    border-radius: 1.1rem;
+    box-shadow: 0 14px 40px rgba(60, 65, 72, 0.07);
+    padding: 1.55rem 1.65rem;
+  }
 
-    <h3>Certifications</h3>
-    <ul>
-        <li>[07/2020] <strong>AWS Certified Machine Learning - Specialty</strong>, Validation Number: D0R0WC7CN1VQ13SV</li>
-        <li>[01/2019] <strong>Process Mining - Coursera Course Certificates</strong>, License number: AFU2VTP6273V</li>
-        <li>[10/2017] <strong>Google Certified Professional - Data Engineer</strong>, Credential ID: 000000400</li>
-        <li>[07/2017] <strong>Advanced Elasticsearch: Data modelling</strong>, Enrolment Id: 33442</li>
-        <li>[06/2016] <strong>Graph Analytics for Big Data - Coursera Course Certificates</strong>, License number: NZADYAQ7N8FW</li>
-        <li>[05/2016] <strong>Apache Spark Developer Certification - O'Reilly Media</strong>, License number: 1.x-0548</li>
-        <li>[04/2016] <strong>Neo4j Certified Professional - Neo Technology, Creators of Neo4j</strong>, License number: <a href="https://drive.google.com/open?id=1ol67OnuuWBmrIeJPbvLNOOiQC8K0pXb_">here</a></li>
-    </ul>
+  .cv-intro {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(255, 247, 249, 0.96));
+  }
 
-    <h3>Awards</h3>
-    <ul>
-        <li>[2013] <strong>Best Poster Award - IJCAI Conference, Beijing, China</strong>, Selected amongst 413 contestants.</li>
-        <li>[2012] <strong>Outstanding Teaching Assistant Award - King's College London</strong>, Notable Mention: Department of Informatics.</li>
-        <li>[2011] <strong>Graduate Certificate in Academic Practice - King's College London</strong>, related to improving teaching abilities.</li>
-        <li>[2010] <strong>PhD Tuition Fees Scholarship - King's College London</strong>, provided by EPSRC and King's College London.</li>
-    </ul>
+  .cv-kicker {
+    color: var(--cv-accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.9rem;
+    text-transform: uppercase;
+  }
 
-    <h3>Personal Information</h3>
-    <ul>
-        <li>A determined, dedicated, empathetic and hard-working person. I believe in honesty and in polite and direct approaches.</li>
-        <li><strong>Languages Known:</strong> Greek, English</li>
-        <li><strong>Hobbies:</strong> Reading comics and social science and philosophy books or magazines, playing tennis, swimming, listening to music, watching movies, and self-learning through e-courses.</li>
-    </ul>
+  .cv-summary {
+    margin-bottom: 1rem;
+  }
 
-    <h3>Other Information</h3>
-    <ul>
-        <li><strong>Areas of Interest:</strong> ML research, ML engineering, graph analytics, NLP, ML ops</li>
-    </ul>
+  .cv-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+  }
 
-    <h3>Initiatives I support</h3>
-    <p>
-        <a href="https://www.kcl.ac.uk/informatics/research/safe-trusted-ai">UKRI Centre for Doctoral Training (CDT) in Safe and Trusted Artificial Intelligence (STAI)</a>
-    </p>
+  .cv-chip {
+    background: var(--cv-accent-soft);
+    border: 1px solid var(--cv-accent-border);
+    border-radius: 999px;
+    color: var(--cv-ink-strong);
+    display: inline-flex;
+    gap: 0.35rem;
+    padding: 0.42rem 0.8rem;
+    font-size: 0.9rem;
+  }
 
-    <h3>Declaration</h3>
-    <p>
-        I hereby declare that the details furnished above are true and correct to the best of my knowledge and belief.
-    </p>
+  .cv-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-top: 1.15rem;
+  }
+
+  .cv-list,
+  .cv-timeline {
+    margin-bottom: 0;
+  }
+
+  .cv-list li,
+  .cv-timeline li {
+    margin-bottom: 0.48rem;
+  }
+
+  .cv-timeline strong,
+  .cv-list strong {
+    color: var(--cv-ink-strong);
+  }
+
+  .cv-principles {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cv-principles li {
+    border-top: 1px solid rgba(60, 65, 72, 0.08);
+    margin: 0;
+    padding: 0.85rem 0 0;
+  }
+
+  .cv-principles li + li {
+    margin-top: 0.85rem;
+  }
+
+  .cv-principles strong {
+    color: var(--cv-ink-strong);
+    display: block;
+    margin-bottom: 0.22rem;
+  }
+
+  @media screen and (max-width: 980px) {
+    .cv-hero,
+    .cv-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="cv-page">
+  <section class="cv-hero">
+    <div class="cv-panel cv-intro">
+      <div class="cv-kicker">🧠 Positioning</div>
+      <h3>Staff-level machine learning engineer building real-time, production-grade AI systems</h3>
+      <p class="cv-summary">
+        I design and operate ML systems that sit on live data, serve user-facing decisions, and have to remain reliable under real-world constraints. My work spans streaming infrastructure, ML systems, backend engineering, and the operational discipline needed to make production the source of truth.
+      </p>
+      <ul class="cv-chips">
+        <li class="cv-chip">⚙️ Kafka + Flink</li>
+        <li class="cv-chip">🧠 Inference systems</li>
+        <li class="cv-chip">🛰️ Geospatial & temporal data</li>
+        <li class="cv-chip">📈 Forecasting pipelines</li>
+        <li class="cv-chip">👥 Team leadership</li>
+        <li class="cv-chip">🏛️ Standards work</li>
+      </ul>
+      <div class="cv-actions">
+        <a href="{{ '/assets/pdfs/cv.pdf' | relative_url }}" class="button scrolly">Download PDF CV</a>
+        <a href="{{ '/experience.html' | relative_url }}" class="button scrolly">Open Experience Timeline</a>
+      </div>
+    </div>
+
+    <div class="cv-panel">
+      <h3>🧭 What I Actually Do</h3>
+      <ul class="cv-principles">
+        <li>
+          <strong>Build end-to-end ML systems</strong>
+          From raw signal ingestion to user-facing predictions and analytics.
+        </li>
+        <li>
+          <strong>Design streaming architectures</strong>
+          Low-latency inference, feedback loops, replayability, and failure handling.
+        </li>
+        <li>
+          <strong>Bridge ML and real-world constraints</strong>
+          Aligning model output with business logic, operational rules, and product decisions.
+        </li>
+        <li>
+          <strong>Lead teams toward measurable outcomes</strong>
+          Hiring, mentoring, planning, technical direction, and production readiness.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cv-grid">
+    <div class="cv-panel">
+      <h3>🚢 Selected Work</h3>
+      <ul class="cv-list">
+        <li>Real-time vessel destination and ETA prediction systems operating on global AIS streams.</li>
+        <li>Streaming pipelines spanning ingestion → normalisation → ML inference → analytics delivery.</li>
+        <li>AIS denoising and signal-quality improvement using stateful filtering approaches.</li>
+        <li>Event-driven ML architectures with backfills, observability, and production rollout discipline.</li>
+        <li>Internal platform work that reduced technical debt and standardised ML delivery patterns across repositories.</li>
+      </ul>
+    </div>
+
+    <div class="cv-panel">
+      <h3>📐 Core Principles</h3>
+      <ul class="cv-list">
+        <li><strong>Production is the only truth.</strong></li>
+        <li><strong>If it cannot be measured, it is not done.</strong></li>
+        <li><strong>Deterministic systems beat clever hacks.</strong></li>
+        <li><strong>Models must degrade gracefully.</strong></li>
+        <li><strong>System quality should come through people and process, not heroics.</strong></li>
+      </ul>
+    </div>
+
+    <div class="cv-panel">
+      <h3>📚 Career Snapshot</h3>
+      <ul class="cv-timeline">
+        <li><strong>Since 12/2020 · Vortexa, London</strong><br>Staff-level ML tech lead and pod lead for streaming-first maritime forecasting systems.</li>
+        <li><strong>2016–2020 · Data Reply, London</strong><br>Progressed from data science into ML engineering, delivering systems across Vodafone, CNHi, and UBS.</li>
+        <li><strong>2010–2016 · KCL, UCL, GSM, David Game College</strong><br>Teaching and academic roles across computing, AI, software, and data subjects.</li>
+      </ul>
+    </div>
+
+    <div class="cv-panel">
+      <h3>🏛️ Standards & Research</h3>
+      <ul class="cv-list">
+        <li><strong>Since 10/2024 · UCL</strong><br>Associate Researcher supporting AI application, standardisation, and ethics initiatives.</li>
+        <li><strong>Since 01/2021 · ISO JTC 21 WG3</strong><br>Committee Expert Member contributing to AI standards aligned with EU policy and international norms.</li>
+      </ul>
+    </div>
+
+    <div class="cv-panel">
+      <h3>🎙️ Talks & Interviews</h3>
+      <ul class="cv-list">
+        <li><strong>2023</strong> Agile in Action podcast interview on the Vortexa journey and agile data science.</li>
+        <li><strong>2022</strong> ODSC talk on <em>dynamicio</em> and abstracting I/O in ML systems.</li>
+        <li><strong>2020</strong> iunera interview blog on the agile approach in data science.</li>
+        <li><strong>2020</strong> Big Data Warsaw talk on monitoring communication and trade events as graphs.</li>
+        <li><strong>2018</strong> Connected Data London panel and Minds Mastering Machines talk.</li>
+      </ul>
+    </div>
+
+    <div class="cv-panel">
+      <h3>🎓 Education & Credentials</h3>
+      <ul class="cv-list">
+        <li><strong>Ph.D. in Computer Science · King’s College London</strong><br>Persuasion dialogues, opponent modelling, knowledge graphs, Bayesian techniques, and formal semantics.</li>
+        <li><strong>Diploma (BEng) in Computer Engineering · University of Thessaly</strong><br>Polytechnic training with a strong focus on mathematics and artificial intelligence.</li>
+        <li><strong>Selected certifications</strong><br>AWS ML Specialty, Google Data Engineer, Process Mining, Graph Analytics for Big Data, Neo4j, and Elasticsearch.</li>
+      </ul>
+    </div>
+  </section>
 </div>

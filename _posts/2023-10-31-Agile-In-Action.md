@@ -7,7 +7,7 @@ og_image: assets/images/2023-10-31-Turner.png
 
 <div class="image center">
   <img src="{{ 'assets/images/2023-10-31-Turner.png' | relative_url }}" alt="Joseph Mallord William Turner | Dutch Boats in a Gale ('The Bridgewater Sea Piece') | L297 | National Gallery, London" />
-  <p class="image-credit">Picture taken from <a href="https://www.nationalgallery.org.uk/paintings/joseph-mallord-william-turner-dutch-boats-in-a-gale-the-bridgewater-sea-piece" target="_blank">National Gallery, London</a></p>
+  <p class="image-credit">Picture taken from <a href="https://www.nationalgallery.org.uk/paintings/joseph-mallord-william-turner-dutch-boats-in-a-gale-the-bridgewater-sea-piece" target="_blank" rel="noopener noreferrer">National Gallery, London</a></p>
 </div>
 
 As a Lead Machine Learning Engineer at Vortexa over the last 3 years, I've often likened my role to that of a navigator; charting a path through stormy waters as much as taming machine learning models within the vibrant energy sector. Feels like a perpetual discovery journey, where the Agile philosophy can serve as a compass, guiding me and my team through unpredictable challenges.
@@ -36,7 +36,7 @@ Writing this post is not just an exercise in sharing knowledge; it's a celebrati
 At Vortexa, we've hoisted the Agile flag high, not just to signify our methodology but to announce our commitment to a journey of continuous improvement, collaboration, and innovation. And as we sail ahead, it's the shared belief in our methods, the trust in our crew, and the stories of our adventures that will guide us to new horizons.
 
 ## The Podcast
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LdDasrMOJLs?si=dk-YcjCqW6YpBPWZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LdDasrMOJLs?si=dk-YcjCqW6YpBPWZ" title="Agile in Action podcast episode" frameborder="0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Remember to like my post and re-share it (if you really liked it)!
 

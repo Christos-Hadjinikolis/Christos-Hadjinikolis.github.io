@@ -1,10 +1,401 @@
 ---
 title: Professional Experience
-subtitle: Timeline
+subtitle: Timeline & Selected Milestones
 layout: "page"
 icon: fa-book
 order: 3
 ---
-<div class="timeline">
-    <script src="https://assets.sutori.com/frontend-assets/assets/iframeResizer.js"></script><iframe src="https://www.sutori.com/story/all-about-me--iSA4xWE2ydxRQet4h7Dy9NUW/embed" width="100%" height="600" frameborder="0" allowfullscreen></iframe><script src="https://assets.sutori.com/frontend-assets/assets/iframeResizer.executer.js"></script>
+<style>
+  .experience-page {
+    --experience-accent: #e27689;
+    --experience-accent-soft: rgba(226, 118, 137, 0.12);
+    --experience-accent-border: rgba(226, 118, 137, 0.28);
+    --experience-ink: #5f6368;
+    --experience-ink-strong: #3c4148;
+    --experience-panel: rgba(255, 255, 255, 0.92);
+    --experience-line: rgba(60, 65, 72, 0.14);
+    color: var(--experience-ink);
+  }
+
+  .experience-page h3,
+  .experience-page h4 {
+    color: var(--experience-ink-strong);
+    margin-bottom: 0.6em;
+  }
+
+  .experience-lead {
+    display: grid;
+    grid-template-columns: 1.45fr 1fr;
+    gap: 1.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .experience-panel {
+    background: var(--experience-panel);
+    border: 1px solid var(--experience-accent-border);
+    border-radius: 1.1rem;
+    box-shadow: 0 14px 40px rgba(60, 65, 72, 0.07);
+    padding: 1.6rem 1.7rem;
+  }
+
+  .experience-intro {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(255, 247, 249, 0.96));
+  }
+
+  .experience-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--experience-accent);
+    margin-bottom: 0.9rem;
+  }
+
+  .experience-summary {
+    margin-bottom: 0;
+  }
+
+  .experience-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .experience-chip {
+    background: var(--experience-accent-soft);
+    border: 1px solid var(--experience-accent-border);
+    border-radius: 999px;
+    color: var(--experience-ink-strong);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+    padding: 0.42rem 0.8rem;
+  }
+
+  .experience-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-top: 1.2rem;
+  }
+
+  .experience-actions .button {
+    margin-bottom: 0;
+  }
+
+  .experience-focus-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .experience-focus-list li {
+    border-top: 1px solid rgba(60, 65, 72, 0.08);
+    margin: 0;
+    padding: 0.9rem 0 0;
+  }
+
+  .experience-focus-list li + li {
+    margin-top: 0.9rem;
+  }
+
+  .experience-focus-list strong {
+    color: var(--experience-ink-strong);
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .experience-section-title {
+    margin: 0 0 1rem;
+  }
+
+  .experience-timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 1.3rem;
+    position: relative;
+  }
+
+  .experience-timeline::before {
+    background: linear-gradient(to bottom, var(--experience-accent), rgba(226, 118, 137, 0.15));
+    border-radius: 999px;
+    bottom: 0;
+    content: "";
+    left: 0.1rem;
+    position: absolute;
+    top: 0.2rem;
+    width: 3px;
+  }
+
+  .experience-entry {
+    margin: 0 0 1.45rem;
+    position: relative;
+  }
+
+  .experience-entry:last-child {
+    margin-bottom: 0;
+  }
+
+  .experience-entry::before {
+    background: #fff;
+    border: 3px solid var(--experience-accent);
+    border-radius: 50%;
+    content: "";
+    height: 0.9rem;
+    left: -1.68rem;
+    position: absolute;
+    top: 1.05rem;
+    width: 0.9rem;
+  }
+
+  .experience-card {
+    background: #fff;
+    border: 1px solid rgba(60, 65, 72, 0.1);
+    border-left: 4px solid var(--experience-accent);
+    border-radius: 1rem;
+    padding: 1.35rem 1.45rem;
+  }
+
+  .experience-card-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+  }
+
+  .experience-card-head h4 {
+    margin: 0 0 0.18rem;
+  }
+
+  .experience-role {
+    color: var(--experience-ink-strong);
+    font-weight: 600;
+  }
+
+  .experience-period {
+    background: var(--experience-accent-soft);
+    border-radius: 999px;
+    color: var(--experience-accent);
+    font-size: 0.88rem;
+    padding: 0.35rem 0.75rem;
+    white-space: nowrap;
+  }
+
+  .experience-location {
+    color: #8b8f95;
+    font-size: 0.94rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .experience-bullets,
+  .experience-mini-list {
+    margin-bottom: 0;
+  }
+
+  .experience-bullets li,
+  .experience-mini-list li {
+    margin-bottom: 0.45rem;
+  }
+
+  .experience-mini-list strong {
+    color: var(--experience-ink-strong);
+  }
+
+  .experience-grid {
+    display: grid;
+    gap: 1.4rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 2rem;
+  }
+
+  .experience-grid .experience-panel {
+    height: 100%;
+  }
+
+  .experience-note {
+    color: #8b8f95;
+    font-size: 0.95rem;
+    margin-top: 0.8rem;
+  }
+
+  @media screen and (max-width: 980px) {
+    .experience-lead,
+    .experience-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media screen and (max-width: 736px) {
+    .experience-card-head {
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .experience-period {
+      white-space: normal;
+    }
+  }
+</style>
+
+<div class="experience-page">
+  <section class="experience-lead">
+    <div class="experience-panel experience-intro">
+      <div class="experience-kicker">🧭 Current Profile</div>
+      <h3>Staff-level machine learning engineer building real-time, production-grade intelligence systems</h3>
+      <p class="experience-summary">
+        I design and productionise large-scale ML systems that run on live data and support user-facing decisions under uncertainty.
+        My work sits at the intersection of streaming infrastructure, ML systems, and backend engineering, with a strong
+        bias toward architectures that can be measured, observed, replayed, and trusted in production.
+      </p>
+      <ul class="experience-meta">
+        <li class="experience-chip">⚙️ Event-driven ML systems</li>
+        <li class="experience-chip">🛰️ Global AIS streams</li>
+        <li class="experience-chip">🧠 Stateful inference</li>
+        <li class="experience-chip">📉 Failure-aware design</li>
+        <li class="experience-chip">👥 Team leadership</li>
+        <li class="experience-chip">🏛️ Standards & research</li>
+      </ul>
+      <div class="experience-actions">
+        <a href="{{ '/assets/pdfs/cv.pdf' | relative_url }}" class="button scrolly">View Latest CV</a>
+        <a href="{{ '/my-cv.html' | relative_url }}" class="button scrolly">Open CV Page</a>
+      </div>
+    </div>
+
+    <div class="experience-panel">
+      <h3 class="experience-section-title">✨ Current Focus</h3>
+      <ul class="experience-focus-list">
+        <li>
+          <strong>⚙️ Systems builder, not just model builder</strong>
+          Full pipeline ownership from raw signal ingestion to resilient prediction services and analytics delivery.
+        </li>
+        <li>
+          <strong>🧭 Bridging ML and reality</strong>
+          Aligning model outputs with product logic, operational constraints, and the consequences of being wrong.
+        </li>
+        <li>
+          <strong>📐 Rigor in production</strong>
+          Observability, deterministic behaviour, replayability, measurable outcomes, and graceful degradation.
+        </li>
+        <li>
+          <strong>👥 Staff-level leverage</strong>
+          Technical direction, architecture, process, mentoring, and team quality through systems rather than heroics.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="experience-panel">
+    <h3 class="experience-section-title">📚 Career Timeline</h3>
+    <ol class="experience-timeline">
+      <li class="experience-entry">
+        <article class="experience-card">
+          <div class="experience-card-head">
+            <div>
+              <h4>Vortexa Ltd</h4>
+              <div class="experience-role">🚢 ML Tech Lead (Staff-Level) · Pod Lead</div>
+            </div>
+            <div class="experience-period">Since 12/2020</div>
+          </div>
+          <div class="experience-location">London, UK</div>
+          <ul class="experience-bullets">
+            <li>Leading a cross-functional ML, DS, and DE team delivering streaming-first forecasting systems in production.</li>
+            <li>Built destination and ETA models with transformer-based sequence architectures, GPU-backed training, automatic refresh, and longitudinal evaluation.</li>
+            <li>Designed real-time Kafka/Flink pipelines for global AIS data, anomaly triggers, and near real-time inference workflows.</li>
+            <li>Developed AIS denoising operators using Kalman filtering to improve downstream model quality on noisy GPS signals.</li>
+            <li>Established MLOps foundations around CI/CD, model versioning, rollout strategy, and observability with New Relic and Prometheus.</li>
+            <li>Own delivery, architecture, hiring, mentorship, roadmap alignment, and operating rhythms across a globally distributed team.</li>
+          </ul>
+        </article>
+      </li>
+
+      <li class="experience-entry">
+        <article class="experience-card">
+          <div class="experience-card-head">
+            <div>
+              <h4>Data Reply</h4>
+              <div class="experience-role">🏗️ Data Scientist · ML Engineer</div>
+            </div>
+            <div class="experience-period">2016–2020</div>
+          </div>
+          <div class="experience-location">London, UK</div>
+          <p>
+            Progressed from data science delivery into ML engineering leadership, focusing on the gap between experimentation
+            and robust production deployment for enterprise clients in messy, ambiguous environments.
+          </p>
+          <ul class="experience-mini-list">
+            <li><strong>📱 Vodafone Group (09/2019–11/2020):</strong> co-led internal MLOps platform work on GCP and Kubeflow, introduced versioning, telemetry, controlled notebook environments, and reproducible CI/CD pipelines.</li>
+            <li><strong>🚜 CNHi (05/2019–09/2019):</strong> built time-series forecasting models for agricultural vehicles, enabling alerting and automated deployment paths.</li>
+            <li><strong>🏦 UBS (08/2017–04/2019):</strong> delivered graph analytics, process mining, and real-time insight pipelines with Kafka, Elasticsearch, and Python.</li>
+          </ul>
+        </article>
+      </li>
+
+      <li class="experience-entry">
+        <article class="experience-card">
+          <div class="experience-card-head">
+            <div>
+              <h4>Roles in UK Institutions</h4>
+              <div class="experience-role">🎓 Associate Lecturer · Coding Teacher · Teaching Assistant</div>
+            </div>
+            <div class="experience-period">2010–2016</div>
+          </div>
+          <div class="experience-location">KCL, UCL, GSM, David Game College</div>
+          <ul class="experience-bullets">
+            <li>Taught computing subjects across undergraduate and pre-university settings while completing doctoral research.</li>
+            <li>Covered Java, Python, MATLAB, HTML, CSS, SQL, data structures, systems architecture, semantic web, and AI topics.</li>
+            <li>Built a strong foundation in technical communication, mentoring, and structured problem solving that still shapes my engineering leadership style.</li>
+          </ul>
+        </article>
+      </li>
+    </ol>
+    <p class="experience-note">Guiding principle: “Make it work. Make it right. Make it fast.”</p>
+  </section>
+
+  <section class="experience-grid">
+    <div class="experience-panel">
+      <h3 class="experience-section-title">📐 Operating Principles</h3>
+      <ul class="experience-mini-list">
+        <li><strong>Production is the only truth.</strong></li>
+        <li><strong>If it cannot be measured, it is not done.</strong></li>
+        <li><strong>Deterministic systems beat clever hacks.</strong></li>
+        <li><strong>Models must degrade gracefully.</strong></li>
+      </ul>
+    </div>
+
+    <div class="experience-panel">
+      <h3 class="experience-section-title">🚢 Selected Work</h3>
+      <ul class="experience-mini-list">
+        <li>Real-time vessel destination prediction on global AIS streams.</li>
+        <li>ETA systems combining sequence modelling with operational feedback loops.</li>
+        <li>ML-driven event detection and anomaly handling in maritime data.</li>
+        <li>End-to-end data platform spanning ingestion → ML → analytics delivery.</li>
+      </ul>
+    </div>
+
+    <div class="experience-panel">
+      <h3 class="experience-section-title">🏛️ Standards & Research</h3>
+      <ul class="experience-mini-list">
+        <li><strong>Since 10/2024 · UCL Department of Information Studies</strong><br>Associate Researcher supporting AI application, standardisation, and ethics initiatives.</li>
+        <li><strong>Since 01/2021 · ISO JTC 21 Working Group 3</strong><br>Committee Expert Member contributing to AI standards aligned with EU policy and international norms.</li>
+      </ul>
+    </div>
+
+    <div class="experience-panel">
+      <h3 class="experience-section-title">🎙️ Talks & Interviews</h3>
+      <ul class="experience-mini-list">
+        <li><strong>2023 · Agile in Action</strong><br>Podcast interview on agile data science and the Vortexa journey.</li>
+        <li><strong>2022 · ODSC</strong><br>Industry talk on <em>dynamicio</em> and abstracting I/O for ML systems.</li>
+        <li><strong>2020 · iunera</strong><br>Interview blog post on the agile approach in data science.</li>
+        <li><strong>2020 · Big Data Warsaw</strong><br>Talk on monitoring and analysing communication and trade events as graphs.</li>
+        <li><strong>2018 · Connected Data London & Minds Mastering Machines</strong><br>Panel and talk appearances on graph-driven AI and doing data science the agile way.</li>
+      </ul>
+    </div>
+  </section>
 </div>
