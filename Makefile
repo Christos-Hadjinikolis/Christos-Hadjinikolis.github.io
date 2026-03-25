@@ -1,52 +1,45 @@
-# Use @ to silence the output, or remove it to see the commands being run
-
-# This target sets up the local environment by checking for dependencies
-# and installing them if they are not present
-# First we define the shell we're using
 SHELL := /bin/bash
 
-# Define paths to the user bin and ensure we're using the right version
-USER_BIN_PATH := $(HOME)/.gem/bin
-RBENV_BIN_PATH := $(HOME)/.rbenv/bin
-RBENV_COMMAND := eval "$$(rbenv init - bash)"
+RUBY_MIN_VERSION := 3.1.0
+BUNDLE_APP_CONFIG := .bundle
+BUNDLE_PATH := vendor/bundle
+BUNDLE_CMD := BUNDLE_APP_CONFIG=$(BUNDLE_APP_CONFIG) bundle
+JEKYLL_CMD := $(BUNDLE_CMD) exec jekyll
+HOST ?= 127.0.0.1
+PORT ?= 4000
 
-# Use this to set up the local environment
-setup-local-env:
-	@echo "Setting up the local Ruby and Jekyll environment..."
-	@if ! which brew &>/dev/null; then echo "Homebrew not found. Please install it."; exit 1; fi
-	@if ! which rbenv &>/dev/null; then brew install rbenv; fi
-	@if ! which ruby-build &>/dev/null; then brew install ruby-build; fi
+.DEFAULT_GOAL := help
 
-	# Initialize rbenv in the current shell session
-	@export PATH="$(RBENV_BIN_PATH):$$PATH" && eval "$$(rbenv init -)"
+.PHONY: help check install serve build clean doctor
 
-	# Install the Ruby version specified in the .ruby-version file if it's not already installed
-	@rbenv install --skip-existing `cat .ruby-version`
+help:
+	@echo "Available targets:"
+	@echo "  make install  - install gems into $(BUNDLE_PATH)"
+	@echo "  make serve    - run the site locally with live reload"
+	@echo "  make build    - build the site into _site/"
+	@echo "  make clean    - remove generated build and cache files"
+	@echo "  make doctor   - print Ruby, Bundler, and Jekyll versions"
 
-	# Set the local (directory-specific) Ruby version
-	@rbenv local `cat .ruby-version`
+check:
+	@command -v ruby >/dev/null || { echo "Ruby is not installed or not on PATH."; exit 1; }
+	@command -v bundle >/dev/null || { echo "Bundler is not installed or not on PATH."; exit 1; }
+	@ruby -e 'required = Gem::Version.new("$(RUBY_MIN_VERSION)"); current = Gem::Version.new(RUBY_VERSION); abort("Ruby #{required} or newer is required; found #{RUBY_VERSION}") if current < required'
 
-	# Make sure the shims are properly set
-	@rbenv rehash
+install: check
+	@$(BUNDLE_CMD) config set --local path "$(BUNDLE_PATH)"
+	@$(BUNDLE_CMD) check || $(BUNDLE_CMD) install
 
-	# Install Jekyll and Bundler, ensuring we're using the user's gem bin directory
-	@export PATH="$(USER_BIN_PATH):$$PATH" && gem install jekyll bundler --user-install
+serve: install
+	@$(JEKYLL_CMD) serve --livereload --host $(HOST) --port $(PORT)
 
-	# Rehash after installing gems to ensure binaries are available
-	@rbenv rehash
+build: install
+	@JEKYLL_ENV=production $(JEKYLL_CMD) build
 
-# This target serves your Jekyll site locally
-serve-site:
-	@echo "Serving your Jekyll site locally..."
-	@export PATH="$(USER_BIN_PATH):$(RBENV_BIN_PATH):$$PATH" && eval "$$(rbenv init -)"
-	@rbenv rehash
-	@gem list -i bundler || gem install bundler
-	@bundle check || bundle install
-	@gem list -i http_parser.rb -v 0.6.0 || gem install http_parser.rb -v 0.6.0
-	@gem cleanup
-	@bundle exec jekyll serve --livereload
+clean:
+	@rm -rf _site .sass-cache .jekyll-cache .jekyll-metadata
 
-# Use this to open the site in your default browser
-open-site:
-	@echo "Opening the local Jekyll site in your default browser..."
-	@open http://localhost:4000
+doctor:
+	@ruby -v
+	@bundle -v
+	@$(BUNDLE_CMD) check >/dev/null 2>&1 || { echo "Project gems are not installed. Run 'make install' first."; exit 1; }
+	@$(JEKYLL_CMD) -v

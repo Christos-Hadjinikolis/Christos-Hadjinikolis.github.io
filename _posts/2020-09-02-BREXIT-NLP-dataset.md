@@ -2,10 +2,8 @@
 title: A BREXIT NLP Dataset! 
 author: Christos Hadjinikolis
 layout: post
+og_image: assets/images/eu-brexit-classifier.png
 ---
-<head>
-    <meta property="og:image" content="assets/images/eu-brexit-classifier.png" />
-</head>
 So here is the thing... I love discussing politics; I think that everyone should, at least occasionally, bother 
 themselves with what is happening in their country's political scenery. 
 

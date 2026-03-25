@@ -2,14 +2,9 @@
 title: Style Transfer in Heraklion
 author: Christos Hadjinikolis
 layout: post
+og_image: assets/images/2020-08-15-style-transfer-koules.png
+mathjax: true
 ---
-<head>
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-    </script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML'></script>
-    <meta property="og:image" content="assets/images/2020-08-15-style-transfer-koules.png" />
-</head>
 I am currently in Crete for my annual get away. Crete is an amazing island with many beautiful places to visit and a vast 
 history that goes all the way back to the Minoans in 3500 BC.  
 

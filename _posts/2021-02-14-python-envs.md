@@ -2,11 +2,8 @@
 title: Complete Guide to Python Envs (MacOS)
 author: Christos Hadjinikolis
 layout: post
+og_image: assets/images/python_environment_2x.png
 ---
-<head>
-    <meta property="og:image" content="assets/images/python_environment_2x.png" />
-</head>
-
 Configuring python on your machine for the first time is a definite headache for any software 
 engineer that decides to delve into the world of python. Doing it properly confuses a lot of 
 people and can prove to be very challenging. 

@@ -2,11 +2,8 @@
 title: Dynamic(i/o) Why you should start your ML-Ops journey with wrapping your I/O
 author: Christos Hadjinikolis
 layout: post
+og_image: assets/images/2022-06-01-dynamicio.png
 ---
-<head>
-    <meta property="og:image" content="assets/images/2022-06-01-dynamicio.png" />
-</head>
-
 If you call yourself an ML-Engineer then you 've been there--you 've seen this before. To productionise your ml-pipeline; well, that’s surely a challenge.
 
 <span class="image center"><img src="{{ 'assets/images/2022-06-01-dynamicio.png' | relative_url }}" alt="dynamic(i/o)" /></span>

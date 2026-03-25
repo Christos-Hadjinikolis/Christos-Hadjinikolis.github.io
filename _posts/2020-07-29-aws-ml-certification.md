@@ -2,8 +2,8 @@
 title: AWS ML Certification 
 author: Christos Hadjinikolis
 layout: post
+og_image: assets/images/2020-07-29-AWS-Cert.png
 ---
-<head><meta property="og:image" content="assets/images/2020-07-29-AWS-Cert.png" /></head>
 I recently took the [AWS Certified Machine Learning - Specialty](https://aws.amazon.com/certification/certified-machine-learning-specialty/). 
 I went through a lot of work in order to adequately prepare for this exam and I can tell you that it is indeed one of 
 the hardest AWS certifications. Nevertheless, with proper preparation and a bit of dedication you should be fine.
@@ -137,4 +137,3 @@ See you soon!
 <p><a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml"><img src="//feedburner.google.com/fb/images/pub/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/></a>&nbsp;<a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml">Register to the ML-Affairs RSS Feed</a></p>
 
 <blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">I successfully took the AWS Machine Learning Specialty Certification during the COVID-19 lockdown! <br><br>Here are my thoughts: <a href="https://t.co/WejGBrmDvy">https://t.co/WejGBrmDvy</a></p>&mdash; Christos Hadjinikoli (@chatzinikolis) <a href="https://twitter.com/chatzinikolis/status/1288507051824549888?ref_src=twsrc%5Etfw">July 29, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-

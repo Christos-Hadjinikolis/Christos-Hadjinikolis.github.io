@@ -2,11 +2,8 @@
 title: "Harmonizing Avro and Python: A Dance of Data Classes"
 author: Christos Hadjinikolis
 layout: post
+og_image: assets/images/2023-11-07-Example-Architecture.png
 ---
-<head>
-    <meta property="og:image" content="assets/images/2023-11-07-Example-Architecture.png" />
-</head>
-
 Reposting from the [Vortexa medium blog](https://medium.com/vortechsa/harmonizing-avro-and-python-a-dance-of-data-classes-d1cc7bf6bb33) 
 
 In the realm of data engineering, managing data types and schemas efficiently is of paramount importance. The crux of the matter? When data schemas are poorly managed, a myriad of issues arise, ranging from data incompatibility to runtime errors. What I am aiming for in this article is to introduce Apache Avro, a binary serialization format born from the Apache Hadoop project, through which I hope to highlight the significance of Avro schemas in data engineering. Finally, I will provide you with a hands-on guide on converting Avro files into Python data classes. By the end of this read, you’ll grasp the fundamentals of Avro schemas, understand the advantages of using them, and be equipped with a practical example of generating Python data classes from these schemas.
