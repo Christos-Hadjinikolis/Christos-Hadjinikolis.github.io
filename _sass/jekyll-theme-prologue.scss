@@ -506,6 +506,23 @@
 		}
 	}
 
+	.prose-block {
+		max-width: 54rem;
+		margin: 0 auto;
+		text-align: left;
+
+		p,
+		ul,
+		ol {
+			text-align: left;
+		}
+
+		ul,
+		ol {
+			margin-left: 1.45em;
+		}
+	}
+
 /* Icons */
 
 	.icon {
