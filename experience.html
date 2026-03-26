@@ -5,345 +5,31 @@ layout: "page"
 icon: fa-book
 order: 3
 ---
-<style>
-  .experience-page {
-    --experience-accent: #e27689;
-    --experience-accent-strong: #c95a71;
-    --experience-accent-soft: rgba(226, 118, 137, 0.1);
-    --experience-accent-border: rgba(226, 118, 137, 0.24);
-    --experience-ink: #61656d;
-    --experience-ink-strong: #373c44;
-    --experience-panel: rgba(255, 255, 255, 0.94);
-    --experience-panel-soft: rgba(255, 249, 250, 0.92);
-    --experience-line: rgba(55, 60, 68, 0.14);
-    --experience-shadow: 0 18px 40px rgba(33, 38, 45, 0.08);
-    color: var(--experience-ink);
-  }
-
-  .experience-page h3,
-  .experience-page h4 {
-    color: var(--experience-ink-strong);
-    margin-bottom: 0.55em;
-  }
-
-  .experience-hero {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: 1.45fr 0.95fr;
-    margin-bottom: 2.1rem;
-  }
-
-  .experience-panel {
-    background: var(--experience-panel);
-    border: 1px solid var(--experience-accent-border);
-    border-radius: 1.25rem;
-    box-shadow: var(--experience-shadow);
-    padding: 1.65rem 1.75rem;
-  }
-
-  .experience-panel.soft {
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.97), rgba(255, 246, 248, 0.94));
-  }
-
-  .experience-kicker {
-    color: var(--experience-accent);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    font-size: 0.9rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    margin-bottom: 0.85rem;
-    text-transform: uppercase;
-  }
-
-  .experience-summary {
-    font-size: 1.02rem;
-    line-height: 1.78;
-    margin-bottom: 0;
-  }
-
-  .experience-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.55rem;
-    list-style: none;
-    margin: 1rem 0 0;
-    padding: 0;
-  }
-
-  .experience-pill {
-    background: var(--experience-accent-soft);
-    border: 1px solid var(--experience-accent-border);
-    border-radius: 999px;
-    color: var(--experience-ink-strong);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    font-size: 0.9rem;
-    padding: 0.42rem 0.8rem;
-  }
-
-  .experience-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.85rem;
-    margin-top: 1.15rem;
-  }
-
-  .experience-actions .button {
-    margin-bottom: 0;
-  }
-
-  .experience-principles {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .experience-principles li {
-    border-top: 1px solid rgba(55, 60, 68, 0.08);
-    margin: 0;
-    padding: 0.85rem 0 0;
-  }
-
-  .experience-principles li + li {
-    margin-top: 0.85rem;
-  }
-
-  .experience-principles strong {
-    color: var(--experience-ink-strong);
-    display: block;
-    margin-bottom: 0.22rem;
-  }
-
-  .experience-story {
-    margin-top: 0.4rem;
-    position: relative;
-  }
-
-  .experience-story::before {
-    background: linear-gradient(to bottom, var(--experience-accent) 0%, rgba(226, 118, 137, 0.18) 100%);
-    border-radius: 999px;
-    content: "";
-    left: 8.15rem;
-    position: absolute;
-    top: 0.4rem;
-    bottom: 0.4rem;
-    width: 3px;
-  }
-
-  .experience-step {
-    display: grid;
-    gap: 1.35rem;
-    grid-template-columns: 7.1rem 1fr;
-    margin-bottom: 1.7rem;
-    position: relative;
-  }
-
-  .experience-step:last-child {
-    margin-bottom: 0;
-  }
-
-  .experience-step::before {
-    background: #fff;
-    border: 3px solid var(--experience-accent);
-    border-radius: 50%;
-    content: "";
-    height: 1rem;
-    left: 7.78rem;
-    position: absolute;
-    top: 1.5rem;
-    width: 1rem;
-  }
-
-  .experience-era {
-    padding-top: 0.55rem;
-    text-align: right;
-  }
-
-  .experience-era .period {
-    color: var(--experience-accent);
-    display: block;
-    font-size: 0.95rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    margin-bottom: 0.28rem;
-    text-transform: uppercase;
-  }
-
-  .experience-era .label {
-    color: #8a8f97;
-    display: block;
-    font-size: 0.86rem;
-    line-height: 1.45;
-  }
-
-  .experience-card {
-    background: var(--experience-panel);
-    border: 1px solid rgba(55, 60, 68, 0.09);
-    border-left: 5px solid var(--experience-accent);
-    border-radius: 1.2rem;
-    box-shadow: var(--experience-shadow);
-    padding: 1.45rem 1.5rem;
-  }
-
-  .experience-card-head {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    justify-content: space-between;
-    margin-bottom: 0.8rem;
-  }
-
-  .experience-card-head h4 {
-    margin: 0 0 0.15rem;
-  }
-
-  .experience-role {
-    color: var(--experience-ink-strong);
-    font-weight: 600;
-  }
-
-  .experience-location {
-    color: #8a8f97;
-    font-size: 0.94rem;
-  }
-
-  .experience-badge {
-    background: var(--experience-accent-soft);
-    border-radius: 999px;
-    color: var(--experience-accent-strong);
-    font-size: 0.86rem;
-    font-weight: 600;
-    padding: 0.38rem 0.8rem;
-    white-space: nowrap;
-  }
-
-  .experience-hook {
-    color: var(--experience-ink-strong);
-    font-size: 1.02rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
-  }
-
-  .experience-columns {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .experience-mini-panel {
-    background: var(--experience-panel-soft);
-    border: 1px solid rgba(55, 60, 68, 0.08);
-    border-radius: 1rem;
-    padding: 1rem 1.05rem;
-  }
-
-  .experience-mini-panel h5 {
-    color: var(--experience-ink-strong);
-    font-size: 0.95rem;
-    letter-spacing: 0.02em;
-    margin: 0 0 0.55rem;
-    text-transform: uppercase;
-  }
-
-  .experience-list {
-    margin: 0;
-  }
-
-  .experience-list li {
-    margin-bottom: 0.45rem;
-  }
-
-  .experience-bottom {
-    display: grid;
-    gap: 1.4rem;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    margin-top: 2rem;
-  }
-
-  .experience-bottom .experience-panel {
-    height: 100%;
-  }
-
-  .experience-bottom ul {
-    margin-bottom: 0;
-  }
-
-  .experience-note {
-    color: #8a8f97;
-    font-size: 0.94rem;
-    margin-top: 1rem;
-  }
-
-  @media screen and (max-width: 1100px) {
-    .experience-hero,
-    .experience-bottom {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media screen and (max-width: 900px) {
-    .experience-story::before {
-      display: none;
-    }
-
-    .experience-step {
-      grid-template-columns: 1fr;
-    }
-
-    .experience-step::before {
-      display: none;
-    }
-
-    .experience-era {
-      padding-top: 0;
-      text-align: left;
-    }
-
-    .experience-columns {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media screen and (max-width: 736px) {
-    .experience-card-head {
-      flex-direction: column;
-      gap: 0.65rem;
-    }
-
-    .experience-badge {
-      white-space: normal;
-    }
-  }
-</style>
-
-<div class="experience-page">
-  <section class="experience-hero">
-    <div class="experience-panel soft">
-      <div class="experience-kicker">🧭 Professional Arc</div>
+<div class="page-shell experience-page">
+  <section class="page-hero">
+    <div class="page-panel page-panel--tinted">
+      <div class="page-kicker">🧭 Professional Arc</div>
       <h3>From research and teaching to full ownership of real-time ML systems</h3>
-      <p class="experience-summary">
+      <p class="page-summary">
         This page is intentionally not a second CV. It is the story of how my scope changed over time: from explaining ideas,
         to building models, to owning the systems, trade-offs, and teams needed to make those models useful in production.
       </p>
-      <ul class="experience-pills">
-        <li class="experience-pill">🎓 Research roots</li>
-        <li class="experience-pill">🏗️ Production systems</li>
-        <li class="experience-pill">⚙️ Streaming architecture</li>
-        <li class="experience-pill">👥 Team leadership</li>
-        <li class="experience-pill">🏛️ Standards work</li>
+      <ul class="page-pills">
+        <li class="page-pill">🎓 Research roots</li>
+        <li class="page-pill">🏗️ Production systems</li>
+        <li class="page-pill">⚙️ Streaming architecture</li>
+        <li class="page-pill">👥 Team leadership</li>
+        <li class="page-pill">🏛️ Standards work</li>
       </ul>
-      <div class="experience-actions">
+      <div class="page-actions">
         <a href="{{ '/assets/pdfs/cv.pdf' | relative_url }}" class="button scrolly">View Latest CV</a>
         <a href="{{ '/my-cv.html' | relative_url }}" class="button scrolly">Back to CV Snapshot</a>
       </div>
     </div>
 
-    <div class="experience-panel">
+    <div class="page-panel">
       <h3>✨ What Changed Along The Way</h3>
-      <ul class="experience-principles">
+      <ul class="page-rule-list">
         <li>
           <strong>Early years: explaining and teaching</strong>
           I learned to break complex ideas down clearly and help others build confidence in technical subjects.
@@ -381,7 +67,7 @@ order: 3
         <div class="experience-columns">
           <div class="experience-mini-panel">
             <h5>What I was doing</h5>
-            <ul class="experience-list">
+            <ul class="page-list">
               <li>Teaching Java, Python, MATLAB, HTML, CSS, SQL, AI, systems, and data structures.</li>
               <li>Completing doctoral research in persuasion dialogues, opponent modelling, and large knowledge graphs.</li>
               <li>Working close to formal methods, graph reasoning, and research-driven problem solving.</li>
@@ -389,7 +75,7 @@ order: 3
           </div>
           <div class="experience-mini-panel">
             <h5>What stayed with me</h5>
-            <ul class="experience-list">
+            <ul class="page-list">
               <li>Technical communication is a force multiplier.</li>
               <li>Good systems thinking starts with clean abstractions.</li>
               <li>Explaining something clearly is often the best test of understanding it.</li>
@@ -419,7 +105,7 @@ order: 3
         <div class="experience-columns">
           <div class="experience-mini-panel">
             <h5>Representative client work</h5>
-            <ul class="experience-list">
+            <ul class="page-list">
               <li><strong>🏦 UBS:</strong> graph analytics, process mining, and real-time insight pipelines with Kafka, Elasticsearch, and Python.</li>
               <li><strong>🚜 CNHi:</strong> time-series forecasting for agricultural vehicles with alerting and deployment paths.</li>
               <li><strong>📱 Vodafone:</strong> internal MLOps platform work on GCP and Kubeflow, with CI/CD, telemetry, and reproducibility.</li>
@@ -427,7 +113,7 @@ order: 3
           </div>
           <div class="experience-mini-panel">
             <h5>What this phase taught me</h5>
-            <ul class="experience-list">
+            <ul class="page-list">
               <li>Most ML failures are systems failures, not modelling failures.</li>
               <li>Ambiguous environments are where architecture matters most.</li>
               <li>Bridging DS and engineering is a delivery problem as much as a technical one.</li>
@@ -457,7 +143,7 @@ order: 3
         <div class="experience-columns">
           <div class="experience-mini-panel">
             <h5>What I built</h5>
-            <ul class="experience-list">
+            <ul class="page-list">
               <li>Destination and ETA systems using transformer-based sequence models with automated refresh and longitudinal evaluation.</li>
               <li>Real-time Kafka/Flink pipelines over global AIS feeds, powering prediction, anomaly triggers, and downstream decision support.</li>
               <li>AIS denoising operators based on Kalman filtering to improve signal quality and downstream model accuracy.</li>
@@ -466,7 +152,7 @@ order: 3
           </div>
           <div class="experience-mini-panel">
             <h5>What I own now</h5>
-            <ul class="experience-list">
+            <ul class="page-list">
               <li>Cross-functional delivery across ML, DS, and DE.</li>
               <li>Hiring, mentoring, roadmap alignment, and execution quality.</li>
               <li>Architecture decisions that account for latency, replayability, and failure modes.</li>
@@ -479,19 +165,19 @@ order: 3
   </section>
 
   <section class="experience-bottom">
-    <div class="experience-panel">
-      <div class="experience-kicker">🏛️ Beyond The Core Role</div>
+    <div class="page-panel">
+      <div class="page-kicker">🏛️ Beyond The Core Role</div>
       <h3>Standards and research</h3>
-      <ul class="experience-list">
+      <ul class="page-list">
         <li><strong>Since 01/2021 · ISO JTC 21 WG3</strong><br>Committee Expert Member working on AI standards aligned with international and EU policy directions.</li>
         <li><strong>Since 10/2024 · UCL Department of Information Studies</strong><br>Associate Researcher supporting AI application, standardisation, and ethics initiatives.</li>
       </ul>
     </div>
 
-    <div class="experience-panel">
-      <div class="experience-kicker">🎙️ Public Work</div>
+    <div class="page-panel">
+      <div class="page-kicker">🎙️ Public Work</div>
       <h3>Talks and interviews</h3>
-      <ul class="experience-list">
+      <ul class="page-list">
         <li><strong>2023 · Agile in Action</strong><br>Podcast interview on agile data science and the Vortexa journey.</li>
         <li><strong>2022 · ODSC</strong><br>Industry talk on <em>dynamicio</em> and abstracting I/O for ML systems.</li>
         <li><strong>2020 · iunera & Big Data Warsaw</strong><br>Interview and conference talk on agile data science and graph-driven analytics.</li>
@@ -499,17 +185,17 @@ order: 3
       </ul>
     </div>
 
-    <div class="experience-panel">
-      <div class="experience-kicker">📐 Through-Line</div>
+    <div class="page-panel">
+      <div class="page-kicker">📐 Through-Line</div>
       <h3>What has remained constant</h3>
-      <ul class="experience-list">
+      <ul class="page-list">
         <li><strong>Production is the only truth.</strong></li>
         <li><strong>If it cannot be measured, it is not done.</strong></li>
         <li><strong>Deterministic systems beat clever hacks.</strong></li>
         <li><strong>Models must degrade gracefully.</strong></li>
         <li><strong>System quality should scale through people and process, not heroics.</strong></li>
       </ul>
-      <p class="experience-note">Guiding principle: “Make it work. Make it right. Make it fast.”</p>
+      <p class="page-note">Guiding principle: “Make it work. Make it right. Make it fast.”</p>
     </div>
   </section>
 </div>

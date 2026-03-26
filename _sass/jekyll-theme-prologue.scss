@@ -523,6 +523,296 @@
 		}
 	}
 
+	.page-shell {
+		--page-accent: var(--accent);
+		--page-accent-strong: var(--accent-strong);
+		--page-accent-soft: rgba(226, 118, 137, 0.12);
+		--page-accent-border: rgba(226, 118, 137, 0.24);
+		--page-ink: #61656d;
+		--page-ink-strong: #373c44;
+		--page-panel: rgba(255, 255, 255, 0.94);
+		--page-panel-soft: rgba(255, 249, 250, 0.92);
+		--page-line: rgba(55, 60, 68, 0.14);
+		--page-shadow: 0 18px 40px rgba(33, 38, 45, 0.08);
+		color: var(--page-ink);
+
+		h3,
+		h4,
+		h5 {
+			color: var(--page-ink-strong);
+			margin-bottom: 0.55em;
+		}
+	}
+
+	.page-hero,
+	.page-grid {
+		display: grid;
+		gap: 1.5rem;
+	}
+
+	.page-hero {
+		grid-template-columns: 1.4fr 1fr;
+		margin-bottom: 2rem;
+	}
+
+	.page-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.page-panel {
+		background: var(--page-panel);
+		border: 1px solid var(--page-accent-border);
+		border-radius: 1.2rem;
+		box-shadow: var(--page-shadow);
+		padding: 1.55rem 1.65rem;
+	}
+
+	.page-panel--tinted {
+		background: linear-gradient(145deg, rgba(255, 255, 255, 0.97), rgba(255, 246, 248, 0.94));
+	}
+
+	.page-kicker {
+		color: var(--page-accent);
+		display: inline-flex;
+		align-items: center;
+		gap: 0.45rem;
+		font-size: 0.9rem;
+		font-weight: 600;
+		letter-spacing: 0.06em;
+		margin-bottom: 0.85rem;
+		text-transform: uppercase;
+	}
+
+	.page-summary {
+		font-size: 1.02rem;
+		line-height: 1.78;
+		margin-bottom: 0;
+	}
+
+	.page-pills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.55rem;
+		list-style: none;
+		margin: 1rem 0 0;
+		padding: 0;
+	}
+
+	.page-pill {
+		background: var(--page-accent-soft);
+		border: 1px solid var(--page-accent-border);
+		border-radius: 999px;
+		color: var(--page-ink-strong);
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		font-size: 0.9rem;
+		padding: 0.42rem 0.8rem;
+	}
+
+	.page-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.85rem;
+		margin-top: 1.15rem;
+
+		.button {
+			margin-bottom: 0;
+		}
+	}
+
+	.page-list,
+	.page-timeline {
+		margin-bottom: 0;
+	}
+
+	.page-list li,
+	.page-timeline li {
+		margin-bottom: 0.48rem;
+	}
+
+	.page-list strong,
+	.page-timeline strong {
+		color: var(--page-ink-strong);
+	}
+
+	.page-rule-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.page-rule-list li {
+		border-top: 1px solid rgba(55, 60, 68, 0.08);
+		margin: 0;
+		padding: 0.85rem 0 0;
+	}
+
+	.page-rule-list li + li {
+		margin-top: 0.85rem;
+	}
+
+	.page-rule-list strong {
+		color: var(--page-ink-strong);
+		display: block;
+		margin-bottom: 0.22rem;
+	}
+
+	.page-note {
+		color: #8a8f97;
+		font-size: 0.94rem;
+		margin-top: 1rem;
+	}
+
+	.experience-page {
+		.page-hero {
+			grid-template-columns: 1.45fr 0.95fr;
+			margin-bottom: 2.1rem;
+		}
+	}
+
+	.experience-story {
+		margin-top: 0.4rem;
+		position: relative;
+	}
+
+	.experience-story::before {
+		background: linear-gradient(to bottom, var(--page-accent) 0%, rgba(226, 118, 137, 0.18) 100%);
+		border-radius: 999px;
+		content: "";
+		left: 8.15rem;
+		position: absolute;
+		top: 0.4rem;
+		bottom: 0.4rem;
+		width: 3px;
+	}
+
+	.experience-step {
+		display: grid;
+		gap: 1.35rem;
+		grid-template-columns: 7.1rem 1fr;
+		margin-bottom: 1.7rem;
+		position: relative;
+	}
+
+	.experience-step:last-child {
+		margin-bottom: 0;
+	}
+
+	.experience-step::before {
+		background: #fff;
+		border: 3px solid var(--page-accent);
+		border-radius: 50%;
+		content: "";
+		height: 1rem;
+		left: 7.78rem;
+		position: absolute;
+		top: 1.5rem;
+		width: 1rem;
+	}
+
+	.experience-era {
+		padding-top: 0.55rem;
+		text-align: right;
+	}
+
+	.experience-era .period {
+		color: var(--page-accent);
+		display: block;
+		font-size: 0.95rem;
+		font-weight: 700;
+		letter-spacing: 0.04em;
+		margin-bottom: 0.28rem;
+		text-transform: uppercase;
+	}
+
+	.experience-era .label {
+		color: #8a8f97;
+		display: block;
+		font-size: 0.86rem;
+		line-height: 1.45;
+	}
+
+	.experience-card {
+		background: var(--page-panel);
+		border: 1px solid rgba(55, 60, 68, 0.09);
+		border-left: 5px solid var(--page-accent);
+		border-radius: 1.2rem;
+		box-shadow: var(--page-shadow);
+		padding: 1.45rem 1.5rem;
+	}
+
+	.experience-card-head {
+		display: flex;
+		align-items: flex-start;
+		gap: 1rem;
+		justify-content: space-between;
+		margin-bottom: 0.8rem;
+
+		h4 {
+			margin: 0 0 0.15rem;
+		}
+	}
+
+	.experience-role {
+		color: var(--page-ink-strong);
+		font-weight: 600;
+	}
+
+	.experience-location {
+		color: #8a8f97;
+		font-size: 0.94rem;
+	}
+
+	.experience-badge {
+		background: var(--page-accent-soft);
+		border-radius: 999px;
+		color: var(--page-accent-strong);
+		font-size: 0.86rem;
+		font-weight: 600;
+		padding: 0.38rem 0.8rem;
+		white-space: nowrap;
+	}
+
+	.experience-hook {
+		color: var(--page-ink-strong);
+		font-size: 1.02rem;
+		line-height: 1.7;
+		margin-bottom: 1rem;
+	}
+
+	.experience-columns {
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.experience-mini-panel {
+		background: var(--page-panel-soft);
+		border: 1px solid rgba(55, 60, 68, 0.08);
+		border-radius: 1rem;
+		padding: 1rem 1.05rem;
+
+		h5 {
+			color: var(--page-ink-strong);
+			font-size: 0.95rem;
+			letter-spacing: 0.02em;
+			margin: 0 0 0.55rem;
+			text-transform: uppercase;
+		}
+	}
+
+	.experience-bottom {
+		display: grid;
+		gap: 1.4rem;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		margin-top: 2rem;
+	}
+
+	.experience-bottom .page-panel {
+		height: 100%;
+	}
+
 /* Icons */
 
 	.icon {
@@ -582,6 +872,55 @@
 					background: rgba(255, 255, 255, 0.08);
 				}
 			}
+		}
+	}
+
+	@media screen and (max-width: 1100px) {
+
+		.experience-bottom {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media screen and (max-width: 980px) {
+
+		.page-hero,
+		.page-grid,
+		.experience-page .page-hero {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media screen and (max-width: 900px) {
+
+		.experience-story::before,
+		.experience-step::before {
+			display: none;
+		}
+
+		.experience-step {
+			grid-template-columns: 1fr;
+		}
+
+		.experience-era {
+			padding-top: 0;
+			text-align: left;
+		}
+
+		.experience-columns {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media screen and (max-width: 736px) {
+
+		.experience-card-head {
+			flex-direction: column;
+			gap: 0.65rem;
+		}
+
+		.experience-badge {
+			white-space: normal;
 		}
 	}
 

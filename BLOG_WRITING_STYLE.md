@@ -2,6 +2,11 @@
 
 This file captures the writing style used across the `ML-Affairs` blog and should be used as the working guide whenever we draft posts together.
 
+Use this together with [`BLOG_CONTENT_STRATEGY.md`](/Users/chadjinik/Github/CH/Christos-Hadjinikolis.github.io/BLOG_CONTENT_STRATEGY.md):
+
+- `BLOG_CONTENT_STRATEGY.md` decides whether a topic is worth writing and what angle it should take
+- `BLOG_WRITING_STYLE.md` decides how the post should sound once the topic is chosen
+
 It is based on the existing posts in [`_posts/`](/Users/chadjinik/Github/CH/Christos-Hadjinikolis.github.io/_posts), especially:
 
 - personal and reflective posts such as `2020-07-28-just-do-it.md`
