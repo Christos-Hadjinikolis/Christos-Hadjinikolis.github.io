@@ -2,7 +2,7 @@
 
 This file captures the editorial instructions for what the `ML-Affairs` blog should write about, why the blog should exist, and how to decide whether a post is worth publishing.
 
-Use this together with [`BLOG_WRITING_STYLE.md`](/Users/chadjinik/Github/CH/Christos-Hadjinikolis.github.io/BLOG_WRITING_STYLE.md):
+Use this together with [`BLOG_WRITING_STYLE.md`](BLOG_WRITING_STYLE.md):
 
 - `BLOG_CONTENT_STRATEGY.md` decides whether a topic is worth writing and what angle it should take
 - `BLOG_WRITING_STYLE.md` decides how the post should sound once the topic is chosen

@@ -63,3 +63,8 @@ google_analytics: UA-173020434-1
 # The following settings are NECESSARY for the Prologue theme to run:
 remote_theme: jekyll-theme-prologue
 collections: [sections]
+exclude:
+  - README.md
+  - CONTRIBUTING.md
+  - LICENSE.md
+  - cv/latex/README.md

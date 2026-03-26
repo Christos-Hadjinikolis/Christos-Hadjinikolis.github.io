@@ -13,6 +13,7 @@ Personal website and blog built with Jekyll and the `jekyll-theme-prologue` them
 - `_sections/`: homepage sections
 - `_posts/`: blog posts
 - `_layouts/` and `_includes/`: Jekyll templates and shared partials
+- `_internal/`: non-published internal docs and authoring guides
 - `assets/`: images, PDFs, CSS, and JavaScript
 - `Makefile`: local development shortcuts
 
@@ -58,6 +59,7 @@ http://127.0.0.1:4000
 make help
 make doctor
 make build
+make audit
 make clean
 ```
 
@@ -87,8 +89,13 @@ make build
 
 The generated site will be written to `_site/`.
 
+To quickly inspect the generated top-level files and catch accidental published repo docs:
+
+```bash
+make audit
+```
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the local workflow and contribution guidelines.
-
 

@@ -41,6 +41,7 @@ make build
 - Put homepage content in `_sections/`.
 - Put blog posts in `_posts/` with valid front matter.
 - Put shared template changes in `_layouts/` or `_includes/`.
+- Put internal-only notes or authoring guides in `_internal/` so Jekyll does not publish them.
 - Keep large generated or vendored files out of commits.
 
 ## Before Opening a PR

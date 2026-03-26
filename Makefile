@@ -10,13 +10,14 @@ PORT ?= 4000
 
 .DEFAULT_GOAL := help
 
-.PHONY: help check install serve build clean doctor
+.PHONY: help check install serve build audit clean doctor
 
 help:
 	@echo "Available targets:"
 	@echo "  make install  - install gems into $(BUNDLE_PATH)"
 	@echo "  make serve    - run the site locally with live reload"
 	@echo "  make build    - build the site into _site/"
+	@echo "  make audit    - build the site and list top-level generated files"
 	@echo "  make clean    - remove generated build and cache files"
 	@echo "  make doctor   - print Ruby, Bundler, and Jekyll versions"
 
@@ -34,6 +35,9 @@ serve: install
 
 build: install
 	@JEKYLL_ENV=production $(JEKYLL_CMD) build
+
+audit: build
+	@find _site -mindepth 1 -maxdepth 1 | sort
 
 clean:
 	@rm -rf _site .sass-cache .jekyll-cache .jekyll-metadata
