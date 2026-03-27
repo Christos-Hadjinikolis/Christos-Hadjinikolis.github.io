@@ -21,6 +21,9 @@
   <title>{{- _page_title -}}</title>
   <meta name="description" content="{{- _page_description -}}" />
   <meta name="author" content="{{- site.author -}}" />
+  {%- if page.seo_keywords and page.seo_keywords[0] -%}
+  <meta name="keywords" content="{{- page.seo_keywords | join: ', ' | escape -}}" />
+  {%- endif -%}
 
   <!-- Open Graph -->
   <meta property="og:title" content="{{- _page_title -}}" />
@@ -29,6 +32,33 @@
   <meta property="og:url" content="{{- page.url | absolute_url -}}" />
   <meta property="og:site_name" content="{{- site.title | escape -}}" />
   <meta property="og:description" content="{{- _page_description -}}" />
+  {%- if page.seo_keywords and page.seo_keywords[0] -%}
+    {%- for _keyword in page.seo_keywords -%}
+  <meta property="article:tag" content="{{- _keyword | escape -}}" />
+    {%- endfor -%}
+  {%- endif -%}
+  {%- if page.layout == 'post' -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": {{ page.title | jsonify }},
+    "description": {{ _page_description | jsonify }},
+    "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+    "dateModified": {{ page.date | date_to_xmlschema | jsonify }},
+    "author": {
+      "@type": "Person",
+      "name": {{ page.author | default: site.author | jsonify }}
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": {{ page.url | absolute_url | jsonify }}
+    },
+    "image": {{ _og_image | absolute_url | jsonify }}{% if page.seo_keywords and page.seo_keywords[0] %},
+    "keywords": {{ page.seo_keywords | join: ', ' | jsonify }}{% endif %}
+  }
+  </script>
+  {%- endif -%}
 
   <!-- Styles -->
   <meta charset="utf-8" />

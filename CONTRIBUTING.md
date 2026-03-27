@@ -34,6 +34,14 @@ Create a production-style build:
 make build
 ```
 
+Install the repo's local git hooks into `.git/hooks`:
+
+```bash
+make install-hooks
+```
+
+This repository versions the installer, not the hooks themselves. That means you can run the same setup on another machine, but the actual hook files remain local to that clone.
+
 ## CV / LaTeX Setup
 
 The CV source lives under `cv/latex/` and is separate from the website PDF published at `assets/pdfs/cv.pdf`.
@@ -107,6 +115,7 @@ If IntelliJ reports that no LaTeX installation can be found, TeX is either not i
 - Run `make build`
 - Review the affected pages locally
 - Update docs when the local workflow changes
+- Consider running `make install-hooks` once per clone so basic commit checks happen automatically
 
 ## Notes
 

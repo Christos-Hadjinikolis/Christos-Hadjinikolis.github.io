@@ -4,6 +4,11 @@ title_html: "A <span class='blog-title-accent blog-title-accent--eu'>BREXIT</spa
 author: Christos Hadjinikolis
 layout: post
 og_image: assets/images/posts/2020/brexit-nlp-dataset/eu-brexit-classifier.png
+description: "How I built a BREXIT-related NLP dataset and why real-world labeling and collection choices matter in applied NLP."
+seo_keywords: ["BREXIT NLP", "NLP dataset", "text classification", "twitter data", "applied machine learning"]
+tldr_why_read: "Useful if you care about how topical NLP datasets get assembled outside clean benchmark settings."
+tldr_learn: "How the dataset idea emerged, why labeling is the hard part, and what makes a practical NLP dataset usable."
+tldr_takeaways: ["Real data collection is messy", "Labeling strategy determines downstream value", "Applied NLP starts with better datasets, not just models"]
 ---
 So here is the thing... I love discussing politics; I think that everyone should, at least occasionally, bother 
 themselves with what is happening in their country's political scenery. 

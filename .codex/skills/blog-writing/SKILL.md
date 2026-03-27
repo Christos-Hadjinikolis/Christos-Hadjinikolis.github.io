@@ -23,6 +23,14 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
 5. Prefer concrete examples and earned opinions over trend summaries or generic tutorials.
 6. When source material exists (slides, notes, old reports, evaluations), mine it for concrete operational signals rather than just restating conclusions.
 7. If visuals would genuinely improve a post, prefer tasteful supplied imagery or carefully chosen extracted assets that support the mood and topic without overwhelming the writing.
+8. When a post is ready for distribution, prepare companion copy for X and LinkedIn by default.
+9. Treat Medium and Substack as manual syndication targets unless the platform's official API situation clearly supports durable automation.
+10. Every new post should include a concise, visible TL;DR block near the top:
+  - `tldr_why_read`
+  - `tldr_learn`
+  - `tldr_takeaways`
+11. Every new post should include `description` and `seo_keywords` front matter so the page has useful search metadata without resorting to hidden keyword stuffing.
+12. For framework/platform posts, put the real adoption driver near the top and, when helpful, include a concrete next-step path such as a starter archetype, template, or agent prompt.
 
 ## Output Rules
 
@@ -30,12 +38,14 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
 - Preserve an existing post's date and slug unless the user explicitly asks to change them.
 - Use headings to structure arguments.
 - When the visual treatment of blog posts matters, prefer a plain `title` for metadata and a rendered `title_html` for the on-page/blog-index heading.
+- Use `description`, `seo_keywords`, and the three TL;DR fields in front matter.
+- Do not add hidden keyword text to the page body for SEO. Prefer visible summaries, honest wording, and structured metadata.
 - Use visual emphasis sparingly and consistently:
-  - reserve color accents for technologies, frameworks, and core concepts that are central to the post
+  - reserve color accents for technologies, frameworks, and core concepts that are central to the post (be concistent across posts about colouring)
   - use at most 1 to 2 colored terms in a paragraph
   - prefer bold or italics for emphasis before adding more color
   - use bold for the clearest takeaways, named concepts, or strong claims
-  - use italics for softer emphasis, contrast, or a reflective aside
+  - use italics for softer emphasis, contrast, or a reflective aside, or anything that is in quotes
   - do not stack bold, italics, and color on the same phrase unless there is a very strong reason
   - if a paragraph already has one visual emphasis cue, be skeptical about adding another
   - keep all accents accessible and readable on light backgrounds
@@ -54,6 +64,10 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
   - when the user supplies images, prefer choosing the best ones and integrating them cleanly
 - Avoid hype, startup marketing language, and generic AI thought leadership tone.
 - Do not publish internal instructions or quote them into the post.
+- For social distribution:
+  - generate a short X version and a fuller LinkedIn version when useful
+  - keep Medium and Substack copy reusable, but do not assume direct API publishing exists
+  - use the repo's social scripts when they fit the task and credentials are configured
 
 ## Quality Bar
 
@@ -61,3 +75,4 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
 - The post should teach something non-obvious.
 - The post should reconnect technical ideas to production conditions.
 - The conclusion should land on a practical takeaway, not just a flourish.
+- A strong modern post should also give the reader a credible next step when that is useful: a repo, archetype, checklist, or agent prompt.

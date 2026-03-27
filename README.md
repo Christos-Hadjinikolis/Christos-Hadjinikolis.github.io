@@ -64,7 +64,20 @@ make doctor
 make build
 make audit
 make clean
+make install-hooks
 ```
+
+## Social Publishing
+
+The repository includes a small social publishing scaffold under `scripts/social/`.
+
+- `X` and `LinkedIn` have official post APIs and are the only platforms wired for direct publishing here.
+- `Medium` is no longer a good foundation for new API integrations; Medium says it does not issue new integration tokens for the API.
+- `Substack` still does not offer a public write API for publication posting, so treat it as a manual syndication target.
+
+Secrets should live in a local `.env` file that is gitignored. Copy `.env.example` and fill in only the values you need.
+
+See [scripts/social/README.md](scripts/social/README.md) for setup and usage.
 
 ## Troubleshooting
 

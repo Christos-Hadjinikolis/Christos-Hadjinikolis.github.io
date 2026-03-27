@@ -4,6 +4,11 @@ title_html: "Complete Guide to <span class='blog-title-accent blog-title-accent-
 author: Christos Hadjinikolis
 layout: post
 og_image: assets/images/posts/2021/python-envs/python_environment_2x.png
+description: "A practical guide to Python environments on macOS, including system Python pitfalls and the setup patterns that actually work."
+seo_keywords: ["python environments", "macOS python", "pyenv", "virtualenv", "python setup"]
+tldr_why_read: "A practical post for anyone who is still losing time to Python setup confusion on macOS."
+tldr_learn: "Which Python environment tools matter, where macOS gets in the way, and how to build a sane local setup."
+tldr_takeaways: ["System Python is rarely what you want", "Environment management is a productivity issue", "Clarity beats collecting tools"]
 ---
 Configuring <span class="blog-highlight blog-highlight--python">python</span> on your machine for the first time is a definite headache for any software 
 engineer that decides to delve into the world of <span class="blog-highlight blog-highlight--python">python</span>. Doing it properly confuses a lot of 

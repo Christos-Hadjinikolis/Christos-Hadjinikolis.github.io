@@ -126,7 +126,9 @@ _site/
 /wip/
 
 # Used by dotenv library to load environment variables.
-# .env
+.env
+.env
+!.env
 
 # Ignore Byebug command history file.
 .byebug_history

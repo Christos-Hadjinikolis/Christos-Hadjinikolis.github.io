@@ -4,6 +4,11 @@ title_html: "<span class='blog-title-accent blog-title-accent--dynamicio'>Dynami
 author: Christos Hadjinikolis
 layout: post
 og_image: assets/images/posts/2022/dynamicio-at-odsc/2022-06-01-dynamicio.png
+description: "Why ML pipelines need I/O abstraction, and how wrapping file and storage concerns improves maintainability, testing, and delivery."
+seo_keywords: ["MLOps", "I/O abstraction", "dynamicio", "ML pipelines", "dependency inversion"]
+tldr_why_read: "Read this if your ML codebase keeps getting buried under storage, schema, and environment-specific glue code."
+tldr_learn: "Why I/O concerns overwhelm ML pipeline code, and why abstraction helps more than another pile of helpers."
+tldr_takeaways: ["I/O logic should not dominate business logic", "Abstraction improves testing and portability", "Cleaner boundaries make ML systems easier to maintain"]
 ---
 If you call yourself an <span class="blog-highlight blog-highlight--graph">ML-Engineer</span> then you 've been there--you 've seen this before. To productionise your ml-pipeline; well, that’s surely a challenge.
 

@@ -10,7 +10,7 @@ PORT ?= 4000
 
 .DEFAULT_GOAL := help
 
-.PHONY: help check install serve build audit clean doctor
+.PHONY: help check install serve build audit clean doctor social-x social-linkedin install-hooks remove-hooks
 
 help:
 	@echo "Available targets:"
@@ -20,6 +20,10 @@ help:
 	@echo "  make audit    - build the site and list top-level generated files"
 	@echo "  make clean    - remove generated build and cache files"
 	@echo "  make doctor   - print Ruby, Bundler, and Jekyll versions"
+	@echo "  make install-hooks - install local git hooks into .git/hooks"
+	@echo "  make remove-hooks  - remove hooks installed by this repo"
+	@echo "  make social-x ARGS='--text \"...\"'          - publish a post to X"
+	@echo "  make social-linkedin ARGS='--text \"...\"'   - publish a post to LinkedIn"
 
 check:
 	@command -v ruby >/dev/null || { echo "Ruby is not installed or not on PATH."; exit 1; }
@@ -47,3 +51,15 @@ doctor:
 	@bundle -v
 	@$(BUNDLE_CMD) check >/dev/null 2>&1 || { echo "Project gems are not installed. Run 'make install' first."; exit 1; }
 	@$(JEKYLL_CMD) -v
+
+social-x:
+	@python3 scripts/social/post_x.py $(ARGS)
+
+social-linkedin:
+	@python3 scripts/social/post_linkedin.py $(ARGS)
+
+install-hooks:
+	@bash scripts/local_setup/setup-hooks.sh install
+
+remove-hooks:
+	@bash scripts/local_setup/setup-hooks.sh remove

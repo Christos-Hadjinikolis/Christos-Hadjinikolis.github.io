@@ -4,6 +4,11 @@ title_html: "Harmonizing <span class='blog-title-accent blog-title-accent--avro'
 author: Christos Hadjinikolis
 layout: post
 og_image: assets/images/posts/2023/avro-schema-management/2023-11-07-Example-Architecture.png
+description: "Why Avro schema discipline matters in data engineering and how to generate Python data classes from Avro schemas."
+seo_keywords: ["Avro schema", "Python data classes", "data engineering", "schema evolution", "serialization"]
+tldr_why_read: "Useful if you want a practical reason to care about schema discipline instead of treating it as ceremony."
+tldr_learn: "Why Avro matters, where schema drift hurts, and how to turn Avro definitions into Python-friendly data classes."
+tldr_takeaways: ["Schema management prevents downstream breakage", "Serialization choices shape system reliability", "Python data classes can fit a stricter data contract"]
 ---
 Reposting from the [Vortexa medium blog](https://medium.com/vortechsa/harmonizing-avro-and-python-a-dance-of-data-classes-d1cc7bf6bb33) 
 

@@ -5,6 +5,11 @@ author: Christos Hadjinikolis
 layout: post
 og_image: assets/images/posts/2020/on-style-transfer/2020-08-15-style-transfer-koules.png
 mathjax: true
+description: "An intuitive explanation of neural style transfer, grounded in Heraklion imagery and the core mechanics behind the model."
+seo_keywords: ["style transfer", "neural style transfer", "deep learning", "computer vision", "VGG19"]
+tldr_why_read: "A more intuitive route into neural style transfer than a dry paper summary."
+tldr_learn: "The core mental model behind style transfer, how the losses work, and why the generated image changes."
+tldr_takeaways: ["Style and content are separated mathematically", "The optimization target is the generated image", "A visual example helps the theory land"]
 ---
 I am currently in Crete for my annual get away. Crete is an amazing island with many beautiful places to visit and a vast 
 history that goes all the way back to the Minoans in 3500 BC.  

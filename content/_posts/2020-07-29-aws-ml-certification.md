@@ -4,6 +4,11 @@ title_html: "<span class='blog-title-accent blog-title-accent--aws'>AWS</span> M
 author: Christos Hadjinikolis
 layout: post
 og_image: assets/images/posts/2020/aws-ml-certification/2020-07-29-AWS-Cert.png
+description: "A practical guide to the AWS Machine Learning Specialty exam, including difficulty, study scope, and how long preparation usually takes."
+seo_keywords: ["AWS certification", "AWS machine learning specialty", "exam preparation", "machine learning certification", "cloud ML"]
+tldr_why_read: "Useful if you are deciding whether the AWS ML Specialty is worth the effort and how to prepare for it."
+tldr_learn: "How hard the exam really is, how its topics are split, and what kind of study timeline makes sense."
+tldr_takeaways: ["The exam is broad, not just AWS services", "Preparation time depends heavily on your background", "A structured study plan matters more than cramming"]
 ---
 I recently took the [AWS Certified Machine Learning - Specialty](https://aws.amazon.com/certification/certified-machine-learning-specialty/), which remains one of the most demanding <span class="blog-highlight blog-highlight--aws">AWS</span> certifications. 
 I went through a lot of work in order to adequately prepare for this exam and I can tell you that it is indeed one of 
@@ -126,8 +131,6 @@ Well, tip number one is: "If you don't know which is the right answer, then just
 I would definitely recommend covering the Sagemalker [FAQs](https://aws.amazon.com/sagemaker/faqs/) which I see as a wonderful source for exam material. 
 
 Do cover the official AWS practice exam; it is just 20 questions, but it is enough to give you an idea about what you are up against. 
-
-Finally, I have put together this [Cheat-sheet](https://github.com/Christos-Hadjinikolis/AWS-ML-cheatsheet/blob/master/README.md). It was quite useful to me and I hope that it will be to you too. Feel free to fork this repo, enrich it with additional material and issue a PR to include your changes. 
 
 That's it! I really wish that this article will help you get started with your learning journey and I hope that soon enough you will be joining the [AWS Certified Global Community](https://www.linkedin.com/groups/6814264/) to share your badge with everyone. 
 

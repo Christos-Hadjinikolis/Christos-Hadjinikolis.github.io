@@ -1,0 +1,27 @@
+{%- assign _post = include.post | default: page -%}
+{%- assign _takeaways = _post.tldr_takeaways -%}
+{%- if _post.tldr_why_read or _post.tldr_learn or _takeaways -%}
+<div class="post-tldr{% if include.compact %} post-tldr--compact{% endif %}">
+  {%- unless include.compact -%}
+  <div class="post-tldr__heading">TL;DR</div>
+  {%- endunless -%}
+  {%- if _post.tldr_why_read -%}
+  <div class="post-tldr__line">
+    <span class="post-tldr__label">Why read</span>
+    <span class="post-tldr__text">{{- _post.tldr_why_read -}}</span>
+  </div>
+  {%- endif -%}
+  {%- if _post.tldr_learn -%}
+  <div class="post-tldr__line">
+    <span class="post-tldr__label">What you'll learn</span>
+    <span class="post-tldr__text">{{- _post.tldr_learn -}}</span>
+  </div>
+  {%- endif -%}
+  {%- if _takeaways and _takeaways[0] -%}
+  <div class="post-tldr__line">
+    <span class="post-tldr__label">Takeaways</span>
+    <span class="post-tldr__text">{{- _takeaways | join: ' · ' -}}</span>
+  </div>
+  {%- endif -%}
+</div>
+{%- endif -%}
