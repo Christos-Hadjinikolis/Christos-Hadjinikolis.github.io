@@ -31,8 +31,11 @@ For posts:
 
 - Title is strong and not generic.
 - Front matter is valid.
+- `description`, canonical URL, and share image metadata are correct.
+- `og_image` is suitable for social sharing and points to a real preview asset.
 - Slug/date behavior is intentional.
 - The post matches the editorial guidance in `_internal/authoring/`.
+- If the post will be announced on LinkedIn/X, deploy the page first, then publish the social post, then add/embed the discussion thread in a follow-up pass if desired.
 
 For site changes:
 

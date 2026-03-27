@@ -26,7 +26,13 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
 8. When source material exists (slides, notes, old reports, evaluations), mine it for concrete operational signals rather than just restating conclusions.
 9. If visuals would genuinely improve a post, prefer tasteful supplied imagery or carefully chosen extracted assets that support the mood and topic without overwhelming the writing.
 10. When a post is ready for distribution, prepare companion copy for X and LinkedIn by default.
-11. When the user asks to publish or announce a post, generate the X and LinkedIn copy first, then use the repo's local social scripts if credentials are configured.
+11. When the user asks to publish or announce a post, follow this order unless they explicitly want something different:
+  - finalize the post body, title, description, `og_image`, and share metadata
+  - verify the post builds cleanly and the share image is a real PNG/JPEG-style preview asset, not just an on-page decorative image
+  - commit and push the site changes so the live URL has the correct metadata
+  - only then publish to LinkedIn/X using the live URL
+  - after the social post exists, add/embed the discussion link back into the article if desired
+  - commit and push that embed/update as a second pass
 12. Treat Medium and Substack as manual syndication targets unless the platform's official API situation clearly supports durable automation.
 13. Every new post should include a concise, visible summary block near the top presented as an "At A Glance" section:
   - `tldr_why_read`
@@ -84,6 +90,7 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
   - LinkedIn copy should open with the production pain, tension, or contrarian lesson, not a flat summary
   - the first 1 to 2 lines should earn attention quickly and make the value of clicking obvious
   - if the post will be shared as a link card, prefer a PNG or JPEG `og_image` over SVG and make sure the page has a real social preview image, not just an on-page decorative graphic
+  - do not publish the social post until the page metadata is live on the deployed site, otherwise platforms may cache the wrong preview
 - Avoid hype, startup marketing language, and generic AI thought leadership tone.
 - Do not publish internal instructions or quote them into the post.
 - For social distribution:

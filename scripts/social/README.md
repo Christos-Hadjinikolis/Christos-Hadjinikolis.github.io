@@ -61,7 +61,7 @@ Recommendation:
 Copy `.env.example` to `.env`:
 
 ```bash
-cp .env .env
+cp .env.example .env
 ```
 
 `.env` is gitignored.
@@ -105,10 +105,24 @@ The simplest path for personal posting is:
 Set in `.env`:
 
 ```env
+LINKEDIN_CLIENT_ID=...
+LINKEDIN_CLIENT_SECRET=...
+LINKEDIN_REDIRECT_URI=https://localhost/callback
+LINKEDIN_SCOPES=openid profile w_member_social
 LINKEDIN_ACCESS_TOKEN=...
+LINKEDIN_REFRESH_TOKEN=...
+LINKEDIN_ID_TOKEN=...
 LINKEDIN_AUTHOR_URN=urn:li:person:...
-LINKEDIN_VERSION=202508
+LINKEDIN_VERSION=202603
 ```
+
+Recommended workflow for blog-post announcements:
+
+1. Finish the post and make sure `og_image`, `description`, and share metadata are correct.
+2. Commit and push the site changes so the live URL is serving the correct preview metadata.
+3. Publish the LinkedIn/X announcement against the live URL.
+4. If you want the LinkedIn thread embedded back into the article, add the `linkedin_post_url` / `linkedin_embed_url` after the post exists.
+5. Commit and push that embed/update as a second pass.
 
 Text-only post:
 
