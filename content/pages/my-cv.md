@@ -2,7 +2,7 @@
 title: My CV
 subtitle: Staff-Level Snapshot
 layout: "page"
-icon: fa-book
+icon: fa-id-card
 order: 2
 permalink: /my-cv.html
 ---

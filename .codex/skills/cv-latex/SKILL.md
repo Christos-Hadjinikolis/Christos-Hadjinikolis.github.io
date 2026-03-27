@@ -38,8 +38,9 @@ Rules:
 - Create the tailored variant under `cv/latex/variants/<role-slug>/`.
 - Name the entrypoint `cv.tex` inside that variant directory unless there is a strong reason not to.
 - Store the target role context inside the variant folder.
-- Create `job-post.md` in the variant folder containing the source link, capture date if known, and the job description text used for tailoring.
-- Create `fit-assessment.md` in the variant folder containing:
+- Store role metadata under `cv/latex/variants/<role-slug>/_role-context/`.
+- Create `job-post.md` inside that `_role-context/` folder containing the source link, capture date if known, and the job description text used for tailoring.
+- Create `fit-assessment.md` inside that `_role-context/` folder containing:
   - why the profile is a strong fit
   - where the fit is partial or weak
   - which CV changes were made to improve alignment
@@ -66,8 +67,8 @@ Rules:
 
 - Master source: `cv/latex/cv.tex`
 - Role-specific variants: `cv/latex/variants/<role-slug>/cv.tex`
-- Job description snapshot: `cv/latex/variants/<role-slug>/job-post.md`
-- Fit evaluation: `cv/latex/variants/<role-slug>/fit-assessment.md`
+- Job description snapshot: `cv/latex/variants/<role-slug>/_role-context/job-post.md`
+- Fit evaluation: `cv/latex/variants/<role-slug>/_role-context/fit-assessment.md`
 - Archived PDFs: `cv/latex/versions/`
 - Published site PDF: `assets/pdfs/cv.pdf`
 
@@ -90,4 +91,4 @@ If the user asks to publish the new master PDF to the website, copy the compiled
 - Check that the LaTeX still matches the document's existing structure and macros.
 - Check links, line breaks, and role dates when editing content.
 - If you cannot compile locally, say so explicitly.
-- When tailoring to a role, record the positioning choices and evidence gaps in `fit-assessment.md`.
+- When tailoring to a role, record the positioning choices and evidence gaps in `_role-context/fit-assessment.md`.

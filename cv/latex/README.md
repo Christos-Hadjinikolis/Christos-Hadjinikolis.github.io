@@ -37,8 +37,8 @@ Recommended convention:
 
 - create a variant under `cv/latex/variants/<role-slug>/`
 - keep the tailored entrypoint as `cv.tex` inside that folder
-- store the role link and description in `job-post.md`
-- store the fit analysis and tailoring rationale in `fit-assessment.md`
+- store the role link and description in `_role-context/job-post.md`
+- store the fit analysis and tailoring rationale in `_role-context/fit-assessment.md`
 - compile from inside the variant directory
 - only copy the resulting PDF to `assets/pdfs/cv.pdf` if you want the website CV replaced
 

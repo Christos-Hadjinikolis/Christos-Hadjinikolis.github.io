@@ -10,8 +10,11 @@ Personal website and blog built with Jekyll and the `jekyll-theme-prologue` them
 
 ## Repository Layout
 
-- `_sections/`: homepage sections
-- `_posts/`: blog posts
+- `content/_sections/`: homepage sections
+- `content/_posts/`: blog posts
+- `content/pages/`: standalone site pages
+- `content/reading/`: reading-list page source
+- `content/index.md`: homepage entrypoint
 - `_layouts/` and `_includes/`: Jekyll templates and shared partials
 - `_internal/`: non-published internal docs and authoring guides
 - `assets/`: images, PDFs, CSS, and JavaScript
@@ -98,4 +101,3 @@ make audit
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the local workflow and contribution guidelines.
-

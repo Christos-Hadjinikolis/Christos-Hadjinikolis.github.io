@@ -10,8 +10,9 @@ Use this skill for structural or operational changes to this repository's Jekyll
 ## Repo Map
 
 - `_config.yml`: site configuration
-- `_sections/`: homepage sections
-- `_posts/`: blog posts
+- `content/_sections/`: homepage sections
+- `content/_posts/`: blog posts
+- `content/pages/`: standalone pages
 - `_layouts/` and `_includes/`: templates and shared partials
 - `assets/`: CSS, JS, images, PDFs
 - `_internal/`: private docs that must never become site pages

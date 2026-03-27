@@ -12,7 +12,7 @@ Before writing or revising a post, read:
 - `_internal/authoring/BLOG_CONTENT_STRATEGY.md`
 - `_internal/authoring/BLOG_WRITING_STYLE.md`
 
-When useful, also read 1 to 3 relevant existing posts from `_posts/` to match tone and structure.
+When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to match tone and structure.
 
 ## Workflow
 
@@ -24,7 +24,7 @@ When useful, also read 1 to 3 relevant existing posts from `_posts/` to match to
 
 ## Output Rules
 
-- New posts belong in `_posts/` with valid Jekyll front matter.
+- New posts belong in `content/_posts/` with valid Jekyll front matter.
 - Preserve an existing post's date and slug unless the user explicitly asks to change them.
 - Use headings to structure arguments.
 - Avoid hype, startup marketing language, and generic AI thought leadership tone.

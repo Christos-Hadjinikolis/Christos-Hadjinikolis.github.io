@@ -63,10 +63,22 @@ google_analytics_measurement_id: G-V1GSL7RBDQ
 
 # The following settings are NECESSARY for the Prologue theme to run:
 remote_theme: jekyll-theme-prologue
+collections_dir: content
 collections: [sections]
 exclude:
   - .codex
+  - cv/latex
+  - Makefile
+  - Gemfile
+  - Gemfile.lock
+  - jekyll-theme-prologue.gemspec
+  - out
+  - img.png
+  - vendor
+  - .bundle
+  - .idea
+  - .jekyll-cache
+  - .DS_Store
   - README.md
   - CONTRIBUTING.md
   - LICENSE.md
-  - cv/latex/README.md

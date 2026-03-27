@@ -2,7 +2,7 @@
 title: Reading List
 subtitle: Recommended reading list...
 layout: "page"
-icon: fa-book
+icon: fa-book-reader
 order: 3
 permalink: /reading-list.html
 ---

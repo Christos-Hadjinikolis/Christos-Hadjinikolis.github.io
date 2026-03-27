@@ -2,7 +2,7 @@
 title: Professional Experience
 subtitle: How the scope evolved
 layout: "page"
-icon: fa-book
+icon: fa-briefcase
 order: 3
 permalink: /experience.html
 ---

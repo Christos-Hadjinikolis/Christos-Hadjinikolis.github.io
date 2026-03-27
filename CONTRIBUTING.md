@@ -95,8 +95,9 @@ If IntelliJ reports that no LaTeX installation can be found, TeX is either not i
 
 - Keep changes focused and easy to review.
 - Preview content and layout changes locally before opening a PR.
-- Put homepage content in `_sections/`.
-- Put blog posts in `_posts/` with valid front matter.
+- Put homepage content in `content/_sections/`.
+- Put blog posts in `content/_posts/` with valid front matter.
+- Put standalone site pages in `content/pages/` or another directory under `content/`.
 - Put shared template changes in `_layouts/` or `_includes/`.
 - Put internal-only notes or authoring guides in `_internal/` so Jekyll does not publish them.
 - Keep large generated or vendored files out of commits.
