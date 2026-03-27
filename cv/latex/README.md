@@ -12,6 +12,7 @@ Current layout:
 - `cv/latex/friggeri-cv.cls`: custom class
 - `cv/latex/bibliography.bib`: bibliography source
 - `cv/latex/images/`: local image assets
+- `cv/latex/variants/`: role-specific tailored CV variants
 - `cv/latex/versions/`: archived PDF versions
 - `cv/latex/build/`: optional dedicated build output directory if you choose to use one
 
@@ -27,6 +28,21 @@ That keeps the website asset separate from the editable source.
 2. Compile locally from `cv.tex`.
 3. Copy the final PDF to `assets/pdfs/cv.pdf`.
 4. Commit both the source changes and the refreshed website PDF when needed.
+
+## Job-Targeted Variants
+
+When tailoring the CV to a specific role, keep `cv/latex/cv.tex` as the canonical master unless you explicitly want to replace it.
+
+Recommended convention:
+
+- create a variant under `cv/latex/variants/<role-slug>/`
+- keep the tailored entrypoint as `cv.tex` inside that folder
+- store the role link and description in `job-post.md`
+- store the fit analysis and tailoring rationale in `fit-assessment.md`
+- compile from inside the variant directory
+- only copy the resulting PDF to `assets/pdfs/cv.pdf` if you want the website CV replaced
+
+This keeps job-specific tailoring separate from the master source and avoids accidental overwrites.
 
 ## Prerequisites
 

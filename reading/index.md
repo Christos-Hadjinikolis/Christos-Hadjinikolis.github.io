@@ -4,6 +4,7 @@ subtitle: Recommended reading list...
 layout: "page"
 icon: fa-book
 order: 3
+permalink: /reading-list.html
 ---
 
 Here are some very interesting readings I would recommend:

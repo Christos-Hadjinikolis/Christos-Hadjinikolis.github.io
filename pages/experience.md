@@ -4,6 +4,7 @@ subtitle: How the scope evolved
 layout: "page"
 icon: fa-book
 order: 3
+permalink: /experience.html
 ---
 <div class="page-shell experience-page">
   <section class="page-hero">

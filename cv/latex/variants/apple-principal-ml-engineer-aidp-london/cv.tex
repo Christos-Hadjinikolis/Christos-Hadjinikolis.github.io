@@ -1,0 +1,248 @@
+%!TEX TS-program = xelatex
+\documentclass[]{../../friggeri-cv}
+
+% Variant source:
+%   Apple - Principal Machine Learning Engineer, AI & Data Platforms
+% This file is tailored from ../../cv.tex and intentionally does not
+% replace the master CV source.
+
+% Packages
+\usepackage{pifont}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{marvosym}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+
+\graphicspath{ {../../images/} }
+
+% Set up footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\small{\emph{\small{\texttt{→∞}}“Make it work. Make it right. Make it fast.”}}\small{\texttt{→∞}}\quad | \quad Page \thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% XeLaTeX image fix
+\ifxetex
+  \usepackage{letltxmacro}
+  \setlength{\XeTeXLinkMargin}{1pt}
+  \LetLtxMacro\SavedIncludeGraphics\includegraphics
+  \def\includegraphics#1#{%
+    \IncludeGraphicsAux{#1}%
+  }%
+  \newcommand*{\IncludeGraphicsAux}[2]{%
+    \XeTeXLinkBox{%
+      \SavedIncludeGraphics#1{#2}%
+    }%
+  }%
+\fi
+
+\begin{document}
+\header
+    {Christos}
+    {Hadjinikolis}
+    {ML Tech Lead (Staff-Level) @ \href{https://www.vortexa.com/}{Vortexa Ltd} | Ph.D.}
+    {Committee Expert Member @ \href{https://www.cencenelec.eu/areas-of-work/cen-cenelec-topics/artificial-intelligence/}{JTC'21}}
+    {\small \href{mailto:christos.hadjinikolis@gmail.com}{christos.hadjinikolis@gmail.com}}
+
+\begin{aside}
+  	\section{mediums}
+		\href{https://christos-hadjinikolis.github.io/}{\Mundus~~\textbf{personal website}}
+		\href{https://uk.linkedin.com/in/christoshadjinikolis}{\includegraphics[scale=0.4]{linkedin0.png}}
+	    \href{https://github.com/Christos-Hadjinikolis}{\includegraphics[scale=0.35]{github0.png}}
+		\href{https://scholar.google.com/citations?hl=en&user=Rr3KTx8AAAAJ}{\includegraphics[scale=0.08]{Google_Scholar.png}}
+		\href{https://www.youtube.com/watch?v=LdDasrMOJLs&ab_channel=BillRaymond}{\includegraphics[scale=0.08]{youtube.png}}
+	\section{languages}
+    	{\small bilingual Greek/English}
+	\section{programming}
+    	{\small \textbf{\textcolor{red}{Java}}, \textbf{\textcolor{orange}{Python}}, \textbf{\textcolor{cyan}{SQL}}, \textbf{\textcolor{green}{Cypher}}}
+	\section{author}
+    	{\small \href{https://github.com/VorTECHsa/dynamicio}{\textbf{pypi:dynamicio}}}
+	\section{developer skills}
+    	{\footnotesize system design, CI/CD, IaC, observability, model/data versioning, production monitoring}
+    \section{cloud-platforms}
+		{\textbf{\textcolor{orange}{AWS}}, \textbf{\textcolor{cyan}{GCP}}}
+    \section{technologies \&~frameworks}
+    	{\footnotesize Transformers, PyTorch-distributed, Kafka, py/Flink, FastApi, Docker, MLflow, Kubeflow, Airflow, SQL, Elasticsearch}
+    \section{python libs}
+    	{\footnotesize pandas, numpy, pytorch}
+    \section{visualisations}
+    	{\footnotesize Gephi, Seaborn, plotly/\textbf{streamlit}}
+    \section{interests}
+		{\footnotesize \textbf{Sports:} Tennis, Jogging, \\ \textbf{Reading:} Comics, Philosophy, Politics}
+\end{aside}
+
+\section{about me}
+{\small Staff-level machine learning engineer with 15${^+}$ years of experience designing and operating production-grade AI systems across research, modelling, backend engineering, and platform delivery. Recent work has focused on transformer-based forecasting systems, real-time inference pipelines, distributed data and model workflows, and the operational discipline required to run intelligent systems reliably at scale. Strong record of translating ambiguous ML problems into observable, maintainable products, setting technical direction across teams, and owning the path from experimentation to production deployment.}
+\section{work-experience}
+\begin{entrylist}
+	\entry
+	{\tiny since \footnotesize 12/2020}
+	{Vortexa Ltd, London, UK}
+	{ML Tech Lead (Staff-Level) | Pod Lead}
+	{
+    	{\small
+	    \setlength{\parindent}{-1.5em}
+    	\setlength{\leftskip}{-1.5em}
+	    Lead the design and delivery of large-scale ML systems for maritime forecasting, combining transformer-based modelling, streaming infrastructure, backend services, and production rollout discipline. Own technical direction across cross-functional teams and drive the conversion of advanced modelling work into reliable, user-facing systems with measurable operating quality.
+    	}
+	    \begin{itemize}[left=-1.5em]
+    	    \item \footnotesize\textbf{Production Inference Systems:} Delivered backend model-serving services with versioning, switch-over logic, auditability, and operational safeguards for continuously running prediction systems.
+	        \item \footnotesize\textbf{Distributed AI Data Flows:} Built distributed Flink and pandas workflows over geospatial, textual, and graph-structured data, improving throughput by 25\% and enabling low-latency downstream decision support.
+	        \item \footnotesize\textbf{Model Lifecycle Engineering:} Built training and inference workflows with CI/CD, GPU support, online evaluation, and traceable performance monitoring to support dependable deployment over time.
+	        \item \footnotesize\textbf{Platform Reliability:} Introduced fallback paths, health checks, and low-downtime release practices for live ML services operating under real-world latency and reliability constraints.
+	        \item \footnotesize\textbf{Technical Leadership:} Led delivery across ML, DS, and DE functions, set engineering standards, and raised execution quality for systems moving from research-grade ideas to production behaviour.
+    	\end{itemize}
+	}
+    \entry
+    {\footnotesize 2016–2020}
+    {DataReply, London, UK}
+    {Data Scientist | ML Engineer}
+    {
+        {\small
+        \setlength{\parindent}{-1.5em}
+        \setlength{\leftskip}{-1.5em}
+        Progressed from Data Scientist to ML Engineer, leading cross-functional DS/DE teams and delivering production-grade systems across UBS, Vodafone, and CNHi. Work centered on platformisation, observability, deployment workflows, and turning ML experimentation into maintainable software systems.
+        }
+        \begin{itemize}[left=-1.5em]
+            \item \footnotesize\textbf{Vodafone Group (09/2019–11/2020, London):}
+                \begin{itemize}
+                    \item \footnotesize Co-led Vodafone's internal MLOps platform (\textbf{Infinity Project}) on GCP using \textbf{Kubeflow}, supporting model versioning, deployment, telemetry, and resource-governed notebooks.
+                    \item \footnotesize Implemented CI/CD pipelines, shared feature and data workflows, and monitoring for reproducible, production-ready ML systems.
+                \end{itemize}
+            \item \footnotesize\textbf{CNHi (05/2019–09/2019, Chicago):}
+                \begin{itemize}
+                    \item \footnotesize Built \textbf{time-series forecasting} models for agricultural vehicles and helped transition statistical prototypes into scalable, cloud-ready services.
+                \end{itemize}
+            \item \footnotesize\textbf{UBS (08/2017–04/2019, London):}
+                \begin{itemize}
+                    \item \footnotesize Designed real-time pipelines using \textbf{graph analytics} and \textbf{process mining} to surface organisational insights and support decision automation.
+                    \item \footnotesize Developed observability tooling with \textbf{Kafka}, \textbf{Elasticsearch}, and Python, connecting data infrastructure to downstream analytics and business-facing use cases.
+                \end{itemize}
+        \end{itemize}
+    }
+    \entry
+    {\footnotesize 2010–2016}
+    {Roles in UK Institutions}
+    {\small Assoc. Lect. @GSM | Coding Teacher @DGC | TA @KCL|UCL}
+    {
+        {\small
+        \setlength{\parindent}{-1.5em}
+        \setlength{\leftskip}{-1.5em}
+        Taught a broad range of computing subjects during doctoral studies, covering both undergraduate and pre-university curricula. The through-line from this period is deep technical communication, strong fundamentals, and the ability to make complex ideas operational for others.
+        }
+        \begin{itemize}[left=-1.5em]
+            \item {\footnotesize \textbf{2012–2016}: Lectured in Computing, MATLAB, Java, Python, HTML, CSS at GSM and David Game College}
+            \item {\footnotesize \textbf{2010–2014}: TA at King’s College London (KCL) and UCL, covering Java, Data Structures, Systems Architecture, Semantic Web, SQL, and AI.}
+        \end{itemize}
+    }
+\end{entrylist}
+\specialsection{education}
+\begin{entrylist2}
+	\entrytwo
+	    {\small 2010–2014}
+	    {\small Ph.D. in Computer Science}
+    	{\small King’s College London, UK}
+	    {\small \emph{\textbf{Thesis}: Persuasion Dialogues \& Opponent Modelling.}
+	    
+	    	{\footnotesize Developed logical inference methods for large \textbf{Knowledge Graphs}, combining symbolic reasoning, \textbf{graph analytics}, and Bayesian techniques (e.g., MCMC). Research contributed to scalable AI systems grounded in formal semantics. Received \textbf{Best Poster Award} at IJCAI 2013 (413 submissions). Awarded \textbf{EPSRC PhD Scholarship}, \textbf{Outstanding TA Award} (student-nominated), and earned the \textbf{Graduate Certificate in Academic Practice}.
+	    	\\ \textbf{\textcolor{blue}{\href{https://scholar.google.com/citations?hl=en&user=Rr3KTx8AAAAJ}{\underline{Access Publications on Google Scholar}}}}}
+	    	}
+	\entrytwo
+		{\small  2004–2010}
+		{\small Diploma (BEng) in Computer Engineering}
+		{\small University of Thessaly, GR}
+		{\footnotesize Five-year polytechnic degree in Computer Science and Engineering with a \textbf{strong focus on mathematics} (10 courses), covering theoretical aspects, networking, and telecommunications. \emph{\textbf{Majored in Artificial Intelligence}}.}
+	\entrytwo
+		{\small  2002–2004}
+		{\small Military Officer: Second Lieutenant}
+		{\small National Guard, CY}
+		{\small Obligatory army service; position acquired through \textbf{competitive IQ} and athletic exams.}
+\end{entrylist2}
+\specialsection{committees/affiliations}
+\begin{entrylist2}
+	\entrytwo
+		{\footnotesize since 10/2024}
+		{\small University College London, Dept. of Information Studies}
+		{\small Associate Researcher}
+		{\small Support AI application, standardisation, and ethics initiatives in industry and academia.}
+	\entrytwo
+		{\footnotesize since 01/2021}
+		{\small ISO - International Organisation for Standardisation}
+		{\small Committee Expert Member for JTC'21}
+		{\footnotesize Member of JTC'21 Working Group 3, developing AI standards aligned with EU policies and international norms.}
+\end{entrylist2}
+\specialsection{talks/interviews}
+\begin{entrylist2}
+	\entrytwo
+		{\small 2023}
+		{\small Bill Raymonds, Agile in Action}
+		{\small Podcast Interview}
+		{\small \textbf{Agile Data Science}: Sailing Through Data Science: The Agile Journey at Vortexa, \underline{\textbf{Details:} \href{https://christos-hadjinikolis.github.io//2023/10/31/Agile-In-Action.html}{YouTube}}}
+	\entrytwo
+		{\small 2022}
+		{\small Open Data Science Conference}
+		{\small Industry Conference Talk}
+		{\small \textbf{Dynamicio}, a python library for abstracting your I/O, \underline{\textbf{Details:} \href{https://odsc.com/speakers/dynamicio-a-pandas-i-o-wrapper-why-you-should-start-your-ml-ops-journey-with-wrapping-your-i-o/}{here}}}
+	\entrytwo
+		{\small 2020}
+		{\small iunera: Big Data Innovators}
+		{\small Interview Blog Post}
+		{\small The Agile approach in data science explained by an ML expert, \underline{\textbf{Details:} \href{https://www.iunera.com/kraken/interviews/the-agile-approach-in-data-science-explained-by-an-ml-expert/}{here}}}
+	\entrytwo
+		{\small 2020}
+		{\small Big Data Warsaw}
+		{\small Industry Conference Talk}
+		{\small Monitoring and Analysing Communication and Trade Events as Graphs, \underline{\textbf{Details:} \href{https://bigdatatechwarsaw.eu/agenda/}{here}}}
+	\entrytwo
+		{\small 2018}
+		{\small Connected Data London}
+		{\small Panelist @ Industry Conference}
+		{\small AI tribes and interconnections: what’s graph got to do with it?, \underline{\textbf{Details:} \href{http://connected-data.london/2018/09/23/ai-tribes-and-interconnections-whats-graph-got-to-do-with-it/}{here}}}
+	\entrytwo
+		{\small 2018}
+		{\small Minds Mastering Machines}
+		{\small Industry Conference Talk}
+		{\small A talk on doing Data Science the Agile Way, \underline{\textbf{Details:} \href{https://2018.mcubed.london/sessions/data-science-agile-way/}{here}}}
+\end{entrylist2}
+\specialsection{certificates \& awards}
+\begin{entrylist2}
+	\entrytwo
+		{\small 07/2020}
+		{\small AWS Certified Machine Learning - Specialty}
+		{\small AWS}
+		{\small Validation Number: D0R0WC7CN1VQ13SV}
+	\entrytwo
+		{\small 01/2019}
+		{\small Process Mining}
+		{\small Coursera Course Certificates}
+		{\small License number: AFU2VTP6273V}
+	\entrytwo
+		{\small 10/2017}
+		{\small Google Certified Professional - Data Engineer}
+		{\small Google Cloud Certified}
+		{\small Credential ID: 000000400}
+	\entrytwo
+		{\small 07/2017}
+		{\small Advanced Elasticsearch: Data modelling }
+		{\small Elastic}
+		{\small Enrolment Id: 33442}
+	\entrytwo
+		{\small 06/2016}
+		{\small Graph Analytics for Big Data }
+		{\small Coursera Course Certificates}
+		{\small License number: NZADYAQ7N8FW}
+	\entrytwo
+		{\small 05/2016}
+		{\small Apache Spark Developer Certification}
+		{\small O'Reilly Media}
+		{\small License number: 1.x–0548}
+	\entrytwo
+		{\small 04/2016}
+		{\small Neo4j Certified Professional}
+		{\small Neo Technology, Creators of Neo4j}
+		{\small License number: \href{https://drive.google.com/open?id=1ol67OnuuWBmrIeJPbvLNOOiQC8K0pXb_}{here}}
+\end{entrylist2}
+\end{document}

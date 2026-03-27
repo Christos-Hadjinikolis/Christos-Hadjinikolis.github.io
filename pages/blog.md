@@ -4,6 +4,7 @@ title: ML-Affairs Blog
 subtitle: Production notes on ML systems, streaming architectures, and the gap between research and reality
 icon: fa-pencil-alt
 order: 2
+permalink: /blog.html
 ---
 
 This blog is about the part of machine learning that tends to get skipped in polished case studies: getting systems to behave reliably once they hit production.

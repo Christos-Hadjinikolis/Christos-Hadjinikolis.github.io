@@ -65,6 +65,7 @@ google_analytics_measurement_id: G-V1GSL7RBDQ
 remote_theme: jekyll-theme-prologue
 collections: [sections]
 exclude:
+  - .codex
   - README.md
   - CONTRIBUTING.md
   - LICENSE.md

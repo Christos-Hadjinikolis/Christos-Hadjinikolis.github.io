@@ -4,6 +4,7 @@ subtitle: Staff-Level Snapshot
 layout: "page"
 icon: fa-book
 order: 2
+permalink: /my-cv.html
 ---
 <div class="page-shell cv-page">
   <section class="page-hero">
