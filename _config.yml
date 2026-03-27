@@ -68,7 +68,9 @@ collections_dir: content
 collections: [sections]
 exclude:
   - .codex
-  - cv/latex
+  - cv
+  - scripts
+  - wip
   - Makefile
   - Gemfile
   - Gemfile.lock
@@ -80,6 +82,8 @@ exclude:
   - .idea
   - .jekyll-cache
   - .DS_Store
+  - .env
+  - .env.example
   - README.md
   - CONTRIBUTING.md
   - LICENSE.md

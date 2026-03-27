@@ -38,9 +38,21 @@ serve: install
 	@$(JEKYLL_CMD) serve --livereload --host $(HOST) --port $(PORT)
 
 build: install
+	@rm -rf _site
 	@JEKYLL_ENV=production $(JEKYLL_CMD) build
 
 audit: build
+	@for forbidden in _site/scripts _site/cv _site/wip; do \
+		if [ -e "$$forbidden" ]; then \
+			echo "Unexpected published internal path: $$forbidden"; \
+			exit 1; \
+		fi; \
+	done
+	@if find _site -type f \( -name 'README.html' -o -name 'README.md' -o -path '*/README/index.html' \) | grep -q .; then \
+		echo "Unexpected published README artifact found in _site"; \
+		find _site -type f \( -name 'README.html' -o -name 'README.md' -o -path '*/README/index.html' \) | sort; \
+		exit 1; \
+	fi
 	@find _site -mindepth 1 -maxdepth 1 | sort
 
 clean:

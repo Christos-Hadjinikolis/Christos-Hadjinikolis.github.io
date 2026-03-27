@@ -34,6 +34,7 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
   - `tldr_takeaways`
 13. Every new post should include `description` and `seo_keywords` front matter so the page has useful search metadata without resorting to hidden keyword stuffing.
 14. For framework/platform posts, put the real adoption driver near the top and, when helpful, include a concrete next-step path such as a starter archetype, template, or agent prompt.
+15. For comparison posts, include the author's real bias or prior preference when it matters, then show what experience changed or refined about that view.
 
 ## Output Rules
 
@@ -48,11 +49,16 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
   - `Who it's for` should be concrete and useful
   - `What you'll learn` should name the real lesson
   - `Takeaways` should feel like memorable consequences, not filler bullets
+  - when a technology or language is central to the post, use the same accent treatment inside the summary block too
 - Do not add hidden keyword text to the page body for SEO. Prefer visible summaries, honest wording, and structured metadata.
 - Include useful keywords in page metadata and natural prose so the post is discoverable without becoming spammy.
 - Think in impact. A post should surface the non-obvious lesson quickly, then deepen it through story and explanation.
+- When a line carries the thesis of the post, isolate it. Strong posts usually have 1 to 3 sentences that deserve a real pause from the reader; present those as pull quotes or similarly elevated standalone moments, not as plain body text.
+- When the post compares tools or architectures, be especially wary of familiarity bias. A good comparison should separate "this feels more natural to me" from "this is the better decision for the system."
 - Use visual emphasis sparingly and consistently:
-  - reserve color accents for technologies, frameworks, and core concepts that are central to the post (be concistent across posts about colouring)
+  - reserve color accents for technologies, frameworks, and core concepts that are central to the post
+  - if a technology, framework, or language is central to the post, treat it consistently across the whole piece: title, summary block, section headings, opening argument, key body paragraphs, and conclusion
+  - central terms should usually use the repo's accent class in bold form, not drift between highlighted and plain text
   - use at most 1 to 2 colored terms in a paragraph
   - prefer bold or italics for emphasis before adding more color
   - use bold for the clearest takeaways, named concepts, or strong claims
@@ -86,5 +92,6 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
 - The post should teach something non-obvious.
 - The post should reconnect technical ideas to production conditions.
 - The conclusion should land on a practical takeaway, not just a flourish.
+- The best posts return to the tension they opened with and make the reader feel they finally understand the real question.
 - The summary block should make an impatient reader want to continue.
 - A strong modern post should also give the reader a credible next step when that is useful: a repo, archetype, checklist, or agent prompt.

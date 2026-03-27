@@ -6,165 +6,190 @@ layout: post
 og_image: assets/images/posts/2026/kafka-streams-vs-flink-og.svg
 description: "A production-minded comparison of Kafka Streams and Flink that focuses on state, recovery, rescaling, and platform boundaries."
 seo_keywords: ["Kafka Streams", "Apache Flink", "stream processing", "stateful streaming", "event-driven architecture"]
-tldr_why_read: "Useful if your team keeps asking whether it is time to leave Kafka Streams for Flink."
-tldr_persona: "Engineers and platform teams deciding when Kafka Streams stops being enough for the operational shape of the problem."
-tldr_learn: "How to compare them through operational pressure, state, replay, rescaling, and runtime boundaries instead of feature lists."
-tldr_takeaways: ["Kafka Streams is great when the problem is still application-shaped", "Flink earns its cost when state becomes a platform concern", "The real decision starts when recovery behavior drives architecture"]
+tldr_why_read: 'Read this if you are tempted to replace <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span> with <span class="blog-highlight blog-highlight--flink">Flink</span> mostly because <span class="blog-highlight blog-highlight--flink">Flink</span> feels cleaner, more modern, or more familiar.'
+tldr_persona: 'Especially useful for streaming engineers and platform teams inheriting messy <span class="blog-highlight blog-highlight--kafka">Kafka</span>-native systems and deciding whether to rewrite or rehabilitate them.'
+tldr_learn: 'Where <span class="blog-highlight blog-highlight--flink">Flink</span> genuinely pulls away, where <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span> is stronger than its reputation, and why familiarity bias is a dangerous architecture strategy.'
+tldr_takeaways: ['<span class="blog-highlight blog-highlight--flink">Flink</span> still wins on runtime flexibility and recovery', '<span class="blog-highlight blog-highlight--kafka">Kafka Streams</span> gets very far when the system is still application-shaped and Kafka-native', 'Rewriting because a framework feels old is often familiarity pretending to be engineering judgment']
 ---
-I have had to think about this decision more than once in <span class="blog-highlight blog-highlight--kafka">Kafka</span>-heavy systems, and the pattern is usually the same: a team says it wants <span class="blog-highlight blog-highlight--flink">Flink</span>, but what it is actually describing is broker pressure, partition-count games, awkward rebalances, and stateful jobs whose recovery path has started to shape the architecture.
+I am not neutral about <span class="blog-highlight blog-highlight--flink">Flink</span>.
 
-That distinction matters, because most framework comparisons are not very useful in practice. They compare APIs, abstractions, and feature lists. Production compares different things: recovery paths, state pressure, rescaling pain, operational visibility, and how much of your week gets spent dealing with the system after the happy-path demo is long over.
+I have spent years advocating for it, using it anywhere I could, organizing London meetups around it before COVID, and talking to anyone who would listen about why the dataflow model is such a good way to think. I still love that model. I love how naturally event-driven systems can align to a domain: *a ship enters a port, this state changes, that downstream action happens next.* Both <span class="blog-highlight blog-highlight--flink">Flink</span> and <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span> let you express stateful processes in a way that can stay close to business reality.
 
-After revisiting an older review I had written on exactly this problem, my view is still the same:
+And that is exactly why this lesson was useful for me.
 
-the useful question is not whether <span class="blog-highlight blog-highlight--flink">Flink</span> is "better" than <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span>.
+When I joined a later role, I found myself surrounded by repositories built with <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span>. My first instinct was simple: replace them with <span class="blog-highlight blog-highlight--flink">Flink</span>. Some of those repos were chaotic, under-loved, and far away from the kind of streaming architecture I like to build. I felt outside my waters. I wanted to modernize, refactor, migrate, clean the slate.
 
-The useful question is when your streaming problem stops being an application concern and becomes a platform concern.
+But over time, after giving those systems the attention they deserved, I learned something more valuable than another framework argument:
 
-That is the line <span class="blog-highlight blog-highlight--flink">Flink</span> crosses far better than <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span>, and it is the only comparison I really care about.
+<blockquote class="blog-pullquote">
+  <p>The useful question is not whether <span class="blog-highlight blog-highlight--flink">Flink</span> is <em>"better"</em> than <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span>.</p>
+  <p>The useful question is when your streaming problem stops being an application concern and becomes a platform concern.</p>
+</blockquote>
+
+That is still the line I care about most. But now I care about it with much more respect for both sides.
 
 <figure class="blog-figure blog-figure--wide">
   <img src="{{ 'assets/images/posts/2026/when-flink-earns-its-complexity-over-kafka-streams/flink-highway.png' | relative_url }}" alt="A luminous Flink squirrel facing a contemplative Kafka figure across a city split between cool and warm tones." />
-  <figcaption class="blog-figure__caption">This is the real comparison: not mascot versus mascot, but one operating model confronting another once the system starts pushing back.</figcaption>
+  <figcaption class="blog-figure__caption">This is the comparison that matters: not mascot versus mascot, but one operating model confronting another once the system starts pushing back.</figcaption>
 </figure>
 
-## The Wrong Way To Compare Them
+## The Bias I Had To Correct
 
-The wrong way is to start from the syntax.
+There is a recurring engineering mistake hiding in this topic: *you inherit a system that feels old, untidy, or unfashionable, and you start reaching for the framework you know better.*
 
-Yes, Kafka Streams is a library and Flink is a distributed processing engine. Yes, Flink has richer notions of state, time, checkpoints, savepoints, and rescaling. Yes, Kafka Streams integrates very naturally with Kafka's own partitioning and local state stores. All of that is true, but it is not yet a decision.
+I have had to relearn this lesson more than once in my career. It is almost embarrassing how often it comes back, which is probably proof of how important it is.
 
-The decision starts once you ask a more uncomfortable question:
+I originally wanted to replace those <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span> solutions largely because I was more fluent in <span class="blog-highlight blog-highlight--flink">Flink</span>. That fluency gave me clarity in one framework and discomfort in the other, and I briefly mistook that feeling for architecture.
 
-> Is my main problem still "process Kafka topics inside an application", or has it become "operate stateful dataflows as a system in their own right"?
+That is a dangerous mistake.
 
-If it is still the former, Kafka Streams remains a very good answer.
+Once I slowed down, cleaned up the code, made the domain model clearer, and brought more disciplined engineering practices to those codebases, I ended up with a much less dramatic conclusion:
 
-If it is the latter, Flink starts to justify itself quickly.
+if you give an existing streaming system enough love, enough structure, and enough respect for the underlying model, you can get very far without rewriting it.
 
-## The Smell Test I Actually Use
+That does not make <span class="blog-highlight blog-highlight--flink">Flink</span> less good. It just makes engineering judgment less theatrical.
 
-One line from that older review still feels right to me: *if scaling processing means touching brokers, partition counts, or rebalance plans before it means touching your business logic, the system is already telling you that the runtime boundary is wrong.*
+<div class="blog-insight">
+  <span class="blog-insight__label">The Lesson</span>
+  <p><strong>Framework preference is not architecture.</strong> My first instinct was to rewrite messy <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span> systems into <span class="blog-highlight blog-highlight--flink">Flink</span>. The better answer was to clean the model first, then decide whether the runtime was actually the problem.</p>
+</div>
 
-That smell tends to show up as a cluster of recurring symptoms:
+## What I Still Love About Flink
 
-* compute scale is bought by increasing partitions whether the domain needs them or not
-* broker load becomes the tax you pay for stateful processing
-* rebalances stop feeling routine and start feeling risky
-* upgrades to the Kafka estate become application-risk events
-* topology discussions are dominated by Kafka mechanics rather than the dataflow you actually want
+Let me be clear: I am still a very strong <span class="blog-highlight blog-highlight--flink">Flink</span> advocate.
 
-I have seen this pattern in production environments where the nominal problem was "stream processing," but the real problem had already become *stateful execution under operational pressure*. That is exactly the point where <span class="blog-highlight blog-highlight--flink">Flink</span> starts to feel less like overkill and more like the more honest runtime.
+I still think the <span class="blog-highlight blog-highlight--flink">Flink</span> dataflow model is one of the cleanest ways to reason about stateful stream processing. Operator boundaries are explicit. State feels local to the operator that owns it. Checkpointing, recovery, repartitioning, and event-time semantics feel like first-class runtime concepts instead of side effects of a library attached to a broker.
 
-## Where Kafka Streams Still Wins
+That is a big deal to me, because I care a lot about how easily a streaming system can be explained.
 
-Kafka Streams is still the cleaner tool when all of the following are mostly true:
+When a framework makes the flow of state and events easy to communicate, it usually also makes the system easier to maintain.
 
-* Kafka is already the center of gravity.
-* Your inputs and outputs are overwhelmingly Kafka topics.
-* Your team is happy in the JVM.
-* You want a library embedded in an application, not another platform to operate.
-* Your state model is meaningful, but not so painful that rescaling and recovery dominate your life.
+This is why I still reach for <span class="blog-highlight blog-highlight--flink">Flink</span> eagerly when the runtime itself needs to be a serious part of the design.
 
-That last point matters.
+## Where Kafka Streams Grew On Me
 
-Kafka Streams is not stateless, simplistic, or toy-like. Its architecture is built around partitions, tasks, and local state stores, and it backs those stores with changelog topics for recovery and migration. That is real engineering, not hand-waving. The official architecture docs are explicit about this model, and the processor API docs show how seriously state stores are treated in the design itself:
+What changed for me was not that I stopped liking <span class="blog-highlight blog-highlight--flink">Flink</span>. What changed is that I learned to appreciate where <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span> is more enabling than I first allowed.
+
+### 1. The State Model Is Different, Not Just Worse
+
+One of the things that threw me off at first was the ergonomics of state in <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span>.
+
+<span class="blog-highlight blog-highlight--kafka">Kafka Streams</span> gives you state stores, changelog-backed recovery, and table-oriented patterns that can feel more globally available than <span class="blog-highlight blog-highlight--flink">Flink</span>'s cleaner operator-local state style. The processor API is very explicit that processors interact with attached state stores, and those stores are fault-tolerant by default. In practice, the default persistent path is a local <span class="blog-highlight blog-highlight--kafka">RocksDB</span> store backed by a compacted changelog topic. On top of that, table abstractions and `GlobalKTable`-style patterns can make shared reference data or queryable state feel very convenient in the application model.
 
 * [Kafka Streams architecture](https://kafka.apache.org/40/streams/architecture/)
 * [Kafka Streams processor API and state stores](https://kafka.apache.org/42/streams/developer-guide/processor-api/)
 
-In practice, this gives Kafka Streams a very attractive property: the mental model is tight. The data plane, failure model, and deployment model all remain close to Kafka itself. For many teams, that is a huge advantage.
+That convenience comes with real trade-offs:
 
-You do not adopt Kafka Streams because it is theoretically elegant. You adopt it because it keeps the system boundary small.
+* local <span class="blog-highlight blog-highlight--kafka">RocksDB</span> state is fast and useful, but fault tolerance still depends on changelogs
+* restore times can still become painful at scale, especially when local state is lost and the store must rebuild from the changelog
+* the relationship between topology code and materialized state can become messy in under-disciplined repos
+* the convenience of reachable state can encourage poor habits if the model is not kept clear
 
-That is worth a lot.
+But convenience is still convenience. There are use cases where having easier access to shared or queryable state is genuinely useful, and it would be dishonest to pretend otherwise.
 
-## Where Flink Starts To Earn Its Keep
+My instinct, because of my <span class="blog-highlight blog-highlight--flink">Flink</span> background, was to push <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span> code toward a more operator-local way of thinking anyway: make state ownership clearer, keep logic close to the transform that really owns it, and avoid turning the topology into a stateful soup. That discipline improved those codebases a lot.
 
-Flink becomes more compelling once your main pain is no longer just processing records, but managing stateful execution under real operational pressure.
+But that is exactly the point: bringing some <span class="blog-highlight blog-highlight--flink">Flink</span>-style discipline into <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span> made the code better. It did not prove that the whole system needed to become <span class="blog-highlight blog-highlight--flink">Flink</span>.
 
-### 1. State Stops Feeling Like An Implementation Detail
+### 2. Kafka-Native Integration Is A Real Strength
 
-Flink's core model is stateful stream processing. Not "stateful" as an optional extra, but stateful as a first-class execution concern. Its docs are very clear that Flink is aware of operator state so it can checkpoint it, restore it, and redistribute it during rescaling:
+I am not even talking here about the obvious ecosystem point in a lazy way. Yes, <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span> lives naturally inside the <span class="blog-highlight blog-highlight--kafka">Kafka</span> ecosystem. Yes, it works comfortably with keyed messages, schemas, topics, and the usual surrounding tooling. Yes, schema-registry-oriented flows often feel more straightforward there.
+
+That matters. Not because <span class="blog-highlight blog-highlight--flink">Flink</span> cannot do these things. It can. But because being native to the ecosystem reduces friction when the whole world around the application is already shaped like <span class="blog-highlight blog-highlight--kafka">Kafka</span>.
+
+You should not dismiss that as a minor detail. It is part of the operating model.
+
+## Where Flink Still Pulls Away
+
+This is where my original instincts still hold up.
+
+### 1. Scaling Stops At The Broker Boundary Much Earlier In Kafka Streams
+
+The scaling constraint in <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span> is tightly tied to partitions, tasks, and instances. That is not a bug. It is the design. It is also why the system stays so close to <span class="blog-highlight blog-highlight--kafka">Kafka</span> itself.
+
+But it has consequences.
+
+There comes a point where adding more application instances does not really solve the problem because the partitioning boundary is already telling you how far you can go cleanly. You can absolutely scale <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span>, but the broker topology keeps exerting a much stronger influence on the application topology.
+
+<span class="blog-highlight blog-highlight--flink">Flink</span>, by contrast, is still constrained at the source when consuming from <span class="blog-highlight blog-highlight--kafka">Kafka</span>, but once records are inside the runtime it has far more freedom to repartition, redistribute work, and run operators at a different parallelism from the source. I would not call that infinite scaling. I would call it a materially more flexible runtime.
 
 * [Stateful stream processing](https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/stateful-stream-processing/)
-
-That changes the conversation.
-
-With Kafka Streams, state is robust, but it is still deeply tied to the Kafka-centric execution model: partitions, tasks, local stores, changelogs, restoration. With Flink, state feels more like part of the runtime contract of the platform itself.
-
-This matters when:
-
-* jobs become more state-heavy
-* replay cost starts to hurt
-* rescaling becomes routine rather than exceptional
-* checkpoint and recovery behaviour starts to matter to the business, not just to the engineers
-
-At that point, Flink is no longer "more complicated Kafka Streams." It is solving a different class of operational problem.
-
-### 2. Your World Stops Being Kafka In, Kafka Out
-
-Another inflection point is when Kafka stops being your whole universe.
-
-Kafka Streams is strongest when your topology lives comfortably inside Kafka. Flink becomes more attractive when the topology wants to reach further: mixed sources and sinks, richer event-time handling, broader ETL/dataflow concerns, or workloads that increasingly look like a streaming platform rather than an application library.
-
-Flink's programming model and connector ecosystem are built for that broader stance, even if individual connectors still require the usual production scrutiny:
-
 * [Flink concepts overview](https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/overview/)
-* [Flink connectors overview](https://nightlies.apache.org/flink/flink-docs-stable/docs/connectors/datastream/overview/)
 
-This is where many comparisons become dishonest. They say "Kafka Streams can also do X." Often it can. The real question is whether the system still feels natural once you keep adding X, Y, and Z to it.
+That difference becomes major once traffic spikes, repartition pressure, or uneven workloads start shaping your architecture.
 
-There is a point where the topology starts asking for a runtime that wants to be a runtime.
+### 2. Checkpointing And Recovery Are In A Different League
 
-That is Flink's territory.
+This is still one of the clearest differentiators for me.
 
-### 3. Recovery, Rescaling, And Operability Become First-Class Requirements
+<span class="blog-highlight blog-highlight--flink">Flink</span>'s checkpointing model is part of the platform. Recovery is an explicit runtime capability, not just the consequence of rebuilding local state from changelogs. The barrier-based snapshotting model, savepoints, and state redistribution semantics are exactly the kind of thing that make <span class="blog-highlight blog-highlight--flink">Flink</span> feel like an engine rather than a library.
 
-This is where I think Flink most clearly earns its cost.
+In <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span>, the picture is a little more nuanced than *"it always has to read the whole changelog again."* If the local state store still exists, the runtime can replay from the previously checkpointed offset and catch up from there. If local state is gone, it has to rebuild from the changelog from the beginning of the retained data. That is meaningfully better than a naive full replay every time, and it is one of the reasons the <span class="blog-highlight blog-highlight--kafka">RocksDB</span> path works as well as it does in practice.
 
-Flink's checkpointing model is not just about fault tolerance in the abstract. It is about making recovery, consistency, and rescaling explicit operational capabilities. The docs go deep on barriers, snapshotting, aligned versus unaligned checkpoints, and state backends for a reason:
+But the deeper point still holds: fault tolerance and task migration are still anchored in changelog restoration, and on large stateful applications that can become a real pain. Retention choices matter. Restore time matters. Operational patience matters.
 
-* [Flink state and checkpointing](https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/stateful-stream-processing/)
+* [Running Streams applications and state restoration](https://kafka.apache.org/41/streams/developer-guide/running-app/)
 
-If you have already lived through upgrades, partition reshuffles, or painful restoration stories in streaming systems, you know why this matters. The issue is not whether recovery exists. The issue is how much of your operational life gets shaped by recovery behaviour once systems are stressed, upgraded, or resized.
-
-Flink also gives you a much clearer sense that jobs are something to observe and operate, not just deploy. That matters more than it sounds. Once teams rely on long-running stateful jobs, visibility stops being a nice-to-have.
+That is the point where <span class="blog-highlight blog-highlight--flink">Flink</span> stops being a nice architectural preference and starts becoming a serious operational advantage.
 
 ## The Real Trade-Off
 
 So, here is the trade in one sentence:
 
-Kafka Streams is a very good way to build Kafka-native streaming applications.
+<span class="blog-highlight blog-highlight--kafka">Kafka Streams</span> is a very good way to build <span class="blog-highlight blog-highlight--kafka">Kafka</span>-native streaming applications.
 
-Flink is a very good way to operate stateful dataflows as a platform concern.
+<span class="blog-highlight blog-highlight--flink">Flink</span> is a very good way to operate stateful dataflows as a platform concern.
 
 Those are not the same problem, even if the diagrams sometimes look similar.
 
-And this is why I do not buy generic advice like "use Flink if you need scale" or "use Kafka Streams if you want simplicity."
+And this is why I do not buy generic advice like *"use <span class="blog-highlight blog-highlight--flink">Flink</span> if you need scale"* or *"use <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span> if you want simplicity."*
 
 Both statements are too shallow.
 
 The better rule is this:
 
-*If your system is still primarily an application that processes Kafka topics, Kafka Streams is often the right engineering choice.*
+<blockquote class="blog-pullquote blog-pullquote--compact">
+  <p>If your system is still primarily an application that processes <span class="blog-highlight blog-highlight--kafka">Kafka</span> topics, <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span> is often the right engineering choice.</p>
+  <p>If your system is becoming a stateful processing layer that needs explicit control over time, state, replay, recovery, and heterogeneous I/O, <span class="blog-highlight blog-highlight--flink">Flink</span> starts to justify its existence very quickly.</p>
+</blockquote>
 
-*If your system is becoming a stateful processing layer that needs explicit control over time, state, replay, recovery, and heterogeneous I/O, Flink starts to justify its existence very quickly.*
+## The Harder Lesson
+
+This is the part I most wanted to say personally.
+
+I am still a huge <span class="blog-highlight blog-highlight--flink">Flink</span> proponent. That has not changed.
+
+What has changed is that I now trust myself less when my first reaction is *"we should rewrite this in the framework I prefer."*
+
+That reaction is often just comfort seeking.
+
+Sometimes you really should migrate. Sometimes the runtime boundary is wrong, recovery is too painful, scaling is too constrained, and <span class="blog-highlight blog-highlight--flink">Flink</span> is the more honest architecture.
+
+But sometimes the better engineering decision is to love the existing system properly: clarify the model, clean the state boundaries, improve the abstractions, respect the domain flow, and stop assuming that old means wrong.
+
+That was the lesson here for me.
+
+If I had followed my first instinct blindly, I would have replaced some systems for the wrong reason.
 
 ## What I Would Actually Do
 
-If I were starting with a Kafka-centric JVM team, modest operational requirements, and clean Kafka-in/Kafka-out topologies, I would still be very happy with Kafka Streams.
+If I were starting with a <span class="blog-highlight blog-highlight--kafka">Kafka</span>-centric JVM team, modest operational requirements, and clean <span class="blog-highlight blog-highlight--kafka">Kafka</span>-in/<span class="blog-highlight blog-highlight--kafka">Kafka</span>-out topologies, I would still be very happy with <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span>.
 
-I would move toward Flink once one or more of these became persistently true:
+I would move toward <span class="blog-highlight blog-highlight--flink">Flink</span> once one or more of these became persistently true:
 
 * stateful jobs became expensive to recover or rescale
 * I needed a broader processing platform rather than a library
 * event-time and replay behaviour started driving design choices
-* the system stopped being comfortably Kafka-shaped
+* the system stopped being comfortably <span class="blog-highlight blog-highlight--kafka">Kafka</span>-shaped
 * operability and runtime visibility became a daily concern rather than an occasional debugging aid
 
-That is the moment Flink stops being overkill and starts being the more honest architecture.
+That is the moment <span class="blog-highlight blog-highlight--flink">Flink</span> stops being overkill and starts being the more honest architecture.
 
-What matters here is not which framework wins a benchmark or has the longer documentation tree.
+And that brings me back to where I started.
 
-What matters is whether your streaming problem is still local enough to live inside an application, or whether it has already become a platform problem and you just have not named it yet.
+I still love <span class="blog-highlight blog-highlight--flink">Flink</span>. I still think its model is easier to reason about once runtime concerns become serious. I still think it is the stronger platform when state, recovery, and rescaling dominate the design.
+
+But being a real advocate for a framework means knowing where not to force it.
+
+That is the part I understand better now.
