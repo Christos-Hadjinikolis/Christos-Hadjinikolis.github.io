@@ -7,6 +7,7 @@ og_image: assets/images/posts/2020/agile-data-science/iunera-logo-shadow.png
 description: "Why agile matters in data science work, where experimentation meets delivery, and how teams can move from prototypes to value."
 seo_keywords: ["agile data science", "machine learning delivery", "data science teamwork", "experimentation", "ml engineering"]
 tldr_why_read: "Read this if you want a more grounded view of what agile can actually mean in data science work."
+tldr_persona: "Data scientists and ML engineers trying to move from prototype work into production delivery without losing iteration speed."
 tldr_learn: "Where agile helps, where data science work differs from normal software delivery, and why iteration matters."
 tldr_takeaways: ["Experimentation needs structure", "Delivery and learning loops must coexist", "Agile in ML is about adaptation, not rituals"]
 ---

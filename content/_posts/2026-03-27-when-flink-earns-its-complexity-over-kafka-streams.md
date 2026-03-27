@@ -7,6 +7,7 @@ og_image: assets/images/posts/2026/kafka-streams-vs-flink-og.svg
 description: "A production-minded comparison of Kafka Streams and Flink that focuses on state, recovery, rescaling, and platform boundaries."
 seo_keywords: ["Kafka Streams", "Apache Flink", "stream processing", "stateful streaming", "event-driven architecture"]
 tldr_why_read: "Useful if your team keeps asking whether it is time to leave Kafka Streams for Flink."
+tldr_persona: "Engineers and platform teams deciding when Kafka Streams stops being enough for the operational shape of the problem."
 tldr_learn: "How to compare them through operational pressure, state, replay, rescaling, and runtime boundaries instead of feature lists."
 tldr_takeaways: ["Kafka Streams is great when the problem is still application-shaped", "Flink earns its cost when state becomes a platform concern", "The real decision starts when recovery behavior drives architecture"]
 ---

@@ -7,6 +7,7 @@ og_image: assets/images/posts/2021/python-envs/python_environment_2x.png
 description: "A practical guide to Python environments on macOS, including system Python pitfalls and the setup patterns that actually work."
 seo_keywords: ["python environments", "macOS python", "pyenv", "virtualenv", "python setup"]
 tldr_why_read: "A practical post for anyone who is still losing time to Python setup confusion on macOS."
+tldr_persona: "macOS users and Python developers who are tired of not knowing which interpreter or environment they are actually using."
 tldr_learn: "Which Python environment tools matter, where macOS gets in the way, and how to build a sane local setup."
 tldr_takeaways: ["System Python is rarely what you want", "Environment management is a productivity issue", "Clarity beats collecting tools"]
 ---

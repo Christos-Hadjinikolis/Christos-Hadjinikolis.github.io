@@ -3,12 +3,18 @@
 {%- if _post.tldr_why_read or _post.tldr_learn or _takeaways -%}
 <div class="post-tldr{% if include.compact %} post-tldr--compact{% endif %}">
   {%- unless include.compact -%}
-  <div class="post-tldr__heading">TL;DR</div>
+  <div class="post-tldr__heading">At A Glance</div>
   {%- endunless -%}
   {%- if _post.tldr_why_read -%}
   <div class="post-tldr__line">
     <span class="post-tldr__label">Why read</span>
     <span class="post-tldr__text">{{- _post.tldr_why_read -}}</span>
+  </div>
+  {%- endif -%}
+  {%- if _post.tldr_persona -%}
+  <div class="post-tldr__line post-tldr__line--persona">
+    <span class="post-tldr__label">Who it's for</span>
+    <span class="post-tldr__text post-tldr__text--persona">{{- _post.tldr_persona -}}</span>
   </div>
   {%- endif -%}
   {%- if _post.tldr_learn -%}

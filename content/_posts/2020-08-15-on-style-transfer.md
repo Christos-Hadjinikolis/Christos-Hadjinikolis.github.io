@@ -8,6 +8,7 @@ mathjax: true
 description: "An intuitive explanation of neural style transfer, grounded in Heraklion imagery and the core mechanics behind the model."
 seo_keywords: ["style transfer", "neural style transfer", "deep learning", "computer vision", "VGG19"]
 tldr_why_read: "A more intuitive route into neural style transfer than a dry paper summary."
+tldr_persona: "ML practitioners and curious readers who want to understand style transfer through intuition before diving into the paper."
 tldr_learn: "The core mental model behind style transfer, how the losses work, and why the generated image changes."
 tldr_takeaways: ["Style and content are separated mathematically", "The optimization target is the generated image", "A visual example helps the theory land"]
 ---

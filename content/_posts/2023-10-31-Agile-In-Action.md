@@ -7,6 +7,7 @@ og_image: assets/images/posts/2023/agile-in-action/2023-10-31-Turner.png
 description: "A reflective post on using agile ideas in ML teams, with emphasis on experimentation, communication, and deployment discipline."
 seo_keywords: ["agile machine learning", "ML teams", "experimentation", "deployment discipline", "engineering culture"]
 tldr_why_read: "A reflective take on what agile looks like when the work is ML-heavy, uncertain, and production-bound."
+tldr_persona: "ML leads, tech leads, and engineers trying to build team rhythm around experimentation, communication, and production delivery."
 tldr_learn: "Why experimentation, deployment discipline, and communication matter more than ritualized process."
 tldr_takeaways: ["Agile in ML is a navigation tool", "Experimentation needs communication", "Delivery quality depends on team rhythm, not slogans"]
 ---
