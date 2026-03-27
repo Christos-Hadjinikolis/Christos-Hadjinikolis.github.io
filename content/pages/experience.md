@@ -1,6 +1,14 @@
 ---
 title: Professional Experience
 subtitle: How the scope evolved
+intro_theme: experience
+intro_kicker: "Narrative Timeline"
+intro_summary: "Not a second CV. This page shows how the work widened over time: from teaching and research, into consulting under constraints, and then into architecture, system ownership, and team leadership."
+intro_card_title: "What This Page Tracks"
+intro_points:
+  - "How the scope changed"
+  - "What each phase taught me"
+  - "Why production became the center"
 layout: "page"
 icon: fa-briefcase
 order: 3

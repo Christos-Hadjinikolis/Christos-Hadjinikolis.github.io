@@ -5,7 +5,7 @@ author: Christos Hadjinikolis
 layout: post
 og_image: assets/images/posts/2026/kafka-streams-vs-flink-og.svg
 ---
-I have had to think about this decision more than once in <span class="blog-highlight blog-highlight--kafka">Kafka</span>-heavy systems: are we actually outgrowing <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span>, or are we just looking for a more sophisticated tool because the current pain feels embarrassing?
+I have had to think about this decision more than once in <span class="blog-highlight blog-highlight--kafka">Kafka</span>-heavy systems, and the pattern is usually the same: a team says it wants <span class="blog-highlight blog-highlight--flink">Flink</span>, but what it is actually describing is broker pressure, partition-count games, awkward rebalances, and stateful jobs whose recovery path has started to shape the architecture.
 
 That distinction matters, because most framework comparisons are not very useful in practice. They compare APIs, abstractions, and feature lists. Production compares different things: recovery paths, state pressure, rescaling pain, operational visibility, and how much of your week gets spent dealing with the system after the happy-path demo is long over.
 
@@ -16,6 +16,11 @@ the useful question is not whether <span class="blog-highlight blog-highlight--f
 The useful question is when your streaming problem stops being an application concern and becomes a platform concern.
 
 That is the line <span class="blog-highlight blog-highlight--flink">Flink</span> crosses far better than <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span>, and it is the only comparison I really care about.
+
+<figure class="blog-figure blog-figure--wide">
+  <img src="{{ 'assets/images/posts/2026/when-flink-earns-its-complexity-over-kafka-streams/flink-highway.png' | relative_url }}" alt="An Apache Flink squirrel racing down an open highway." />
+  <figcaption class="blog-figure__caption">This post is really about when the road ahead stops looking like a small application concern and starts looking like a runtime you need to operate deliberately.</figcaption>
+</figure>
 
 ## The Wrong Way To Compare Them
 
@@ -30,6 +35,20 @@ The decision starts once you ask a more uncomfortable question:
 If it is still the former, Kafka Streams remains a very good answer.
 
 If it is the latter, Flink starts to justify itself quickly.
+
+## The Smell Test I Actually Use
+
+One line from that older evaluation still feels right to me: *if scaling processing means touching brokers, partition counts, or rebalance plans before it means touching your business logic, the system is already telling you that the runtime boundary is wrong.*
+
+That smell tends to show up as a cluster of recurring symptoms:
+
+* compute scale is bought by increasing partitions whether the domain needs them or not
+* broker load becomes the tax you pay for stateful processing
+* rebalances stop feeling routine and start feeling risky
+* upgrades to the Kafka estate become application-risk events
+* topology discussions are dominated by Kafka mechanics rather than the dataflow you actually want
+
+I have seen this pattern in production environments where the nominal problem was "stream processing," but the real problem had already become *stateful execution under operational pressure*. That is exactly the point where <span class="blog-highlight blog-highlight--flink">Flink</span> starts to feel less like overkill and more like the more honest runtime.
 
 ## Where Kafka Streams Still Wins
 

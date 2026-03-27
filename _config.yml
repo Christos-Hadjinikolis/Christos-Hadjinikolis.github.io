@@ -74,7 +74,7 @@ exclude:
   - Gemfile.lock
   - jekyll-theme-prologue.gemspec
   - out
-  - img.png
+  - pyflink-python-runtime.png
   - vendor
   - .bundle
   - .idea

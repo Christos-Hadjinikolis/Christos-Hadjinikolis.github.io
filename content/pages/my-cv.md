@@ -1,6 +1,14 @@
 ---
 title: My CV
 subtitle: Staff-Level Snapshot
+intro_theme: cv
+intro_kicker: "Curated Overview"
+intro_summary: "A fast-read view of what I build, how I think, and where I create leverage: streaming systems, ML platforms, production engineering, and standards-facing AI work."
+intro_card_title: "In One Frame"
+intro_points:
+  - "Streaming-first ML systems"
+  - "Production-grade platform thinking"
+  - "Leadership, standards, and delivery"
 layout: "page"
 icon: fa-id-card
 order: 2

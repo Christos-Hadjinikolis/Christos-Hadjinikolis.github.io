@@ -21,6 +21,8 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
 3. Draft or revise the post in the repo voice defined by `_internal/authoring/BLOG_WRITING_STYLE.md`.
 4. Keep the writing grounded in lived experience, production trade-offs, failure modes, and operational reality.
 5. Prefer concrete examples and earned opinions over trend summaries or generic tutorials.
+6. When source material exists (slides, notes, old reports, evaluations), mine it for concrete operational signals rather than just restating conclusions.
+7. If visuals would genuinely improve a post, prefer tasteful supplied imagery or carefully chosen extracted assets that support the mood and topic without overwhelming the writing.
 
 ## Output Rules
 
@@ -44,6 +46,12 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
   - AWS: AWS-style amber
   - Avro: brick red
   - Graph / streaming architecture concepts: teal or cyan family
+- Use inline visuals only when they improve the post's reading experience:
+  - prefer 0 to 2 visuals per post unless the post is explicitly image-heavy
+  - bias toward curated imagery that feels intentional and visually appealing, not over-explained
+  - if a diagram is used, it should be simple and genuinely necessary
+  - avoid over-designed synthetic graphics that distract from the prose
+  - when the user supplies images, prefer choosing the best ones and integrating them cleanly
 - Avoid hype, startup marketing language, and generic AI thought leadership tone.
 - Do not publish internal instructions or quote them into the post.
 

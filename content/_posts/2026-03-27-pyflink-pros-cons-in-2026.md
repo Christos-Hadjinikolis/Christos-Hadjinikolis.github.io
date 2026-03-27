@@ -5,9 +5,11 @@ author: Christos Hadjinikolis
 layout: post
 og_image: assets/images/posts/2026/pyflink-2026-og.svg
 ---
-I went back to an older <span class="blog-highlight blog-highlight--flink">PyFlink</span> evaluation recently because I did not want to publish a stale verdict dressed up as current judgment.
+I went back to an older <span class="blog-highlight blog-highlight--flink">PyFlink</span> evaluation recently because I did not want to turn one painful setup phase into a permanent opinion.
 
-Some of the original frustrations had aged well. Some had not. And PyFlink is exactly the kind of technology people form a durable opinion about after one painful quarter and then never revisit.
+The original material was full of the kinds of details that tend to harden into folklore: Java version pinning, Python version pinning, extra JARs, container workarounds, and the seductive promise that native <span class="blog-highlight blog-highlight--python">Python</span> model execution would make everything simpler.
+
+Some of those frustrations had aged well. Some had not. And <span class="blog-highlight blog-highlight--flink">PyFlink</span> is exactly the kind of technology people form a durable opinion about after one painful quarter and then never revisit.
 
 That would have been lazy here, because the story has moved.
 
@@ -18,6 +20,11 @@ But the core trade-off has not disappeared.
 <span class="blog-highlight blog-highlight--flink">PyFlink</span> is now real enough to take seriously, but it still does not let you forget that <span class="blog-highlight blog-highlight--flink">Flink</span> is fundamentally a JVM-first distributed runtime.
 
 That is the part people need to hold in their head at the same time as the improvements.
+
+<figure class="blog-figure blog-figure--compact">
+  <img src="{{ 'assets/images/posts/2026/pyflink-pros-cons-in-2026/pyflink-python-runtime.png' | relative_url }}" alt="A surreal image combining Flink and Python imagery." />
+  <figcaption class="blog-figure__caption">The attraction is obvious: bring <span class="blog-highlight blog-highlight--python">Python</span> closer to the streaming system. The catch is that the runtime underneath is still very much <span class="blog-highlight blog-highlight--flink">Flink</span>.</figcaption>
+</figure>
 
 ## What Has Improved Since The Older Evaluation
 
@@ -124,6 +131,15 @@ You have to think about:
 * how dependencies are shipped
 * JAR dependencies for connectors or Java-side integration
 
+The older evaluation made this painfully concrete. Getting local execution into a sane state meant lining up:
+
+* the right Java version
+* the right <span class="blog-highlight blog-highlight--python">Python</span> version
+* the right connector JARs
+* the right <span class="blog-highlight blog-highlight--python">Python</span> dependencies
+
+That list is not just setup trivia. It is the operating model announcing itself early.
+
 That is not a small footnote. It is the day-to-day ergonomics of the platform:
 
 * [PyFlink installation](https://nightlies.apache.org/flink/flink-docs-stable/docs/dev/python/installation/)
@@ -145,6 +161,15 @@ Even the current Kafka connector docs explicitly talk about bringing connector d
 
 That is not a deal-breaker. It is just not the same experience as working inside a native Python framework whose extension model is Python all the way down.
 
+It also shows up in deployment. In the older evaluation, the easiest workable path for local standalone deployment was not "package a Python app and run it." It was closer to:
+
+* start from a vanilla <span class="blog-highlight blog-highlight--flink">Flink</span> image
+* add the <span class="blog-highlight blog-highlight--python">Python</span> dependencies
+* mount the repo or bundle the code carefully
+* run the <span class="blog-highlight blog-highlight--python">Python</span> entrypoint from inside the live container
+
+That is a perfectly workable path. It is also a strong reminder that the deployment experience is still shaped by <span class="blog-highlight blog-highlight--flink">Flink</span>'s runtime model, not by <span class="blog-highlight blog-highlight--python">Python</span>'s usual ergonomics.
+
 ### 3. Debugging Still Tells You What The System Really Is
 
 The current debugging docs are better than before, but they are also revealing.
@@ -162,7 +187,24 @@ In practice, that means some classes of issue still feel cross-boundary by natur
 
 This is not PyFlink being uniquely bad. It is just the cost of the abstraction being honest.
 
-### 4. The Performance Question Never Fully Goes Away
+### 4. Native Python Models Are Not An Automatic Architectural Win
+
+This was one of the more useful parts of the old evaluation, because it is exactly the kind of point people skip when they are trying to justify a new stack.
+
+Yes, being able to interact with model code directly inside a <span class="blog-highlight blog-highlight--flink">PyFlink</span> job is a real plus. It can simplify some flows and avoid a network hop.
+
+But that is not the same as saying it is always the better architecture.
+
+Once the model is served behind a proper boundary, you often gain things that matter a lot in production:
+
+* safer zero-downtime upgrades
+* cleaner readiness and health semantics
+* independent model scaling behind a load balancer
+* a clearer separation between streaming orchestration and serving concerns
+
+So, yes, native execution can save some overhead. But it can also collapse boundaries that were doing useful work for you.
+
+### 5. The Performance Question Never Fully Goes Away
 
 I would be very careful here not to pretend a benchmark I have not run.
 

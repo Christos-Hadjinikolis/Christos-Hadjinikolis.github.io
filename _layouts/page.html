@@ -5,13 +5,37 @@ layout: default
 <!-- Main -->
 <div id="main">
 	<!-- Page -->
-	<article class="shade-two page-reading">
-	  <div class="reading-hero">
+	<article class="shade-two page-reading{% if page.intro_theme %} page-reading--{{ page.intro_theme }}{% endif %}">
+	  <div class="reading-hero page-reading-hero{% if page.intro_theme %} page-reading-hero--{{ page.intro_theme }}{% endif %}">
 	    <div class="container">
-			<header class="reading-hero__header">
-				<h2>{{- page.title -}}</h2>
-				{%- if page.subtitle -%}<p>{{- page.subtitle -}}</p>{%- endif -%}
-			</header>
+			<div class="page-reading-hero__inner">
+				<header class="reading-hero__header">
+					{%- if page.intro_kicker -%}
+					<div class="page-kicker">{{- page.intro_kicker -}}</div>
+					{%- endif -%}
+					<h2>{{- page.title -}}</h2>
+					{%- if page.subtitle -%}<p>{{- page.subtitle -}}</p>{%- endif -%}
+					{%- if page.intro_summary -%}
+					<div class="page-reading-hero__summary">
+						<p>{{- page.intro_summary -}}</p>
+					</div>
+					{%- endif -%}
+				</header>
+				{%- if page.intro_card_title or page.intro_points -%}
+				<aside class="page-reading-hero__card">
+					{%- if page.intro_card_title -%}
+					<div class="page-reading-hero__card-title">{{- page.intro_card_title -}}</div>
+					{%- endif -%}
+					{%- if page.intro_points -%}
+					<ul class="page-reading-hero__points">
+						{%- for point in page.intro_points -%}
+						<li>{{- point -}}</li>
+						{%- endfor -%}
+					</ul>
+					{%- endif -%}
+				</aside>
+				{%- endif -%}
+			</div>
 	    </div>
 	  </div>
 	  <div class="container reading-body">
