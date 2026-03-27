@@ -588,6 +588,11 @@
 		margin-right: auto;
 	}
 
+	.section-shell:not(.cover) .image.featured {
+		max-width: 50rem;
+		margin: 0 auto 2.2rem auto;
+	}
+
 	.section-shell--portfolio p,
 	.section-shell--portfolio .row,
 	.section-shell--about-me p,
@@ -598,6 +603,11 @@
 
 	.section-shell--portfolio .row {
 		margin-top: 2.5rem;
+	}
+
+	.section-shell--portfolio .row,
+	.section-shell--portfolio .item {
+		text-align: left;
 	}
 
 	.section-shell--welcome-to-ml-affairs .prose-block {
@@ -615,6 +625,7 @@
 
 	.section-shell--about-me p {
 		font-size: 1rem;
+		text-align: left;
 	}
 
 	.section-shell--intro {
@@ -650,6 +661,7 @@
 			letter-spacing: 0.02em;
 			line-height: 1.8;
 			max-width: 40rem;
+			text-align: left;
 		}
 
 		.image.featured {
@@ -665,6 +677,17 @@
 
 		footer {
 			margin-top: 2.2rem;
+			text-align: left;
+		}
+	}
+
+	.section-shell--welcome-to-ml-affairs {
+		.image.featured {
+			max-width: 8rem;
+			margin: 0 auto 1.5rem auto;
+		}
+
+		.prose-block {
 			text-align: left;
 		}
 	}
@@ -1218,7 +1241,7 @@
 	#main {
 		margin-left: 375px;
 		> section {
-			text-align: center;
+			text-align: left;
 		}
 		> article {
 			text-align: left;
