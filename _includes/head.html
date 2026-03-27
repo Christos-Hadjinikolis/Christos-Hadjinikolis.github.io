@@ -15,7 +15,7 @@
   {%- endcapture -%}
   {%- assign _page_title = _page_title | escape -%}
   {%- assign _page_description = page.description | default: site.description | default: _page_title | escape -%}
-  {%- assign _og_image = page.og_image | default: site.avatar -%}
+  {%- assign _og_image = page.og_image | default: site.avatar_image | default: site.avatar -%}
   {%- assign _og_type = page.og_type | default: 'website' -%}
 
   <title>{{- _page_title -}}</title>

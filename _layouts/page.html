@@ -5,12 +5,16 @@ layout: default
 <!-- Main -->
 <div id="main">
 	<!-- Page -->
-	<article class="shade-two">
-	  <div class="container">
-			<header>
+	<article class="shade-two page-reading">
+	  <div class="reading-hero">
+	    <div class="container">
+			<header class="reading-hero__header">
 				<h2>{{- page.title -}}</h2>
 				{%- if page.subtitle -%}<p>{{- page.subtitle -}}</p>{%- endif -%}
 			</header>
+	    </div>
+	  </div>
+	  <div class="container reading-body">
 	    {{- content -}}
 	  </div>
 	</article>

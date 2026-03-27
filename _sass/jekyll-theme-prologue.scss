@@ -683,12 +683,72 @@
 
 	.section-shell--welcome-to-ml-affairs {
 		.image.featured {
-			max-width: 8rem;
-			margin: 0 auto 1.5rem auto;
+			display: block;
+			max-width: 16rem;
+			margin: 0 0 1.75rem auto;
 		}
 
 		.prose-block {
 			text-align: left;
+		}
+	}
+
+	.reading-hero,
+	.page-intro-band {
+		background:
+			radial-gradient(circle at 84% 18%, rgba(232, 178, 74, 0.14), transparent 16rem),
+			radial-gradient(circle at 18% 100%, rgba(41, 190, 231, 0.12), transparent 18rem),
+			linear-gradient(180deg, rgba(19, 35, 43, 0.05) 0%, rgba(19, 35, 43, 0.02) 58%, rgba(255, 255, 255, 0) 100%);
+		border-bottom: 1px solid rgba(27, 43, 52, 0.06);
+		position: relative;
+		overflow: clip;
+	}
+
+	.reading-hero {
+		padding: 3.35rem 0 2.5rem 0;
+	}
+
+	.page-intro-band {
+		padding: 3.35rem 0 2.75rem 0;
+	}
+
+	.reading-hero__header {
+		margin: 0;
+		max-width: 46rem;
+		text-align: left;
+
+		h2 {
+			margin-bottom: 0.42em;
+		}
+
+		> p {
+			color: #6d7881;
+			font-size: 0.98rem;
+			font-weight: 600;
+			letter-spacing: 0.02em;
+			line-height: 1.75;
+			margin-top: 0.6rem;
+			max-width: 42rem;
+			text-transform: none;
+		}
+	}
+
+	.reading-body {
+		padding-top: 2.25rem;
+		padding-bottom: 1.2rem;
+	}
+
+	.prose-block--intro {
+		background: rgba(255, 255, 255, 0.72);
+		border: 1px solid rgba(27, 43, 52, 0.08);
+		border-radius: 1.35rem;
+		box-shadow: var(--shadow-soft);
+		margin-top: 1.6rem;
+		padding: 1.85rem 2rem;
+		text-align: left;
+
+		p:last-child {
+			margin-bottom: 0;
 		}
 	}
 

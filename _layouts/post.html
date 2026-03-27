@@ -6,12 +6,16 @@ layout: default
 <div id="main">
 	<!-- Post -->
 	<article class="shade-two post-reading">
-	  <div class="container">
-			<header>
+	  <div class="reading-hero">
+	    <div class="container">
+			<header class="reading-hero__header">
 				<h2>{{- page.title_html | default: page.title -}}</h2>
 				<p>{% if page.author %}{{ page.author }}, {% endif %}{{- page.date | date_to_long_string -}}</p>
 				<p><a href="https://twitter.com/chatzinikolis?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @chatzinikolis</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 			</header>
+	    </div>
+	  </div>
+	  <div class="container reading-body">
 	    {{- content -}}
 	  </div>
 	</article>

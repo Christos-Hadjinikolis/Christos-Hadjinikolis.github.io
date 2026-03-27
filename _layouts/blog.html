@@ -6,7 +6,17 @@ layout: default
 <!-- Main -->
 <div id="main">
 	{%- if page.content != "" -%}
-		{%- include section.html title=page.title photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header content=page.content -%}
+		<section class="shade-two page-intro-band section-shell section-shell--blog-intro">
+			<div class="container">
+				<header class="reading-hero__header">
+					<h2>{{- page.title -}}</h2>
+					{%- if page.subtitle -%}<p>{{- page.subtitle -}}</p>{%- endif -%}
+				</header>
+				<div class="prose-block prose-block--intro">
+					{{- page.content -}}
+				</div>
+			</div>
+		</section>
 	{%- endif -%}
 	<!-- Posts List -->
 	{%- for _post in _posts -%}
