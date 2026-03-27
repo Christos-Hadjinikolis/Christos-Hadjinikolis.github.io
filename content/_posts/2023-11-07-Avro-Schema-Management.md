@@ -2,14 +2,14 @@
 title: "Harmonizing Avro and Python: A Dance of Data Classes"
 author: Christos Hadjinikolis
 layout: post
-og_image: assets/images/2023-11-07-Example-Architecture.png
+og_image: assets/images/posts/2023/avro-schema-management/2023-11-07-Example-Architecture.png
 ---
 Reposting from the [Vortexa medium blog](https://medium.com/vortechsa/harmonizing-avro-and-python-a-dance-of-data-classes-d1cc7bf6bb33) 
 
 In the realm of data engineering, managing data types and schemas efficiently is of paramount importance. The crux of the matter? When data schemas are poorly managed, a myriad of issues arise, ranging from data incompatibility to runtime errors. What I am aiming for in this article is to introduce Apache Avro, a binary serialization format born from the Apache Hadoop project, through which I hope to highlight the significance of Avro schemas in data engineering. Finally, I will provide you with a hands-on guide on converting Avro files into Python data classes. By the end of this read, you’ll grasp the fundamentals of Avro schemas, understand the advantages of using them, and be equipped with a practical example of generating Python data classes from these schemas.
 
 <div class="image center">
-  <img src="{{ 'assets/images/2023-11-07-break-screen.png' | relative_url }}" alt="Break-Screen" />
+  <img src="{{ 'assets/images/posts/2023/avro-schema-management/2023-11-07-break-screen.png' | relative_url }}" alt="Break-Screen" />
 </div>
 
 ## The Issue at Hand
@@ -27,7 +27,7 @@ In the grand scheme of data engineering and big data, one might compare the effi
 
 ### The Evolution of Data Serialization
 <div class="image center">
-  <img src="{{ 'assets/images/2023-11-07-Package.png' | relative_url }}" alt="Package" />
+  <img src="{{ 'assets/images/posts/2023/avro-schema-management/2023-11-07-Package.png' | relative_url }}" alt="Package" />
 </div>
 Before diving into the tapestry of data’s history, let’s demystify a foundational concept here: serialization. At its core, serialization is the process of converting complex data structures or objects into a format that can be easily stored or transmitted and later reconstructed. Imagine packing for a trip; you organize and fold your clothes (data) into a suitcase (a serialized format) so that they fit neatly and can be effortlessly unpacked at your destination.
 
@@ -145,7 +145,7 @@ Producers, Consumers, and their Interaction: Once the schema changes are validat
 In essence, a centralised schema management system, paired with a robust registry and an efficient artifact repository, ensures that such data incompatibility issues are rendered not possible!
 
 <div class="image center">
-  <img src="{{ 'assets/images/2023-11-07-Example-Architecture.png' | relative_url }}" alt="Package" />
+  <img src="{{ 'assets/images/posts/2023/avro-schema-management/2023-11-07-Example-Architecture.png' | relative_url }}" alt="Package" />
 </div>
 
 ## Generating Python Data Classes from *.avsc files

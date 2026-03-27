@@ -2,13 +2,13 @@
 title: AWS ML Certification 
 author: Christos Hadjinikolis
 layout: post
-og_image: assets/images/2020-07-29-AWS-Cert.png
+og_image: assets/images/posts/2020/aws-ml-certification/2020-07-29-AWS-Cert.png
 ---
 I recently took the [AWS Certified Machine Learning - Specialty](https://aws.amazon.com/certification/certified-machine-learning-specialty/). 
 I went through a lot of work in order to adequately prepare for this exam and I can tell you that it is indeed one of 
 the hardest AWS certifications. Nevertheless, with proper preparation and a bit of dedication you should be fine.
 
-<span class="image center"><img src="{{ 'assets/images/2020-07-29-AWS-Cert.png' | relative_url }}" alt="" /></span>
+<span class="image center"><img src="{{ 'assets/images/posts/2020/aws-ml-certification/2020-07-29-AWS-Cert.png' | relative_url }}" alt="" /></span>
 
 ## How long do I need to study for this?
 Well it depends; if you are an experienced Data Scientist and have been applying Data Science for about 3+ years then an hour per day for a month should be enough. This also holds if you are an engineer already exposed to the AWS infrastructure and services but are not familiar with Data Science topics. 

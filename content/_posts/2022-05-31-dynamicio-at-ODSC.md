@@ -2,11 +2,11 @@
 title: Dynamic(i/o) Why you should start your ML-Ops journey with wrapping your I/O
 author: Christos Hadjinikolis
 layout: post
-og_image: assets/images/2022-06-01-dynamicio.png
+og_image: assets/images/posts/2022/dynamicio-at-odsc/2022-06-01-dynamicio.png
 ---
 If you call yourself an ML-Engineer then you 've been there--you 've seen this before. To productionise your ml-pipeline; well, that’s surely a challenge.
 
-<span class="image center"><img src="{{ 'assets/images/2022-06-01-dynamicio.png' | relative_url }}" alt="dynamic(i/o)" /></span>
+<span class="image center"><img src="{{ 'assets/images/posts/2022/dynamicio-at-odsc/2022-06-01-dynamicio.png' | relative_url }}" alt="dynamic(i/o)" /></span>
 
 I have worked for many years as a Data Science consultant, and I can surely confirm the statement that [“...more that 87% of Data Science projects never make it to production”](https://venturebeat.com/2019/07/19/why-do-87-of-data-science-projects-never-make-it-into-production/).
 There is a reason why the first rule of doing Machine Learning is to really be sure you need to do ML! Surely, many reasons play into this challenge: 
@@ -19,7 +19,7 @@ There is a reason why the first rule of doing Machine Learning is to really be s
 But there is one more beast to be tamed out there; the gap between Data Science and ML-Engineering. And this is a gap you can perceive both in terms of the two practitioners in each 
 field of work--data scientists and SWE--but also in terms of literally getting from a prototype to a production ready ML pipeline. 
 
-<span class="image center"><img src="{{ 'assets/images/xkcd-data-answers.png' | relative_url }}" alt="xkcd - data answers" /></span>
+<span class="image center"><img src="{{ 'assets/images/posts/2022/dynamicio-at-odsc/xkcd-data-answers.png' | relative_url }}" alt="xkcd - data answers" /></span>
 
 Simply put, to put a model into production is one thing; but to maintain that model, properly monitor it to identify possible drifts and streamline the process of re-training it or updating it in a robust and 
 reproducible way, supported by a clean CI/CD process, is daunting task! If anything, I 'd dare say that  ML-Engineering, as a domain, fully encapsulates SWE in addition to many more 
@@ -39,11 +39,11 @@ Hence, it easily follows that everything one cares to implement for a SWE projec
 But let's start simple... 
 
 ## Here is my notebook! I am done; your turn now!  
-<span class="image center"><img src="{{ 'assets/images/xkcd-data-pipelines.png' | relative_url }}" alt="xkcd - data pipelines" /></span>
+<span class="image center"><img src="{{ 'assets/images/posts/2022/dynamicio-at-odsc/xkcd-data-pipelines.png' | relative_url }}" alt="xkcd - data pipelines" /></span>
 
 So you are handed a notebook, and you inspect it; you spend time with the Data Scientist and understand all crucial aspects in the procedural logic, and you start splitting the 
 process into various tasks. You, usually, end up with something like this:
-<span class="image center"><img src="{{ 'assets/images/data-pipeline.png' | relative_url }}" alt="xkcd - data pipelines" /></span>
+<span class="image center"><img src="{{ 'assets/images/posts/2022/dynamicio-at-odsc/data-pipeline.png' | relative_url }}" alt="xkcd - data pipelines" /></span>
 
 You think about the structure of your codebase, about how everything will be deployed, how you want to decouple orchestration from the logic of your ML-pipeline, and then you start thinking 
 about domain driven development (DDD). You start thinking about abstractions and encapsulation, about testing and data validation. That's when it hits you&ndash;testing; you can unit test 

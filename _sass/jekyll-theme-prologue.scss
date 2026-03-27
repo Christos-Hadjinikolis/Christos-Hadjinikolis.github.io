@@ -786,7 +786,11 @@
 		margin-top: 1.15rem;
 
 		.button {
+			align-self: flex-start;
+			font-size: 0.86rem;
 			margin-bottom: 0;
+			padding: 0.72em 1.65em 0.72em 1.65em;
+			box-shadow: 0 10px 22px rgba(204, 143, 37, 0.18);
 		}
 	}
 
@@ -833,6 +837,22 @@
 		margin-top: 1rem;
 	}
 
+	.cv-page {
+		.page-rule-list,
+		.page-list,
+		.page-timeline {
+			font-size: 0.96rem;
+			line-height: 1.66;
+		}
+	}
+
+	.experience-page {
+		.page-rule-list {
+			font-size: 0.96rem;
+			line-height: 1.66;
+		}
+	}
+
 	.experience-page {
 		.page-hero {
 			grid-template-columns: 1.45fr 0.95fr;
@@ -858,7 +878,7 @@
 
 	.experience-step {
 		display: grid;
-		gap: 1.35rem;
+		gap: 2rem;
 		grid-template-columns: 7.1rem 1fr;
 		margin-bottom: 1.7rem;
 		position: relative;
@@ -881,7 +901,8 @@
 	}
 
 	.experience-era {
-		padding-top: 0.55rem;
+		padding-top: 0.3rem;
+		padding-right: 1.35rem;
 		text-align: right;
 	}
 
@@ -908,7 +929,8 @@
 		border-left: 5px solid var(--page-accent);
 		border-radius: 1.2rem;
 		box-shadow: var(--page-shadow);
-		padding: 1.45rem 1.5rem;
+		margin-left: 1.35rem;
+		padding: 1.05rem 1.5rem 1.45rem 1.8rem;
 	}
 
 	.experience-card-head {
@@ -916,6 +938,7 @@
 		align-items: flex-start;
 		gap: 1rem;
 		justify-content: space-between;
+		margin-left: 1.35rem;
 		margin-bottom: 0.8rem;
 
 		h4 {
@@ -939,6 +962,7 @@
 		color: var(--accent-secondary-strong);
 		font-size: 0.86rem;
 		font-weight: 600;
+		margin-right: 0.5rem;
 		padding: 0.38rem 0.8rem;
 		white-space: nowrap;
 	}
@@ -947,6 +971,7 @@
 		color: var(--page-ink-strong);
 		font-size: 1.02rem;
 		line-height: 1.7;
+		margin-left: 1.35rem;
 		margin-bottom: 1rem;
 	}
 
@@ -954,13 +979,14 @@
 		display: grid;
 		gap: 1rem;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
+		margin-left: 1.35rem;
 	}
 
 	.experience-mini-panel {
 		background: var(--page-panel-soft);
 		border: 1px solid rgba(55, 60, 68, 0.08);
 		border-radius: 1rem;
-		padding: 1rem 1.05rem;
+		padding: 1.2rem 1.35rem 1.2rem 1.9rem;
 
 		h5 {
 			color: var(--page-ink-strong);
@@ -968,6 +994,12 @@
 			letter-spacing: 0.02em;
 			margin: 0 0 0.55rem;
 			text-transform: uppercase;
+		}
+
+		.page-list {
+			font-size: 0.92rem;
+			line-height: 1.62;
+			margin-left: 0.35rem;
 		}
 	}
 
@@ -980,6 +1012,20 @@
 
 	.experience-bottom .page-panel {
 		height: 100%;
+	}
+
+	.experience-bottom .page-list {
+		font-size: 0.93rem;
+		line-height: 1.64;
+	}
+
+	.experience-bottom .page-list li {
+		margin-bottom: 0.72rem;
+	}
+
+	.experience-bottom .page-note {
+		font-size: 0.9rem;
+		line-height: 1.55;
 	}
 
 /* Icons */
@@ -1074,6 +1120,10 @@
 
 		.experience-step {
 			grid-template-columns: 1fr;
+		}
+
+		.experience-card {
+			margin-left: 0;
 		}
 
 		.experience-era {

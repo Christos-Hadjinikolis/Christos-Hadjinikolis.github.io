@@ -2,13 +2,13 @@
 title: Complete Guide to Python Envs (MacOS)
 author: Christos Hadjinikolis
 layout: post
-og_image: assets/images/python_environment_2x.png
+og_image: assets/images/posts/2021/python-envs/python_environment_2x.png
 ---
 Configuring python on your machine for the first time is a definite headache for any software 
 engineer that decides to delve into the world of python. Doing it properly confuses a lot of 
 people and can prove to be very challenging. 
 
-<span class="image center"><img src="{{ 'assets/images/python_environment_2x.png' | relative_url }}" alt="Python Envs" /></span>
+<span class="image center"><img src="{{ 'assets/images/posts/2021/python-envs/python_environment_2x.png' | relative_url }}" alt="Python Envs" /></span>
 
 It is often the case that many developers have numerous interpreters configured on their machines,
 without knowing where they live. 

@@ -2,7 +2,7 @@
 title: Agile Data Science
 author: Christos Hadjinikolis
 layout: post
-og_image: assets/images/iunera-logo-shadow.png
+og_image: assets/images/posts/2020/agile-data-science/iunera-logo-shadow.png
 ---
 Re-posting from [https://www.iunera.com/](https://www.iunera.com/kraken/big-data-science-strategy/the-agile-approach-in-data-science-explained-by-an-ml-expert/)
 
@@ -24,7 +24,7 @@ proudly tell you that "...I am a Data Scientist"; that is how I saw myself. Howe
 The first three months were amazing. I worked with a vast amount of data and revealed some very interesting insights. 
 So, inevitably, my project manager approached me and asked "...how about we take this work of yours into production"!
 
-<span class="image center"><img src="{{ 'assets/images/2020-08-11-agile-ds-01.png' | relative_url }}" alt="Agile Data Science" /></span>
+<span class="image center"><img src="{{ 'assets/images/posts/2020/agile-data-science/2020-08-11-agile-ds-01.png' | relative_url }}" alt="Agile Data Science" /></span>
 
 I didn't have a clue about what that meant in reality, but I was about to find out. He said: "Well, don't worry, we will pair 
 you with an engineer and you both can get started on it". So we did! 

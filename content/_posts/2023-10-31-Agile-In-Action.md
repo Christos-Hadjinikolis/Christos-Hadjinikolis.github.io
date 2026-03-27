@@ -2,11 +2,11 @@
 title: "Sailing Through Data Science: The Agile Journey at Vortexa"
 author: Christos Hadjinikolis
 layout: post
-og_image: assets/images/2023-10-31-Turner.png
+og_image: assets/images/posts/2023/agile-in-action/2023-10-31-Turner.png
 ---
 
 <div class="image center">
-  <img src="{{ 'assets/images/2023-10-31-Turner.png' | relative_url }}" alt="Joseph Mallord William Turner | Dutch Boats in a Gale ('The Bridgewater Sea Piece') | L297 | National Gallery, London" />
+  <img src="{{ 'assets/images/posts/2023/agile-in-action/2023-10-31-Turner.png' | relative_url }}" alt="Joseph Mallord William Turner | Dutch Boats in a Gale ('The Bridgewater Sea Piece') | L297 | National Gallery, London" />
   <p class="image-credit">Picture taken from <a href="https://www.nationalgallery.org.uk/paintings/joseph-mallord-william-turner-dutch-boats-in-a-gale-the-bridgewater-sea-piece" target="_blank" rel="noopener noreferrer">National Gallery, London</a></p>
 </div>
 

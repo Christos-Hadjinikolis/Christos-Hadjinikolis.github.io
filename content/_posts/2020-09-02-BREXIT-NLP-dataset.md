@@ -2,12 +2,12 @@
 title: A BREXIT NLP Dataset! 
 author: Christos Hadjinikolis
 layout: post
-og_image: assets/images/eu-brexit-classifier.png
+og_image: assets/images/posts/2020/brexit-nlp-dataset/eu-brexit-classifier.png
 ---
 So here is the thing... I love discussing politics; I think that everyone should, at least occasionally, bother 
 themselves with what is happening in their country's political scenery. 
 
-<span class="image center"><img src="{{ 'assets/images/eu-brexit-classifier.png' | relative_url }}" alt="BREXIT 2016" /></span>
+<span class="image center"><img src="{{ 'assets/images/posts/2020/brexit-nlp-dataset/eu-brexit-classifier.png' | relative_url }}" alt="BREXIT 2016" /></span>
  
 Regardless of whether you are into politics or not, it would be practically impossible to escape debating BREXIT back 
 in the summer of 2016. At the time, I had just been hired by Data Reply UK and the company's annual XChange conference was

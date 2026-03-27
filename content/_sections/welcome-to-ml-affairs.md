@@ -3,7 +3,7 @@ title: Welcome to ML-Affairs!
 icon: fa-compass
 order: 5
 ---
-<span class="image featured"><img src="assets/images/ML-Affairs-Logo.png" alt="ML-Affairs logo" /></span>
+<span class="image featured"><img src="assets/images/site/ML-Affairs-Logo.png" alt="ML-Affairs logo" /></span>
 
 <div class="prose-block">
   <p>

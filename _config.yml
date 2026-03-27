@@ -38,7 +38,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   passion for applied data science and are looking for a refreshing look at things, then you are at the right place.
 author: Christos Hadjinikolis
 email: christos.hadjinikolis@gmail.com
-avatar: assets/images/profile.jpg
+avatar: assets/images/site/profile.jpg
 
 # You'll want to customize url and baseurl for your own site:
 baseurl: "" # the subpath of your site, e.g. /blog
