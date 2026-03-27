@@ -38,8 +38,8 @@
 	{%- endcapture -%}
 {%- endif -%}
 
-<section id="{{- _slug -}}" class="{{- _class -}}">
-  <div class="container">
+<section id="{{- _slug -}}" class="{{- _class -}} section-shell section-shell--{{- _slug -}}">
+  <div class="container section-inner">
     {{- _photo -}}
     {{- _heading -}}
     {{- include.content -}}
