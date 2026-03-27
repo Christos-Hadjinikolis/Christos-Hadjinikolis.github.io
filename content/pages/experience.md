@@ -95,7 +95,8 @@ permalink: /experience.html
         <div class="experience-card-head">
           <div>
             <h4>🏗️ Consulting became the bridge from data science to ML engineering</h4>
-            <div class="experience-role">Data Reply · London, UK</div>
+            <div class="experience-role">Data Reply</div>
+            <div class="experience-location">London, UK</div>
           </div>
           <div class="experience-badge">Data Scientist → ML Engineer</div>
         </div>

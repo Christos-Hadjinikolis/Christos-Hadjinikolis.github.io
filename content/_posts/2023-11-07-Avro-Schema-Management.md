@@ -1,12 +1,13 @@
 ---
 title: "Harmonizing Avro and Python: A Dance of Data Classes"
+title_html: "Harmonizing <span class='blog-title-accent blog-title-accent--avro'>Avro</span> and <span class='blog-title-accent blog-title-accent--python'>Python</span>: A Dance of Data Classes"
 author: Christos Hadjinikolis
 layout: post
 og_image: assets/images/posts/2023/avro-schema-management/2023-11-07-Example-Architecture.png
 ---
 Reposting from the [Vortexa medium blog](https://medium.com/vortechsa/harmonizing-avro-and-python-a-dance-of-data-classes-d1cc7bf6bb33) 
 
-In the realm of data engineering, managing data types and schemas efficiently is of paramount importance. The crux of the matter? When data schemas are poorly managed, a myriad of issues arise, ranging from data incompatibility to runtime errors. What I am aiming for in this article is to introduce Apache Avro, a binary serialization format born from the Apache Hadoop project, through which I hope to highlight the significance of Avro schemas in data engineering. Finally, I will provide you with a hands-on guide on converting Avro files into Python data classes. By the end of this read, you’ll grasp the fundamentals of Avro schemas, understand the advantages of using them, and be equipped with a practical example of generating Python data classes from these schemas.
+In the realm of data engineering, managing data types and schemas efficiently is of paramount importance. The crux of the matter? When data schemas are poorly managed, a myriad of issues arise, ranging from data incompatibility to runtime errors. What I am aiming for in this article is to introduce <span class="blog-highlight blog-highlight--avro">Apache Avro</span>, a binary serialization format born from the Apache Hadoop project, through which I hope to highlight the significance of Avro schemas in data engineering. Finally, I will provide you with a hands-on guide on converting Avro files into <span class="blog-highlight blog-highlight--python">Python</span> data classes. By the end of this read, you’ll grasp the fundamentals of Avro schemas, understand the advantages of using them, and be equipped with a practical example of generating <span class="blog-highlight blog-highlight--python">Python</span> data classes from these schemas.
 
 <div class="image center">
   <img src="{{ 'assets/images/posts/2023/avro-schema-management/2023-11-07-break-screen.png' | relative_url }}" alt="Break-Screen" />
@@ -35,7 +36,7 @@ With that in mind, the story of data storage and transmission is a dynamic saga 
 
 Now, imagine various systems, microservices, or extract-transform-load (ETL) pipelines, trying to communicate with one another by attempting to read unfamiliar data formats. It’s like trying to read a book when you don’t know the language it’s written in. To solve this, data had to be serialized–essentially translating complex data structures into a universally understood format. The early translators in this world were XML and JSON. Effective? Yes. Efficient? Not quite. They often felt like scribes painstakingly inking each letter, especially when handling vast amounts of data. The world needed a faster scribe; one that was both concise and precise.
 
-Enter Avro. Inspired by the bustling highways of big data scenarios–from the lightning speed of Kafka to the vastness of Hadoop–Avro was born to ensure that data packets glided smoothly without unexpected stops. It became the guardian of data integrity and compatibility.
+Enter <span class="blog-highlight blog-highlight--avro">Avro</span>. Inspired by the bustling highways of big data scenarios–from the lightning speed of <span class="blog-highlight blog-highlight--kafka">Kafka</span> to the vastness of Hadoop–Avro was born to ensure that data packets glided smoothly without unexpected stops. It became the guardian of data integrity and compatibility.
 
 ## What’s in a POJO?
 So, integrity is the keyword here, and in the context of this blog, we care about integrity breaches concerned with schema changes in a service that are not properly propagated to its consumers, rendering them unable to accommodate the new schema of the data they consume–like reading a book in a foreign language 😉.

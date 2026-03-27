@@ -939,6 +939,7 @@
 		gap: 1rem;
 		justify-content: space-between;
 		margin-left: 1.35rem;
+		margin-right: 0.9rem;
 		margin-bottom: 0.8rem;
 
 		h4 {
@@ -962,7 +963,6 @@
 		color: var(--accent-secondary-strong);
 		font-size: 0.86rem;
 		font-weight: 600;
-		margin-right: 0.5rem;
 		padding: 0.38rem 0.8rem;
 		white-space: nowrap;
 	}
@@ -972,6 +972,7 @@
 		font-size: 1.02rem;
 		line-height: 1.7;
 		margin-left: 1.35rem;
+		margin-right: 0.9rem;
 		margin-bottom: 1rem;
 	}
 
@@ -980,13 +981,14 @@
 		gap: 1rem;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		margin-left: 1.35rem;
+		margin-right: 0.9rem;
 	}
 
 	.experience-mini-panel {
 		background: var(--page-panel-soft);
 		border: 1px solid rgba(55, 60, 68, 0.08);
 		border-radius: 1rem;
-		padding: 1.2rem 1.35rem 1.2rem 1.9rem;
+		padding: 1.2rem 1.35rem 1.2rem 1.55rem;
 
 		h5 {
 			color: var(--page-ink-strong);
@@ -1001,6 +1003,10 @@
 			line-height: 1.62;
 			margin-left: 0.35rem;
 		}
+	}
+
+	.experience-mini-panel + .experience-mini-panel {
+		padding-left: 1.55rem;
 	}
 
 	.experience-bottom {
@@ -1026,6 +1032,123 @@
 	.experience-bottom .page-note {
 		font-size: 0.9rem;
 		line-height: 1.55;
+	}
+
+	.blog-title-accent {
+		display: inline;
+		font-weight: inherit;
+	}
+
+	.blog-title-accent--python {
+		background: linear-gradient(90deg, #275d9c 0%, #275d9c 58%, #a87c18 58%, #a87c18 100%);
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.blog-title-accent--flink {
+		color: #c84d70;
+	}
+
+	.blog-title-accent--kafka {
+		color: #bc6b18;
+	}
+
+	.blog-title-accent--aws {
+		color: #b56b05;
+	}
+
+	.blog-title-accent--avro {
+		color: #b3473d;
+	}
+
+	.blog-title-accent--agile {
+		color: #237d98;
+	}
+
+	.blog-title-accent--graph,
+	.blog-title-accent--dynamicio {
+		color: #178b9a;
+	}
+
+	.blog-title-accent--eu {
+		color: #2e5f9d;
+	}
+
+	.blog-title-accent--vision {
+		color: #8d4a8a;
+	}
+
+	.blog-title-accent--signal {
+		color: #ba5b2f;
+	}
+
+	.post-reading strong {
+		color: var(--ink-strong);
+		font-weight: 700;
+	}
+
+	.post-reading em {
+		color: #4b5963;
+	}
+
+	.blog-highlight {
+		border-bottom: 2px solid rgba(44, 199, 235, 0.25);
+		color: var(--ink-strong);
+		font-weight: 700;
+		padding-bottom: 0.02em;
+	}
+
+	.blog-highlight--python {
+		border-bottom-color: rgba(182, 145, 45, 0.55);
+		color: #275d9c;
+	}
+
+	.blog-highlight--flink {
+		border-bottom-color: rgba(200, 77, 112, 0.28);
+		color: #b64e6a;
+	}
+
+	.blog-highlight--kafka {
+		border-bottom-color: rgba(188, 107, 24, 0.28);
+		color: #b16a1e;
+	}
+
+	.blog-highlight--aws {
+		border-bottom-color: rgba(181, 107, 5, 0.28);
+		color: #a86408;
+	}
+
+	.blog-highlight--avro {
+		border-bottom-color: rgba(179, 71, 61, 0.26);
+		color: #a1443d;
+	}
+
+	.blog-highlight--agile {
+		border-bottom-color: rgba(35, 125, 152, 0.28);
+		color: #237d98;
+	}
+
+	.blog-highlight--graph,
+	.blog-highlight--dynamicio {
+		border-bottom-color: rgba(23, 139, 154, 0.28);
+		color: #177f8f;
+	}
+
+	.blog-highlight--eu {
+		border-bottom-color: rgba(46, 95, 157, 0.26);
+		color: #2e5f9d;
+	}
+
+	.blog-highlight--vision {
+		border-bottom-color: rgba(141, 74, 138, 0.24);
+		color: #8d4a8a;
+	}
+
+	.blog-highlight--signal {
+		border-bottom-color: rgba(186, 91, 47, 0.26);
+		color: #b05c35;
 	}
 
 /* Icons */

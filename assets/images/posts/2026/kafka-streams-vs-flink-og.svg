@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Kafka Streams vs Flink Is The Wrong Question</title>
+  <desc id="desc">ML-Affairs article preview card about when Flink earns its complexity over Kafka Streams.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1f25"/>
+      <stop offset="100%" stop-color="#133742"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#31d4ff"/>
+      <stop offset="100%" stop-color="#b2ffef"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1030" cy="120" r="150" fill="#173e49" opacity="0.5"/>
+  <circle cx="1100" cy="520" r="220" fill="#102b34" opacity="0.7"/>
+  <rect x="74" y="68" width="220" height="42" rx="21" fill="#17333b" stroke="#2cc7eb" stroke-width="2"/>
+  <text x="110" y="95" fill="#9ceeff" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="2">ML-AFFAIRS</text>
+  <rect x="74" y="145" width="110" height="5" rx="2.5" fill="url(#accent)"/>
+  <text x="74" y="235" fill="#f4f7f8" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="700">Kafka Streams vs Flink</text>
+  <text x="74" y="307" fill="#f4f7f8" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="700">Is The Wrong Question</text>
+  <text x="74" y="392" fill="#c7d7dc" font-family="Helvetica, Arial, sans-serif" font-size="31">When streaming stops being an application concern</text>
+  <text x="74" y="433" fill="#c7d7dc" font-family="Helvetica, Arial, sans-serif" font-size="31">and becomes a platform problem.</text>
+  <rect x="74" y="490" width="400" height="56" rx="28" fill="#17333b" stroke="#2a6470" stroke-width="2"/>
+  <text x="103" y="526" fill="#8de8ff" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700">State. Recovery. Rescaling. Operability.</text>
+</svg>

@@ -1,11 +1,12 @@
 ---
 title: Complete Guide to Python Envs (MacOS)
+title_html: "Complete Guide to <span class='blog-title-accent blog-title-accent--python'>Python</span> Envs (MacOS)"
 author: Christos Hadjinikolis
 layout: post
 og_image: assets/images/posts/2021/python-envs/python_environment_2x.png
 ---
-Configuring python on your machine for the first time is a definite headache for any software 
-engineer that decides to delve into the world of python. Doing it properly confuses a lot of 
+Configuring <span class="blog-highlight blog-highlight--python">python</span> on your machine for the first time is a definite headache for any software 
+engineer that decides to delve into the world of <span class="blog-highlight blog-highlight--python">python</span>. Doing it properly confuses a lot of 
 people and can prove to be very challenging. 
 
 <span class="image center"><img src="{{ 'assets/images/posts/2021/python-envs/python_environment_2x.png' | relative_url }}" alt="Python Envs" /></span>
@@ -31,7 +32,7 @@ To find out more details, read this excellent [December 2020, post](https://open
 by Matthew Broberg. 
 
 ## How to avoid all these?
-The short answer is "use `pyenv`". `pyenv` will enable you to not only setup python properly on your machine, but
+The short answer is "use <span class=\"blog-highlight blog-highlight--python\">`pyenv`</span>". `pyenv` will enable you to not only setup python properly on your machine, but
 to also manage different versions and python environments in a simple and straightforward way. As
 explained on the [package's github page](https://github.com/pyenv/pyenv):
 

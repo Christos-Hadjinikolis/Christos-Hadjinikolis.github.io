@@ -1,5 +1,6 @@
 ---
 title: Style Transfer in Heraklion
+title_html: "<span class='blog-title-accent blog-title-accent--vision'>Style Transfer</span> in Heraklion"
 author: Christos Hadjinikolis
 layout: post
 og_image: assets/images/posts/2020/on-style-transfer/2020-08-15-style-transfer-koules.png
@@ -11,10 +12,10 @@ history that goes all the way back to the Minoans in 3500 BC.
 <span class="image center"><img src="{{ 'assets/images/posts/2020/on-style-transfer/2020-08-15-style-transfer-koules.png' | relative_url }}" alt="" /></span>
 One of the things I love doing whenever I am here is strolling around the city of Heraklion and taking pictures of the many hidden alleys, 
 which reveal an amazing graffiti culture! I really wanted to write about it in my blog and I thought that maybe I can do so 
-by using some amazing images I gathered just last week in a style-transfer post. So this is it: **"Style Transfer in Heraklion"**.
+by using some amazing images I gathered just last week in a <span class="blog-highlight blog-highlight--vision">style-transfer</span> post. So this is it: **"Style Transfer in Heraklion"**.
 
 ## A bit of history: A Neural Algorithm of Artistic Style
-Neural Style Transfer (NST) is a class of algorithms that process images to adopt the visual style of another image. A seminal paper 
+<span class="blog-highlight blog-highlight--vision">Neural Style Transfer (NST)</span> is a class of algorithms that process images to adopt the visual style of another image. A seminal paper 
 that introduced this concept was ["A Neural Algorithm of Artistic Style"](https://arxiv.org/abs/1508.06576) by Leon A. Gatys, Alexander 
 S. Ecker and Matthias Bethge. In their work, the authors emphasize that:
 >"...representations of content and style in Neural Networks are seperable".   

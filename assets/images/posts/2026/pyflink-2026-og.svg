@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">PyFlink In 2026: Better Than Its Reputation, Still Not Frictionless</title>
+  <desc id="desc">ML-Affairs article preview card about the pros and cons of PyFlink in 2026.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111c24"/>
+      <stop offset="100%" stop-color="#23343c"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffd36f"/>
+      <stop offset="100%" stop-color="#31d4ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="840" y="54" width="250" height="250" rx="30" fill="#163744" opacity="0.65"/>
+  <rect x="905" y="120" width="120" height="120" rx="18" fill="#1f5664" opacity="0.95"/>
+  <rect x="74" y="68" width="220" height="42" rx="21" fill="#1b2d33" stroke="#f0c15e" stroke-width="2"/>
+  <text x="110" y="95" fill="#ffe39b" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="2">ML-AFFAIRS</text>
+  <rect x="74" y="145" width="110" height="5" rx="2.5" fill="url(#accent)"/>
+  <text x="74" y="235" fill="#f4f7f8" font-family="Georgia, 'Times New Roman', serif" font-size="62" font-weight="700">PyFlink In 2026</text>
+  <text x="74" y="312" fill="#f4f7f8" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700">Better Than Its Reputation,</text>
+  <text x="74" y="375" fill="#f4f7f8" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700">Still Not Frictionless</text>
+  <text x="74" y="458" fill="#cad6da" font-family="Helvetica, Arial, sans-serif" font-size="30">Python gets you closer to Flink.</text>
+  <text x="74" y="497" fill="#cad6da" font-family="Helvetica, Arial, sans-serif" font-size="30">It does not make the JVM disappear.</text>
+  <rect x="74" y="530" width="335" height="18" rx="9" fill="#26424a"/>
+  <rect x="74" y="530" width="244" height="18" rx="9" fill="url(#accent)"/>
+</svg>

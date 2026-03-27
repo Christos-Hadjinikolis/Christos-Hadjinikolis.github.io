@@ -1,12 +1,13 @@
 ---
 title: AWS ML Certification 
+title_html: "<span class='blog-title-accent blog-title-accent--aws'>AWS</span> ML Certification"
 author: Christos Hadjinikolis
 layout: post
 og_image: assets/images/posts/2020/aws-ml-certification/2020-07-29-AWS-Cert.png
 ---
-I recently took the [AWS Certified Machine Learning - Specialty](https://aws.amazon.com/certification/certified-machine-learning-specialty/). 
+I recently took the [AWS Certified Machine Learning - Specialty](https://aws.amazon.com/certification/certified-machine-learning-specialty/), which remains one of the most demanding <span class="blog-highlight blog-highlight--aws">AWS</span> certifications. 
 I went through a lot of work in order to adequately prepare for this exam and I can tell you that it is indeed one of 
-the hardest AWS certifications. Nevertheless, with proper preparation and a bit of dedication you should be fine.
+the hardest <span class="blog-highlight blog-highlight--aws">AWS certifications</span>. Nevertheless, with proper preparation and a bit of dedication you should be fine.
 
 <span class="image center"><img src="{{ 'assets/images/posts/2020/aws-ml-certification/2020-07-29-AWS-Cert.png' | relative_url }}" alt="" /></span>
 

@@ -27,6 +27,23 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
 - New posts belong in `content/_posts/` with valid Jekyll front matter.
 - Preserve an existing post's date and slug unless the user explicitly asks to change them.
 - Use headings to structure arguments.
+- When the visual treatment of blog posts matters, prefer a plain `title` for metadata and a rendered `title_html` for the on-page/blog-index heading.
+- Use visual emphasis sparingly and consistently:
+  - reserve color accents for technologies, frameworks, and core concepts that are central to the post
+  - use at most 1 to 2 colored terms in a paragraph
+  - prefer bold or italics for emphasis before adding more color
+  - use bold for the clearest takeaways, named concepts, or strong claims
+  - use italics for softer emphasis, contrast, or a reflective aside
+  - do not stack bold, italics, and color on the same phrase unless there is a very strong reason
+  - if a paragraph already has one visual emphasis cue, be skeptical about adding another
+  - keep all accents accessible and readable on light backgrounds
+- Follow the repo's blog accent conventions when they exist:
+  - Python: dark blue text with muted gold support, not neon yellow
+  - Flink / PyFlink: dark pink / raspberry
+  - Kafka: warm amber/orange
+  - AWS: AWS-style amber
+  - Avro: brick red
+  - Graph / streaming architecture concepts: teal or cyan family
 - Avoid hype, startup marketing language, and generic AI thought leadership tone.
 - Do not publish internal instructions or quote them into the post.
 

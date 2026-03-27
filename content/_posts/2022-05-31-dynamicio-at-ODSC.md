@@ -1,10 +1,11 @@
 ---
 title: Dynamic(i/o) Why you should start your ML-Ops journey with wrapping your I/O
+title_html: "<span class='blog-title-accent blog-title-accent--dynamicio'>Dynamic(i/o)</span> Why you should start your ML-Ops journey with wrapping your I/O"
 author: Christos Hadjinikolis
 layout: post
 og_image: assets/images/posts/2022/dynamicio-at-odsc/2022-06-01-dynamicio.png
 ---
-If you call yourself an ML-Engineer then you 've been there--you 've seen this before. To productionise your ml-pipeline; well, that’s surely a challenge.
+If you call yourself an <span class="blog-highlight blog-highlight--graph">ML-Engineer</span> then you 've been there--you 've seen this before. To productionise your ml-pipeline; well, that’s surely a challenge.
 
 <span class="image center"><img src="{{ 'assets/images/posts/2022/dynamicio-at-odsc/2022-06-01-dynamicio.png' | relative_url }}" alt="dynamic(i/o)" /></span>
 
@@ -28,7 +29,7 @@ are still trying to standardise how we work in terms of best tooling or practice
 
 In many cases, organisations are forced to come up with their own ways of working to accommodate the unique challenges of their custom use-cases. Then again, it all comes down to the requirements of a project. 
 [Netflix has streamlined the process of putting python notebooks into production using papermil](https://netflixtechblog.com/scheduling-notebooks-348e6c14cfd6). 
-Others, go as far as to standardise the whole ML-Engineering process using tools like Airflow or Kubeflow, relying on AI pipelines (on GCP) or SageMaker (on AWS), etc.
+Others, go as far as to standardise the whole ML-Engineering process using tools like <span class="blog-highlight blog-highlight--graph">Airflow</span> or <span class="blog-highlight blog-highlight--graph">Kubeflow</span>, relying on AI pipelines (on GCP) or <span class="blog-highlight blog-highlight--aws">SageMaker</span> (on AWS), etc.
 
 ## So what do we do...?
 At Vortexa, we are heavy users of Airflow and have recently embarked into a journey to include Kubeflow into our tech stack. 
@@ -76,7 +77,7 @@ Wouldn't it be great if you could:
 * automatically generate metrics that would be used to leverage further insights, and more importantly;
 * be able to seamlessly switch between `local`, `dev`, `staging` and `prod` environments, performing dynamic I/O against different datasets and effectively supporting development, testing and qa use cases?     
 
-Well, `dynamic(i/o)` is exactly that; a layer of indirection for pandas I/O operations. 
+Well, <span class="blog-highlight blog-highlight--dynamicio">`dynamic(i/o)`</span> is exactly that; a layer of indirection for pandas I/O operations. 
 
 If you want to find out more about it then [register to attend this year's `ODSC`](https://odsc.com/europe/) and [attend the presentation by myself and my colleague Tyler Ferguson on `dynamic(i/o)`](https://odsc.com/speakers/dynamicio-a-pandas-i-o-wrapper-why-you-should-start-your-ml-ops-journey-with-wrapping-your-i-o/). 
 Come and learn about how its implementation and adoption has helped us go beyond just achieving consistency across our ML repos, effectively dealing with glue code and keeping our code-bases DRY, but also acting as an interface between different teams.

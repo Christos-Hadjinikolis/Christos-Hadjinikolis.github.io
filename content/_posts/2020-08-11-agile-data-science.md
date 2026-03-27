@@ -1,5 +1,6 @@
 ---
 title: Agile Data Science
+title_html: "<span class='blog-title-accent blog-title-accent--agile'>Agile</span> Data Science"
 author: Christos Hadjinikolis
 layout: post
 og_image: assets/images/posts/2020/agile-data-science/iunera-logo-shadow.png
@@ -29,8 +30,8 @@ So, inevitably, my project manager approached me and asked "...how about we take
 I didn't have a clue about what that meant in reality, but I was about to find out. He said: "Well, don't worry, we will pair 
 you with an engineer and you both can get started on it". So we did! 
 
-This is basically the story about how I was exposed to software engineering and the Agile way of working&ndash;about how I was converted into 
-a ML Engineer. Two years later I decided to take my learnings from this experience and share it with my community, and so I did at **mCubed** London in 2018:
+This is basically the story about how I was exposed to software engineering and the <span class="blog-highlight blog-highlight--agile">Agile</span> way of working&ndash;about how I was converted into 
+an <span class="blog-highlight blog-highlight--graph">ML Engineer</span>. Two years later I decided to take my learnings from this experience and share it with my community, and so I did at **mCubed** London in 2018:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nRsqFrutfSg" title="Agile Data Science talk" frameborder="0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

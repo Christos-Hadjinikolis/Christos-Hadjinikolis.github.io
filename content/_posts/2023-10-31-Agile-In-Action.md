@@ -1,5 +1,6 @@
 ---
 title: "Sailing Through Data Science: The Agile Journey at Vortexa"
+title_html: "Sailing Through Data Science: The <span class='blog-title-accent blog-title-accent--agile'>Agile</span> Journey at Vortexa"
 author: Christos Hadjinikolis
 layout: post
 og_image: assets/images/posts/2023/agile-in-action/2023-10-31-Turner.png
@@ -10,13 +11,13 @@ og_image: assets/images/posts/2023/agile-in-action/2023-10-31-Turner.png
   <p class="image-credit">Picture taken from <a href="https://www.nationalgallery.org.uk/paintings/joseph-mallord-william-turner-dutch-boats-in-a-gale-the-bridgewater-sea-piece" target="_blank" rel="noopener noreferrer">National Gallery, London</a></p>
 </div>
 
-As a Lead Machine Learning Engineer at Vortexa over the last 3 years, I've often likened my role to that of a navigator; charting a path through stormy waters as much as taming machine learning models within the vibrant energy sector. Feels like a perpetual discovery journey, where the Agile philosophy can serve as a compass, guiding me and my team through unpredictable challenges.
+As a Lead Machine Learning Engineer at Vortexa over the last 3 years, I've often likened my role to that of a navigator; charting a path through stormy waters as much as taming machine learning models within the vibrant energy sector. Feels like a perpetual discovery journey, where the <span class="blog-highlight blog-highlight--agile">Agile</span> philosophy can serve as a compass, guiding me and my team through unpredictable challenges.
 
 ## An opportunity to share our journey
 The opportunity to share this journey came unexpectedly when Bill Raymond, after perusing a blog post of mine on '[Doing Data Science the Agile Way]({{ '/2020/08/11/agile-data-science.html' | relative_url }}),' extended an invitation to discuss the nuances of this approach on his [podcast platform](https://agileinaction.com/agile-in-action-podcast/2023/10/31/bridging-ai-data-science-and-engineering-a-personal-journey.html). This conversation not only gave me a chance to verbalize our experiences at Vortexa but also to crystallize my thoughts on how Agile methodologies intertwine with the intricate dance of data science and data engineering.
 
 ## Agile: Charting the Uncharted
-Agile, in its essence, is about exploration and adaptation. It's about setting out to the sea with the knowledge that the winds may change, but with a framework that allows you to adjust your sails accordingly. At Vortexa, we've embraced this spirit of 'failing fast' not as an acceptance of defeat, but as a strategic move to navigate closer to success. Our quest is punctuated by **iterative hypothesis testing**--a cycle of learning that shapes the evolution of our solutions.
+<span class="blog-highlight blog-highlight--agile">Agile</span>, in its essence, is about exploration and adaptation. It's about setting out to the sea with the knowledge that the winds may change, but with a framework that allows you to adjust your sails accordingly. At Vortexa, we've embraced this spirit of 'failing fast' not as an acceptance of defeat, but as a strategic move to navigate closer to success. Our quest is punctuated by **iterative hypothesis testing**--a cycle of learning that shapes the evolution of our solutions.
 
 ## The Craft of Deployment in Unsteady Waters
 When it comes to deploying machine learning models, the complexities can be as daunting. Reproducibility, versioning, and developmental architecture are the beacons that guide us, ensuring that our journey through the deployment phase is a robust process, governed by traceability and validation. We don't just launch our models; we nurture them through continuous monitoring, adjusting for the inevitable model drift, much like a captain corrects for the sea's currents.

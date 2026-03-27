@@ -1,5 +1,6 @@
 ---
 title: A BREXIT NLP Dataset! 
+title_html: "A <span class='blog-title-accent blog-title-accent--eu'>BREXIT</span> NLP Dataset!"
 author: Christos Hadjinikolis
 layout: post
 og_image: assets/images/posts/2020/brexit-nlp-dataset/eu-brexit-classifier.png
@@ -9,7 +10,7 @@ themselves with what is happening in their country's political scenery.
 
 <span class="image center"><img src="{{ 'assets/images/posts/2020/brexit-nlp-dataset/eu-brexit-classifier.png' | relative_url }}" alt="BREXIT 2016" /></span>
  
-Regardless of whether you are into politics or not, it would be practically impossible to escape debating BREXIT back 
+Regardless of whether you are into politics or not, it would be practically impossible to escape debating <span class="blog-highlight blog-highlight--eu">BREXIT</span> back 
 in the summer of 2016. At the time, I had just been hired by Data Reply UK and the company's annual XChange conference was
 around the corner.
 
@@ -33,7 +34,7 @@ use the tweets of the people that one follows. This draws from social science an
 > "...you are likely to be ideologically aligned with the positions of your peers [or of those you follow on twitter ;)]!"
 
 ## The dataset
-In order to be able to label tweets, I had to develop an NLP ML model. To do so, I needed a relatively 
+In order to be able to label tweets, I had to develop an <span class="blog-highlight blog-highlight--eu">NLP</span> ML model. To do so, I needed a relatively 
 big corpus of labelled tweets. 
 
 I turned to an [article by BBC](https://www.bbc.com/news/uk-politics-eu-referendum-35616946) 
