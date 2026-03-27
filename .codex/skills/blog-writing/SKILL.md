@@ -26,15 +26,16 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
 8. When source material exists (slides, notes, old reports, evaluations), mine it for concrete operational signals rather than just restating conclusions.
 9. If visuals would genuinely improve a post, prefer tasteful supplied imagery or carefully chosen extracted assets that support the mood and topic without overwhelming the writing.
 10. When a post is ready for distribution, prepare companion copy for X and LinkedIn by default.
-11. Treat Medium and Substack as manual syndication targets unless the platform's official API situation clearly supports durable automation.
-12. Every new post should include a concise, visible summary block near the top presented as an "At A Glance" section:
+11. When the user asks to publish or announce a post, generate the X and LinkedIn copy first, then use the repo's local social scripts if credentials are configured.
+12. Treat Medium and Substack as manual syndication targets unless the platform's official API situation clearly supports durable automation.
+13. Every new post should include a concise, visible summary block near the top presented as an "At A Glance" section:
   - `tldr_why_read`
   - `tldr_persona`
   - `tldr_learn`
   - `tldr_takeaways`
-13. Every new post should include `description` and `seo_keywords` front matter so the page has useful search metadata without resorting to hidden keyword stuffing.
-14. For framework/platform posts, put the real adoption driver near the top and, when helpful, include a concrete next-step path such as a starter archetype, template, or agent prompt.
-15. For comparison posts, include the author's real bias or prior preference when it matters, then show what experience changed or refined about that view.
+14. Every new post should include `description` and `seo_keywords` front matter so the page has useful search metadata without resorting to hidden keyword stuffing.
+15. For framework/platform posts, put the real adoption driver near the top and, when helpful, include a concrete next-step path such as a starter archetype, template, or agent prompt.
+16. For comparison posts, include the author's real bias or prior preference when it matters, then show what experience changed or refined about that view.
 
 ## Output Rules
 
@@ -79,10 +80,15 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
   - if a diagram is used, it should be simple and genuinely necessary
   - avoid over-designed synthetic graphics that distract from the prose
   - when the user supplies images, prefer choosing the best ones and integrating them cleanly
+- When preparing social distribution:
+  - LinkedIn copy should open with the production pain, tension, or contrarian lesson, not a flat summary
+  - the first 1 to 2 lines should earn attention quickly and make the value of clicking obvious
+  - if the post will be shared as a link card, prefer a PNG or JPEG `og_image` over SVG and make sure the page has a real social preview image, not just an on-page decorative graphic
 - Avoid hype, startup marketing language, and generic AI thought leadership tone.
 - Do not publish internal instructions or quote them into the post.
 - For social distribution:
   - generate a short X version and a fuller LinkedIn version when useful
+  - when the user says to publish, use the local repo scripts after generating the copy if credentials are present
   - keep Medium and Substack copy reusable, but do not assume direct API publishing exists
   - use the repo's social scripts when they fit the task and credentials are configured
 

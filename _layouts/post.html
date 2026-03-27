@@ -18,6 +18,19 @@ layout: default
 	  <div class="container reading-body">
 	    {%- include post_tldr.html post=page -%}
 	    {{- content -}}
+		{% if page.linkedin_post_url %}
+		<div class="post-social-card">
+			<p class="post-social-card__eyebrow">Continue The Discussion</p>
+			<h3>Discuss This Post On LinkedIn</h3>
+			<p>This article now has a live LinkedIn thread. You can read the public discussion inline here or open it directly on LinkedIn.</p>
+			{% if page.linkedin_embed_url %}
+			<div class="post-social-card__embed">
+				<iframe src="{{ page.linkedin_embed_url }}" height="618" width="504" frameborder="0" allowfullscreen title="Embedded LinkedIn discussion"></iframe>
+			</div>
+			{% endif %}
+			<p><a href="{{ page.linkedin_post_url }}" class="button" target="_blank" rel="noopener noreferrer">Open The LinkedIn Post</a></p>
+		</div>
+		{% endif %}
 	  </div>
 	</article>
 </div>

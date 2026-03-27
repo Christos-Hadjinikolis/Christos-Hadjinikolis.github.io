@@ -3,7 +3,10 @@ title: "PyFlink In 2026: Better Than Its Reputation, Still Not Frictionless"
 title_html: "<span class='blog-title-accent blog-title-accent--python'>Py</span><span class='blog-title-accent blog-title-accent--flink'>Flink</span> In 2026: Better Than Its Reputation, Still Not Frictionless"
 author: Christos Hadjinikolis
 layout: post
-og_image: assets/images/posts/2026/pyflink-2026-og.svg
+og_image: assets/images/posts/2026/pyflink-pros-cons-in-2026/pyflink-python-runtime.png
+og_image_alt: "PyFlink rendered as a Python-versus-runtime tension image, emphasizing the split between Python-native ML logic and a JVM-first streaming engine."
+linkedin_post_url: "https://www.linkedin.com/feed/update/urn:li:share:7443429221366128640/"
+linkedin_embed_url: "https://www.linkedin.com/embed/feed/update/urn:li:share:7443429221366128640?collapsed=1"
 description: "Why PyFlink becomes attractive once Python training and Java prediction start drifting apart, and where the JVM/runtime boundary still costs you."
 seo_keywords: ["PyFlink", "Apache Flink", "Python streaming", "ONNX", "streaming pipelines"]
 tldr_why_read: 'Read this if your team trains in <span class="blog-highlight blog-highlight--python">Python</span>, predicts in <span class="blog-highlight blog-highlight--java">Java</span>, and keeps paying for that split in latency, feature drift, and debugging time.'

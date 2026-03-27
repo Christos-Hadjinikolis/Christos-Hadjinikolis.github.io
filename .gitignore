@@ -125,10 +125,10 @@ _site/
 /tmp/
 /wip/
 
-# Used by dotenv library to load environment variables.
+# Used by dotenv-style local environment loading.
 .env
-.env
-!.env
+.env.*
+!.env.example
 
 # Ignore Byebug command history file.
 .byebug_history

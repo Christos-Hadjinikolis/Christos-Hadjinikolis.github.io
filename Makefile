@@ -10,7 +10,7 @@ PORT ?= 4000
 
 .DEFAULT_GOAL := help
 
-.PHONY: help check install serve build audit clean doctor social-x social-linkedin install-hooks remove-hooks
+.PHONY: help check install serve build audit clean doctor social-x social-linkedin linkedin-auth-url linkedin-exchange-token linkedin-whoami install-hooks remove-hooks
 
 help:
 	@echo "Available targets:"
@@ -24,6 +24,9 @@ help:
 	@echo "  make remove-hooks  - remove hooks installed by this repo"
 	@echo "  make social-x ARGS='--text \"...\"'          - publish a post to X"
 	@echo "  make social-linkedin ARGS='--text \"...\"'   - publish a post to LinkedIn"
+	@echo "  make linkedin-auth-url                       - print the LinkedIn OAuth URL"
+	@echo "  make linkedin-exchange-token ARGS='--code ... --write-env' - exchange a LinkedIn auth code for a token"
+	@echo "  make linkedin-whoami ARGS='--write-env'      - resolve and store the LinkedIn author URN"
 
 check:
 	@command -v ruby >/dev/null || { echo "Ruby is not installed or not on PATH."; exit 1; }
@@ -69,6 +72,15 @@ social-x:
 
 social-linkedin:
 	@python3 scripts/social/post_linkedin.py $(ARGS)
+
+linkedin-auth-url:
+	@python3 scripts/social/linkedin_oauth.py auth-url
+
+linkedin-exchange-token:
+	@python3 scripts/social/linkedin_oauth.py exchange-code $(ARGS)
+
+linkedin-whoami:
+	@python3 scripts/social/linkedin_oauth.py whoami $(ARGS)
 
 install-hooks:
 	@bash scripts/local_setup/setup-hooks.sh install

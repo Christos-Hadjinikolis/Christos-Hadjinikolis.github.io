@@ -4,6 +4,7 @@ import json
 import os
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 
 
@@ -21,12 +22,16 @@ def load_dotenv(path=".env"):
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Publish a post to LinkedIn via the Posts API.")
-    parser.add_argument("--text", required=True, help="Post commentary text.")
+    parser.add_argument("--delete-post-urn", help="Delete an existing LinkedIn post/share URN instead of creating one.")
+    parser.add_argument("--text", help="Post commentary text.")
     parser.add_argument("--article-url", help="Optional article URL for an article-style post.")
     parser.add_argument("--title", help="Article title when --article-url is used.")
     parser.add_argument("--description", help="Article description when --article-url is used.")
     parser.add_argument("--thumbnail-urn", help="Optional LinkedIn image URN for article thumbnail.")
-    return parser.parse_args()
+    args = parser.parse_args()
+    if not args.delete_post_urn and not args.text:
+        parser.error("--text is required unless --delete-post-urn is used.")
+    return args
 
 
 def build_payload(args, author_urn):
@@ -74,6 +79,28 @@ def main():
         print("Missing LINKEDIN_VERSION in .env or environment.", file=sys.stderr)
         return 1
 
+    if args.delete_post_urn:
+        encoded_urn = urllib.parse.quote(args.delete_post_urn.strip(), safe="")
+        request = urllib.request.Request(
+            f"https://api.linkedin.com/rest/posts/{encoded_urn}",
+            method="DELETE",
+            headers={
+                "Authorization": f"Bearer {token}",
+                "Linkedin-Version": version,
+                "X-Restli-Protocol-Version": "2.0.0",
+                "X-RestLi-Method": "DELETE",
+            },
+        )
+
+        try:
+            with urllib.request.urlopen(request) as response:
+                print(json.dumps({"status": response.status, "deleted": args.delete_post_urn.strip()}))
+                return 0
+        except urllib.error.HTTPError as exc:
+            error_body = exc.read().decode("utf-8", errors="replace")
+            print(error_body, file=sys.stderr)
+            return exc.code or 1
+
     payload = json.dumps(build_payload(args, author_urn)).encode("utf-8")
     request = urllib.request.Request(
         "https://api.linkedin.com/rest/posts",
@@ -90,7 +117,13 @@ def main():
     try:
         with urllib.request.urlopen(request) as response:
             body = response.read().decode("utf-8")
-            print(body)
+            result = {
+                "status": response.status,
+                "x_restli_id": response.headers.get("x-restli-id"),
+                "location": response.headers.get("location"),
+                "body": body,
+            }
+            print(json.dumps(result))
             return 0
     except urllib.error.HTTPError as exc:
         error_body = exc.read().decode("utf-8", errors="replace")

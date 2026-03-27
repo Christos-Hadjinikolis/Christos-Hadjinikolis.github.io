@@ -16,7 +16,13 @@
   {%- assign _page_title = _page_title | escape -%}
   {%- assign _page_description = page.description | default: site.description | default: _page_title | escape -%}
   {%- assign _og_image = page.og_image | default: site.avatar_image | default: site.avatar -%}
-  {%- assign _og_type = page.og_type | default: 'website' -%}
+  {%- if page.og_type -%}
+    {%- assign _og_type = page.og_type -%}
+  {%- elsif page.layout == 'post' -%}
+    {%- assign _og_type = 'article' -%}
+  {%- else -%}
+    {%- assign _og_type = 'website' -%}
+  {%- endif -%}
 
   <title>{{- _page_title -}}</title>
   <meta name="description" content="{{- _page_description -}}" />
@@ -29,9 +35,15 @@
   <meta property="og:title" content="{{- _page_title -}}" />
   <meta property="og:type" content="{{- _og_type -}}" />
   <meta property="og:image" content="{{- _og_image | absolute_url -}}" />
+  {%- if page.og_image_alt -%}<meta property="og:image:alt" content="{{- page.og_image_alt | escape -}}" />{%- endif -%}
   <meta property="og:url" content="{{- page.url | absolute_url -}}" />
   <meta property="og:site_name" content="{{- site.title | escape -}}" />
   <meta property="og:description" content="{{- _page_description -}}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{- _page_title -}}" />
+  <meta name="twitter:description" content="{{- _page_description -}}" />
+  <meta name="twitter:image" content="{{- _og_image | absolute_url -}}" />
+  {%- if page.og_image_alt -%}<meta name="twitter:image:alt" content="{{- page.og_image_alt | escape -}}" />{%- endif -%}
   {%- if page.seo_keywords and page.seo_keywords[0] -%}
     {%- for _keyword in page.seo_keywords -%}
   <meta property="article:tag" content="{{- _keyword | escape -}}" />
