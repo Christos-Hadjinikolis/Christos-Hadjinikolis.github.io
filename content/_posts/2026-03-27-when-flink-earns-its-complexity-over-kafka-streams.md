@@ -9,7 +9,7 @@ I have had to think about this decision more than once in <span class="blog-high
 
 That distinction matters, because most framework comparisons are not very useful in practice. They compare APIs, abstractions, and feature lists. Production compares different things: recovery paths, state pressure, rescaling pain, operational visibility, and how much of your week gets spent dealing with the system after the happy-path demo is long over.
 
-After revisiting an older internal evaluation I had written on exactly this problem, my view is still the same:
+After revisiting an older review I had written on exactly this problem, my view is still the same:
 
 the useful question is not whether <span class="blog-highlight blog-highlight--flink">Flink</span> is "better" than <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span>.
 
@@ -38,7 +38,7 @@ If it is the latter, Flink starts to justify itself quickly.
 
 ## The Smell Test I Actually Use
 
-One line from that older evaluation still feels right to me: *if scaling processing means touching brokers, partition counts, or rebalance plans before it means touching your business logic, the system is already telling you that the runtime boundary is wrong.*
+One line from that older review still feels right to me: *if scaling processing means touching brokers, partition counts, or rebalance plans before it means touching your business logic, the system is already telling you that the runtime boundary is wrong.*
 
 That smell tends to show up as a cluster of recurring symptoms:
 

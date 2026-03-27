@@ -5,7 +5,7 @@ author: Christos Hadjinikolis
 layout: post
 og_image: assets/images/posts/2026/pyflink-2026-og.svg
 ---
-I went back to an older <span class="blog-highlight blog-highlight--flink">PyFlink</span> evaluation recently because I did not want to turn one painful setup phase into a permanent opinion.
+I went back to an older <span class="blog-highlight blog-highlight--flink">PyFlink</span> review recently because I did not want to turn one painful setup phase into a permanent opinion.
 
 The original material was full of the kinds of details that tend to harden into folklore: Java version pinning, Python version pinning, extra JARs, container workarounds, and the seductive promise that native <span class="blog-highlight blog-highlight--python">Python</span> model execution would make everything simpler.
 
@@ -62,7 +62,7 @@ I would still be careful not to confuse "documented" with "equally frictionless 
 
 ### 3. Debugging And Packaging Are Better Acknowledged
 
-The older evaluation spent a lot of energy on setup, environment pain, and debugging awkwardness.
+The older review spent a lot of energy on setup, environment pain, and debugging awkwardness.
 
 Those pains have not disappeared, but the current docs are more honest about them. They cover packaging Python environments, adding JARs, client-side versus TaskManager-side logging, local debugging, remote debugging, and profiling:
 
@@ -131,7 +131,7 @@ You have to think about:
 * how dependencies are shipped
 * JAR dependencies for connectors or Java-side integration
 
-The older evaluation made this painfully concrete. Getting local execution into a sane state meant lining up:
+That earlier review made this painfully concrete. Getting local execution into a sane state meant lining up:
 
 * the right Java version
 * the right <span class="blog-highlight blog-highlight--python">Python</span> version
@@ -161,7 +161,7 @@ Even the current Kafka connector docs explicitly talk about bringing connector d
 
 That is not a deal-breaker. It is just not the same experience as working inside a native Python framework whose extension model is Python all the way down.
 
-It also shows up in deployment. In the older evaluation, the easiest workable path for local standalone deployment was not "package a Python app and run it." It was closer to:
+It also shows up in deployment. In that earlier review, the easiest workable path for local standalone deployment was not "package a Python app and run it." It was closer to:
 
 * start from a vanilla <span class="blog-highlight blog-highlight--flink">Flink</span> image
 * add the <span class="blog-highlight blog-highlight--python">Python</span> dependencies
@@ -189,7 +189,7 @@ This is not PyFlink being uniquely bad. It is just the cost of the abstraction b
 
 ### 4. Native Python Models Are Not An Automatic Architectural Win
 
-This was one of the more useful parts of the old evaluation, because it is exactly the kind of point people skip when they are trying to justify a new stack.
+This was one of the more useful parts of the earlier review, because it is exactly the kind of point people skip when they are trying to justify a new stack.
 
 Yes, being able to interact with model code directly inside a <span class="blog-highlight blog-highlight--flink">PyFlink</span> job is a real plus. It can simplify some flows and avoid a network hop.
 
