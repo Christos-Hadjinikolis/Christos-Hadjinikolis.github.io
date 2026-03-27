@@ -21,9 +21,9 @@ But the core trade-off has not disappeared.
 
 That is the part people need to hold in their head at the same time as the improvements.
 
-<figure class="blog-figure blog-figure--compact">
-  <img src="{{ 'assets/images/posts/2026/pyflink-pros-cons-in-2026/pyflink-python-runtime.png' | relative_url }}" alt="A surreal image combining Flink and Python imagery." />
-  <figcaption class="blog-figure__caption">The attraction is obvious: bring <span class="blog-highlight blog-highlight--python">Python</span> closer to the streaming system. The catch is that the runtime underneath is still very much <span class="blog-highlight blog-highlight--flink">Flink</span>.</figcaption>
+<figure class="blog-figure blog-figure--wide">
+  <img src="{{ 'assets/images/posts/2026/pyflink-pros-cons-in-2026/pyflink-python-runtime.png' | relative_url }}" alt="A surreal image of a Flink squirrel facing a Python serpent across a glowing split landscape." />
+  <figcaption class="blog-figure__caption">The promise of <span class="blog-highlight blog-highlight--python">Python</span> is real, but so is the boundary it introduces: expressive application logic on one side, a demanding distributed runtime on the other.</figcaption>
 </figure>
 
 ## What Has Improved Since The Older Evaluation

@@ -18,8 +18,8 @@ The useful question is when your streaming problem stops being an application co
 That is the line <span class="blog-highlight blog-highlight--flink">Flink</span> crosses far better than <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span>, and it is the only comparison I really care about.
 
 <figure class="blog-figure blog-figure--wide">
-  <img src="{{ 'assets/images/posts/2026/when-flink-earns-its-complexity-over-kafka-streams/flink-highway.png' | relative_url }}" alt="An Apache Flink squirrel racing down an open highway." />
-  <figcaption class="blog-figure__caption">This post is really about when the road ahead stops looking like a small application concern and starts looking like a runtime you need to operate deliberately.</figcaption>
+  <img src="{{ 'assets/images/posts/2026/when-flink-earns-its-complexity-over-kafka-streams/flink-highway.png' | relative_url }}" alt="A luminous Flink squirrel facing a contemplative Kafka figure across a city split between cool and warm tones." />
+  <figcaption class="blog-figure__caption">This is the real comparison: not mascot versus mascot, but one operating model confronting another once the system starts pushing back.</figcaption>
 </figure>
 
 ## The Wrong Way To Compare Them
