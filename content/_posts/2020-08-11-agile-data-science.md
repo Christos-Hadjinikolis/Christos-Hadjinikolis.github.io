@@ -6,10 +6,10 @@ layout: post
 og_image: assets/images/posts/2020/agile-data-science/iunera-logo-shadow.png
 description: "Why agile matters in data science work, where experimentation meets delivery, and how teams can move from prototypes to value."
 seo_keywords: ["agile data science", "machine learning delivery", "data science teamwork", "experimentation", "ml engineering"]
-tldr_why_read: "Read this if you want a more grounded view of what agile can actually mean in data science work."
-tldr_persona: "Data scientists and ML engineers trying to move from prototype work into production delivery without losing iteration speed."
-tldr_learn: "Where agile helps, where data science work differs from normal software delivery, and why iteration matters."
-tldr_takeaways: ["Experimentation needs structure", "Delivery and learning loops must coexist", "Agile in ML is about adaptation, not rituals"]
+tldr_why_read: "Read this if you want a more grounded view of what <span class=\"blog-highlight blog-highlight--agile\">Agile</span> can actually mean in data science work."
+tldr_persona: "Data scientists and <span class=\"blog-highlight blog-highlight--ml\">ML</span> engineers trying to move from prototype work into production delivery without losing iteration speed."
+tldr_learn: "Where <span class=\"blog-highlight blog-highlight--agile\">Agile</span> helps, where data science work differs from normal software delivery, and why iteration matters."
+tldr_takeaways: ["Experimentation needs structure", "Delivery and learning loops must coexist", "<span class=\"blog-highlight blog-highlight--agile\">Agile</span> in <span class=\"blog-highlight blog-highlight--ml\">ML</span> is about adaptation, not rituals"]
 ---
 Re-posting from [https://www.iunera.com/](https://www.iunera.com/kraken/big-data-science-strategy/the-agile-approach-in-data-science-explained-by-an-ml-expert/)
 
@@ -17,7 +17,7 @@ Around two weeks ago I was approached by [Dr. Tim Frey](https://www.linkedin.com
 
 > Hi Christos, 
 > We met at the mind mastering machines conference in London.
-> We operate a company blog (https://iunera.com/kraken ) and one of our writers wrote about agile in Data Science. 
+> We operate a company blog (https://iunera.com/kraken ) and one of our writers wrote about *agile* in Data Science. 
 > I liked your talk two years ago and I thought she can approach you to ask a few questions like kind of an in-article 
 > interview with an expert. 
 > Hope that is fine with you. Would be super glad to get your insights.
@@ -37,12 +37,12 @@ I didn't have a clue about what that meant in reality, but I was about to find o
 you with an engineer and you both can get started on it". So we did! 
 
 This is basically the story about how I was exposed to software engineering and the <span class="blog-highlight blog-highlight--agile">Agile</span> way of working&ndash;about how I was converted into 
-an <span class="blog-highlight blog-highlight--graph">ML Engineer</span>. Two years later I decided to take my learnings from this experience and share it with my community, and so I did at **mCubed** London in 2018:
+an <span class="blog-highlight blog-highlight--ml">ML Engineer</span>. Two years later I decided to take my learnings from this experience and share it with my community, and so I did at **mCubed** London in 2018:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nRsqFrutfSg" title="Agile Data Science talk" frameborder="0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 That's where I also met Tim. Turns out that a year and half later a colleague of Tim's ([Dhanhyaashri Mahendran](https://www.linkedin.com/in/dhanhyaashri-mahendran/)) was doing a bit iof research on 
-"Doing Data Science the Agile way" and Tim suggested that she gets in touch with me to ask me some questions, which I welcomed.       
+*"Doing Data Science the <span class="blog-highlight blog-highlight--agile">Agile</span> way"* and Tim suggested that she gets in touch with me to ask me some questions, which I welcomed.       
                                                
 ## Some very interesting questions were thrown my way...
 I really liked the questions that Dhanhyaashri had prepared. She had obviously done her research. I did my best to respond and two weeks later 
@@ -99,7 +99,6 @@ See you soon!
 
 <p><a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml"><img src="//feedburner.google.com/fb/images/pub/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/></a>&nbsp;<a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml">Register to the ML-Affairs RSS Feed</a></p>
 
-<blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">I was recently interviewed by <a href="https://t.co/t4PaVxz4Y2">https://t.co/t4PaVxz4Y2</a> on &quot;doing data science the agile way&quot;. You can read their blog here: <a href="https://t.co/zkI9zNoEAR">https://t.co/zkI9zNoEAR</a></p>&mdash; Christos Hadjinikoli (@chatzinikolis) <a href="https://twitter.com/chatzinikolis/status/1293217047472734213?ref_src=twsrc%5Etfw">August 11, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
          

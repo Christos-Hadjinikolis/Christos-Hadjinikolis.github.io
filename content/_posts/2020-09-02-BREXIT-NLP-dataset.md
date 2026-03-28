@@ -6,10 +6,10 @@ layout: post
 og_image: assets/images/posts/2020/brexit-nlp-dataset/eu-brexit-classifier.png
 description: "How I built a BREXIT-related NLP dataset and why real-world labeling and collection choices matter in applied NLP."
 seo_keywords: ["BREXIT NLP", "NLP dataset", "text classification", "twitter data", "applied machine learning"]
-tldr_why_read: "Useful if you care about how topical NLP datasets get assembled outside clean benchmark settings."
-tldr_persona: "Practitioners building applied NLP datasets from messy real-world sources rather than benchmark-ready corpora."
-tldr_learn: "How the dataset idea emerged, why labeling is the hard part, and what makes a practical NLP dataset usable."
-tldr_takeaways: ["Real data collection is messy", "Labeling strategy determines downstream value", "Applied NLP starts with better datasets, not just models"]
+tldr_why_read: "Useful if you care about how topical <span class=\"blog-highlight blog-highlight--nlp\">NLP</span> datasets get assembled outside clean benchmark settings."
+tldr_persona: "Practitioners building applied <span class=\"blog-highlight blog-highlight--nlp\">NLP</span> datasets from messy real-world sources rather than benchmark-ready corpora."
+tldr_learn: "How the dataset idea emerged, why labeling is the hard part, and what makes a practical <span class=\"blog-highlight blog-highlight--nlp\">NLP</span> dataset usable."
+tldr_takeaways: ["Real data collection is messy", "Labeling strategy determines downstream value", "Applied <span class=\"blog-highlight blog-highlight--nlp\">NLP</span> starts with better datasets, not just models"]
 ---
 So here is the thing... I love discussing politics; I think that everyone should, at least occasionally, bother 
 themselves with what is happening in their country's political scenery. 
@@ -26,12 +26,12 @@ peoples' political stance by means of their social activity.
 
 ## The idea
 The idea was simple:
-> Provided one's twitter @hanndle, try to infer their political views on BREXIT.
+> Provided one's twitter @handle, try to infer their political views on <span class="blog-highlight blog-highlight--eu">BREXIT</span>.
 
 The original approach was to:
 
 1. Collect people's tweets through the twitter API;
-2. Label tweets related to BREXIT as either PRO or CON;
+2. Label tweets related to <span class="blog-highlight blog-highlight--eu">BREXIT</span> as either PRO or CON;
 3. Calculate a ratio between the 2 and produce a number that would represent their political stance.
 
 After experimenting a bit, I figured out that using one's own tweets would not be enough. Many twitter users don't 
@@ -40,7 +40,7 @@ use the tweets of the people that one follows. This draws from social science an
 > "...you are likely to be ideologically aligned with the positions of your peers [or of those you follow on twitter ;)]!"
 
 ## The dataset
-In order to be able to label tweets, I had to develop an <span class="blog-highlight blog-highlight--eu">NLP</span> ML model. To do so, I needed a relatively 
+In order to be able to label tweets, I had to develop an <span class="blog-highlight blog-highlight--nlp">NLP</span> <span class="blog-highlight blog-highlight--ml">ML</span> model. To do so, I needed a relatively 
 big corpus of labelled tweets. 
 
 I turned to an [article by BBC](https://www.bbc.com/news/uk-politics-eu-referendum-35616946) 
@@ -77,5 +77,4 @@ See you soon!
 
 <p><a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml"><img src="//feedburner.google.com/fb/images/pub/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/></a>&nbsp;<a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml">Register to the ML-Affairs RSS Feed</a></p>
 
-<blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">Just published a BREXIT related dataset on <a href="https://twitter.com/KaggleDatasets?ref_src=twsrc%5Etfw">@KaggleDatasets</a> that can be used for NLP and model training. Read more about it in my latest blog: <a href="https://t.co/Bt7pPw1Tbv">https://t.co/Bt7pPw1Tbv</a></p>&mdash; Christos Hadjinikoli (@chatzinikolis) <a href="https://twitter.com/chatzinikolis/status/1301831997409689601?ref_src=twsrc%5Etfw">September 4, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   

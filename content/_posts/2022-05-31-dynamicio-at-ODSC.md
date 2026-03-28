@@ -6,24 +6,24 @@ layout: post
 og_image: assets/images/posts/2022/dynamicio-at-odsc/2022-06-01-dynamicio.png
 description: "Why ML pipelines need I/O abstraction, and how wrapping file and storage concerns improves maintainability, testing, and delivery."
 seo_keywords: ["MLOps", "I/O abstraction", "dynamicio", "ML pipelines", "dependency inversion"]
-tldr_why_read: "Read this if your ML codebase keeps getting buried under storage, schema, and environment-specific glue code."
-tldr_persona: "ML engineers and platform builders whose pipeline code is dominated by file, storage, and schema handling instead of core logic."
-tldr_learn: "Why I/O concerns overwhelm ML pipeline code, and why abstraction helps more than another pile of helpers."
-tldr_takeaways: ["I/O logic should not dominate business logic", "Abstraction improves testing and portability", "Cleaner boundaries make ML systems easier to maintain"]
+tldr_why_read: "Read this if your <span class=\"blog-highlight blog-highlight--ml\">ML</span> codebase keeps getting buried under storage, schema, and environment-specific glue code."
+tldr_persona: "<span class=\"blog-highlight blog-highlight--ml\">ML</span> engineers and platform builders whose pipeline code is dominated by file, storage, and schema handling instead of core logic."
+tldr_learn: "Why I/O concerns overwhelm <span class=\"blog-highlight blog-highlight--ml\">ML</span> pipeline code, and why abstraction helps more than another pile of helpers."
+tldr_takeaways: ["I/O logic should not dominate business logic", "Abstraction improves testing and portability", "Cleaner boundaries make <span class=\"blog-highlight blog-highlight--ml\">ML</span> systems easier to maintain"]
 ---
-If you call yourself an <span class="blog-highlight blog-highlight--graph">ML-Engineer</span> then you 've been there--you 've seen this before. To productionise your ml-pipeline; well, that’s surely a challenge.
+If you call yourself an <span class="blog-highlight blog-highlight--ml">ML Engineer</span> then you 've been there--you 've seen this before. To productionise your <span class="blog-highlight blog-highlight--ml">ML</span> pipeline; well, that’s surely a challenge.
 
 <span class="image center"><img src="{{ 'assets/images/posts/2022/dynamicio-at-odsc/2022-06-01-dynamicio.png' | relative_url }}" alt="dynamic(i/o)" /></span>
 
 I have worked for many years as a Data Science consultant, and I can surely confirm the statement that [“...more that 87% of Data Science projects never make it to production”](https://venturebeat.com/2019/07/19/why-do-87-of-data-science-projects-never-make-it-into-production/).
-There is a reason why the first rule of doing Machine Learning is to really be sure you need to do ML! Surely, many reasons play into this challenge: 
+There is a reason why the first rule of doing <span class="blog-highlight blog-highlight--ml">Machine Learning</span> is to really be sure you need to do <span class="blog-highlight blog-highlight--ml">ML</span>! Surely, many reasons play into this challenge: 
 
 * lack of the right leadership; 
 * no or limited access to data in siloed organisations;
 * lack of the necessary tooling or infrastructure support, and even;
 * lack of a research-driven culture. 
 
-But there is one more beast to be tamed out there; the gap between Data Science and ML-Engineering. And this is a gap you can perceive both in terms of the two practitioners in each 
+But there is one more beast to be tamed out there; the gap between Data Science and <span class="blog-highlight blog-highlight--ml">ML Engineering</span>. And this is a gap you can perceive both in terms of the two practitioners in each 
 field of work--data scientists and SWE--but also in terms of literally getting from a prototype to a production ready ML pipeline. 
 
 <span class="image center"><img src="{{ 'assets/images/posts/2022/dynamicio-at-odsc/xkcd-data-answers.png' | relative_url }}" alt="xkcd - data answers" /></span>
@@ -35,7 +35,7 @@ are still trying to standardise how we work in terms of best tooling or practice
 
 In many cases, organisations are forced to come up with their own ways of working to accommodate the unique challenges of their custom use-cases. Then again, it all comes down to the requirements of a project. 
 [Netflix has streamlined the process of putting python notebooks into production using papermil](https://netflixtechblog.com/scheduling-notebooks-348e6c14cfd6). 
-Others, go as far as to standardise the whole ML-Engineering process using tools like <span class="blog-highlight blog-highlight--graph">Airflow</span> or <span class="blog-highlight blog-highlight--graph">Kubeflow</span>, relying on AI pipelines (on GCP) or <span class="blog-highlight blog-highlight--aws">SageMaker</span> (on AWS), etc.
+Others, go as far as to standardise the whole <span class="blog-highlight blog-highlight--ml">ML Engineering</span> process using tools like <span class="blog-highlight blog-highlight--graph">Airflow</span> or <span class="blog-highlight blog-highlight--graph">Kubeflow</span>, relying on AI pipelines (on GCP) or <span class="blog-highlight blog-highlight--aws">SageMaker</span> (on AWS), etc.
 
 ## So what do we do...?
 At Vortexa, we are heavy users of Airflow and have recently embarked into a journey to include Kubeflow into our tech stack. 
@@ -74,7 +74,7 @@ work to generate a new valuable feature for your model, and vice-versa. Abstract
 As David Wheeler said:
 > All problems in computer science can be solved by adding a layer of indirection.
 
-## What is `dynamicio` then?
+## What is <span class="blog-highlight blog-highlight--dynamicio">`dynamicio`</span> then?
 Wouldn't it be great if you could:
 * have an abstraction that encapsulates all I/O logic;
 * be able to seamlessly handle reading or writing from and to different resource types or data types;
@@ -90,7 +90,6 @@ Come and learn about how its implementation and adoption has helped us go beyond
 
 Remember to like my post and re-share it (if you really liked it)!
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Excited to be presenting at this year&#39;s <a href="https://twitter.com/hashtag/ODSCEurope?src=hash&amp;ref_src=twsrc%5Etfw">#ODSCEurope</a> on dynamicio, a brand new pandas I/O wrapper, which we intend to open source soon. read my latest blog to find out more: <a href="https://t.co/ynRvpGFVxJ">https://t.co/ynRvpGFVxJ</a> <a href="https://t.co/IkOQVC55dh">pic.twitter.com/IkOQVC55dh</a></p>&mdash; Christos Hadjinikoli (@chatzinikolis) <a href="https://twitter.com/chatzinikolis/status/1533033285433053184?ref_src=twsrc%5Etfw">June 4, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 See you soon!
 

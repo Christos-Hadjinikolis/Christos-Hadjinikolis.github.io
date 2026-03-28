@@ -6,13 +6,13 @@ layout: post
 og_image: assets/images/posts/2021/python-envs/python_environment_2x.png
 description: "A practical guide to Python environments on macOS, including system Python pitfalls and the setup patterns that actually work."
 seo_keywords: ["python environments", "macOS python", "pyenv", "virtualenv", "python setup"]
-tldr_why_read: "A practical post for anyone who is still losing time to Python setup confusion on macOS."
-tldr_persona: "macOS users and Python developers who are tired of not knowing which interpreter or environment they are actually using."
-tldr_learn: "Which Python environment tools matter, where macOS gets in the way, and how to build a sane local setup."
-tldr_takeaways: ["System Python is rarely what you want", "Environment management is a productivity issue", "Clarity beats collecting tools"]
+tldr_why_read: "A practical post for anyone who is still losing time to <span class=\"blog-highlight blog-highlight--python\">Python</span> setup confusion on macOS."
+tldr_persona: "macOS users and <span class=\"blog-highlight blog-highlight--python\">Python</span> developers who are tired of not knowing which interpreter or environment they are actually using."
+tldr_learn: "Which <span class=\"blog-highlight blog-highlight--python\">Python</span> environment tools matter, where macOS gets in the way, and how to build a sane local setup."
+tldr_takeaways: ["System <span class=\"blog-highlight blog-highlight--python\">Python</span> is rarely what you want", "Environment management is a productivity issue", "Clarity beats collecting tools"]
 ---
-Configuring <span class="blog-highlight blog-highlight--python">python</span> on your machine for the first time is a definite headache for any software 
-engineer that decides to delve into the world of <span class="blog-highlight blog-highlight--python">python</span>. Doing it properly confuses a lot of 
+Configuring <span class="blog-highlight blog-highlight--python">Python</span> on your machine for the first time is a definite headache for any software 
+engineer that decides to delve into the world of <span class="blog-highlight blog-highlight--python">Python</span>. Doing it properly confuses a lot of 
 people and can prove to be very challenging. 
 
 <span class="image center"><img src="{{ 'assets/images/posts/2021/python-envs/python_environment_2x.png' | relative_url }}" alt="Python Envs" /></span>
@@ -20,8 +20,8 @@ people and can prove to be very challenging.
 It is often the case that many developers have numerous interpreters configured on their machines,
 without knowing where they live. 
 
-## Most common ways of setting up Python
-Firstly, there is a Python version that ships with macOS, but it is usually v2.7, which is not
+## Most common ways of setting up <span class="blog-highlight blog-highlight--python">Python</span>
+Firstly, there is a <span class="blog-highlight blog-highlight--python">Python</span> version that ships with macOS, but it is usually v2.7, which is not
 just out of date but also deprecated. 
 
 So, commonly, most users will download the latest Python release and move it to their `$PATH`
@@ -30,8 +30,8 @@ or use `brew install python3` (which does this for them).
 Both of these solutions can cause many problems that will not be evident straight away. The main 
 challenge, is usually not knowing, at any given time, what is the "default Python" that your system 
 is using. Ideally, this is something you shouldn't care about, but if you don't set up things 
-properly, you end up installing packages for the wrong environment or the wrong active python interpreter,
-un-intentionally created from the wrong python distribution and... well, you get the point 
+properly, you end up installing packages for the wrong environment or the wrong active <span class="blog-highlight blog-highlight--python">Python</span> interpreter,
+un-intentionally created from the wrong <span class="blog-highlight blog-highlight--python">Python</span> distribution and... well, you get the point 
 (...this is pretty much summed up in the [xkcd image](https://xkcd.com/1987/) above).
 
 To find out more details, read this excellent [December 2020, post](https://opensource.com/article/19/5/python-3-default-mac),
@@ -61,7 +61,7 @@ $ brew install pyenv
 ```
 
 We will now need `pyenv-virtualenv`. `pyenv-virtualenv` is a `pyenv` plugin that provides features
-to manage `virtualenvs` and `conda` environments for `Python` on `UNIX-like` systems. 
+to manage `virtualenvs` and `conda` environments for <span class="blog-highlight blog-highlight--python">Python</span> on `UNIX-like` systems. 
 ```shell
 $ brew install pyenv-virtualenv
 ```
@@ -106,7 +106,7 @@ Available versions:
 ...
   stackless-3.7.5
 ```
-You will see the full list of python distributions available for installation. 
+You will see the full list of <span class="blog-highlight blog-highlight--python">Python</span> distributions available for installation. 
 
 Choose the one you want and do, e.g. 3.9.0:
 ```shell
@@ -131,8 +131,8 @@ $ pyenv version
 ```
 
 ## Creating and managing virtual environments automatically
-This is a standard practice when working with `python`.  The idea is to keep different environments isolated.
-Each python environment can be associated to multiple projects, but it is generally better to just go for a 
+This is a standard practice when working with <span class="blog-highlight blog-highlight--python">Python</span>. The idea is to keep different environments isolated.
+Each <span class="blog-highlight blog-highlight--python">Python</span> environment can be associated to multiple projects, but it is generally better to just go for a 
 one to one mapping. 
 
 Why you say? Well, for starters, this helps you maintain your system clean by not installing system-wide libraries
@@ -349,5 +349,4 @@ See you soon!
 
 <p><a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml"><img src="//feedburner.google.com/fb/images/pub/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/></a>&nbsp;<a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml">Register to the ML-Affairs RSS Feed</a></p>   
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Here is my latest post on configuring `Python Envs`<a href="https://t.co/uaW70OrOyh">https://t.co/uaW70OrOyh</a></p>&mdash; Christos Hadjinikoli (@chatzinikolis) <a href="https://twitter.com/chatzinikolis/status/1361100382445912066?ref_src=twsrc%5Etfw">February 14, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  
    

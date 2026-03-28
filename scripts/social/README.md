@@ -120,7 +120,7 @@ Recommended workflow for blog-post announcements:
 
 1. Finish the post and make sure `og_image`, `description`, and share metadata are correct.
 2. Commit and push the site changes so the live URL is serving the correct preview metadata.
-3. Publish the LinkedIn/X announcement against the live URL.
+3. Publish the LinkedIn announcement against the live URL. If you intentionally want X as well, do that as an explicit extra step rather than the default path.
 4. If you want the LinkedIn thread embedded back into the article, add the `linkedin_post_url` / `linkedin_embed_url` after the post exists.
 5. Commit and push that embed/update as a second pass.
 

@@ -1,0 +1,10 @@
+{% if site.linkedin_company_id %}
+<div class="linkedin-company-follow">
+  <p class="linkedin-company-follow__label">Follow ML-Affairs On LinkedIn</p>
+  {% if site.linkedin_company_url %}
+  <p class="linkedin-company-follow__hint"><a href="{{ site.linkedin_company_url }}" target="_blank" rel="noopener noreferrer">Open the ML-Affairs page</a> and follow it directly, or use the LinkedIn widget below.</p>
+  {% endif %}
+  <script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+  <script type="IN/FollowCompany" data-id="{{ site.linkedin_company_id }}" data-counter="bottom"></script>
+</div>
+{% endif %}

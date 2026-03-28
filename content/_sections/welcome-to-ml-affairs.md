@@ -27,5 +27,7 @@ order: 5
 
   <p><a href="{{ site.linkedin_url }}" class="button linkedin-follow-button" target="_blank" rel="noopener noreferrer">Connect On LinkedIn</a></p>
 
+  {% include linkedin_company_follow.html %}
+
   <p><a href="{{ '/feed.xml' | relative_url }}" rel="alternate" type="application/rss+xml">Subscribe to the ML-Affairs RSS feed</a></p>
 </div>

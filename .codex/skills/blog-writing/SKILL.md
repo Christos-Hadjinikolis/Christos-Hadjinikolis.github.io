@@ -25,12 +25,12 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
 7. Prefer concrete examples and earned opinions over trend summaries or generic tutorials.
 8. When source material exists (slides, notes, old reports, evaluations), mine it for concrete operational signals rather than just restating conclusions.
 9. If visuals would genuinely improve a post, prefer tasteful supplied imagery or carefully chosen extracted assets that support the mood and topic without overwhelming the writing.
-10. When a post is ready for distribution, prepare companion copy for X and LinkedIn by default.
+10. When a post is ready for distribution, prepare companion copy for LinkedIn by default, and prepare X copy only when the user explicitly wants to use X.
 11. When the user asks to publish or announce a post, follow this order unless they explicitly want something different:
   - finalize the post body, title, description, `og_image`, and share metadata
   - verify the post builds cleanly and the share image is a real PNG/JPEG-style preview asset, not just an on-page decorative image
   - commit and push the site changes so the live URL has the correct metadata
-  - only then publish to LinkedIn/X using the live URL
+  - only then publish to LinkedIn using the live URL, and only add X if the user explicitly wants that channel
   - after the social post exists, add/embed the discussion link back into the article if desired
   - commit and push that embed/update as a second pass
 12. Treat Medium and Substack as manual syndication targets unless the platform's official API situation clearly supports durable automation.
@@ -50,6 +50,7 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
 - Use headings to structure arguments.
 - When the visual treatment of blog posts matters, prefer a plain `title` for metadata and a rendered `title_html` for the on-page/blog-index heading.
 - Use `description`, `seo_keywords`, and the four summary fields in front matter.
+- When revisiting older posts, bring them up to the same emphasis standard as the stronger recent posts: summary block, title treatment, opening tension, and central-term highlighting should feel curated rather than accidental.
 - Infer `tldr_persona` from the post itself. The persona is your job to identify from the pain, stakes, and likely reader, not something to leave generic.
 - Make the summary block earn its space:
   - `Why read` should communicate urgency or payoff
@@ -65,6 +66,7 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
 - Use visual emphasis sparingly and consistently:
   - reserve color accents for technologies, frameworks, and core concepts that are central to the post
   - if a technology, framework, or language is central to the post, treat it consistently across the whole piece: title, summary block, section headings, opening argument, key body paragraphs, and conclusion
+  - the archive matters too: when improving older posts, apply the same consistency standard instead of leaving legacy posts visually flat
   - central terms should usually use the repo's accent class in bold form, not drift between highlighted and plain text
   - use at most 1 to 2 colored terms in a paragraph
   - prefer bold or italics for emphasis before adding more color
@@ -94,7 +96,8 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
 - Avoid hype, startup marketing language, and generic AI thought leadership tone.
 - Do not publish internal instructions or quote them into the post.
 - For social distribution:
-  - generate a short X version and a fuller LinkedIn version when useful
+  - generate a fuller LinkedIn version by default
+  - generate an X version only when the user explicitly wants that channel
   - when the user says to publish, use the local repo scripts after generating the copy if credentials are present
   - keep Medium and Substack copy reusable, but do not assume direct API publishing exists
   - use the repo's social scripts when they fit the task and credentials are configured

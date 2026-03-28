@@ -799,6 +799,38 @@
 		transform: translateY(-1px);
 	}
 
+	.linkedin-company-follow {
+		margin: 1rem 0 0 0;
+	}
+
+	.linkedin-company-follow__label {
+		color: #0a66c2;
+		font-family: var(--font-sans-display);
+		font-size: 0.78rem !important;
+		font-weight: 800 !important;
+		letter-spacing: 0.08em;
+		margin: 0 0 0.35rem 0 !important;
+		text-transform: uppercase;
+	}
+
+	.linkedin-company-follow__hint {
+		color: #67727b !important;
+		font-size: 0.9rem !important;
+		font-weight: 500 !important;
+		margin: 0 0 0.6rem 0 !important;
+	}
+
+	.linkedin-company-follow__hint a {
+		color: #0a66c2;
+		font-weight: 700;
+		text-decoration: none;
+	}
+
+	.linkedin-company-follow__hint a:hover,
+	.linkedin-company-follow__hint a:focus {
+		text-decoration: underline;
+	}
+
 	.page-reading-hero__summary {
 		margin-top: 1.15rem;
 		max-width: 44rem;

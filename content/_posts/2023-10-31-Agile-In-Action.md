@@ -6,10 +6,10 @@ layout: post
 og_image: assets/images/posts/2023/agile-in-action/2023-10-31-Turner.png
 description: "A reflective post on using agile ideas in ML teams, with emphasis on experimentation, communication, and deployment discipline."
 seo_keywords: ["agile machine learning", "ML teams", "experimentation", "deployment discipline", "engineering culture"]
-tldr_why_read: "A reflective take on what agile looks like when the work is ML-heavy, uncertain, and production-bound."
-tldr_persona: "ML leads, tech leads, and engineers trying to build team rhythm around experimentation, communication, and production delivery."
+tldr_why_read: "A reflective take on what <span class=\"blog-highlight blog-highlight--agile\">Agile</span> looks like when the work is <span class=\"blog-highlight blog-highlight--ml\">ML</span>-heavy, uncertain, and production-bound."
+tldr_persona: "<span class=\"blog-highlight blog-highlight--ml\">ML</span> leads, tech leads, and engineers trying to build team rhythm around experimentation, communication, and production delivery."
 tldr_learn: "Why experimentation, deployment discipline, and communication matter more than ritualized process."
-tldr_takeaways: ["Agile in ML is a navigation tool", "Experimentation needs communication", "Delivery quality depends on team rhythm, not slogans"]
+tldr_takeaways: ["<span class=\"blog-highlight blog-highlight--agile\">Agile</span> in <span class=\"blog-highlight blog-highlight--ml\">ML</span> is a navigation tool", "Experimentation needs communication", "Delivery quality depends on team rhythm, not slogans"]
 ---
 
 <div class="image center">
@@ -17,12 +17,12 @@ tldr_takeaways: ["Agile in ML is a navigation tool", "Experimentation needs comm
   <p class="image-credit">Picture taken from <a href="https://www.nationalgallery.org.uk/paintings/joseph-mallord-william-turner-dutch-boats-in-a-gale-the-bridgewater-sea-piece" target="_blank" rel="noopener noreferrer">National Gallery, London</a></p>
 </div>
 
-As a Lead Machine Learning Engineer at Vortexa over the last 3 years, I've often likened my role to that of a navigator; charting a path through stormy waters as much as taming machine learning models within the vibrant energy sector. Feels like a perpetual discovery journey, where the <span class="blog-highlight blog-highlight--agile">Agile</span> philosophy can serve as a compass, guiding me and my team through unpredictable challenges.
+As a Lead Machine Learning Engineer at Vortexa over the last 3 years, I've often likened my role to that of a navigator; charting a path through stormy waters as much as taming <span class="blog-highlight blog-highlight--ml">machine learning</span> models within the vibrant energy sector. Feels like a perpetual discovery journey, where the <span class="blog-highlight blog-highlight--agile">Agile</span> philosophy can serve as a compass, guiding me and my team through unpredictable challenges.
 
 ## An opportunity to share our journey
 The opportunity to share this journey came unexpectedly when Bill Raymond, after perusing a blog post of mine on '[Doing Data Science the Agile Way]({{ '/2020/08/11/agile-data-science.html' | relative_url }}),' extended an invitation to discuss the nuances of this approach on his [podcast platform](https://agileinaction.com/agile-in-action-podcast/2023/10/31/bridging-ai-data-science-and-engineering-a-personal-journey.html). This conversation not only gave me a chance to verbalize our experiences at Vortexa but also to crystallize my thoughts on how Agile methodologies intertwine with the intricate dance of data science and data engineering.
 
-## Agile: Charting the Uncharted
+## <span class="blog-highlight blog-highlight--agile">Agile</span>: Charting the Uncharted
 <span class="blog-highlight blog-highlight--agile">Agile</span>, in its essence, is about exploration and adaptation. It's about setting out to the sea with the knowledge that the winds may change, but with a framework that allows you to adjust your sails accordingly. At Vortexa, we've embraced this spirit of 'failing fast' not as an acceptance of defeat, but as a strategic move to navigate closer to success. Our quest is punctuated by **iterative hypothesis testing**--a cycle of learning that shapes the evolution of our solutions.
 
 ## The Craft of Deployment in Unsteady Waters
@@ -35,7 +35,7 @@ The synergy between data scientists and engineers at Vortexa is the heartbeat of
 Experimentation and communication stand as our twin sails, propelling us forward. We champion a culture that not only emboldens our team to test unproven waters but also to communicate findings with the clarity of a lighthouse beam. This approach ensures that insights are not obscured by complexity. We are explorers and storytellers, mapping out new territories and sharing our tales of discovery and challenge, so that everyone is in-the-know!
 
 ## The Melody of Effort: Learning from Beethoven's Lesson
-My reflections on Agile methodologies are often inspired by the creative realms, such as the story of Beethoven and his student—a narrative that underscores that the pursuit of perfection is less about hitting every note correctly and more about the music that arises from striving towards it. Similarly, at Vortexa, our endeavor is not to follow Agile by the letter, but to embody its spirit, to play the complex composition of machine learning with the passion and dedication it deserves.
+My reflections on <span class="blog-highlight blog-highlight--agile">Agile</span> methodologies are often inspired by the creative realms, such as the story of Beethoven and his student—a narrative that underscores that the pursuit of perfection is less about hitting every note correctly and more about the music that arises from striving towards it. Similarly, at Vortexa, our endeavor is not to follow <span class="blog-highlight blog-highlight--agile">Agile</span> by the letter, but to embody its spirit, to play the complex composition of <span class="blog-highlight blog-highlight--ml">machine learning</span> with the passion and dedication it deserves.
 
 ## Setting Sail with Purpose
 Writing this post is not just an exercise in sharing knowledge; it's a celebration of the Agile philosophy that has become a pivotal part of our identity at Vortexa. It's a thank you to the Agile community and to thought leaders like Bill Raymond, who foster such critical discussions. As a Lead Machine Learning Engineer, I stand at my team's helm, proud of the course we've charted and excited for the voyages yet to come.
@@ -47,7 +47,6 @@ At Vortexa, we've hoisted the Agile flag high, not just to signify our methodolo
 
 Remember to like my post and re-share it (if you really liked it)!
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Sailing the ML seas with <a href="https://twitter.com/hashtag/Agile?src=hash&amp;ref_src=twsrc%5Etfw">#Agile</a> as our compass at <a href="https://twitter.com/Vortexa?ref_src=twsrc%5Etfw">@Vortexa</a> 🌊🧭 &#39;Failing fast&#39; is our voyage towards triumph. Thanks, Bill Raymond, for the insightful podcast chat. 🎙️ <a href="https://twitter.com/hashtag/MachineLearning?src=hash&amp;ref_src=twsrc%5Etfw">#MachineLearning</a> <a href="https://twitter.com/hashtag/DataScience?src=hash&amp;ref_src=twsrc%5Etfw">#DataScience</a> <a href="https://twitter.com/hashtag/Innovation?src=hash&amp;ref_src=twsrc%5Etfw">#Innovation</a> <a href="https://t.co/xphA2G2qVS">https://t.co/xphA2G2qVS</a></p>&mdash; Christos Hadjinikoli (@chatzinikolis) <a href="https://twitter.com/chatzinikolis/status/1720484208219447432?ref_src=twsrc%5Etfw">November 3, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 See you soon!
 

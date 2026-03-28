@@ -6,10 +6,10 @@ layout: post
 og_image: assets/images/posts/2023/avro-schema-management/2023-11-07-Example-Architecture.png
 description: "Why Avro schema discipline matters in data engineering and how to generate Python data classes from Avro schemas."
 seo_keywords: ["Avro schema", "Python data classes", "data engineering", "schema evolution", "serialization"]
-tldr_why_read: "Useful if you want a practical reason to care about schema discipline instead of treating it as ceremony."
-tldr_persona: "Data and ML engineers who need stricter schema discipline without giving up Python-friendly developer workflows."
-tldr_learn: "Why Avro matters, where schema drift hurts, and how to turn Avro definitions into Python-friendly data classes."
-tldr_takeaways: ["Schema management prevents downstream breakage", "Serialization choices shape system reliability", "Python data classes can fit a stricter data contract"]
+tldr_why_read: "Useful if you want a practical reason to care about <span class=\"blog-highlight blog-highlight--avro\">Avro</span>-level schema discipline instead of treating it as ceremony."
+tldr_persona: "Data and <span class=\"blog-highlight blog-highlight--ml\">ML</span> engineers who need stricter schema discipline without giving up <span class=\"blog-highlight blog-highlight--python\">Python</span>-friendly developer workflows."
+tldr_learn: "Why <span class=\"blog-highlight blog-highlight--avro\">Avro</span> matters, where schema drift hurts, and how to turn <span class=\"blog-highlight blog-highlight--avro\">Avro</span> definitions into <span class=\"blog-highlight blog-highlight--python\">Python</span>-friendly data classes."
+tldr_takeaways: ["<span class=\"blog-highlight blog-highlight--avro\">Avro</span> schema management prevents downstream breakage", "Serialization choices shape system reliability", "<span class=\"blog-highlight blog-highlight--python\">Python</span> data classes can fit a stricter data contract"]
 ---
 Reposting from the [Vortexa medium blog](https://medium.com/vortechsa/harmonizing-avro-and-python-a-dance-of-data-classes-d1cc7bf6bb33) 
 
@@ -27,9 +27,9 @@ Imagine the following scenario:
 * Such mismatches can occur due to several reasons — maybe a field was renamed, or its data type got changed without proper communication to all stakeholders.
 * These are real-world problems arising from the lack of efficient schema management.
 
-* So, how can Apache Avro and particularly avro-schemas help deal with these predicaments?
+* So, how can <span class="blog-highlight blog-highlight--avro">Apache Avro</span> and particularly <span class="blog-highlight blog-highlight--avro">Avro</span> schemas help deal with these predicaments?
 
-## Avro… what now?
+## <span class="blog-highlight blog-highlight--avro">Avro</span>... what now?
 In the grand scheme of data engineering and big data, one might compare the efficient storage and transmission of data to the very lifeblood of the show. Now, if this show needed a backstage hero, it would be Apache Avro. This binary serialization format, conceived in the heart of the Apache Hadoop project, is swift, concise, and unparalleled in dealing with huge data loads. When the curtain rises for powerhouses like Data Lakes, Apache Kafka, and Apache Hadoop, it’s Avro that steals the limelight.
 
 ### The Evolution of Data Serialization
@@ -108,8 +108,8 @@ However, as data complexity increased and systems multiplied, ensuring that thes
 
 Enter the need for an efficient and consistent serialization mechanism. One that could not only describe these POJOs but also seamlessly encode and decode them, ensuring data looked and felt the same everywhere.
 
-## Apache Avro & the Magic of Schemas
-Amidst this backdrop, Apache Avro took centre stage. While the POJO painted the picture, Avro became the artist’s brush, allowing the artwork to be replicated without losing its original essence. Integral to Avro’s magic were its schemas. These files, with their unique .avsc extension, were a form of a blueprint, dictating the structure of an entity, data types, and nullable fields or default values. (see the Person.avsc as an example here).
+## <span class="blog-highlight blog-highlight--avro">Apache Avro</span> & the Magic of Schemas
+Amidst this backdrop, <span class="blog-highlight blog-highlight--avro">Apache Avro</span> took centre stage. While the POJO painted the picture, <span class="blog-highlight blog-highlight--avro">Avro</span> became the artist’s brush, allowing the artwork to be replicated without losing its original essence. Integral to <span class="blog-highlight blog-highlight--avro">Avro</span>'s magic were its schemas. These files, with their unique `.avsc` extension, were a form of a blueprint, dictating the structure of an entity, data types, and nullable fields or default values. (see the `Person.avsc` as an example here).
 
 ```json
 {
@@ -132,7 +132,7 @@ Amidst this backdrop, Apache Avro took centre stage. While the POJO painted the 
   ]
 }
 ```
-Pairing the intuitive design of POJOs with the precision of Avro schemas, developers had a formidable toolkit. Now, data could be managed, shuttled, and transformed without ever losing its core essence or structure. But what if these changes weren’t properly communicated amongst interacting systems?
+Pairing the intuitive design of POJOs with the precision of <span class="blog-highlight blog-highlight--avro">Avro</span> schemas, developers had a formidable toolkit. Now, data could be managed, shuttled, and transformed without ever losing its core essence or structure. But what if these changes weren’t properly communicated amongst interacting systems?
 
 ## Challenges in Schema Communication
 Imagine two services: Service A (the Producer) that creates and sends data, and Service B (the Consumer) that receives and processes it. Service A updates its schema — perhaps it added a new field or modified an existing one. But if Service B is unaware of this change, it might end up expecting apples and receiving oranges.
@@ -155,10 +155,10 @@ In essence, a centralised schema management system, paired with a robust registr
   <img src="{{ 'assets/images/posts/2023/avro-schema-management/2023-11-07-Example-Architecture.png' | relative_url }}" alt="Package" />
 </div>
 
-## Generating Python Data Classes from *.avsc files
-Avro, by its design and origin, has a strong affinity for the Java ecosystem. Apache Avro’s project comes with built-in tools and libraries tailored for Java, which makes generating POJOs straightforward. But when working with Python, things aren’t as easy.
+## Generating <span class="blog-highlight blog-highlight--python">Python</span> Data Classes from `*.avsc` files
+<span class="blog-highlight blog-highlight--avro">Avro</span>, by its design and origin, has a strong affinity for the <span class="blog-highlight blog-highlight--java">Java</span> ecosystem. <span class="blog-highlight blog-highlight--avro">Apache Avro</span>'s project comes with built-in tools and libraries tailored for <span class="blog-highlight blog-highlight--java">Java</span>, which makes generating POJOs straightforward. But when working with <span class="blog-highlight blog-highlight--python">Python</span>, things aren’t as easy.
 
-Historically, it is worth noting that the introduction of data classes, which brought a feature similar to Java’s POJOs, came with Python 3.7. It, however, necessitated reliance on external libraries, such as dataclasses_avroschema, for schema-based generation. While these libraries are effective, their unofficial status can raise concerns about long-term reliability. Moreover, their utilization often depends on well-documented and clear examples, which might sometimes be ambiguous or lacking altogether. Furthermore, Python’s dynamic type system, though offering flexibility, poses challenges in maintaining data representation consistency when interfacing with Avro’s static schemas.
+Historically, it is worth noting that the introduction of data classes, which brought a feature similar to <span class="blog-highlight blog-highlight--java">Java</span>’s POJOs, came with <span class="blog-highlight blog-highlight--python">Python</span> 3.7. It, however, necessitated reliance on external libraries, such as `dataclasses_avroschema`, for schema-based generation. While these libraries are effective, their unofficial status can raise concerns about long-term reliability. Moreover, their utilization often depends on well-documented and clear examples, which might sometimes be ambiguous or lacking altogether. Furthermore, <span class="blog-highlight blog-highlight--python">Python</span>’s dynamic type system, though offering flexibility, poses challenges in maintaining data representation consistency when interfacing with <span class="blog-highlight blog-highlight--avro">Avro</span>’s static schemas.
 
 In this blog post, I hope to provide a clear example for data class-autogeneration, using an easy-to-understand script. So, let’s dive into an example.
 
@@ -294,7 +294,6 @@ The integration of Avro files with Python data classes streamlines the complexit
 Stay tuned, as more insights await in follow-up discussions, where we’ll further dissect the intricacies of a comprehensive schema management ecosystem.
 
 Remember to like my post and re-share it (if you really liked it)!
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">&quot;Master your data flow with our latest guide on automated <a href="https://twitter.com/hashtag/Python?src=hash&amp;ref_src=twsrc%5Etfw">#Python</a> data classes for <a href="https://twitter.com/hashtag/ApacheAvro?src=hash&amp;ref_src=twsrc%5Etfw">#ApacheAvro</a> schemas! A must-read for <a href="https://twitter.com/hashtag/DataEngineers?src=hash&amp;ref_src=twsrc%5Etfw">#DataEngineers</a>. <a href="https://twitter.com/datacommunity?ref_src=twsrc%5Etfw">@DataCommunity</a> <a href="https://twitter.com/hashtag/DataScience?src=hash&amp;ref_src=twsrc%5Etfw">#DataScience</a> <a href="https://twitter.com/hashtag/SchemaRegistry?src=hash&amp;ref_src=twsrc%5Etfw">#SchemaRegistry</a>&quot;<a href="https://t.co/Jl1KUit4Ua">https://t.co/Jl1KUit4Ua</a></p>&mdash; Christos Hadjinikoli (@chatzinikolis) <a href="https://twitter.com/chatzinikolis/status/1721939640607723602?ref_src=twsrc%5Etfw">November 7, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 See you soon!
 

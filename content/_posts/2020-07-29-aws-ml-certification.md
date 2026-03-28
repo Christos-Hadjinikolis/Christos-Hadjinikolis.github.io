@@ -6,10 +6,10 @@ layout: post
 og_image: assets/images/posts/2020/aws-ml-certification/2020-07-29-AWS-Cert.png
 description: "A practical guide to the AWS Machine Learning Specialty exam, including difficulty, study scope, and how long preparation usually takes."
 seo_keywords: ["AWS certification", "AWS machine learning specialty", "exam preparation", "machine learning certification", "cloud ML"]
-tldr_why_read: "Useful if you are deciding whether the AWS ML Specialty is worth the effort and how to prepare for it."
-tldr_persona: "Data scientists, ML engineers, and cloud practitioners deciding whether to invest in the AWS ML Specialty exam."
+tldr_why_read: "Useful if you are deciding whether the <span class=\"blog-highlight blog-highlight--aws\">AWS</span> <span class=\"blog-highlight blog-highlight--ml\">ML</span> Specialty is worth the effort and how to prepare for it."
+tldr_persona: "Data scientists, <span class=\"blog-highlight blog-highlight--ml\">ML</span> engineers, and cloud practitioners deciding whether to invest in the <span class=\"blog-highlight blog-highlight--aws\">AWS</span> <span class=\"blog-highlight blog-highlight--ml\">ML</span> Specialty exam."
 tldr_learn: "How hard the exam really is, how its topics are split, and what kind of study timeline makes sense."
-tldr_takeaways: ["The exam is broad, not just AWS services", "Preparation time depends heavily on your background", "A structured study plan matters more than cramming"]
+tldr_takeaways: ["The exam is broad, not just <span class=\"blog-highlight blog-highlight--aws\">AWS</span> services", "Preparation time depends heavily on your background", "A structured study plan matters more than cramming"]
 ---
 I recently took the [AWS Certified Machine Learning - Specialty](https://aws.amazon.com/certification/certified-machine-learning-specialty/), which remains one of the most demanding <span class="blog-highlight blog-highlight--aws">AWS</span> certifications. 
 I went through a lot of work in order to adequately prepare for this exam and I can tell you that it is indeed one of 
@@ -18,9 +18,9 @@ the hardest <span class="blog-highlight blog-highlight--aws">AWS certifications<
 <span class="image center"><img src="{{ 'assets/images/posts/2020/aws-ml-certification/2020-07-29-AWS-Cert.png' | relative_url }}" alt="" /></span>
 
 ## How long do I need to study for this?
-Well it depends; if you are an experienced Data Scientist and have been applying Data Science for about 3+ years then an hour per day for a month should be enough. This also holds if you are an engineer already exposed to the AWS infrastructure and services but are not familiar with Data Science topics. 
+Well it depends; if you are an experienced Data Scientist and have been applying Data Science for about 3+ years then an hour per day for a month should be enough. This also holds if you are an engineer already exposed to the <span class="blog-highlight blog-highlight--aws">AWS</span> infrastructure and services but are not familiar with Data Science topics. 
 
-You see, this certification is labelled as hard simply because it is not just about AWS services. 50% of it is concerned with purely Data Science topics; the other 50% is about AWS services that support Data Science and ML activities. If you are neither exposed to Data Science nor to the AWS services then at least 2 months of studying is recommended.    
+You see, this certification is labelled as hard simply because it is not just about <span class="blog-highlight blog-highlight--aws">AWS</span> services. 50% of it is concerned with purely Data Science topics; the other 50% is about <span class="blog-highlight blog-highlight--aws">AWS</span> services that support Data Science and <span class="blog-highlight blog-highlight--ml">ML</span> activities. If you are neither exposed to Data Science nor to the <span class="blog-highlight blog-highlight--aws">AWS</span> services then at least 2 months of studying is recommended.    
 
 ## What does the exam cover?
 Data Engineering covers 20% of the exam, then Exploratory Data Analysis concerns another 24%, modelling is 36% and Machine Learning Implementation and Operations is 20%.  
@@ -88,7 +88,7 @@ I put together a list below, in an attempt to summarise the content:
     * `Amazon Comprehend` (Text Analysis Service)
     * `Amazon Lex` (Conversation Interface Service - Chatbots)
     * `Amazon Service Chaining` with `AWS Step Functions`
-* **Sagemaker**: A service that you really need to spend time with!
+* **<span class="blog-highlight blog-highlight--aws">SageMaker</span>**: A service that you really need to spend time with!
     * What is it exactly?
     * Benefits? Advantages?
     * Supported Algorithms (huge list; learn most popular ones)
@@ -104,7 +104,7 @@ This is by no means an exhaustive list, but you will at least get an idea about 
 ## How should I prepare?
 There are many ways to prepare. Myself, I covered [the relative course on Linux academy](https://linuxacademy.com/cp/modules/view/id/340), which I highly recommend. 
 
-Ideally I would recommend spending some time with `Sagemaker` and try to interact with services like `lambda` functions and `step-functions` as well as `Kinesis`, `Glue` and `Athena`. 
+Ideally I would recommend spending some time with <span class="blog-highlight blog-highlight--aws">`SageMaker`</span> and try to interact with services like `lambda` functions and `step-functions` as well as `Kinesis`, `Glue` and `Athena`. 
 However, that would take a while to do plus, using these resources does not come for free.     
 
 The Linux Academy Course has a number of labs that will help you develop an adequate understanding of these services. You can worry about honing your skills and knowledge at a later point. 
@@ -127,9 +127,9 @@ less than an hour to cover all questions and then used all the remaining time re
 yourself taking the exam to identify if you tried cheating or something. In no more than 3 days I got the official certification. 
 
 ## Any tips? Advice?
-Well, tip number one is: "If you don't know which is the right answer, then just go for the AWS solution in the list of options". At large, this exam tests whether you are familiar with what is available to you through the AWS platform. If a client wants to use ML for image moderation and you recommend anything other than `Rekognition` then you clearly don't know how `Rekognition` is used! This has generally worked for me as a way of filtering in and out options.  
+Well, tip number one is: *"If you don't know which is the right answer, then just go for the <span class="blog-highlight blog-highlight--aws">AWS</span> solution in the list of options".* At large, this exam tests whether you are familiar with what is available to you through the <span class="blog-highlight blog-highlight--aws">AWS</span> platform. If a client wants to use <span class="blog-highlight blog-highlight--ml">ML</span> for image moderation and you recommend anything other than `Rekognition` then you clearly don't know how `Rekognition` is used! This has generally worked for me as a way of filtering in and out options.  
 
-I would definitely recommend covering the Sagemalker [FAQs](https://aws.amazon.com/sagemaker/faqs/) which I see as a wonderful source for exam material. 
+I would definitely recommend covering the <span class="blog-highlight blog-highlight--aws">SageMaker</span> [FAQs](https://aws.amazon.com/sagemaker/faqs/) which I see as a wonderful source for exam material. 
 
 Do cover the official AWS practice exam; it is just 20 questions, but it is enough to give you an idea about what you are up against. 
 
@@ -140,5 +140,3 @@ Remember to like my post and re-share it (if you really liked it)!
 See you soon! 
 
 <p><a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml"><img src="//feedburner.google.com/fb/images/pub/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/></a>&nbsp;<a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml">Register to the ML-Affairs RSS Feed</a></p>
-
-<blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">I successfully took the AWS Machine Learning Specialty Certification during the COVID-19 lockdown! <br><br>Here are my thoughts: <a href="https://t.co/WejGBrmDvy">https://t.co/WejGBrmDvy</a></p>&mdash; Christos Hadjinikoli (@chatzinikolis) <a href="https://twitter.com/chatzinikolis/status/1288507051824549888?ref_src=twsrc%5Etfw">July 29, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

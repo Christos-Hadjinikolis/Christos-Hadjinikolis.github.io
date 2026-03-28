@@ -7,9 +7,9 @@ og_image: assets/images/posts/2020/on-style-transfer/2020-08-15-style-transfer-k
 mathjax: true
 description: "An intuitive explanation of neural style transfer, grounded in Heraklion imagery and the core mechanics behind the model."
 seo_keywords: ["style transfer", "neural style transfer", "deep learning", "computer vision", "VGG19"]
-tldr_why_read: "A more intuitive route into neural style transfer than a dry paper summary."
-tldr_persona: "ML practitioners and curious readers who want to understand style transfer through intuition before diving into the paper."
-tldr_learn: "The core mental model behind style transfer, how the losses work, and why the generated image changes."
+tldr_why_read: "A more intuitive route into <span class=\"blog-highlight blog-highlight--vision\">neural style transfer</span> than a dry paper summary."
+tldr_persona: "<span class=\"blog-highlight blog-highlight--ml\">ML</span> practitioners and curious readers who want to understand <span class=\"blog-highlight blog-highlight--vision\">style transfer</span> through intuition before diving into the paper."
+tldr_learn: "The core mental model behind <span class=\"blog-highlight blog-highlight--vision\">style transfer</span>, how the losses work, and why the generated image changes."
 tldr_takeaways: ["Style and content are separated mathematically", "The optimization target is the generated image", "A visual example helps the theory land"]
 ---
 I am currently in Crete for my annual get away. Crete is an amazing island with many beautiful places to visit and a vast 
@@ -18,7 +18,7 @@ history that goes all the way back to the Minoans in 3500 BC.
 <span class="image center"><img src="{{ 'assets/images/posts/2020/on-style-transfer/2020-08-15-style-transfer-koules.png' | relative_url }}" alt="" /></span>
 One of the things I love doing whenever I am here is strolling around the city of Heraklion and taking pictures of the many hidden alleys, 
 which reveal an amazing graffiti culture! I really wanted to write about it in my blog and I thought that maybe I can do so 
-by using some amazing images I gathered just last week in a <span class="blog-highlight blog-highlight--vision">style-transfer</span> post. So this is it: **"Style Transfer in Heraklion"**.
+by using some amazing images I gathered just last week in a <span class="blog-highlight blog-highlight--vision">style-transfer</span> post. So this is it: **<span class="blog-highlight blog-highlight--vision">Style Transfer</span> in Heraklion**.
 
 ## A bit of history: A Neural Algorithm of Artistic Style
 <span class="blog-highlight blog-highlight--vision">Neural Style Transfer (NST)</span> is a class of algorithms that process images to adopt the visual style of another image. A seminal paper 
@@ -32,7 +32,7 @@ of the first, the content of the second and merge them together. So, how is this
 ## Delving into the details
 <span class="image center"><img src="{{ 'assets/images/posts/2020/on-style-transfer/2020-08-15-style-transfer-paper-01.png' | relative_url }}" alt="" /></span>
 
-The first figure in the paper shows the original setup and how a pre-trained NN, referred to as `VGG19`, was modified to do NST. What is `VGG19`? 
+The first figure in the paper shows the original setup and how a pre-trained NN, referred to as `<span class="blog-highlight blog-highlight--vision">VGG19</span>`, was modified to do NST. What is `<span class="blog-highlight blog-highlight--vision">VGG19</span>`? 
 Well, the basic building blocks of traditional convolutional networks are the following layers: 
 * a [convolutional layer](https://www.youtube.com/watch?v=YRhxdVk_sIs&list=RDCMUC4UJ26WkceqONNF5S26OiVw&index=2) (with padding to maintain the resolution); 
 * a non-linear activation layer such as a [ReLU](https://www.youtube.com/watch?v=m0pIlLfpXWE&list=RDCMUC4UJ26WkceqONNF5S26OiVw&index=3), and;
@@ -182,5 +182,4 @@ See you soon!
 
 <p><a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml"><img src="//feedburner.google.com/fb/images/pub/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/></a>&nbsp;<a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml">Register to the ML-Affairs RSS Feed</a></p>
 
-<blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">Just had a go at style-transfer <a href="https://twitter.com/hashtag/cnn?src=hash&amp;ref_src=twsrc%5Etfw">#cnn</a> <a href="https://twitter.com/hashtag/deep_learmning?src=hash&amp;ref_src=twsrc%5Etfw">#deep_learmning</a>. Have a look at my latest blog-post<a href="https://t.co/oTEdZIL1T0">https://t.co/oTEdZIL1T0</a></p>&mdash; Christos Hadjinikoli (@chatzinikolis) <a href="https://twitter.com/chatzinikolis/status/1294933589277237248?ref_src=twsrc%5Etfw">August 16, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
          
