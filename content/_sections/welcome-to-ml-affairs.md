@@ -23,9 +23,9 @@ order: 5
     If you are interested in ML systems that have to run continuously, degrade gracefully, and support real decisions, you will probably feel at home here.
   </p>
 
-  <p>Join me in this exploration by following me on Twitter at @chatzinikolis.</p>
+  <p>Join me in this exploration by connecting with me on LinkedIn.</p>
 
-  <p><a href="https://twitter.com/chatzinikolis?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @chatzinikolis</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+  <p><a href="{{ site.linkedin_url }}" class="button linkedin-follow-button" target="_blank" rel="noopener noreferrer">Connect On LinkedIn</a></p>
 
   <p><a href="{{ '/feed.xml' | relative_url }}" rel="alternate" type="application/rss+xml">Subscribe to the ML-Affairs RSS feed</a></p>
 </div>

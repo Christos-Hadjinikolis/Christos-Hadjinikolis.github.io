@@ -780,6 +780,25 @@
 		}
 	}
 
+	.linkedin-follow-button {
+		background: linear-gradient(135deg, #0a66c2, #0f7bd8) !important;
+		border: 0 !important;
+		box-shadow: 0 14px 28px rgba(10, 102, 194, 0.22);
+		color: #ffffff !important;
+		font-size: 0.9rem !important;
+		font-weight: 800 !important;
+		letter-spacing: 0.05em;
+		padding: 0.95rem 1.4rem !important;
+		text-transform: uppercase;
+	}
+
+	.linkedin-follow-button:hover,
+	.linkedin-follow-button:focus {
+		background: linear-gradient(135deg, #0959aa, #0a66c2) !important;
+		box-shadow: 0 18px 34px rgba(10, 102, 194, 0.28);
+		transform: translateY(-1px);
+	}
+
 	.page-reading-hero__summary {
 		margin-top: 1.15rem;
 		max-width: 44rem;

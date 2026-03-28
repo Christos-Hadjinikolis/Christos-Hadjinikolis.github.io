@@ -11,7 +11,9 @@ layout: default
 			<header class="reading-hero__header">
 				<h2>{{- page.title_html | default: page.title -}}</h2>
 				<p>{% if page.author %}{{ page.author }}, {% endif %}{{- page.date | date_to_long_string -}}</p>
-				<p><a href="https://twitter.com/chatzinikolis?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @chatzinikolis</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+				{% if site.linkedin_url %}
+				<p><a href="{{ site.linkedin_url }}" class="button linkedin-follow-button" target="_blank" rel="noopener noreferrer">Connect On LinkedIn</a></p>
+				{% endif %}
 			</header>
 	    </div>
 	  </div>
