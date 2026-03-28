@@ -1516,6 +1516,30 @@
 		margin-bottom: 0;
 	}
 
+	.post-social-card__links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.8rem;
+		margin-top: 0.4rem;
+	}
+
+	.post-social-card__links .button {
+		margin: 0;
+	}
+
+	.post-social-card__button--substack {
+		background: linear-gradient(135deg, #ff6b2b, #ff7e3f) !important;
+		border: 0 !important;
+		box-shadow: 0 12px 24px rgba(255, 107, 43, 0.2);
+		color: #ffffff !important;
+	}
+
+	.post-social-card__button--substack:hover,
+	.post-social-card__button--substack:focus {
+		background: linear-gradient(135deg, #f05c1d, #ff6b2b) !important;
+		box-shadow: 0 16px 28px rgba(255, 107, 43, 0.24);
+	}
+
 	.post-social-card__embed {
 		margin: 1rem 0 1.1rem;
 		border: 1px solid rgba(32, 49, 58, 0.08);
