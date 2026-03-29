@@ -1,53 +1,326 @@
 ---
-title: "Sailing Through Data Science: The Agile Journey at Vortexa"
-title_html: "Sailing Through Data Science: The <span class='blog-title-accent blog-title-accent--agile'>Agile</span> Journey at Vortexa"
+title: "What Agile Actually Means When You Ship ML Systems"
+title_html: "What <span class='blog-title-accent blog-title-accent--agile'>Agile</span> Actually Means When You Ship <span class='blog-title-accent blog-title-accent--ml'>ML</span> Systems"
 author: Christos Hadjinikolis
 layout: post
 og_image: assets/images/posts/2023/agile-in-action/2023-10-31-Turner.png
-description: "A reflective post on using agile ideas in ML teams, with emphasis on experimentation, communication, and deployment discipline."
-seo_keywords: ["agile machine learning", "ML teams", "experimentation", "deployment discipline", "engineering culture"]
-tldr_why_read: "A reflective take on what <span class=\"blog-highlight blog-highlight--agile\">Agile</span> looks like when the work is <span class=\"blog-highlight blog-highlight--ml\">ML</span>-heavy, uncertain, and production-bound."
-tldr_persona: "<span class=\"blog-highlight blog-highlight--ml\">ML</span> leads, tech leads, and engineers trying to build team rhythm around experimentation, communication, and production delivery."
-tldr_learn: "Why experimentation, deployment discipline, and communication matter more than ritualized process."
-tldr_takeaways: ["<span class=\"blog-highlight blog-highlight--agile\">Agile</span> in <span class=\"blog-highlight blog-highlight--ml\">ML</span> is a navigation tool", "Experimentation needs communication", "Delivery quality depends on team rhythm, not slogans"]
+description: "What Agile really means once ML systems hit production: balancing experimentation, determinism, replayability, and business constraints."
+seo_keywords: ["agile machine learning", "production ML", "ML systems", "streaming systems", "experimentation vs production"]
+tldr_why_read: "Read this if you are tired of vague <span class=\"blog-highlight blog-highlight--agile\">Agile</span> advice that falls apart the moment an <span class=\"blog-highlight blog-highlight--ml\">ML</span> system has to run in production."
+tldr_persona: "Especially useful for <span class=\"blog-highlight blog-highlight--ml\">ML</span> leads, platform engineers, and teams operating real-time prediction systems under business and reliability constraints."
+tldr_learn: "Why <span class=\"blog-highlight blog-highlight--agile\">Agile</span> in production <span class=\"blog-highlight blog-highlight--ml\">ML</span> is less about sprint ritual and more about safe change, replayability, state control, and decision quality."
+tldr_takeaways: ["<span class=\"blog-highlight blog-highlight--agile\">Agile</span> in <span class=\"blog-highlight blog-highlight--ml\">ML</span> is about changing systems safely", "Replay and determinism matter more than ceremony", "Business constraints often matter more than raw model accuracy"]
 ---
 
 <div class="image center">
-  <img src="{{ 'assets/images/posts/2023/agile-in-action/2023-10-31-Turner.png' | relative_url }}" alt="Joseph Mallord William Turner | Dutch Boats in a Gale ('The Bridgewater Sea Piece') | L297 | National Gallery, London" />
+  <img src="{{ 'assets/images/posts/2023/agile-in-action/2023-10-31-Turner.png' | relative_url }}" alt="Joseph Mallord William Turner | Dutch Boats in a Gale ('The Bridgewater Sea Piece') | National Gallery, London" />
   <p class="image-credit">Picture taken from <a href="https://www.nationalgallery.org.uk/paintings/joseph-mallord-william-turner-dutch-boats-in-a-gale-the-bridgewater-sea-piece" target="_blank" rel="noopener noreferrer">National Gallery, London</a></p>
 </div>
 
-As a Lead Machine Learning Engineer at Vortexa over the last 3 years, I've often likened my role to that of a navigator; charting a path through stormy waters as much as taming <span class="blog-highlight blog-highlight--ml">machine learning</span> models within the vibrant energy sector. Feels like a perpetual discovery journey, where the <span class="blog-highlight blog-highlight--agile">Agile</span> philosophy can serve as a compass, guiding me and my team through unpredictable challenges.
+A couple of years ago I wrote about <span class="blog-highlight blog-highlight--agile">Agile</span> in data science.
 
-## An opportunity to share our journey
-The opportunity to share this journey came unexpectedly when Bill Raymond, after perusing a blog post of mine on '[Doing Data Science the Agile Way]({{ '/2020/08/11/agile-data-science.html' | relative_url }}),' extended an invitation to discuss the nuances of this approach on his [podcast platform](https://agileinaction.com/agile-in-action-podcast/2023/10/31/bridging-ai-data-science-and-engineering-a-personal-journey.html). This conversation not only gave me a chance to verbalize our experiences at Vortexa but also to crystallize my thoughts on how Agile methodologies intertwine with the intricate dance of data science and data engineering.
+Reading it back now, it sounds clean. A bit too clean.
 
-## <span class="blog-highlight blog-highlight--agile">Agile</span>: Charting the Uncharted
-<span class="blog-highlight blog-highlight--agile">Agile</span>, in its essence, is about exploration and adaptation. It's about setting out to the sea with the knowledge that the winds may change, but with a framework that allows you to adjust your sails accordingly. At Vortexa, we've embraced this spirit of 'failing fast' not as an acceptance of defeat, but as a strategic move to navigate closer to success. Our quest is punctuated by **iterative hypothesis testing**--a cycle of learning that shapes the evolution of our solutions.
+The reality is messier.
 
-## The Craft of Deployment in Unsteady Waters
-When it comes to deploying machine learning models, the complexities can be as daunting. Reproducibility, versioning, and developmental architecture are the beacons that guide us, ensuring that our journey through the deployment phase is a robust process, governed by traceability and validation. We don't just launch our models; we nurture them through continuous monitoring, adjusting for the inevitable model drift, much like a captain corrects for the sea's currents.
+At Vortexa, we are not *"doing <span class="blog-highlight blog-highlight--agile">Agile</span>."* We are running a real-time <span class="blog-highlight blog-highlight--ml">ML</span> system that ingests tens of millions of AIS pings a day, pushes predictions in seconds, and then has to live with those decisions in front of customers.
 
-## The Crew's Synergy: Navigating Together
-The synergy between data scientists and engineers at Vortexa is the heartbeat of our operations. It's about finding the rhythm between the precision of algorithms and the robustness of systems. Through mutual respect and understanding, we've cultivated a workplace where shared objectives, integrated teamwork, and consistent communication are as standard as the North Star in a sailor's night sky.
+That changes everything.
 
-## The Twin Sails of Vortexa: Experimentation and Communication
-Experimentation and communication stand as our twin sails, propelling us forward. We champion a culture that not only emboldens our team to test unproven waters but also to communicate findings with the clarity of a lighthouse beam. This approach ensures that insights are not obscured by complexity. We are explorers and storytellers, mapping out new territories and sharing our tales of discovery and challenge, so that everyone is in-the-know!
+This post is what I actually learned after operating that kind of system, not what <span class="blog-highlight blog-highlight--agile">Agile</span> is *supposed* to be, but what survives once things hit production.
 
-## The Melody of Effort: Learning from Beethoven's Lesson
-My reflections on <span class="blog-highlight blog-highlight--agile">Agile</span> methodologies are often inspired by the creative realms, such as the story of Beethoven and his student—a narrative that underscores that the pursuit of perfection is less about hitting every note correctly and more about the music that arises from striving towards it. Similarly, at Vortexa, our endeavor is not to follow <span class="blog-highlight blog-highlight--agile">Agile</span> by the letter, but to embody its spirit, to play the complex composition of <span class="blog-highlight blog-highlight--ml">machine learning</span> with the passion and dedication it deserves.
+---
 
-## Setting Sail with Purpose
-Writing this post is not just an exercise in sharing knowledge; it's a celebration of the Agile philosophy that has become a pivotal part of our identity at Vortexa. It's a thank you to the Agile community and to thought leaders like Bill Raymond, who foster such critical discussions. As a Lead Machine Learning Engineer, I stand at my team's helm, proud of the course we've charted and excited for the voyages yet to come.
+## The Problem
 
-At Vortexa, we've hoisted the Agile flag high, not just to signify our methodology but to announce our commitment to a journey of continuous improvement, collaboration, and innovation. And as we sail ahead, it's the shared belief in our methods, the trust in our crew, and the stories of our adventures that will guide us to new horizons.
+Most teams think <span class="blog-highlight blog-highlight--agile">Agile</span> is about managing uncertainty.
+
+In <span class="blog-highlight blog-highlight--ml">ML</span> systems, uncertainty is the default state. That is not the problem.
+
+The problem is this:
+
+> You are making decisions with models that are wrong in ways you do not fully understand, inside systems that cannot afford to break.
+
+And you are doing this continuously.
+
+In our case:
+
+- predictions run in real time, in seconds
+- validation often comes hours or days later
+- corrections are messy and sometimes manual
+- downstream systems assume you are *mostly right*
+
+So the question is not, *"how do we iterate fast?"*
+
+It is this:
+
+> How do we iterate without destabilising the system?
+
+That is a much harder question, and it is the one most lightweight <span class="blog-highlight blog-highlight--agile">Agile</span> advice never really gets to.
+
+## Why This Is Hard
+
+There is a structural tension here that most <span class="blog-highlight blog-highlight--agile">Agile</span> writing ignores.
+
+### 1. Experimentation vs determinism
+
+Data scientists want:
+
+- flexibility
+- rapid iteration
+- freedom to try things
+
+Production systems want:
+
+- determinism
+- reproducibility
+- controlled behaviour
+
+You cannot fully optimise both at the same time.
+
+If you bias too hard toward experimentation, you get non-reproducible pipelines and silent failures.
+
+If you bias too hard toward engineering rigour, you slow exploration down so much that people stop learning.
+
+Most teams oscillate between the two.
+
+That oscillation is the real inefficiency.
+
+### 2. Real time vs truth
+
+In our stack, we predict destinations in seconds using streaming data, but the ground truth emerges later through batch pipelines, confirmed movements, and delayed signals.
+
+That means:
+
+- the system is always partially wrong
+- corrections arrive late
+- historical replays do not behave like live inference
+
+So you effectively end up with two systems:
+
+- one that predicts
+- one that explains what actually happened
+
+If those drift too far apart, you do not just lose accuracy. You lose credibility.
+
+### 3. Business constraints beat model accuracy
+
+A model that predicts the *most likely* port is useless if it violates real constraints like:
+
+- regulatory rules
+- physical feasibility
+- known business rules
+
+We learned this the hard way.
+
+Raw model output is not a product.
+
+It is an input to a decision system.
+
+That system includes:
+
+- rules
+- overrides
+- filters
+- human corrections
+
+Ignoring that layer is where many <span class="blog-highlight blog-highlight--ml">ML</span> systems fail. Not because the model is weak, but because the model was never the full system to begin with.
+
+## A Better Way To Think About Agile In ML
+
+After a few years of operating this kind of stack, my mental model changed.
+
+<span class="blog-highlight blog-highlight--agile">Agile</span> is not a process.
+
+It is a way of managing **three competing forces**.
+
+### 1. Exploration
+
+This is where you are trying to reduce uncertainty.
+
+It is where:
+
+- experiments live
+- features get tested
+- models evolve
+
+But it should be **cheap and isolated**.
+
+If your experimentation affects production behaviour too early, you are doing it wrong.
+
+### 2. Stability
+
+This is what many <span class="blog-highlight blog-highlight--ml">ML</span> teams underestimate.
+
+Stability means:
+
+- deterministic pipelines
+- versioned state
+- replayability
+- controlled rollouts
+- observability everywhere
+
+If you cannot replay your system and get the same result, you are not in control.
+
+And without control, iteration is dangerous.
+
+### 3. Translation
+
+This is the missing piece in most discussions.
+
+A prediction is not useful unless it can be:
+
+- interpreted
+- constrained
+- trusted
+
+This is where:
+
+- business logic lives
+- filters get applied
+- confidence thresholds matter
+- hysteresis and smoothing reduce noise
+
+This layer is where *accuracy* becomes *value*.
+
+## How This Shows Up In Practice
+
+Some patterns actually helped us.
+
+### 1. Separate experimentation from serving
+
+Models are trained and iterated in isolation.
+
+Serving systems:
+
+- load versioned artifacts
+- do not contain training logic
+- are designed for rollback first, improvement second
+
+If you cannot roll back a model safely, you should not deploy it.
+
+### 2. Treat state as a first-class problem
+
+Streaming systems remember things.
+
+And that memory bites you.
+
+We had an incident where a subtle change in partitioning logic corrupted state and produced incorrect outputs at scale.
+
+The fix was not just *"debug the bug."*
+
+The fix was:
+
+- version state explicitly
+- make state reset a controlled operation
+- accept that some changes require wiping history
+
+If your system cannot safely forget, it will eventually lie.
+
+### 3. Build for replay, not just real time
+
+Real-time systems feel impressive.
+
+But replay is where truth lives.
+
+You need to be able to:
+
+- re-run historical data
+- validate changes against past behaviour
+- explain differences
+
+Without replay:
+
+- you cannot debug
+- you cannot trust improvements
+- you cannot explain failures
+
+### 4. Accept that *"good enough"* is contextual
+
+There is no universal accuracy target.
+
+A model can be:
+
+- statistically strong
+- operationally useless
+
+What matters is:
+
+- stability of predictions
+- consistency over time
+- behaviour under edge cases
+
+We ended up introducing mechanisms like hysteresis just to stop predictions from flipping constantly.
+
+That had more impact than improving raw accuracy.
+
+### 5. Team structure matters more than process
+
+One of the biggest improvements did not come from changing sprint rituals.
+
+It came from aligning the team around:
+
+- shared ownership of production
+- no separation between modelling and engineering
+- clear interfaces between components
+- explicit trade-offs
+
+If your team structure creates handoffs, your system will reflect those fractures.
+
+## Where Most Agile Advice Breaks
+
+A lot of <span class="blog-highlight blog-highlight--agile">Agile</span> advice assumes:
+
+- work can be decomposed cleanly
+- outcomes are predictable per iteration
+- progress is visible through story completion
+
+None of that really holds in production <span class="blog-highlight blog-highlight--ml">ML</span> systems.
+
+You can:
+
+- complete a sprint
+- ship code
+- hit every acceptance criterion
+
+...and still move the system backwards.
+
+Because what matters is not *"did we build it?"*
+
+It is this:
+
+> Did the system behave better under real conditions?
+
+That feedback loop is slower, noisier, and harder to interpret than most <span class="blog-highlight blog-highlight--agile">Agile</span> frameworks assume.
+
+## Closing Thoughts
+
+If I strip all the language away, this is what <span class="blog-highlight blog-highlight--agile">Agile</span> means to me now:
+
+> Build systems that can change safely.
+
+Not quickly.
+
+Safely.
+
+Because in production <span class="blog-highlight blog-highlight--ml">ML</span>:
+
+- you are always wrong in some dimension
+- you are always learning
+- every change has side effects
+
+So the goal is not to move fast.
+
+The goal is to move deliberately, with enough control to understand what changed and why.
+
+Everything else, ceremonies, boards, sprint labels, is secondary.
+
+If you are building <span class="blog-highlight blog-highlight--ml">ML</span> systems that actually run, you will hit these constraints sooner or later.
+
+Better to design for them early than to retrofit discipline once things start breaking.
 
 ## The Podcast
+
+This line of thinking also shaped the podcast conversation that prompted me to revisit the topic in the first place:
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LdDasrMOJLs?si=dk-YcjCqW6YpBPWZ" title="Agile in Action podcast episode" frameborder="0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-Remember to like my post and re-share it (if you really liked it)!
-
-
-See you soon!
-
-<p><a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml"><img src="//feedburner.google.com/fb/images/pub/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/></a>&nbsp;<a href="http://feeds.feedburner.com/MlAffairs" rel="alternate" type="application/rss+xml">Register to the ML-Affairs RSS Feed</a></p>   

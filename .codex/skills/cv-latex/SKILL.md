@@ -36,6 +36,7 @@ Rules:
 
 - Do not overwrite `cv/latex/cv.tex` unless the user explicitly asks.
 - Create the tailored variant under `cv/latex/variants/<role-slug>/`.
+- Only change the text content, not the underlying structure or formatting, unless the user explicitly asks for a redesign.
 - Name the entrypoint `cv.tex` inside that variant directory unless there is a strong reason not to.
 - Store the target role context inside the variant folder.
 - Store role metadata under `cv/latex/variants/<role-slug>/_role-context/`.
