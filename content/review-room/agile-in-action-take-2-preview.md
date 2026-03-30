@@ -1,6 +1,6 @@
 ---
-title: "What Agile Actually Means When You Ship ML Systems"
-title_html: "What <span class='blog-title-accent blog-title-accent--agile'>Agile</span> Actually Means When You Ship <span class='blog-title-accent blog-title-accent--ml'>ML</span> Systems"
+title: "Agile In Action, Take 2"
+title_html: "<span class='blog-title-accent blog-title-accent--agile'>Agile</span> In Action, Take 2"
 author: Christos Hadjinikolis
 layout: post
 hide: true
