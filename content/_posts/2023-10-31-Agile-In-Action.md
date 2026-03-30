@@ -1,15 +1,15 @@
 ---
-title: "What Agile Actually Means When You Ship ML Systems"
-title_html: "What <span class='blog-title-accent blog-title-accent--agile'>Agile</span> Actually Means When You Ship <span class='blog-title-accent blog-title-accent--ml'>ML</span> Systems"
+title: "Agile In Action: Bridging Data Science and Engineering"
+title_html: "<span class='blog-title-accent blog-title-accent--agile'>Agile</span> In Action: Bridging Data Science and Engineering"
 author: Christos Hadjinikolis
 layout: post
 og_image: assets/images/posts/2023/agile-in-action/2023-10-31-Turner.png
-description: "What Agile really means once ML systems hit production: balancing experimentation, determinism, replayability, and business constraints."
-seo_keywords: ["agile machine learning", "production ML", "ML systems", "streaming systems", "experimentation vs production"]
-tldr_why_read: "Read this if you are tired of vague <span class=\"blog-highlight blog-highlight--agile\">Agile</span> advice that falls apart the moment an <span class=\"blog-highlight blog-highlight--ml\">ML</span> system has to run in production."
-tldr_persona: "Especially useful for <span class=\"blog-highlight blog-highlight--ml\">ML</span> leads, platform engineers, and teams operating real-time prediction systems under business and reliability constraints."
-tldr_learn: "Why <span class=\"blog-highlight blog-highlight--agile\">Agile</span> in production <span class=\"blog-highlight blog-highlight--ml\">ML</span> is less about sprint ritual and more about safe change, replayability, state control, and decision quality."
-tldr_takeaways: ["<span class=\"blog-highlight blog-highlight--agile\">Agile</span> in <span class=\"blog-highlight blog-highlight--ml\">ML</span> is about changing systems safely", "Replay and determinism matter more than ceremony", "Business constraints often matter more than raw model accuracy"]
+description: "What Agile looked like to me in 2023 at Vortexa: helping data scientists and engineers learn together, communicate clearly, and ship ML systems that can survive production."
+seo_keywords: ["agile machine learning", "data science and engineering", "ML teams", "productionizing models", "experimentation", "Vortexa"]
+tldr_why_read: "Read this if your <span class=\"blog-highlight blog-highlight--ml\">ML</span> work keeps getting stuck between promising notebooks and production systems that nobody fully owns."
+tldr_persona: "Especially useful for data scientists, software engineers, and <span class=\"blog-highlight blog-highlight--ml\">ML</span> leads trying to make cross-functional teams work without hiding behind process."
+tldr_learn: "Why <span class=\"blog-highlight blog-highlight--agile\">Agile</span> mattered to me less as ritual and more as a way to synchronise experimentation, communication, and engineering discipline."
+tldr_takeaways: ["<span class=\"blog-highlight blog-highlight--agile\">Agile</span> is useful when it makes experiments explicit", "The real gap sits between a notebook and a production system", "Communication is part of the system, not an afterthought"]
 ---
 
 <div class="image center">
@@ -17,310 +17,142 @@ tldr_takeaways: ["<span class=\"blog-highlight blog-highlight--agile\">Agile</sp
   <p class="image-credit">Picture taken from <a href="https://www.nationalgallery.org.uk/paintings/joseph-mallord-william-turner-dutch-boats-in-a-gale-the-bridgewater-sea-piece" target="_blank" rel="noopener noreferrer">National Gallery, London</a></p>
 </div>
 
-A couple of years ago I wrote about <span class="blog-highlight blog-highlight--agile">Agile</span> in data science.
+A few weeks ago, Bill Raymond invited me onto his <a href="https://agileinaction.com/agile-in-action-podcast/2023/10/31/bridging-ai-data-science-and-engineering-a-personal-journey.html" target="_blank" rel="noopener noreferrer">Agile in Action podcast</a> after reading an older post of mine on <a href="{% post_url 2020-08-11-agile-data-science %}">doing data science the Agile way</a>.
 
-Reading it back now, it sounds clean. A bit too clean.
+I said yes because this topic has followed me through most of my career.
 
-The reality is messier.
+I started as a data scientist. Then I spent years watching perfectly respectable prototypes fail to become products. By the time I reached Vortexa, I was leading a team of data scientists and engineers and living right in the middle of the tension I had been talking about for years.
 
-At Vortexa, we are not *"doing <span class="blog-highlight blog-highlight--agile">Agile</span>."* We are running a real-time <span class="blog-highlight blog-highlight--ml">ML</span> system that ingests tens of millions of AIS pings a day, pushes predictions in seconds, and then has to live with those decisions in front of customers.
+That is the version of <span class="blog-highlight blog-highlight--agile">Agile</span> I wanted to discuss in the episode. Not the clean whiteboard version. The one that appears when a model has to leave a <span class="blog-highlight blog-highlight--python">Python</span> notebook, survive production, and still make sense to the people who have to operate it.
 
-That changes everything.
+> The real gap in <span class="blog-highlight blog-highlight--ml">ML</span> teams is rarely enthusiasm. It is the distance between a model that works once and a system that can be trusted repeatedly.
 
-This post is what I actually learned after operating that kind of system, not what <span class="blog-highlight blog-highlight--agile">Agile</span> is *supposed* to be, but what survives once things hit production.
+## Why This Topic Stayed With Me
 
----
+Part of the reason this topic matters so much to me is that I learned it the frustrating way.
 
-## The Problem
+At Data Reply, I worked on one prototype after another. We would explore a problem, build something promising, show strong results, and then hit the same wall: the client liked the idea, but the system never really made it into production. Sometimes the missing piece was infrastructure. Sometimes it was culture. Sometimes it was simply that nobody owned the hard part after the demo.
 
-Most teams think <span class="blog-highlight blog-highlight--agile">Agile</span> is about managing uncertainty.
+That started to change for me at UBS.
 
-In <span class="blog-highlight blog-highlight--ml">ML</span> systems, uncertainty is the default state. That is not the problem.
+For the first time, I heard the sentence I had wanted to hear for years: *"Great. Now how do we put this into production?"*
 
-The problem is this:
+I was paired with an experienced engineer, and that changed the direction of my career. I stopped seeing engineering as the final packaging step after the interesting work was done. I started seeing it as part of the thinking itself.
 
-> You are making decisions with models that are wrong in ways you do not fully understand, inside systems that cannot afford to break.
+That shift is still with me today.
 
-And you are doing this continuously.
+## The Real Gap Between Data Science And Engineering
 
-In our case:
+When people talk about cross-functional <span class="blog-highlight blog-highlight--ml">ML</span> teams, they often make the collaboration sound natural. In practice, it is not.
 
-- predictions run in real time, in seconds
-- validation often comes hours or days later
-- corrections are messy and sometimes manual
-- downstream systems assume you are *mostly right*
+Data scientists are usually optimising for learning:
 
-So the question is not, *"how do we iterate fast?"*
+- trying ideas quickly
+- testing hypotheses
+- moving fast through a messy search space
 
-It is this:
+Engineers are usually optimising for control:
 
-> How do we iterate without destabilising the system?
-
-That is a much harder question, and it is the one most lightweight <span class="blog-highlight blog-highlight--agile">Agile</span> advice never really gets to.
-
-## Why This Is Hard
-
-There is a structural tension here that most <span class="blog-highlight blog-highlight--agile">Agile</span> writing ignores.
-
-### 1. Experimentation vs determinism
-
-Data scientists want:
-
-- flexibility
-- rapid iteration
-- freedom to try things
-
-Production systems want:
-
-- determinism
 - reproducibility
-- controlled behaviour
+- determinism
+- maintainability
+- safe change over time
 
-You cannot fully optimise both at the same time.
+Both instincts are valid.
 
-If you bias too hard toward experimentation, you get non-reproducible pipelines and silent failures.
+The problem is that they are protecting the system from different failure modes.
 
-If you bias too hard toward engineering rigour, you slow exploration down so much that people stop learning.
+> The issue is not that data scientists are messy and engineers are rigid. The issue is that both are right about different kinds of breakage.
 
-Most teams oscillate between the two.
+Take a simple pricing model. A data scientist can build a strong prototype in a notebook, engineer the features, train the model, and prove the concept. But once that model becomes part of a product, somebody has to make sure the production path transforms the raw input in exactly the same way. If the training pipeline and the prediction pipeline drift apart, the system lies even when the model itself is good.
 
-That oscillation is the real inefficiency.
+That is why the gap matters so much.
 
-### 2. Real time vs truth
+It is not about user interfaces or wrapping code nicely. It is about making sure the system that predicts tomorrow behaves like the system that was validated yesterday.
 
-In our stack, we predict destinations in seconds using streaming data, but the ground truth emerges later through batch pipelines, confirmed movements, and delayed signals.
+## What <span class="blog-highlight blog-highlight--agile">Agile</span> Actually Helped With
 
-That means:
+When I say <span class="blog-highlight blog-highlight--agile">Agile</span> helped here, I do not mean that Scrum ceremonies somehow solved the problem.
 
-- the system is always partially wrong
-- corrections arrive late
-- historical replays do not behave like live inference
+What helped was having a way to make uncertainty legible.
 
-So you effectively end up with two systems:
+For me, that meant three things.
 
-- one that predicts
-- one that explains what actually happened
+### 1. Making experiments explicit
 
-If those drift too far apart, you do not just lose accuracy. You lose credibility.
+In <span class="blog-highlight blog-highlight--ml">ML</span> work, *"we are exploring"* is too vague.
 
-### 3. Business constraints beat model accuracy
+An experiment becomes useful when the team can answer:
 
-A model that predicts the *most likely* port is useless if it violates real constraints like:
+- what assumption are we testing?
+- what would count as useful evidence?
+- what result would tell us to stop?
 
-- regulatory rules
-- physical feasibility
-- known business rules
+That sounds simple, but it changes the conversation completely. It stops research from turning into open-ended wandering and gives product and engineering a clearer way to understand what the team is actually learning.
 
-We learned this the hard way.
+### 2. Creating shared visibility
 
-Raw model output is not a product.
+At Vortexa, one of the most useful habits we built was a regular data science catch-up where engineers and data scientists could present what they were doing, why they were doing it, and where the risks were.
 
-It is an input to a decision system.
+This was not code review. It was not a status ritual either.
 
-That system includes:
+It was a way to keep everyone on the same mental map.
 
-- rules
-- overrides
-- filters
-- human corrections
+That mattered because a lot of problems in <span class="blog-highlight blog-highlight--ml">ML</span> systems do not come from one catastrophic mistake. They come from small drifts in understanding. A feature is computed one way in training, another way in production. An assumption about data quality goes unchallenged. A result sounds promising, but nobody else can reproduce it.
 
-Ignoring that layer is where many <span class="blog-highlight blog-highlight--ml">ML</span> systems fail. Not because the model is weak, but because the model was never the full system to begin with.
+Communication is not a soft add-on here.
 
-## A Better Way To Think About Agile In ML
+It is part of the control surface of the system.
 
-After a few years of operating this kind of stack, my mental model changed.
+### 3. Putting discipline around handoffs
 
-<span class="blog-highlight blog-highlight--agile">Agile</span> is not a process.
+The teams I trust most are not the ones with the nicest process diagrams. They are the ones that make handoffs visible and expensive enough that people try to remove them.
 
-It is a way of managing **three competing forces**.
+If the data scientist can disappear after training a model and the engineer is left to guess the rest, the system will eventually reflect that fracture.
 
-### 1. Exploration
+If the engineer is never exposed to how experimental the work really is, they will overestimate how stable the solution already is.
 
-This is where you are trying to reduce uncertainty.
+<span class="blog-highlight blog-highlight--agile">Agile</span> helped when it forced us to confront those boundaries earlier.
 
-It is where:
+## What <span class="blog-highlight blog-highlight--ml">ML</span> Teams Still Underestimate
 
-- experiments live
-- features get tested
-- models evolve
+One of the themes that came up in the podcast is that many teams still underestimate how much work starts after the model looks good.
 
-But it should be **cheap and isolated**.
+You do not just need versioned code. You need versioned data and a credible way to tie the two together.
 
-If your experimentation affects production behaviour too early, you are doing it wrong.
+You do not just need a model in production. You need monitoring, drift detection, and a practical way to replace the model without breaking the product.
 
-### 2. Stability
+You do not just need experimentation. You need a path from experimentation to something deterministic enough to support.
 
-This is what many <span class="blog-highlight blog-highlight--ml">ML</span> teams underestimate.
+This is why I often say that notebooks are wonderful research tools and terrible places to leave an idea if you want a system around it to survive.
 
-Stability means:
+## The Lesson I Was Trying To Communicate
 
-- deterministic pipelines
-- versioned state
-- replayability
-- controlled rollouts
-- observability everywhere
+When Bill asked what <span class="blog-highlight blog-highlight--agile">Agile</span> meant to me in this context, the answer I wanted to give was not especially fashionable.
 
-If you cannot replay your system and get the same result, you are not in control.
+It was this:
 
-And without control, iteration is dangerous.
+> In <span class="blog-highlight blog-highlight--ml">ML</span>, Agile is useful when it helps the team learn quickly without losing control of the system.
 
-### 3. Translation
+That is really the heart of it.
 
-This is the missing piece in most discussions.
+Not velocity in the abstract.
 
-A prediction is not useful unless it can be:
+Not ceremony for its own sake.
 
-- interpreted
-- constrained
-- trusted
+Not pretending that uncertainty can be planned away.
 
-This is where:
+Just a disciplined way to:
 
-- business logic lives
-- filters get applied
-- confidence thresholds matter
-- hysteresis and smoothing reduce noise
+- test assumptions early
+- expose the right risks
+- keep engineers and data scientists in sync
+- and make sure the thing you learned can actually survive contact with production
 
-This layer is where *accuracy* becomes *value*.
-
-## How This Shows Up In Practice
-
-Some patterns actually helped us.
-
-### 1. Separate experimentation from serving
-
-Models are trained and iterated in isolation.
-
-Serving systems:
-
-- load versioned artifacts
-- do not contain training logic
-- are designed for rollback first, improvement second
-
-If you cannot roll back a model safely, you should not deploy it.
-
-### 2. Treat state as a first-class problem
-
-Streaming systems remember things.
-
-And that memory bites you.
-
-We had an incident where a subtle change in partitioning logic corrupted state and produced incorrect outputs at scale.
-
-The fix was not just *"debug the bug."*
-
-The fix was:
-
-- version state explicitly
-- make state reset a controlled operation
-- accept that some changes require wiping history
-
-If your system cannot safely forget, it will eventually lie.
-
-### 3. Build for replay, not just real time
-
-Real-time systems feel impressive.
-
-But replay is where truth lives.
-
-You need to be able to:
-
-- re-run historical data
-- validate changes against past behaviour
-- explain differences
-
-Without replay:
-
-- you cannot debug
-- you cannot trust improvements
-- you cannot explain failures
-
-### 4. Accept that *"good enough"* is contextual
-
-There is no universal accuracy target.
-
-A model can be:
-
-- statistically strong
-- operationally useless
-
-What matters is:
-
-- stability of predictions
-- consistency over time
-- behaviour under edge cases
-
-We ended up introducing mechanisms like hysteresis just to stop predictions from flipping constantly.
-
-That had more impact than improving raw accuracy.
-
-### 5. Team structure matters more than process
-
-One of the biggest improvements did not come from changing sprint rituals.
-
-It came from aligning the team around:
-
-- shared ownership of production
-- no separation between modelling and engineering
-- clear interfaces between components
-- explicit trade-offs
-
-If your team structure creates handoffs, your system will reflect those fractures.
-
-## Where Most Agile Advice Breaks
-
-A lot of <span class="blog-highlight blog-highlight--agile">Agile</span> advice assumes:
-
-- work can be decomposed cleanly
-- outcomes are predictable per iteration
-- progress is visible through story completion
-
-None of that really holds in production <span class="blog-highlight blog-highlight--ml">ML</span> systems.
-
-You can:
-
-- complete a sprint
-- ship code
-- hit every acceptance criterion
-
-...and still move the system backwards.
-
-Because what matters is not *"did we build it?"*
-
-It is this:
-
-> Did the system behave better under real conditions?
-
-That feedback loop is slower, noisier, and harder to interpret than most <span class="blog-highlight blog-highlight--agile">Agile</span> frameworks assume.
-
-## Closing Thoughts
-
-If I strip all the language away, this is what <span class="blog-highlight blog-highlight--agile">Agile</span> means to me now:
-
-> Build systems that can change safely.
-
-Not quickly.
-
-Safely.
-
-Because in production <span class="blog-highlight blog-highlight--ml">ML</span>:
-
-- you are always wrong in some dimension
-- you are always learning
-- every change has side effects
-
-So the goal is not to move fast.
-
-The goal is to move deliberately, with enough control to understand what changed and why.
-
-Everything else, ceremonies, boards, sprint labels, is secondary.
-
-If you are building <span class="blog-highlight blog-highlight--ml">ML</span> systems that actually run, you will hit these constraints sooner or later.
-
-Better to design for them early than to retrofit discipline once things start breaking.
+That was my view then, and I still think it was the right thing to say.
 
 ## The Podcast
 
-This line of thinking also shaped the podcast conversation that prompted me to revisit the topic in the first place:
+If you prefer the conversation version, the episode is below.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LdDasrMOJLs?si=dk-YcjCqW6YpBPWZ" title="Agile in Action podcast episode" frameborder="0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
