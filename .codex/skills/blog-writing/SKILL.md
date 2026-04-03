@@ -25,23 +25,44 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
 7. Prefer concrete examples and earned opinions over trend summaries or generic tutorials.
 8. When source material exists (slides, notes, old reports, evaluations), mine it for concrete operational signals rather than just restating conclusions.
 9. If visuals would genuinely improve a post, prefer tasteful supplied imagery or carefully chosen extracted assets that support the mood and topic without overwhelming the writing.
-10. When a post is ready for distribution, prepare companion copy for LinkedIn by default, and prepare X copy only when the user explicitly wants to use X.
-11. When the user asks to publish or announce a post, follow this order unless they explicitly want something different:
+10. When visuals are useful, think in scenes, not decoration: identify 1 to 3 moments where an image would make the reader pause, smile, or understand the tension faster than prose alone.
+11. For posts that suit a recurring concept avatar, generate image prompts that:
+  - define the avatar once in a reusable base prompt
+  - keep the avatar on a transparent or plain background when creating the reusable base asset
+  - then reuse that avatar description inside scene prompts for future post visuals
+  - keep the humor restrained, professional, and slightly self-aware rather than cartoonishly goofy
+12. When preparing image prompts for the user, include:
+  - one reusable avatar prompt
+  - 1 to 3 scene prompts tied to specific moments in the post
+  - a short note on where each image should be placed and what point it reinforces
+13. When a post is ready for distribution, prepare companion copy for LinkedIn by default, and prepare X copy only when the user explicitly wants to use X.
+14. When the user asks to publish or announce a post, follow this order unless they explicitly want something different:
   - finalize the post body, title, description, `og_image`, and share metadata
   - verify the post builds cleanly and the share image is a real PNG/JPEG-style preview asset, not just an on-page decorative image
   - commit and push the site changes so the live URL has the correct metadata
   - only then publish to LinkedIn using the live URL, and only add X if the user explicitly wants that channel
   - after the social post exists, add/embed the discussion link back into the article if desired
   - commit and push that embed/update as a second pass
-12. Treat Medium and Substack as manual syndication targets unless the platform's official API situation clearly supports durable automation.
-13. Every new post should include a concise, visible summary block near the top presented as an "At A Glance" section:
+15. Treat Medium and Substack as manual syndication targets unless the platform's official API situation clearly supports durable automation.
+16. Every new post should include a concise, visible summary block near the top presented as an "At A Glance" section:
   - `tldr_why_read`
   - `tldr_persona`
   - `tldr_learn`
   - `tldr_takeaways`
-14. Every new post should include `description` and `seo_keywords` front matter so the page has useful search metadata without resorting to hidden keyword stuffing.
-15. For framework/platform posts, put the real adoption driver near the top and, when helpful, include a concrete next-step path such as a starter archetype, template, or agent prompt.
-16. For comparison posts, include the author's real bias or prior preference when it matters, then show what experience changed or refined about that view.
+17. Every new post should include `description` and `seo_keywords` front matter so the page has useful search metadata without resorting to hidden keyword stuffing.
+18. For framework/platform posts, put the real adoption driver near the top and, when helpful, include a concrete next-step path such as a starter archetype, template, or agent prompt.
+19. For comparison posts, include the author's real bias or prior preference when it matters, then show what experience changed or refined about that view.
+20. When revising a strong post, sharpen the parts that are merely balanced into parts that are memorable:
+  - challenge bad heuristics directly when the evidence supports it
+  - call out failure modes, not just feature trade-offs
+  - make the reader slightly uncomfortable about rewrite instinct, architectural cargo cults, or comfort-driven decisions
+  - do not flatten real disagreement in the name of fairness
+  - do not invent war stories or dramatize beyond the lived evidence
+21. For opinionated technical posts, make sure the piece does more than explain:
+  - it should force a perspective shift
+  - it should contain at least one line that is quotable
+  - it should name the cost curve of the preferred approach honestly
+  - it should finish with a sharper consequence than "it depends"
 
 ## Output Rules
 
@@ -63,6 +84,10 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
 - Think in impact. A post should surface the non-obvious lesson quickly, then deepen it through story and explanation.
 - When a line carries the thesis of the post, isolate it. Strong posts usually have 1 to 3 sentences that deserve a real pause from the reader; present those as pull quotes or similarly elevated standalone moments, not as plain body text.
 - When the post compares tools or architectures, be especially wary of familiarity bias. A good comparison should separate "this feels more natural to me" from "this is the better decision for the system."
+- Avoid weak balancing language when the argument can support something clearer:
+  - replace vague softeners like "too shallow" or "can become painful" when the actual point is stronger and defensible
+  - prefer "misleading", "becomes the bottleneck", "dominant operational pain point", or similarly concrete phrasing when warranted
+  - sharpen only as far as the lived evidence goes
 - Use visual emphasis sparingly and consistently:
   - reserve color accents for technologies, frameworks, and core concepts that are central to the post
   - if a technology, framework, or language is central to the post, treat it consistently across the whole piece: title, summary block, section headings, opening argument, key body paragraphs, and conclusion
@@ -88,6 +113,9 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
   - if a diagram is used, it should be simple and genuinely necessary
   - avoid over-designed synthetic graphics that distract from the prose
   - when the user supplies images, prefer choosing the best ones and integrating them cleanly
+  - when suggesting AI-generated visuals, tie each one to a specific narrative beat: rewrite instinct, operational pain, competing hypotheses, broken trust, or similar
+  - recurring avatars should support recognition and tone, not become mascots that overpower the article
+  - default to transparent-background avatar assets for reuse across future posts
 - When preparing social distribution:
   - LinkedIn copy should open with the production pain, tension, or contrarian lesson, not a flat summary
   - the first 1 to 2 lines should earn attention quickly and make the value of clicking obvious
@@ -111,3 +139,7 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
 - The best posts return to the tension they opened with and make the reader feel they finally understand the real question.
 - The summary block should make an impatient reader want to continue.
 - A strong modern post should also give the reader a credible next step when that is useful: a repo, archetype, checklist, or agent prompt.
+- The strongest opinion pieces should not leave every reader comfortable:
+  - they should challenge a default instinct
+  - they should name at least one harmful or misleading simplification
+  - they should still stay inside the bounds of what the author can honestly defend

@@ -3,8 +3,8 @@ title: "Kafka Streams vs Flink Is The Wrong Question"
 title_html: "<span class='blog-title-accent blog-title-accent--kafka'>Kafka Streams</span> vs <span class='blog-title-accent blog-title-accent--flink'>Flink</span> Is The Wrong Question"
 author: Christos Hadjinikolis
 layout: post
-og_image: assets/images/posts/2026/when-flink-earns-its-complexity-over-kafka-streams/flink-highway.png
-og_image_alt: "A luminous Flink squirrel facing a contemplative Kafka figure across a city split between cool and warm tones."
+og_image: assets/images/posts/2026/when-flink-earns-its-complexity-over-kafka-streams/application-vs-platform-crossroads.png
+og_image_alt: "A hand-drawn ninja engineer at a crossroads between rewriting toward Flink and curating a Kafka Streams system into a more platform-aware architecture."
 linkedin_post_url: https://www.linkedin.com/feed/update/urn:li:share:7445396058735579136/
 linkedin_embed_url: https://www.linkedin.com/embed/feed/update/urn:li:share:7445396058735579136?collapsed=1
 description: "A production-minded comparison of Kafka Streams and Flink that focuses on state, recovery, rescaling, and platform boundaries."
@@ -32,8 +32,8 @@ But over time, after giving those systems the attention they deserved, I learned
 That is still the line I care about most. But now I care about it with much more respect for both sides.
 
 <figure class="blog-figure blog-figure--wide">
-  <img src="{{ 'assets/images/posts/2026/when-flink-earns-its-complexity-over-kafka-streams/flink-highway.png' | relative_url }}" alt="A luminous Flink squirrel facing a contemplative Kafka figure across a city split between cool and warm tones." />
-  <figcaption class="blog-figure__caption">This is the comparison that matters: not mascot versus mascot, but one operating model confronting another once the system starts pushing back.</figcaption>
+  <img src="{{ 'assets/images/posts/2026/when-flink-earns-its-complexity-over-kafka-streams/application-vs-platform-crossroads.png' | relative_url }}" alt="A hand-drawn ninja engineer at a crossroads between rewriting toward Flink and curating a Kafka Streams system into a platform-aware architecture." />
+  <figcaption class="blog-figure__caption">This is the real fork in the road: not which mascot wins, but whether the system is still application-shaped or is becoming a platform concern.</figcaption>
 </figure>
 
 ## The Bias I Had To Correct
@@ -52,6 +52,11 @@ if you give an existing streaming system enough love, enough structure, and enou
 
 That does not make <span class="blog-highlight blog-highlight--flink">Flink</span> less good. It just makes engineering judgment less theatrical.
 
+<figure class="blog-figure blog-figure--wide">
+  <img src="{{ 'assets/images/posts/2026/when-flink-earns-its-complexity-over-kafka-streams/rewrite-or-repair.png' | relative_url }}" alt="A hand-drawn ninja engineer illustration showing the temptation to rewrite a messy Kafka Streams system while a cleaner architectural repair path is explained." />
+  <figcaption class="blog-figure__caption">The urge to rewrite is strong. The better question is whether the system is structurally wrong or simply under-engineered.</figcaption>
+</figure>
+
 <div class="blog-insight">
   <span class="blog-insight__label">The Lesson</span>
   <p><strong>Framework preference is not architecture.</strong> My first instinct was to rewrite messy <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span> systems into <span class="blog-highlight blog-highlight--flink">Flink</span>. The better answer was to clean the model first, then decide whether the runtime was actually the problem.</p>
@@ -66,6 +71,10 @@ I still think the <span class="blog-highlight blog-highlight--flink">Flink</span
 That is a big deal to me, because I care a lot about how easily a streaming system can be explained.
 
 When a framework makes the flow of state and events easy to communicate, it usually also makes the system easier to maintain.
+
+But none of that comes for free.
+
+<span class="blog-highlight blog-highlight--flink">Flink</span> asks you to pay an upfront complexity tax in operations, onboarding, debugging, and platform maturity. Misconfigured jobs are not charming. They are expensive. The model feels cleaner once you have paid that tax, not before.
 
 This is why I still reach for <span class="blog-highlight blog-highlight--flink">Flink</span> eagerly when the runtime itself needs to be a serious part of the design.
 
@@ -115,6 +124,8 @@ But it has consequences.
 
 There comes a point where adding more application instances does not really solve the problem because the partitioning boundary is already telling you how far you can go cleanly. You can absolutely scale <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span>, but the broker topology keeps exerting a much stronger influence on the application topology.
 
+At that point, scaling stops being primarily demand-driven and starts becoming topology-constrained.
+
 <span class="blog-highlight blog-highlight--flink">Flink</span>, by contrast, is still constrained at the source when consuming from <span class="blog-highlight blog-highlight--kafka">Kafka</span>, but once records are inside the runtime it has far more freedom to repartition, redistribute work, and run operators at a different parallelism from the source. I would not call that infinite scaling. I would call it a materially more flexible runtime.
 
 * [Stateful stream processing](https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/stateful-stream-processing/)
@@ -130,7 +141,7 @@ This is still one of the clearest differentiators for me.
 
 In <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span>, the picture is a little more nuanced than *"it always has to read the whole changelog again."* If the local state store still exists, the runtime can replay from the previously checkpointed offset and catch up from there. If local state is gone, it has to rebuild from the changelog from the beginning of the retained data. That is meaningfully better than a naive full replay every time, and it is one of the reasons the <span class="blog-highlight blog-highlight--kafka">RocksDB</span> path works as well as it does in practice.
 
-But the deeper point still holds: fault tolerance and task migration are still anchored in changelog restoration, and on large stateful applications that can become a real pain. Retention choices matter. Restore time matters. Operational patience matters.
+But the deeper point still holds: fault tolerance and task migration are still anchored in changelog restoration, and on large stateful applications that can become one of the dominant operational pain points. Retention choices matter. Restore time matters. Recovery becomes less predictable under failure. Operational patience starts turning into architecture.
 
 * [Running Streams applications and state restoration](https://kafka.apache.org/41/streams/developer-guide/running-app/)
 
@@ -148,7 +159,7 @@ Those are not the same problem, even if the diagrams sometimes look similar.
 
 And this is why I do not buy generic advice like *"use <span class="blog-highlight blog-highlight--flink">Flink</span> if you need scale"* or *"use <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span> if you want simplicity."*
 
-Both statements are too shallow.
+Both statements are misleading. They sound practical, but they hide the real failure modes, encourage cargo-cult architecture, and make comfort-driven rewrites sound more principled than they are.
 
 The better rule is this:
 
@@ -193,6 +204,6 @@ And that brings me back to where I started.
 
 I still love <span class="blog-highlight blog-highlight--flink">Flink</span>. I still think its model is easier to reason about once runtime concerns become serious. I still think it is the stronger platform when state, recovery, and rescaling dominate the design.
 
-But being a real advocate for a framework means knowing where not to force it.
+Many rewrites begin as comfort and only later get dressed up as architecture.
 
-That is the part I understand better now.
+That is the part I understand better now, and it is probably the most useful thing this comparison taught me.

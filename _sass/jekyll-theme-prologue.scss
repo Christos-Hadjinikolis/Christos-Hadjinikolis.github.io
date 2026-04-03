@@ -646,6 +646,28 @@
 		text-align: left;
 	}
 
+	.welcome-brand-row {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 1.2rem;
+		margin: 0 0 1.75rem 0;
+	}
+
+	.welcome-brand-row__logo {
+		display: block;
+		height: 6.5rem;
+		width: 100%;
+		max-width: 26rem;
+	}
+
+	.welcome-brand-row__avatar {
+		display: block;
+		height: 6.5rem;
+		width: auto;
+		flex: 0 0 auto;
+	}
+
 	.section-shell--welcome-to-ml-affairs .prose-block {
 		background: rgba(255, 255, 255, 0.72);
 		border: 1px solid rgba(27, 43, 52, 0.08);
@@ -718,14 +740,25 @@
 	}
 
 	.section-shell--welcome-to-ml-affairs {
-		.image.featured {
-			display: block;
-			max-width: 16rem;
-			margin: 0 0 1.75rem auto;
-		}
-
 		.prose-block {
 			text-align: left;
+		}
+	}
+
+	@include breakpoint('<=small') {
+		.welcome-brand-row {
+			gap: 0.9rem;
+			flex-wrap: wrap;
+		}
+
+		.welcome-brand-row__logo {
+			height: 4.9rem;
+			width: 100%;
+			max-width: 19rem;
+		}
+
+		.welcome-brand-row__avatar {
+			height: 4.9rem;
 		}
 	}
 

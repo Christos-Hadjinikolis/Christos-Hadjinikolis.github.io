@@ -3,7 +3,10 @@ title: Welcome to ML-Affairs!
 icon: fa-compass
 order: 5
 ---
-<span class="image featured"><img src="assets/images/site/ML-Affairs-Logo.png" alt="ML-Affairs logo" /></span>
+<div class="welcome-brand-row">
+  <img class="welcome-brand-row__logo" src="{{ 'assets/images/site/ML-Affairs-Logo.png' | relative_url }}" alt="ML-Affairs logo" />
+  <img class="welcome-brand-row__avatar" src="{{ 'assets/images/site/welcome-ninja-engineer.png' | relative_url }}" alt="ML-Affairs ninja engineer avatar" />
+</div>
 
 <div class="prose-block">
   <p>
