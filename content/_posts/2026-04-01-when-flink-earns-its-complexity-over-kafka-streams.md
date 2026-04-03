@@ -7,6 +7,7 @@ og_image: assets/images/posts/2026/when-flink-earns-its-complexity-over-kafka-st
 og_image_alt: "A hand-drawn ninja engineer at a crossroads between rewriting toward Flink and curating a Kafka Streams system into a more platform-aware architecture."
 linkedin_post_url: https://www.linkedin.com/feed/update/urn:li:share:7445396058735579136/
 linkedin_embed_url: https://www.linkedin.com/embed/feed/update/urn:li:share:7445396058735579136?collapsed=1
+substack_post_url: "https://christoshadjinikolis.substack.com/p/kafka-streams-vs-flink-is-the-wrong"
 description: "A production-minded comparison of Kafka Streams and Flink that focuses on state, recovery, rescaling, and platform boundaries."
 seo_keywords: ["Kafka Streams", "Apache Flink", "stream processing", "stateful streaming", "event-driven architecture"]
 tldr_why_read: 'Read this if you are tempted to replace <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span> with <span class="blog-highlight blog-highlight--flink">Flink</span> mostly because <span class="blog-highlight blog-highlight--flink">Flink</span> feels cleaner, more modern, or more familiar.'
