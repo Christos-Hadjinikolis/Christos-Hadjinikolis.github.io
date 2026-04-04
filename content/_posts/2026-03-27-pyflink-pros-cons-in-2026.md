@@ -3,8 +3,8 @@ title: "PyFlink In 2026: Better Than Its Reputation, Still Not Frictionless"
 title_html: "<span class='blog-title-accent blog-title-accent--python'>Py</span><span class='blog-title-accent blog-title-accent--flink'>Flink</span> In 2026: Better Than Its Reputation, Still Not Frictionless"
 author: Christos Hadjinikolis
 layout: post
-og_image: assets/images/posts/2026/pyflink-pros-cons-in-2026/pyflink-python-runtime.png
-og_image_alt: "PyFlink rendered as a Python-versus-runtime tension image, emphasizing the split between Python-native ML logic and a JVM-first streaming engine."
+og_image: assets/images/posts/2026/pyflink-pros-cons-in-2026/training-vs-prediction-drift.png
+og_image_alt: "A hand-drawn illustration of Python-centric training and Java-centric prediction pipelines drifting apart despite trying to stay aligned."
 linkedin_post_url: "https://www.linkedin.com/feed/update/urn:li:share:7443429221366128640/"
 linkedin_embed_url: "https://www.linkedin.com/embed/feed/update/urn:li:share:7443429221366128640?collapsed=1"
 substack_post_url: "https://open.substack.com/pub/christoshadjinikolis/p/pyflink-pros-cons-in-2026html?r=1eyoht&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true"
@@ -23,9 +23,19 @@ I have seen that pain in the most annoying way possible: training and experiment
 
 That is the part many architecture discussions understate. Once training is in <span class="blog-highlight blog-highlight--python">Python</span> and prediction is in <span class="blog-highlight blog-highlight--java">Java</span>, the real problem is no longer just inference. It becomes feature parity, interface parity, and the feedback loop between two runtimes that each have their own libraries, their own defaults, and their own ways of being *almost* the same.
 
+<figure class="blog-figure blog-figure--wide">
+  <img src="{{ 'assets/images/posts/2026/pyflink-pros-cons-in-2026/training-vs-prediction-drift.png' | relative_url }}" alt="A hand-drawn illustration of Python training and Java prediction pipelines drifting apart in subtle but painful ways." />
+  <figcaption class="blog-figure__caption">This is the real tax of cross-language serving paths: not dramatic failure, but endless small mismatches that make the system harder to trust.</figcaption>
+</figure>
+
 You can try to escape that with <span class="blog-highlight blog-highlight--onnx">ONNX</span>. You can rebuild parts of the feature logic in <span class="blog-highlight blog-highlight--java">Java</span>. You can expose the model behind a service boundary and call it remotely. All of these are reasonable patterns. None of them are free.
 
 Four years ago, <span class="blog-highlight blog-highlight--onnx">ONNX</span> was not mature enough for the kinds of models and custom ops we cared about. The easy story broke precisely where real systems stop being toy examples. The fallback was the pattern most teams know well: deploy the model as a service and call it over REST. That works, but now your prediction pipeline owns an extra network hop, another SLA, another scaling surface, and one more place where raw features must remain perfectly aligned.
+
+<figure class="blog-figure blog-figure--wide">
+  <img src="{{ 'assets/images/posts/2026/pyflink-pros-cons-in-2026/model-service-tradeoffs.png' | relative_url }}" alt="A hand-drawn illustration of a model service boundary with a load balancer, showing clean scaling but also latency and operational trade-offs." />
+  <figcaption class="blog-figure__caption">Model-as-a-service is often the sensible compromise. It is also where clean separation starts charging rent in latency, SLAs, and feature-parity work.</figcaption>
+</figure>
 
 This is why I think the case for <span class="blog-highlight blog-highlight--flink">PyFlink</span> should be stated more bluntly than it usually is:
 
@@ -43,11 +53,6 @@ That would have been lazy here, because the story has moved. <span class="blog-h
 But the core trade-off has not disappeared.
 
 <span class="blog-highlight blog-highlight--flink">PyFlink</span> is now real enough to take seriously, but it still does not let you forget that <span class="blog-highlight blog-highlight--flink">Flink</span> is fundamentally a JVM-first distributed runtime. That is the part people need to hold in their head at the same time as the improvements.
-
-<figure class="blog-figure blog-figure--wide">
-  <img src="{{ 'assets/images/posts/2026/pyflink-pros-cons-in-2026/pyflink-python-runtime.png' | relative_url }}" alt="A surreal image of a Flink squirrel facing a Python serpent across a glowing split landscape." />
-  <figcaption class="blog-figure__caption">The attraction is real: keep model and feature logic in <span class="blog-highlight blog-highlight--python">Python</span>. So is the cost: the runtime boundary never disappears, it just moves.</figcaption>
-</figure>
 
 ## What Has Improved Since The Older Evaluation
 
@@ -105,6 +110,11 @@ Despite the caveats, I do think <span class="blog-highlight blog-highlight--flin
 This is the point I think most comparisons understate, and it is the one that matters most to me.
 
 The strongest argument for <span class="blog-highlight blog-highlight--flink">PyFlink</span> is not merely *"our team prefers <span class="blog-highlight blog-highlight--python">Python</span>."* The stronger argument is that the surrounding model ecosystem, experimentation culture, libraries, and iteration loops are still centered on <span class="blog-highlight blog-highlight--python">Python</span>.
+
+<figure class="blog-figure blog-figure--wide">
+  <img src="{{ 'assets/images/posts/2026/pyflink-pros-cons-in-2026/pyflink-same-ecosystem.png' | relative_url }}" alt="A hand-drawn illustration showing PyFlink as a serious streaming platform that lets Python-native model and feature logic stay closer together." />
+  <figcaption class="blog-figure__caption">This is why <span class="blog-highlight blog-highlight--flink">PyFlink</span> remains attractive: not because the runtime becomes light, but because the surrounding <span class="blog-highlight blog-highlight--python">Python</span> ecosystem can stay closer to the streaming layer.</figcaption>
+</figure>
 
 That matters when the alternative is forcing teams into one of these patterns:
 

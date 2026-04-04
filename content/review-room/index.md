@@ -15,6 +15,8 @@ intro_points:
   - Agile Take 2 scheduled for April 15, 2026
 ---
 
+<span class="image featured page-brand-mark"><img src="{{ 'assets/images/site/ml-affairs-logo-investigate.png' | relative_url }}" alt="ML-Affairs investigative logo with ninja engineer mascot" /></span>
+
 This area is intentionally not linked from the main site.
 
 Use the links below directly:

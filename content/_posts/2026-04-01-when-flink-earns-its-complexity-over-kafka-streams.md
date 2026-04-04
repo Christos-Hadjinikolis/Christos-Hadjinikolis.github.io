@@ -77,6 +77,11 @@ But none of that comes for free.
 
 <span class="blog-highlight blog-highlight--flink">Flink</span> asks you to pay an upfront complexity tax in operations, onboarding, debugging, and platform maturity. Misconfigured jobs are not charming. They are expensive. The model feels cleaner once you have paid that tax, not before.
 
+<figure class="blog-figure blog-figure--wide">
+  <img src="{{ 'assets/images/posts/2026/when-flink-earns-its-complexity-over-kafka-streams/flink-complexity-tax.png' | relative_url }}" alt="A hand-drawn ninja engineer facing a Flink complexity tax toll booth before entering a powerful streaming platform city." />
+  <figcaption class="blog-figure__caption">This is the part many framework comparisons skip: the platform is powerful, but you do pay for the privilege of operating it well.</figcaption>
+</figure>
+
 This is why I still reach for <span class="blog-highlight blog-highlight--flink">Flink</span> eagerly when the runtime itself needs to be a serious part of the design.
 
 ## Where Kafka Streams Grew On Me
@@ -145,6 +150,11 @@ In <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span>, the 
 But the deeper point still holds: fault tolerance and task migration are still anchored in changelog restoration, and on large stateful applications that can become one of the dominant operational pain points. Retention choices matter. Restore time matters. Recovery becomes less predictable under failure. Operational patience starts turning into architecture.
 
 * [Running Streams applications and state restoration](https://kafka.apache.org/41/streams/developer-guide/running-app/)
+
+<figure class="blog-figure blog-figure--wide">
+  <img src="{{ 'assets/images/posts/2026/when-flink-earns-its-complexity-over-kafka-streams/restore-and-recovery.png' | relative_url }}" alt="A hand-drawn comparison of Kafka Streams changelog restoration and Flink checkpoint-based restore and recovery." />
+  <figcaption class="blog-figure__caption">At smaller scale this looks like an implementation detail. At larger scale it starts deciding how painful failure and recovery really feel in production.</figcaption>
+</figure>
 
 That is the point where <span class="blog-highlight blog-highlight--flink">Flink</span> stops being a nice architectural preference and starts becoming a serious operational advantage.
 
