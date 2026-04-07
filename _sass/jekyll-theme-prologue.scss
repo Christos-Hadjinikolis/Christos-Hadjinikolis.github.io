@@ -1381,6 +1381,10 @@
 		color: #ba5b2f;
 	}
 
+	.blog-title-accent--verification {
+		color: #477954;
+	}
+
 	.post-reading strong {
 		color: var(--ink-strong);
 		font-weight: 700;
@@ -1467,6 +1471,17 @@
 	.blog-highlight--signal {
 		border-bottom-color: rgba(186, 91, 47, 0.26);
 		color: #b05c35;
+	}
+
+	.blog-highlight--agent {
+		border-bottom-color: rgba(141, 74, 138, 0.24);
+		color: #8d4a8a;
+	}
+
+	.blog-highlight--review,
+	.blog-highlight--verification {
+		border-bottom-color: rgba(74, 128, 87, 0.26);
+		color: #477954;
 	}
 
 	.blog-figure {

@@ -291,7 +291,7 @@ I would lean back toward <span class="blog-highlight blog-highlight--java">Java<
 
 If this post pushed you toward experimenting rather than debating in the abstract, I put together a small starter page here:
 
-* [<span class="blog-highlight blog-highlight--flink">PyFlink</span> starter archetype and agent prompt]({{ '/pyflink-agent-starter.html' | relative_url }})
+* [<span class="blog-highlight blog-highlight--flink">PyFlink</span> starter archetype and agent prompt]({{ '/references/pyflink-agent-starter/' | relative_url }})
 
 It is intentionally minimal. The goal is not to hand you a grand framework. The goal is to give you a sensible first project shape and an agent prompt that can get a small <span class="blog-highlight blog-highlight--python">Python</span>-first streaming scaffold off the ground without immediate chaos.
 

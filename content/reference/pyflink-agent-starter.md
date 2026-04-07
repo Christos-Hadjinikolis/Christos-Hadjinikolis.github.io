@@ -3,7 +3,7 @@ title: PyFlink Starter Archetype
 subtitle: A minimal path from article to working scaffold
 layout: page
 hide: true
-permalink: /pyflink-agent-starter.html
+permalink: /references/pyflink-agent-starter/
 intro_theme: experience
 intro_kicker: "Starter Page"
 intro_summary: "A simple scaffold and agent prompt for readers who want to move from the PyFlink article into a small, Python-first streaming project without guessing the first few structural decisions."
@@ -12,6 +12,8 @@ intro_points:
   - "Official docs worth opening"
   - "Copy-paste local setup commands"
   - "A practical first agent prompt"
+robots: noindex, nofollow, noarchive
+canonical: false
 ---
 
 <div class="page-shell">

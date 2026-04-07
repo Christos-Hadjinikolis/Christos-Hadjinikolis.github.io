@@ -133,6 +133,10 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
 ## Quality Bar
 
 - The post should sound like Christos, not a generic assistant.
+- Christos is generally skeptical of runtime assertions as a primary safety mechanism:
+  - prefer prevention over reactive detection
+  - prefer explicit guardrails, validation, type/system boundaries, and interface/SLA discipline
+  - treat runtime assertions as narrow last-resort checks around critical invariants, not as a lazy substitute for better design
 - The post should teach something non-obvious.
 - The post should reconnect technical ideas to production conditions.
 - The conclusion should land on a practical takeaway, not just a flourish.
