@@ -4,7 +4,7 @@ title_html: "<span class='blog-title-accent blog-title-accent--agile'>Agile</spa
 author: Christos Hadjinikolis
 layout: post
 hide: true
-date: 2026-04-15
+date: 2026-05-01
 permalink: /review-room/post-2/
 robots: noindex, nofollow, noarchive
 canonical: false

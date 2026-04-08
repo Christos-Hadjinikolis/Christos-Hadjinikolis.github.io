@@ -4,7 +4,7 @@ title_html: "<span class='blog-title-accent blog-title-accent--signal'>Trajector
 author: Christos Hadjinikolis
 layout: post
 hide: true
-date: 2026-04-09
+date: 2026-04-20
 permalink: /review-room/post-3/
 robots: noindex, nofollow, noarchive
 canonical: false
