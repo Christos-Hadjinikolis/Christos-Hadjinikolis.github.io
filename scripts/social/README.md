@@ -120,7 +120,7 @@ Recommended workflow for blog-post announcements:
 
 1. Finish the post and make sure `og_image`, `description`, and share metadata are correct.
 2. Commit and push the site changes so the live URL is serving the correct preview metadata.
-3. Publish the LinkedIn announcement against the live URL. If you intentionally want X as well, do that as an explicit extra step rather than the default path.
+3. Publish the LinkedIn announcement against the live URL. `post_linkedin.py` will infer the live page's `og:image`, upload it through LinkedIn's Images API, and attach the resulting thumbnail automatically unless you override it with `--thumbnail-urn` or `--thumbnail-url`.
 4. If you want the LinkedIn thread embedded back into the article, add the `linkedin_post_url` / `linkedin_embed_url` after the post exists.
 5. Commit and push that embed/update as a second pass.
 
@@ -135,6 +135,12 @@ Article-style post with URL preview metadata supplied explicitly:
 ```bash
 make social-linkedin ARGS='--text "New on ML-Affairs" --article-url "https://christos-hadjinikolis.github.io/2026/03/27/when-flink-earns-its-complexity-over-kafka-streams.html" --title "Kafka Streams vs Flink Is The Wrong Question" --description "When Flink earns its complexity over Kafka Streams."'
 ```
+
+Notes:
+
+- LinkedIn's Posts API does not scrape article previews on your behalf. For API-created article posts, the thumbnail must be provided explicitly.
+- Existing article posts cannot be updated later to add a missing thumbnail; if a post was created without one, you need a new post.
+- `--thumbnail-url` lets you override the inferred `og:image` with a specific public image URL.
 
 ## Scripts
 
