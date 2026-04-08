@@ -4,6 +4,8 @@ title_html: "Coding Got Cheap. <span class='blog-title-accent blog-title-accent-
 author: Christos Hadjinikolis
 layout: post
 og_image: assets/images/posts/2026/llm-clis-have-a-new-friction-point/write-throughput-vs-verification-bottleneck.png
+linkedin_post_url: https://www.linkedin.com/feed/update/urn:li:share:7447647698217783296/
+linkedin_embed_url: https://www.linkedin.com/embed/feed/update/urn:li:share:7447647698217783296?collapsed=1
 description: "Why AI coding tools increase code supply faster than teams can verify it, and why smaller PRs, merge queues, property-based tests, static analysis, and explicit guarantees matter more than hype."
 seo_keywords: ["LLM coding agents", "code review", "merge queues", "property-based testing", "static analysis", "engineering productivity", "agentic coding"]
 tldr_why_read: 'Read this if your team is using <span class="blog-highlight blog-highlight--ml">LLM</span> coding tools and is discovering that faster code generation does not automatically reduce <span class="blog-highlight blog-highlight--review">review friction</span> or speed up delivery.'
