@@ -1902,15 +1902,15 @@
 	}
 
 	#nav {
-		ul {
+		> ul {
 			list-style: none;
 			margin-bottom: 0;
-			hr {
+			> hr {
 				margin: auto 1.5em;
 			}
 
-			li {
-				a {
+			> li {
+				> a {
 					display: block;
 					padding: 0.82em 1.5em 0.82em 1.5em;
 					color: rgba(255, 255, 255, 0.62);
@@ -1965,6 +1965,141 @@
 					}
 				}
 			}
+		}
+
+		.nav-archive {
+			margin: 0 0.85em 0.4em 0.85em;
+		}
+
+		.nav-year + .nav-year {
+			margin-top: 0.4em;
+		}
+
+		.nav-year__toggle {
+			@include vendor('appearance', 'none');
+			@include vendor('transition', ('background-color 0.2s ease-in-out', 'color 0.2s ease-in-out', 'box-shadow 0.2s ease-in-out'));
+			background: rgba(255, 255, 255, 0.02);
+			border: 0;
+			border-radius: 1.15rem;
+			box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+			color: rgba(255, 255, 255, 0.74);
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 0.75em;
+			padding: 0.78em 1em 0.78em 1em;
+			text-align: left;
+			width: 100%;
+
+			&::after {
+				font-family: "Font Awesome 5 Free";
+				font-weight: 900;
+				content: '\f078';
+				color: rgba(255, 255, 255, 0.32);
+				font-size: 0.78em;
+				@include vendor('transition', ('transform 0.2s ease-in-out', 'color 0.2s ease-in-out'));
+			}
+
+			&:hover {
+				background: rgba(46, 197, 238, 0.09);
+				box-shadow: inset 0 0 0 1px rgba(46, 197, 238, 0.16);
+				color: #fff;
+
+				&::after {
+					color: var(--accent);
+				}
+			}
+		}
+
+		.nav-year.is-open .nav-year__toggle {
+			background: linear-gradient(135deg, rgba(46, 197, 238, 0.16), rgba(236, 187, 92, 0.08));
+			box-shadow: inset 0 0 0 1px rgba(46, 197, 238, 0.24), 0 10px 24px rgba(6, 14, 18, 0.18);
+			color: #fff;
+
+			&::after {
+				color: var(--accent);
+				transform: rotate(-180deg);
+			}
+		}
+
+		.nav-year__label,
+		.nav-year__count {
+			display: block;
+			line-height: 1.25;
+		}
+
+		.nav-year__label {
+			font-size: 0.9em;
+			font-weight: 800;
+			letter-spacing: 0.02em;
+		}
+
+		.nav-year__count {
+			font-size: 0.62em;
+			font-weight: 700;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			color: rgba(255, 255, 255, 0.42);
+			padding-right: 0.5em;
+		}
+
+		.nav-year__posts {
+			list-style: none;
+			margin: 0.35em 0 0 0;
+			padding: 0;
+		}
+
+		.nav-year__posts[hidden] {
+			display: none !important;
+		}
+
+		.nav-post-link {
+			@include vendor('transition', ('background-color 0.2s ease-in-out', 'color 0.2s ease-in-out', 'transform 0.2s ease-in-out', 'box-shadow 0.2s ease-in-out'));
+			background: rgba(255, 255, 255, 0.02);
+			border: 0;
+			border-radius: 0.95rem;
+			box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+			color: rgba(255, 255, 255, 0.62);
+			display: grid;
+			grid-template-columns: 3.7em minmax(0, 1fr);
+			gap: 0.75em;
+			margin-top: 0.28em;
+			padding: 0.68em 0.95em;
+			text-decoration: none;
+
+			&:hover {
+				background: rgba(46, 197, 238, 0.08);
+				box-shadow: inset 0 0 0 1px rgba(46, 197, 238, 0.15);
+				color: #fff;
+				transform: translateX(2px);
+			}
+
+			&.active {
+				background: rgba(46, 197, 238, 0.16);
+				box-shadow: inset 0 0 0 1px rgba(46, 197, 238, 0.22);
+				color: #fff;
+			}
+		}
+
+		.nav-post-link__date {
+			color: rgba(255, 255, 255, 0.38);
+			display: block;
+			font-size: 0.58em;
+			font-weight: 800;
+			letter-spacing: 0.09em;
+			line-height: 1.45;
+			padding-top: 0.22em;
+			text-transform: uppercase;
+		}
+
+		.nav-post-link__title {
+			display: block;
+			font-size: 0.68em;
+			font-weight: 700;
+			line-height: 1.38;
+			white-space: normal;
+			word-break: break-word;
 		}
 	}
 
@@ -2136,8 +2271,8 @@
 
 		/* Header */
 			#nav {
-				ul {
-					hr {
+				> ul {
+					> hr {
 						margin: auto 1.25em;
 					}
 				}
@@ -2190,10 +2325,10 @@
 			}
 
 			#nav {
-				ul {
+				> ul {
 					list-style: none;
-					li {
-						a {
+					> li {
+						> a {
 							font-size: 0.8em;
 							padding-top: 0.5em;
 							padding-bottom: 0.5em;
@@ -2209,6 +2344,15 @@
 							}
 						}
 					}
+				}
+
+				.nav-post-link {
+					grid-template-columns: 1fr;
+					gap: 0.2em;
+				}
+
+				.nav-post-link__date {
+					padding-top: 0;
 				}
 			}
 
@@ -2309,16 +2453,25 @@
 			}
 
 			#nav {
-				ul {
+				> ul {
 					list-style: none;
-					hr {
+					> hr {
 						margin: auto 1.25em;
 					}
-					li {
-						a {
+					> li {
+						> a {
 							padding: 0.5em 1.25em 0.5em 1.25em;
 						}
 					}
+				}
+
+				.nav-post-link {
+					grid-template-columns: 1fr;
+					gap: 0.2em;
+				}
+
+				.nav-post-link__date {
+					padding-top: 0;
 				}
 			}
 

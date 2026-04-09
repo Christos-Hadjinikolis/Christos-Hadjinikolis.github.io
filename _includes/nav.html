@@ -1,15 +1,21 @@
 {%- comment -%}
   Include vars:
   section_items
+  blog_posts
 {%- endcomment -%}
 
 <!-- Nav -->
 <nav id="nav">
-  <ul>
+  <ul class="nav-list">
+    {%- assign _blog_posts = include.blog_posts | where_exp: "post", "post.hide != true" -%}
+    {%- assign _is_blog_archive = _blog_posts[0] -%}
     {%- assign _pages = site.html_pages | where_exp: "page", "page.hide != true" -%}
     {%- unless _pages == null -%}
       {%- assign _pages = _pages | sort: 'order' -%}
       {%- for _page in _pages -%}
+        {%- if _is_blog_archive and _page.url != '/' and _page.url != page.url -%}
+          {%- continue -%}
+        {%- endif -%}
         {%- assign _title = _page.title | default: _page.layout -%}
         {%- assign _slug = _title | slugify -%}
         {%- assign _icon = _page.icon | default: 'fa-link' -%}
@@ -35,8 +41,34 @@
       {%- endfor -%}
     {%- endunless -%}
     {%- assign _sections = include.section_items | where_exp: "section", "section.hide != true" -%}
-    {%- if _pages[0] and _sections[0] -%}<hr>{%- endif -%}
-    {%- unless _sections == null -%}
+    {%- if _blog_posts[0] -%}
+      {%- assign _year_groups = _blog_posts | group_by_exp: "post", "post.date | date: '%Y'" -%}
+      <li class="nav-archive" data-nav-blog-archive>
+        {%- for _year_group in _year_groups -%}
+          {%- assign _year_panel_id = 'nav-year-' | append: _year_group.name -%}
+          {%- assign _post_count = _year_group.items | size -%}
+          <section class="nav-year{% if forloop.first %} is-open{% endif %}">
+            <button class="nav-year__toggle" type="button" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="{{- _year_panel_id -}}">
+              <span class="nav-year__label">{{- _year_group.name -}}</span>
+              <span class="nav-year__count">{{ _post_count }} post{% if _post_count != 1 %}s{% endif %}</span>
+            </button>
+            <ul id="{{- _year_panel_id -}}" class="nav-year__posts"{% unless forloop.first %} hidden{% endunless %}>
+              {%- for _post in _year_group.items -%}
+                {%- assign _post_title = _post.title | default: 'Untitled' -%}
+                {%- assign _post_slug = _post.title_html | default: _post_title | strip_html | slugify -%}
+                <li>
+                  <a href="#{{- _post_slug -}}" class="scrolly nav-post-link">
+                    <span class="nav-post-link__date">{{- _post.date | date: "%b %d" -}}</span>
+                    <span class="nav-post-link__title">{{- _post_title -}}</span>
+                  </a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </section>
+        {%- endfor -%}
+      </li>
+    {%- elsif _sections[0] -%}
+      {%- if _pages[0] -%}<hr>{%- endif -%}
       {%- for _sect in _sections -%}
         {%- assign _title = _sect.title | default: _sect.layout | default: 'Untitled' -%}
         {%- assign _slug = _title | slugify -%}
@@ -50,6 +82,6 @@
         {%- endif -%}
         <li><a href="#{{- _slug -}}" id="{{- _slug -}}-link" class="scrolly"><span class="{{ _class }} {{ _icon }}">{{- _title -}}</span></a></li>
       {%- endfor -%}
-    {%- endunless -%}
+    {%- endif -%}
   </ul>
 </nav>

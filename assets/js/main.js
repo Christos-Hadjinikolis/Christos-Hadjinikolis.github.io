@@ -88,6 +88,86 @@
 
 				$.scrollzer(ids, { pad: 200, lastHack: true });
 
+			var setOpenYear = function(archiveEl, targetYearEl) {
+
+				if (!archiveEl)
+					return;
+
+				var yearEls = archiveEl.querySelectorAll('.nav-year');
+
+				for (var i = 0; i < yearEls.length; i++) {
+
+					var yearEl = yearEls[i],
+						toggleEl = yearEl.querySelector('.nav-year__toggle'),
+						panelEl = yearEl.querySelector('.nav-year__posts'),
+						isOpen = !!targetYearEl && yearEl === targetYearEl;
+
+					if (isOpen)
+						yearEl.classList.add('is-open');
+					else
+						yearEl.classList.remove('is-open');
+
+					if (toggleEl)
+						toggleEl.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
+					if (panelEl) {
+						if (isOpen)
+							panelEl.removeAttribute('hidden');
+						else
+							panelEl.setAttribute('hidden', 'hidden');
+					}
+
+				}
+
+			};
+
+			var archiveEls = document.querySelectorAll('#nav [data-nav-blog-archive]');
+
+			for (var archiveIndex = 0; archiveIndex < archiveEls.length; archiveIndex++) {
+
+				var archiveEl = archiveEls[archiveIndex],
+					matchLink = null,
+					defaultYearEl = null;
+
+				if (window.location.hash)
+					matchLink = archiveEl.querySelector('.nav-post-link[href="' + window.location.hash + '"]');
+
+				if (matchLink) {
+					setOpenYear(archiveEl, matchLink.closest('.nav-year'));
+					continue;
+				}
+
+				defaultYearEl = archiveEl.querySelector('.nav-year');
+
+				if (defaultYearEl)
+					setOpenYear(archiveEl, defaultYearEl);
+
+			}
+
+			document.addEventListener('click', function(event) {
+
+				var toggleEl = event.target.closest('.nav-year__toggle');
+
+				if (!toggleEl)
+					return;
+
+				var archiveEl = toggleEl.closest('[data-nav-blog-archive]'),
+					yearEl = toggleEl.closest('.nav-year'),
+					isCurrentlyOpen = yearEl && yearEl.classList.contains('is-open');
+
+				if (!archiveEl || !yearEl)
+					return;
+
+				event.preventDefault();
+				event.stopPropagation();
+
+				if (isCurrentlyOpen)
+					setOpenYear(archiveEl, null);
+				else
+					setOpenYear(archiveEl, yearEl);
+
+			}, true);
+
 		// Header (narrower + mobile).
 
 			// Toggle.
