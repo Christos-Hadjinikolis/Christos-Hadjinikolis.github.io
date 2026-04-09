@@ -36,11 +36,16 @@ Rules:
 
 - Do not overwrite `cv/latex/cv.tex` unless the user explicitly asks.
 - Create the tailored variant under `cv/latex/variants/<role-slug>/`.
+- Preserve the existing section set and overall structure unless the user explicitly asks for a redesign.
+- Treat the baseline CV as already tightly optimised for two pages; tailor by replacing or tightening content, not by making the document longer.
+- Keep the final variant to the same page count as the source CV unless the user explicitly asks otherwise.
 - Only change the text content, not the underlying structure or formatting, unless the user explicitly asks for a redesign.
 - Name the entrypoint `cv.tex` inside that variant directory unless there is a strong reason not to.
 - Store the target role context inside the variant folder.
 - Store role metadata under `cv/latex/variants/<role-slug>/_role-context/`.
 - Create `job-post.md` inside that `_role-context/` folder containing the source link, capture date if known, and the job description text used for tailoring.
+- If the user provides both a recruiter note and a public job description, record both and state which one controls positioning decisions.
+- If the user says the real target seniority differs from the advertised title, tailor the emphasis to that actual target level while keeping factual role titles and claims honest.
 - Create `fit-assessment.md` inside that `_role-context/` folder containing:
   - why the profile is a strong fit
   - where the fit is partial or weak
@@ -49,20 +54,23 @@ Rules:
 - Build the variant by copying the master `cv.tex` and then adjusting relative LaTeX paths for the nested location.
 - For variants stored one level below `cv/latex/variants/`, use `../../friggeri-cv` as the class path and `../../images/` as the graphics path unless the source layout changes.
 - Tailor by reordering emphasis, refining summary text, tightening bullets, and foregrounding matching skills.
+- Prefer Staff-, Lead-, or Principal-level framing only when the user's actual background supports that framing and the user explicitly indicates the target seniority.
 - Do not invent experience, tools, impact, certifications, or titles.
 - If the job description asks for something unsupported by the source CV, say so clearly and handle it as a gap rather than fabricating.
 
 ## Tailoring Workflow
 
 1. Read the job description and extract the actual requirements, not just keywords.
-2. Map each requirement to evidence already present in the CV source or supplied by the user.
-3. Decide whether the request should update the master CV or produce a role-specific variant.
-4. For variants, preserve the master narrative but adjust emphasis:
+2. Read the user's constraints and positioning notes first; treat them as binding unless they would force inaccurate claims.
+3. Map each requirement to evidence already present in the CV source or supplied by the user.
+4. Decide whether the request should update the master CV or produce a role-specific variant.
+5. For variants, preserve the master narrative but adjust emphasis:
    - headline and summary
    - ordering and wording of experience bullets
    - skill grouping and prominence
    - removal of lower-value detail when space is tight
-5. Keep the final document credible and readable. Avoid keyword stuffing.
+6. When seniority positioning is part of the ask, raise the leadership and ownership emphasis through wording, not by changing factual employment titles.
+7. Keep the final document credible and readable. Avoid keyword stuffing.
 
 ## File Conventions
 
@@ -91,5 +99,7 @@ If the user asks to publish the new master PDF to the website, copy the compiled
 
 - Check that the LaTeX still matches the document's existing structure and macros.
 - Check links, line breaks, and role dates when editing content.
+- Confirm the variant still compiles to the intended page count, typically two pages.
 - If you cannot compile locally, say so explicitly.
 - When tailoring to a role, record the positioning choices and evidence gaps in `_role-context/fit-assessment.md`.
+- After compiling a variant, clean unnecessary LaTeX intermediates so the variant folder keeps source, context, and final PDF artifacts only.
