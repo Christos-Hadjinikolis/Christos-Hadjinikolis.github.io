@@ -6,6 +6,7 @@ layout: post
 og_image: assets/images/posts/2020/brexit-nlp-dataset/eu-brexit-classifier.png
 description: "How I built a BREXIT-related NLP dataset and why real-world labeling and collection choices matter in applied NLP."
 seo_keywords: ["BREXIT NLP", "NLP dataset", "text classification", "twitter data", "applied machine learning"]
+nav_tags: ["NLP", "Dataset", "Brexit"]
 tldr_why_read: "Useful if you care about how topical <span class=\"blog-highlight blog-highlight--nlp\">NLP</span> datasets get assembled outside clean benchmark settings."
 tldr_persona: "Practitioners building applied <span class=\"blog-highlight blog-highlight--nlp\">NLP</span> datasets from messy real-world sources rather than benchmark-ready corpora."
 tldr_learn: "How the dataset idea emerged, why labeling is the hard part, and what makes a practical <span class=\"blog-highlight blog-highlight--nlp\">NLP</span> dataset usable."

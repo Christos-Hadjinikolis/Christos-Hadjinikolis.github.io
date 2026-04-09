@@ -7,6 +7,7 @@ og_image: assets/images/posts/2020/on-style-transfer/2020-08-15-style-transfer-k
 mathjax: true
 description: "An intuitive explanation of neural style transfer, grounded in Heraklion imagery and the core mechanics behind the model."
 seo_keywords: ["style transfer", "neural style transfer", "deep learning", "computer vision", "VGG19"]
+nav_tags: ["Vision", "NST", "VGG19"]
 tldr_why_read: "A more intuitive route into <span class=\"blog-highlight blog-highlight--vision\">neural style transfer</span> than a dry paper summary."
 tldr_persona: "<span class=\"blog-highlight blog-highlight--ml\">ML</span> practitioners and curious readers who want to understand <span class=\"blog-highlight blog-highlight--vision\">style transfer</span> through intuition before diving into the paper."
 tldr_learn: "The core mental model behind <span class=\"blog-highlight blog-highlight--vision\">style transfer</span>, how the losses work, and why the generated image changes."

@@ -56,9 +56,20 @@
               {%- for _post in _year_group.items -%}
                 {%- assign _post_title = _post.title | default: 'Untitled' -%}
                 {%- assign _post_slug = _post.title_html | default: _post_title | strip_html | slugify -%}
+                {%- assign _nav_tags = _post.nav_tags | default: _post.seo_keywords | slice: 0, 3 -%}
                 <li>
                   <a href="#{{- _post_slug -}}" class="scrolly nav-post-link">
-                    <span class="nav-post-link__date">{{- _post.date | date: "%b %d" -}}</span>
+                    <span class="nav-post-link__meta">
+                      <span class="nav-post-link__date">{{- _post.date | date: "%b %d" -}}</span>
+                      {%- if _nav_tags[0] -%}
+                        <span class="nav-post-link__tags">
+                          {%- for _tag in _nav_tags limit:3 -%}
+                            {%- assign _tag_slug = _tag | slugify -%}
+                            <span class="nav-post-link__tag nav-post-link__tag--{{ _tag_slug }}">{{- _tag -}}</span>
+                          {%- endfor -%}
+                        </span>
+                      {%- endif -%}
+                    </span>
                     <span class="nav-post-link__title">{{- _post_title -}}</span>
                   </a>
                 </li>

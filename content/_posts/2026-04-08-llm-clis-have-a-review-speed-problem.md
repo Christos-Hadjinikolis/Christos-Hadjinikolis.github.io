@@ -8,6 +8,7 @@ linkedin_post_url: https://www.linkedin.com/feed/update/urn:li:share:74476476982
 linkedin_embed_url: https://www.linkedin.com/embed/feed/update/urn:li:share:7447647698217783296?collapsed=1
 description: "Why AI coding tools increase code supply faster than teams can verify it, and why smaller PRs, merge queues, property-based tests, static analysis, and explicit guarantees matter more than hype."
 seo_keywords: ["LLM coding agents", "code review", "merge queues", "property-based testing", "static analysis", "engineering productivity", "agentic coding"]
+nav_tags: ["LLMs", "Review", "Verification"]
 tldr_why_read: 'Read this if your team is using <span class="blog-highlight blog-highlight--ml">LLM</span> coding tools and is discovering that faster code generation does not automatically reduce <span class="blog-highlight blog-highlight--review">review friction</span> or speed up delivery.'
 tldr_persona: 'Especially useful for tech leads, staff engineers, and platform teams trying to scale delivery while <span class="blog-highlight blog-highlight--review">review</span>, integration, and trust remain stubbornly human bottlenecks.'
 tldr_learn: 'Why the real constraint is now <span class="blog-highlight blog-highlight--verification">verification</span>, why <span class="blog-highlight blog-highlight--agent">agents</span> still do not carry risk ownership or real <span class="blog-highlight blog-highlight--agent">agency</span>, and why smaller PRs, merge queues, and stronger guarantees matter more than raw output.'

@@ -6,6 +6,7 @@ layout: post
 og_image: assets/images/posts/2023/agile-in-action/2023-10-31-Turner.png
 description: "What Agile looked like to me in 2023 at Vortexa: helping data scientists and engineers learn together, communicate clearly, and ship ML systems that can survive production."
 seo_keywords: ["agile machine learning", "data science and engineering", "ML teams", "productionizing models", "experimentation", "Vortexa"]
+nav_tags: ["Agile", "Teams", "Production"]
 tldr_why_read: "Read this if your <span class=\"blog-highlight blog-highlight--ml\">ML</span> work keeps getting stuck between promising notebooks and production systems that nobody fully owns."
 tldr_persona: "Especially useful for data scientists, software engineers, and <span class=\"blog-highlight blog-highlight--ml\">ML</span> leads trying to make cross-functional teams work without hiding behind process."
 tldr_learn: "Why <span class=\"blog-highlight blog-highlight--agile\">Agile</span> mattered to me less as ritual and more as a way to synchronise experimentation, communication, and engineering discipline."

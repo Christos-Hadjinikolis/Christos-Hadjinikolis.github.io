@@ -10,6 +10,7 @@ linkedin_embed_url: "https://www.linkedin.com/embed/feed/update/urn:li:share:744
 substack_post_url: "https://open.substack.com/pub/christoshadjinikolis/p/pyflink-pros-cons-in-2026html?r=1eyoht&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true"
 description: "Why PyFlink becomes attractive once Python training and Java prediction start drifting apart, and where the JVM/runtime boundary still costs you."
 seo_keywords: ["PyFlink", "Apache Flink", "Python streaming", "ONNX", "streaming pipelines"]
+nav_tags: ["PyFlink", "Streaming", "ONNX"]
 tldr_why_read: 'Read this if your team trains in <span class="blog-highlight blog-highlight--python">Python</span>, predicts in <span class="blog-highlight blog-highlight--java">Java</span>, and keeps paying for that split in latency, feature drift, and debugging time.'
 tldr_persona: 'Boldly useful for <span class="blog-highlight blog-highlight--ml">ML</span> platform engineers and streaming teams forced to split training, feature logic, and inference across <span class="blog-highlight blog-highlight--python">Python</span> and JVM services.'
 tldr_learn: 'Why <span class="blog-highlight blog-highlight--python">Python</span>-native feature and model logic is the real case for <span class="blog-highlight blog-highlight--flink">PyFlink</span>, where <span class="blog-highlight blog-highlight--onnx">ONNX</span> and model-as-a-service help, and where the runtime still pushes back.'

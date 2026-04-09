@@ -1972,7 +1972,7 @@
 		}
 
 		.nav-year + .nav-year {
-			margin-top: 0.4em;
+			margin-top: 0.08em;
 		}
 
 		.nav-year__toggle {
@@ -2085,19 +2085,286 @@
 		.nav-post-link__date {
 			color: rgba(255, 255, 255, 0.38);
 			display: block;
-			font-size: 0.58em;
-			font-weight: 800;
-			letter-spacing: 0.09em;
-			line-height: 1.45;
+			font-family: 'Fraunces', serif;
+			font-size: 0.62em;
+			font-weight: 700;
+			letter-spacing: 0.03em;
+			line-height: 1.3;
 			padding-top: 0.22em;
 			text-transform: uppercase;
 		}
 
+		.nav-post-link__meta {
+			display: flex;
+			flex-direction: column;
+			gap: 0.55em;
+			min-width: 0;
+		}
+
+		.nav-post-link__tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.35em;
+		}
+
+		.nav-post-link__tag {
+			border-radius: 999px;
+			display: inline-flex;
+			align-items: center;
+			background: rgba(46, 197, 238, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(46, 197, 238, 0.22);
+			color: #83e9ff;
+			font-family: 'Manrope', sans-serif;
+			font-size: 0.46em;
+			font-weight: 800;
+			letter-spacing: 0.07em;
+			line-height: 1;
+			padding: 0.48em 0.7em;
+			text-transform: uppercase;
+			white-space: nowrap;
+		}
+
+		.nav-post-link__tag--python {
+			background: rgba(214, 179, 54, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(214, 179, 54, 0.26);
+			color: #f0cf69;
+		}
+
+		.nav-post-link__tag--java {
+			background: rgba(206, 95, 78, 0.15);
+			box-shadow: inset 0 0 0 1px rgba(206, 95, 78, 0.24);
+			color: #f08f7d;
+		}
+
+		.nav-post-link__tag--flink {
+			background: rgba(255, 82, 145, 0.15);
+			box-shadow: inset 0 0 0 1px rgba(255, 82, 145, 0.24);
+			color: #ff89b6;
+		}
+
+		.nav-post-link__tag--kafka {
+			background: rgba(159, 169, 179, 0.15);
+			box-shadow: inset 0 0 0 1px rgba(159, 169, 179, 0.22);
+			color: #c7d0d7;
+		}
+
+		.nav-post-link__tag--pyflink {
+			background: rgba(199, 93, 160, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(199, 93, 160, 0.24);
+			color: #eca0cf;
+		}
+
+		.nav-post-link__tag--onnx {
+			background: rgba(74, 128, 87, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(74, 128, 87, 0.24);
+			color: #93d0a1;
+		}
+
+		.nav-post-link__tag--aws {
+			background: rgba(181, 107, 5, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(181, 107, 5, 0.24);
+			color: #f0b45a;
+		}
+
+		.nav-post-link__tag--avro {
+			background: rgba(179, 71, 61, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(179, 71, 61, 0.24);
+			color: #eb8e85;
+		}
+
+		.nav-post-link__tag--agile {
+			background: rgba(35, 125, 152, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(35, 125, 152, 0.24);
+			color: #74d0ea;
+		}
+
+		.nav-post-link__tag--ml {
+			background: rgba(23, 139, 154, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(23, 139, 154, 0.22);
+			color: #72dae6;
+		}
+
+		.nav-post-link__tag--mlops {
+			background: rgba(37, 167, 180, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(37, 167, 180, 0.22);
+			color: #7fe8f0;
+		}
+
+		.nav-post-link__tag--ml-eng {
+			background: rgba(66, 178, 198, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(66, 178, 198, 0.22);
+			color: #8fe9f6;
+		}
+
+		.nav-post-link__tag--llms {
+			background: rgba(155, 110, 223, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(155, 110, 223, 0.24);
+			color: #d1aeff;
+		}
+
+		.nav-post-link__tag--review {
+			background: rgba(92, 116, 157, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(92, 116, 157, 0.22);
+			color: #adc0e8;
+		}
+
+		.nav-post-link__tag--verification {
+			background: rgba(71, 121, 84, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(71, 121, 84, 0.24);
+			color: #8ed3a0;
+		}
+
+		.nav-post-link__tag--streaming {
+			background: rgba(53, 176, 206, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(53, 176, 206, 0.22);
+			color: #81e2ff;
+		}
+
+		.nav-post-link__tag--pipelines {
+			background: rgba(61, 161, 124, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(61, 161, 124, 0.22);
+			color: #88e0b0;
+		}
+
+		.nav-post-link__tag--i-o {
+			background: rgba(88, 158, 201, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(88, 158, 201, 0.22);
+			color: #9ed7ff;
+		}
+
+		.nav-post-link__tag--vision {
+			background: rgba(141, 74, 138, 0.15);
+			box-shadow: inset 0 0 0 1px rgba(141, 74, 138, 0.22);
+			color: #d7a1d3;
+		}
+
+		.nav-post-link__tag--nst {
+			background: rgba(178, 91, 168, 0.15);
+			box-shadow: inset 0 0 0 1px rgba(178, 91, 168, 0.22);
+			color: #eab3e2;
+		}
+
+		.nav-post-link__tag--vgg19 {
+			background: rgba(112, 74, 168, 0.15);
+			box-shadow: inset 0 0 0 1px rgba(112, 74, 168, 0.22);
+			color: #c1a3f1;
+		}
+
+		.nav-post-link__tag--nlp {
+			background: rgba(47, 95, 150, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(47, 95, 150, 0.24);
+			color: #8cb8f2;
+		}
+
+		.nav-post-link__tag--dataset {
+			background: rgba(67, 131, 194, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(67, 131, 194, 0.22);
+			color: #97cbff;
+		}
+
+		.nav-post-link__tag--brexit {
+			background: rgba(46, 95, 157, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(46, 95, 157, 0.22);
+			color: #84b4f5;
+		}
+
+		.nav-post-link__tag--ais {
+			background: rgba(186, 91, 47, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(186, 91, 47, 0.24);
+			color: #f0a073;
+		}
+
+		.nav-post-link__tag--trust {
+			background: rgba(83, 143, 108, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(83, 143, 108, 0.22);
+			color: #9dddaf;
+		}
+
+		.nav-post-link__tag--maritime {
+			background: rgba(53, 122, 178, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(53, 122, 178, 0.22);
+			color: #88c8ff;
+		}
+
+		.nav-post-link__tag--writing {
+			background: rgba(191, 127, 63, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(191, 127, 63, 0.22);
+			color: #efba82;
+		}
+
+		.nav-post-link__tag--blogging {
+			background: rgba(171, 104, 64, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(171, 104, 64, 0.22);
+			color: #e2ae8e;
+		}
+
+		.nav-post-link__tag--mindset {
+			background: rgba(146, 96, 173, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(146, 96, 173, 0.22);
+			color: #d0a8e9;
+		}
+
+		.nav-post-link__tag--macos {
+			background: rgba(120, 120, 128, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(120, 120, 128, 0.22);
+			color: #c3c7cf;
+		}
+
+		.nav-post-link__tag--tooling {
+			background: rgba(90, 133, 168, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(90, 133, 168, 0.22);
+			color: #a9d0f1;
+		}
+
+		.nav-post-link__tag--delivery {
+			background: rgba(219, 164, 74, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(219, 164, 74, 0.24);
+			color: #f2ca7a;
+		}
+
+		.nav-post-link__tag--teams {
+			background: rgba(83, 157, 176, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(83, 157, 176, 0.22);
+			color: #9cdeef;
+		}
+
+		.nav-post-link__tag--production {
+			background: rgba(95, 149, 104, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(95, 149, 104, 0.22);
+			color: #a4e0ae;
+		}
+
+		.nav-post-link__tag--schemas {
+			background: rgba(160, 88, 72, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(160, 88, 72, 0.22);
+			color: #e1ab98;
+		}
+
+		.nav-post-link__tag--replay {
+			background: rgba(88, 137, 112, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(88, 137, 112, 0.22);
+			color: #9ed7af;
+		}
+
+		.nav-post-link__tag--hiring {
+			background: rgba(160, 109, 63, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(160, 109, 63, 0.22);
+			color: #dfb07d;
+		}
+
+		.nav-post-link__tag--roles {
+			background: rgba(104, 123, 168, 0.16);
+			box-shadow: inset 0 0 0 1px rgba(104, 123, 168, 0.22);
+			color: #b3c4ef;
+		}
+
 		.nav-post-link__title {
 			display: block;
-			font-size: 0.68em;
+			font-family: 'Fraunces', serif;
+			font-size: 0.62em;
 			font-weight: 700;
-			line-height: 1.38;
+			line-height: 1.3;
+			letter-spacing: -0.01em;
 			white-space: normal;
 			word-break: break-word;
 		}
@@ -2354,6 +2621,14 @@
 				.nav-post-link__date {
 					padding-top: 0;
 				}
+
+				.nav-post-link__meta {
+					gap: 0.4em;
+				}
+
+				.nav-post-link__tags {
+					gap: 0.28em;
+				}
 			}
 
 		/* Footer */
@@ -2472,6 +2747,14 @@
 
 				.nav-post-link__date {
 					padding-top: 0;
+				}
+
+				.nav-post-link__meta {
+					gap: 0.4em;
+				}
+
+				.nav-post-link__tags {
+					gap: 0.28em;
 				}
 			}
 

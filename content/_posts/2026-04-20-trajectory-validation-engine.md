@@ -5,6 +5,7 @@ author: Christos Hadjinikolis
 layout: post
 description: "Why vessel tracking is now a trust problem shaped by shadow fleets, dark vessels, AIS deception, and contested geopolitics rather than a simple filtering problem."
 seo_keywords: ["Trajectory Validation Engine", "shadow fleet", "dark vessels", "AIS spoofing", "vessel tracking", "maritime intelligence", "signal integrity"]
+nav_tags: ["AIS", "Trust", "Maritime"]
 tldr_why_read: "Read this if you want to understand why vessel tracking in 2026 is less about drawing clean lines on a map and more about deciding which <span class=\"blog-highlight blog-highlight--signal\">signals</span> deserve to be believed."
 tldr_persona: "Especially useful for maritime intelligence engineers, risk teams, and <span class=\"blog-highlight blog-highlight--ml\">ML</span> practitioners working on systems that must stay credible when the data itself becomes contested."
 tldr_learn: "What <span class=\"blog-highlight blog-highlight--signal\">dark vessels</span> and <span class=\"blog-highlight blog-highlight--signal\">shadow fleets</span> actually mean in practice, why they turn tracking into a trust problem, and how a <span class=\"blog-highlight blog-highlight--signal\">Trajectory Validation Engine</span> helps systems stay useful under uncertainty."

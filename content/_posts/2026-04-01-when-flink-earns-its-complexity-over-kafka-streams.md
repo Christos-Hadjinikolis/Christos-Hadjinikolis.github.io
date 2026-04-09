@@ -10,6 +10,7 @@ linkedin_embed_url: https://www.linkedin.com/embed/feed/update/urn:li:share:7445
 substack_post_url: "https://christoshadjinikolis.substack.com/p/kafka-streams-vs-flink-is-the-wrong"
 description: "A production-minded comparison of Kafka Streams and Flink that focuses on state, recovery, rescaling, and platform boundaries."
 seo_keywords: ["Kafka Streams", "Apache Flink", "stream processing", "stateful streaming", "event-driven architecture"]
+nav_tags: ["Kafka", "Flink", "Streaming"]
 tldr_why_read: 'Read this if you are tempted to replace <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span> with <span class="blog-highlight blog-highlight--flink">Flink</span> mostly because <span class="blog-highlight blog-highlight--flink">Flink</span> feels cleaner, more modern, or more familiar.'
 tldr_persona: 'Especially useful for streaming engineers and platform teams inheriting messy <span class="blog-highlight blog-highlight--kafka">Kafka</span>-native systems and deciding whether to rewrite or rehabilitate them.'
 tldr_learn: 'Where <span class="blog-highlight blog-highlight--flink">Flink</span> genuinely pulls away, where <span class="blog-highlight blog-highlight--kafka">Kafka Streams</span> is stronger than its reputation, and why familiarity bias is a dangerous architecture strategy.'

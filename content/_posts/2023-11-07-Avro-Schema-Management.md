@@ -6,6 +6,7 @@ layout: post
 og_image: assets/images/posts/2023/avro-schema-management/2023-11-07-Example-Architecture.png
 description: "Why Avro schema discipline matters in data engineering and how to generate Python data classes from Avro schemas."
 seo_keywords: ["Avro schema", "Python data classes", "data engineering", "schema evolution", "serialization"]
+nav_tags: ["Avro", "Schemas", "Python"]
 tldr_why_read: "Useful if you want a practical reason to care about <span class=\"blog-highlight blog-highlight--avro\">Avro</span>-level schema discipline instead of treating it as ceremony."
 tldr_persona: "Data and <span class=\"blog-highlight blog-highlight--ml\">ML</span> engineers who need stricter schema discipline without giving up <span class=\"blog-highlight blog-highlight--python\">Python</span>-friendly developer workflows."
 tldr_learn: "Why <span class=\"blog-highlight blog-highlight--avro\">Avro</span> matters, where schema drift hurts, and how to turn <span class=\"blog-highlight blog-highlight--avro\">Avro</span> definitions into <span class=\"blog-highlight blog-highlight--python\">Python</span>-friendly data classes."

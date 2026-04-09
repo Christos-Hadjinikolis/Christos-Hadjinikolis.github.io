@@ -5,6 +5,7 @@ author: Christos Hadjinikolis
 layout: post
 description: "Why ML Engineer, Data Scientist, Data Engineer, and Software Engineer are still used too ambiguously, why that hurts teams, and why the industry needs clearer role definitions."
 seo_keywords: ["ML engineer", "data scientist", "data engineer", "software engineer", "applied data scientist", "machine learning engineer", "job taxonomy", "AI hiring"]
+nav_tags: ["Hiring", "Roles", "ML Eng"]
 tldr_why_read: "Read this if you are tired of job descriptions that quietly ask one person to do modelling, pipelines, serving, product thinking, and software engineering all at once."
 tldr_persona: "Especially useful for <span class=\"blog-highlight blog-highlight--ml\">ML</span> engineers, data scientists, tech leads, and hiring managers trying to build fairer teams and clearer role boundaries."
 tldr_learn: "Why the term <span class=\"blog-highlight blog-highlight--ml\">ML Engineer</span> is still too ambiguous, how it overlaps with adjacent roles, and why clearer taxonomy matters for hiring, team design, and delivery quality."

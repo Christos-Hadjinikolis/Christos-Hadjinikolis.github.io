@@ -6,6 +6,7 @@ layout: post
 og_image: assets/images/posts/2020/aws-ml-certification/2020-07-29-AWS-Cert.png
 description: "A practical guide to the AWS Machine Learning Specialty exam, including difficulty, study scope, and how long preparation usually takes."
 seo_keywords: ["AWS certification", "AWS machine learning specialty", "exam preparation", "machine learning certification", "cloud ML"]
+nav_tags: ["AWS", "Certification", "ML"]
 tldr_why_read: "Useful if you are deciding whether the <span class=\"blog-highlight blog-highlight--aws\">AWS</span> <span class=\"blog-highlight blog-highlight--ml\">ML</span> Specialty is worth the effort and how to prepare for it."
 tldr_persona: "Data scientists, <span class=\"blog-highlight blog-highlight--ml\">ML</span> engineers, and cloud practitioners deciding whether to invest in the <span class=\"blog-highlight blog-highlight--aws\">AWS</span> <span class=\"blog-highlight blog-highlight--ml\">ML</span> Specialty exam."
 tldr_learn: "How hard the exam really is, how its topics are split, and what kind of study timeline makes sense."

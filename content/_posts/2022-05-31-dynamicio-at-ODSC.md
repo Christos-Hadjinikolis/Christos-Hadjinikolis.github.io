@@ -6,6 +6,7 @@ layout: post
 og_image: assets/images/posts/2022/dynamicio-at-odsc/2022-06-01-dynamicio.png
 description: "Why ML pipelines need I/O abstraction, and how wrapping file and storage concerns improves maintainability, testing, and delivery."
 seo_keywords: ["MLOps", "I/O abstraction", "dynamicio", "ML pipelines", "dependency inversion"]
+nav_tags: ["MLOps", "I/O", "Pipelines"]
 tldr_why_read: "Read this if your <span class=\"blog-highlight blog-highlight--ml\">ML</span> codebase keeps getting buried under storage, schema, and environment-specific glue code."
 tldr_persona: "<span class=\"blog-highlight blog-highlight--ml\">ML</span> engineers and platform builders whose pipeline code is dominated by file, storage, and schema handling instead of core logic."
 tldr_learn: "Why I/O concerns overwhelm <span class=\"blog-highlight blog-highlight--ml\">ML</span> pipeline code, and why abstraction helps more than another pile of helpers."

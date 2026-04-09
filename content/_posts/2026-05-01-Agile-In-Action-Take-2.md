@@ -6,6 +6,7 @@ layout: post
 og_image: assets/images/posts/2023/agile-in-action/2023-10-31-Turner.png
 description: "A 2026 revisit of Agile in ML systems: balancing experimentation, determinism, replayability, and business constraints once models are truly in production."
 seo_keywords: ["agile machine learning", "production ML", "ML systems", "streaming systems", "experimentation vs production", "replayability"]
+nav_tags: ["Agile", "Replay", "Production"]
 tldr_why_read: "Read this if you are tired of vague <span class=\"blog-highlight blog-highlight--agile\">Agile</span> advice that falls apart the moment an <span class=\"blog-highlight blog-highlight--ml\">ML</span> system has to run in production."
 tldr_persona: "Especially useful for <span class=\"blog-highlight blog-highlight--ml\">ML</span> leads, platform engineers, and teams operating real-time prediction systems under business and reliability constraints."
 tldr_learn: "Why <span class=\"blog-highlight blog-highlight--agile\">Agile</span> in production <span class=\"blog-highlight blog-highlight--ml\">ML</span> is less about sprint ritual and more about safe change, replayability, state control, and decision quality."
