@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">About me icon</title>
+  <desc id="desc">A portrait badge for the about me section.</desc>
+  <defs>
+    <linearGradient id="bg" x1="10" y1="12" x2="54" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e9875b"/>
+      <stop offset="1" stop-color="#c75c4f"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="48" height="48" rx="14" fill="url(#bg)"/>
+  <rect x="8.75" y="8.75" width="46.5" height="46.5" rx="13.25" fill="none" stroke="#ffd8c9" stroke-opacity=".28" stroke-width="1.5"/>
+  <circle cx="32" cy="25.5" r="8" fill="#fff6f0"/>
+  <path d="M18.5 44c1.9-7.1 6.4-10.7 13.5-10.7 7.1 0 11.6 3.6 13.5 10.7" fill="#fff6f0"/>
+  <path d="M26.5 23.2c1.6-3.2 4.3-4.8 8-4.8 2.3 0 4.2.6 5.8 1.9-1.2-4.1-4.1-6.1-8.7-6.1-4.4 0-7.6 2.2-9.5 6.6 1.4-.4 2.8-.2 4.4.6Z" fill="#17323a" opacity=".9"/>
+</svg>

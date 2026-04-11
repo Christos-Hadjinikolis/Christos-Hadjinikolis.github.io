@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Professional experience icon</title>
+  <desc id="desc">A briefcase badge for the experience page.</desc>
+  <defs>
+    <linearGradient id="bg" x1="10" y1="12" x2="54" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ecbb5c"/>
+      <stop offset="1" stop-color="#d0872d"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="48" height="48" rx="14" fill="url(#bg)"/>
+  <rect x="8.75" y="8.75" width="46.5" height="46.5" rx="13.25" fill="none" stroke="#fff1ca" stroke-opacity=".3" stroke-width="1.5"/>
+  <rect x="16" y="24" width="32" height="20" rx="5.5" fill="#17323a"/>
+  <path d="M24.5 24v-3.5A4.5 4.5 0 0 1 29 16h6a4.5 4.5 0 0 1 4.5 4.5V24" fill="none" stroke="#fff8ea" stroke-linecap="round" stroke-width="3"/>
+  <rect x="16" y="30" width="32" height="5" fill="#39d7ff"/>
+  <rect x="28" y="28.5" width="8" height="8" rx="2.5" fill="#fff8ea"/>
+</svg>

@@ -11,6 +11,7 @@ intro_points:
   - "Why production became the center"
 layout: "page"
 icon: fa-briefcase
+icon_image: assets/images/site/icons/experience.svg
 order: 3
 permalink: /experience.html
 ---

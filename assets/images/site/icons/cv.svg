@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">CV icon</title>
+  <desc id="desc">An identification card badge for the CV page.</desc>
+  <defs>
+    <linearGradient id="bg" x1="12" y1="12" x2="54" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2d4651"/>
+      <stop offset="1" stop-color="#1a2f39"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="48" height="48" rx="14" fill="url(#bg)"/>
+  <rect x="8.75" y="8.75" width="46.5" height="46.5" rx="13.25" fill="none" stroke="#86dff2" stroke-opacity=".24" stroke-width="1.5"/>
+  <rect x="16" y="19" width="32" height="26" rx="6" fill="#eef8fb"/>
+  <circle cx="24" cy="28" r="4.5" fill="#39d7ff"/>
+  <path d="M18.8 39c1.7-3.7 4.5-5.5 8.2-5.5s6.5 1.8 8.2 5.5" fill="#c6ecf5"/>
+  <rect x="32.5" y="24" width="10.5" height="3" rx="1.5" fill="#cc8f25"/>
+  <rect x="32.5" y="30" width="9" height="3" rx="1.5" fill="#6c7f87"/>
+  <rect x="32.5" y="36" width="7" height="3" rx="1.5" fill="#6c7f87"/>
+</svg>

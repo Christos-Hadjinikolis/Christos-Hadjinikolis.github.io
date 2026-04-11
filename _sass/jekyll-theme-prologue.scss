@@ -1943,6 +1943,33 @@
 						}
 					}
 
+					.nav-label--image {
+						display: flex;
+						align-items: center;
+						gap: 0.8em;
+						justify-content: flex-start;
+						padding-left: 0;
+						text-align: left;
+
+						&::before {
+							content: none;
+						}
+					}
+
+					.nav-label__icon {
+						display: block;
+						flex: 0 0 auto;
+						height: 1.35em;
+						width: 1.35em;
+						filter: drop-shadow(0 3px 8px rgba(6, 14, 18, 0.18));
+					}
+
+					.nav-label__text {
+						flex: 1 1 auto;
+						min-width: 0;
+						text-align: left;
+					}
+
 					&:hover {
 						background: rgba(46, 197, 238, 0.09);
 						color: #fff;

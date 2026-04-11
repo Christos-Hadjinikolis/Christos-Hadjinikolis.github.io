@@ -11,6 +11,7 @@ intro_points:
   - "Leadership, standards, and delivery"
 layout: "page"
 icon: fa-id-card
+icon_image: assets/images/site/icons/cv.svg
 order: 2
 permalink: /my-cv.html
 ---

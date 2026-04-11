@@ -5,6 +5,7 @@
 layout: home
 title: Homepage
 icon: fa-home
+icon_image: assets/images/site/icons/homepage.svg
 order: 1
 permalink: /
 ---

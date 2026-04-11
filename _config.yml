@@ -70,6 +70,7 @@ collections_dir: content
 collections: [sections]
 exclude:
   - .codex
+  - _internal
   - cv
   - scripts
   - wip

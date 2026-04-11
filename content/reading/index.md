@@ -1,34 +1,41 @@
 ---
 title: Reading List
-subtitle: Recommended reading list...
+subtitle: Personal references, recurring influences, and things I still recommend
 layout: "page"
-icon: fa-book-reader
+icon: fa-book-open
+icon_image: assets/images/site/icons/reading-list.svg
 order: 3
 permalink: /reading-list.html
 ---
 
-Here are some very interesting readings I would recommend:
+This is not meant to be a definitive syllabus or a fashionable list of whatever is currently circulating online. It is a small, personal shelf of things I have read, returned to, or still find useful.
 
-## Blog Posts
-1. [Things you should never do](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/), Joel Spolsky
-2. [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/), by Chris Beams
-3. [The 5 Tribes of the ML world](https://medium.com/42ai/the-5-tribes-of-the-ml-world-670ebce96b4c), by Michaël Trazzi
-4. [How is search different than other machine learning problems?](https://opensourceconnections.com/blog/2017/08/03/search-as-machine-learning-prob/), by Doug Turnbull 
+Some links are old. That is partly the point. A good reading list should preserve durable influences, not pretend that everything worthwhile was published last week.
 
-## Bloggers I recommend!
-1. [Renaissance Developer](https://exubero.com/about/), by Joe Schmetzer
-2. [Open Source Connections](https://opensourceconnections.com/blog/author/doug-turnbull/), by Doug Turnbull 
-3. [the morning paper](https://blog.acolyer.org/), by Adrian Colyer
+## Engineering Judgement
 
-## Technical Books
-1. [The Phoenix Project](https://www.amazon.de/s/?ie=UTF8&keywords=the+phoenix+project&index=aps&tag=googdemozdesk-21&ref=pd_sl_ahc3gazpa_e&adgrpid=82016986236&hvpone=&hvptwo=&hvadid=394592758728&hvpos=&hvnetw=g&hvrand=12007918297408763142&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9061572&hvtargid=kwd-826183750&hydadcr=24469_1812055&gclid=EAIaIQobChMItdjysbzg6gIVyOF3Ch10HQKiEAAYASAAEgIr2vD_BwE&language=en_GB), Novel by Gene Kim, George Spafford, and Kevin Behr
-2. [Stream Processing with Apache Flink](https://www.amazon.de/Stream-Processing-Apache-Flink-Implementation/dp/149197429X/ref=sr_1_2?dchild=1&keywords=Flink&qid=1595407633&sr=8-2): Fundamentals, Implementation, and Operation of Streaming Applications
-3. [Accelerate: The science of lean software and devops](https://www.amazon.de/Accelerate-Software-Performing-Technology-Organizations/dp/1942788339/ref=sr_1_3?crid=7EB9SBT07ENI&dchild=1&keywords=accelerate+the+science+of+lean+software+and+devops&qid=1595407747&sprefix=Accelerate+the+%2Caps%2C408&sr=8-3)
+1. [Things You Should Never Do, Part I](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/), Joel Spolsky
+2. [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/), Chris Beams
+3. [The Phoenix Project](https://itrevolution.com/product/the-phoenix-project/), Gene Kim, Kevin Behr, and George Spafford
+4. [Accelerate](https://itrevolution.com/product/accelerate/), Nicole Forsgren, Jez Humble, and Gene Kim
+
+## ML, Search, And Data Systems
+
+1. [The 5 Tribes of the ML World](https://medium.com/42ai/the-5-tribes-of-the-ml-world-670ebce96b4c), Michaël Trazzi
+2. [How Is Search Different Than Other Machine Learning Problems?](https://opensourceconnections.com/blog/2017/08/03/search-as-machine-learning-prob/), Doug Turnbull
+3. [Stream Processing with Apache Flink](https://www.oreilly.com/library/view/stream-processing-with/9781491974285/), Fabian Hueske and Vasiliki Kalavri
+
+## Writers And Blogs I Still Check
+
+1. [Renaissance Developer](https://exubero.com/about/), Joe Schmetzer
+2. [OpenSource Connections](https://opensourceconnections.com/blog/author/doug-turnbull/), Doug Turnbull
+3. [The Morning Paper](https://blog.acolyer.org/), Adrian Colyer
 
 ## General Favourites
-1. Albert Camus: *The Myth of Sisyphus*
-2. Albert Camus: *The Plague*
-3. Ernest, Hemingway: *For Whom The Bell Tolls*
-4. Irvin D Yalom: *The Schopenhauer Cure*
-5. Richard Baldwin: *The Great Convergence*
-6. Ernest Cline: *Ready Player One*
+
+1. Albert Camus, *The Myth of Sisyphus*
+2. Albert Camus, *The Plague*
+3. Ernest Hemingway, *For Whom The Bell Tolls*
+4. Irvin D. Yalom, *The Schopenhauer Cure*
+5. Richard Baldwin, *The Great Convergence*
+6. Ernest Cline, *Ready Player One*

@@ -339,7 +339,7 @@ That is not mature enough for the level of change velocity these tools can produ
 If there is one broader point underneath all of this, it is that:
 
 <blockquote class="blog-pullquote">
-Automation does not scale on capability alone; tt scales on trust.
+Automation does not scale on capability alone; it scales on trust.
 </blockquote>
 
 If an AI system is not trustworthy, people will hesitate to adopt it, hesitate to depend on it, and ultimately refuse to give it real responsibility. That is true whether we are talking about coding tools, <span class="blog-highlight blog-highlight--agent">agents</span>, or any other form of automation.

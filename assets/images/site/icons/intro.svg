@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Intro icon</title>
+  <desc id="desc">A speech bubble badge for the intro section.</desc>
+  <defs>
+    <linearGradient id="bg" x1="10" y1="10" x2="54" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#54d7f6"/>
+      <stop offset="1" stop-color="#2495c3"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="48" height="48" rx="14" fill="url(#bg)"/>
+  <rect x="8.75" y="8.75" width="46.5" height="46.5" rx="13.25" fill="none" stroke="#def7fd" stroke-opacity=".28" stroke-width="1.5"/>
+  <path d="M18 27.5c0-6.1 5.8-10.5 14-10.5s14 4.4 14 10.5S40.2 38 32 38h-3.2L22 44v-7.3c-2.6-1.9-4-4.6-4-9.2Z" fill="#f8fcff"/>
+  <circle cx="25.5" cy="27.5" r="2.2" fill="#ecbb5c"/>
+  <circle cx="32" cy="27.5" r="2.2" fill="#39d7ff"/>
+  <circle cx="38.5" cy="27.5" r="2.2" fill="#1285aa"/>
+</svg>

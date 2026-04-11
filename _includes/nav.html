@@ -19,6 +19,7 @@
         {%- assign _title = _page.title | default: _page.layout -%}
         {%- assign _slug = _title | slugify -%}
         {%- assign _icon = _page.icon | default: 'fa-link' -%}
+        {%- assign _icon_image = _page.icon_image -%}
         {%- if _page.icon-style == 'regular' -%}
           {%- assign _class = 'icon-r' -%}
         {%- elsif _page.icon-style == 'brands' -%}
@@ -29,11 +30,19 @@
         {%- comment -%}<!-- page.url (no underscore) is the url of the current page-->{%- endcomment -%}
         {%- if _page.url == page.url -%}
           <li><a href="#" id="{{- _slug -}}" class="active">
+            {%- if _icon_image -%}
+            <span class="nav-label nav-label--image"><img src="{{ _icon_image | relative_url }}" alt="" class="nav-label__icon" /><span class="nav-label__text">{{- _title -}}</span></span>
+            {%- else -%}
             <span class="{{ _class }} {{ _icon }}">{{- _title -}}</span>
+            {%- endif -%}
           </a></li>
         {%- elsif _page.url -%}
           <li><a href="{{- _page.url | relative_url -}}" id="{{- _slug -}}-link">
+            {%- if _icon_image -%}
+            <span class="nav-label nav-label--image"><img src="{{ _icon_image | relative_url }}" alt="" class="nav-label__icon" /><span class="nav-label__text">{{- _title -}}</span></span>
+            {%- else -%}
             <span class="{{ _class }} {{ _icon }}">{{- _title -}}</span>
+            {%- endif -%}
           </a></li>
         {%- else -%}
           <li><a href="{{- '/' | relative_url -}}" id="broken-link"><span class="icon fa-unlink">[broken link]</span></a></li>
@@ -84,6 +93,7 @@
         {%- assign _title = _sect.title | default: _sect.layout | default: 'Untitled' -%}
         {%- assign _slug = _title | slugify -%}
         {%- assign _icon = _sect.icon | default: 'fa-file' -%}
+        {%- assign _icon_image = _sect.icon_image -%}
         {%- if _sect.icon-style == 'regular' -%}
           {%- assign _class = 'icon-r' -%}
         {%- elsif _sect.icon-style == 'brands' -%}
@@ -91,7 +101,7 @@
         {%- else -%}
           {%- assign _class = 'icon' -%}
         {%- endif -%}
-        <li><a href="#{{- _slug -}}" id="{{- _slug -}}-link" class="scrolly"><span class="{{ _class }} {{ _icon }}">{{- _title -}}</span></a></li>
+        <li><a href="#{{- _slug -}}" id="{{- _slug -}}-link" class="scrolly">{%- if _icon_image -%}<span class="nav-label nav-label--image"><img src="{{ _icon_image | relative_url }}" alt="" class="nav-label__icon" /><span class="nav-label__text">{{- _title -}}</span></span>{%- else -%}<span class="{{ _class }} {{ _icon }}">{{- _title -}}</span>{%- endif -%}</a></li>
       {%- endfor -%}
     {%- endif -%}
   </ul>

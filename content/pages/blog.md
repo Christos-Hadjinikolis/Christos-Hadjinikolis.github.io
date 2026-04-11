@@ -3,6 +3,7 @@ layout: blog
 title: ML-Affairs Blog
 subtitle: Production notes on ML systems, streaming architectures, and the gap between research and reality
 icon: fa-pencil-alt
+icon_image: assets/images/site/icons/blog.svg
 order: 2
 permalink: /blog.html
 ---

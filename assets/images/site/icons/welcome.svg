@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Welcome icon</title>
+  <desc id="desc">A compass badge for the welcome section.</desc>
+  <defs>
+    <linearGradient id="bg" x1="10" y1="10" x2="54" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1f768f"/>
+      <stop offset=".55" stop-color="#2ec5ee"/>
+      <stop offset="1" stop-color="#ecbb5c"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="48" height="48" rx="14" fill="url(#bg)"/>
+  <rect x="8.75" y="8.75" width="46.5" height="46.5" rx="13.25" fill="none" stroke="#edf9fc" stroke-opacity=".3" stroke-width="1.5"/>
+  <circle cx="32" cy="32" r="15" fill="#f8fcff"/>
+  <circle cx="32" cy="32" r="11.2" fill="#dff5fa"/>
+  <path d="M27 38.5 31 22l6 3.5L33 42Z" fill="#17323a"/>
+  <path d="m37 25.5-4 16.5-6-3.5 10-13Z" fill="#ecbb5c"/>
+  <circle cx="32" cy="32" r="2.8" fill="#1285aa"/>
+</svg>
