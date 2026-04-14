@@ -39,3 +39,4 @@ Some links are old. That is partly the point. A good reading list should preserv
 4. Irvin D. Yalom, *The Schopenhauer Cure*
 5. Richard Baldwin, *The Great Convergence*
 6. Ernest Cline, *Ready Player One*
+

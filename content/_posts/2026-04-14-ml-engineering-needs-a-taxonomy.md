@@ -3,6 +3,8 @@ title: "ML Engineering Needs A Taxonomy"
 title_html: "<span class='blog-title-accent blog-title-accent--ml'>ML Engineering</span> Needs A Taxonomy"
 author: Christos Hadjinikolis
 layout: post
+og_image: assets/images/posts/2026/ml-engineering-needs-a-taxonomy/job-title-theatre.png
+og_image_alt: "Four ninja engineers posing as exaggerated AI and ML job-title archetypes: AI Strategist, Data Whisperer, Full-Stack ML Scientist, and MLOps Architect Evangelist."
 linkedin_post_url: https://www.linkedin.com/feed/update/urn:li:share:7449850373294596097/
 linkedin_embed_url: https://www.linkedin.com/embed/feed/update/urn:li:share:7449850373294596097?collapsed=1
 description: "Why ML Engineer, Data Scientist, Data Engineer, and Software Engineer are still used too ambiguously, why that damages hiring, ownership, and delivery quality, and why the industry needs clearer role definitions."
