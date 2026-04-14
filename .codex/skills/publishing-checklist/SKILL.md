@@ -32,7 +32,10 @@ For posts:
 - Title is strong and not generic.
 - Front matter is valid.
 - `description`, canonical URL, and share image metadata are correct.
-- `og_image` is suitable for social sharing and points to a real preview asset.
+- `og_image` is explicit for every publishable or shareable post; never rely on the site avatar/logo fallback.
+- If the post has an intentional first article image, use that as `og_image` unless a deliberately better post-specific preview image exists.
+- `og_image` is suitable for social sharing, points to a real PNG/JPEG-style preview asset, and is not the ML-Affairs logo/profile image unless the user explicitly wants branding-only sharing.
+- The built page has the intended `<meta property="og:image">` and `<meta name="twitter:image">` values before the live URL is posted to LinkedIn/X.
 - Slug/date behavior is intentional.
 - The post matches the editorial guidance in `_internal/authoring/`.
 - If the post will be announced on LinkedIn/X, deploy the page first, then publish the social post, then add/embed the discussion thread in a follow-up pass if desired.
