@@ -5,8 +5,8 @@ author: Christos Hadjinikolis
 layout: post
 og_image: assets/images/posts/2026/ml-engineering-needs-a-taxonomy/job-title-theatre.png
 og_image_alt: "Four ninja engineers posing as exaggerated AI and ML job-title archetypes: AI Strategist, Data Whisperer, Full-Stack ML Scientist, and MLOps Architect Evangelist."
-linkedin_post_url: https://www.linkedin.com/feed/update/urn:li:share:7449850373294596097/
-linkedin_embed_url: https://www.linkedin.com/embed/feed/update/urn:li:share:7449850373294596097?collapsed=1
+linkedin_post_url: https://www.linkedin.com/feed/update/urn:li:activity:7449855576676859904/
+linkedin_embed_url: https://www.linkedin.com/embed/feed/update/urn:li:activity:7449855576676859904?collapsed=1
 description: "Why ML Engineer, Data Scientist, Data Engineer, and Software Engineer are still used too ambiguously, why that damages hiring, ownership, and delivery quality, and why the industry needs clearer role definitions."
 seo_keywords: ["ML engineer", "data scientist", "data engineer", "software engineer", "applied data scientist", "machine learning engineer", "job taxonomy", "AI hiring"]
 nav_tags: ["Hiring", "Roles", "ML Eng"]
