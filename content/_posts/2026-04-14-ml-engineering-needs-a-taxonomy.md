@@ -3,6 +3,8 @@ title: "ML Engineering Needs A Taxonomy"
 title_html: "<span class='blog-title-accent blog-title-accent--ml'>ML Engineering</span> Needs A Taxonomy"
 author: Christos Hadjinikolis
 layout: post
+linkedin_post_url: https://www.linkedin.com/feed/update/urn:li:share:7449850373294596097/
+linkedin_embed_url: https://www.linkedin.com/embed/feed/update/urn:li:share:7449850373294596097?collapsed=1
 description: "Why ML Engineer, Data Scientist, Data Engineer, and Software Engineer are still used too ambiguously, why that damages hiring, ownership, and delivery quality, and why the industry needs clearer role definitions."
 seo_keywords: ["ML engineer", "data scientist", "data engineer", "software engineer", "applied data scientist", "machine learning engineer", "job taxonomy", "AI hiring"]
 nav_tags: ["Hiring", "Roles", "ML Eng"]
