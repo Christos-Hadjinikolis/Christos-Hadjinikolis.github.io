@@ -38,7 +38,11 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
 13. When a post is ready for distribution, prepare companion copy for LinkedIn by default, and prepare X copy only when the user explicitly wants to use X.
 14. When the user asks to publish or announce a post, follow this order unless they explicitly want something different:
   - finalize the post body, title, description, `og_image`, and share metadata
+  - every publishable or shareable post must set `og_image` explicitly; if the post has an intentional first image, use that image unless there is a deliberate better social preview
+  - add `og_image_alt` whenever the preview image is visual content rather than purely decorative branding
+  - never rely on the site avatar/logo fallback for a blog post that will be shared externally
   - verify the post builds cleanly and the share image is a real PNG/JPEG-style preview asset, not just an on-page decorative image
+  - run `make audit`; it fails when a post can be published/shared but has no explicit social preview image
   - commit and push the site changes so the live URL has the correct metadata
   - only then publish to LinkedIn using the live URL, and only add X if the user explicitly wants that channel
   - after the social post exists, add/embed the discussion link back into the article if desired
@@ -50,15 +54,16 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
   - `tldr_learn`
   - `tldr_takeaways`
 17. Every new post should include `description` and `seo_keywords` front matter so the page has useful search metadata without resorting to hidden keyword stuffing.
-18. For framework/platform posts, put the real adoption driver near the top and, when helpful, include a concrete next-step path such as a starter archetype, template, or agent prompt.
-19. For comparison posts, include the author's real bias or prior preference when it matters, then show what experience changed or refined about that view.
-20. When revising a strong post, sharpen the parts that are merely balanced into parts that are memorable:
+18. Every new post that is publishable, shareable, or has article imagery should include explicit `og_image` front matter. Do not assume LinkedIn will pick the first image in the article; it will use `og:image` and may fall back to the site avatar/logo if the field is missing.
+19. For framework/platform posts, put the real adoption driver near the top and, when helpful, include a concrete next-step path such as a starter archetype, template, or agent prompt.
+20. For comparison posts, include the author's real bias or prior preference when it matters, then show what experience changed or refined about that view.
+21. When revising a strong post, sharpen the parts that are merely balanced into parts that are memorable:
   - challenge bad heuristics directly when the evidence supports it
   - call out failure modes, not just feature trade-offs
   - make the reader slightly uncomfortable about rewrite instinct, architectural cargo cults, or comfort-driven decisions
   - do not flatten real disagreement in the name of fairness
   - do not invent war stories or dramatize beyond the lived evidence
-21. For opinionated technical posts, make sure the piece does more than explain:
+22. For opinionated technical posts, make sure the piece does more than explain:
   - it should force a perspective shift
   - it should contain at least one line that is quotable
   - it should name the cost curve of the preferred approach honestly
@@ -120,6 +125,7 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
   - LinkedIn copy should open with the production pain, tension, or contrarian lesson, not a flat summary
   - the first 1 to 2 lines should earn attention quickly and make the value of clicking obvious
   - if the post will be shared as a link card, prefer a PNG or JPEG `og_image` over SVG and make sure the page has a real social preview image, not just an on-page decorative graphic
+  - before drafting or publishing the LinkedIn post, verify the built article contains the intended `<meta property="og:image">`; do not proceed if it points at the ML-Affairs logo/profile fallback
   - do not publish the social post until the page metadata is live on the deployed site, otherwise platforms may cache the wrong preview
 - Avoid hype, startup marketing language, and generic AI thought leadership tone.
 - Do not publish internal instructions or quote them into the post.
