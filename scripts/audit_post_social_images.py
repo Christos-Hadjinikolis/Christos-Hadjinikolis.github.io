@@ -32,7 +32,7 @@ def parse_front_matter(text: str) -> dict[str, str]:
 
 def post_date(path: Path, front_matter: dict[str, str]) -> dt.date | None:
     filename_date = DATE_PREFIX_RE.match(path.name)
-    value = filename_date.group(1) if filename_date else front_matter.get("date")
+    value = front_matter.get("date") or (filename_date.group(1) if filename_date else None)
     if not value:
         return None
     try:
