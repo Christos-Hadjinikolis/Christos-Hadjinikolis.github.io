@@ -38,6 +38,9 @@ permalink: /experience.html
     </div>
 
     <div class="page-panel">
+      <figure class="page-panel-image page-panel-image--portrait">
+        <img src="{{ 'assets/images/pages/experience/big-data-london-2018-experience.jpeg' | relative_url }}" alt="Christos Hadjinikolis speaking at Big Data London in 2018" loading="lazy" />
+      </figure>
       <h3>✨ What Changed Along The Way</h3>
       <ul class="page-rule-list">
         <li>

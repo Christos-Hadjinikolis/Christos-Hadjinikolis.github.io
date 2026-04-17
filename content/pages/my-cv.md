@@ -38,6 +38,9 @@ permalink: /my-cv.html
     </div>
 
     <div class="page-panel">
+      <figure class="page-panel-image page-panel-image--wide">
+        <img src="{{ 'assets/images/pages/cv/big-data-london-2018-cv.jpeg' | relative_url }}" alt="Christos Hadjinikolis presenting at Big Data London in 2018" loading="lazy" />
+      </figure>
       <h3>🧭 What I Actually Do</h3>
       <ul class="page-rule-list">
         <li>

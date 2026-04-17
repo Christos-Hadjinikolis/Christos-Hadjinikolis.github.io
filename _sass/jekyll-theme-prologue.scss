@@ -752,6 +752,28 @@
 		object-fit: cover;
 	}
 
+	.section-shell--about-me .about-photo {
+		overflow: hidden;
+		position: relative;
+	}
+
+	.section-shell--about-me .about-photo::after {
+		background:
+			linear-gradient(90deg, rgba(11, 24, 30, 0.72), rgba(11, 24, 30, 0.46) 28%, rgba(11, 24, 30, 0.16) 56%, rgba(11, 24, 30, 0.02) 82%),
+			linear-gradient(180deg, rgba(11, 24, 30, 0.12), rgba(11, 24, 30, 0));
+		border-radius: 1rem;
+		content: "";
+		inset: 0;
+		pointer-events: none;
+		position: absolute;
+		z-index: 1;
+	}
+
+	.section-shell--about-me .about-photo img {
+		filter: saturate(0.86) contrast(1.04) brightness(0.92);
+		object-position: 68% top;
+	}
+
 	.section-shell--about-me p {
 		font-size: 1rem;
 		text-align: left;
@@ -1136,6 +1158,32 @@
 
 	.page-panel--tinted {
 		background: linear-gradient(145deg, rgba(255, 255, 255, 0.97), rgba(238, 250, 251, 0.94));
+	}
+
+	.page-panel-image {
+		margin: 0 0 1.15rem 0;
+
+		img {
+			aspect-ratio: 16 / 9;
+			border-radius: 8px;
+			box-shadow: 0 16px 32px rgba(27, 43, 52, 0.14);
+			display: block;
+			filter: saturate(0.9) contrast(1.04) brightness(0.96);
+			object-fit: cover;
+			object-position: center top;
+			width: 100%;
+		}
+	}
+
+	.page-panel-image--portrait {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 15rem;
+
+		img {
+			aspect-ratio: 4 / 5;
+			object-position: center top;
+		}
 	}
 
 	.page-kicker {
@@ -2862,6 +2910,14 @@
 			box-shadow:
 				0 18px 44px rgba(0, 0, 0, 0.28),
 				0 0 38px rgba(201, 238, 244, 0.2);
+		}
+
+		.page-panel-image img,
+		.section-shell--about-me .about-photo img {
+			box-shadow:
+				0 18px 38px rgba(0, 0, 0, 0.28),
+				0 0 28px rgba(201, 238, 244, 0.08);
+			filter: saturate(0.82) contrast(1.06) brightness(0.9);
 		}
 
 		.section-shell--welcome-to-ml-affairs .prose-block,
