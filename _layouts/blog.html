@@ -24,8 +24,7 @@ layout: default
 			<a href="{{- _post.url | relative_url -}}">{{- _post.title_html | default: _post.title -}}</a>
 		{%- endcapture -%}
 		{%- capture _subtitle -%}
-			{% if _post.author -%}{{- _post.author }} | {% endif %}
-			{{- _post.date | date_to_long_string -}}
+			{%- include post_meta.html post=_post -%}
 		{%- endcapture -%}
 		{%- capture _summary -%}
 			<p>{{- _post.description | default: _post.excerpt | strip_html | truncatewords: 38 -}}</p>

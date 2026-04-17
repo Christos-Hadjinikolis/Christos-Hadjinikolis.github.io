@@ -10,7 +10,7 @@ layout: default
 	    <div class="container">
 			<header class="reading-hero__header">
 				<h2>{{- page.title_html | default: page.title -}}</h2>
-				<p>{% if page.author %}{{ page.author }}, {% endif %}{{- page.date | date_to_long_string -}}</p>
+				<p class="post-meta-line">{%- include post_meta.html post=page -%}</p>
 				{% if site.linkedin_url %}
 				<p><a href="{{ site.linkedin_url }}" class="button linkedin-follow-button" target="_blank" rel="noopener noreferrer">Connect On LinkedIn</a></p>
 				{% endif %}
@@ -33,7 +33,7 @@ layout: default
 			{% endif %}
 			<div class="post-social-card__links">
 				{% if page.linkedin_post_url %}
-				<a href="{{ page.linkedin_post_url }}" class="button" target="_blank" rel="noopener noreferrer">Open The LinkedIn Post</a>
+				<a href="{{ page.linkedin_post_url }}" class="button post-social-card__button--linkedin" target="_blank" rel="noopener noreferrer">Open The LinkedIn Post</a>
 				{% endif %}
 				{% if page.substack_post_url %}
 				<a href="{{ page.substack_post_url }}" class="button post-social-card__button--substack" target="_blank" rel="noopener noreferrer">Read The Substack Version</a>

@@ -21,6 +21,12 @@
   {%- if site.stackoverflow_url -%}
   <li><a href="{{- site.stackoverflow_url -}}" class="icon-b fa-stack-overflow"><span class="label">StackOverflow</span></a></li>
   {%- endif -%}
+  {%- if site.medium_url -%}
+  <li><a href="{{- site.medium_url -}}" class="icon-b fa-medium-m"><span class="label">Medium</span></a></li>
+  {%- endif -%}
+  {%- if site.substack_url -%}
+  <li><a href="{{- site.substack_url -}}" class="social-icon social-icon--image" aria-label="Substack"><span class="social-icon__image social-icon__image--substack" aria-hidden="true"></span><span class="label">Substack</span></a></li>
+  {%- endif -%}
   {%- if site.pinterest_url -%}
   <li><a href="{{- site.pinterest_url -}}" class="icon-b fa-pinterest"><span class="label">Pinterest</span></a></li>
   {%- endif -%}

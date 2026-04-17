@@ -1,0 +1,13 @@
+{%- assign _post = include.post -%}
+{%- assign _word_count = _post.content | strip_html | number_of_words -%}
+{%- assign _reading_minutes = _word_count | plus: 199 | divided_by: 200 -%}
+{%- if _reading_minutes < 1 -%}
+  {%- assign _reading_minutes = 1 -%}
+{%- endif -%}
+<span class="post-meta">
+  {%- if _post.author -%}
+  <span class="post-meta__item post-meta__author">{{- _post.author -}}</span>
+  {%- endif -%}
+  <span class="post-meta__item post-meta__date">{{- _post.date | date_to_long_string -}}</span>
+  <span class="post-meta__item post-meta__reading-time" aria-label="Estimated reading time: {{ _reading_minutes }} minutes"><span class="post-meta__icon icon-r fa-clock" aria-hidden="true"></span><span>{{ _reading_minutes }} min read</span></span>
+</span>

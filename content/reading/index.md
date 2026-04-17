@@ -27,9 +27,14 @@ Some links are old. That is partly the point. A good reading list should preserv
 
 ## Writers And Blogs I Still Check
 
-1. [Renaissance Developer](https://exubero.com/about/), Joe Schmetzer
-2. [OpenSource Connections](https://opensourceconnections.com/blog/author/doug-turnbull/), Doug Turnbull
-3. [The Morning Paper](https://blog.acolyer.org/), Adrian Colyer
+1. [The Beautiful Mess](https://cutlefish.substack.com/), John Cutler<br>
+   <span class="reading-list-note">I keep coming back to Cutler because his product writing is practical without being simplistic: advice grounded in experience, shaped by real teams, incentives, and messy systems.</span>
+2. [Renaissance Developer](https://exubero.com/about/), Joe Schmetzer<br>
+   <span class="reading-list-note">Joe was my mentor during my UBS years and is still an Extreme Programmer in the practical sense: he taught me the habits behind agile software development, TDD, pairing, small feedback loops, and engineering as a disciplined way of learning.</span>
+3. [OpenSource Connections](https://opensourceconnections.com/blog/author/doug-turnbull/), Doug Turnbull<br>
+   <span class="reading-list-note">Doug is one of the clearest voices I have found on search relevance: he turns Solr, Elasticsearch, Lucene, learning to rank, and messy stakeholder judgement into practical engineering advice.</span>
+4. [The Morning Paper](https://blog.acolyer.org/), Adrian Colyer<br>
+   <span class="reading-list-note">Adrian's archive is useful because he makes serious computer science papers digestible without stripping away the important ideas, which is exactly the bridge from research to practice I value.</span>
 
 ## General Favourites
 
@@ -39,4 +44,3 @@ Some links are old. That is partly the point. A good reading list should preserv
 4. Irvin D. Yalom, *The Schopenhauer Cure*
 5. Richard Baldwin, *The Great Convergence*
 6. Ernest Cline, *Ready Player One*
-
