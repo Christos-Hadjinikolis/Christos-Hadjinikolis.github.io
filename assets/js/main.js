@@ -19,6 +19,52 @@
 		var	$window = $(window),
 			$body = $('body');
 
+		// Theme toggle.
+			(function() {
+				var storageKey = 'ml-affairs-theme',
+					rootEl = document.documentElement,
+					toggleEl = document.querySelector('[data-theme-toggle]'),
+					labelEl = document.querySelector('[data-theme-toggle-label]');
+
+				if (!toggleEl)
+					return;
+
+				var setTheme = function(theme) {
+					var isDark = theme === 'dark';
+
+					rootEl.setAttribute('data-theme', theme);
+					rootEl.style.colorScheme = theme;
+					toggleEl.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+					toggleEl.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+
+					if (labelEl)
+						labelEl.textContent = isDark ? 'Light mode' : 'Dark mode';
+				};
+
+				var getStoredTheme = function() {
+					try {
+						return window.localStorage.getItem(storageKey);
+					} catch (error) {
+						return null;
+					}
+				};
+
+				var saveTheme = function(theme) {
+					try {
+						window.localStorage.setItem(storageKey, theme);
+					} catch (error) {}
+				};
+
+				setTheme(rootEl.getAttribute('data-theme') || getStoredTheme() || 'light');
+
+				toggleEl.addEventListener('click', function() {
+					var nextTheme = rootEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+
+					setTheme(nextTheme);
+					saveTheme(nextTheme);
+				});
+			})();
+
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
 
