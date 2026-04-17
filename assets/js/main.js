@@ -55,7 +55,7 @@
 					} catch (error) {}
 				};
 
-				setTheme(rootEl.getAttribute('data-theme') || getStoredTheme() || 'light');
+				setTheme(rootEl.getAttribute('data-theme') || getStoredTheme() || 'dark');
 
 				toggleEl.addEventListener('click', function() {
 					var nextTheme = rootEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';

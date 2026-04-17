@@ -14,7 +14,7 @@ tldr_takeaways: ["I/O logic should not dominate business logic", "Abstraction im
 ---
 If you call yourself an <span class="blog-highlight blog-highlight--ml">ML Engineer</span> then you 've been there--you 've seen this before. To productionise your <span class="blog-highlight blog-highlight--ml">ML</span> pipeline; well, that’s surely a challenge.
 
-<span class="image center"><img src="{{ 'assets/images/posts/2022/dynamicio-at-odsc/2022-06-01-dynamicio.png' | relative_url }}" alt="dynamic(i/o)" /></span>
+<span class="image center logo-plate post-logo-plate"><img src="{{ 'assets/images/posts/2022/dynamicio-at-odsc/2022-06-01-dynamicio.png' | relative_url }}" alt="dynamic(i/o)" /></span>
 
 I have worked for many years as a Data Science consultant, and I can surely confirm the statement that [“...more that 87% of Data Science projects never make it to production”](https://venturebeat.com/2019/07/19/why-do-87-of-data-science-projects-never-make-it-into-production/).
 There is a reason why the first rule of doing <span class="blog-highlight blog-highlight--ml">Machine Learning</span> is to really be sure you need to do <span class="blog-highlight blog-highlight--ml">ML</span>! Surely, many reasons play into this challenge: 

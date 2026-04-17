@@ -80,16 +80,13 @@
   <link rel="alternate" type="application/rss+xml" title="{{- site.title | escape -}} RSS" href="{{- 'feed.xml' | relative_url -}}" />
   <script>
     (function() {
-      var theme = 'light';
+      var theme = 'dark';
 
       try {
         var storedTheme = window.localStorage.getItem('ml-affairs-theme');
-        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
         if (storedTheme === 'dark' || storedTheme === 'light')
           theme = storedTheme;
-        else if (prefersDark)
-          theme = 'dark';
       } catch (error) {}
 
       document.documentElement.setAttribute('data-theme', theme);

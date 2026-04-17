@@ -4,7 +4,7 @@ icon: fa-compass
 icon_image: assets/images/site/icons/welcome.svg
 order: 5
 ---
-<span class="image featured welcome-brand-mark"><img src="{{ 'assets/images/site/ml-affairs-logo-welcome.png' | relative_url }}" alt="ML-Affairs logo with ninja engineer mascot" /></span>
+<span class="image featured welcome-brand-mark logo-plate"><img src="{{ 'assets/images/site/ml-affairs-logo-welcome.png' | relative_url }}" alt="ML-Affairs logo with ninja engineer mascot" /></span>
 
 <div class="prose-block">
   <p>
