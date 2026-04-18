@@ -678,6 +678,13 @@
 		text-align: left;
 	}
 
+	.section-shell--portfolio > .container > p,
+	.section-shell--welcome-to-ml-affairs .prose-block p,
+	.section-shell--welcome-to-ml-affairs .prose-block li {
+		font-size: 0.95rem;
+		line-height: 1.65;
+	}
+
 	.page-brand-mark {
 		display: block;
 		max-width: 24rem;
@@ -775,7 +782,8 @@
 	}
 
 	.section-shell--about-me p {
-		font-size: 1rem;
+		font-size: 0.97rem;
+		line-height: 1.68;
 		text-align: left;
 	}
 
@@ -2238,10 +2246,10 @@
 					span {
 						position: relative;
 						display: block;
-						font-size: 0.75em;
+						font-size: 0.8em;
 						font-weight: 700;
-						line-height: 1.28em;
-						min-height: 1.28em;
+						line-height: 1.22em;
+						min-height: 1.22em;
 						padding-left: 1.95em;
 						letter-spacing: 0.01em;
 
@@ -2252,7 +2260,7 @@
 							color: rgba(255, 255, 255, 0.28);
 							text-align: center;
 							width: 1.25em;
-							line-height: 1.28em;
+							line-height: 1.22em;
 						}
 					}
 
@@ -2308,11 +2316,15 @@
 		}
 
 		.nav-archive {
-			margin: 0 0.85em 0.4em 0.85em;
+			margin: 0 0.85em 0.25em 0.85em;
+		}
+
+		.nav-year {
+			margin: 0;
 		}
 
 		.nav-year + .nav-year {
-			margin-top: 0.08em;
+			margin-top: 0.04em;
 		}
 
 		.nav-year__toggle {
@@ -2320,15 +2332,15 @@
 			@include vendor('transition', ('background-color 0.2s ease-in-out', 'color 0.2s ease-in-out', 'box-shadow 0.2s ease-in-out'));
 			background: rgba(255, 255, 255, 0.02);
 			border: 0;
-			border-radius: 1.15rem;
+			border-radius: 0.95rem;
 			box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
 			color: rgba(255, 255, 255, 0.74);
 			cursor: pointer;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			gap: 0.75em;
-			padding: 0.78em 1em 0.78em 1em;
+			gap: 0.6em;
+			padding: 0.4em 0.8em;
 			text-align: left;
 			width: 100%;
 
@@ -2366,17 +2378,17 @@
 		.nav-year__label,
 		.nav-year__count {
 			display: block;
-			line-height: 1.25;
+			line-height: 1.1;
 		}
 
 		.nav-year__label {
-			font-size: 0.9em;
+			font-size: 0.78em;
 			font-weight: 800;
 			letter-spacing: 0.02em;
 		}
 
 		.nav-year__count {
-			font-size: 0.62em;
+			font-size: 0.54em;
 			font-weight: 700;
 			letter-spacing: 0.08em;
 			text-transform: uppercase;
@@ -2386,7 +2398,7 @@
 
 		.nav-year__posts {
 			list-style: none;
-			margin: 0.35em 0 0 0;
+			margin: 0.12em 0 0 0;
 			padding: 0;
 		}
 
@@ -2403,9 +2415,9 @@
 			color: rgba(255, 255, 255, 0.62);
 			display: grid;
 			grid-template-columns: 3.7em minmax(0, 1fr);
-			gap: 0.75em;
-			margin-top: 0.28em;
-			padding: 0.68em 0.95em;
+			gap: 0.55em;
+			margin-top: 0.1em;
+			padding: 0.42em 0.8em;
 			text-decoration: none;
 
 			&:hover {
