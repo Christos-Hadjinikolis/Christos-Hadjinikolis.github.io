@@ -22,5 +22,6 @@ This space is for reusable reference material linked from posts when it actually
 
 Current references:
 
+- [Docker MCP Toolkit profile setup]({{ '/references/docker-mcp-manager-profile-setup/' | relative_url }})
 - [PyFlink starter archetype and agent prompt]({{ '/references/pyflink-agent-starter/' | relative_url }})
 - [Pull request template for higher-trust AI-assisted delivery]({{ '/references/pr-template-for-ai-assisted-delivery/' | relative_url }})

@@ -4,7 +4,7 @@ title_html: "When the Map Lies: Why <span class='blog-title-accent blog-title-ac
 author: Christos Hadjinikolis
 layout: post
 hide: true
-date: 2026-05-12
+date: 2026-05-24
 permalink: /review-room/post-3/
 robots: noindex, nofollow, noarchive
 canonical: false

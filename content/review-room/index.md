@@ -11,7 +11,7 @@ subtitle: Unlinked review copies for pre-publication feedback.
 intro_summary: Share these URLs directly when you want feedback before the scheduled post date. They are not linked from the site navigation or homepage.
 intro_card_title: Current Preview Set
 intro_points:
-  - Trajectory Validation Engine scheduled for May 12, 2026
+  - Trajectory Validation Engine scheduled for May 24, 2026
 ---
 
 <span class="image featured page-brand-mark"><img src="{{ 'assets/images/site/ml-affairs-logo-investigate.png' | relative_url }}" alt="ML-Affairs investigative logo with ninja engineer mascot" /></span>

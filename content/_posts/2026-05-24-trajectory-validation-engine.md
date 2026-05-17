@@ -3,7 +3,7 @@ title: "When the Map Lies: Why AIS Trust Matters in Contested Waters"
 title_html: "When the Map Lies: Why <span class='blog-title-accent blog-title-accent--signal'>AIS Trust</span> Matters in Contested Waters"
 author: Christos Hadjinikolis
 layout: post
-date: 2026-05-12
+date: 2026-05-24
 description: "Why AIS signal trust has become central to understanding oil flows, sanctions risk, and maritime disruption when geopolitics turns the map itself into contested evidence."
 seo_keywords: ["Vortexa", "AIS spoofing", "dark vessels", "shadow fleet", "Strait of Hormuz", "Red Sea shipping", "oil flows", "maritime intelligence", "Trajectory Validation Engine", "signal integrity"]
 nav_tags: ["AIS", "Trust", "Maritime"]

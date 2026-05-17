@@ -68,6 +68,15 @@ When useful, also read 1 to 3 relevant existing posts from `content/_posts/` to 
   - it should contain at least one line that is quotable
   - it should name the cost curve of the preferred approach honestly
   - it should finish with a sharper consequence than "it depends"
+23. When source material comes from `wip/new-blog/context/architecture` or `wip/new-blog/context/journey`, use it as private author context rather than public product documentation:
+  - extract the author's engineering judgment, trade-offs, vocabulary, and recurring concerns
+  - do not disclose internal product names, implementation details, or roadmap specifics unless the user explicitly asks
+  - translate the lived experience into general descriptions such as "a local AI-first system" or "a local assistant harness"
+  - preserve the author's bias toward explicit ownership, boundaries, auditability, and fail-closed behavior
+24. For posts that are still waiting on screenshots, generated visuals, or social-preview art, keep the draft clearly pre-publication:
+  - use a future date, review-room page, or other noindex preview path when visible placeholders remain in the body
+  - include detailed visual placeholders at the exact narrative beats where the images should land
+  - do not mark the post ready to publish until placeholders are replaced and `og_image` points to a real post-specific PNG or JPEG
 
 ## Output Rules
 
