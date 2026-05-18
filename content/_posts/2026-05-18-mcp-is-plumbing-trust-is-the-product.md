@@ -9,6 +9,8 @@ seo_keywords: ["Model Context Protocol", "MCP", "AI agents", "tool calling", "MC
 nav_tags: ["MCP", "Agents", "Trust"]
 og_image: "assets/images/posts/2026/mcp-is-plumbing/ninja avatar-minion-at-a-cluttered-local-AI-workbench.png"
 og_image_alt: "Hand-drawn ninja avatar-minion wiring Gmail, Calendar, and Wikipedia into a local AI assistant through labelled MCP cables."
+linkedin_post_url: "https://www.linkedin.com/feed/update/urn:li:activity:7462244482751578113/"
+linkedin_embed_url: "https://www.linkedin.com/embed/feed/update/urn:li:activity:7462244482751578113?collapsed=1"
 tldr_why_read: "Read this if <span class=\"blog-highlight blog-highlight--agent\">MCP</span> sounds useful but the words around it still feel slightly slippery: <span class=\"blog-highlight blog-highlight--mcp-server\">MCP server</span>, <span class=\"blog-highlight blog-highlight--mcp-client\">MCP client</span>, host, manager, tool, function, gateway, catalog."
 tldr_persona: "Especially useful for engineers building local or private <span class=\"blog-highlight blog-highlight--agent\">AI</span> assistants who need external tools without turning every integration into custom <span class=\"blog-highlight blog-highlight--connector\">connectors</span> or a trust problem."
 tldr_learn: "Why <span class=\"blog-highlight blog-highlight--agent\">MCP</span> arrived when <span class=\"blog-highlight blog-highlight--agent\">agents</span> needed real tools, what it standardizes, what it absolutely does not solve, and why serious agents need staged intent narrowing before exact tool calls."
