@@ -19,6 +19,8 @@ tldr_takeaways: ["AIS cleaning is not cosmetic; every bad vessel position can le
 ---
 *Preview copy shared privately for feedback before publication.*
 
+*Publication note: this article was first published through Vortexa on Medium as [When the Map Lies: Why AIS Trust Matters in Contested Waters](https://medium.com/vortechsa/when-the-map-lies-why-ais-trust-matters-in-contested-waters-07d6cfb2d767). This ML-Affairs version is my author republication of that Vortexa-led publication.*
+
 In calm periods, vessel tracking can look deceptively simple.
 
 A ship emits <span class="blog-highlight blog-highlight--signal">AIS</span>. A platform collects those positions. A map draws a line. An analyst sees where the vessel is going.

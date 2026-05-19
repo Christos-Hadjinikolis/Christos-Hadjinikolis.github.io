@@ -4,6 +4,7 @@ title_html: "When the Map Lies: Why <span class='blog-title-accent blog-title-ac
 author: Christos Hadjinikolis
 layout: post
 date: 2026-05-21
+canonical: false
 description: "Why AIS signal trust has become central to understanding oil flows, sanctions risk, and maritime disruption when geopolitics turns the map itself into contested evidence."
 seo_keywords: ["Vortexa", "AIS spoofing", "dark vessels", "shadow fleet", "Strait of Hormuz", "Red Sea shipping", "oil flows", "maritime intelligence", "Trajectory Validation Engine", "signal integrity"]
 nav_tags: ["AIS", "Trust", "Maritime"]
@@ -14,6 +15,8 @@ tldr_persona: "Especially useful for energy traders, maritime intelligence teams
 tldr_learn: "Why <span class=\"blog-highlight blog-highlight--signal\">AIS</span> is a stream of claims rather than ground truth, and why clean vessel trajectories are foundational to understanding oil and gas flows."
 tldr_takeaways: ["AIS cleaning is not cosmetic; every bad vessel position can leak into a bad market story", "The commercial value is trusted interpretation of energy flows when the world is unstable", "A serious trajectory validation layer must separate healthy movement, challenged emissions, sparse coverage, and unresolved uncertainty"]
 ---
+
+*Publication note: this article was first published through Vortexa on Medium as [When the Map Lies: Why AIS Trust Matters in Contested Waters](https://medium.com/vortechsa/when-the-map-lies-why-ais-trust-matters-in-contested-waters-07d6cfb2d767). This ML-Affairs version is my author republication of that Vortexa-led publication.*
 
 In calm periods, vessel tracking can look deceptively simple.
 
