@@ -46,15 +46,32 @@ That is where Vortexa's value becomes easiest to understand.
 
 Not as a company that merely displays vessel data, but as a company that turns messy maritime signals into trusted intelligence about how energy moves through the world.
 
+*Visual note: the illustrative images in this article are AI-generated synthetic diagrams used only for explanation. They are not evidence of actual vessel activity, cargo movements, port calls, ownership structures, sanctions status, or wrongdoing by any real vessel, company, port, or state.*
+
 ## The New Vocabulary of Maritime Risk
 
 If you work near maritime intelligence today, a few terms keep appearing.
 
 A <span class="blog-highlight blog-highlight--signal">dark vessel</span> is a vessel that disappears from normal visibility for some period of time. Sometimes that is benign: coverage gaps, equipment issues, or legitimate operational constraints. In higher-risk contexts, though, going dark can help hide port calls, route changes, ship-to-ship transfers, or cargo movements.
 
+<figure class="blog-figure blog-figure--wide">
+  <img src="{{ 'assets/images/posts/2026/trajectory-validation-engine/definitions/dark-activity.png' | relative_url }}" alt="AI-generated explanatory diagram showing how a dark activity scenario can create uncertainty around vessel movement and port activity." loading="lazy" />
+  <figcaption class="blog-figure__caption">Synthetic illustration only: a dark period can increase uncertainty, but the image does not describe or allege any real vessel movement, cargo, or port activity.</figcaption>
+</figure>
+
 <span class="blog-highlight blog-highlight--signal">Spoofing</span> is more active. A vessel or its surrounding environment produces false position information. The ship may appear somewhere it is not. It may seem to move across land, sit inside a port it never entered, or trace physically absurd paths. Scientific American has described how GPS spoofing in the Strait of Hormuz can cause AIS-derived vessel locations to show impossible movements, while U.S. Treasury maritime guidance warns that deceptive shipping practices can include disabling or manipulating AIS.
 
+<figure class="blog-figure blog-figure--wide">
+  <img src="{{ 'assets/images/posts/2026/trajectory-validation-engine/definitions/spoofing.png' | relative_url }}" alt="AI-generated explanatory diagram showing a spoofed AIS route diverging from an estimated true vessel track." loading="lazy" />
+  <figcaption class="blog-figure__caption">Synthetic illustration only: spoofing examples help explain the signal pattern; they should not be read as evidence of a specific port call or vessel event.</figcaption>
+</figure>
+
 A <span class="blog-highlight blog-highlight--signal">shadow fleet</span> is the broader operating model. It usually refers to networks of vessels, owners, flags, insurers, intermediaries, and cargo movements designed to move sanctioned or opaque commodities while making attribution difficult. The U.S. Treasury's maritime oil advisory explicitly warns that shadow-trade actors can conceal ownership and manipulate or disable AIS, and OFAC has continued to sanction vessels and managers linked to Iranian shadow-fleet activity.
+
+<figure class="blog-figure blog-figure--wide">
+  <img src="{{ 'assets/images/posts/2026/trajectory-validation-engine/definitions/dark-fleet.png' | relative_url }}" alt="AI-generated explanatory diagram showing common transparency and attribution challenges associated with shadow fleet operations." loading="lazy" />
+  <figcaption class="blog-figure__caption">Synthetic illustration only: the diagram summarizes risk factors and transparency problems; it does not identify any real company, vessel, insurer, broker, or buyer.</figcaption>
+</figure>
 
 These are not exotic edge cases anymore.
 
