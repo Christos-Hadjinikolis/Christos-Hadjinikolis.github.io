@@ -4,17 +4,17 @@ title_html: "<span class='blog-title-accent blog-title-accent--signal'>MCP</span
 author: Christos Hadjinikolis
 layout: post
 date: 2026-05-18
-description: "A practical mental model for the Model Context Protocol, why it appeared, and why local AI systems still need their own routing, approval, evidence, and trust boundaries."
-seo_keywords: ["Model Context Protocol", "MCP", "AI agents", "tool calling", "MCP server", "MCP Manager", "Docker MCP Toolkit", "local-first AI", "tool safety", "agentic AI"]
+description: "A practical mental model for the Model Context Protocol, how APIs become model-readable tools, and why local AI systems still need routing, approval, evidence, and trust boundaries."
+seo_keywords: ["Model Context Protocol", "MCP", "AI agents", "tool calling", "MCP server", "MCP Manager", "Docker MCP Toolkit", "REST API", "API wrapper", "local-first AI", "tool safety", "agentic AI"]
 nav_tags: ["MCP", "Agents", "Trust"]
 og_image: "assets/images/posts/2026/mcp-is-plumbing/ninja avatar-minion-at-a-cluttered-local-AI-workbench.png"
 og_image_alt: "Hand-drawn ninja avatar-minion wiring Gmail, Calendar, and Wikipedia into a local AI assistant through labelled MCP cables."
 linkedin_post_url: "https://www.linkedin.com/feed/update/urn:li:activity:7462244482751578113/"
 linkedin_embed_url: "https://www.linkedin.com/embed/feed/update/urn:li:activity:7462244482751578113?collapsed=1"
-tldr_why_read: "Read this if <span class=\"blog-highlight blog-highlight--agent\">MCP</span> sounds useful but the words around it still feel slightly slippery: <span class=\"blog-highlight blog-highlight--mcp-server\">MCP server</span>, <span class=\"blog-highlight blog-highlight--mcp-client\">MCP client</span>, host, manager, tool, function, gateway, catalog."
+tldr_why_read: "Read this if <span class=\"blog-highlight blog-highlight--agent\">MCP</span> sounds useful but the words around it still feel slightly slippery: API, tool, function, <span class=\"blog-highlight blog-highlight--mcp-server\">MCP server</span>, <span class=\"blog-highlight blog-highlight--mcp-client\">MCP client</span>, host, manager, gateway, catalog."
 tldr_persona: "Especially useful for engineers building local or private <span class=\"blog-highlight blog-highlight--agent\">AI</span> assistants who need external tools without turning every integration into custom <span class=\"blog-highlight blog-highlight--connector\">connectors</span> or a trust problem."
-tldr_learn: "Why <span class=\"blog-highlight blog-highlight--agent\">MCP</span> arrived when <span class=\"blog-highlight blog-highlight--agent\">agents</span> needed real tools, what it standardizes, what it absolutely does not solve, and why serious agents need staged intent narrowing before exact tool calls."
-tldr_takeaways: ["MCP is valuable exactly where it is boring: it standardizes <span class=\"blog-highlight blog-highlight--connector\">connector</span> plumbing", "Available is not the same as routed, and routed is not the same as approved", "The useful architecture separates intent identification, tool exposure, tool execution, and safety/orchestration"]
+tldr_learn: "Why <span class=\"blog-highlight blog-highlight--agent\">MCP</span> arrived when <span class=\"blog-highlight blog-highlight--agent\">agents</span> needed real tools, how an API call becomes a model-readable tool, what MCP standardizes, and why serious agents still need staged intent narrowing."
+tldr_takeaways: ["An MCP tool is often an ordinary API call wrapped in a model-readable contract", "MCP is valuable exactly where it is boring: it standardizes <span class=\"blog-highlight blog-highlight--connector\">connector</span> plumbing", "Available is not the same as routed, and routed is not the same as approved", "The useful architecture separates intent identification, tool exposure, tool execution, and safety/orchestration"]
 ---
 I am joining the <span class="blog-highlight blog-highlight--agent">MCP</span> party a little late.
 
@@ -105,7 +105,7 @@ I now prefer this vocabulary:
 - **<span class="blog-highlight blog-highlight--mcp-server">MCP server</span>:** the process across the protocol boundary that exposes external functions through MCP.
 - **MCP Manager:** software that helps install, run, group, configure, or authorize <span class="blog-highlight blog-highlight--mcp-server">MCP servers</span>.
 - **Product tool:** a user-recognizable capability such as Gmail, Calendar, Wikipedia, Search, or Slack.
-- **Function:** one executable operation inside that product tool, such as `search_messages`, `list_events`, or `get_summary`.
+- **Function:** one executable operation inside that product tool, such as `search_messages`, `list_events`, or `get_summary`. In many cases, the function eventually becomes an ordinary API call.
 
 That distinction sounds pedantic until you build the UI.
 
@@ -115,11 +115,112 @@ Visibility is not execution.
 
 Once that vocabulary is less slippery, the mental model becomes much easier.
 
+## A Tool Is Usually An API Call
+
+This is the missing layer in many MCP explanations.
+
+Before <span class="blog-highlight blog-highlight--agent">MCP</span>, there were already APIs.
+
+An API is a contract that lets one software system ask another software system to do something. In a REST API, that contract usually looks like HTTP endpoints, methods, parameters, authentication, and JSON responses. A human developer reads the documentation, understands the authentication model, writes client code, handles errors, and decides how the result should be used.
+
+For example, a simple weather integration might eventually call an HTTP endpoint shaped roughly like this:
+
+```http
+GET /weather/current?city=London&units=metric
+Authorization: Bearer ...
+```
+
+That is not an AI concept. It is normal application integration.
+
+The API exposes an endpoint. The application code owns the orchestration.
+
+What MCP changes is the consumer of that contract. Instead of only giving a human developer an endpoint to wire manually, the MCP server exposes a capability in a form that an AI host can discover, describe to a model, validate, and invoke.
+
+The same weather capability might become a model-readable tool description:
+
+```json
+{
+  "name": "get_current_weather",
+  "description": "Get the current weather for a city.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "city": {
+        "type": "string",
+        "description": "City name"
+      },
+      "units": {
+        "type": "string",
+        "enum": ["metric", "imperial"]
+      }
+    },
+    "required": ["city"]
+  }
+}
+```
+
+Then, when the user asks *"what is the weather in London?"*, the model does not call the weather provider directly. The host gives the model a constrained tool contract. The model proposes a structured call:
+
+```json
+{
+  "tool": "get_current_weather",
+  "arguments": {
+    "city": "London",
+    "units": "metric"
+  }
+}
+```
+
+The host-side <span class="blog-highlight blog-highlight--harness">harness</span> validates that request. The <span class="blog-highlight blog-highlight--mcp-client">MCP client</span> sends it to the weather <span class="blog-highlight blog-highlight--mcp-server">MCP server</span>. The server translates the tool call into the provider-specific API request, handles the provider response, and returns structured data back across the MCP boundary.
+
+That is the concrete shape of the idea.
+
+<div class="blog-insight">
+  <span class="blog-insight__label">API To Tool</span>
+  <div class="blog-flow">
+    <div class="blog-flow__step">Provider API endpoint</div>
+    <div class="blog-flow__arrow" aria-hidden="true">&rarr;</div>
+    <div class="blog-flow__step"><span class="blog-highlight blog-highlight--mcp-server">MCP server</span> wraps it</div>
+    <div class="blog-flow__arrow" aria-hidden="true">&rarr;</div>
+    <div class="blog-flow__step">Tool name and schema</div>
+    <div class="blog-flow__arrow" aria-hidden="true">&rarr;</div>
+    <div class="blog-flow__step">Host exposes tool</div>
+    <div class="blog-flow__arrow" aria-hidden="true">&rarr;</div>
+    <div class="blog-flow__step">Model proposes call</div>
+  </div>
+  <p>The model sees the constrained, structured tool contract. The server still deals with the ordinary provider API behind the boundary.</p>
+</div>
+
+<blockquote class="blog-pullquote blog-pullquote--compact">
+  <p>A tool is not magic agent intelligence.</p>
+  <p>It is usually an API capability wrapped in a model-readable contract.</p>
+</blockquote>
+
+This is also why MCP can feel underwhelming when inspected closely.
+
+Under the hood, many <span class="blog-highlight blog-highlight--mcp-server">MCP servers</span> are wrappers around ordinary APIs. A GitHub server may call the GitHub API. A Slack server may call the Slack API. A Gmail server may call the Gmail API. The novelty is not that APIs suddenly exist. The novelty is that the assistant ecosystem gets a standard way to discover capabilities, see their schemas, call them with structured arguments, and receive structured results.
+
+In other words:
+
+<div class="blog-insight">
+  <span class="blog-insight__label">API Versus MCP</span>
+  <ul>
+    <li><strong>REST API:</strong> "Here are endpoints. Developer, wire the integration and orchestration yourself."</li>
+    <li><strong>MCP:</strong> "Here are capabilities in a form an AI host can expose to a model and invoke through a standard protocol."</li>
+  </ul>
+</div>
+
+That distinction matters because it prevents two bad interpretations.
+
+The first is over-selling MCP as if it replaces APIs. It does not. It often sits on top of them.
+
+The second is under-selling MCP as *just an API wrapper*. It is often a wrapper, but the wrapper is doing something specific: turning provider-specific operations into a common, discoverable, schema-backed tool interface for an LLM runtime.
+
 ## The Simplest Mental Model
 
 Here is the version that finally made it click for me.
 
-An <span class="blog-highlight blog-highlight--mcp-server">MCP server</span> is just a program that exposes capabilities through the MCP protocol.
+An <span class="blog-highlight blog-highlight--mcp-server">MCP server</span> is the adapter that exposes those capabilities through the MCP protocol.
 
 It is called a <em>server</em> because, from the assistant's point of view, it serves capabilities over a protocol boundary. That does not mean it has to be a public web server running somewhere on the internet. It can be a local process, a Docker container, or a small service launched by the host. *External* here means outside the host boundary, not necessarily remote.
 
@@ -135,7 +236,7 @@ A Gmail <span class="blog-highlight blog-highlight--mcp-server">MCP server</span
 
 A Slack <span class="blog-highlight blog-highlight--mcp-server">MCP server</span> is the Slack-side adapter. A filesystem <span class="blog-highlight blog-highlight--mcp-server">MCP server</span> is the local-files adapter. The server is the boundary around the provider; the functions inside it are the individual operations.
 
-The server usually wraps something ordinary:
+Most of the time, the server still wraps something ordinary:
 
 - a Gmail <span class="blog-highlight blog-highlight--mcp-server">MCP server</span> wraps the Gmail API
 - a Slack <span class="blog-highlight blog-highlight--mcp-server">MCP server</span> wraps the Slack API
@@ -172,7 +273,7 @@ An <span class="blog-highlight blog-highlight--mcp-client">MCP client</span> is 
   </div>
 </div>
 
-That means <span class="blog-highlight blog-highlight--agent">MCP</span> gives the host and server a repeatable handshake:
+That means <span class="blog-highlight blog-highlight--agent">MCP</span> gives the host and server a repeatable handshake around capabilities that may ultimately be API calls:
 
 <div class="blog-insight">
   <span class="blog-insight__label">The MCP Handshake</span>
