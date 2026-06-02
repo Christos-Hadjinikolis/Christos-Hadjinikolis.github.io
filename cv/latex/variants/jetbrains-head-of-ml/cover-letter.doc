@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cover Letter - JetBrains Head of ML</title>
+  <style>
+    body { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.45; max-width: 720px; margin: 48px auto; color: #111; }
+    p { margin: 0 0 12px 0; }
+    .contact { margin-bottom: 20px; }
+    .date { margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <div class="contact">
+    <p>Christos Hadjinikolis<br>
+    christos.hadjinikolis@gmail.com<br>
+    https://christos-hadjinikolis.github.io/</p>
+  </div>
+
+  <p class="date">2 June 2026</p>
+
+  <p>Dear JetBrains hiring team,</p>
+
+  <p>I am applying for the Head of ML role because the problem JetBrains is tackling is exactly where my experience has been converging: moving AI from isolated tools and experiments into reliable, observable, governed systems that teams can actually use in production.</p>
+
+  <p>For the last several years at Vortexa, I have worked as a staff-level ML Tech Lead operating across Staff/Director-level responsibilities: technical direction, product prioritisation, stakeholder management, mentoring, architecture standards, and hands-on delivery. I have led ML-driven product and platform work across real-time inference, event-driven architecture, model services, AI signal cleaning, destination routing, and production forecasting systems. Just as importantly, my initiatives have influenced engineering practice across a roughly 70-person R&amp;D department by making systems more scalable, development practices more repeatable, and product quality easier to sustain as the company grew.</p>
+
+  <p>The JetBrains platform vision strongly resonates with me because it treats AI in software development as a systems problem, not only a model problem. As AI becomes an active participant in planning, building, reviewing, and operating software, the differentiators become governance, cost control, observability, security, workflow design, and the ability to coordinate human and autonomous work across real engineering organisations. Those are the kinds of problems I have repeatedly worked on: standardising ML engineering practices, advocating for data lineage and auditability, improving developer workflows, building reusable internal tooling, and creating operating models that help teams move faster without losing control.</p>
+
+  <p>At Vortexa, I created Dynamicio, an internal I/O abstraction that became used across more than 15 repositories and helped standardise how Python teams managed data access, packaging, and reuse. I implemented AWS CodeArtifact adoption for internal package publication, worked on schema management based on best practices and standards, and pushed for pipeline auditability as systems scaled. These were not isolated technical improvements; they reduced repeated engineering effort, made product behaviour easier to reason about, and helped future-proof core pipelines against broader company objectives. I also drove adoption of Flink, Kafka, and Kotlin/Kafka Streams for event-driven ML pipelines, supported architecture forums and ADR practices, mentored engineers in streaming systems, participated in hiring, and helped develop stronger ML engineering standards across teams. Earlier, at Vodafone, I co-led work on an internal MLOps platform using Kubeflow on GCP, supporting model versioning, deployment, telemetry, experiment workflows, and resource-governed notebooks.</p>
+
+  <p>I have also been actively working on the next layer of AI-assisted engineering: how teams turn LLM coding tools and agentic workflows into reliable delivery rather than unchecked code generation. In my post <em>Coding Got Cheap. Verification Did Not.</em>, I argued that the real bottleneck is now verification, review, and production confidence. That has led me to a broader product view: model choice and fine-tuning matter, but for many enterprise workflows the larger gains come from the harness around the model. The quality of context orchestration, retrieval, memory management, tool routing, approval boundaries, evidence shaping, and evaluation often determines whether an LLM system becomes useful or merely impressive in a demo.</p>
+
+  <p>This is where I think many AI efforts still underinvest. A well-designed harness can coordinate user interactions across one or more LLMs, expose the right operational context at the right time, retrieve and remember what matters, route actions through safe tools, and make failures inspectable. I am applying that thinking through MCP and harness work aimed at fast system status lookup, alert management, failure tracking, and auditable evidence paths for operational decision-making. For JetBrains, where AI will sit inside real developer workflows rather than beside them, this systems layer is not secondary plumbing; it is where product trust, adoption, and economic efficiency are likely to be won.</p>
+
+  <p>I also bring a governance perspective that I think is especially relevant to JetBrains' ambitions. As an ISO/JTC'21 committee expert member, I have worked in the context of AI standards aligned with European and international norms. This has shaped how I think about AI adoption: powerful systems need technical excellence, but they also need accountable design, clear operational boundaries, and standards that scale beyond one team or one product.</p>
+
+  <p>I would bring JetBrains a combination of production ML depth, platform thinking, developer-tool empathy, and pragmatic leadership. I am comfortable balancing long-term R&amp;D with short-term product commitments, and I care about making advanced AI useful through disciplined engineering rather than novelty alone. The opportunity to help JetBrains build an open, AI-native execution and governance layer for software development is one I would be excited to discuss.</p>
+
+  <p>Sincerely,</p>
+
+  <p>Christos Hadjinikolis</p>
+</body>
+</html>
