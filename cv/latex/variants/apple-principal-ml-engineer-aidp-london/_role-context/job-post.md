@@ -6,6 +6,11 @@
 - Role Number: 200651188
 - Source URL: https://jobs.apple.com/en-us/details/200651188/principal-machine-learning-engineer-ai-data-platforms-aidp?board_id=17682
 - Captured: 2026-03-27
+- Updated: 2026-06-10 from user-provided job description in conversation
+
+## Positioning Note
+
+This variant is intentionally positioned around production ML systems and applied LLM systems engineering. The application should be honest that the strongest evidence is in ML platform delivery, inference services, evaluation/observability, and LLM application harness architecture through Promet. It should not claim deep prior ownership of RLHF/RLAIF, LoRA/QLoRA, pre-training, or Swift production development unless new evidence is supplied.
 
 ## Description Snapshot
 
