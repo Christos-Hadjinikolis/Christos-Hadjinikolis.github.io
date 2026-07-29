@@ -663,19 +663,53 @@
 
 	.section-shell--portfolio p,
 	.section-shell--portfolio .row,
+	.section-shell--portfolio .portfolio-grid,
 	.section-shell--about-me p,
 	.section-shell--welcome-to-ml-affairs .prose-block,
 	.section-shell--welcome-to-ml-affairs .image.featured {
 		max-width: none;
 	}
 
-	.section-shell--portfolio .row {
+	.section-shell--portfolio .row,
+	.section-shell--portfolio .portfolio-grid {
 		margin-top: 2.5rem;
 	}
 
 	.section-shell--portfolio .row,
+	.section-shell--portfolio .portfolio-grid,
 	.section-shell--portfolio .item {
 		text-align: left;
+	}
+
+	.section-shell--portfolio .portfolio-grid {
+		align-items: stretch;
+		display: grid;
+		gap: 2.4rem;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	.section-shell--portfolio .portfolio-grid .item {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		margin-bottom: 0;
+	}
+
+	.section-shell--portfolio .portfolio-grid .item .image {
+		display: block;
+		aspect-ratio: 16 / 10;
+		margin: 0;
+		overflow: hidden;
+		width: 100%;
+	}
+
+	.section-shell--portfolio .portfolio-grid .item .image img {
+		height: 100%;
+		width: 100%;
+	}
+
+	.section-shell--portfolio .portfolio-grid .item header {
+		flex: 1 1 auto;
 	}
 
 	.section-shell--portfolio > .container > p,
@@ -3659,6 +3693,11 @@
 				margin-bottom: 20px;
 			}
 
+			.section-shell--portfolio .portfolio-grid {
+				gap: 1.4rem;
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+			}
+
 		/* Header */
 
 			#header {
@@ -3759,6 +3798,10 @@
 
 			.item {
 				margin-bottom: 15px;
+			}
+
+			.section-shell--portfolio .portfolio-grid {
+				grid-template-columns: 1fr;
 			}
 
 		/* List */

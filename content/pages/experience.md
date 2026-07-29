@@ -3,7 +3,7 @@ title: Professional Experience
 subtitle: How the scope evolved
 intro_theme: experience
 intro_kicker: "Narrative Timeline"
-intro_summary: "Not a second CV. This page shows how the work widened over time: from teaching and research, into consulting under constraints, and then into architecture, system ownership, and team leadership."
+intro_summary: "Not a second CV. This page shows how the work widened over time: from teaching and research, into consulting under constraints, and then into engineering management for production ML and live data systems."
 intro_card_title: "What This Page Tracks"
 intro_points:
   - "How the scope changed"
@@ -19,16 +19,17 @@ permalink: /experience.html
   <section class="page-hero">
     <div class="page-panel page-panel--tinted">
       <div class="page-kicker">🧭 Professional Arc</div>
-      <h3>From research and teaching to full ownership of real-time ML systems</h3>
+      <h3>From research and teaching to Engineering Management for real-time ML systems</h3>
       <p class="page-summary">
         This page is intentionally not a second CV. It is the story of how my scope changed over time: from explaining ideas,
-        to building models, to owning the systems, trade-offs, and teams needed to make those models useful in production.
+        to building models, to managing the people, systems, trade-offs, and stakeholder interfaces needed to make those models useful in production.
       </p>
       <ul class="page-pills">
         <li class="page-pill">🎓 Research roots</li>
-        <li class="page-pill">🏗️ Production systems</li>
+        <li class="page-pill">🏗️ Production ML</li>
         <li class="page-pill">⚙️ Streaming architecture</li>
-        <li class="page-pill">👥 Team leadership</li>
+        <li class="page-pill">👥 Engineering management</li>
+        <li class="page-pill">📈 Delivery health</li>
         <li class="page-pill">🏛️ Standards work</li>
       </ul>
       <div class="page-actions">
@@ -49,11 +50,11 @@ permalink: /experience.html
         </li>
         <li>
           <strong>Consulting years: delivery under ambiguity</strong>
-          I learned how messy systems, unclear requirements, and real stakeholder pressure reshape “correct” engineering.
+          I learned how messy systems, unclear requirements, product pressure, and client constraints reshape “correct” engineering.
         </li>
         <li>
-          <strong>Current years: systems and leverage</strong>
-          I now focus on architecture, operational quality, and building teams that can ship dependable ML systems repeatedly.
+          <strong>Current years: management and leverage</strong>
+          I now focus on architecture, operational quality, team growth, stakeholder alignment, and repeatable delivery systems.
         </li>
       </ul>
     </div>
@@ -106,7 +107,7 @@ permalink: /experience.html
       <article class="experience-card">
         <div class="experience-card-head">
           <div>
-            <h4>🏗️ Consulting became the bridge from data science to ML engineering</h4>
+            <h4>🏗️ Consulting became the bridge from data science to technical leadership</h4>
             <div class="experience-role">Data Reply</div>
             <div class="experience-location">London, UK</div>
           </div>
@@ -114,23 +115,24 @@ permalink: /experience.html
         </div>
         <p class="experience-hook">
           This was the period where “interesting model work” stopped being enough. I had to deal with enterprise constraints,
-          legacy systems, production expectations, and the uncomfortable gap between experimentation and deployment.
+          legacy systems, production expectations, product backlogs, and the uncomfortable gap between experimentation and deployment.
         </p>
         <div class="experience-columns">
           <div class="experience-mini-panel">
             <h5>Representative client work</h5>
             <ul class="page-list">
-              <li><strong>🏦 UBS:</strong> graph analytics, process mining, and real-time insight pipelines with Kafka, Elasticsearch, and Python.</li>
-              <li><strong>🚜 CNHi:</strong> time-series forecasting for agricultural vehicles with alerting and deployment paths.</li>
-              <li><strong>📱 Vodafone:</strong> internal MLOps platform work on GCP and Kubeflow, with CI/CD, telemetry, and reproducibility.</li>
+              <li><strong>🏦 UBS:</strong> graph analytics, process mining, and real-time insight pipelines with Kafka, Elasticsearch, and Python; later the sole embedded Data Reply consultant.</li>
+              <li><strong>🚜 CNHi:</strong> lead data scientist / Scrum Master for a DS team processing live vehicle sensory data with PySpark to infer maintenance needs.</li>
+              <li><strong>📱 Vodafone:</strong> worked on Infinity, a GCP/Kubeflow data-science platform, and built Red Agent, a mobile-network feature-engineering framework.</li>
             </ul>
           </div>
           <div class="experience-mini-panel">
             <h5>What this phase taught me</h5>
             <ul class="page-list">
               <li>Most ML failures are systems failures, not modelling failures.</li>
-              <li>Ambiguous environments are where architecture matters most.</li>
-              <li>Bridging DS and engineering is a delivery problem as much as a technical one.</li>
+              <li>Ambiguous environments are where architecture and product discipline matter most.</li>
+              <li>Bridging DS, engineering, and product is a delivery problem as much as a technical one.</li>
+              <li>Good managers create feedback loops that help specialists do their best work.</li>
             </ul>
           </div>
         </div>
@@ -140,37 +142,37 @@ permalink: /experience.html
     <div class="experience-step">
       <div class="experience-era">
         <span class="period">Since 12/2020</span>
-        <span class="label">Leadership<br>real-time systems at scale</span>
+        <span class="label">Management<br>teams, systems, reliability</span>
       </div>
       <article class="experience-card">
         <div class="experience-card-head">
           <div>
-            <h4>🚢 Vortexa: owning streaming-first ML systems end to end</h4>
-            <div class="experience-role">ML Tech Lead (Staff-Level) · Pod Lead</div>
+            <h4>🚢 Vortexa: managing teams and live ML/data systems at scale</h4>
+            <div class="experience-role">Engineering Manager / ML Tech Lead · Pod Lead</div>
             <div class="experience-location">London, UK</div>
           </div>
           <div class="experience-badge">Architecture · Delivery · People</div>
         </div>
         <p class="experience-hook">
-          At Vortexa, the center of gravity shifted again: from delivering components to owning systems, quality bars, and the teams responsible for keeping them reliable over time.
+          At Vortexa, the center of gravity shifted again: from delivering components to managing a cross-functional pod, setting operating standards, and leading the live-processing strategy behind production maritime intelligence.
         </p>
         <div class="experience-columns">
           <div class="experience-mini-panel">
-            <h5>What I built</h5>
+            <h5>What I lead</h5>
             <ul class="page-list">
-              <li>Destination and ETA systems using transformer-based sequence models with automated refresh and longitudinal evaluation.</li>
-              <li>Real-time Kafka/Flink pipelines over global AIS feeds, powering prediction, anomaly triggers, and downstream decision support.</li>
-              <li>AIS denoising operators based on Kalman filtering to improve signal quality and downstream model accuracy.</li>
-              <li>MLOps foundations around rollout strategy, observability, model versioning, and operational discipline.</li>
+              <li>A five-person MLE/DS/DE pod working daily with an SME/analyst partner.</li>
+              <li>1:1s, reviews, promotion input, hiring, retention, onboarding, sprint reviews, retrospectives, mentoring, and code pairing.</li>
+              <li>Hiring and interview loops: 5 senior DS/DE hires, 31 candidate evaluations, graduate mentoring, and intern management.</li>
+              <li>Team practices that reduce single-person ownership: clearer ownership, pairing, docs close to code, tests-as-docs, and new joiners raising PRs within a week.</li>
             </ul>
           </div>
           <div class="experience-mini-panel">
-            <h5>What I own now</h5>
+            <h5>What the estate requires</h5>
             <ul class="page-list">
-              <li>Cross-functional delivery across ML, DS, and DE.</li>
-              <li>Hiring, mentoring, roadmap alignment, and execution quality.</li>
-              <li>Architecture decisions that account for latency, replayability, and failure modes.</li>
-              <li>Raising the bar from “the model works” to “the system can be trusted.”</li>
+              <li>Post-ingestion streaming and ML inference systems downstream of 10+ AIS providers.</li>
+              <li>Flink dataflow strategy to reduce cognitive load, simplify maintenance, and decouple compute scaling from Kafka partition counts.</li>
+              <li>Monitoring, runbooks, rollback/fallback paths, and Jira alert workflows keeping MTTR under 30 minutes.</li>
+              <li>DORA metrics, architecture forums, ADRs, dev containers, Backstage adoption, and DynamicIO data contracts/SLAs to make delivery healthier and safer.</li>
             </ul>
           </div>
         </div>
@@ -183,8 +185,8 @@ permalink: /experience.html
       <div class="page-kicker">🏛️ Beyond The Core Role</div>
       <h3>Standards and research</h3>
       <ul class="page-list">
-        <li><strong>Since 01/2021 · ISO JTC 21 WG3</strong><br>Committee Expert Member working on AI standards aligned with international and EU policy directions.</li>
-        <li><strong>Since 10/2024 · UCL Department of Information Studies</strong><br>Associate Researcher supporting AI application, standardisation, and ethics initiatives.</li>
+        <li><strong>Since 01/2021 · ISO/CEN-CENELEC JTC 21 WG3</strong><br>Committee Expert Member working on AI standards aligned with international and EU policy directions.</li>
+        <li><strong>Since 10/2024 · UCL Department of Information Studies</strong><br>Associate Researcher working at the intersection of AI and maritime analytics, with emphasis on auditability, versioning, explainability, and safe adoption.</li>
       </ul>
     </div>
 
@@ -204,9 +206,9 @@ permalink: /experience.html
       <h3>What has remained constant</h3>
       <ul class="page-list">
         <li><strong>Production is the only truth.</strong></li>
-        <li><strong>If it cannot be measured, it is not done.</strong></li>
-        <li><strong>Deterministic systems beat clever hacks.</strong></li>
-        <li><strong>Models must degrade gracefully.</strong></li>
+        <li><strong>Standards set teams free when they remove avoidable ambiguity.</strong></li>
+        <li><strong>Models need auditability, monitoring, and graceful failure paths.</strong></li>
+        <li><strong>Healthy delivery needs visible signals, not hidden stress.</strong></li>
         <li><strong>System quality should scale through people and process, not heroics.</strong></li>
       </ul>
       <p class="page-note">Guiding principle: “Make it work. Make it right. Make it fast.”</p>

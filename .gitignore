@@ -130,6 +130,12 @@ _site/
 .env.*
 !.env.example
 
+# Private CV positioning/source evidence. Keep public CV/site copy sanitized.
+cv/latex/context/evidence/
+cv/latex/context/raw/
+cv/latex/context/positioning/
+cv/latex/variants/*/_role-context/
+
 # Ignore Byebug command history file.
 .byebug_history
 
