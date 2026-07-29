@@ -40,7 +40,7 @@ That makes the role plausible enough to target, provided the CV is positioned ho
 
 ## Tailoring Choices Made In The Variant
 
-- Rewrote the summary to emphasise production-grade AI systems, platform delivery, transformer-based work, and ownership from experimentation to deployment.
+- Rewrote the summary to emphasise production-grade AI systems, platform delivery, destination-prediction services, and ownership from experimentation to deployment.
 - Updated the summary to include Promet and to explicitly frame the fit around the systems layer of generative AI: runtime boundaries, orchestration, tools, traceability, and verification.
 - Strengthened Vortexa bullets around model-serving systems, distributed data flows, lifecycle engineering, reliability, and technical leadership.
 - Tightened the skills sidebar to foreground technologies, LLM harnesses, tool safety, Ollama, and production concerns that are closer to the Apple brief.
@@ -63,7 +63,7 @@ You are a better fit if the hiring team values:
 - staff-level ML systems engineering
 - production reliability
 - platform maturity
-- transformer-adjacent system delivery
+- production model-serving and evaluation discipline
 - applied LLM harness/product infrastructure
 - technical leadership across research-to-production boundaries
 

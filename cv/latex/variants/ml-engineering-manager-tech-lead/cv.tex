@@ -1,5 +1,10 @@
 %!TEX TS-program = xelatex
-\documentclass[]{friggeri-cv}
+\documentclass[]{../../friggeri-cv}
+
+% Variant source:
+%   Composite target - ML Engineering Manager / Technical Lead Manager
+% This file is tailored from ../../cv.tex and intentionally does not
+% replace the master CV source.
 
 % Packages
 \usepackage{pifont}
@@ -10,7 +15,7 @@
 \usepackage{enumitem}
 \usepackage{fancyhdr}
 
-\graphicspath{ {./images/} }
+\graphicspath{ {../../images/} }
 
 % Set up footer
 \pagestyle{fancy}
@@ -44,7 +49,7 @@
 
 \begin{aside}
   	\section{mediums}
-		\href{https://christos-hadjinikolis.github.io/}{\includegraphics[width=1.9cm]{../../assets/images/site/ml-affairs-logo-welcome.png}}
+		\href{https://christos-hadjinikolis.github.io/}{\includegraphics[width=1.9cm]{../../../../assets/images/site/ml-affairs-logo-welcome.png}}
 		\href{https://uk.linkedin.com/in/christoshadjinikolis}{\includegraphics[scale=0.4]{linkedin0.png}}
 	    \href{https://github.com/Christos-Hadjinikolis}{\includegraphics[scale=0.35]{github0.png}}
 		\href{https://scholar.google.com/citations?hl=en&user=Rr3KTx8AAAAJ}{\includegraphics[scale=0.08]{Google_Scholar.png}}
@@ -71,16 +76,16 @@
     	{\small
 	    \setlength{\parindent}{-1.5em}
     	\setlength{\leftskip}{-1.5em}
-								    Manage Turingeries, a \textbf{five-person MLE/DS/DE pod} with daily SME/analyst partnership. Own team delivery and \textbf{live-processing strategy} for mission-critical post-ingestion streaming and ML inference systems downstream of \textbf{10+ AIS providers}, covering prediction trust, model evaluation/replay, monitoring, and product enrichment.
+							    Manage Turingeries, a \textbf{five-person MLE/DS/DE pod} with daily SME/analyst partnership. Own team delivery and \textbf{live-processing strategy} for mission-critical post-ingestion streaming and ML inference systems downstream of \textbf{10+ AIS providers}, covering prediction trust, model evaluation/replay, monitoring, and product enrichment.
 	    
     	}
 	    \begin{itemize}[left=-1.5em]
-											        \item \footnotesize\textbf{People \& Talent:} Built the pod and helped grow the data-products department from \textbf{4 to 30+}; hired \textbf{5 senior DS/DEs}, evaluated \textbf{31 candidates}, mentored 4 graduates/interns, retained/progressed the full team, and onboarded new joiners to PRs within a week.
-										        \item \footnotesize\textbf{Streaming Platform Strategy:} Introduced/scaled \textbf{Flink}'s dataflow model across live pipelines, reducing cognitive load and maintenance effort while decoupling compute scaling from Kafka partition counts.
-										        \item \footnotesize\textbf{Trustworthy ML Operations:} Build the trust loop for destination/ETA predictions: \textbf{versioned models/data}, replay/evaluation interfaces, online monitoring, analyst feedback, controlled switch-over, and explainability work.
-										        \item \footnotesize\textbf{Reliability \& Delivery Health:} Maintain monitoring, runbooks, rollback/fallback plans, and Jira alert workflows; keep \textbf{MTTR under 30 min} while using \textbf{DORA metrics} to expose bottlenecks, reduce toil, and protect team health.
-										        \item \footnotesize\textbf{Strategic Portfolio \& Interfaces:} Turn ambiguous product/model friction into \textbf{evaluated workstreams}; align product, analysts, SMEs, frontend, and backend around ownership, prediction semantics, and product-ready interfaces.
-										        \item \footnotesize\textbf{Engineering Standardisation:} Scale delivery through Flink/Airflow archetypes, ADRs, docs close to code, tests-as-docs, dev containers, Backstage adoption, and DynamicIO data contracts/SLAs; cut a \textbf{3h DAG feedback loop to under 5 min}.
+										        \item \footnotesize\textbf{People \& Talent:} Built the pod and helped grow the data-products department from \textbf{4 to 30+}; hired \textbf{5 senior DS/DEs}, evaluated \textbf{31 candidates}, mentored 4 graduates/interns, retained/progressed the full team, and onboarded new joiners to PRs within a week.
+									        \item \footnotesize\textbf{Streaming Platform Strategy:} Introduced/scaled \textbf{Flink}'s dataflow model across live pipelines, reducing cognitive load and maintenance effort while decoupling compute scaling from Kafka partition counts.
+									        \item \footnotesize\textbf{Trustworthy ML Operations:} Build the trust loop for destination/ETA predictions: \textbf{versioned models/data}, replay/evaluation interfaces, online monitoring, analyst feedback, controlled switch-over, and explainability work.
+									        \item \footnotesize\textbf{Reliability \& Delivery Health:} Maintain monitoring, runbooks, rollback/fallback plans, and Jira alert workflows; keep \textbf{MTTR under 30 min} while using \textbf{DORA metrics} to expose bottlenecks, reduce toil, and protect team health.
+									        \item \footnotesize\textbf{Strategic Portfolio \& Interfaces:} Turn ambiguous product/model friction into \textbf{evaluated workstreams}; align product, analysts, SMEs, frontend, and backend around ownership, prediction semantics, and product-ready interfaces.
+									        \item \footnotesize\textbf{Engineering Standardisation:} Scale delivery through Flink/Airflow archetypes, ADRs, docs close to code, tests-as-docs, dev containers, Backstage adoption, and DynamicIO data contracts/SLAs; cut a \textbf{3h DAG feedback loop to under 5 min}.
 									        \item \footnotesize\textbf{Architecture \& Org Influence:} Instigated a weekly company architecture forum and influenced topology/re-org work around pod, analyst/SME, frontend, and product boundaries.
     	\end{itemize}
 	}

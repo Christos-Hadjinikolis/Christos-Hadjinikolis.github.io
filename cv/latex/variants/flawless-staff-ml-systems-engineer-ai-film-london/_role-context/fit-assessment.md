@@ -18,15 +18,15 @@ The strongest overlap is in production ML infrastructure, data pipelines, model 
 ## Where The Fit Is Partial Or Weak
 
 - The role explicitly calls out multimodal film data, especially video, embeddings, and metadata; the current CV does not show direct film or video ML delivery.
-- The brief asks for PyTorch and Ray. PyTorch is supported by the source CV, but Ray is not.
+- The brief asks for a named deep-learning framework and Ray. Neither should be claimed from the refreshed factual baseline.
 - Triton and Apache Iceberg are named in the stack and are not evidenced in the source CV.
 - The recruiter note references vision-based ML systems or visual data processing; the current CV is stronger on forecasting, graph, text, and geospatial systems.
 - A/B experimentation is implied by the role, but the CV has stronger evidence for online evaluation and operational monitoring than explicit A/B testing ownership.
 
 ## Tailoring Choices Made In The Variant
 
-- Rewrote the summary to foreground data platforms, inference systems, heterogeneous datasets, GPU-backed workflows, and end-to-end ownership.
-- Tightened the sidebar so distributed ML systems, PyTorch-distributed, Spark, Flink, and production platform concerns are easier to spot.
+- Rewrote the summary to foreground data platforms, inference systems, heterogeneous datasets, production rollout discipline, and end-to-end ownership.
+- Tightened the sidebar so distributed ML systems, Spark, Flink, and production platform concerns are easier to spot.
 - Reframed Vortexa bullets around data-platform foundations, model lifecycle engineering, streaming infrastructure, and Staff-level ownership.
 - Preserved Vodafone platform work because it materially supports the infrastructure and productionisation aspects of the role.
 - Kept the document within the same structure and length budget rather than adding new sections or expanding detail.
@@ -34,6 +34,7 @@ The strongest overlap is in production ML infrastructure, data pipelines, model 
 ## Claims Intentionally Not Made
 
 - No claim of direct Ray production experience.
+- No claim of unsupported deep-learning-framework production expertise.
 - No claim of Triton or Apache Iceberg experience.
 - No claim of direct video, film, or multimodal vision-system delivery.
 - No claim of explicit A/B experimentation ownership where the source CV does not support it.

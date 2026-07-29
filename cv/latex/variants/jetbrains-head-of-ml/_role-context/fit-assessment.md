@@ -10,7 +10,7 @@ The tailored CV therefore positions Christos as a Staff/Director-level ML Tech L
 
 - Production ML systems: Vortexa work shows model services, real-time inference, streaming pipelines, model lifecycle engineering, online evaluation, monitoring, and release discipline.
 - AI platform direction: Vodafone's internal MLOps platform and Vortexa's standardisation work map well to JetBrains' platform ambitions.
-- Product and business orientation: Vortexa context includes backlog prioritisation, stakeholder management, product-owner-style work, OKR delivery, regulatory controls, latency/throughput improvements, and client-facing thought leadership.
+- Product and business orientation: Vortexa context includes backlog prioritisation, stakeholder management, product-owner-style work, OKR delivery, regulatory controls, streaming/dataflow standardisation, and client-facing thought leadership.
 - Leadership and standards: Evidence includes remote pod leadership, onboarding, mentoring, hiring/interviewing, architecture forums, ADR advocacy, schema management, lineage/auditability advocacy, and engineering standardisation.
 - Developer ecosystem relevance: Java, Kotlin through Kafka Streams work, CI/CD, GitHub Actions/Jenkins/CircleCI, AWS CodeArtifact adoption, internal package publication, MCP/harness work, and workflow automation are all relevant to JetBrains' developer tooling context.
 - Governance: ISO/JTC'21 committee work and AI standardisation give a useful differentiator for a role explicitly concerned with governance, security, observability, and responsible adoption.
@@ -20,7 +20,7 @@ The tailored CV therefore positions Christos as a Staff/Director-level ML Tech L
 - Direct management of about 50 people is not evidenced in the source CV or Vortexa context.
 - Business-case ownership is implied through product/stakeholder/OKR work, but not yet supported by explicit budget, revenue, cost, or ROI numbers.
 - LLM and autonomous-agent experience is present as AI adoption/tooling awareness, but the CV does not show deep hands-on LLM platform ownership at JetBrains' likely scale.
-- Distributed training of multi-billion parameter models is not evidenced beyond PyTorch-distributed and transformer-based work.
+- Distributed training of multi-billion parameter models is not evidenced; the stronger claim is production ML, model-serving, evaluation, and platform discipline.
 - Kotlin is supported through Java/Kotlin Kafka Streams work, but the CV still avoids positioning Christos as primarily a Kotlin engineer.
 - MCP/harness work is relevant and timely, but should be discussed as an active initiative and architecture direction unless production usage evidence is added.
 

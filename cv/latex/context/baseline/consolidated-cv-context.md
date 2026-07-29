@@ -15,7 +15,7 @@ Use this document as orientation, not as a substitute for factual checking. Befo
 
 ## Current Positioning
 
-Christos Hadjinikolis is a Staff-level ML Tech Lead / Pod Lead with 15+ years across AI research, production ML systems, MLOps, distributed data infrastructure, and technical leadership.
+Christos Hadjinikolis is a Staff-level ML Tech Lead / Pod Lead with 16 years of combined industry and academic experience across AI research, production ML systems, MLOps, distributed data infrastructure, and technical leadership.
 
 The strongest market positioning is:
 
@@ -43,7 +43,8 @@ Supporting themes:
 - Repeated work on model lifecycle, observability, rollout safety, streaming architecture, and decision support.
 - Comfortable operating across ambiguous systems with legacy debt, operational constraints, and cross-team dependencies.
 - Technical communication and mentoring are recurring strengths from teaching, doctoral work, consulting, and pod leadership.
-- AI governance and standardisation are differentiators through ISO/JTC 21 and UCL affiliation.
+- AI governance and standardisation are differentiators through ISO/JTC 21 and UCL research at the intersection of AI and maritime analytics.
+- The standards thesis should be explicit: advocate auditability, model/data versioning, prediction tracking, explainability, and standards that make safe AI adoption attractive to companies.
 
 ## Master CV Snapshot
 
@@ -54,7 +55,7 @@ Current headline:
 
 Current summary emphasis:
 
-- 15+ years designing and deploying large-scale AI systems.
+- 16 years of combined industry and academic experience designing and deploying large-scale AI systems.
 - Recent focus on real-time inference pipelines, event-driven architectures, and scalable backend services for ML-driven products.
 - Built and maintain systems that expose model APIs, stream predictions, and support continuous feedback loops.
 - Comfortable across research and production.
@@ -62,11 +63,11 @@ Current summary emphasis:
 
 Current visible technical stack:
 
-- Languages: Java, Python, SQL, Cypher.
+- Languages: Java, Kotlin, Python, SQL, Cypher.
 - Cloud: AWS, GCP.
-- MLOps / orchestration: Kubeflow, Airflow, MLflow, KubeVela.
+- MLOps / orchestration: Airflow, MLflow, KubeVela.
 - Data / streaming: Spark, Flink, Kafka, Elasticsearch, polars, pandas.
-- ML: PyTorch-distributed, Transformers, time series, graph analytics, forecasting.
+- ML: time series, graph analytics, forecasting, model evaluation.
 - Engineering: CI/CD, Docker, FastAPI, model/data versioning, monitoring.
 
 ## Vortexa Context
@@ -79,7 +80,7 @@ Dates:
 Public/current CV framing:
 
 - Leads design and delivery of real-time ML systems for maritime forecasting.
-- Focus areas include transformer-based sequence models, streaming data infrastructure, and scalable deployment workflows.
+- Focus areas include destination-prediction services, streaming data infrastructure, and scalable deployment workflows.
 - Helped standardise pipelines, improve observability, and reduce latency across services.
 
 ### Core Vortexa Domains
@@ -93,7 +94,7 @@ Evidence:
 - Delivered backend APIs for model serving with versioning, switch-over logic, and logging.
 - Designed services for resilience and auditability in a regulated environment.
 - Introduced fallback mechanisms, health checks, and minimal-downtime release paths for continuously operating prediction services.
-- Built out training/inference workflows with CI/CD, GPU support, and online evaluation tools.
+- Built out training/inference workflows with CI/CD and online evaluation tools.
 - Delivered destination-model-as-a-service work through Ithaca.
 - Supported waiting-time / ETA modelling through Chronos.
 
@@ -114,8 +115,8 @@ Avoid unless confirmed:
 
 Evidence:
 
-- Built distributed workflows using Flink and pandas over geospatial, textual, and graph-structured data; CV states 25% throughput improvement.
-- Designed Kafka-based pipelines supporting near real-time model updates and downstream triggers across 15+ ETL components.
+- Introduced/scaled Flink to move stream processing toward a framework-driven dataflow model, reducing code complexity, maintenance effort, and Kafka partition-coupled scaling limits.
+- Designed Kafka/Flink pipelines supporting near real-time model updates and downstream triggers across 15+ ETL components.
 - Led or helped lead adoption of Flink as a primary stream-processing framework.
 - Worked with Kafka Streams / Java / Kotlin through Autobahn and voyage destination updates.
 - Initiated mentorship / training around event-driven processing, Flink, and Kafka Streams.
@@ -227,6 +228,7 @@ Evidence:
 
 - Created DynamicIO, a Python library for abstracting I/O.
 - DynamicIO became used across 15+ repositories according to raw context and public talk history.
+- Used DynamicIO to decouple I/O from business logic, create seams for local tests based on characteristic sample data, define cross-team/domain-owner/system SLAs through schema and data validations, and shorten feedback loops without repeatedly exercising long-running DAGs in DEV; one 3-hour DAG path could be sufficiently tested locally in under 5 minutes.
 - Replaced inefficient vendor-package practices with internal package publication.
 - Helped introduce AWS CodeArtifact.
 - Supported publication of internal Python packages such as vtx-runners and graph-structure.
@@ -235,9 +237,9 @@ Evidence:
 Useful phrasing:
 
 - Created reusable internal tooling adopted across 15+ repositories.
-- Standardised Python I/O patterns and reduced duplicated data-access code.
+- Standardised Python I/O patterns, reduced duplicated data-access code, and made business logic easier to test locally.
 - Modernised internal package publication and reuse.
-- Improved development velocity and maintainability across Python teams.
+- Improved development velocity, feedback-cycle time, and maintainability across Python teams.
 
 This is one of the strongest evidence-backed platform stories.
 
@@ -262,7 +264,10 @@ Useful phrasing:
 Evidence:
 
 - Advocated for Architectural Decision Records.
-- Initiated system-design meetings that evolved into architecture forum discussions.
+- Instigated a weekly company architecture forum for presenting ideas, discussing trade-offs, shared learning, and feedback.
+- Contributed input to team-topology and re-org initiatives, especially how pods should interact with analysts/SMEs, frontend teams, and product; frame as influence, not ownership.
+- Turns ambiguous product/model friction into scoped workstreams and product-ready interfaces, using proposal discipline and stakeholder workshops without requiring Vortexa-specific domain wording in public CV copy.
+- Uses DORA metrics and Jira-based monitoring/alert workflows as delivery-health mechanisms for reaction speed, bottleneck visibility, toil/burnout reduction, and team trust.
 - Contributed to Architecture Guild-style work.
 - Built a data-flow graph/history of Vortexa's processing components through interviews and platform archaeology.
 - Presented platform lineage and system evolution to the company.
@@ -282,7 +287,7 @@ Evidence:
 - Responsibilities in raw notes include technical supervision, people management, backlog refinement, prioritisation, stakeholder management, mentoring, and product-management-like work.
 - Mentored engineers, data scientists, and analysts.
 - Participated in hiring and candidate evaluation before and after joining Vortexa.
-- Ran or initiated event-driven architecture mentorship sessions with seven participants, including two from ADT.
+- Ran or initiated event-driven architecture mentorship sessions with seven participants, including two from a frontend/product engineering team.
 
 Useful phrasing:
 
@@ -390,8 +395,8 @@ Dates:
 
 Evidence:
 
-- Co-led Vodafone's internal MLOps platform, Infinity Project.
-- Built on GCP using Kubeflow.
+- Worked on Vodafone's internal MLOps platform, Infinity Project, before it was completed.
+- Infinity was built on GCP using Kubeflow; keep Kubeflow as project context, not as a current sidebar skill claim.
 - Supported versioning, deployment, telemetry, experiment workflows / resource-governed notebooks.
 - Implemented CI/CD pipelines, unified feature stores, and monitoring.
 
@@ -569,19 +574,22 @@ Use these as candidate bullets, then tighten to fit the role and verify exact de
 
 - Led production ML services for destination and arrival prediction, with versioned serving, fallback mechanisms, health checks, and observable rollout paths.
 - Built and maintained real-time ML pipelines that connect streaming data, model inference, and downstream decision support.
-- Co-led Vodafone's internal MLOps platform on GCP/Kubeflow, supporting model versioning, deployment, telemetry, and resource-governed notebooks.
+- Worked on Vodafone's internal MLOps platform on GCP/Kubeflow, supporting model versioning, deployment, telemetry, and resource-governed notebooks; do not imply completion ownership.
 - Standardised ML engineering practices around model versioning, data-model dependencies, monitoring, CI/CD, and local end-to-end testing.
 
 ### Streaming / Data Engineering
 
 - Designed Kafka/Flink pipelines for near real-time enrichment, model updates, and downstream triggers across 15+ ETL components.
-- Helped drive the adoption of Apache Flink as a strategic stream-processing framework.
+- Helped drive the adoption of Apache Flink as a strategic stream-processing framework, with the value in dataflow modelling, framework-driven development, lower cognitive load, lower maintenance effort, and compute scaling decoupled from Kafka partitioning.
 - Bridged Python ML workflows with JVM stream-processing components in Java/Kotlin/Kafka Streams.
-- Built distributed workflows over geospatial, textual, and graph-structured data; current CV claims 25% throughput improvement.
+- Built distributed workflows over geospatial, textual, and graph-structured data; avoid framing Flink adoption as primarily a throughput improvement.
 
 ### Architecture / Staff Leadership
 
-- Initiated system-design meetings, architecture forums, and ADR practices to reduce knowledge silos and improve architectural decision-making.
+- Instigated a weekly company architecture forum and promoted ADR practices to reduce knowledge silos, improve architectural decision-making, and create useful feedback loops.
+- Promoted Flink and Airflow Python repository archetypes to reduce cognitive load, speed up repeated delivery patterns, and reduce maintenance man-hours.
+- Advocated for docs close to code, ADRs as durable historical records, championed/adopted Backstage for the team, supported wider Backstage adoption, championed dev containers, and pushed developer-platform style standardisation.
+- Supports OpenMetadata adoption to improve data lineage, auditability of processing trails, and understanding of system interfaces.
 - Built a cross-system lineage view of Vortexa's production data flow by interviewing engineers and mapping component history.
 - Led pod-level delivery across technical direction, prioritisation, backlog refinement, stakeholder management, mentoring, and hiring.
 - Mentored engineers and data scientists in ML engineering, event-driven architecture, Kafka, Flink, testing, and production discipline.
@@ -595,8 +603,8 @@ Use these as candidate bullets, then tighten to fit the role and verify exact de
 
 ### Governance / Trust / AI Adoption
 
-- ISO/JTC 21 committee expert member working on AI standards aligned with EU and international norms.
-- UCL Associate Researcher supporting AI application, standardisation, and ethics initiatives.
+- ISO/JTC 21 committee expert member working on AI standards aligned with EU and international norms, with emphasis on auditability, model/data versioning, prediction tracking, and explainability.
+- UCL Associate Researcher researching the intersection of AI and maritime analytics.
 - Advocates for AI-assisted engineering workflows grounded in verification, bounded risk, review quality, and production confidence.
 - Designs ML systems with auditability, fallback paths, monitoring, and controlled rollout rather than treating model output as sufficient.
 
@@ -608,12 +616,11 @@ These may be true based on context, but require direct confirmation or careful w
 - Exact number of direct reports, if any.
 - Whether performance reviews were formal line-management responsibility.
 - Whether he managed budget or headcount planning.
-- Exact latency, throughput, uptime, cost, or accuracy improvements beyond the 25% throughput figure already in the CV.
+- Exact latency, throughput, uptime, cost, or accuracy improvements unless backed by current evidence.
 - Scope of Flink adoption: team-level, department-level, or company-level.
 - Scope of Architecture Guild participation and authority.
 - Exact ownership of Kalman filter productionisation.
 - Exact operational incident/SRE responsibility.
-- Any GPU infrastructure ownership beyond "GPU support" already in the CV.
 - Any hands-on LLM fine-tuning, production RAG, or long-term memory delivery.
 - Any claim that Promet is production/commercial rather than a reference portfolio project.
 
@@ -623,9 +630,9 @@ These may be true based on context, but require direct confirmation or careful w
 - Prefer stronger, narrower claims over broad seniority claims that are hard to prove.
 - For Staff/Principal roles, emphasise system ownership, architecture, mentoring, technical standards, and cross-team influence.
 - For Director roles, only emphasise people/org leadership where scope is explicit; otherwise frame as Director-track or Staff-plus.
-- For LLM roles, foreground production ML, evaluation, observability, data quality, governance, transformer-adjacent work, and Promet's harness-level LLM engineering; do not claim RLHF/fine-tuning/alignment unless confirmed.
+- For LLM roles, foreground production ML, evaluation, observability, data quality, governance, verification discipline, and Promet's harness-level LLM engineering; do not claim RLHF/fine-tuning/alignment unless confirmed.
 - For trust/safety or governance roles, connect sanctioned-destination rules, auditability, fallback mechanisms, ISO standards, and verification-oriented AI adoption.
-- For platform roles, foreground DynamicIO, Vodafone Kubeflow, CI/CD, model lifecycle, streaming architecture, and reusable internal tooling.
+- For platform roles, foreground DynamicIO, CI/CD, model lifecycle, streaming architecture, and reusable internal tooling; mention Vodafone Kubeflow only as historical project context.
 - For research-heavy roles, foreground Ph.D., graph reasoning, Bayesian methods, IJCAI award, and research-to-production bridge.
 
 ## One-Line Positioning Options
@@ -648,7 +655,7 @@ Director-track:
 
 LLM / Generative AI stretch:
 
-- Production ML systems engineer with transformer-adjacent delivery experience, strong evaluation and platform discipline, and growing focus on reliable generative AI systems.
+- Production ML systems engineer with strong evaluation and platform discipline, and growing focus on reliable generative AI systems.
 
 Applied LLM systems:
 
