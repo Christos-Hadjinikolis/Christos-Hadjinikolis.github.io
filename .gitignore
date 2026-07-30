@@ -131,6 +131,7 @@ _site/
 !.env.example
 
 # Private CV positioning/source evidence. Keep public CV/site copy sanitized.
+cv/latex/context/*.docx
 cv/latex/context/evidence/
 cv/latex/context/raw/
 cv/latex/context/positioning/

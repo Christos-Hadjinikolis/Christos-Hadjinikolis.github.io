@@ -49,7 +49,7 @@ permalink: /my-cv.html
         </li>
         <li>
           <strong>Lead live-processing strategy</strong>
-          Post-ingestion streaming systems, Flink/Kafka trade-offs, replayability, monitoring, and failure handling.
+          Client-facing live streaming intelligence estate, Kafka Streams-to-Flink transformation, replayability, monitoring, and failure handling.
         </li>
         <li>
           <strong>Bridge ML and real-world constraints</strong>
@@ -67,7 +67,7 @@ permalink: /my-cv.html
     <div class="page-panel">
       <h3>🚢 Selected Work</h3>
       <ul class="page-list">
-        <li>Real-time vessel destination and ETA prediction systems downstream of 10+ AIS providers.</li>
+        <li>Real-time prediction systems over high-volume vessel-position streams.</li>
         <li>Post-ingestion streaming pipelines spanning normalisation, signal quality, ML inference, monitoring, and product enrichment.</li>
         <li>AIS denoising and signal-quality improvement using stateful filtering approaches.</li>
         <li>Event-driven ML architectures with replay/evaluation interfaces, observability, fallback paths, and production rollout discipline.</li>
@@ -82,14 +82,14 @@ permalink: /my-cv.html
         <li><strong>If it cannot be measured, it is not done.</strong></li>
         <li><strong>Deterministic systems beat clever hacks.</strong></li>
         <li><strong>Models must degrade gracefully.</strong></li>
-        <li><strong>System quality should come through people and process, not heroics.</strong></li>
+        <li><strong>System quality should come through clear ownership, evidence, and repeatable practice.</strong></li>
       </ul>
     </div>
 
     <div class="page-panel">
       <h3>📚 Career Snapshot</h3>
       <ul class="page-timeline">
-        <li><strong>Since 12/2020 · Vortexa, London</strong><br>Engineering Manager / ML Tech Lead managing a five-person MLE/DS/DE pod and live-processing strategy for streaming-first maritime intelligence systems.</li>
+        <li><strong>Since 12/2020 · Vortexa, London</strong><br>Engineering Manager / ML Tech Lead owning Vortexa's live streaming intelligence estate, driving Data Production Team growth from 4 to 30+, and leading a 10-person cross-functional team around the estate.</li>
         <li><strong>2016–2020 · Data Reply, London</strong><br>Mostly hands-on consulting across Vodafone, CNHi, and UBS, with project-specific team/product leadership at CNHi and platform-shaping work at Vodafone.</li>
         <li><strong>2010–2016 · KCL, UCL, GSM, David Game College</strong><br>Teaching and academic roles across computing, AI, software, and data subjects.</li>
       </ul>
@@ -98,7 +98,7 @@ permalink: /my-cv.html
     <div class="page-panel">
       <h3>🏛️ Standards & Research</h3>
       <ul class="page-list">
-        <li><strong>Since 10/2024 · UCL</strong><br>Associate Researcher working at the intersection of AI and maritime analytics.</li>
+        <li><strong>Since 10/2024 · UCL</strong><br>Associate Researcher helping students connect AI standards, the AI Act, auditability, explainability, and practical AI adoption.</li>
         <li><strong>Since 01/2021 · ISO/CEN-CENELEC JTC 21 WG3</strong><br>Committee Expert Member advocating practical AI standards for auditability, model/data versioning, explainability, and safer adoption.</li>
       </ul>
     </div>

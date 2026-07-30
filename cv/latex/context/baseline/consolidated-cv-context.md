@@ -43,7 +43,7 @@ Supporting themes:
 - Repeated work on model lifecycle, observability, rollout safety, streaming architecture, and decision support.
 - Comfortable operating across ambiguous systems with legacy debt, operational constraints, and cross-team dependencies.
 - Technical communication and mentoring are recurring strengths from teaching, doctoral work, consulting, and pod leadership.
-- AI governance and standardisation are differentiators through ISO/JTC 21 and UCL research at the intersection of AI and maritime analytics.
+- AI governance and standardisation are differentiators through ISO/JTC 21 and UCL research/teaching on practical AI standardisation, the AI Act, auditability, explainability, and safe adoption. Do not default this positioning to maritime analytics except in specialised maritime variants.
 - The standards thesis should be explicit: advocate auditability, model/data versioning, prediction tracking, explainability, and standards that make safe AI adoption attractive to companies.
 
 ## Master CV Snapshot
@@ -266,6 +266,10 @@ Evidence:
 - Advocated for Architectural Decision Records.
 - Instigated a weekly company architecture forum for presenting ideas, discussing trade-offs, shared learning, and feedback.
 - Contributed input to team-topology and re-org initiatives, especially how pods should interact with analysts/SMEs, frontend teams, and product; frame as influence, not ownership.
+- Drove Vortexa's Data Production Team from 4 people to 30+ and raised its operating maturity through hiring process design, system design culture, strategic platform choices, and cross-functional operating-model advocacy; do not reduce this to passive "helped scale" wording.
+- Accuracy boundary for public claims: the user did not hold formal director authority over the full department, so frame this as strategic influence, mechanisms, and adoption rather than manager-of-managers ownership.
+- Developed and applied hiring practices, including LeetCode-style and system design evaluations; contributed to senior/principal DS/DE hiring across levels.
+- Advocated cross-functional team shapes combining engineers, Product, analysts, and SMEs, and pushed for adoption as a way to make product/engineering/domain interfaces more effective.
 - Turns ambiguous product/model friction into scoped workstreams and product-ready interfaces, using proposal discipline and stakeholder workshops without requiring Vortexa-specific domain wording in public CV copy.
 - Uses DORA metrics and Jira-based monitoring/alert workflows as delivery-health mechanisms for reaction speed, bottleneck visibility, toil/burnout reduction, and team trust.
 - Contributed to Architecture Guild-style work.
@@ -276,7 +280,7 @@ Useful phrasing:
 
 - Created mechanisms for architectural transparency and shared decision-making.
 - Reduced knowledge silos through ADRs, architecture forums, and system lineage work.
-- Helped scale engineering practice during startup-to-scale-up transition.
+- Drove engineering practice and operating-model maturity during startup-to-scale-up transition.
 
 #### Team Leadership
 
@@ -471,7 +475,7 @@ Evidence:
 
 - ISO / JTC 21 committee expert member since January 2021.
 - Working Group 3, developing AI standards aligned with EU policies and international norms.
-- UCL Department of Information Studies Associate Researcher since October 2024.
+- UCL Department of Information Studies Associate Researcher since October 2024; helps expose students to practical AI applications and lectures on AI standardisation, the AI Act, auditability, versioning, explainability, and safe adoption.
 - Supports AI application, standardisation, and ethics initiatives.
 
 Best use:
@@ -580,7 +584,7 @@ Use these as candidate bullets, then tighten to fit the role and verify exact de
 ### Streaming / Data Engineering
 
 - Designed Kafka/Flink pipelines for near real-time enrichment, model updates, and downstream triggers across 15+ ETL components.
-- Helped drive the adoption of Apache Flink as a strategic stream-processing framework, with the value in dataflow modelling, framework-driven development, lower cognitive load, lower maintenance effort, and compute scaling decoupled from Kafka partitioning.
+- Established Apache Flink as a strategic stream-processing direction, with the value in dataflow modelling, framework-driven development, lower cognitive load, lower maintenance effort, richer operational visibility, and compute scaling decoupled from Kafka partitioning.
 - Bridged Python ML workflows with JVM stream-processing components in Java/Kotlin/Kafka Streams.
 - Built distributed workflows over geospatial, textual, and graph-structured data; avoid framing Flink adoption as primarily a throughput improvement.
 
@@ -592,6 +596,7 @@ Use these as candidate bullets, then tighten to fit the role and verify exact de
 - Supports OpenMetadata adoption to improve data lineage, auditability of processing trails, and understanding of system interfaces.
 - Built a cross-system lineage view of Vortexa's production data flow by interviewing engineers and mapping component history.
 - Led pod-level delivery across technical direction, prioritisation, backlog refinement, stakeholder management, mentoring, and hiring.
+- Shaped cross-functional delivery topology around engineers, Product, analysts, and SMEs, using advice, feedback, and sustained advocacy rather than formal department-level authority.
 - Mentored engineers and data scientists in ML engineering, event-driven architecture, Kafka, Flink, testing, and production discipline.
 
 ### Product / Business Impact
@@ -604,7 +609,7 @@ Use these as candidate bullets, then tighten to fit the role and verify exact de
 ### Governance / Trust / AI Adoption
 
 - ISO/JTC 21 committee expert member working on AI standards aligned with EU and international norms, with emphasis on auditability, model/data versioning, prediction tracking, and explainability.
-- UCL Associate Researcher researching the intersection of AI and maritime analytics.
+- UCL Associate Researcher connecting practical AI applications with AI standardisation, auditability, model/data versioning, explainability, and safe adoption.
 - Advocates for AI-assisted engineering workflows grounded in verification, bounded risk, review quality, and production confidence.
 - Designs ML systems with auditability, fallback paths, monitoring, and controlled rollout rather than treating model output as sufficient.
 

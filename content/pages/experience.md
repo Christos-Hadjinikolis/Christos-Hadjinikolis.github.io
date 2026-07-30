@@ -154,25 +154,26 @@ permalink: /experience.html
           <div class="experience-badge">Architecture · Delivery · People</div>
         </div>
         <p class="experience-hook">
-          At Vortexa, the center of gravity shifted again: from delivering components to managing a cross-functional pod, setting operating standards, and leading the live-processing strategy behind production maritime intelligence.
+          At Vortexa, the center of gravity shifted again: from delivering components to owning the live streaming intelligence estate, a major client-facing part of the company's backend platform, setting operating standards, and leading a 10-person cross-functional team around it.
         </p>
         <div class="experience-columns">
           <div class="experience-mini-panel">
             <h5>What I lead</h5>
             <ul class="page-list">
-              <li>A five-person MLE/DS/DE pod working daily with an SME/analyst partner.</li>
+              <li>A 10-person cross-functional team: 6 MLE/DE/DS, 2 Product, and 2 SMEs.</li>
+              <li>Direct management of the MLE/DE/DS core, with indirect leadership across product and domain partners.</li>
               <li>1:1s, reviews, promotion input, hiring, retention, onboarding, sprint reviews, retrospectives, mentoring, and code pairing.</li>
-              <li>Hiring and interview loops: 5 senior DS/DE hires, 31 candidate evaluations, graduate mentoring, and intern management.</li>
+              <li>Hiring and interview loops: developed hiring practices and system design evaluations; 5 senior DS/DE hires, 31 candidate evaluations, graduate mentoring, and intern management.</li>
               <li>Team practices that reduce single-person ownership: clearer ownership, pairing, docs close to code, tests-as-docs, and new joiners raising PRs within a week.</li>
             </ul>
           </div>
           <div class="experience-mini-panel">
             <h5>What the estate requires</h5>
             <ul class="page-list">
-              <li>Post-ingestion streaming and ML inference systems downstream of 10+ AIS providers.</li>
-              <li>Flink dataflow strategy to reduce cognitive load, simplify maintenance, and decouple compute scaling from Kafka partition counts.</li>
+              <li>A client-facing live streaming intelligence estate processing roughly 6M filtered vessel-position records/hour, focused on 13.5K monitored vessels.</li>
+              <li>Two-year Kafka Streams-to-Flink transformation strategy, establishing Flink as a future-proofed platform direction aligned with company growth and using its dataflow model, independent state/checkpointing, and operational UI to reduce cognitive load and partition-coupled scaling.</li>
               <li>Monitoring, runbooks, rollback/fallback paths, and Jira alert workflows keeping MTTR under 30 minutes.</li>
-              <li>DORA metrics, architecture forums, ADRs, dev containers, Backstage adoption, and DynamicIO data contracts/SLAs to make delivery healthier and safer.</li>
+              <li>DORA metrics, architecture forums, ADRs, dev containers, Backstage adoption, and DynamicIO data contracts/SLAs to make delivery healthier, faster, and safer.</li>
             </ul>
           </div>
         </div>
@@ -186,7 +187,7 @@ permalink: /experience.html
       <h3>Standards and research</h3>
       <ul class="page-list">
         <li><strong>Since 01/2021 · ISO/CEN-CENELEC JTC 21 WG3</strong><br>Committee Expert Member working on AI standards aligned with international and EU policy directions.</li>
-        <li><strong>Since 10/2024 · UCL Department of Information Studies</strong><br>Associate Researcher working at the intersection of AI and maritime analytics, with emphasis on auditability, versioning, explainability, and safe adoption.</li>
+        <li><strong>Since 10/2024 · UCL Department of Information Studies</strong><br>Associate Researcher helping expose students to practical AI applications and lecturing on AI standardisation, the AI Act, auditability, versioning, explainability, and safe adoption.</li>
       </ul>
     </div>
 
@@ -209,7 +210,7 @@ permalink: /experience.html
         <li><strong>Standards set teams free when they remove avoidable ambiguity.</strong></li>
         <li><strong>Models need auditability, monitoring, and graceful failure paths.</strong></li>
         <li><strong>Healthy delivery needs visible signals, not hidden stress.</strong></li>
-        <li><strong>System quality should scale through people and process, not heroics.</strong></li>
+        <li><strong>System quality should scale through clear ownership, evidence, and repeatable practice.</strong></li>
       </ul>
       <p class="page-note">Guiding principle: “Make it work. Make it right. Make it fast.”</p>
     </div>
