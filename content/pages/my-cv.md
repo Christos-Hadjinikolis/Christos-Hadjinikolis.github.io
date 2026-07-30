@@ -3,12 +3,12 @@ title: My CV
 subtitle: Engineering Manager Snapshot
 intro_theme: cv
 intro_kicker: "Curated Overview"
-intro_summary: "A fast-read view of how I create leverage: managing ML/data teams, live streaming systems, production reliability, developer standards, and standards-facing AI work."
-intro_card_title: "In One Frame"
+intro_summary: "A fast-read view of the same story as the PDF: engineering management, production ML, live streaming systems, delivery discipline, and practical AI standards."
+intro_card_title: "What To Remember"
 intro_points:
-  - "Engineering management"
-  - "Streaming-first ML systems"
-  - "Standards, reliability, and delivery"
+  - "Organisations that build dependable ML systems"
+  - "Live streaming estate ownership"
+  - "Standards, reliability, and delivery health"
 layout: "page"
 icon: fa-id-card
 icon_image: assets/images/site/icons/cv.svg
@@ -21,13 +21,13 @@ permalink: /my-cv.html
       <div class="page-kicker">🧠 Positioning</div>
       <h3>Engineering Manager for production ML and real-time data systems</h3>
       <p class="page-summary">
-        I manage a mixed MLE/DS/DE team and remain close enough to architecture to lead hard technical calls. My work spans live data processing, streaming infrastructure, model evaluation/replay, observability, and the operating discipline needed to turn noisy model behaviour into trustworthy product intelligence.
+        I build engineering organisations, operating models, and platforms that keep ML systems dependable under real production pressure. At Vortexa, that means owning engineering strategy and delivery for a major live streaming backend estate, leading a 10-person cross-functional team around it, and keeping reliability, evaluation, explainability, and delivery health close to the work.
       </p>
       <ul class="page-pills">
         <li class="page-pill">👥 Team leadership</li>
-        <li class="page-pill">⚙️ Kafka + Flink</li>
+        <li class="page-pill">⚙️ Live systems</li>
         <li class="page-pill">🧠 ML operations</li>
-        <li class="page-pill">🛰️ Maritime intelligence</li>
+        <li class="page-pill">🛡️ Client-facing reliability</li>
         <li class="page-pill">📈 Delivery health</li>
         <li class="page-pill">🏛️ AI standards</li>
       </ul>
@@ -44,20 +44,20 @@ permalink: /my-cv.html
       <h3>🧭 What I Actually Do</h3>
       <ul class="page-rule-list">
         <li>
-          <strong>Manage technical ML/data teams</strong>
-          Hiring, 1:1s, mentoring, reviews, progression, onboarding, and delivery governance.
+          <strong>Build and manage technical teams</strong>
+          Hiring, mentoring, reviews, progression, onboarding, delivery governance, and cross-functional operating rhythm.
         </li>
         <li>
-          <strong>Lead live-processing strategy</strong>
-          Client-facing live streaming intelligence estate, Kafka Streams-to-Flink transformation, replayability, monitoring, and failure handling.
+          <strong>Own live-system strategy</strong>
+          Client-facing streaming estate, platform evolution, replayability, monitoring, and failure handling.
         </li>
         <li>
-          <strong>Bridge ML and real-world constraints</strong>
-          Aligning model output with analyst feedback, product decisions, operational rules, and prediction trust.
+          <strong>Turn ML ambiguity into operating discipline</strong>
+          Evaluation loops, model/data versioning, analyst feedback, product semantics, and prediction trust.
         </li>
         <li>
-          <strong>Scale delivery systems</strong>
-          Standardisation, docs close to code, tests-as-docs, ADRs, DORA/Jira signals, and healthier feedback loops.
+          <strong>Make delivery repeatable</strong>
+          Standardisation, docs close to code, tests-as-docs, ADRs, local E2E tests, DORA/Jira signals, and healthier feedback loops.
         </li>
       </ul>
     </div>
@@ -65,13 +65,13 @@ permalink: /my-cv.html
 
   <section class="page-grid">
     <div class="page-panel">
-      <h3>🚢 Selected Work</h3>
+      <h3>📌 Evidence Behind The CV</h3>
       <ul class="page-list">
-        <li>Real-time prediction systems over high-volume vessel-position streams.</li>
-        <li>Post-ingestion streaming pipelines spanning normalisation, signal quality, ML inference, monitoring, and product enrichment.</li>
-        <li>AIS denoising and signal-quality improvement using stateful filtering approaches.</li>
-        <li>Event-driven ML architectures with replay/evaluation interfaces, observability, fallback paths, and production rollout discipline.</li>
-        <li>Developer-standardisation work that reduced cognitive load and made ML/data delivery patterns repeatable across repositories.</li>
+        <li><strong>Organisation:</strong> drove Data Production Team growth from 4 to 30+ people by shaping hiring loops, system-design evaluations, mentoring, and delivery standards.</li>
+        <li><strong>Estate:</strong> own a major client-facing live streaming backend area filtering roughly 6M records/hour into production intelligence.</li>
+        <li><strong>People:</strong> lead a 10-person cross-functional team around the estate, with direct management of the MLE/DE/DS core and close Product/SME partnership.</li>
+        <li><strong>Reliability:</strong> protect production trust through monitoring, runbooks, fallback paths, Jira alert workflows, and MTTR kept under 30 minutes.</li>
+        <li><strong>Practice:</strong> scale delivery through Flink strategy, ADRs, local E2E/integration tests, docs close to code, DORA/Jira signals, and reduced single-owner bottlenecks.</li>
       </ul>
     </div>
 
@@ -89,8 +89,8 @@ permalink: /my-cv.html
     <div class="page-panel">
       <h3>📚 Career Snapshot</h3>
       <ul class="page-timeline">
-        <li><strong>Since 12/2020 · Vortexa, London</strong><br>Engineering Manager / ML Tech Lead owning Vortexa's live streaming intelligence estate, driving Data Production Team growth from 4 to 30+, and leading a 10-person cross-functional team around the estate.</li>
-        <li><strong>2016–2020 · Data Reply, London</strong><br>Mostly hands-on consulting across Vodafone, CNHi, and UBS, with project-specific team/product leadership at CNHi and platform-shaping work at Vodafone.</li>
+        <li><strong>12/2020–present · Vortexa, London</strong><br>Engineering Manager / ML Systems Lead owning engineering strategy and delivery for Vortexa's live streaming intelligence estate, driving Data Production Team growth from 4 to 30+, and leading a 10-person cross-functional team around the estate.</li>
+        <li><strong>04/2016–12/2020 · Data Reply, London</strong><br>Senior Consultant and first London spin-off consultant; grew from data scientist into ML engineer while supporting team growth, client delivery, mentoring, and project leadership across Vodafone, CNHi, and UBS.</li>
         <li><strong>2010–2016 · KCL, UCL, GSM, David Game College</strong><br>Teaching and academic roles across computing, AI, software, and data subjects.</li>
       </ul>
     </div>
@@ -107,7 +107,7 @@ permalink: /my-cv.html
       <h3>🎙️ Talks & Interviews</h3>
       <ul class="page-list">
         <li><strong>2023</strong> Agile in Action podcast interview on the Vortexa journey and agile data science.</li>
-        <li><strong>2022</strong> ODSC talk on <em>dynamicio</em> and abstracting I/O in ML systems.</li>
+        <li><strong>2022</strong> ODSC talk on <a href="https://pypi.org/project/dynamicio/"><em>dynamicio</em></a>, a published PyPI library for abstracting I/O in ML systems.</li>
         <li><strong>2020</strong> iunera interview blog on the agile approach in data science.</li>
         <li><strong>2020</strong> Big Data Warsaw talk on monitoring communication and trade events as graphs.</li>
         <li><strong>2018</strong> Connected Data London panel and Minds Mastering Machines talk.</li>

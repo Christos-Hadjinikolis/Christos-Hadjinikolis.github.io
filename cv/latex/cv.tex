@@ -15,7 +15,7 @@
 % Set up footer
 \pagestyle{fancy}
 \fancyhf{}  % Clear header/footer
-\fancyfoot[C]{\small\emph{Make it work. Make it right. Make it fast.}\quad | \quad Page \thepage}
+\fancyfoot[C]{\small Page \thepage}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -38,8 +38,8 @@
 \header
     {Christos}
     {Hadjinikolis}
-    {Engineering Manager | ML Systems Lead | UCL Research Associate}
-    {Ph.D. Computer Science | Active Committee Expert @ \href{https://www.cencenelec.eu/areas-of-work/cen-cenelec-topics/artificial-intelligence/}{ISO/CEN-CENELEC JTC'21}}
+    {Engineering Manager | Production ML \& Streaming Systems}
+    {Ph.D. Computer Science | UCL Research Associate | AI Standards Expert @ \href{https://www.cencenelec.eu/areas-of-work/cen-cenelec-topics/artificial-intelligence/}{ISO/CEN-CENELEC JTC'21}}
     {\small \href{mailto:christos.hadjinikolis@gmail.com}{christos.hadjinikolis@gmail.com}}
 
 \begin{aside}
@@ -49,67 +49,69 @@
 	    \href{https://github.com/Christos-Hadjinikolis}{\includegraphics[scale=0.35]{github0.png}}
 		\href{https://scholar.google.com/citations?hl=en&user=Rr3KTx8AAAAJ}{\includegraphics[scale=0.08]{Google_Scholar.png}}
 		\href{https://www.youtube.com/watch?v=LdDasrMOJLs&ab_channel=BillRaymond}{\includegraphics[scale=0.08]{youtube.png}}
-			\section{leadership}
-			{\footnotesize \textbf{people management}, hiring/interviews, mentoring, code pairing, sprint reviews/retros, delivery governance}
-			\section{practice}
-			{\footnotesize streaming strategy, \textbf{standardisation}, semantic contracts, \textbf{\textcolor{red!50!black}{DORA metrics}}, model/data versioning, observability}
+			\section{organisation}
+			{\footnotesize org scale-up\\\textbf{hiring} loops\\mentoring/retention\\cross-functional delivery}
+			\section{systems}
+			{\footnotesize client-facing ML\\high-volume streaming\\observability\\reliability}
+			\section{engineering}
+			{\footnotesize operating models\\\textbf{Flink strategy}\\ADRs/docs\\local E2E tests}
 			\section{technical}
-			{\footnotesize production ML, signal cleaning, streaming/lambda backends, \textbf{\textcolor{red}{Java}}/\textbf{\textcolor{red!50!black}{Kotlin}}, \textbf{\textcolor{orange}{Python}}, \textbf{\textcolor{cyan}{SQL}}, \textbf{Kafka Streams/Flink}, MLflow, Airflow, AWS/GCP}
-			\section{public work}
-			{\footnotesize practical AI standards (JTC'21/UCL); Agile DS talks; \href{https://github.com/VorTECHsa/dynamicio}{\textbf{dynamicio}}; \href{https://pypi.org/project/skeleton-replay/}{\textbf{skeleton-replay}}/IDE plugin}
+			{\footnotesize ML systems\\\textbf{\textcolor{red}{Java}}/\textbf{\textcolor{red!50!black}{Kotlin}}\\\textbf{\textcolor{orange}{Python}}/\textbf{\textcolor{cyan}{SQL}}\\Kafka/Flink\\Airflow/AWS/GCP}
+			\section{public}
+			{\footnotesize JTC'21 standards\\UCL research\\\textbf{PyPI}: \href{https://pypi.org/project/dynamicio/}{dynamicio}\\\href{https://pypi.org/project/skeleton-replay/}{skeleton-replay}\\\href{https://plugins.jetbrains.com/plugin/32807-skeleton-replay}{JetBrains plugin}}
 	\end{aside}
 
 \section{about me}
-{\small \textbf{Engineering Manager and technical ML systems leader} with \textbf{16 years} of combined industry and academic experience across AI research, production ML, live data processing, streaming platforms, and backend engineering. Own Vortexa's \textbf{live streaming intelligence estate}, a major client-facing backend area where reliability and prediction trust matter daily. Over almost six years, drove the Data Production Team from \textbf{4 people} to \textbf{30+}, raising operating maturity through hiring loops, \mbox{system design culture}, strategic platform choices, and cross-functional ways of working. Lead a \textbf{10-person cross-functional team}; UCL Research Associate and JTC'21 member advancing \textbf{practical AI standards}, auditability, and safe adoption.}
+{\small \textbf{Engineering Manager for ML and real-time data systems} with \textbf{16 years} across AI research, consulting, backend engineering, and live data platforms. Lead teams that turn noisy data, experimental models, and ambiguous product semantics into reliable, client-facing systems. At Vortexa, own a major \textbf{live streaming backend estate}, lead a \textbf{10-person cross-functional team}, and drove Data Production Team growth from \textbf{4 to 30+ people} by shaping hiring, system-design culture, platform choices, and operating discipline. My UCL and JTC'21 standards work informs how I treat auditability, explainability, versioning, and safe adoption in practice. I build engineering organisations, operating models, and platforms that keep ML systems dependable when product quality and client trust are on the line.}
 \section{work-experience}
 \begin{entrylist}
 	\entry
-	{\tiny since \footnotesize 12/2020}
+	{12/2020–present}
 	{Vortexa Ltd, London, UK}
-		{Engineering Manager / ML Tech Lead}
+		{Engineering Manager | ML Systems Lead}
 	{
     	{\small
-	    \setlength{\parindent}{-1.5em}
-    	\setlength{\leftskip}{-1.5em}
-								    Own Vortexa's \textbf{live streaming intelligence estate}, a major client-facing part of the company's backend platform, filtering roughly \textbf{6M vessel-position records/hour} into production intelligence for \textbf{13.5K monitored vessels}. Lead delivery and \textbf{live-processing strategy} with a \textbf{10-person cross-functional team} spanning \textbf{6 MLE/DE/DS, 2 Product, and 2 SMEs}. Quality issues become visible quickly to clients, so reliability, explainability, and operational trust are part of the role.
+	    \setlength{\parindent}{0pt}
+	    \setlength{\leftskip}{0pt}
+								    Own the \textbf{engineering strategy and delivery} for Vortexa's \textbf{live streaming intelligence estate}, a major client-facing backend area powering product and commercial workflows, filtering roughly \textbf{6M vessel-position records/hour} into production intelligence for \textbf{13.5K monitored vessels}. Lead \textbf{live-processing strategy} with a \textbf{10-person cross-functional team} spanning \textbf{6 MLE/DE/DS, 2 Product, and 2 SMEs}. Because this estate feeds live product behaviour, reliability, explainability, monitoring, and response readiness are delivery requirements.
 	    
     	}
-	    \begin{itemize}[left=-1.5em]
-										        \item \footnotesize\textbf{People \& Org Scaling:} Directly manage the MLE/DE/DS core and lead a \textbf{10-person cross-functional delivery team}; drove Data Production Team growth from \textbf{4 to 30+} by developing hiring loops and system design evaluations, hired \textbf{5 senior DS/DEs}, evaluated \textbf{31 candidates}, retained/progressed the full team, and onboarded new joiners to PRs within a week.
-										        \item \footnotesize\textbf{Streaming Transformation:} Established \textbf{Flink} as a strategic platform direction and led the two-year \textbf{Kafka Streams-to-Flink transformation} for critical live pipelines, reducing partition-coupled scaling and maintenance effort through Flink's dataflow model, independent state/checkpointing, richer operational UI, and framework-driven development.
-										        \item \footnotesize\textbf{Trustworthy ML Estate:} Lead the prediction trust loop across signal quality, destination/ETA, and diversion/routing outputs: \textbf{versioned models/data}, replay/evaluation interfaces, online monitoring, analyst feedback, controlled switch-over, and explainability work.
-										        \item \footnotesize\textbf{Reliability \& Ops Culture:} Harden production with monitoring, runbooks, rollback/fallback plans, and Jira alert workflows; moved from firefighter patterns to shared on-call ownership while keeping \textbf{MTTR under 30 min}.
-										        \item \footnotesize\textbf{Product Semantics \& Interfaces:} Facilitated cross-functional semantic alignment around recurring prediction-quality disputes, turning stakeholder friction into measurable evaluation targets and RFC/workstream-ready product interfaces.
-										        \item \footnotesize\textbf{Engineering Substrate:} Scale delivery through Flink/Airflow archetypes, ADRs, docs close to code, tests-as-docs, dev containers, Backstage adoption, and DynamicIO data contracts/SLAs; cut a \textbf{3h DAG feedback loop to under 5 min}.
-									        \item \footnotesize\textbf{Architecture \& Org Influence:} Instigated a weekly company architecture forum and advocated the cross-functional topology now used around live intelligence work: engineers paired closely with Product, analysts, SMEs, and frontend ownership boundaries.
+	    \begin{itemize}[leftmargin=1.1em]
+										        \item \footnotesize\textbf{People \& Org Scaling:} Directly manage the MLE/DE/DS core and lead a \textbf{10-person cross-functional delivery team}; drove Data Production Team growth from \textbf{4 to 30+} by developing hiring loops and system design evaluations, hired \textbf{5 senior DS/DEs}, evaluated \textbf{31 candidates}, retained/progressed the full team, and reduced key-person risk.
+										        \item \footnotesize\textbf{Platform Scaling:} Enabled independent scaling of critical live pipelines by leading the two-year \textbf{Kafka Streams-to-Flink migration}; used Flink's dataflow model, independent state/checkpointing, richer operational UI, and framework-driven design to reduce maintenance effort.
+										        \item \footnotesize\textbf{Trustworthy ML Estate:} Established Vortexa's ML development lifecycle from research to production: prototyping discipline, \textbf{MLflow}, model/data versioning, service-based model deployment, replay/evaluation interfaces, and live accuracy-monitoring dashboards.
+										        \item \footnotesize\textbf{Reliability \& Ops Culture:} Protect customer-facing reliability with monitoring, runbooks, rollback/fallback plans, and Jira alert workflows; moved from firefighter patterns to shared on-call ownership while keeping \textbf{MTTR under 30 min}.
+										        \item \footnotesize\textbf{Product Semantics \& Interfaces:} Resolve recurring prediction-quality disputes through shared semantics, turning stakeholder friction into measurable evaluation targets and RFC/workstream-ready product interfaces.
+										        \item \footnotesize\textbf{Engineering Operating Model:} Scale delivery through Flink/Airflow archetypes, ADRs, docs close to code, tests-as-docs, dev containers, Backstage adoption, local E2E/integration tests, and a weekly architecture forum; cut a \textbf{3h DAG feedback loop to under 5 min} and reduced single-owner review bottlenecks.
     	\end{itemize}
 	}
     \entry
-    {\footnotesize 2016–2020}
+    {04/2016–12/2020}
     {DataReply, London, UK}
-    {Data Scientist | ML Engineer}
+    {Senior Consultant | Data Scientist / ML Engineer}
     {
         {\small
-        \setlength{\parindent}{-1.5em}
-        \setlength{\leftskip}{-1.5em}
-					        Mostly hands-on consultant across UBS, Vodafone, and CNHi; leadership was project-specific: lead DS/Scrum Master at CNHi, DS-platform contributor at Vodafone, and sole embedded consultant at UBS. Focused on productionising data science.
+        \setlength{\parindent}{0pt}
+        \setlength{\leftskip}{0pt}
+					        Joined Data Reply's London spin-off as its first consultant and played a formative role in growing it from \textbf{three practitioners and two managers to 30+ consultants}. Progressed to Senior Consultant; led client meetings, scoped goals, placed consultants, interviewed/mentored hires, and delivered ML/data work across UBS, Vodafone, CNHi and other enterprise clients. Ran the London Flink Meetup for five years.
 
         }
-        \begin{itemize}[left=-1.5em]
-					            \item \footnotesize\textbf{Vodafone Group:} Worked on Infinity, a GCP/\textbf{Kubeflow} DS platform, bringing hands-on DS workflow feedback into ML lifecycle support; built Red Agent, a mobile-network feature-engineering framework.
+        \begin{itemize}[leftmargin=1.1em]
+					            \item \footnotesize\textbf{Client Delivery Leadership:} Drove agendas with client stakeholders and product teams, agreed goals, facilitated technical delivery, and supported hiring/consultant placement across banking, telecoms, manufacturing, publishing, and gaming accounts.
+					            \item \footnotesize\textbf{Vodafone Group:} Led technical delivery across multiple workstreams; worked on Infinity, a GCP/\textbf{Kubeflow} DS platform, shaping ML lifecycle support; built Red Agent, a mobile-network feature-engineering framework.
 				            \item \footnotesize\textbf{CNHi:} Lead Data Scientist/Scrum Master on predictive maintenance; managed/guided a DS team using \textbf{PySpark} over live vehicle sensory data with product-facing backlog discipline.
-			            \item \footnotesize\textbf{UBS:} Hands-on graph/process-mining analytics and observability work, building real-time pipelines with \textbf{Kafka}, \textbf{Elasticsearch}, and Python; later sole embedded DataReply consultant.
+			            \item \footnotesize\textbf{UBS:} Grew from Data Scientist into ML Engineer through XP/pairing while delivering graph/process-mining analytics, observability work, and real-time pipelines with \textbf{Kafka}, \textbf{Elasticsearch}, and Python.
 	        \end{itemize}
     }
     \entry
-    {\footnotesize 2010–2016}
+    {2010–2016}
     {Roles in UK Institutions}
-    {\small Assoc. Lect. @GSM | Coding Teacher @DGC | TA @KCL|UCL}
+    {\small Coding Teacher @DGC | Teaching Assistant @KCL/UCL}
     {
         {\small
-        \setlength{\parindent}{-1.5em}
-        \setlength{\leftskip}{-1.5em}
-	        Taught Java, Python, data structures, systems architecture, semantic web, SQL, and AI at GSM, DGC, KCL, and UCL; developed clear technical communication habits during doctoral work.
+        \setlength{\parindent}{0pt}
+        \setlength{\leftskip}{0pt}
+	        Taught Java/Python and core computer science at David Game College from 09/2012 to 04/2016 while completing doctoral research; Teaching Assistant at KCL and UCL.
 
 	        }
 	    }
@@ -163,7 +165,7 @@
 		{\small 2022}
 		{\small Open Data Science Conference}
 		{\small Industry Conference Talk}
-		{\small \textbf{Dynamicio}, a python library for abstracting your I/O, \underline{\textbf{Details:} \href{https://odsc.com/speakers/dynamicio-a-pandas-i-o-wrapper-why-you-should-start-your-ml-ops-journey-with-wrapping-your-i-o/}{here}}}
+		{\small \textbf{dynamicio}, a published \href{https://pypi.org/project/dynamicio/}{\textbf{PyPI library}} for abstracting I/O in ML/data workflows, \underline{\textbf{Details:} \href{https://odsc.com/speakers/dynamicio-a-pandas-i-o-wrapper-why-you-should-start-your-ml-ops-journey-with-wrapping-your-i-o/}{here}}}
 	\entrytwo
 		{\small 2020}
 		{\small iunera: Big Data Innovators}

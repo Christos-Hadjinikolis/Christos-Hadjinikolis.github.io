@@ -229,6 +229,7 @@ Evidence:
 - Created DynamicIO, a Python library for abstracting I/O.
 - DynamicIO became used across 15+ repositories according to raw context and public talk history.
 - Used DynamicIO to decouple I/O from business logic, create seams for local tests based on characteristic sample data, define cross-team/domain-owner/system SLAs through schema and data validations, and shorten feedback loops without repeatedly exercising long-running DAGs in DEV; one 3-hour DAG path could be sufficiently tested locally in under 5 minutes.
+- In high-level CV copy, DynamicIO does not always need to be named; the larger leadership signal is that the user advocated local E2E/integration tests and explicit seams that let engineers trust their changes without running long DAGs or relying on single-owner manual review.
 - Replaced inefficient vendor-package practices with internal package publication.
 - Helped introduce AWS CodeArtifact.
 - Supported publication of internal Python packages such as vtx-runners and graph-structure.
@@ -248,16 +249,22 @@ This is one of the strongest evidence-backed platform stories.
 Evidence:
 
 - Cultivated MLOps practices at Vortexa, including model versioning, data-model dependencies, and model monitoring.
+- When the user joined Vortexa, the team's MLOps maturity was low; the user taught research/prototyping discipline and how to build maintainable ML pipelines that can evolve.
+- Introduced model/data versioning concepts, recommended the tools and practices to implement them, introduced MLflow, introduced model deployment as services, and introduced model-accuracy monitoring dashboards.
+- Grew Vortexa's ML development lifecycle from research/prototype habits into production lifecycle practice.
 - Improved unit-test coverage and local end-to-end tests using characteristic sample data.
 - Enabled shift-left feedback loops.
 - Improved code quality, development experience, and pipeline robustness.
 - Built CI/CD and model lifecycle workflows.
+- Local E2E/integration tests changed review dynamics: repos moved away from single-person ownership and careful manual refactor review toward evidence-backed PRs that could reach production in hours rather than days.
 
 Useful phrasing:
 
 - Raised ML engineering standards across experimentation, deployment, monitoring, and maintainability.
+- Established Vortexa's ML development lifecycle from research to production: prototyping discipline, MLflow, model/data versioning, service-based model deployment, replay/evaluation interfaces, and live accuracy-monitoring dashboards.
 - Turned research-grade model work into reproducible, observable production systems.
 - Improved developer confidence through local test fixtures and end-to-end test paths.
+- Reduced single-owner review bottlenecks and increased engineers' confidence in their own changes through local E2E/integration tests and tests-as-docs.
 
 #### Architecture and Organisational Scaling
 
@@ -281,6 +288,19 @@ Useful phrasing:
 - Created mechanisms for architectural transparency and shared decision-making.
 - Reduced knowledge silos through ADRs, architecture forums, and system lineage work.
 - Drove engineering practice and operating-model maturity during startup-to-scale-up transition.
+
+#### Side Panel Positioning
+
+Use the side panel as a recruiter scan path, not a generic tools inventory. The strongest compact categories are:
+
+- Avoid repeating every body metric in the side panel. It should act as a scan index, not a second miniature CV.
+- Scale: estate ownership, org scale-up, client-facing ML, high-volume streaming.
+- People: hiring, mentoring, retention, cross-functional delivery.
+- Systems: MLOps, observability, explainability, streaming reliability.
+- Practice: Flink strategy, ADRs, DORA/Jira signals, local E2E tests.
+- Technical: production ML, signal cleaning, Java/Kotlin, Python, SQL, Kafka/Flink, Airflow, AWS/GCP.
+- Public work: PyPI libraries dynamicio and skeleton-replay, Skeleton Replay on JetBrains Marketplace, and practical AI standards through JTC'21/UCL. Use this as a credibility signal for productised developer tooling, release discipline, documentation, and standards work, not as a generic hobby-project list.
+- Keep MTTR under 30 minutes in the Vortexa body where monitoring/runbooks/rollback/on-call context explains it; do not foreground it in the side panel.
 
 #### Team Leadership
 
@@ -391,9 +411,15 @@ Job-role positioning:
 
 Dates:
 
-- 2016-2020.
-- Progressed from Data Scientist to ML Engineer.
-- Led cross-functional DS/DE delivery across UBS, Vodafone, and CNHi.
+- 04/2016-12/2020.
+- Joined Data Reply's London spin-off as its first consultant.
+- Progressed from Data Scientist to ML Engineer and Senior Consultant.
+- Played a formative role in growing the team from 3 practitioners + 2 managers to 30+ consultants.
+- User was asked to move toward an Associate Partner path before leaving; treat this as private context unless explicitly needed, not as a default CV claim.
+- Leadership included client meetings, scoping goals, facilitating technical delivery, consultant placement, interviewing, mentoring, and guiding hires.
+- Ran the London Flink Meetup for roughly five years from 2016 to mid-2020.
+- Worked across UBS, Vodafone, CNHi, UniCredit, Mondadori, Gamesys, and opportunities around BT/HSBC; use named clients sparingly in the CV.
+- Data Reply should now be framed as consulting plus project/client leadership, not as purely IC work. Still avoid overstating formal people-management authority across the full Data Reply organisation.
 
 ### Vodafone
 
@@ -403,6 +429,8 @@ Evidence:
 - Infinity was built on GCP using Kubeflow; keep Kubeflow as project context, not as a current sidebar skill claim.
 - Supported versioning, deployment, telemetry, experiment workflows / resource-governed notebooks.
 - Implemented CI/CD pipelines, unified feature stores, and monitoring.
+- Vodafone was an early point where the user was put in charge of technical delivery, people coordination, stakeholder interaction, and product-facing delivery across multiple workstreams.
+- Red Agent was a mobile-network feature-engineering framework for profiling users from network data.
 
 Best use:
 
@@ -418,6 +446,8 @@ Evidence:
 - Built time-series forecasting models for agricultural vehicles.
 - Supported alerting and automated deployment.
 - Led prototyping and transitioned statistical models into scalable cloud-ready services.
+- First substantial DS team-lead experience: led/guided a data-science team using PySpark over live vehicle sensor data to infer maintenance/repair needs.
+- Operated with Scrum Master/product-facing backlog discipline.
 
 Best use:
 
@@ -430,6 +460,8 @@ Evidence:
 - Designed real-time pipelines using graph analytics and process mining.
 - Produced organisational insights and decision automation.
 - Built observability tools with Kafka, Elasticsearch, and Python.
+- Developed software-engineering and ML-engineering discipline at UBS through exposure to Extreme Programming, pairing, productionisation, and enterprise delivery constraints.
+- Eventually became the sole embedded Data Reply consultant on the UBS account.
 
 Best use:
 

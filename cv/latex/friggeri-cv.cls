@@ -192,15 +192,18 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 %%%%%%%%%%%%%%%%%%%%
 
 \setlength{\tabcolsep}{0pt}
+\newlength{\entryleftinset}
+\setlength{\entryleftinset}{0.55cm}
 \newenvironment{entrylist}{%
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+  \hspace*{\entryleftinset}\begin{tabular*}{\dimexpr\textwidth-\entryleftinset\relax}{@{}l@{}}
 }{%
   \end{tabular*}
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{%
-  #1&\parbox[t]{13cm}{%
+  \parbox[t]{\dimexpr\textwidth-\entryleftinset\relax}{%
     \textbf{#2}%
+    {\footnotesize\addfontfeature{Color=lightgray}\hspace{0.6em}#1}%
     \hfill%
     {\small\addfontfeature{Color=blue} #3}\\%
     #4\vspace{\parsep}%
@@ -242,7 +245,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 	\renewcommand{\section}[1]
 	{\par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}}
 	% Adjust the vertical position (4.33) to align with the "about me" title
-    \begin{textblock}{4.5}(1.2, 5)
+    \begin{textblock}{3.8}(0.8, 5)
 	\begin{flushright}
     \obeycr
 }
@@ -257,5 +260,5 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=5cm,top=2cm,right=1.5cm,bottom=2cm,nohead,nofoot]{geometry}
+\RequirePackage[left=4.35cm,top=2cm,right=1.25cm,bottom=2cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}

@@ -3,12 +3,12 @@ title: Professional Experience
 subtitle: How the scope evolved
 intro_theme: experience
 intro_kicker: "Narrative Timeline"
-intro_summary: "Not a second CV. This page shows how the work widened over time: from teaching and research, into consulting under constraints, and then into engineering management for production ML and live data systems."
+intro_summary: "Not a second CV. This page shows how the scope widened over time: from teaching and research, into consulting under constraints, and then into engineering management for production ML and live data systems."
 intro_card_title: "What This Page Tracks"
 intro_points:
   - "How the scope changed"
   - "What each phase taught me"
-  - "Why production became the center"
+  - "Why reliable production systems became the centre"
 layout: "page"
 icon: fa-briefcase
 icon_image: assets/images/site/icons/experience.svg
@@ -21,8 +21,8 @@ permalink: /experience.html
       <div class="page-kicker">🧭 Professional Arc</div>
       <h3>From research and teaching to Engineering Management for real-time ML systems</h3>
       <p class="page-summary">
-        This page is intentionally not a second CV. It is the story of how my scope changed over time: from explaining ideas,
-        to building models, to managing the people, systems, trade-offs, and stakeholder interfaces needed to make those models useful in production.
+        This page is intentionally not a second CV. It is the story of how the same pattern kept widening: make complex work understandable,
+        turn ambiguity into structure, and build the teams, interfaces, and operating models needed to make ML useful in production.
       </p>
       <ul class="page-pills">
         <li class="page-pill">🎓 Research roots</li>
@@ -50,11 +50,11 @@ permalink: /experience.html
         </li>
         <li>
           <strong>Consulting years: delivery under ambiguity</strong>
-          I learned how messy systems, unclear requirements, product pressure, and client constraints reshape “correct” engineering.
+          I learned how messy systems, unclear requirements, product pressure, and client constraints reshape "correct" engineering.
         </li>
         <li>
           <strong>Current years: management and leverage</strong>
-          I now focus on architecture, operational quality, team growth, stakeholder alignment, and repeatable delivery systems.
+          I now focus on team growth, architecture, operational quality, stakeholder alignment, and repeatable delivery systems.
         </li>
       </ul>
     </div>
@@ -101,7 +101,7 @@ permalink: /experience.html
 
     <div class="experience-step">
       <div class="experience-era">
-        <span class="period">2016–2020</span>
+        <span class="period">04/2016–12/2020</span>
         <span class="label">Consulting<br>shipping under constraints</span>
       </div>
       <article class="experience-card">
@@ -111,19 +111,21 @@ permalink: /experience.html
             <div class="experience-role">Data Reply</div>
             <div class="experience-location">London, UK</div>
           </div>
-          <div class="experience-badge">Data Scientist → ML Engineer</div>
+          <div class="experience-badge">Data Scientist → ML Engineer → Senior Consultant</div>
         </div>
         <p class="experience-hook">
-          This was the period where “interesting model work” stopped being enough. I had to deal with enterprise constraints,
-          legacy systems, production expectations, product backlogs, and the uncomfortable gap between experimentation and deployment.
+          This was the period where model work became inseparable from delivery discipline. I joined the London spin-off as its first consultant,
+          grew into a Senior Consultant, helped the team scale, and learned to turn enterprise constraints, client goals, and production
+          expectations into deliverable ML/data systems.
         </p>
         <div class="experience-columns">
           <div class="experience-mini-panel">
             <h5>Representative client work</h5>
             <ul class="page-list">
-              <li><strong>🏦 UBS:</strong> graph analytics, process mining, and real-time insight pipelines with Kafka, Elasticsearch, and Python; later the sole embedded Data Reply consultant.</li>
+              <li><strong>Client delivery:</strong> led client meetings, scoped goals, facilitated technical delivery, placed consultants, interviewed, mentored, and contributed to Data Reply's growth from a small founding team to 30+ consultants.</li>
+              <li><strong>🏦 UBS:</strong> graph analytics, process mining, and real-time insight pipelines with Kafka, Elasticsearch, and Python; learned XP/pairing practices and later became the sole embedded Data Reply consultant.</li>
               <li><strong>🚜 CNHi:</strong> lead data scientist / Scrum Master for a DS team processing live vehicle sensory data with PySpark to infer maintenance needs.</li>
-              <li><strong>📱 Vodafone:</strong> worked on Infinity, a GCP/Kubeflow data-science platform, and built Red Agent, a mobile-network feature-engineering framework.</li>
+              <li><strong>📱 Vodafone:</strong> led technical delivery across multiple workstreams, worked on Infinity, a GCP/Kubeflow data-science platform, and built Red Agent, a mobile-network feature-engineering framework.</li>
             </ul>
           </div>
           <div class="experience-mini-panel">
@@ -132,7 +134,7 @@ permalink: /experience.html
               <li>Most ML failures are systems failures, not modelling failures.</li>
               <li>Ambiguous environments are where architecture and product discipline matter most.</li>
               <li>Bridging DS, engineering, and product is a delivery problem as much as a technical one.</li>
-              <li>Good managers create feedback loops that help specialists do their best work.</li>
+              <li>Good managers create feedback loops that make specialists faster, safer, and less dependent on individual memory.</li>
             </ul>
           </div>
         </div>
@@ -141,20 +143,20 @@ permalink: /experience.html
 
     <div class="experience-step">
       <div class="experience-era">
-        <span class="period">Since 12/2020</span>
+        <span class="period">12/2020–present</span>
         <span class="label">Management<br>teams, systems, reliability</span>
       </div>
       <article class="experience-card">
         <div class="experience-card-head">
           <div>
             <h4>🚢 Vortexa: managing teams and live ML/data systems at scale</h4>
-            <div class="experience-role">Engineering Manager / ML Tech Lead · Pod Lead</div>
+            <div class="experience-role">Engineering Manager / ML Systems Lead</div>
             <div class="experience-location">London, UK</div>
           </div>
           <div class="experience-badge">Architecture · Delivery · People</div>
         </div>
         <p class="experience-hook">
-          At Vortexa, the center of gravity shifted again: from delivering components to owning the live streaming intelligence estate, a major client-facing part of the company's backend platform, setting operating standards, and leading a 10-person cross-functional team around it.
+          At Vortexa, the centre of gravity shifted again: from delivering components to owning engineering strategy and delivery for a major client-facing live streaming backend estate, setting operating standards, and leading a 10-person cross-functional team around it.
         </p>
         <div class="experience-columns">
           <div class="experience-mini-panel">
@@ -164,7 +166,7 @@ permalink: /experience.html
               <li>Direct management of the MLE/DE/DS core, with indirect leadership across product and domain partners.</li>
               <li>1:1s, reviews, promotion input, hiring, retention, onboarding, sprint reviews, retrospectives, mentoring, and code pairing.</li>
               <li>Hiring and interview loops: developed hiring practices and system design evaluations; 5 senior DS/DE hires, 31 candidate evaluations, graduate mentoring, and intern management.</li>
-              <li>Team practices that reduce single-person ownership: clearer ownership, pairing, docs close to code, tests-as-docs, and new joiners raising PRs within a week.</li>
+              <li>Team practices that reduce single-person ownership: clearer ownership, pairing, docs close to code, tests-as-docs, and onboarding that makes new joiners productive in production code within their first week.</li>
             </ul>
           </div>
           <div class="experience-mini-panel">
@@ -173,7 +175,7 @@ permalink: /experience.html
               <li>A client-facing live streaming intelligence estate processing roughly 6M filtered vessel-position records/hour, focused on 13.5K monitored vessels.</li>
               <li>Two-year Kafka Streams-to-Flink transformation strategy, establishing Flink as a future-proofed platform direction aligned with company growth and using its dataflow model, independent state/checkpointing, and operational UI to reduce cognitive load and partition-coupled scaling.</li>
               <li>Monitoring, runbooks, rollback/fallback paths, and Jira alert workflows keeping MTTR under 30 minutes.</li>
-              <li>DORA metrics, architecture forums, ADRs, dev containers, Backstage adoption, and DynamicIO data contracts/SLAs to make delivery healthier, faster, and safer.</li>
+              <li>DORA metrics, architecture forums, ADRs, dev containers, Backstage adoption, and local E2E/integration tests to make delivery healthier, faster, and safer.</li>
             </ul>
           </div>
         </div>
@@ -196,7 +198,7 @@ permalink: /experience.html
       <h3>Talks and interviews</h3>
       <ul class="page-list">
         <li><strong>2023 · Agile in Action</strong><br>Podcast interview on agile data science and the Vortexa journey.</li>
-        <li><strong>2022 · ODSC</strong><br>Industry talk on <em>dynamicio</em> and abstracting I/O for ML systems.</li>
+        <li><strong>2022 · ODSC</strong><br>Industry talk on <a href="https://pypi.org/project/dynamicio/"><em>dynamicio</em></a>, a published PyPI library for abstracting I/O in ML systems.</li>
         <li><strong>2020 · iunera & Big Data Warsaw</strong><br>Interview and conference talk on agile data science and graph-driven analytics.</li>
         <li><strong>2018 · Connected Data London & Minds Mastering Machines</strong><br>Panel and talk appearances on graph AI and doing data science the agile way.</li>
       </ul>
@@ -212,7 +214,6 @@ permalink: /experience.html
         <li><strong>Healthy delivery needs visible signals, not hidden stress.</strong></li>
         <li><strong>System quality should scale through clear ownership, evidence, and repeatable practice.</strong></li>
       </ul>
-      <p class="page-note">Guiding principle: “Make it work. Make it right. Make it fast.”</p>
     </div>
   </section>
 </div>
