@@ -165,7 +165,7 @@ permalink: /experience.html
               <li>A 10-person cross-functional team: 6 MLE/DE/DS, 2 Product, and 2 SMEs.</li>
               <li>Direct management of the MLE/DE/DS core, with indirect leadership across product and domain partners.</li>
               <li>1:1s, reviews, promotion input, hiring, retention, onboarding, sprint reviews, retrospectives, mentoring, and code pairing.</li>
-              <li>Hiring and interview loops: developed hiring practices and system design evaluations; 5 senior DS/DE hires, 31 candidate evaluations, graduate mentoring, and intern management.</li>
+              <li>Hiring and interview loops: developed hiring practices and system design evaluations; hiring manager for 6 roles, 31+ candidates interviewed in that capacity, and 60+ interview loops overall across Data Production staffing; retained the current team fully, with every member recently promoted.</li>
               <li>Team practices that reduce single-person ownership: clearer ownership, pairing, docs close to code, tests-as-docs, and onboarding that makes new joiners productive in production code within their first week.</li>
             </ul>
           </div>
@@ -175,7 +175,7 @@ permalink: /experience.html
               <li>A client-facing live streaming intelligence estate processing roughly 6M filtered vessel-position records/hour, focused on 13.5K monitored vessels.</li>
               <li>Two-year Kafka Streams-to-Flink transformation strategy, establishing Flink as a future-proofed platform direction aligned with company growth and using its dataflow model, independent state/checkpointing, and operational UI to reduce cognitive load and partition-coupled scaling.</li>
               <li>Monitoring, runbooks, rollback/fallback paths, and Jira alert workflows keeping MTTR under 30 minutes.</li>
-              <li>DORA metrics, architecture forums, ADRs, dev containers, Backstage adoption, and local E2E/integration tests to make delivery healthier, faster, and safer.</li>
+              <li>DORA/Jira delivery signals, architecture forums, ADRs, dev containers, Backstage adoption, and local E2E/integration tests to make delivery visible, healthier, faster, and safer; a recent 12-month view showed 14.65 deploys/week and 0.52% change failure.</li>
             </ul>
           </div>
         </div>

@@ -279,6 +279,7 @@ Evidence:
 - Advocated cross-functional team shapes combining engineers, Product, analysts, and SMEs, and pushed for adoption as a way to make product/engineering/domain interfaces more effective.
 - Turns ambiguous product/model friction into scoped workstreams and product-ready interfaces, using proposal discipline and stakeholder workshops without requiring Vortexa-specific domain wording in public CV copy.
 - Uses DORA metrics and Jira-based monitoring/alert workflows as delivery-health mechanisms for reaction speed, bottleneck visibility, toil/burnout reduction, and team trust.
+- DORA screenshot supplied 2026-07-31 for the team's latest 12-month DX view: open-to-deploy 15.9 hours, merge-to-deploy 16.2 minutes, deploy frequency 14.65/week, change-fail percentage 0.52%, and time-to-recover 39.4 minutes. Use these as point-in-time supporting evidence, not timeless claims; in concise CV copy, prefer deploy frequency and change-failure percentage as the most recruiter-legible delivery/reliability signals.
 - Contributed to Architecture Guild-style work.
 - Built a data-flow graph/history of Vortexa's processing components through interviews and platform archaeology.
 - Presented platform lineage and system evolution to the company.
@@ -297,7 +298,7 @@ Use the side panel as a recruiter scan path, not a generic tools inventory. The 
 - Scale: estate ownership, org scale-up, client-facing ML, high-volume streaming.
 - People: hiring, mentoring, retention, cross-functional delivery.
 - Systems: MLOps, observability, explainability, streaming reliability.
-- Practice: Flink strategy, ADRs, DORA/Jira signals, local E2E tests.
+- Practice: streaming platforms, DORA/Jira signals, architecture decisions, local E2E tests.
 - Technical: production ML, signal cleaning, Java/Kotlin, Python, SQL, Kafka/Flink, Airflow, AWS/GCP.
 - Public work: PyPI libraries dynamicio and skeleton-replay, Skeleton Replay on JetBrains Marketplace, and practical AI standards through JTC'21/UCL. Use this as a credibility signal for productised developer tooling, release discipline, documentation, and standards work, not as a generic hobby-project list.
 - Keep MTTR under 30 minutes in the Vortexa body where monitoring/runbooks/rollback/on-call context explains it; do not foreground it in the side panel.
@@ -310,7 +311,7 @@ Evidence:
 - Managed or led a fully remote team while delivering Ithaca; onboarded and mentored two new members during that period.
 - Responsibilities in raw notes include technical supervision, people management, backlog refinement, prioritisation, stakeholder management, mentoring, and product-management-like work.
 - Mentored engineers, data scientists, and analysts.
-- Participated in hiring and candidate evaluation before and after joining Vortexa.
+- Hiring context for Vortexa/DPT: hiring manager for 6 roles over the years; because of reorgs/restructures, do not imply all six remained under current supervision. Interviewed 31+ candidates as hiring manager and participated in 60+ interview loops overall across DPT staffing/onboarding. Current team has been fully retained and every member was recently promoted/progressed.
 - Ran or initiated event-driven architecture mentorship sessions with seven participants, including two from a frontend/product engineering team.
 
 Useful phrasing:
