@@ -83,6 +83,14 @@ Rules:
 
 Only update `assets/pdfs/cv.pdf` when the user explicitly wants the website CV refreshed.
 
+## Cover Letters
+
+- Keep cover letters to one printed page unless the user explicitly asks otherwise.
+- Use professional A4 print CSS with explicit margins when generating HTML-backed `.doc` files.
+- Justify body paragraphs (`text-align: justify; text-justify: inter-word; hyphens: auto;`) so the main prose aligns on both left and right edges.
+- Keep contact details, date, salutation, and sign-off left-aligned unless the user asks for a different letter format.
+- Verify page fit when tooling is available; if it cannot be rendered locally, say so.
+
 ## Compile and Publish
 
 When the environment supports it, compile from `cv/latex/` with:

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cover Letter - GitHub Senior Engineering Manager Code Scanning</title>
+  <style>
+    @page { size: A4; margin: 16mm 18mm; }
+    html, body { margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; font-size: 10.5pt; line-height: 1.34; color: #111; }
+    p { margin: 0 0 9px 0; text-align: justify; text-justify: inter-word; hyphens: auto; }
+    .contact { margin-bottom: 14px; }
+    .contact p, .date, .salutation, .signoff { text-align: left; }
+    .date { margin-bottom: 14px; }
+  </style>
+</head>
+<body>
+  <div class="contact">
+    <p>Christos Hadjinikolis<br>
+    christos.hadjinikolis@gmail.com<br>
+    https://christos-hadjinikolis.github.io/<br>
+    https://uk.linkedin.com/in/christoshadjinikolis</p>
+  </div>
+
+  <p class="date">31 July 2026</p>
+
+  <p class="salutation">Dear GitHub hiring team,</p>
+
+  <p>I am applying for the Senior Engineering Manager role in Code Scanning because the work sits at a point I care about: developer workflow, software quality, security, and the engineering systems that help teams catch important problems early. GitHub's culture appeals to me because it treats software development as a collaborative system, not just a sequence of individual coding tasks.</p>
+
+  <p>My career has increasingly focused on building engineering systems that help other engineers build software safely, reliably, and at scale. At Vortexa, I lead the engineering strategy and delivery for a client-facing live streaming backend estate that processes roughly 6 million records per hour. The domain is production ML rather than source-code analysis, but the engineering-management problems are transferable: distributed systems, dependency management, observability, reliability, incident response, testing discipline, automation, roadmap clarity, and cross-team trust.</p>
+
+  <p>I directly manage the MLE/DE/DS core and lead a 10-person cross-functional delivery team across engineering, Product, and domain expertise. I helped scale the Data Production Team from 4 to 30+ people by shaping hiring loops, system-design interviews, onboarding practices, engineering standards, and ownership boundaries. My current team has been fully retained and recently progressed.</p>
+
+  <p>The developer-infrastructure part of the role is a natural progression from work I already do. At Vortexa I have championed dev containers, Backstage adoption, Flink/Airflow archetypes, ADR-backed architecture decisions, local E2E/integration tests, CI/CD discipline, DORA/Jira signals, and shared on-call practices. Outside work, I have built public developer tools including skeleton-replay, a Python package for runtime evidence and replayable architecture reports, and a PyCharm/IntelliJ plugin that brings those reports into the IDE.</p>
+
+  <p>I would not present myself as a static-analysis or compiler specialist. What makes CodeQL interesting to me is the combination of formal code understanding and practical developer workflow. My Ph.D. work in computational logic, formal semantics, symbolic reasoning, Knowledge Graphs, graph analytics, and Bayesian techniques gives me strong adjacent grounding for the semantic side of the problem. My production engineering experience gives me the other side: building teams and platforms that keep valuable systems reliable, observable, and useful to their users.</p>
+
+  <p>What I would bring to GitHub is senior engineering leadership close to the technical substance: coaching engineers, creating clarity across teams, improving quality practices, using telemetry to guide decisions, and building the tooling and operating models that let teams ship confidently.</p>
+
+  <p class="signoff">Sincerely,</p>
+
+  <p class="signoff">Christos Hadjinikolis</p>
+</body>
+</html>
