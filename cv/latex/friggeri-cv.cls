@@ -193,7 +193,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 
 \setlength{\tabcolsep}{0pt}
 \newlength{\entryleftinset}
-\setlength{\entryleftinset}{0.55cm}
+\setlength{\entryleftinset}{0cm}
 \newenvironment{entrylist}{%
   \hspace*{\entryleftinset}\begin{tabular*}{\dimexpr\textwidth-\entryleftinset\relax}{@{}l@{}}
 }{%
