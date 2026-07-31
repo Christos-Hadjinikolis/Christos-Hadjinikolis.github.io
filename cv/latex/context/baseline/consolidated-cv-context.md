@@ -299,8 +299,9 @@ Use the side panel as a recruiter scan path, not a generic tools inventory. The 
 - People: hiring, mentoring, retention, cross-functional delivery.
 - Systems: MLOps, observability, explainability, streaming reliability.
 - Practice: streaming platforms, DORA/Jira signals, architecture decisions, local E2E tests.
-- Technical: production ML, signal cleaning, Java/Kotlin, Python, SQL, Kafka/Flink, Airflow, AWS/GCP.
+- Technical: ML systems, Java/Kotlin, Python, SQL, Kafka/Flink, Airflow, AWS/GCP.
 - Public work: PyPI libraries dynamicio and skeleton-replay, Skeleton Replay on JetBrains Marketplace, and practical AI standards through JTC'21/UCL. Use this as a credibility signal for productised developer tooling, release discipline, documentation, and standards work, not as a generic hobby-project list.
+- Public tooling framing: dynamicio says the user cares about explicit I/O seams, schema/data contracts, local feedback loops, and decoupling business logic from infrastructure. skeleton-replay says the user cares about runtime evidence, architecture understanding, replayable/reviewable systems, onboarding, and LLM-assisted code review grounded in traces. The JetBrains plugin says the user productises developer workflows, not just libraries. Presenting these as free/public tools signals a standards-oriented mindset: reusable mechanisms, shared practice, and helping teams move faster with more trust.
 - Keep MTTR under 30 minutes in the Vortexa body where monitoring/runbooks/rollback/on-call context explains it; do not foreground it in the side panel.
 
 #### Team Leadership
