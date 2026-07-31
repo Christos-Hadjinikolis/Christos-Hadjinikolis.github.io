@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cover Letter - Pleo Engineering Manager GenAI Platform</title>
+  <style>
+    @page { size: A4; margin: 16mm 18mm; }
+    html, body { margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; font-size: 10.5pt; line-height: 1.34; color: #111; }
+    p { margin: 0 0 9px 0; text-align: justify; text-justify: inter-word; hyphens: auto; }
+    .contact { margin-bottom: 14px; }
+    .contact p, .date, .salutation, .signoff { text-align: left; }
+    .date { margin-bottom: 14px; }
+  </style>
+</head>
+<body>
+  <div class="contact">
+    <p>Christos Hadjinikolis<br>
+    christos.hadjinikolis@gmail.com<br>
+    https://christos-hadjinikolis.github.io/<br>
+    https://uk.linkedin.com/in/christoshadjinikolis</p>
+  </div>
+
+  <p class="date">31 July 2026</p>
+
+  <p class="salutation">Dear Pleo hiring team,</p>
+
+  <p>I am applying for the Engineering Manager, GenAI Platform role because it is an internal platform role first: roadmap, architecture, reliability, hiring, stakeholder alignment, cost trade-offs, and the discipline required to make AI systems trustworthy for product teams. That is a natural next step from the production ML platform work I have led at Vortexa.</p>
+
+  <p>At Vortexa, I own the engineering strategy and delivery for a client-facing ML and streaming estate that processes roughly 6 million records per hour into production intelligence. I lead a 10-person cross-functional team across engineering, Product, and domain expertise, directly manage the MLE/DE/DS core, and helped grow the wider Data Production Team from 4 to 30+ people through hiring loops, system-design interviews, onboarding, mentoring, and clearer ownership boundaries.</p>
+
+  <p>The closest analogue to Pleo's current architectural transition is the two-year Kafka Streams-to-Flink migration I led for critical live pipelines. That work was not a framework preference; it was a platform evolution to reduce partition-coupled scaling, improve state/checkpointing, increase operational visibility, and lower maintenance effort while keeping delivery moving.</p>
+
+  <p>I have also built the trust machinery around production ML: MLflow, model and data versioning, service-based deployment, replay and evaluation interfaces, live accuracy monitoring, observability, runbooks, rollback and fallback paths, Jira alert workflows, and shared on-call ownership. My UCL and JTC'21 standards work reinforces the same concerns from another angle: auditability, explainability, versioning, governance, and safe AI adoption.</p>
+
+  <p>Pleo's Kotlin/Python transition also maps well to how I work. I am comfortable in JVM-oriented streaming systems and actively use Kotlin, while most of my ML, data, testing, and public tooling work is in Python. The GenAI-specific stack would be the area I would learn fastest in role; my starting contribution would be platform judgement I can already defend: evaluation, observability, operational readiness, developer experience, and pragmatic architecture.</p>
+
+  <p>The value I would bring to Pleo is an engineering manager who stays close to the technical substance, builds a strong technical team and operating model, and turns research-heavy AI/data workflows into reliable internal platforms that product teams can trust and build on.</p>
+
+  <p class="signoff">Sincerely,</p>
+
+  <p class="signoff">Christos Hadjinikolis</p>
+</body>
+</html>

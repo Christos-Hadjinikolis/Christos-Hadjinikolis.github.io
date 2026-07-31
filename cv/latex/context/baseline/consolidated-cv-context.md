@@ -11,6 +11,7 @@ Last consolidated: 2026-07-31
 - `content/pages/experience.md`: public narrative timeline for the website.
 - Existing role variants under `cv/latex/variants/*/_role-context/`: prior fit assessments and positioning choices.
 - `cv/latex/context/baseline/linkedin-experience-snapshot-2026-07-31.md`: user-supplied LinkedIn experience snapshot preserving role chronology, Data Reply/client leadership context, teaching/communication evidence, and LinkedIn cleanup notes.
+- `cv/latex/context/positioning/promet-local-ai-harness-context-2026-07-31.md`: local personal-project context for Promet, a local-first AI harness shell / workbench for memory-aware, voice-enabled, tool-using assistants.
 
 Use this document as orientation, not as a substitute for factual checking. Before adding a claim to the CV, confirm that it is supported by the source CV, the raw context note, or direct user confirmation.
 
@@ -28,6 +29,8 @@ The strongest market positioning is:
 - LLM systems / applied AI engineering roles where the differentiator is building the harness around model behaviour rather than claiming frontier-model research depth
 
 The current evidence is strongest for hands-on technical engineering management, cross-functional delivery, production ML systems, real-time/streaming estate ownership, and building the operating model around reliable ML systems. It is weaker for formal manager-of-managers scope, large budget ownership, large org ownership, and direct frontier LLM alignment work unless the user supplies additional evidence.
+
+Promet adds a useful but secondary GenAI-adjacent signal: over roughly the last six months, the user has been building a local-first AI harness shell for memory-aware, voice-enabled, tool-using assistants. Use it to support hands-on AI platform judgement around local runtimes, tool execution, MCP-style connectors, prompt contracts, approvals, traceability, replay, and developer-facing AI workflows. Do not present Promet as production GenAI platform ownership, enterprise adoption, or managed-team evidence.
 
 ## Core Narrative
 
