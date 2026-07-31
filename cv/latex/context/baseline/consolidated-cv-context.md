@@ -2,7 +2,7 @@
 
 Purpose: single working context file for CV tailoring, role-fit analysis, cover letters, recruiter notes, and interview preparation.
 
-Last consolidated: 2026-06-10
+Last consolidated: 2026-07-31
 
 ## Source Files
 
@@ -10,23 +10,24 @@ Last consolidated: 2026-06-10
 - Former `cv/latex/context/vortexa.md`: raw career-impact notes, originally written around January 2024 and extended with later notes; consolidated here and removed.
 - `content/pages/experience.md`: public narrative timeline for the website.
 - Existing role variants under `cv/latex/variants/*/_role-context/`: prior fit assessments and positioning choices.
+- `cv/latex/context/baseline/linkedin-experience-snapshot-2026-07-31.md`: user-supplied LinkedIn experience snapshot preserving role chronology, Data Reply/client leadership context, teaching/communication evidence, and LinkedIn cleanup notes.
 
 Use this document as orientation, not as a substitute for factual checking. Before adding a claim to the CV, confirm that it is supported by the source CV, the raw context note, or direct user confirmation.
 
 ## Current Positioning
 
-Christos Hadjinikolis is a Staff-level ML Tech Lead / Pod Lead with 16 years of combined industry and academic experience across AI research, production ML systems, MLOps, distributed data infrastructure, and technical leadership.
+Christos Hadjinikolis is an Engineering Manager / Production ML and Streaming Systems leader with 16 years of combined industry and academic experience across AI research, production ML systems, MLOps, distributed data infrastructure, consulting/practice leadership, and technical management.
 
 The strongest market positioning is:
 
-- Staff / Principal Machine Learning Engineer
-- Staff / Principal ML Platform Engineer
-- ML Systems / AI Infrastructure Lead
-- Applied AI / Decisioning Platform Lead
-- Head-of-ML or Director-track roles where the scope values technical leadership, platform maturity, and production ML delivery more than pure people-management scale
+- Engineering Manager / Senior Engineering Manager for production ML, streaming, and real-time data systems.
+- Machine Learning Engineering Manager / ML Platform Engineering Manager.
+- Director-track engineering roles where the scope values production ML, streaming-platform strategy, cross-functional operating models, and startup-to-scale-up organisational growth.
+- Head-of-ML Engineering roles where hands-on technical credibility matters alongside management scope.
+- Staff / Principal ML Platform or AI Infrastructure roles only as a secondary/hybrid positioning, not the primary rebrand.
 - LLM systems / applied AI engineering roles where the differentiator is building the harness around model behaviour rather than claiming frontier-model research depth
 
-The current evidence is strongest for hands-on technical leadership, cross-functional delivery, production ML systems, and applied LLM systems engineering. It is weaker for formal manager-of-managers scope, large budget ownership, large org ownership, and direct frontier LLM alignment work unless the user supplies additional evidence.
+The current evidence is strongest for hands-on technical engineering management, cross-functional delivery, production ML systems, real-time/streaming estate ownership, and building the operating model around reliable ML systems. It is weaker for formal manager-of-managers scope, large budget ownership, large org ownership, and direct frontier LLM alignment work unless the user supplies additional evidence.
 
 ## Core Narrative
 
@@ -34,7 +35,7 @@ The through-line is the shift from research and teaching into production AI syst
 
 Key message:
 
-> I build and lead reliable ML systems that move advanced modelling work from experimentation into trusted production behaviour.
+> I build engineering organisations, operating models, and platforms that move advanced modelling work from experimentation into trusted production behaviour.
 
 Supporting themes:
 
@@ -48,18 +49,18 @@ Supporting themes:
 
 ## Master CV Snapshot
 
-Current headline:
+Current headline as of 2026-07-31:
 
-- ML Tech Lead (Staff-Level) at Vortexa Ltd | Ph.D.
-- Committee Expert Member at JTC'21
+- Engineering Manager | Production ML & Streaming Systems.
+- Ph.D. Computer Science | UCL Research Associate | AI Standards Expert @ ISO/CEN-CENELEC JTC'21.
 
 Current summary emphasis:
 
-- 16 years of combined industry and academic experience designing and deploying large-scale AI systems.
-- Recent focus on real-time inference pipelines, event-driven architectures, and scalable backend services for ML-driven products.
-- Built and maintain systems that expose model APIs, stream predictions, and support continuous feedback loops.
-- Comfortable across research and production.
-- Track record in robust, observable, maintainable AI infrastructure.
+- Engineering Manager for ML and real-time data systems with 16 years across AI research, consulting, backend engineering, and live data platforms.
+- Leads teams that turn noisy data, experimental models, and ambiguous product semantics into reliable, client-facing systems.
+- Owns a major live streaming backend estate at Vortexa, leads a 10-person cross-functional team, and drove Data Production Team growth from 4 to 30+ through hiring, system-design culture, platform choices, and operating discipline.
+- Connects UCL/JTC'21 standards work to auditability, explainability, versioning, and safe AI adoption.
+- Builds organisations, operating models, and platforms that keep ML systems dependable when product quality and client trust are on the line.
 
 Current visible technical stack:
 
@@ -416,9 +417,11 @@ Dates:
 - 04/2016-12/2020.
 - Joined Data Reply's London spin-off as its first consultant.
 - Progressed from Data Scientist to ML Engineer and Senior Consultant.
+- LinkedIn snapshot represents the progression as Data Scientist (04/2016-06/2017) then Lead ML Engineer (06/2017-11/2020), with Data Reply full-time tenure of roughly 4 years 8 months.
 - Played a formative role in growing the team from 3 practitioners + 2 managers to 30+ consultants.
 - User was asked to move toward an Associate Partner path before leaving; treat this as private context unless explicitly needed, not as a default CV claim.
-- Leadership included client meetings, scoping goals, facilitating technical delivery, consultant placement, interviewing, mentoring, and guiding hires.
+- Leadership included client meetings, scoping goals, controlling plans/timelines, facilitating technical delivery, consultant placement, interviewing, mentoring, training less experienced team members, and guiding hires.
+- Earlier LinkedIn wording says the user became a BU/practice lead or co-lead for data scientists and data engineers on big-data analysis/modelling and data-engineering projects. Use this as evidence of practice-building and delivery leadership, while avoiding claims of formal management over the full organisation.
 - Ran the London Flink Meetup for roughly five years from 2016 to mid-2020.
 - Worked across UBS, Vodafone, CNHi, UniCredit, Mondadori, Gamesys, and opportunities around BT/HSBC; use named clients sparingly in the CV.
 - Data Reply should now be framed as consulting plus project/client leadership, not as purely IC work. Still avoid overstating formal people-management authority across the full Data Reply organisation.
@@ -432,6 +435,8 @@ Evidence:
 - Supported versioning, deployment, telemetry, experiment workflows / resource-governed notebooks.
 - Implemented CI/CD pipelines, unified feature stores, and monitoring.
 - Vodafone was an early point where the user was put in charge of technical delivery, people coordination, stakeholder interaction, and product-facing delivery across multiple workstreams.
+- LinkedIn snapshot adds a useful chronology: ML framework migration and GCP migration supervision (09/2019-02/2020), cloud-native analytics competencies on GCP as technical lead (02/2020-07/2020), and Infinity platform CI/CD / ML-pipeline practice work (07/2020-11/2020).
+- The Vodafone work included requirements gathering, gap analysis, impact assessment, delivery planning, migration of CI/CD/scheduling/orchestration jobs, PySpark feature-engineering frameworks, and approved base-image pipelines for DataProc/deep-learning workloads.
 - Red Agent was a mobile-network feature-engineering framework for profiling users from network data.
 
 Best use:
@@ -448,7 +453,8 @@ Evidence:
 - Built time-series forecasting models for agricultural vehicles.
 - Supported alerting and automated deployment.
 - Led prototyping and transitioned statistical models into scalable cloud-ready services.
-- First substantial DS team-lead experience: led/guided a data-science team using PySpark over live vehicle sensor data to infer maintenance/repair needs.
+- First substantial DS team-lead experience: led/guided an agile data-science/data-engineering team using PySpark over live vehicle sensor data to infer maintenance/repair needs.
+- LinkedIn snapshot says the user interacted directly with stakeholders, collected business requirements, translated them into DS/DE tasks, and guided task definition and delivery.
 - Operated with Scrum Master/product-facing backlog discipline.
 
 Best use:
@@ -463,6 +469,7 @@ Evidence:
 - Produced organisational insights and decision automation.
 - Built observability tools with Kafka, Elasticsearch, and Python.
 - Developed software-engineering and ML-engineering discipline at UBS through exposure to Extreme Programming, pairing, productionisation, and enterprise delivery constraints.
+- LinkedIn snapshot emphasizes end-to-end real-time processing pipelines, graph analytics, process mining over event logs, dashboards, notebooks, Kafka, Elasticsearch, Apache Flink, Python, and Kibana.
 - Eventually became the sole embedded Data Reply consultant on the UBS account.
 
 Best use:
@@ -507,7 +514,7 @@ Evidence:
 
 Evidence:
 
-- ISO / JTC 21 committee expert member since January 2021.
+- ISO / JTC 21 committee expert member. Current CV/context has "since January 2021"; user-supplied LinkedIn snapshot says September 2021. Verify the exact start date before future public edits.
 - Working Group 3, developing AI standards aligned with EU policies and international norms.
 - UCL Department of Information Studies Associate Researcher since October 2024; helps expose students to practical AI applications and lectures on AI standardisation, the AI Act, auditability, versioning, explainability, and safe adoption.
 - Supports AI application, standardisation, and ethics initiatives.
