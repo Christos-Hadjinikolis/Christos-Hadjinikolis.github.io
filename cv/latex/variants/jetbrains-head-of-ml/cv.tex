@@ -19,7 +19,7 @@
 
 % Set up footer
 \pagestyle{fancy}
-\fancyhf{}
+\fancyhf{}  % Clear header/footer
 \fancyfoot[C]{\small Page \thepage}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -43,110 +43,95 @@
 \header
     {Christos}
     {Hadjinikolis}
-    {Staff/Director-Level ML Tech Lead | Ph.D.}
-    {Committee Expert Member @ \href{https://www.cencenelec.eu/areas-of-work/cen-cenelec-topics/artificial-intelligence/}{JTC'21}}
+    {Engineering Manager | Production ML, AI Tooling \& Streaming Systems}
+    {Ph.D. Computer Science | UCL Research Associate | AI Standards Expert @ \href{https://www.cencenelec.eu/areas-of-work/cen-cenelec-topics/artificial-intelligence/}{ISO/CEN-CENELEC JTC'21}}
     {\small \href{mailto:christos.hadjinikolis@gmail.com}{christos.hadjinikolis@gmail.com}}
 
 \begin{aside}
   	\section{mediums}
-		\href{https://christos-hadjinikolis.github.io/}{\Mundus~~\textbf{personal website}}
+		\href{https://christos-hadjinikolis.github.io/}{\includegraphics[width=1.9cm]{../../../../assets/images/site/ml-affairs-logo-welcome.png}}
 		\href{https://uk.linkedin.com/in/christoshadjinikolis}{\includegraphics[scale=0.4]{linkedin0.png}}
 	    \href{https://github.com/Christos-Hadjinikolis}{\includegraphics[scale=0.35]{github0.png}}
 		\href{https://scholar.google.com/citations?hl=en&user=Rr3KTx8AAAAJ}{\includegraphics[scale=0.08]{Google_Scholar.png}}
 		\href{https://www.youtube.com/watch?v=LdDasrMOJLs&ab_channel=BillRaymond}{\includegraphics[scale=0.08]{youtube.png}}
-	\section{languages}
-    	{\small bilingual Greek/English}
-	\section{programming}
-    	{\small \textbf{\textcolor{orange}{Python}}, \textbf{\textcolor{red}{Java}}, \textbf{\textcolor{red!50!black}{Kotlin}} (Kafka Streams), \textbf{\textcolor{cyan}{SQL}}, Cypher}
-	\section{author}
-    	{\small \href{https://github.com/VorTECHsa/dynamicio}{\textbf{pypi:dynamicio}}}
-	\section{leadership scope}
-    	{\footnotesize ML roadmap, delivery leadership, technical guidance, supervision, team scaling, stakeholder management, hiring/interviewing, mentorship, AI governance, auditability}
-    \section{cloud-platforms}
-		{\textbf{\textcolor{orange}{AWS}}, \textbf{\textcolor{cyan}{GCP}}}
-    \section{technologies \&~frameworks}
-    	{\footnotesize MLOps, MCP, agent harnesses, Kafka, Kafka Streams, py/Flink, FastApi, Docker, MLflow, Airflow, AWS CodeArtifact, Elasticsearch}
-    \section{interests}
-		{\footnotesize \textbf{Sports:} Tennis, Jogging, \\ \textbf{Reading:} Comics, Philosophy, Politics}
-\end{aside}
+			\section{organisation}
+			{\footnotesize org scale-up\\\textbf{hiring} loops\\mentoring/retention\\cross-functional delivery}
+			\section{platform}
+			{\footnotesize production ML\\AI tooling\\developer workflows\\observability}
+			\section{governance}
+			{\footnotesize AI standards\\auditability\\model/data versioning\\explainability}
+			\section{engineering}
+			{\footnotesize streaming platforms\\CI/workflow automation\\DORA/Jira signals\\local E2E tests}
+			\section{technical}
+			{\footnotesize \textbf{\textcolor{red}{Java}}/\textbf{\textcolor{red!50!black}{Kotlin}}\\\textbf{\textcolor{orange}{Python}}/\textbf{\textcolor{cyan}{SQL}}\\Kafka/Flink\\MLflow/Airflow\\AWS/GCP}
+			\section{public}
+			{\footnotesize \textbf{JetBrains plugin}\\\textbf{PyPI}: \href{https://pypi.org/project/skeleton-replay/}{skeleton-replay}\\\href{https://pypi.org/project/dynamicio/}{dynamicio}\\JTC'21/UCL}
+	\end{aside}
 
 \section{about me}
-{\small Staff-level ML Tech Lead operating at Staff/Director scope, with 15${^+}$ years across AI research, production ML systems, MLOps, and developer-facing platform work. Lead initiatives spanning roadmap shaping, prioritisation, stakeholder alignment, architecture standards, mentoring, and real-time inference/event-driven systems. Strong record of scaling R\&D impact across systems, people, and product quality by raising engineering standards through CI/CD, schema discipline, lineage, auditability, observability, and pragmatic AI governance.}
+{\small \textbf{Engineering Manager for production ML, AI tooling, and real-time data systems} with \textbf{16 years} across AI research, consulting, backend engineering, and live data platforms. My career has focused on the harder layer behind ML products: building organisations, operating models, and engineering platforms that repeatedly turn research into dependable production systems. At Vortexa, own a major \textbf{live streaming backend estate}, lead a \textbf{10-person cross-functional team}, and drove Data Production Team growth from \textbf{4 to 30+ people} by shaping hiring, system-design culture, platform choices, and operating discipline. I work where long-term R\&D, product pressure, governance, developer workflow, and production reliability meet.}
 \section{work-experience}
 \begin{entrylist}
 	\entry
-	{\footnotesize 12/2020–present}
+	{12/2020–present}
 	{Vortexa Ltd, London, UK}
-	{ML Tech Lead (Staff-Level) | Pod Lead}
+		{Engineering Manager | ML Systems Lead}
 	{
     	{\small
-	    \setlength{\parindent}{-1.5em}
-    	\setlength{\leftskip}{-1.5em}
-	    Lead ML-driven product capabilities for maritime forecasting, combining destination prediction, AI signal cleaning, real-time inference, event-driven architecture, backend services, and production rollout discipline. Influence engineering practices across a 70-person R\&D department through technical supervision, product ownership, stakeholder management, backlog prioritisation, mentoring, and standardisation.
+	    \setlength{\parindent}{0pt}
+	    \setlength{\leftskip}{0pt}
+								    Own the \textbf{engineering strategy and delivery} for Vortexa's \textbf{live streaming intelligence estate}, a major client-facing backend area powering product and commercial workflows, filtering roughly \textbf{6M vessel-position records/hour} into production intelligence for \textbf{13.5K monitored vessels}. Lead product-facing ML/platform delivery with a \textbf{10-person cross-functional team} spanning \textbf{6 MLE/DE/DS, 2 Product, and 2 SMEs}. The estate sits between research and customer trust: reliability, explainability, monitoring, evaluation, and response readiness are delivery requirements.
 
     	}
-	    \begin{itemize}[left=-1.5em]
-    	    \item \footnotesize\textbf{AI Product Delivery:} Led destination, routing, signal-cleaning, and waiting-time model services, translating R\&D into observable, maintainable production capabilities and prediction-quality governance.
-	        \item \footnotesize\textbf{Event-Driven ML Platform:} Drove \textbf{Flink}, \textbf{Kafka}, and \textbf{Kotlin}/Kafka Streams adoption; shifted stream processing toward framework-driven dataflow, reducing cognitive load and Kafka partition-coupled scaling limits.
-	        \item \footnotesize\textbf{R\&D Scalability:} Raised ML maturity across teams through CI/CD, model/data versioning, schema management, data lineage, auditability, end-to-end tests, ADRs, architecture forums, and repeatable releases.
-	        \item \footnotesize\textbf{Leadership \& Mentorship:} Managed a remote pod, onboarded and mentored engineers, supported hiring/interviewing, and ran an event-driven architecture mentoring programme.
-	        \item \footnotesize\textbf{Platform Reuse \& Governance:} Created \href{https://github.com/VorTECHsa/dynamicio}{\textbf{Dynamicio}}, adopted across 15+ repositories; implemented \textbf{AWS CodeArtifact} adoption for safer internal package publication, reuse, and team-level scalability.
-	        \item \footnotesize\textbf{AI Developer Tooling:} \href{https://christos-hadjinikolis.github.io/2026/04/08/llm-clis-have-a-review-speed-problem.html}{\textbf{Identified LLM/vibe-coding review friction}} and initiated MCP/harness work for status lookup, alerting, failure tracking, and audit evidence.
-	        \item \footnotesize\textbf{Roadmap Balance:} Balanced product delivery, technical-debt reduction, regulatory controls, and stakeholder priorities within a shared ML roadmap.
+	    \begin{itemize}[leftmargin=1.1em]
+										        \item \footnotesize\textbf{People \& Org Scaling:} Directly manage the MLE/DE/DS core and lead a \textbf{10-person cross-functional delivery team}; drove Data Production Team growth from \textbf{4 to 30+} through hiring loops and system design evaluations; hiring manager for \textbf{6 roles}, interviewing \textbf{31+ candidates} in that capacity and \textbf{60+ overall}; retained the full current team, with every member recently promoted.
+										        \item \footnotesize\textbf{Product \& Platform Direction:} Balance long-term R\&D with short-term product needs by turning ambiguous prediction-quality, workflow, and stakeholder problems into measurable engineering workstreams.
+										        \item \footnotesize\textbf{Production ML Lifecycle:} Established Vortexa's ML development lifecycle from research to production: prototyping discipline, \textbf{MLflow}, model/data versioning, service-based model deployment, replay/evaluation interfaces, and live accuracy-monitoring dashboards.
+										        \item \footnotesize\textbf{Distributed Streaming Systems:} Enabled independent scaling of critical live pipelines by leading the two-year \textbf{Kafka Streams-to-Flink migration}; used Java/\textbf{Kotlin}, Flink's dataflow model, independent state/checkpointing, richer operational UI, and framework-driven design to reduce maintenance effort.
+										        \item \footnotesize\textbf{Reliability \& Governance:} Protect customer-facing reliability with monitoring, runbooks, rollback/fallback plans, explainability work, and Jira alert workflows; moved from firefighter patterns to shared on-call ownership while keeping \textbf{MTTR under 30 min}.
+										        \item \footnotesize\textbf{Developer Workflow \& Operating Model:} Scale delivery through Flink/Airflow archetypes, ADRs, dev containers, Backstage adoption, local E2E/integration tests, DORA/Jira signals, and a weekly architecture forum; latest view: \textbf{14.65 deploys/week} with \textbf{0.52\% change failure}. Cut a \textbf{3h DAG feedback loop to under 5 min}.
     	\end{itemize}
 	}
     \entry
-    {\footnotesize 04/2016–12/2020}
+    {04/2016–12/2020}
     {DataReply, London, UK}
-    {Data Scientist | ML Engineer}
+    {Senior Consultant | Data Scientist / ML Engineer}
     {
         {\small
-        \setlength{\parindent}{-1.5em}
-        \setlength{\leftskip}{-1.5em}
-        Progressed from Data Scientist to ML Engineer, leading cross-functional DS/DE delivery across UBS, Vodafone, and CNHi. Focused on ML platformisation, workflow automation, observability, deployment governance, and maintainable enterprise systems.
+        \setlength{\parindent}{0pt}
+        \setlength{\leftskip}{0pt}
+					        Joined Data Reply's London spin-off as its first consultant and played a formative role in growing it from \textbf{three practitioners and two managers to 30+ consultants}. Progressed to Senior Consultant; led client meetings, scoped goals, placed consultants, interviewed/mentored hires, and delivered ML/data work across UBS, Vodafone, CNHi and other enterprise clients. Ran the London Flink Meetup for five years.
 
         }
-        \begin{itemize}[left=-1.5em]
-            \item \footnotesize\textbf{Vodafone Group (09/2019–11/2020, London):}
-                \begin{itemize}
-                    \item \footnotesize Worked on Vodafone's internal MLOps platform (\textbf{Infinity Project}) on GCP using \textbf{Kubeflow}, supporting model versioning, deployment, telemetry, experiment workflows, and resource-governed notebooks.
-                    \item \footnotesize Implemented CI/CD, shared feature/data workflows, and monitoring for reproducible production ML.
-                \end{itemize}
-            \item \footnotesize\textbf{CNHi (05/2019–09/2019, Chicago):}
-                \begin{itemize}
-                    \item \footnotesize Built \textbf{time-series forecasting} models and transitioned statistical prototypes into scalable cloud services for operational alerting.
-                \end{itemize}
-            \item \footnotesize\textbf{UBS (08/2017–04/2019, London):}
-                \begin{itemize}
-                    \item \footnotesize Designed real-time \textbf{graph analytics} and \textbf{process mining} pipelines for organisational insights and decision automation.
-                    \item \footnotesize Developed observability tooling with \textbf{Kafka}, \textbf{Elasticsearch}, and Python.
-                \end{itemize}
-        \end{itemize}
+        \begin{itemize}[leftmargin=1.1em]
+					            \item \footnotesize\textbf{Client Delivery Leadership:} Drove agendas with client stakeholders and product teams, agreed goals, facilitated technical delivery, and supported hiring/consultant placement across banking, telecoms, manufacturing, publishing, and gaming accounts.
+					            \item \footnotesize\textbf{Vodafone Group:} Led technical delivery across multiple ML/cloud workstreams; worked on Infinity, a GCP/\textbf{Kubeflow} DS platform, shaping CI/CD, workflow automation, ML lifecycle support, and feature-engineering migration practices.
+				            \item \footnotesize\textbf{CNHi:} Lead Data Scientist/Scrum Master on predictive maintenance; managed/guided a DS team using \textbf{PySpark} over live vehicle sensory data with product-facing backlog discipline.
+			            \item \footnotesize\textbf{UBS:} Grew from Data Scientist into ML Engineer through XP/pairing while delivering graph/process-mining analytics, observability work, and real-time pipelines with \textbf{Kafka}, \textbf{Flink}, \textbf{Elasticsearch}, and Python.
+	        \end{itemize}
     }
     \entry
-    {\footnotesize 2010–2016}
+    {2010–2016}
     {Roles in UK Institutions}
-    {\small Assoc. Lect. @GSM | Coding Teacher @DGC | TA @KCL|UCL}
+    {\small Coding Teacher @DGC | Teaching Assistant @KCL/UCL}
     {
         {\small
-        \setlength{\parindent}{-1.5em}
-        \setlength{\leftskip}{-1.5em}
-        Taught computing during doctoral studies, building deep technical communication habits and the ability to make complex computer science and AI ideas operational for others.
+        \setlength{\parindent}{0pt}
+        \setlength{\leftskip}{0pt}
+	        Built the communication and presentation discipline I now rely on as a leader by teaching Java/Python and core computer science at David Game College from 09/2012 to 04/2016 while completing doctoral research; Teaching Assistant at KCL and UCL.
 
-        }
-        \begin{itemize}[left=-1.5em]
-            \item {\footnotesize \textbf{2012–2016}: Lectured in Computing, MATLAB, Java, Python, HTML, CSS at GSM and David Game College}
-            \item {\footnotesize \textbf{2010–2014}: TA at King’s College London (KCL) and UCL, covering Java, Data Structures, Systems Architecture, Semantic Web, SQL, and AI.}
-        \end{itemize}
-    }
-\end{entrylist}
-\newpage
-\specialsection{education}
+	        }
+	    }
+	\end{entrylist}
+	\newpage
+	\setlength{\parskip}{2pt}
+	\setlength{\parsep}{0pt}
+	\specialsection{education}
 \begin{entrylist2}
 	\entrytwo
 	    {\small 2010–2014}
 	    {\small Ph.D. in Computer Science}
-    	{\small King’s College London, UK}
+	{\small King's College London, UK}
 	    {\small \emph{\textbf{Thesis}: Persuasion Dialogues \& Opponent Modelling.}
 	    
 	    	{\footnotesize Developed logical inference methods for large \textbf{Knowledge Graphs}, combining symbolic reasoning, \textbf{graph analytics}, and Bayesian techniques (e.g., MCMC). Research contributed to scalable AI systems grounded in formal semantics. Received \textbf{Best Poster Award} at IJCAI 2013 (413 submissions). Awarded \textbf{EPSRC PhD Scholarship}, \textbf{Outstanding TA Award} (student-nominated), and earned the \textbf{Graduate Certificate in Academic Practice}.
@@ -156,12 +141,12 @@
 		{\small  2004–2010}
 		{\small Diploma (BEng) in Computer Engineering}
 		{\small University of Thessaly, GR}
-		{\footnotesize Five-year polytechnic degree in Computer Science and Engineering with a \textbf{strong focus on mathematics} (10 courses), covering theoretical aspects, networking, and telecommunications. \emph{\textbf{Majored in Artificial Intelligence}}.}
+		{\footnotesize Five-year polytechnic degree in Computer Science and Engineering with a  \textbf{strong focus on mathematics} (10 courses), covering theoretical aspects, networking, and telecommunications. \emph{ \textbf{Majored in Artificial Intelligence}}.}
 	\entrytwo
 		{\small  2002–2004}
 		{\small Military Officer: Second Lieutenant}
 		{\small National Guard, CY}
-		{\small Obligatory army service; position acquired through \textbf{competitive IQ} and athletic exams.}
+		{\small Completed national service as a commissioned Second Lieutenant.}
 \end{entrylist2}
 \specialsection{committees/affiliations}
 \begin{entrylist2}
@@ -169,12 +154,30 @@
 		{\footnotesize since 10/2024}
 		{\small University College London, Dept. of Information Studies}
 		{\small Associate Researcher}
-		{\small Support AI application, standardisation, and ethics initiatives in industry and academia.}
+		{\small Research/teach practical AI standardisation: AI Act, auditability, model/data versioning, explainability, and safe adoption.}
 	\entrytwo
 		{\footnotesize since 01/2021}
 		{\small ISO - International Organisation for Standardisation}
 		{\small Committee Expert Member for JTC'21}
-		{\footnotesize Member of JTC'21 Working Group 3, developing AI standards aligned with EU policies and international norms.}
+		{\footnotesize Member of JTC'21 Working Group 3, developing AI standards aligned with EU policy and international norms.}
+\end{entrylist2}
+\specialsection{selected public tooling}
+\begin{entrylist2}
+	\entrytwo
+		{\small JetBrains}
+		{\small \href{https://plugins.jetbrains.com/plugin/32807-skeleton-replay}{Skeleton Replay plugin}}
+		{\small IDE workflow}
+		{\footnotesize Free PyCharm/IntelliJ plugin bringing runtime evidence, workflow reports, and source navigation into the IDE; direct experience productising developer workflows for JetBrains users.}
+	\entrytwo
+		{\small PyPI}
+		{\small \href{https://pypi.org/project/skeleton-replay/}{skeleton-replay}}
+		{\small Runtime architecture evidence}
+		{\footnotesize Python developer tool that turns script/pytest runs into traces, architecture snapshots, workflow evidence, and replayable reports for review, debugging, onboarding, and LLM-assisted understanding.}
+	\entrytwo
+		{\small PyPI}
+		{\small \href{https://pypi.org/project/dynamicio/}{dynamicio}}
+		{\small ML/data I/O contracts}
+		{\footnotesize Free public tooling for making I/O seams explicit, validating schema/data expectations, and switching local/dev/prod datasets so ML pipeline logic can be tested with faster feedback.}
 \end{entrylist2}
 \specialsection{talks/interviews}
 \begin{entrylist2}
@@ -187,7 +190,7 @@
 		{\small 2022}
 		{\small Open Data Science Conference}
 		{\small Industry Conference Talk}
-		{\small \textbf{Dynamicio}, a python library for abstracting your I/O, \underline{\textbf{Details:} \href{https://odsc.com/speakers/dynamicio-a-pandas-i-o-wrapper-why-you-should-start-your-ml-ops-journey-with-wrapping-your-i-o/}{here}}}
+		{\small \textbf{dynamicio}, a published \href{https://pypi.org/project/dynamicio/}{\textbf{PyPI library}} for abstracting I/O in ML/data workflows, \underline{\textbf{Details:} \href{https://odsc.com/speakers/dynamicio-a-pandas-i-o-wrapper-why-you-should-start-your-ml-ops-journey-with-wrapping-your-i-o/}{here}}}
 	\entrytwo
 		{\small 2020}
 		{\small iunera: Big Data Innovators}
@@ -197,12 +200,12 @@
 		{\small 2020}
 		{\small Big Data Warsaw}
 		{\small Industry Conference Talk}
-		{\small Monitoring and Analysing Communication and Trade Events as Graphs, \underline{\textbf{Details:} \href{https://bigdatatechwarsaw.eu/agenda/}{here}}}
+		{\small Monitoring \& Analysing Communication and Trade Events as Graphs, \underline{\textbf{Details:} \href{https://bigdatatechwarsaw.eu/agenda/}{here}}}
 	\entrytwo
 		{\small 2018}
 		{\small Connected Data London}
 		{\small Panelist @ Industry Conference}
-		{\small AI tribes and interconnections: what’s graph got to do with it?, \underline{\textbf{Details:} \href{http://connected-data.london/2018/09/23/ai-tribes-and-interconnections-whats-graph-got-to-do-with-it/}{here}}}
+		{\small AI tribes and interconnections: what's graph got to do with it?, \underline{\textbf{Details:} \href{http://connected-data.london/2018/09/23/ai-tribes-and-interconnections-whats-graph-got-to-do-with-it/}{here}}}
 	\entrytwo
 		{\small 2018}
 		{\small Minds Mastering Machines}

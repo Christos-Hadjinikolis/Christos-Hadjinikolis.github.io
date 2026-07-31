@@ -2,47 +2,76 @@
 
 ## Overall View
 
-This is a credible senior leadership application with one clear caveat: the advertised role expects direct leadership of roughly 50 people, while the available CV evidence supports staff-level technical leadership, pod leadership, mentoring, hiring involvement, product/backlog ownership, and cross-functional influence rather than direct ownership of a department at that size.
+This is a stretch application, but not a frivolous one.
 
-The tailored CV therefore positions Christos as a Staff/Director-level ML Tech Lead with strong production ML, MLOps, architecture, governance, and developer-tool-adjacent experience. It deliberately avoids overstating direct people-management scale while making the operating scope visible.
+The advertised role expects direct leadership of roughly 50 people across multiple AI initiatives. The available evidence supports a smaller direct-management scope: direct management of the MLE/DE/DS core, leadership of a 10-person cross-functional delivery team, hiring-manager responsibility across six roles, broad interview participation, mentoring, org-shaping influence, and a major production ML/streaming estate. The CV must therefore avoid pretending Christos has already been a 50-person Head of ML.
+
+The credible angle is different:
+
+> Christos has repeatedly built the organisational and engineering substrate that turns research-heavy ML work into dependable production systems.
+
+That is closely aligned with JetBrains' platform problem. JetBrains is not merely asking for a model-development leader; it is describing a governance, execution, observability, workflow, and product-platform leadership problem around AI-assisted software development.
 
 ## Why The Profile Is A Strong Fit
 
-- Production ML systems: Vortexa work shows model services, real-time inference, streaming pipelines, model lifecycle engineering, online evaluation, monitoring, and release discipline.
-- AI platform direction: Vodafone's internal MLOps platform and Vortexa's standardisation work map well to JetBrains' platform ambitions.
-- Product and business orientation: Vortexa context includes backlog prioritisation, stakeholder management, product-owner-style work, OKR delivery, regulatory controls, streaming/dataflow standardisation, and client-facing thought leadership.
-- Leadership and standards: Evidence includes remote pod leadership, onboarding, mentoring, hiring/interviewing, architecture forums, ADR advocacy, schema management, lineage/auditability advocacy, and engineering standardisation.
-- Developer ecosystem relevance: Java, Kotlin through Kafka Streams work, CI/CD, GitHub Actions/Jenkins/CircleCI, AWS CodeArtifact adoption, internal package publication, MCP/harness work, and workflow automation are all relevant to JetBrains' developer tooling context.
-- Governance: ISO/JTC'21 committee work and AI standardisation give a useful differentiator for a role explicitly concerned with governance, security, observability, and responsible adoption.
+- Production ML systems: Vortexa evidence shows client-facing ML services, streaming pipelines, model lifecycle engineering, online evaluation, monitoring, rollback/fallback practice, and operational ownership.
+- Research-to-production leadership: Vortexa and Data Reply both show the pattern of turning prototypes, research, and ambiguous product needs into maintained production systems.
+- Developer-tool empathy: `dynamicio`, `skeleton-replay`, and the Skeleton Replay JetBrains plugin show a bias toward reusable developer workflows, runtime evidence, documentation, release discipline, and IDE-integrated tooling.
+- AI tooling and review discipline: the Skeleton work and the user's writing on LLM CLI review-speed problems map to JetBrains' concern that AI is becoming part of planning, building, reviewing, and operating software.
+- Platform governance: UCL and JTC'21 work reinforces the role's governance, standards, auditability, and safe-adoption themes.
+- ML infrastructure: MLflow, model/data versioning, replay/evaluation, service-based deployment, CI/CD, local integration testing, observability, and workflow automation map well to JetBrains' ML infrastructure requirements.
+- Kotlin/JVM exposure: Java/Kotlin through Kafka Streams and the published JetBrains plugin are relevant signals, while the CV avoids claiming deep Kotlin expertise.
+- Stakeholder management: Vortexa and Data Reply show repeated product, domain, client, and engineering alignment work.
+- Product/business orientation: Vortexa live systems are customer-facing, with measurable operational signals such as deploy frequency, change failure, MTTR, and reduced feedback-loop time.
 
 ## Where The Fit Is Partial Or Weak
 
-- Direct management of about 50 people is not evidenced in the source CV or Vortexa context.
-- Business-case ownership is implied through product/stakeholder/OKR work, but not yet supported by explicit budget, revenue, cost, or ROI numbers.
-- LLM and autonomous-agent experience is present as AI adoption/tooling awareness, but the CV does not show deep hands-on LLM platform ownership at JetBrains' likely scale.
-- Distributed training of multi-billion parameter models is not evidenced; the stronger claim is production ML, model-serving, evaluation, and platform discipline.
-- Kotlin is supported through Java/Kotlin Kafka Streams work, but the CV still avoids positioning Christos as primarily a Kotlin engineer.
-- MCP/harness work is relevant and timely, but should be discussed as an active initiative and architecture direction unless production usage evidence is added.
+- Direct leadership of about 50 people is not evidenced.
+- Manager-of-managers scope is not evidenced.
+- Budget/P&L ownership and formal business-case approval are not evidenced, although product prioritisation, measurable delivery, and operating-model ownership are.
+- Distributed training of multi-billion-parameter models is not evidenced.
+- Deep frontier LLM infrastructure ownership is not evidenced. The strongest LLM/AI-tooling evidence is around developer workflow, harness thinking, review/evidence, governance, and production discipline.
+- Kotlin is credible as exposure and applied JVM-streaming/plugin relevance, not as a primary expert identity.
 
 ## CV Changes Made
 
-- Reframed the header as "Staff/Director-Level ML Tech Lead" while preserving factual experience titles in the work section.
-- Rewrote the summary around ML platform leadership, product prioritisation, stakeholder alignment, event-driven systems, AI governance, and research-to-production ownership.
-- Strengthened the Vortexa entry using context from `cv/latex/context/vortexa.md`: hiring/interviewing, remote pod leadership, mentoring, Dynamicio adoption across 15+ repositories, AWS CodeArtifact adoption, schema management, lineage/auditability advocacy, architecture forums, ADRs, event-driven architecture strategy, Flink/Kafka/Kotlin Kafka Streams adoption, OKR delivery, sanctioned-destination controls, signal cleaning, destination routing, and model services.
-- Strengthened DataReply/Vodafone around MLOps platformisation, experiment workflows, CI/CD, monitoring, and enterprise delivery.
-- Added Kotlin more prominently while keeping the claim tied to Kafka Streams work.
-- Added AI developer tooling positioning around LLM/vibe-coding review friction, the published "Coding Got Cheap. Verification Did Not." post, and active MCP/harness work for status lookup, alerting, failure tracking, and audit evidence.
+- Rebuilt the variant from the current Engineering Manager CV style, replacing the stale Staff/Director-Level wording.
+- Changed the headline to `Engineering Manager | Production ML, AI Tooling & Streaming Systems`.
+- Rewrote the summary around the user's requested story: building organisations, operating models, and platforms that repeatedly turn research into dependable production systems.
+- Shifted sidebar taxonomy toward JetBrains-relevant signals: production ML, AI tooling, developer workflows, governance, CI/workflow automation, Kotlin/JVM exposure, public JetBrains plugin, PyPI tooling, and standards.
+- Reframed Vortexa bullets around product/platform direction, research-to-production lifecycle, distributed streaming systems, reliability/governance, developer workflow, and measurable operating model.
+- Strengthened Data Reply/Vodafone around ML platformisation, CI/CD, workflow automation, and technical delivery leadership.
+- Added Skeleton Replay and the JetBrains plugin as prominent selected public tooling on page 2.
+- Kept the CV to the same two-page structure.
 
 ## Claims Intentionally Not Made
 
 - No claim of directly managing 50 people.
-- No claim of owning departmental budget, P&L, or formal business-case approval.
-- No claim of distributed training of multi-billion parameter models.
-- No claim of primary Kotlin programming expertise.
-- No claim of having fully delivered an autonomous-agent governance platform already.
-- No claim of hands-on frontier LLM fine-tuning, RLHF, or large-scale LLM pre-training.
-- No claim of current expertise in RAG, memory systems, or model fine-tuning.
+- No claim of manager-of-managers responsibility.
+- No claim of owning budget, P&L, or formal ROI approval.
+- No claim of distributed training of multi-billion-parameter models.
+- No claim of primary Kotlin expertise.
+- No claim of having already delivered an enterprise autonomous-agent governance platform at JetBrains scale.
+- No claim of frontier-model training, RLHF, or large-scale LLM fine-tuning.
+
+## Cover Letter Strategy
+
+The cover letter should do what the CV cannot do alone:
+
+- acknowledge the real strategic alignment rather than trying to keyword-match the role;
+- state the user's core narrative directly;
+- connect Vortexa production ML leadership to JetBrains' execution/governance platform problem;
+- mention the Skeleton Replay JetBrains plugin as a concrete, relevant signal of developer-tool empathy;
+- present Kotlin as practical exposure;
+- avoid inflating people-management scope.
 
 ## Recommendation
 
-Apply with the tailored CV and cover letter. The application should lean into the unusual combination of production ML systems, MLOps/platform building, developer workflow automation, architecture standards, and AI governance. In interviews, be ready to address the 50-person leadership expectation directly by explaining the actual scope led, the operating model you would use to scale through leads, and how your staff/pod leadership experience translates into larger multi-initiative leadership.
+Apply with the tailored CV and cover letter.
+
+In interviews, be ready to address the scale gap directly:
+
+- explain the current direct and cross-functional leadership scope;
+- explain how the user would scale through leads, standards, operating cadence, and platform governance;
+- use the Data Production growth story as evidence of shaping an organisation beyond formal authority;
+- use Skeleton/public tooling and AI standards work to show unusual alignment with JetBrains' developer-platform and governance direction.
