@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cover Letter - Spotify Engineering Manager Data Platform</title>
+  <style>
+    body { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.45; max-width: 720px; margin: 48px auto; color: #111; }
+    p { margin: 0 0 12px 0; }
+    .contact { margin-bottom: 20px; }
+    .date { margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <div class="contact">
+    <p>Christos Hadjinikolis<br>
+    christos.hadjinikolis@gmail.com<br>
+    https://christos-hadjinikolis.github.io/<br>
+    https://uk.linkedin.com/in/christoshadjinikolis</p>
+  </div>
+
+  <p class="date">31 July 2026</p>
+
+  <p>Dear Spotify hiring team,</p>
+
+  <p>I am applying for the Engineering Manager - Data Platform role because the work is about foundational engineering infrastructure: systems that move critical data reliably, operate at scale, and enable hundreds of teams to build confidently on top. My career has consistently focused on building dependable production platforms where reliability, scalability, operational health, and engineering discipline matter more than individual features.</p>
+
+  <p>At Vortexa, I lead the engineering strategy and delivery for a client-facing production ML platform that processes roughly 6 million vessel-position records per hour into live intelligence. The domain is different from Spotify's event delivery platform, but the engineering-management problems are strongly transferable: high-volume streaming, distributed state, deployment safety, observability, on-call health, product ambiguity, cross-team dependencies, and the need to run business-critical platforms that other teams can trust every day.</p>
+
+  <p>I directly manage the MLE/DE/DS core and lead a 10-person cross-functional delivery team across engineering, Product, and domain expertise. Over the last few years I have driven Data Production Team growth from 4 to 30+ people by shaping hiring loops, system-design interviews, onboarding approaches, mentoring, and engineering practices. My current team has been fully retained and recently progressed, and I care deeply about making expectations, ownership, and development paths explicit rather than relying on informal heroics.</p>
+
+  <p>Technically, my strongest platform work has been around streaming and operational reliability. I led the two-year migration from Kafka Streams to Apache Flink for critical live pipelines, moving toward a dataflow model that reduces maintenance effort and allows compute to scale more independently. I also introduced or shaped monitoring, runbooks, rollback/fallback plans, Jira alert workflows, shared on-call ownership, architecture forums, ADRs, dev containers, Backstage adoption, and local integration tests. Those mechanisms helped keep a sensitive production estate operable, with MTTR managed under 30 minutes and recent delivery signals including 14.65 deploys per week with 0.52% change failure.</p>
+
+  <p>What I would bring to Spotify is not just familiarity with Kafka or Flink. It is the judgement that comes from running business-critical streaming platforms other teams and product surfaces depend on. I am comfortable engaging deeply in architecture and reliability discussions, but I see people leadership as the primary craft of the role: coaching, career development, psychological safety through clarity and trust, healthy execution, and continuous improvement through evidence rather than ceremony.</p>
+
+  <p>I also have adjacent experience relevant to Spotify's privacy and AI-assisted engineering interests. Through UCL and ISO/CEN-CENELEC JTC 21, I work with practical AI standardisation themes such as auditability, versioning, explainability, and safe adoption. Through my public tools, including dynamicio and skeleton-replay, I have focused on making engineering workflows more testable, observable, and easier to review with evidence. I would treat AI-assisted tooling in a platform team the same way: useful when it improves feedback loops, operational understanding, and engineer confidence; risky when it replaces disciplined engineering judgement.</p>
+
+  <p>I would be excited to discuss how my background leading production streaming systems and growing engineering operating models could transfer to Spotify's event delivery and responsible data infrastructure.</p>
+
+  <p>Sincerely,</p>
+
+  <p>Christos Hadjinikolis</p>
+</body>
+</html>
