@@ -40,7 +40,7 @@ That matches much of the role's practical center: translating model capability i
 - Kept the reusable management/production-ML evidence in `cv/latex/context/positioning/production-ml-engineering-manager-addendum-2026-08-16.md`; this role folder records only DeepMind-specific tailoring decisions.
 - Final pre-submission pass removed logo-heavy sidebar content, fixed the extractable name spacing, strengthened direct-report/performance/delivery language, added an explicit model-evaluation iteration bullet, and reframed Promet as applied GenAI product-engineering evidence.
 - Final visual pass restored a compact charcoal header and controlled link colour while keeping the logo-free side panel, no cyan link boxes, no broad technology colouring, brand-coloured profile links, and subtle page-two link styling.
-- Final applied-AI pass adopted the stronger research-translation language where supported: `model-serving`, `0-to-1` PyTorch sequence/transformer delivery, automated evaluation gates, offline/online replay loops, and metric-guided iteration; Promet remains framed as a private applied GenAI project rather than production GenAI expertise.
+- Final applied-AI pass adopted the stronger research-translation language where supported: `model-serving`, `0-to-1` PyTorch sequence/transformer delivery, automated evaluation gates, batch/online replay loops, and metric-guided iteration; Promet remains framed as a private applied GenAI project rather than production GenAI expertise.
 - Condensed certificates into selected credential lines so teaching, education, AI/tooling work, committees, talks, and certificates all remain present within a two-page CV.
 - Kept open-source evidence visible through `dynamicio`, `skeleton-replay`, and the JetBrains plugin.
 
