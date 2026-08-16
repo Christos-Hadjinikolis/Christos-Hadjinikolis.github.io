@@ -1,7 +1,10 @@
 %!TEX TS-program = xelatex
-\documentclass[]{friggeri-cv}
+\documentclass[]{../../friggeri-cv}
 
-% Canonical CV source.
+% Variant source:
+%   DeepMind - Manager, Applied AI Engineering
+% This file is tailored from ../../cv.tex and intentionally does not
+% replace the master CV source.
 
 % Packages
 \usepackage{pifont}
@@ -12,7 +15,7 @@
 \usepackage{enumitem}
 \usepackage{fancyhdr}
 
-\graphicspath{ {./images/} }
+\graphicspath{ {../../images/} }
 \definecolor{linkaccent}{HTML}{1E6291}
 \definecolor{profileweb}{HTML}{B45309}
 \definecolor{profilelinkedin}{HTML}{0A66C2}
@@ -26,10 +29,10 @@
     citecolor=linkaccent,
     pdfborder={0 0 0},
     pdfauthor={Christos Hadjinikolis},
-    pdftitle={Christos Hadjinikolis CV}
+    pdftitle={Christos Hadjinikolis CV - DeepMind Manager Applied AI Engineering}
 }
 
-% Canonical header override: restores a compact charcoal band while
+% Variant-scoped header override: restores a compact charcoal band while
 % keeping a real space between first and last name for PDF text extraction.
 \renewcommand{\header}[5]{%
   \begin{tikzpicture}[remember picture,overlay]
