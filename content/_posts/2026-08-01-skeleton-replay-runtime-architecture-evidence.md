@@ -3,25 +3,21 @@ title: "Skeleton: Runtime Evidence Beats Architecture Guesswork"
 title_html: "<span class='blog-title-accent blog-title-accent--signal'>Skeleton</span>: Runtime Evidence Beats Architecture Guesswork"
 author: Christos Hadjinikolis
 layout: post
-published: false
+published: true
 date: 2026-08-01
 canonical: false
-description: "Why vibe-coded Python projects need runtime evidence, how building a local AI assistant harness exposed the limits of code review alone, and how Skeleton turns one execution path into a human and LLM-readable architecture replay."
-seo_keywords: ["Skeleton", "skeleton-replay", "vibe coding", "runtime tracing", "architecture replay", "Python architecture", "developer tools", "LLM-readable workflow", "AI coding", "software design", "architecture evidence", "PyCharm plugin"]
+description: "What building Promet, a private local AI assistant harness, taught me about AI-assisted codebases, why the harness around the model is the product, and how Skeleton turns one execution path into runtime architecture evidence."
+seo_keywords: ["Skeleton", "skeleton-replay", "Promet", "AI assistant harness", "agent harness", "applied AI engineering", "vibe coding", "runtime tracing", "architecture replay", "Python architecture", "developer tools", "LLM-readable workflow", "AI coding", "software design", "architecture evidence", "PyCharm plugin"]
 nav_tags: ["Architecture", "Python", "LLMs", "Developer Tools"]
-tldr_why_read: "Read this if <span class=\"blog-highlight blog-highlight--agent\">AI</span> tools are helping you write code faster than you can understand, review, or explain the system that now exists."
-tldr_persona: "Especially useful for <span class=\"blog-highlight blog-highlight--python\">Python</span> engineers, staff engineers, and vibe-coding teams who need a better way to inspect runtime behaviour than staring at thousands of lines of source."
-tldr_learn: "Why <span class=\"blog-highlight blog-highlight--signal\">runtime evidence</span> matters for fast-growing codebases, how <span class=\"blog-highlight blog-highlight--python\">Python</span> can trace execution through standard runtime hooks, and how Skeleton turns one scenario into trace, snapshot, workflow, quality, and replay artifacts."
-tldr_takeaways: ["The answer to a fast-growing AI-coded codebase cannot always be \"go read the code\"", "Runtime replay gives humans a visual workflow and gives <span class=\"blog-highlight blog-highlight--agent\">LLMs</span> structured evidence", "Skeleton is a developer-understanding tool, not a profiler", "One scenario is not the whole system, but it is far better evidence than architecture guesswork"]
+tldr_why_read: "Read this if <span class=\"blog-highlight blog-highlight--agent\">AI</span> tools are helping you build faster than your mental model can keep up with the harness, prompts, tools, approvals, voice loops, and runtime behaviour around the model."
+tldr_persona: "Especially useful for <span class=\"blog-highlight blog-highlight--python\">Python</span> engineers, applied <span class=\"blog-highlight blog-highlight--agent\">AI</span> builders, and engineering leaders who need evidence for how an agentic system actually ran, not another confident repository summary."
+tldr_learn: "Why the hard part of applied <span class=\"blog-highlight blog-highlight--agent\">AI</span> often lives around the model, why <span class=\"blog-highlight blog-highlight--signal\">runtime evidence</span> matters for fast-growing codebases, and how Skeleton turns one scenario into trace, snapshot, workflow, quality, and replay artifacts."
+tldr_takeaways: ["The harness around the model is product work, not glue", "The answer to a fast-growing AI-coded codebase cannot always be \"go read the code\"", "Runtime replay gives humans a visual workflow and gives <span class=\"blog-highlight blog-highlight--agent\">LLMs</span> structured evidence", "Skeleton is a developer-understanding tool, not a profiler", "One scenario is not the whole system, but it is far better evidence than architecture guesswork"]
+og_image: assets/images/posts/2026/skeleton-replay-runtime-architecture-evidence/skeleton-runtime-architecture-preview.png
+og_image_alt: "Skeleton product illustration showing a developer replaying the runtime architecture of a Python application with service, API, worker, repository, and database actors."
 ---
 
-{% comment %}
-Draft TODO: keep unpublished until Promet screenshots, Skeleton replay screenshots, the PyCharm plugin video, and a post-specific social preview image are ready.
-{% endcomment %}
-
-The first real pain of AI-assisted coding is not getting code.
-
-It is keeping up with the code after it exists.
+The first real pain of AI-assisted coding is not getting code; it's keeping up with it.
 
 At the beginning, this sounds like a ridiculous complaint. The model writes the boilerplate. It fills in the tests. It suggests a refactor. It wires a command. It does the boring part quickly, and suddenly the project moves faster than it used to.
 
@@ -31,13 +27,18 @@ You are not asking, "Can I generate this?"
 
 You are asking, "Do I still understand what I generated?"
 
+<figure class="blog-figure blog-figure--wide">
+  <img src="{{ 'assets/images/posts/2026/skeleton-replay-runtime-architecture-evidence/skeleton-runtime-architecture-preview.png' | relative_url }}" alt="Skeleton product illustration showing a developer replaying the runtime architecture of a Python application with service, API, worker, repository, and database actors." loading="lazy" />
+  <figcaption class="blog-figure__caption">Skeleton came from a very practical need: I wanted to see the runtime shape of code that was growing faster than my ability to keep it all in my head.</figcaption>
+</figure>
+
 ## The Chore Nobody Sells With Vibe Coding
 
 Vibe coding is the trend everyone is fixated on right now.
 
-And I get it. Being able to generate code quickly is beautiful. It changes the feel of programming. The friction of trying an idea drops dramatically. You can ask for a feature, a refactor, a test, a CLI command, a UI panel, a background worker, and the code starts appearing.
+And I get it. Fast generation is useful. The friction of trying an idea drops dramatically: a feature, a refactor, a test, a CLI command, a UI panel, or a background worker can appear quickly enough that the whole project starts moving differently.
 
-But there is a very unglamorous problem sitting right behind the excitement.
+But there is a very unglamorous problem sitting right behind the excitement:
 
 <blockquote class="blog-pullquote">
   <p>The faster the code appears, the faster your mental model goes stale.</p>
@@ -45,39 +46,41 @@ But there is a very unglamorous problem sitting right behind the excitement.
 
 When a project is small, the default answer is simple: go and read the code.
 
-That answer stops being serious once the codebase grows. If the system is hundreds of thousands of lines, if the architecture boundaries were not designed correctly from the start, if loose functions and accidental modules have spread into the corners, if responsibility is scattered across places that do not obviously own it, then "just read the code" becomes a strangely optimistic suggestion.
+That answer stops being serious once the codebase grows. In a large system, especially one with unclear boundaries, loose functions, overloaded files, and scattered ownership, "just read the code" becomes a strangely optimistic suggestion.
 
-It is not that reading code is useless. Of course it is useful. But source code tells you what could happen. It does not automatically show you what did happen in the workflow you care about.
+It is not that reading code is useless--of course it's not. But source code tells you what could happen. It does not automatically show you what did happen in the workflow you care about.
 
 And this matters more when an LLM helped create the code.
 
-The model can create modules and classes. It can write tests. It can refactor. It can even explain what it thinks it built. But that does not mean the system's runtime behaviour is now obvious to you, or to the model.
+The model can create modules and classes. It can write tests. It can refactor. It can even explain what it thinks it built. But that does not mean the system's runtime behaviour is now obvious to you, or to the model. A class hierarchy can look tidy and still hide a surprising path. Encapsulation helps organize the code, but it does not tell you which objects were instantiated, which adapters were crossed, which dependencies appeared, or which branch actually ran in the scenario you care about.
 
 That was the problem I ran into.
 
 ## Why I Started Building A Harness
 
-For a while now I have been building a local AI assistant harness.
+For the last year I have been building a private local AI assistant workbench called Promet. The name is a nod to Prometheus: the idea is not just to call a local model, but to build the shell around it that makes local model interaction useful, controllable, and inspectable.
 
-I am building it because I want to understand the hard parts properly. Not from a diagram. Not from a launch thread. Not from a shallow demo. I want to understand what it takes to build the thing that sits between a user and an LLM.
+I am not ready to make the repository public. It is still too much of a working system, with too many rough edges and too many design decisions still being tested. But the work has already taught me something worth sharing publicly.
 
-That means tool calling, tool registries, context management, context compaction, memory, short-term context, long-term memory, RAG, prompt enrichment, profile handling, voice interaction, approvals, traces, UI state, and all the awkward little details in between.
+The hard part is not only calling a model.
+
+Building it myself has been useful precisely because the easy parts are not the educational parts. You can wire a model call quickly. What you cannot borrow as easily is the product judgement around context ownership, prompt construction, durable threads, tool registries, staged tool routing, MCP connectors, approval gates, evidence records, voice state, progress events, UI state, traces, and the awkward boundaries between all of them.
 
 Call it the control layer. Call it the harness. Call it the product boundary around the model.
 
-That boundary is where the interesting work happens.
+That boundary is where the applied AI work becomes real.
 
 <blockquote class="blog-pullquote">
   <p>I am building a <span class="blog-highlight blog-highlight--harness">harness</span> so that you do not have to learn the hard way how difficult a harness really is.</p>
 </blockquote>
 
-It has been revelational. I have learned a lot about what these models can do, where they are genuinely useful, and where they need much stronger boundaries than people like to admit.
+I am not training frontier models in Promet. That is a different discipline. But I do not think that makes the work shallow. A useful AI product still has to decide what the model may see, what it may do, how tool actions are validated, how results become evidence, how voice sessions behave, how the user can interrupt, how context is compacted, and how a future reviewer can understand what happened.
+
+That is not peripheral work. For many applied AI systems, that is the product.
+
+It has been revealing. I have learned a lot about what these models can do, where they are genuinely useful, and where they need much stronger boundaries than people like to admit.
 
 But something became obvious very quickly: I could not follow the code anymore.
-
-{% comment %}
-Media TODO: add a Promet demo clip showing the local assistant UI, a voice interaction, and the assistant responding.
-{% endcomment %}
 
 ## The Naive Assumption
 
@@ -228,6 +231,8 @@ and get an artifact set beside the scenario.
 
 No decorators. No application-code rewrite. No framework buy-in.
 
+The public project lives on [GitHub](https://github.com/ml-affairs/skeleton), the package is published as [`skeleton-replay`](https://pypi.org/project/skeleton-replay/), and the IDE loop is exposed through the [Skeleton Replay JetBrains plugin](https://plugins.jetbrains.com/plugin/32807-skeleton-replay).
+
 Skeleton records project-local public calls by default. It summarizes values rather than dumping object contents. It redacts likely secrets. It turns the observed run into a graph. And then it writes outputs that serve different audiences.
 
 ## What Skeleton Writes
@@ -246,10 +251,6 @@ That separation matters.
 
 I do not want the HTML report to be the only useful object. I also do not want an LLM scraping a visual graph and pretending it understood it. The graph is for humans. The JSON and Markdown are for machines and humans who want a compact explanation.
 
-{% comment %}
-Media TODO: add a Skeleton artifact-grid screenshot showing trace.jsonl, snapshot.json, workflow.md, architecture_quality.md, report.html, and session.json together.
-{% endcomment %}
-
 ## The Report Is A Workbench
 
 The HTML report is where the idea becomes visible.
@@ -262,10 +263,6 @@ Developers do not think only in files. We think in flow. We think in paths. We t
 
 The report gives that shape back to us.
 
-{% comment %}
-Media TODO: add a Skeleton replay demo clip stepping through a scenario from event 0 to the end, highlighting the selected runtime actor and call/return details.
-{% endcomment %}
-
 And then the PyCharm plugin closes the loop.
 
 The plugin is deliberately a frontend over Skeleton. It does not trace Python itself. It invokes the configured Skeleton runner, reads `session.json`, embeds `report.html`, shows the workflow and quality outputs, and can follow selected report events back into the IDE.
@@ -275,10 +272,6 @@ That is where the loop starts to feel practical.
 Run the scenario. Replay the graph. Click the event. Let the IDE take you back to the source context that produced it.
 
 The point is not to make another report that lives beside the code. The point is to make runtime evidence usable while you are still thinking about the code.
-
-{% comment %}
-Media TODO: add a PyCharm plugin walkthrough showing the Skeleton tool window, startup report discovery, embedded replay, Workflow tab, Quality tab, and Follow in IDE behaviour.
-{% endcomment %}
 
 ## Why This Helps The LLM Too
 
@@ -337,6 +330,30 @@ That is the bridge.
 
 And it is a bridge I now think we need more and more as AI-assisted codebases grow quickly.
 
+## The AI Work Around The Model
+
+This is also why I think the current AI engineering conversation can be misleading.
+
+It is natural to look for the model-layer keywords first: PyTorch, TensorFlow, fine-tuning, evaluation harnesses, embeddings, RAG, multimodal generation, reinforcement learning, and whatever else is current. Those skills matter. I am not arguing otherwise.
+
+But if you are building an applied AI product, the model is only one part of the system.
+
+The surrounding harness has to make the model useful under real constraints. It has to route intent. It has to decide which tools are visible. It has to keep credentials out of prompts. It has to ask for approval before side effects. It has to stream enough progress to feel alive without lying about completed work. It has to preserve evidence. It has to recover when the model emits malformed output. It has to keep the user's durable record distinct from model-generated summaries, retrieval results, and temporary trace artifacts.
+
+That is not glamorous in the same way as training a model.
+
+But it is the layer where trust is either earned or lost.
+
+<blockquote class="blog-pullquote">
+  <p>A capable model does not become a dependable product until the harness around it can explain, constrain, and replay what happened.</p>
+</blockquote>
+
+This is the lesson Promet keeps teaching me. The private project is the place where I am wrestling with local runtimes, voice interaction, memory boundaries, tool safety, and product feel. Skeleton is the public artifact that came out of one repeated frustration inside that work: I needed runtime evidence for code I could no longer understand quickly enough by reading it.
+
+Promet can stay private for now.
+
+The lesson does not have to.
+
 ## What Skeleton Is Not
 
 There is an honest limitation here.
@@ -383,12 +400,10 @@ It gives me a way to understand the local assistant harness I am building. It gi
 
 That is the point: if AI helps us create software faster, our understanding tools have to become more concrete, more inspectable, and more evidence-driven.
 
-{% comment %}
-Publication TODO:
-- Add one post-specific og_image PNG or JPEG.
-- Add og_image_alt.
-- Add screenshots or short clips for the Promet harness, Skeleton report, and PyCharm plugin workflow placeholders.
-- Decide whether to include a generated opening visual contrasting static diagrams with runtime replay.
-- Run the site audit before publishing.
-- Prepare LinkedIn copy only after the final URL and preview image are ready.
-{% endcomment %}
+If you are building a fast-growing <span class="blog-highlight blog-highlight--python">Python</span> system with AI assistance, pick one important scenario and run it.
+
+Generate the trace. Read the workflow. Replay the graph.
+
+Then ask the more useful question:
+
+> Does the system that actually ran match the system we thought we had?

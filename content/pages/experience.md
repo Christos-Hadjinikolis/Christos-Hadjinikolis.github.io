@@ -96,6 +96,15 @@ permalink: /experience.html
             </ul>
           </div>
         </div>
+        <figure class="experience-artifact">
+          <a class="experience-artifact-media" href="{{ '/assets/pdfs/ijcai-2013-opponent-modelling-poster.pdf' | relative_url }}">
+            <img src="{{ 'assets/images/pages/experience/ijcai-2013-opponent-modelling-poster.png' | relative_url }}" alt="IJCAI 2013 poster for opponent modelling research by Christos Hadjinikolis" loading="lazy" />
+          </a>
+          <figcaption>
+            <strong>IJCAI 2013 Best Poster Award</strong>
+            <span>Ph.D. poster on opponent modelling and persuasion dialogues. <a href="{{ '/assets/pdfs/ijcai-2013-opponent-modelling-poster.pdf' | relative_url }}">Open the full poster PDF</a>.</span>
+          </figcaption>
+        </figure>
       </article>
     </div>
 

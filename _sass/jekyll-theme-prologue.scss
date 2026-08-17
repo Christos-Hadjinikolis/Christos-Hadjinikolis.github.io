@@ -1444,6 +1444,48 @@
 		padding: 1.05rem 1.5rem 1.45rem 1.8rem;
 	}
 
+	.experience-artifact {
+		align-items: center;
+		border-top: 1px solid var(--page-accent-border);
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin: 1rem 0 0;
+		padding-top: 1rem;
+
+		figcaption {
+			color: var(--page-ink);
+			flex: 1 1 14rem;
+			font-size: 0.95rem;
+			line-height: 1.55;
+
+			strong {
+				color: var(--page-ink-strong);
+				display: block;
+				font-weight: 700;
+			}
+
+			span {
+				display: block;
+			}
+		}
+	}
+
+	.experience-artifact-media {
+		display: block;
+		flex: 0 0 5.5rem;
+
+		img {
+			aspect-ratio: 0.707 / 1;
+			border-radius: 8px;
+			box-shadow: 0 10px 24px rgba(27, 43, 52, 0.14);
+			display: block;
+			object-fit: cover;
+			object-position: center top;
+			width: 100%;
+		}
+	}
+
 	.experience-card-head {
 		display: flex;
 		align-items: flex-start;
