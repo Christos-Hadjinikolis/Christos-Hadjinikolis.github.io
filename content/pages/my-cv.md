@@ -3,12 +3,12 @@ title: My CV
 subtitle: Engineering Manager Snapshot
 intro_theme: cv
 intro_kicker: "Curated Overview"
-intro_summary: "A fast-read view of the same story as the PDF: engineering management, production ML, live streaming systems, delivery discipline, and practical AI standards."
+intro_summary: "A fast-read view of the same story as the PDF: applied ML systems leadership, research-to-production delivery, model evaluation, reliability, and practical AI standards."
 intro_card_title: "What To Remember"
 intro_points:
-  - "Organisations that build dependable ML systems"
-  - "Live streaming estate ownership"
-  - "Standards, reliability, and delivery health"
+  - "Applied ML teams that turn research-grade models into product systems"
+  - "Evaluation, replay, monitoring, and reliability around live ML"
+  - "Responsible AI as engineering practice, not slogan"
 layout: "page"
 icon: fa-id-card
 icon_image: assets/images/site/icons/cv.svg
@@ -19,16 +19,16 @@ permalink: /my-cv.html
   <section class="page-hero">
     <div class="page-panel page-panel--tinted">
       <div class="page-kicker">🧠 Positioning</div>
-      <h3>Engineering Manager for production ML and real-time data systems</h3>
+      <h3>ML Engineering Manager for applied ML systems and real-time data products</h3>
       <p class="page-summary">
-        I build engineering organisations, operating models, and platforms that keep ML systems dependable under real production pressure. At Vortexa, that means owning engineering strategy and delivery for a major live streaming backend estate, leading a 10-person cross-functional team around it, and keeping reliability, evaluation, explainability, and delivery health close to the work.
+        I lead cross-functional teams that translate research-grade models, noisy data, and ambiguous product requirements into reliable production systems. At Vortexa, that means managing 6 direct reports, leading a 10-person team, and keeping model quality, evaluation, reliability, and stakeholder alignment close to the engineering work.
       </p>
       <ul class="page-pills">
         <li class="page-pill">👥 Team leadership</li>
-        <li class="page-pill">⚙️ Live systems</li>
-        <li class="page-pill">🧠 ML operations</li>
+        <li class="page-pill">🧠 Applied ML systems</li>
+        <li class="page-pill">📐 Model eval/replay</li>
+        <li class="page-pill">⚙️ Model serving</li>
         <li class="page-pill">🛡️ Client-facing reliability</li>
-        <li class="page-pill">📈 Delivery health</li>
         <li class="page-pill">🏛️ AI standards</li>
       </ul>
       <div class="page-actions">
@@ -45,19 +45,19 @@ permalink: /my-cv.html
       <ul class="page-rule-list">
         <li>
           <strong>Build and manage technical teams</strong>
-          Hiring, mentoring, reviews, progression, onboarding, delivery governance, and cross-functional operating rhythm.
+          Direct management, hiring, mentoring, reviews, progression, onboarding, delivery accountability, and cross-functional operating rhythm.
         </li>
         <li>
-          <strong>Own live-system strategy</strong>
-          Client-facing streaming estate, platform evolution, replayability, monitoring, and failure handling.
+          <strong>Move ML work from research towards production</strong>
+          PyTorch sequence/transformer models, model-serving workflows, MLflow, model/data versioning, evaluation gates, replay, and monitoring.
         </li>
         <li>
           <strong>Turn ML ambiguity into operating discipline</strong>
-          Evaluation loops, model/data versioning, analyst feedback, product semantics, and prediction trust.
+          Batch/online evaluation loops, failure-mode analysis, domain-expert feedback, product semantics, and prediction trust.
         </li>
         <li>
-          <strong>Make delivery repeatable</strong>
-          Standardisation, docs close to code, tests-as-docs, ADRs, local E2E tests, DORA/Jira signals, and healthier feedback loops.
+          <strong>Make applied AI systems inspectable</strong>
+          Tool boundaries, schema validation, approval gates, durable state, traces, and runtime evidence for humans and LLM-assisted workflows.
         </li>
       </ul>
     </div>
@@ -67,29 +67,28 @@ permalink: /my-cv.html
     <div class="page-panel">
       <h3>📌 Evidence Behind The CV</h3>
       <ul class="page-list">
-        <li><strong>Organisation:</strong> drove Data Production Team growth from 4 to 30+ people by shaping hiring loops, system-design evaluations, mentoring, and delivery standards.</li>
-        <li><strong>Estate:</strong> own a major client-facing live streaming backend area filtering roughly 6M records/hour into production intelligence.</li>
-        <li><strong>People:</strong> lead a 10-person cross-functional team around the estate, with direct management of the MLE/DE/DS core and close Product/SME partnership.</li>
-        <li><strong>Reliability:</strong> protect production trust through monitoring, runbooks, fallback paths, Jira alert workflows, and MTTR kept under 30 minutes.</li>
-        <li><strong>Practice:</strong> scale delivery through Flink strategy, ADRs, local E2E/integration tests, docs close to code, DORA/Jira signals, and reduced single-owner bottlenecks.</li>
+        <li><strong>People:</strong> manage 6 direct reports across Product, SME analysis, Data Science, and Data Engineering; lead a 10-person cross-functional team accountable for model quality, stakeholder alignment, reliability, and delivery maturity.</li>
+        <li><strong>Estate:</strong> own engineering strategy and delivery for a live ML/data estate turning roughly 6M vessel-position records/hour into production intelligence for 13.5K monitored vessels.</li>
+        <li><strong>ML delivery:</strong> led 0-to-1 research-to-production delivery for destination and arrival-time sequence/transformer models in PyTorch.</li>
+        <li><strong>Evaluation:</strong> established batch/online model-evaluation and replay loops, analysed failure modes with domain experts and Product, and converted findings into model, data, and interface improvements.</li>
+        <li><strong>Reliability:</strong> protect production trust through Kafka Streams-to-Flink migration, monitoring, fallback/rollback paths, shared on-call, and MTTR kept under 30 minutes.</li>
       </ul>
     </div>
 
     <div class="page-panel">
-      <h3>📐 Core Principles</h3>
+      <h3>🧪 Applied AI & Tooling</h3>
       <ul class="page-list">
-        <li><strong>Production is the only truth.</strong></li>
-        <li><strong>If it cannot be measured, it is not done.</strong></li>
-        <li><strong>Deterministic systems beat clever hacks.</strong></li>
-        <li><strong>Models must degrade gracefully.</strong></li>
-        <li><strong>System quality should come through clear ownership, evidence, and repeatable practice.</strong></li>
+        <li><strong><a href="{{ '/2026/08/01/skeleton-replay-runtime-architecture-evidence.html' | relative_url }}">Promet</a>:</strong> private applied GenAI project shaping hands-on work around voice, memory, tool use, streaming interaction, local runtimes, Hugging Face-backed speech assets, schema validation, approval gates, durable state, traces, and replay/evaluation.</li>
+        <li><strong><a href="https://pypi.org/project/skeleton-replay/">skeleton-replay</a>:</strong> public Python tooling that turns script/pytest runs into traces, architecture snapshots, workflow evidence, and replayable reports for review, debugging, onboarding, and LLM-assisted code understanding.</li>
+        <li><strong><a href="https://plugins.jetbrains.com/plugin/32807-skeleton-replay">Skeleton Replay plugin</a>:</strong> PyCharm/IntelliJ workflow that brings runtime evidence and source navigation into the IDE.</li>
+        <li><strong><a href="https://pypi.org/project/dynamicio/">dynamicio</a>:</strong> published PyPI library for making I/O seams and local/dev/prod dataset switching explicit in ML/data workflows.</li>
       </ul>
     </div>
 
     <div class="page-panel">
       <h3>📚 Career Snapshot</h3>
       <ul class="page-timeline">
-        <li><strong>12/2020–present · Vortexa, London</strong><br>Engineering Manager / ML Systems Lead owning engineering strategy and delivery for Vortexa's live streaming intelligence estate, driving Data Production Team growth from 4 to 30+, and leading a 10-person cross-functional team around the estate.</li>
+        <li><strong>12/2020–present · Vortexa, London</strong><br>Engineering Manager / ML Systems Lead owning engineering strategy and delivery for a live ML/data estate, managing 6 direct reports, and leading a 10-person cross-functional team around model quality, reliability, stakeholder alignment, and delivery maturity.</li>
         <li><strong>04/2016–12/2020 · Data Reply, London</strong><br>Senior Consultant and first London spin-off consultant; grew from data scientist into ML engineer while supporting team growth, client delivery, mentoring, and project leadership across Vodafone, CNHi, and UBS.</li>
         <li><strong>2010–2016 · KCL, UCL, GSM, David Game College</strong><br>Teaching and academic roles across computing, AI, software, and data subjects.</li>
       </ul>
@@ -99,7 +98,17 @@ permalink: /my-cv.html
       <h3>🏛️ Standards & Research</h3>
       <ul class="page-list">
         <li><strong>Since 10/2024 · UCL</strong><br>Associate Researcher helping students connect AI standards, the AI Act, auditability, explainability, and practical AI adoption.</li>
-        <li><strong>Since 01/2021 · ISO/CEN-CENELEC JTC 21 WG3</strong><br>Committee Expert Member advocating practical AI standards for auditability, model/data versioning, explainability, and safer adoption.</li>
+        <li><strong>Since 01/2021 · ISO/CEN-CENELEC JTC 21 WG3</strong><br>Committee Expert Member contributing to AI standards aligned with EU policy and international norms, with emphasis on auditability, model/data versioning, explainability, and safer adoption.</li>
+      </ul>
+    </div>
+
+    <div class="page-panel">
+      <h3>📐 Core Principles</h3>
+      <ul class="page-list">
+        <li><strong>Production is the only truth.</strong></li>
+        <li><strong>Models need evaluation, replay, monitoring, and graceful failure paths.</strong></li>
+        <li><strong>Responsible AI is partly an engineering discipline: evidence, auditability, ownership, and human accountability.</strong></li>
+        <li><strong>System quality should come through clear ownership, measurable interfaces, and repeatable practice.</strong></li>
       </ul>
     </div>
 
