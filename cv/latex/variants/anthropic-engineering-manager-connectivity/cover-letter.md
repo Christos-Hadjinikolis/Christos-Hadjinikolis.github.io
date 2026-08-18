@@ -1,0 +1,38 @@
+# Cover Letter - Engineering Manager, Connectivity, Anthropic
+
+## Evidence Anchors
+
+- Current Engineering Manager / ML Systems Lead managing 6 direct reports and leading a 10-person cross-functional team across Product, SME analysis, Data Science, and Data Engineering.
+- Production ownership of a live post-ingestion ML/data estate processing around 6M vessel-position records/hour into intelligence for 13.5K monitored vessels.
+- Distributed-systems and reliability evidence: Kafka/Flink streaming estate, rollback/fallback paths, shared on-call, incident response, observability/runbooks, and MTTR under 30 minutes.
+- AI product-infrastructure evidence: model/API serving, PyTorch sequence/transformer model delivery, MLflow, model/data versioning, evaluation gates, replay, and monitoring.
+- Enterprise trust and governance evidence: data lineage, schema management, Avro/interface contracts, SLAs, domain-owner proposals, AI standards work, auditability, and explainability.
+- GenAI/tool-connectivity evidence without overclaiming: Promet as a private applied GenAI project covering MCP-style connector patterns, tool routing, schema validation, approval gates, durable state/memory, traces, streaming UX, and deterministic replay/eval.
+- Ecosystem evidence: ISO/CEN-CENELEC JTC'21, UCL AI standardisation work, public MCP/trust writing, dynamicio, skeleton-replay, and the Skeleton Replay JetBrains plugin.
+
+## Final Cover Letter
+
+Christos Hadjinikolis
+christos.hadjinikolis@gmail.com
+https://christos-hadjinikolis.github.io/
+https://uk.linkedin.com/in/christoshadjinikolis
+
+18 August 2026
+
+Dear Anthropic hiring team,
+
+I am applying for the Engineering Manager, Connectivity role because it sits at one of the hardest practical boundaries in current AI products: how a model is allowed to use external systems safely. The value is not only how many systems Claude can connect to; it is whether that access is permissioned, observable, recoverable, and trusted by users, enterprises, and the engineers responsible for operating it.
+
+Anthropic's mission around reliable, interpretable, and steerable AI maps closely to how I think about engineering work. Responsible AI is not only a policy position. It has to show up in interfaces, runtime checks, audit trails, evaluation loops, incident response, and clear human accountability. That is also why I contribute as a committee expert in ISO/CEN-CENELEC JTC'21, delegated by the Cyprus Organisation for Standardisation, and why my UCL work focuses on practical AI standardisation, the AI Act, auditability, versioning, explainability, and safe adoption.
+
+At Vortexa, I manage six direct reports and lead a ten-person cross-functional team across Product, domain analysis, Data Science, and Data Engineering. I own engineering strategy and delivery for a live post-ingestion ML/data estate processing around 6 million vessel-position records per hour into production intelligence for 13.5K monitored vessels. The work is model-backed, but the management problem is broader: defining reliable interfaces, aligning stakeholders on quality, creating evaluation and replay loops, operating the system under incident pressure, and making delivery accountable.
+
+That has meant leading distributed systems and reliability work as much as model work: Kafka/Flink streaming infrastructure, model/API serving, rollback and fallback paths, shared on-call, observability, runbooks, and MTTR under 30 minutes. It has also meant turning ambiguous model-quality disputes into measurable workstreams with Product and domain experts, and pushing data lineage, schema management, interface contracts, SLAs, and reusable engineering patterns so dependencies become explicit instead of tribal.
+
+Promet has made the Anthropic Connectivity problem feel especially concrete to me. It is not a production GenAI product. It is a long-running private applied GenAI project where I have built around local runtimes, MCP-style connector patterns, tool routing, schema validation, approval gates, durable state and memory, traces, streaming UX, and deterministic replay/evaluation for auditable LLM interactions. It has forced me to think beyond demos: what has to exist around a model before tool use becomes understandable, inspectable, and safe enough to trust?
+
+I would bring adjacent experience in distributed systems, operational rigor, tool-use safety boundaries, standards, open-source tooling, and enterprise trust, and would expect to ramp quickly on Anthropic's MCP proxy, OAuth, token-management, and product-specific constraints. That feels like a serious and useful place to contribute.
+
+Sincerely,
+
+Christos Hadjinikolis
