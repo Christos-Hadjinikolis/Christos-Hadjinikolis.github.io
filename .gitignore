@@ -130,6 +130,9 @@ _site/
 .env.*
 !.env.example
 
+# Microsoft Office temporary lock files.
+~$*
+
 # Private CV positioning/source evidence. Keep public CV/site copy sanitized.
 cv/latex/context/*.docx
 cv/latex/context/evidence/

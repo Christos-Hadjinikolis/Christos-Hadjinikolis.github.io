@@ -149,7 +149,7 @@ to be able to style images through the packages through an intuitive api that wo
 input and a choice between famous images that will be available through the package (provided as a text parameter) to produce the desired output (along with some other flags and side parameters). 
 Something like:
 
-<pre>
+```python
 import pytorch_style_transfer as pst
 
 pst.generate(
@@ -157,7 +157,7 @@ pst.generate(
     style="starry_night", 
     resolution=128, 
     output_dir="path/to/output")
-</pre>   
+```
 
 ## Enjoy some of the outputs:
 Here are some of the results of this work. I tried blending the fortress of Koules with 4 different grafittis I was able to photograph.

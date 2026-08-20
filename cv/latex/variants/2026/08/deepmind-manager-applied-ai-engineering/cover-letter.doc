@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cover Letter - Google DeepMind Manager Applied AI Engineering</title>
+  <style>
+    @page { size: A4; margin: 16mm 18mm; }
+    html, body { margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; font-size: 10.5pt; line-height: 1.34; color: #111; }
+    p { margin: 0 0 9px 0; text-align: justify; text-justify: inter-word; hyphens: auto; }
+    .contact { margin-bottom: 14px; }
+    .contact p, .date, .salutation, .signoff { text-align: left; }
+    .date { margin-bottom: 14px; }
+  </style>
+</head>
+<body>
+  <div class="contact">
+    <p>Christos Hadjinikolis<br>
+    christos.hadjinikolis@gmail.com<br>
+    https://christos-hadjinikolis.github.io/<br>
+    https://uk.linkedin.com/in/christoshadjinikolis</p>
+  </div>
+
+  <p class="date">18 August 2026</p>
+
+  <p class="salutation">Dear Google DeepMind hiring team,</p>
+
+  <p>I am applying for the Manager, Applied AI Engineering role because it sits close to the work I have been doing for years: leading teams that take difficult ML ideas, ambiguous product requirements, and messy real-world data, and turn them into systems that can be evaluated, operated, trusted, and improved.</p>
+
+  <p>Google DeepMind stands out to me not only because of model capability, but because of the seriousness of the work around it. I have followed Demis Hassabis's public comments on AI because they treat scientific ambition and responsibility as inseparable. That matters to me. I care about responsible AI as an engineering problem: reliability, observability, explainability, auditability, and clear human accountability. It is also why I joined JTC'21 as a committee expert delegated by the Cyprus Organisation for Standardisation, contributing to AI standardisation aligned with the EU AI Act and trustworthy AI adoption.</p>
+
+  <p>At Vortexa, I manage six direct reports and lead a ten-person cross-functional team across Product, domain analysis, Data Science, and Data Engineering. I own engineering strategy and delivery for a live ML/data estate processing around 6 million vessel-position records per hour into production intelligence for 13.5K monitored vessels. Recent work includes moving destination and arrival-time sequence/transformer models in PyTorch from early research towards production; establishing MLflow, model/data versioning, evaluation gates, replay, monitoring, and model-serving workflows; and using failure analysis with Product and domain experts to turn model-quality disputes into measurable improvements.</p>
+
+  <p>I have also had to build the engineering discipline around those models: Kafka Streams-to-Flink migration, fallback and rollback paths, shared on-call, and MTTR under 30 minutes. Earlier at Data Reply, I learned to operate in less structured environments: shaping client opportunities, agreeing deliverables, managing expectations, and delivering ML/data roadmaps across UBS, Vodafone, and CNHi while helping a small London team grow.</p>
+
+  <p>Promet has also shaped my recent thinking about applied GenAI. It is not a production GenAI product. It is a long-running private applied GenAI project that I have built to understand voice, memory, tool use, streaming interaction, local runtimes, schema validation, approval gates, durable state, traces, and replay/evaluation for auditable LLM workflows. It has forced me to think beyond demos: what must exist around a model before an assistant-like system becomes understandable, inspectable, and safe enough to trust?</p>
+
+  <p>I would bring Google DeepMind a manager who stays close to the technical substance, develops people, and is comfortable working across research, engineering, Product, and domain expertise. I would also come ready to learn. I can contribute immediately on applied ML systems, evaluation, reliability, and team leadership, while growing quickly around the frontier work this team is doing.</p>
+
+  <p class="signoff">Sincerely,</p>
+
+  <p class="signoff">Christos Hadjinikolis</p>
+</body>
+</html>

@@ -6,6 +6,7 @@ layout: post
 published: true
 date: 2026-08-01
 canonical: false
+robots: noindex, nofollow, noarchive
 description: "What building Promet, a private local AI assistant harness, taught me about AI-assisted codebases, why the harness around the model is the product, and how Skeleton turns one execution path into runtime architecture evidence."
 seo_keywords: ["Skeleton", "skeleton-replay", "Promet", "AI assistant harness", "agent harness", "applied AI engineering", "vibe coding", "runtime tracing", "architecture replay", "Python architecture", "developer tools", "LLM-readable workflow", "AI coding", "software design", "architecture evidence", "PyCharm plugin"]
 nav_tags: ["Architecture", "Python", "LLMs", "Developer Tools"]
@@ -13,9 +14,14 @@ tldr_why_read: "Read this if <span class=\"blog-highlight blog-highlight--agent\
 tldr_persona: "Especially useful for <span class=\"blog-highlight blog-highlight--python\">Python</span> engineers, applied <span class=\"blog-highlight blog-highlight--agent\">AI</span> builders, and engineering leaders who need evidence for how an agentic system actually ran, not another confident repository summary."
 tldr_learn: "Why the hard part of applied <span class=\"blog-highlight blog-highlight--agent\">AI</span> often lives around the model, why <span class=\"blog-highlight blog-highlight--signal\">runtime evidence</span> matters for fast-growing codebases, and how Skeleton turns one scenario into trace, snapshot, workflow, quality, and replay artifacts."
 tldr_takeaways: ["The harness around the model is product work, not glue", "The answer to a fast-growing AI-coded codebase cannot always be \"go read the code\"", "Runtime replay gives humans a visual workflow and gives <span class=\"blog-highlight blog-highlight--agent\">LLMs</span> structured evidence", "Skeleton is a developer-understanding tool, not a profiler", "One scenario is not the whole system, but it is far better evidence than architecture guesswork"]
-og_image: assets/images/posts/2026/skeleton-replay-runtime-architecture-evidence/skeleton-runtime-architecture-preview.png
-og_image_alt: "Skeleton product illustration showing a developer replaying the runtime architecture of a Python application with service, API, worker, repository, and database actors."
+og_image: assets/images/posts/2026/skeleton-replay-runtime-architecture-evidence/minions/social-preview-option.png
+og_image_alt: "Ninja engineer and skeleton helper reviewing a glowing runtime execution path that becomes structured evidence for a local LLM."
 ---
+
+<div class="blog-construction-note">
+  <span class="blog-insight__label">Under Construction</span>
+  <p>This article is still being expanded. Two walkthrough videos are planned; the article artwork and embedded Skeleton report below are already live for review.</p>
+</div>
 
 The first real pain of AI-assisted coding is not getting code; it's keeping up with it.
 
@@ -28,8 +34,8 @@ You are not asking, "Can I generate this?"
 You are asking, "Do I still understand what I generated?"
 
 <figure class="blog-figure blog-figure--wide">
-  <img src="{{ 'assets/images/posts/2026/skeleton-replay-runtime-architecture-evidence/skeleton-runtime-architecture-preview.png' | relative_url }}" alt="Skeleton product illustration showing a developer replaying the runtime architecture of a Python application with service, API, worker, repository, and database actors." loading="lazy" />
-  <figcaption class="blog-figure__caption">Skeleton came from a very practical need: I wanted to see the runtime shape of code that was growing faster than my ability to keep it all in my head.</figcaption>
+  <img src="{{ 'assets/images/posts/2026/skeleton-replay-runtime-architecture-evidence/minions/social-preview-option.png' | relative_url }}" alt="Ninja engineer and skeleton helper reviewing a glowing runtime execution path that becomes structured evidence for a local LLM." loading="lazy" />
+  <figcaption class="blog-figure__caption">Skeleton came from a practical need: seeing the runtime path clearly enough that a human can inspect it and an LLM can reason from evidence.</figcaption>
 </figure>
 
 ## The Chore Nobody Sells With Vibe Coding
@@ -43,6 +49,11 @@ But there is a very unglamorous problem sitting right behind the excitement:
 <blockquote class="blog-pullquote">
   <p>The faster the code appears, the faster your mental model goes stale.</p>
 </blockquote>
+
+<figure class="blog-figure blog-figure--wide">
+  <img src="{{ 'assets/images/posts/2026/skeleton-replay-runtime-architecture-evidence/minions/vibe-coder-mental-model-goes-stale.png' | relative_url }}" alt="Ninja engineer at a laptop facing a fast-growing web of Python modules, code panels, tests, and architecture boxes." loading="lazy" />
+  <figcaption class="blog-figure__caption">Fast generation is useful, but it creates a second task: keeping the runtime shape of the system understandable.</figcaption>
+</figure>
 
 When a project is small, the default answer is simple: go and read the code.
 
@@ -69,6 +80,17 @@ Building it myself has been useful precisely because the easy parts are not the 
 Call it the control layer. Call it the harness. Call it the product boundary around the model.
 
 That boundary is where the applied AI work becomes real.
+
+<figure class="blog-figure blog-figure--wide">
+  <img src="{{ 'assets/images/posts/2026/skeleton-replay-runtime-architecture-evidence/minions/promet-harness-workbench.png' | relative_url }}" alt="Ninja engineer inspecting a local AI workbench with model runtime, memory, tool approval, evidence, and voice panels while a skeleton helper holds a runtime evidence scroll." loading="lazy" />
+  <figcaption class="blog-figure__caption">Promet is where the harness work became tangible: model calls, memory, approvals, evidence, voice state, and UI behaviour all needing explicit ownership.</figcaption>
+</figure>
+
+<div class="blog-media-placeholder" id="promet-video-slot">
+  <span class="blog-insight__label">Video Coming Soon</span>
+  <h3>Promet walkthrough: the local AI harness that made the problem visible</h3>
+  <p>This slot is for a short walkthrough of Promet: the local model runtime, thread and memory state, tool routing, approvals, evidence records, streaming and voice boundaries, and why the harness around the model became the product surface.</p>
+</div>
 
 <blockquote class="blog-pullquote">
   <p>I am building a <span class="blog-highlight blog-highlight--harness">harness</span> so that you do not have to learn the hard way how difficult a harness really is.</p>
@@ -231,6 +253,12 @@ and get an artifact set beside the scenario.
 
 No decorators. No application-code rewrite. No framework buy-in.
 
+<div class="blog-media-placeholder" id="skeleton-video-slot">
+  <span class="blog-insight__label">Video Coming Soon</span>
+  <h3>Skeleton walkthrough: trace a run, replay the workflow, export evidence</h3>
+  <p>This slot is for a hands-on Skeleton Replay walkthrough: running a scenario, opening the generated artifacts, moving the trace-window sliders in the report, following runtime events back to source, and exporting the selected window as JSON for a local LLM CLI.</p>
+</div>
+
 The public project lives on [GitHub](https://github.com/ml-affairs/skeleton), the package is published as [`skeleton-replay`](https://pypi.org/project/skeleton-replay/), and the IDE loop is exposed through the [Skeleton Replay JetBrains plugin](https://plugins.jetbrains.com/plugin/32807-skeleton-replay).
 
 Skeleton records project-local public calls by default. It summarizes values rather than dumping object contents. It redacts likely secrets. It turns the observed run into a graph. And then it writes outputs that serve different audiences.
@@ -250,6 +278,65 @@ The artifacts are the product.
 That separation matters.
 
 I do not want the HTML report to be the only useful object. I also do not want an LLM scraping a visual graph and pretending it understood it. The graph is for humans. The JSON and Markdown are for machines and humans who want a compact explanation.
+
+## A Small Mock App To Replay
+
+The example below uses one of Skeleton's test fixtures. It is deliberately small, because the point is not to impress anyone with scale. The point is to make the runtime boundary visible enough that you can reason about it.
+
+The mock application looks like this:
+
+```text
+tests/fixtures/sample_io_boundaries/
+|-- app.py
+|-- order_domain.py
+|-- order_service.py
+|-- order_repository.py
+|-- notification_adapter.py
+`-- .skeleton/
+    |-- trace.jsonl
+    |-- snapshot.json
+    |-- workflow.md
+    |-- architecture_quality.md
+    |-- quality.json
+    |-- session.json
+    `-- report.html
+```
+
+The app registers an order. `app.py` composes the objects, `OrderService` owns the use case, `OrderRepository` and `OrderNotifier` are ports, `SqliteOrderRepository` owns SQLite persistence, `ConsoleNotifier` owns stdout, and `Order` is the domain object.
+
+From a static read, the design looks straightforward. There is a service, a repository, a notifier, and a domain object. That is useful, but it is still only the source-code view.
+
+The traced run shows the observed path:
+
+```text
+app.main
+  -> app.bootstrap
+  -> OrderService.register_order
+     -> SqliteOrderRepository.save
+        -> filesystem
+        -> database
+     -> SqliteOrderRepository.load
+        -> database
+     -> ConsoleNotifier.announce
+        -> Order.display_label
+        -> stdout
+```
+
+That one run produced 33 events, 29 runtime nodes, and 12 runtime edges. The quality pass also found 19 resource-boundary events across file, database, and stdout access. It flagged `order_repository` as a medium-severity runtime hotspot because that module concentrated the persistence work and resource-boundary activity.
+
+That does not automatically mean the repository is wrong. In this fixture, the repository is supposed to own persistence. The value is that the report gives the reviewer and the LLM a precise place to discuss boundary pressure: if the next vibe-coded change adds receipts, email, retry queues, or external calls, you can check whether the new behaviour stays behind the right adapter or starts leaking into the service and domain layers.
+
+<figure class="blog-figure blog-figure--wide">
+  <img src="{{ 'assets/images/posts/2026/skeleton-replay-runtime-architecture-evidence/minions/stepping-through-a-runtime-report.png' | relative_url }}" alt="Several ninja engineers and a skeleton helper inspecting a runtime report with a trace window, graph view, event details, and JSON export panel." loading="lazy" />
+  <figcaption class="blog-figure__caption">The report is the human workbench: narrow the trace window, follow the call path, and export the evidence that matters.</figcaption>
+</figure>
+
+<div class="blog-report-embed">
+  <iframe class="blog-report-embed__frame" src="{{ 'assets/reports/posts/2026/skeleton-replay-runtime-architecture-evidence/sample-io-boundaries-report.html' | relative_url }}" title="Interactive Skeleton report for the sample I/O boundary application" loading="lazy" sandbox="allow-scripts allow-downloads"></iframe>
+  <p class="blog-report-embed__caption">Interactive Skeleton report for the sample I/O-boundary fixture. Use the replay controls and trace-window handles to inspect the run, narrow the execution slice, and export the selected events as JSON.</p>
+</div>
+
+This is close to how I want to use Skeleton while working with an LLM CLI. I do not want to ask the model to "look around the repo" and hope it builds the same mental graph I have. I want to run the scenario, inspect the workflow, choose the part that looks suspicious, and hand the model the exact evidence for that window.
 
 ## The Report Is A Workbench
 
@@ -292,6 +379,44 @@ But inference is not runtime evidence.
 This is where Skeleton becomes more than a visualization.
 
 A human can use the graph. The LLM can use `workflow.md`, `snapshot.json`, and selected trace-window exports. If I isolate a section of the workflow, I can hand the model a structured JSON packet that says: here are the events, here are the actors, here are the safe arguments, here are the returns, here is the call path.
+
+That is why the report has trace-window sliders. A human can drag the handles around the part of the run that looks interesting: the service calling into persistence, the adapter crossing stdout, the moment a branch appears, or the span where an object is instantiated too early. The graph makes that slice perceptible.
+
+The export button turns the same slice into JSON. The graph is for human perception; the JSON is for LLM perception.
+
+<figure class="blog-figure blog-figure--wide">
+  <img src="{{ 'assets/images/posts/2026/skeleton-replay-runtime-architecture-evidence/minions/skeleton-bridges-human-graphs-and-llm-json.png' | relative_url }}" alt="Skeleton helper carrying glowing trace-event blocks across a bridge from a human-visible runtime graph to a local LLM terminal." loading="lazy" />
+  <figcaption class="blog-figure__caption">This is the bridge Skeleton is trying to build: visual evidence for people, structured evidence for the local model.</figcaption>
+</figure>
+
+An export is shaped for a local LLM CLI rather than for a screenshot:
+
+```json
+{
+  "kind": "skeleton_trace_window",
+  "selected_window": {
+    "start_event_index": 5,
+    "end_event_index": 30,
+    "event_count": 26
+  },
+  "llm_note": "This export contains the exact Skeleton execution-window events selected in the replay UI.",
+  "events": [
+    {
+      "order": 5,
+      "event_type": "call",
+      "caller": {"qualified_name": "app.main"},
+      "callee": {"qualified_name": "order_service.OrderService.register_order"}
+    }
+  ]
+}
+```
+
+That example is abbreviated, but the intent is the important part. The model receives stable runtime evidence instead of a visual impression. A useful prompt becomes:
+
+```text
+Use this Skeleton trace-window JSON as runtime evidence. Do not infer from filenames alone.
+Explain which actor owns the persistence boundary in this selected run, and suggest the smallest refactor if a new notification feature would leak I/O into the service layer.
+```
 
 That is a much better conversation.
 

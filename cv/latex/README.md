@@ -12,7 +12,7 @@ Current layout:
 - `cv/latex/friggeri-cv.cls`: custom class
 - `cv/latex/bibliography.bib`: bibliography source
 - `cv/latex/images/`: local image assets
-- `cv/latex/variants/`: role-specific tailored CV variants
+- `cv/latex/variants/`: role-specific tailored CV variants, grouped by year/month
 - `cv/latex/versions/`: archived PDF versions
 - `cv/latex/build/`: optional dedicated build output directory if you choose to use one
 
@@ -35,7 +35,7 @@ When tailoring the CV to a specific role, keep `cv/latex/cv.tex` as the canonica
 
 Recommended convention:
 
-- create a variant under `cv/latex/variants/<role-slug>/`
+- create a variant under `cv/latex/variants/<YYYY>/<MM>/<role-slug>/`
 - keep the tailored entrypoint as `cv.tex` inside that folder
 - store the role link and description in `_role-context/job-post.md`
 - store the fit analysis and tailoring rationale in `_role-context/fit-assessment.md`
@@ -43,6 +43,12 @@ Recommended convention:
 - only copy the resulting PDF to `assets/pdfs/cv.pdf` if you want the website CV replaced
 
 This keeps job-specific tailoring separate from the master source and avoids accidental overwrites.
+
+For dated variants, the expected relative LaTeX paths from
+`cv/latex/variants/<YYYY>/<MM>/<role-slug>/cv.tex` are:
+
+- `\documentclass[]{../../../../friggeri-cv}`
+- `\graphicspath{ {../../../../images/} }`
 
 ## Prerequisites
 

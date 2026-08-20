@@ -191,7 +191,7 @@ Before providing the script, let’s discuss the sample project structure, which
 ### Sample Project Structure
 Your project structure might look like this:
 
-```shell
+```text
 project/
 │
 ├── resources/

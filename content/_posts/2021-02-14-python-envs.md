@@ -145,7 +145,7 @@ collaborating developers.
 Let's go through an example. 
 
 Suppose you have a `github` root directory where you clone and maintain all your projects and it looks like this:
-```shell
+```text
 GitHub
 ├── project_a
 └── project_b
@@ -165,7 +165,7 @@ In order to enable the above automations, we will need two pre-requisites. The f
 2 files in each project (you can version control these files). The first is `.python-version` and the
 second is `.python-virtualenv`, as per the below tree:
 
-```shell
+```text
 GitHub
 ├── project_a
 │   ├── .python-version
@@ -180,23 +180,23 @@ In each of these files you just add a line at the very top of the file with:
 * the name of the virtual environment you want to create. 
 
 For example, the contents of 
-```shell
+```text
 GitHub
 ├── project_a
 │   ├── .python-version 
 ```
 can be:
-```shell
+```text
 3.9.0
 ```
 and:
-```shell
+```text
 GitHub
 ├── project_a
 │   └── .python-virtualenv
 ```
 can be:
-```shell
+```text
 project-a-venv
 ```
 similarly, for project b you can have `3.8.2` and `project-b-venv`. 
@@ -206,7 +206,7 @@ Now, on to your `.zshrc`. Do:
 $ vi ~/.zshrc
 ```
 and add the following script:
-```shell
+```bash
 # Define your $PATH
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -313,7 +313,7 @@ Finally, suppose you want to use a python environment with a jupyter notebook. T
 straightforward as one would think. Here is how you would do it.
 
 Let's continue from where we left things in the previous section. You are in:
-```shell
+```text
 GitHub
 ├── project_a
 ```
@@ -321,13 +321,13 @@ and you have `project-a-venv` activated:
 ```shell
 (project-a-venv) --------------------------------------------------------------------------------
 ~/Github/project_a $
-``````
-First thing you need to do is install `ipykernel` using `pip`:
 ```
+First thing you need to do is install `ipykernel` using `pip`:
+```shell
 $ pip install ipykernel
 ```
 Next, you need to install a new kernel:
-```
+```shell
 ipython kernel install --user --name=project-a-venv
 ```
 Finally, assuming you have `jupyter` or `jupyterlab` installed, you can start `jupyter`, create a new notebook and select the kernel that lives inside 
