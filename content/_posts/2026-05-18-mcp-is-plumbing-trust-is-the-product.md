@@ -4,8 +4,8 @@ title_html: "<span class='blog-title-accent blog-title-accent--signal'>MCP</span
 author: Christos Hadjinikolis
 layout: post
 date: 2026-05-18
-description: "A practical mental model for the Model Context Protocol, how APIs become model-readable tools, and why local AI systems still need routing, approval, evidence, and trust boundaries."
-seo_keywords: ["Model Context Protocol", "MCP", "AI agents", "tool calling", "MCP server", "MCP Manager", "Docker MCP Toolkit", "REST API", "API wrapper", "local-first AI", "tool safety", "agentic AI"]
+description: "A practical mental model for the Model Context Protocol: why API glue belongs behind reusable MCP server boundaries, how tools execute outside the model, and why local AI systems still need routing, approval, evidence, and trust discipline."
+seo_keywords: ["Model Context Protocol", "MCP", "AI agents", "tool calling", "MCP server", "MCP Manager", "Docker MCP Toolkit", "REST API", "OpenAPI", "API wrapper", "execution layer", "local-first AI", "tool safety", "agentic AI"]
 nav_tags: ["MCP", "Agents", "Trust"]
 og_image: "assets/images/posts/2026/mcp-is-plumbing/ninja avatar-minion-at-a-cluttered-local-AI-workbench.png"
 og_image_alt: "Hand-drawn ninja avatar-minion wiring Gmail, Calendar, and Wikipedia into a local AI assistant through labelled MCP cables."
@@ -13,9 +13,14 @@ linkedin_post_url: "https://www.linkedin.com/feed/update/urn:li:activity:7462244
 linkedin_embed_url: "https://www.linkedin.com/embed/feed/update/urn:li:activity:7462244482751578113?collapsed=1"
 tldr_why_read: "Read this if <span class=\"blog-highlight blog-highlight--agent\">MCP</span> sounds useful but the words around it still feel slightly slippery: API, tool, function, <span class=\"blog-highlight blog-highlight--mcp-server\">MCP server</span>, <span class=\"blog-highlight blog-highlight--mcp-client\">MCP client</span>, host, manager, gateway, catalog."
 tldr_persona: "Especially useful for engineers building local or private <span class=\"blog-highlight blog-highlight--agent\">AI</span> assistants who need external tools without turning every integration into custom <span class=\"blog-highlight blog-highlight--connector\">connectors</span> or a trust problem."
-tldr_learn: "Why <span class=\"blog-highlight blog-highlight--agent\">MCP</span> arrived when <span class=\"blog-highlight blog-highlight--agent\">agents</span> needed real tools, how an API call becomes a model-readable tool, what MCP standardizes, and why serious agents still need staged intent narrowing."
-tldr_takeaways: ["An MCP tool is often an ordinary API call wrapped in a model-readable contract", "MCP is valuable exactly where it is boring: it standardizes <span class=\"blog-highlight blog-highlight--connector\">connector</span> plumbing", "Available is not the same as routed, and routed is not the same as approved", "The useful architecture separates intent identification, tool exposure, tool execution, and safety/orchestration"]
+tldr_learn: "Why <span class=\"blog-highlight blog-highlight--agent\">MCP</span> arrived when <span class=\"blog-highlight blog-highlight--agent\">agents</span> needed real tools, how an API call becomes a reusable server-side execution layer, why the model proposes rather than executes provider calls, and why serious agents still need staged intent narrowing."
+tldr_takeaways: ["MCP is valuable exactly where it is boring: it standardizes the reusable execution layer around API calls", "The model does not execute provider APIs; it proposes structured tool calls", "One MCP server can expose many functions and hide provider-specific choreography behind them", "Available is not the same as routed, and routed is not the same as approved"]
 ---
+<div class="blog-insight">
+  <span class="blog-insight__label">Revised on August 29, 2026</span>
+  <p>This revision sharpens the explanation that finally made MCP click for me: the model does not execute the provider API call, and every AI application should not have to reimplement provider-specific glue for itself. The <span class="blog-highlight blog-highlight--mcp-client">MCP client</span> carries a standard protocol call; the <span class="blog-highlight blog-highlight--mcp-server">MCP server</span> is the reusable execution boundary where provider knowledge can live.</p>
+</div>
+
 I am joining the <span class="blog-highlight blog-highlight--agent">MCP</span> party a little late.
 
 Not because I ignored it completely, but because the first pass did not feel as obvious to me as the enthusiasm around it suggested. There was a lot of jargon. The setup path had more moving pieces than I wanted. The whole business of piping messages through local processes, gateways, containers, profiles, and JSON schemas felt slightly tedious before it felt useful.
@@ -28,11 +33,13 @@ So this post is mostly written for the version of me that needed the explanation
 
 Hopefully it helps someone else too.
 
+A recent explanation helped me because it moved the argument away from *"MCP versus APIs"* and toward the better question: *where does the execution layer live?*
+
 My conclusion after working through it is simple:
 
 <blockquote class="blog-pullquote">
   <p><span class="blog-highlight blog-highlight--agent">MCP</span> is valuable exactly where it is boring.</p>
-  <p>It standardizes <span class="blog-highlight blog-highlight--connector">connector</span> plumbing. It does not absolve the host application from trust, routing, approval, or evidence discipline.</p>
+  <p>It standardizes reusable <span class="blog-highlight blog-highlight--connector">connector</span> execution. It does not absolve the host application from trust, routing, approval, or evidence discipline.</p>
 </blockquote>
 
 <figure class="blog-figure blog-figure--wide">
@@ -57,13 +64,13 @@ The pattern itself was sensible. The model should not directly touch the outside
     <div class="blog-flow__arrow" aria-hidden="true">&rarr;</div>
     <div class="blog-flow__step">Host validates request</div>
     <div class="blog-flow__arrow" aria-hidden="true">&rarr;</div>
-    <div class="blog-flow__step">Host executes action</div>
+    <div class="blog-flow__step"><span class="blog-highlight blog-highlight--mcp-server">MCP server</span> executes provider call</div>
     <div class="blog-flow__arrow" aria-hidden="true">&rarr;</div>
     <div class="blog-flow__step">Evidence returns</div>
     <div class="blog-flow__arrow" aria-hidden="true">&rarr;</div>
     <div class="blog-flow__step">Model writes answer</div>
   </div>
-  <p>The important detail is ownership: the model proposes, but the host validates, executes, records, and shapes the evidence before the final answer is written.</p>
+  <p>The important detail is ownership: the model proposes, the host validates and routes, the <span class="blog-highlight blog-highlight--mcp-server">MCP server</span> executes the provider-specific work, and the host records and shapes evidence before the final answer is written.</p>
 </div>
 
 The problem was not the loop. The problem was <span class="blog-highlight blog-highlight--glue">glue code</span>.
@@ -75,6 +82,10 @@ That <span class="blog-highlight blog-highlight--glue">glue code</span> has an u
 Gmail needs one shape of OAuth, search, labels, snippets, and attachment handling. Slack needs another shape of channels, threads, users, bot permissions, and message posting. GitHub, calendars, browsers, databases, and files all bring their own little integration worlds. Then each AI host still has to translate those worlds into something a model can discover and call.
 
 That is how you end up with a <span class="blog-highlight blog-highlight--connector">connector zoo</span>, and then with <span class="blog-highlight blog-highlight--glue">glue code</span> proliferating around the zoo.
+
+The value of <span class="blog-highlight blog-highlight--agent">MCP</span> is not that API calls disappear. The value is that the provider-specific execution layer can stop living inside every AI client.
+
+Without a standard boundary, each assistant application tends to carry the same client-side burden: authentication ceremony, endpoint chaining, retries, pagination, error handling, result cleanup, and little translations like *"incident channel"* into a Slack channel ID. With <span class="blog-highlight blog-highlight--agent">MCP</span>, that provider knowledge can live once inside a Slack, Gmail, Jira, or internal-system <span class="blog-highlight blog-highlight--mcp-server">MCP server</span>, while each AI host speaks the same protocol to discover and call it.
 
 The timing matters too. Around the same period, the conversation moved from <span class="blog-highlight blog-highlight--chatbot">chatbots</span> toward <span class="blog-highlight blog-highlight--agent">agents</span>, coding assistants, desktop assistants, local runtimes, and tools that could act on real systems. Models were getting better, but they were still isolated from the places where useful work actually happens. A coding assistant needs the repository. A personal assistant needs calendar and email. A business assistant needs internal documents, tickets, dashboards, and databases.
 
@@ -88,7 +99,7 @@ The deeper point is this:
   <p><span class="blog-highlight blog-highlight--agent">MCP</span> exists because every AI app should not have to reinvent the same connector protocol differently.</p>
 </blockquote>
 
-Before <span class="blog-highlight blog-highlight--agent">MCP</span>, connecting an assistant to external systems usually meant each host application had to invent its own integration language. <span class="blog-highlight blog-highlight--agent">MCP</span> gives those integrations a common shape, so the <span class="blog-highlight blog-highlight--glue">glue code</span> can move behind a more standard boundary instead of leaking into every product in a slightly different form.
+Before <span class="blog-highlight blog-highlight--agent">MCP</span>, connecting an assistant to external systems usually meant each host application had to invent its own integration language. <span class="blog-highlight blog-highlight--agent">MCP</span> gives those integrations a common shape, so the <span class="blog-highlight blog-highlight--glue">glue code</span> can move behind a more standard server boundary instead of leaking into every product in a slightly different form.
 
 ## The Jargon That Tripped Me
 
@@ -102,7 +113,7 @@ I now prefer this vocabulary:
 - **<span class="blog-highlight blog-highlight--harness">Harness</span> / agent control layer:** the host-side component that owns routing, validation, approvals, audit, and evidence shaping.
 - **Model runtime or provider:** where inference happens, such as LM Studio, Ollama, Claude, or another hosted model API.
 - **<span class="blog-highlight blog-highlight--mcp-client">MCP client</span>:** the per-server connection component the host uses to talk to an <span class="blog-highlight blog-highlight--mcp-server">MCP server</span>.
-- **<span class="blog-highlight blog-highlight--mcp-server">MCP server</span>:** the process across the protocol boundary that exposes external functions through MCP.
+- **<span class="blog-highlight blog-highlight--mcp-server">MCP server</span>:** the process across the protocol boundary that exposes external functions through MCP and normally owns the provider-specific execution behind them.
 - **MCP Manager:** software that helps install, run, group, configure, or authorize <span class="blog-highlight blog-highlight--mcp-server">MCP servers</span>.
 - **Product tool:** a user-recognizable capability such as Gmail, Calendar, Wikipedia, Search, or Slack.
 - **Function:** one executable operation inside that product tool, such as `search_messages`, `list_events`, or `get_summary`. In many cases, the function eventually becomes an ordinary API call.
@@ -113,9 +124,11 @@ If an MCP Manager profile shows Gmail, Slack, and Wikipedia, that is not the sam
 
 Visibility is not execution.
 
+The <span class="blog-highlight blog-highlight--mcp-client">MCP client</span> is not the Slack integration, the Gmail integration, or the Jira integration. It is the host-side protocol connection. The provider-specific integration belongs behind the provider's <span class="blog-highlight blog-highlight--mcp-server">MCP server</span>.
+
 Once that vocabulary is less slippery, the mental model becomes much easier.
 
-## A Tool Is Usually An API Call
+## A Tool Is Usually An API Call Behind A Server Boundary
 
 This is the missing layer in many MCP explanations.
 
@@ -133,6 +146,12 @@ Authorization: Bearer ...
 That is not an AI concept. It is normal application integration.
 
 The API exposes an endpoint. The application code owns the orchestration.
+
+This is why *"why not just give the model the OpenAPI spec?"* is not a complete answer.
+
+API documentation can tell a model what endpoints exist. It does not provide the execution layer. Something still has to store credentials, choose the right endpoint sequence, translate user language into provider IDs, handle pagination, normalize errors, retry safely, and turn the raw response into evidence the host is willing to show back to the model.
+
+You can build that layer directly. For a one-off integration, that may be the pragmatic choice. But once multiple AI applications need the same provider, the direct approach starts turning every client into a small integration platform.
 
 What MCP changes is the consumer of that contract. Instead of only giving a human developer an endpoint to wire manually, the MCP server exposes a capability in a form that an AI host can discover, describe to a model, validate, and invoke.
 
@@ -173,6 +192,8 @@ Then, when the user asks *"what is the weather in London?"*, the model does not 
 
 The host-side <span class="blog-highlight blog-highlight--harness">harness</span> validates that request. The <span class="blog-highlight blog-highlight--mcp-client">MCP client</span> sends it to the weather <span class="blog-highlight blog-highlight--mcp-server">MCP server</span>. The server translates the tool call into the provider-specific API request, handles the provider response, and returns structured data back across the MCP boundary.
 
+That is the execution boundary. The <span class="blog-highlight blog-highlight--mcp-client">MCP client</span> transports a standard `tools/call` request. The <span class="blog-highlight blog-highlight--mcp-server">MCP server</span> knows how to perform the provider operation.
+
 That is the concrete shape of the idea.
 
 <div class="blog-insight">
@@ -192,8 +213,8 @@ That is the concrete shape of the idea.
 </div>
 
 <blockquote class="blog-pullquote blog-pullquote--compact">
-  <p>A tool is not magic agent intelligence.</p>
-  <p>It is usually an API capability wrapped in a model-readable contract.</p>
+  <p>The model does not execute the API call.</p>
+  <p>It proposes a structured tool call. The <span class="blog-highlight blog-highlight--mcp-server">MCP server</span> executes the provider work.</p>
 </blockquote>
 
 This is also why MCP can feel underwhelming when inspected closely.
@@ -214,13 +235,13 @@ That distinction matters because it prevents two bad interpretations.
 
 The first is over-selling MCP as if it replaces APIs. It does not. It often sits on top of them.
 
-The second is under-selling MCP as *just an API wrapper*. It is often a wrapper, but the wrapper is doing something specific: turning provider-specific operations into a common, discoverable, schema-backed tool interface for an LLM runtime.
+The second is under-selling MCP as *just an API wrapper*. It is often a wrapper, but the wrapper is doing something specific: turning provider-specific operations into a common, discoverable, schema-backed tool interface for an LLM runtime, while centralizing the execution code that would otherwise be repeated across clients.
 
 ## The Simplest Mental Model
 
 Here is the version that finally made it click for me.
 
-An <span class="blog-highlight blog-highlight--mcp-server">MCP server</span> is the adapter that exposes those capabilities through the MCP protocol.
+An <span class="blog-highlight blog-highlight--mcp-server">MCP server</span> is the adapter that exposes those capabilities through the MCP protocol. It is also the place where provider-specific execution code can live.
 
 It is called a <em>server</em> because, from the assistant's point of view, it serves capabilities over a protocol boundary. That does not mean it has to be a public web server running somewhere on the internet. It can be a local process, a Docker container, or a small service launched by the host. *External* here means outside the host boundary, not necessarily remote.
 
@@ -234,7 +255,7 @@ A Gmail <span class="blog-highlight blog-highlight--mcp-server">MCP server</span
 - `create_draft`
 - `send_message`
 
-A Slack <span class="blog-highlight blog-highlight--mcp-server">MCP server</span> is the Slack-side adapter. A filesystem <span class="blog-highlight blog-highlight--mcp-server">MCP server</span> is the local-files adapter. The server is the boundary around the provider; the functions inside it are the individual operations.
+A Slack <span class="blog-highlight blog-highlight--mcp-server">MCP server</span> is the Slack-side adapter. A filesystem <span class="blog-highlight blog-highlight--mcp-server">MCP server</span> is the local-files adapter. The server is the boundary around the provider; the functions inside it are the individual operations. A single high-level function may still hide several low-level API calls: find the channel, resolve its ID, fetch history, page through results, expand user IDs, and return a cleaner result.
 
 Most of the time, the server still wraps something ordinary:
 
@@ -273,17 +294,21 @@ An <span class="blog-highlight blog-highlight--mcp-client">MCP client</span> is 
   </div>
 </div>
 
-That means <span class="blog-highlight blog-highlight--agent">MCP</span> gives the host and server a repeatable handshake around capabilities that may ultimately be API calls:
+That means <span class="blog-highlight blog-highlight--agent">MCP</span> gives the host and server a repeatable protocol shape around capabilities that may ultimately be API calls:
 
 <div class="blog-insight">
-  <span class="blog-insight__label">The MCP Handshake</span>
+  <span class="blog-insight__label">The MCP Capability Flow</span>
   <ul>
-    <li><strong>Discovery:</strong> the host asks which functions the server exposes.</li>
+    <li><strong>Discovery:</strong> the host, through its <span class="blog-highlight blog-highlight--mcp-client">MCP client</span>, can ask which functions the server exposes.</li>
     <li><strong>Description:</strong> the server returns names, descriptions, and argument schemas.</li>
-    <li><strong>Execution:</strong> the host calls one function with validated arguments.</li>
+    <li><strong>Exposure:</strong> the host decides which discovered functions should become model-visible.</li>
+    <li><strong>Invocation:</strong> the host calls one function with validated arguments through its <span class="blog-highlight blog-highlight--mcp-client">MCP client</span>.</li>
+    <li><strong>Execution:</strong> the <span class="blog-highlight blog-highlight--mcp-server">MCP server</span> performs the function, often by making one or more provider API calls.</li>
     <li><strong>Result:</strong> the server returns structured data for the host to shape into evidence.</li>
   </ul>
 </div>
+
+The transport and session details have evolved, including the 2026-07-28 specification's move toward self-describing requests and optional discovery. The product-level boundary remains the same: the host talks through an <span class="blog-highlight blog-highlight--mcp-client">MCP client</span>, and the server owns the provider-facing capability.
 
 That is the useful part.
 
@@ -316,6 +341,8 @@ query calendars, search tickets, browse the web...
 That is not an architecture. It is a context-window landfill.
 
 MCP gives the host a standard way to discover tool schemas, but the host still has to decide which of those schemas should reach the model at this moment. Dumping every discovered server, function, argument definition, OAuth caveat, and <span class="blog-highlight blog-highlight--connector">connector</span> detail into every conversation recreates the old problem in a new place.
+
+The OpenAPI-only route has the same pressure in an even rawer form. Giving the model a provider's full API documentation may teach it endpoints, but it also spends context on low-level details and still leaves the host responsible for the execution layer. The model can know that Slack has hundreds of methods without knowing which small subset is appropriate for this user, this permission set, and this turn.
 
 The lighter abstraction is to expose intentions first:
 
@@ -538,6 +565,10 @@ This is also how I think about local AI-first systems. Local-first does not have
 
 For a practical local assistant, I would not start by connecting every personal tool and hoping policy catches up.
 
+I also would not force <span class="blog-highlight blog-highlight--agent">MCP</span> into every experiment. If one application needs two provider calls and the integration is unlikely to be reused, a direct API integration can be simpler and perfectly defensible.
+
+<span class="blog-highlight blog-highlight--agent">MCP</span> starts paying for itself when the same capability needs to serve several AI applications, when a provider workflow should be hidden behind a stable tool contract, or when dumping raw API documentation into model context becomes the bottleneck.
+
 I would start narrower:
 
 1. connect one public, read-only server such as Wikipedia
@@ -570,6 +601,8 @@ It is the protocol that lets an AI host discover and call external capabilities 
 
 That is already enough.
 
+For one application and one small provider surface, direct API code may still be the right answer. For repeated capabilities across clients, <span class="blog-highlight blog-highlight--agent">MCP</span> is how you stop every client from becoming its own integration platform.
+
 The real product work starts after discovery: deciding what should be visible, what should be routed, what should require approval, what evidence should return, and what must never enter the prompt in the first place.
 
 That is why I now find MCP interesting.
@@ -579,7 +612,10 @@ Not because it removes the hard parts, but because it gives the hard parts a cle
 ## Useful References
 
 - [Docker MCP Toolkit profile setup]({{ '/references/docker-mcp-manager-profile-setup/' | relative_url }})
+- [MCP vs API Explained: Do You Really Need MCP?](https://www.youtube.com/watch?v=kn6dxL53NkM)
 - [Anthropic: Introducing the Model Context Protocol](https://www.anthropic.com/news/model-context-protocol)
 - [Model Context Protocol: What is MCP?](https://modelcontextprotocol.io/docs/getting-started/intro)
+- [Model Context Protocol 2026-07-28 specification](https://modelcontextprotocol.io/specification/2026-07-28)
+- [Model Context Protocol: Tools](https://modelcontextprotocol.io/specification/2026-07-28/server/tools)
 - [Docker MCP Catalog](https://docs.docker.com/ai/mcp-catalog-and-toolkit/catalog/)
 - [Docker MCP Gateway](https://docs.docker.com/ai/mcp-catalog-and-toolkit/mcp-gateway/)
