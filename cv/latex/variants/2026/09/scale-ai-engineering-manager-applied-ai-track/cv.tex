@@ -1,0 +1,244 @@
+%!TEX TS-program = xelatex
+\documentclass[]{../../../../friggeri-cv}
+
+% Variant source:
+%   Role-specific CV variant
+% This file is tailored from ../../../../cv.tex and intentionally does not
+% replace the master CV source.
+
+% Packages
+\usepackage{pifont}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{marvosym}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+
+\graphicspath{ {../../../../images/} }
+\definecolor{linkaccent}{HTML}{1E6291}
+\definecolor{profileweb}{HTML}{B45309}
+\definecolor{profilelinkedin}{HTML}{0A66C2}
+\definecolor{profilegithub}{HTML}{24292F}
+\definecolor{profilescholar}{HTML}{4285F4}
+\newcommand{\profilelink}[3]{{\hypersetup{urlcolor=#1}\addfontfeature{Color=#1}\href{#2}{#3}}}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=linkaccent,
+    linkcolor=linkaccent,
+    citecolor=linkaccent,
+    pdfborder={0 0 0},
+    pdfauthor={Christos Hadjinikolis},
+    pdftitle={Christos Hadjinikolis CV - Scale AI Engineering Manager Applied AI track}
+}
+
+% Variant-scoped header override: restores a compact charcoal band while
+% keeping a real space between first and last name for PDF text extraction.
+\renewcommand{\header}[5]{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node [rectangle, fill=darkgray, anchor=north, minimum width=\paperwidth, minimum height=3.75cm] (box) at (current page.north){};
+    \node [anchor=north] (name) at ([yshift=-0.72cm] box.north) {%
+      \fontsize{36pt}{50pt}\color{white}%
+      {\thinfont #1\ }{\bodyfont #2}%
+    };
+    \node [anchor=north] at ([yshift=-0.05cm] name.south) {%
+      \fontsize{13pt}{20pt}\color{white}%
+      \thinfont #3%
+    };
+    \node [anchor=north] at ([yshift=-0.55cm] name.south) {%
+      \fontsize{11pt}{18pt}\color{white}%
+      \hypersetup{urlcolor=white,linkcolor=white}\thinfont #4%
+    };
+    \node [anchor=north] at ([yshift=-3.08cm] box.north) {%
+      \fontsize{10.5pt}{16pt}\color{white}%
+      \hypersetup{urlcolor=white,linkcolor=white}\thinfont {\Letter\hspace{0.2em} #5}%
+    };
+  \end{tikzpicture}
+  \vspace{2.2cm}
+  \vspace{-2\parskip}
+}
+
+\renewcommand{\entry}[4]{%
+  \parbox[t]{\dimexpr\textwidth-\entryleftinset\relax}{%
+    \textbf{#2}%
+    {\footnotesize\addfontfeature{Color=lightgray}\hspace{0.6em}#1}%
+    \hfill%
+    {\small\color{textcolor} #3}\\%
+    #4\vspace{\parsep}%
+  }\\}
+
+\renewcommand{\entrytwo}[4]{%
+  #1&\parbox[t]{14cm}{%
+    \textbf{#2}%
+    \hfill%
+    {\small\color{textcolor} #3}\\%
+    #4\vspace{\parsep}%
+  }\\}
+
+% Set up footer
+\pagestyle{fancy}
+\fancyhf{}  % Clear header/footer
+\fancyfoot[C]{\small Page \thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% XeLaTeX image fix
+\ifxetex
+  \usepackage{letltxmacro}
+  \setlength{\XeTeXLinkMargin}{1pt}
+  \LetLtxMacro\SavedIncludeGraphics\includegraphics
+  \def\includegraphics#1#{%
+    \IncludeGraphicsAux{#1}%
+  }%
+  \newcommand*{\IncludeGraphicsAux}[2]{%
+    \XeTeXLinkBox{%
+      \SavedIncludeGraphics#1{#2}%
+    }%
+  }%
+\fi
+
+\begin{document}
+\header
+    {Christos}
+    {Hadjinikolis}
+    {Engineering Manager | Applied AI \& Production Systems}
+    {Ph.D. Computer Science | UCL Research Associate | AI Standards}
+    {\small \href{mailto:christos.hadjinikolis@gmail.com}{christos.hadjinikolis@gmail.com}}
+
+\begin{aside}
+    \section{profiles}
+        {\footnotesize \profilelink{profileweb}{https://christos-hadjinikolis.github.io/}{website}\\\profilelink{profilelinkedin}{https://uk.linkedin.com/in/christoshadjinikolis}{LinkedIn}\\\profilelink{profilegithub}{https://github.com/Christos-Hadjinikolis}{GitHub}\\\profilelink{profilescholar}{https://scholar.google.com/citations?hl=en&user=Rr3KTx8AAAAJ}{Google Scholar}}
+    \section{leadership}
+        {\footnotesize 6 direct reports\\team development\\technical direction\\delivery ownership}
+    \section{AI systems}
+        {\footnotesize production ML\\evaluation/replay\\model governance\\applied AI tooling}
+    \section{data platforms}
+        {\footnotesize Kafka/Flink\\Python/Java/Kotlin\\SQL/AWS/GCP\\CI/CD/observability}
+    \section{practice}
+        {\footnotesize design reviews\\data contracts\\local E2E tests\\mentoring/hiring}
+\end{aside}
+
+\section{profile}
+{\normalsize Engineering Manager with 16 years across production ML, data platforms, backend engineering and AI research. I lead cross-functional teams that turn complex data and model behaviour into dependable services. I bring hands-on experience in high-volume streaming, model evaluation, MLOps, technical roadmaps and team development, supported by a Ph.D. in Computer Science and practical AI standards work.}
+\section{experience}
+\begin{entrylist}
+    \entry
+    {12/2020--present}
+    {Vortexa Ltd, London, UK}
+    {Engineering Manager | ML Systems Lead}
+    {
+        {\small
+        \setlength{\parindent}{0pt}
+        \setlength{\leftskip}{0pt}
+        Lead technical direction and delivery for a live ML/data estate processing \textbf{\textasciitilde6M vessel-position records/hour} for \textbf{13.5K monitored vessels}. Manage \textbf{6 direct reports} and lead a \textbf{10-person cross-functional team}. Engineering Manager since \textbf{02/2022}; joined as Senior ML Engineer.
+
+        }
+        \begin{itemize}[leftmargin=1.1em, itemsep=2pt, topsep=3pt, parsep=0pt]
+            \item \small\textbf{People \& Delivery:} Manage six direct reports across Data Science, Data Engineering, Product and domain analysis; own performance and career development, team delivery, and hiring for six roles. Contributed hiring, onboarding and engineering practices as Data Production grew from 4 to 30+.
+            \item \small\textbf{Production ML:} Led research-to-production delivery for destination and arrival-time sequence/transformer models in \textbf{PyTorch}; established MLflow, model/data versioning, evaluation gates, monitoring and versioned model-serving workflows.
+            \item \small\textbf{Evaluation \& Reliability:} Built batch/online evaluation and replay loops; investigated edge cases with domain experts and Product. Maintained data-signal controls, live accuracy monitoring, rollback/fallback paths and shared on-call practices.
+            \item \small\textbf{Platform Architecture:} Led the \textbf{Kafka Streams-to-Flink} transition, improving maintainability, operational visibility and compute scaling independent of Kafka partitioning; linked streaming enrichment with prediction services and downstream products.
+            \item \small\textbf{Engineering Standards:} Standardised I/O seams, schema/data validation, repository patterns and local end-to-end tests. Cut a \textbf{3-hour DAG feedback loop to under 5 minutes}; promoted ADRs, design reviews and runbooks.
+            \item \small\textbf{Technical Roadmap:} Ran cross-functional workshops to settle model-quality definitions, set measurable objectives and prioritise work across engineering, Product, analysts and subject-matter experts.
+        \end{itemize}
+    }
+    \entry
+    {04/2016--12/2020}
+    {DataReply, London, UK}
+    {Senior Consultant | Data Scientist / ML Engineer}
+    {
+        {\small
+        \setlength{\parindent}{0pt}
+        \setlength{\leftskip}{0pt}
+        Joined the London spin-off as its first consultant and contributed to growth to \textbf{30+ consultants}. Progressed to Senior Consultant, leading client delivery, scoping technical roadmaps, mentoring colleagues and coordinating enterprise engagements.
+        }
+        \begin{itemize}[leftmargin=1.1em, itemsep=2pt, topsep=3pt, parsep=0pt]
+            \item \small\textbf{Vodafone | ML Platform:} Led multi-workstream delivery for a GCP/Kubeflow data-science platform, covering migration planning, CI/CD, workflow automation, feature engineering and ML lifecycle support.
+            \item \small\textbf{CNHi | Predictive Maintenance:} Lead Data Scientist/Scrum Master on live agricultural-vehicle telemetry; guided a PySpark DS/DE team building time-series models and maintenance alerting from stakeholder requirements.
+            \item \small\textbf{UBS | Real-Time Analytics:} Delivered Kafka/Elasticsearch pipelines, graph and process-mining analytics, and observability; developed production ML engineering practice through XP and pair programming.
+        \end{itemize}
+    }
+    \entry
+    {2010--2016}
+    {KCL, UCL, David Game College, UK}
+    {Teaching and Technical Training}
+    {\small Taught algorithms, databases, data structures and Java/Python; developed clear technical communication and mentoring practice.}
+\end{entrylist}
+\newpage
+\setlength{\parskip}{2pt}
+\setlength{\parsep}{0pt}
+\specialsection{education}
+\begin{entrylist2}
+    \entrytwo
+        {\small 2010--2014}
+        {\small Ph.D. in Computer Science}
+        {\small King's College London, UK}
+        {\small \emph{\textbf{Thesis}: Persuasion Dialogues \& Opponent Modelling.}
+
+        {\small Developed logical inference methods for large knowledge graphs, combining symbolic reasoning, graph analytics and \textbf{Bayesian techniques (MCMC)}. Received \textbf{Best Poster Award at IJCAI 2013} (413 submissions), EPSRC PhD Scholarship, Outstanding TA Award and Graduate Certificate in Academic Practice.
+        \\ \href{https://scholar.google.com/citations?hl=en&user=Rr3KTx8AAAAJ}{Publications on Google Scholar}}
+        }
+    \entrytwo
+        {\small 2004--2010}
+        {\small Diploma (BEng) in Computer Engineering}
+        {\small University of Thessaly, GR}
+        {\small Five-year polytechnic degree with a strong mathematics foundation. Majored in Artificial Intelligence.}
+    \entrytwo
+        {\small 2002--2004}
+        {\small Military Officer: Second Lieutenant}
+        {\small National Guard, CY}
+        {\small Completed national service as a commissioned Second Lieutenant.}
+\end{entrylist2}
+\specialsection{research \& AI standards}
+\begin{entrylist2}
+    \entrytwo
+        {\small since 10/2024}
+        {\small University College London, Dept. of Information Studies}
+        {\small Associate Researcher}
+        {\small Research and teach practical AI standardisation, including auditability, model/data versioning, explainability and responsible adoption.}
+    \entrytwo
+        {\small since 2021}
+        {\small ISO / CEN-CENELEC AI standardisation}
+        {\small Committee Expert | JTC 21, WG3}
+        {\small Contribute to AI standards aligned with EU policy and international norms, with emphasis on traceability, explainability and model/data governance.}
+\end{entrylist2}
+\specialsection{selected applied AI \& platform work}
+\begin{entrylist2}
+    \entrytwo
+        {\small Private project}
+        {\small Promet}
+        {\small Local applied AI harness}
+        {\small Hands-on exploration of assistant runtime boundaries, streaming, tool routing, approvals, durable state, traceability and deterministic replay. Personal project; not an enterprise production platform.}
+    \entrytwo
+        {\small PyPI}
+        {\small \href{https://pypi.org/project/dynamicio/}{dynamicio}}
+        {\small Data contracts}
+        {\small Created a Python library that makes I/O boundaries explicit, validates schema/data expectations and speeds local pipeline testing; used across \textbf{15+ repositories}.}
+    \entrytwo
+        {\small PyPI / JetBrains}
+        {\small \href{https://pypi.org/project/skeleton-replay/}{skeleton-replay} \& plugin}
+        {\small Runtime evidence}
+        {\small Open-source Python tooling and an IDE plugin for traces, architecture snapshots, replayable reports and source navigation.}
+\end{entrylist2}
+\specialsection{selected talks \& interviews}
+\begin{entrylist2}
+    \entrytwo
+        {\small 2023}
+        {\small Agile in Action}
+        {\small Podcast Interview}
+        {\small Agile data science and the engineering/delivery journey at Vortexa.}
+    \entrytwo
+        {\small 2022}
+        {\small Open Data Science Conference}
+        {\small Industry Conference Talk}
+        {\small dynamicio: abstracting I/O for ML workflows.}
+\end{entrylist2}
+\specialsection{selected credentials}
+\begin{entrylist2}
+    \entrytwo
+        {\small 2016--2020}
+        {\small ML, cloud \& data engineering}
+        {\small AWS, Google Cloud, O'Reilly}
+        {\small AWS Machine Learning Specialty (2020); Google Professional Data Engineer (2017); Apache Spark Developer (2016).}
+\end{entrylist2}
+\end{document}
