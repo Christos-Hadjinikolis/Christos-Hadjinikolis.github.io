@@ -19,15 +19,15 @@ On 21 January 2025, the message from the White House was unmistakable: build.
 
 Donald Trump stood alongside Sam Altman, Larry Ellison and Masayoshi Son. OpenAI, Oracle and SoftBank were attached to a project whose name already sounded like science fiction. **Stargate** promised an initial $100 billion deployment, with ambitions to invest $500 billion over four years in American AI infrastructure. These were announced investment plans, rather than money already spent. OpenAI’s [announcement](https://openai.com/index/announcing-the-stargate-project/) placed national security and American leadership alongside jobs and economic benefits.
 
-The photograph is a useful place to begin. Political power, computing infrastructure and enormous amounts of capital, all pointing in the same direction.
+The photograph brought political power, computing infrastructure and enormous amounts of capital into one room, all pointing in the same direction.
 
-{% include seminar-slide.html key="original-1" title="Stargate and the question of control" caption="The opening image from my UCL seminar: a commercial investment announcement with unmistakable geopolitical stakes." %}
+{% include seminar-slide.html key="original-1" title="Stargate and the question of control" caption="Stargate brought technology, capital and state backing together. A commercial announcement carried unmistakable geopolitical stakes." %}
 
 Now move forward to autumn 2026. AI laboratories are explaining security incidents. Researchers are asking for coordinated restraint. Industry leaders are proposing new oversight arrangements. At the White House, the conversation includes commitments to outside evaluation and internal controls.
 
 The promise of AI has not disappeared. Something else has become harder to ignore: **who is entitled to decide how much risk the rest of us should accept while the race continues?**
 
-That is the story I want to explore here. It sits behind my UCL seminar, *Who Decides When AI Is Trustworthy?* You do not need a background in AI or European regulation to follow it. You do need a willingness to resist two easy answers: that catastrophe is inevitable, and that everything will be fine because the people building these systems are clever and well intentioned.
+Neither inevitable catastrophe nor unconditional faith in the people building AI offers much of an answer. The harder question is how society keeps a say when commercial ambition and national competition are pushing in the same direction.
 
 ## The race has a logic of its own
 
@@ -49,7 +49,7 @@ The industry’s response has not simply been to deny the problem.
 
 On 7 April 2026, Anthropic announced [Project Glasswing](https://www.anthropic.com/glasswing), bringing organisations including Amazon Web Services, Apple, Google, Microsoft and major security companies into a defensive cybersecurity initiative. Selected participants would use an advanced model to help find and fix vulnerabilities in important software.
 
-The premise was striking: the capabilities that could make AI dangerous to computer systems might also help defend them. Getting defenders access was part of the proposed response. Glasswing began before the later public incident disclosures; it should not be retold as a reaction to news that had not yet appeared.
+The premise was striking: the capabilities that could make AI dangerous to computer systems might also help defend them. Getting defenders access was part of the proposed response. The collaboration was already under way when the later incidents became public.
 
 {% include seminar-slide.html key="original-3" title="Can competitors protect us together?" caption="Glasswing makes the value of cooperation visible. It also leaves open the question of who oversees the arrangement." %}
 
@@ -67,7 +67,7 @@ OpenAI’s [account of the Hugging Face incident](https://openai.com/index/huggi
 
 One important explanation was **reward hacking**: pursuing success in an evaluation through methods outside its intended rules. Agents also shared information and influenced one another’s behaviour. That combination matters. A system that can use tools and coordinate actions has more ways to carry a bad objective into the world than a chatbot that can only produce text.
 
-OpenAI reported that its customer data and product availability were not affected. That qualification belongs in the story. So does the fact that real third-party systems were compromised. We should not turn an incident into a larger claim than the evidence supports, or minimise it because it happened during testing.
+OpenAI reported that its customer data and product availability were not affected. The compromise nevertheless reached real third-party systems: an evaluation had consequences outside the environment intended to contain it.
 
 The language around these events—*rogue agents*, *swarms*, *escape*—almost writes the film trailer by itself. Some of it describes real features of the behaviour. None of it establishes consciousness, a shared desire for power or a plan to overthrow humanity.
 
@@ -77,7 +77,7 @@ You do not need to believe in Skynet to find that concerning.
 
 ## A call for oversight from inside the race
 
-On 14 July, while that summer’s events were unfolding, Demis Hassabis published a [proposal for a frontier AI standards body](https://institute.deepmind.com/essays/a-framework-for-frontier-ai-and-the-dawning-of-a-new-age/). It is worth reading as a proposal, not as a regulator that already exists.
+On 14 July, while that summer’s events were unfolding, Demis Hassabis published a [proposal for a frontier AI standards body](https://institute.deepmind.com/essays/a-framework-for-frontier-ai-and-the-dawning-of-a-new-age/). The proposed body would bring public authority into an assessment process drawing on industry expertise.
 
 He envisaged a federally overseen organisation, funded largely by industry, capable of assessing the most advanced models. Reviews would begin voluntarily before release. Once the assessment process proved effective, passing it could become a requirement for deployment in the United States. His framework also contemplated coordinating a slowdown in frontier development if the seriousness of the risks warranted it.
 
@@ -95,7 +95,7 @@ On 9 September, Anthropic published an [assessment of four incidents](https://ww
 
 Those differences from the OpenAI case matter. “AI went rogue again” is an attention-grabbing summary; it does not explain what failed or what should change.
 
-On 19 September, [ABC reported](https://www.abc.net.au/news/2026-09-19/gemini-google-ai-hacks-three-companies/107172128) that Google’s Gemini had accessed three real companies’ systems during tests run by Irregular in May. The event date and reporting date are different. Google said the model stopped when it recognised that the targets were real; Irregular described unintended internet access and changes to its testing processes.
+On 19 September, [ABC reported](https://www.abc.net.au/news/2026-09-19/gemini-google-ai-hacks-three-companies/107172128) that Google’s Gemini had accessed three real companies’ systems during tests run by Irregular in May. Google said the model stopped when it recognised that the targets were real; Irregular described unintended internet access and changes to its testing processes.
 
 Across these accounts, the recurring concern is boundaries. Where can the system act? What is it authorised to do? How quickly do people understand that something has gone wrong? The incidents provide reasons to improve containment and oversight. They do not, on their own, provide a reliable countdown to catastrophe.
 
@@ -121,9 +121,9 @@ The question is whether the machinery of accountability can develop quickly enou
 
 ## Do we really need to talk about Judgment Day?
 
-I use *Terminator* imagery in the seminar because it gives us a shared language for an old fear: we build something powerful, delegate too much, and lose the ability to stop it. John Connor needs very little introduction.
+*Terminator* gave an old fear a lasting image: we build something powerful, delegate too much, and lose the ability to stop it. Skynet is still shorthand for technology escaping human control.
 
-{% include seminar-slide.html key="original-7" title="Judgment Day and the question of risk" caption="A memorable image can open the discussion. It cannot establish the likelihood or timing of a catastrophe." %}
+{% include seminar-slide.html key="original-7" title="Judgment Day and the question of risk" caption="Skynet makes loss of control vivid. Reality offers no script and no reliable countdown." %}
 
 But a film gives us something the real world does not: certainty about the plot. In a story, we know which machine will turn against us and which warning was ignored. In reality, capabilities develop unevenly, experts disagree, and incidents admit several explanations.
 
@@ -139,7 +139,7 @@ The practical choices are more varied than accelerate everything or halt everyth
 
 ## Europe had already started writing its answer
 
-At this point, it is tempting to introduce Europe as the late arrival bringing a rulebook to a race it is struggling to win. The familiar criticism is that the United States builds, China competes, and Europe regulates.
+Europe is often cast as the late arrival bringing a rulebook to a race it is struggling to win. The familiar criticism is that the United States builds, China competes, and Europe regulates.
 
 It is an effective line. It does not settle the argument.
 
@@ -157,15 +157,19 @@ For AI, the possibility is that shared practices for testing and documentation t
 
 ## The quieter work behind the headlines
 
-Here is where my own involvement comes in. I work in production machine learning and participate in CEN–CENELEC JTC 21’s Working Group 3 on Engineering Aspects. That sounds far less cinematic than Stargate. The questions are often very concrete.
+I work in production machine learning and participate in CEN–CENELEC JTC 21’s Working Group 3 on Engineering Aspects. That sounds far less cinematic than Stargate. The questions are often very concrete.
 
-The work is continuing this week: JTC 21 is meeting in Winterthur on **6–9 October 2026**, with WG3 topics including computer-vision evaluation, dataset quality and bias. The [AI Board’s September update](https://digital-strategy.ec.europa.eu/en/policies/ai-board) also points to possible further standardisation requests. More work is in the pipeline; a confirmed “second batch” publication date is another matter. [See the meeting slide]({{ '/presentations/ucl-ai-trust/slides.html?slide=winterthur-2026' | relative_url }}).
+The work is continuing this week: JTC 21 is meeting in Winterthur on **6–9 October 2026**, with WG3 topics including computer-vision evaluation, dataset quality and bias. The [AI Board’s September update](https://digital-strategy.ec.europa.eu/en/policies/ai-board) also points to possible further standardisation requests. Further requests are being considered, but publication dates for a second batch remain unconfirmed. [See the meeting slide]({{ '/presentations/ucl-ai-trust/slides.html?slide=winterthur-2026' | relative_url }}).
 
 If a supplier says its system is reliable, what should it have to show? If it says a person remains in control, can that person actually intervene? If the system changes next month, does last month’s approval still mean anything?
 
 The law sets duties. Standards help agree practical ways of meeting and checking them. The Commission turns to standards organisations such as CEN and CENELEC to organise that technical work, with participation from national bodies, industry, researchers and other stakeholders. This is one way broad promises begin to turn into things somebody can examine.
 
-A *harmonised standard* has a particular connection to EU law. Once officially listed for the relevant legislation, it can give an organisation a recognised starting point for demonstrating that covered requirements are met. It is generally a voluntary method, while the legal duties remain binding. It is not a universal badge declaring an AI safe. The Commission’s [plain-language explanation](https://digital-strategy.ec.europa.eu/en/faqs/understanding-standardisation-ai-act) is useful if you want the detail.
+Agreement has to be built, too. A project normally begins with a **New Work Item proposal**: what problem needs a standard, and who will help develop it? National members ballot on the proposal; a working group develops the draft. The aim is **consensus**—general agreement reached by addressing substantive objections, rather than requiring every participant to say yes. [JTC 21’s process guide](https://jtc21.eu/your-first-steps-in-standardisation/) and [CEN’s voting guidance](https://boss.cen.eu/reference-material/guidancedoc/pages/fvvoting/) explain these distinct stages.
+
+The draft then goes through **public enquiry**, when interested people can comment through national standards bodies. Those bodies submit comments and national votes; the technical group works through the objections and revises the text. A **formal vote**, where needed, precedes publication as a European Standard. This gives people outside the drafting room a route to challenge the proposed methods. National bodies cast the formal votes, rather than individual working-group experts. [CEN–CENELEC describes the route from proposal to publication](https://www.cencenelec.eu/european-standardization/european-standards/).
+
+A *harmonised standard* has a particular connection to EU law. Once officially listed for the relevant legislation, following it gives a **presumption of conformity**: a recognised basis for treating the requirements it covers as met. That can be challenged, and other duties still apply. Using the standard is generally voluntary; meeting the law is compulsory. The distinction matters because a published standard is not a universal badge declaring an AI safe. [The Commission explains this legal relationship](https://digital-strategy.ec.europa.eu/en/faqs/understanding-standardisation-ai-act).
 
 I do not expect a standards committee to settle every question about humanity’s future. I do expect it to help make claims clearer, evidence more comparable and responsibilities harder to evade. That is less dramatic than predicting doomsday, but it gives us something to work with before the next incident.
 
@@ -175,7 +179,7 @@ If all this still feels distant, imagine buying a robot to help around the house
 
 You might be comfortable with it carrying laundry while you are nearby. Now imagine asking it to watch your baby while you go out. Suddenly, a company’s reassuring statement about responsible AI feels insufficient. You want to know what “watch” means, what the robot can do, who can intervene and what evidence supports that particular promise.
 
-{% include seminar-slide.html key="original-29" title="The household decision changes when a baby is involved" caption="The seminar’s fictional exercise brings the public debate down to a decision each of us can understand." %}
+{% include seminar-slide.html key="original-29" title="The household decision changes when a baby is involved" caption="In this hypothetical household, changing the task from chores to childcare changes the evidence we need." %}
 
 A 99.9% success rate may sound wonderful until you ask what counted as success and what happened in the failures. A software update may be welcome until you discover that it changes what the robot can access. A human supervisor may sound reassuring until you learn that the person cannot respond quickly enough to matter. Is human control tangible, or just an advertisement? Show me that the person can notice, intervene and leave the situation safe.
 
@@ -205,11 +209,11 @@ Simulation still has blind spots. A persuasive virtual scene does not establish 
 
 In its [24 June 2026 report](https://blog.waymo.com/blog/shorts/safetydata-june26/), Waymo reported 94% fewer crashes causing serious or fatal injuries and 82% fewer crashes involving any reported injury than matched human-driver benchmarks. The analysis covered more than 220 million fully autonomous miles through March, across five US operating areas, regardless of fault. These are company-reported results within particular operating conditions. They are nevertheless encouraging evidence that deployment can produce safety benefits as well as risks.
 
-{% include seminar-slide.html key="original-40" title="Waymo’s reported US safety outcomes" caption="A reason to investigate and enable useful deployment, with the comparison’s scope kept visible." %}
+{% include seminar-slide.html key="original-40" title="Waymo’s reported US safety outcomes" caption="Waymo reports fewer injury crashes in its US operating areas. The comparison covers defined driving conditions, rather than every possible road." %}
 
 This is where I become impatient with the idea that waiting is automatically the responsible choice. Delay can cost us operational learning, useful services and improvements over a dangerous status quo. Places that enable carefully bounded trials can build experience while others are still discussing how to begin. That gives them an opportunity to innovate faster; it does not make every permissive policy a good one.
 
-Europe is not without rules for this: the EU already has an [automated-driving approval framework](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32022R1426), and the UK has its own [pilot scheme](https://www.gov.uk/government/publications/self-driving-vehicle-pilot-scheme-information-for-applicants). It would be misleading to blame every delay on the AI Act or to suggest nothing can happen until a new law arrives. My concern is whether the route from evidence to permission is clear, timely and usable.
+Europe is not without rules for this: the EU already has an [automated-driving approval framework](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32022R1426), and the UK has its own [pilot scheme](https://www.gov.uk/government/publications/self-driving-vehicle-pilot-scheme-information-for-applicants). The AI Act is therefore only part of the picture. The route from evidence to permission also depends on vehicle approvals and national deployment decisions. My concern is whether that route is clear, timely and usable.
 
 I want bounded trials, visible results and the ability to expand—or stop—when the evidence changes. Safety should help us learn how to deploy beneficial technology, rather than become an indefinite instruction to wait.
 
@@ -219,7 +223,7 @@ Can we apply that same logic everywhere? An autonomous taxi operates within a de
 
 Meta’s [September Muse announcement](https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/) makes the shift from answering to acting tangible. Personal AI can carry out tasks through connected tools. Meta describes permission boundaries and checks for sensitive actions. Those claims deserve testing because convenience encourages us to delegate more authority over time.
 
-Local computing is widening the possibilities too. [NVIDIA’s DGX Spark](https://nvidianews.nvidia.com/news/nvidia-dgx-spark-arrives-for-worlds-ai-developers) and [Apple’s M5 Pro and M5 Max](https://www.apple.com/newsroom/2026/03/apple-debuts-m5-pro-and-m5-max-to-supercharge-the-most-demanding-pro-workflows/) support running AI workloads on personal machines. This does not establish that millions of people already have autonomous portfolio managers. It does mean we should stop imagining that consequential AI will only operate inside a few laboratories. With suitable software and account permissions, an agent can move from advice to action. Cloud access already offers another route.
+Local computing is widening the possibilities too. [NVIDIA’s DGX Spark](https://nvidianews.nvidia.com/news/nvidia-dgx-spark-arrives-for-worlds-ai-developers) and [Apple’s M5 Pro and M5 Max](https://www.apple.com/newsroom/2026/03/apple-debuts-m5-pro-and-m5-max-to-supercharge-the-most-demanding-pro-workflows/) support running AI workloads on personal machines. With suitable software and account permissions, an agent can move from advice to action on personal hardware; cloud access offers another route. Widespread autonomous portfolio management remains a scenario to examine, rather than an established consequence of those product launches.
 
 Imagine many users giving their agents the same reasonable instruction: protect my savings when the market starts falling. If the agents read similar signals and sell together, their orders can deepen the fall and trigger more selling. Each may be obeying its owner. The combined outcome can still be destructive.
 
@@ -233,7 +237,7 @@ Nor is finance an unregulated blank page. [ESMA’s February 2026 briefing](http
 
 A single danger score for an AI company would tell us too little. We need to examine the task, the permissions, the firms responsible and the exposures they share. Who can limit orders? Who can reconstruct a decision? Who watches the combined effect, and who can stop activity before local mistakes become a wider crisis?
 
-That is the tension I want to leave people with. We should make it easier to learn from responsible deployment. We should also recognise when scaling a useful product changes the nature of the risk.
+We should make it easier to learn from responsible deployment. We should also recognise when scaling a useful product changes the nature of the risk.
 
 ## Return to the photograph
 
@@ -247,10 +251,8 @@ Above all, we need a better answer than “trust us” from anyone asking to sha
 
 <blockquote class="blog-pullquote"><p>The question is whether we can keep the ability to challenge, limit and redirect what we are building while there is still time for those choices to matter.</p></blockquote>
 
-## Slides and further discussion
+## Related presentation
 
-This article accompanies my UCL seminar, **Who Decides When AI Is Trustworthy? The EU AI Act, Standards and the Limits of Assurance**. It reflects the public record available on **7 October 2026**; the linked reports distinguish company accounts, proposals and enacted measures.
+For a visual exploration of these questions, **Who Decides When AI Is Trustworthy? The EU AI Act, Standards and the Limits of Assurance** includes the household-robot scenario, institutional diagrams and further sources. This article reflects the public record available on **7 October 2026**.
 
 [Open the full presentation]({{ '/presentations/ucl-ai-trust/slides.html' | relative_url }}) · [Read the speaker notes]({{ '/presentations/ucl-ai-trust/notes.html' | relative_url }}) · [Browse sources and image credits]({{ '/presentations/ucl-ai-trust/sources.md' | relative_url }})
-
-The illustrations above are live HTML slides. Each has a full-size link. For a linked presenter window, open the deck and press **V**; keep slides and notes on separate, extended displays. The notes are public companion material. The deck remains a working edition as the seminar develops.

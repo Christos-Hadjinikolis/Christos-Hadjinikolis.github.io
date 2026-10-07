@@ -16,7 +16,7 @@ Christos wants to glance at notes, understand the points he must communicate, an
 - Follow the thought: premise, example or explanation, then implication or question. Adapt this order to the slide rather than imposing a formula.
 - Write in a direct, conversational voice. First-person phrasing is useful when appropriate. Leave space for the presenter to add his experience and respond to the audience.
 - Keep transitions short and attach them to a substantive point where possible. Do not inflate the count with housekeeping or delivery instructions.
-- Match CLICK labels to actual reveal order. Brief facilitation directions can sit inside a discussion bullet.
+- Match CLICK labels to actual reveal order. Keep facilitation directions in the separate delivery cue, so the speaking bullets can be read aloud naturally.
 - Keep sources, detailed history and optional preparation in separate or collapsed background. Keep essential factual qualifications in the live cue; brevity must not change the claim.
 
 Weak cue: “Standards — quality.”
@@ -43,5 +43,7 @@ Show the speaking-point count on each notes card and keep the lead-in separate f
 ## Public UCL edition
 
 The user authorised publishing the UCL deck and presenter notes on the website. After further slide edits, run `python3 scripts/export_ucl_seminar.py` to refresh `presentations/ucl-ai-trust/`. This exports only public fields and omits slides with `private_source`; never copy the entire preparation folder. The companion post is `content/_posts/2026-10-07-who-decides-when-ai-is-trustworthy.md`. Keep stable slide links and embedded HTML illustrations in step with cuts. End the main presentation on the chosen closing image; keep optional backups outside the normal presentation flow. Public presenter notes are accessible to everyone. Follow the publishing and Git skills before committing or pushing; an export alone does not deploy anything.
+
+A companion article must stand on its own. Turn presentation material into direct storytelling and argument; do not explain why the presenter chose an image, advise how an event should be retold, or narrate the construction of the seminar. Keep optional deck and notes links in a short related-presentation footer.
 
 For article illustrations, prefer the `seminar-slide.html` include with a stable slide key over screenshots. It embeds the actual slide HTML at 16:9 and includes a full-size link. Use images only where needed for social-card metadata; never stretch a slide image. The export checks that article embed keys still exist after cuts.

@@ -131,13 +131,17 @@ Visual: Original logos: European Commission, CEN-CENELEC and ETSI. Identificatio
 
 Visual: Original CEN-CENELEC logo; committee labels are explanatory badges, not certification marks.
 
-## 21. National voices. Shared European drafting.
+## 21. National voices. Shared European decisions.
 
 - https://boss.cen.eu/technicalstructures/pages/jointcenclctcs/
 - https://boss.cen.eu/technicalstructures/pages/tcwg/
 - https://www.cencenelec.eu/areas-of-work/cen-cenelec-topics/artificial-intelligence/
 - https://www.iso.org/member/1640.html
 - https://www.cys.org.cy/en/o-organismos/poioi-eimaste/
+- https://jtc21.eu/your-first-steps-in-standardisation/
+- https://www.cencenelec.eu/european-standardization/european-standards/
+- https://boss.cen.eu/reference-material/guidancedoc/pages/fvvoting/
+- https://boss.cen.eu/reference-material/guidancedoc/pages/tcnewwi/
 
 ## 22. Five groups. One assurance problem.
 

@@ -94,7 +94,7 @@ Passing the law is one achievement; making it work is the harder test.
 
 Judgment Day is a powerful image, but what risks can we actually assess today?
 
-- Judgment Day makes loss of control memorable. It does not tell us the probability or date of a catastrophe.
+- In Terminator, giving machines control ends in catastrophe. That story does not tell us the likelihood or timing of real-world harm.
 - Restrict permissions, test, contain, monitor and require scrutiny. These reduce risk without guaranteeing safety.
 - Harm does not require a machine to hate us. A system can pursue the wrong version of our goal very effectively.
 
@@ -114,7 +114,7 @@ Misalignment concerns both what AI pursues and what rewards the people building 
 
 The incentive problem is simple: even firms that want restraint fear falling behind.
 
-- Commercial pressure can pull deployment away from society’s needs. He welcomes voluntary restraint as an interim step, not a replacement for public regulation.
+- Obama’s point is that commercial pressure can pull deployment away from society’s needs. He welcomes voluntary restraint as an interim step, not a replacement for public regulation.
 - Glasswing organises cooperation; Hassabis proposes mandatory review. Both recognise a need for coordination beyond firms racing independently.
 - If waiting is safer but going first pays, who can afford to wait? What makes firms account for harms borne by people outside the transaction?
 
@@ -205,21 +205,23 @@ CEN and CENELEC organise that technical work through joint committees.
 - CLICK 1 · JTC 21 covers AI; JTC 13 covers cybersecurity and data protection. They cooperate where those subjects meet.
 - The committee sets up working groups and appoints convenors. People then enter through national or other recognised participation routes.
 
-## 21. National voices. Shared European drafting.
+## 21. National voices. Shared European decisions.
 
-**14:55–15:40 · 3 speaking points**
+**14:55–16:00 · 5 speaking points**
 
 Here is how expertise from Cyprus reaches the European drafting table.
 
-- The Cyprus Standardisation Organisation connects local expertise to European work: nominations, comments and national positions.
-- Committee delegates bring national positions. Working-group experts contribute in a personal technical capacity, while staying aware of those positions.
-- Committees direct work; experts draft; consultation and voting shape the result. ISO/IEC cooperation brings international foundations into that work.
+- The Cyprus Standardisation Organisation connects local expertise to European work. Committee delegates bring national positions; working-group experts contribute their technical expertise.
+- CLICK 1 · A New Work Item proposal defines the need and scope. National members ballot on whether to start the project.
+- The working group drafts towards consensus: general agreement after working through substantive objections. It does not require unanimity.
+- Public enquiry opens the draft for comments through national bodies. They submit comments and votes; the technical group resolves objections and revises the text.
+- A formal vote, where needed, leads to publication as a European Standard. National bodies vote, rather than individual experts. EU listing for the legal benefit comes separately.
 
 ## 22. Five groups. One assurance problem.
 
-**15:40–16:05 · 3 speaking points**
+**16:00–16:25 · 3 speaking points**
 
-Before zooming into my group, here is the wider division of work.
+JTC 21 divides this work between five groups, each tackling a different part of the problem.
 
 - WG1 handles strategy; WG2 operations; WG3 engineering; WG4 foundations and society; WG5 cybersecurity. These are complementary jobs.
 - A technically strong system can still have weak organisational controls or harmful societal effects. Engineering cannot settle all those questions alone.
@@ -227,7 +229,7 @@ Before zooming into my group, here is the wider division of work.
 
 ## 23. WG3: what can engineers specify and test?
 
-**16:05–16:30 · 3 speaking points**
+**16:25–16:50 · 3 speaking points**
 
 So what concerns WG3? What engineers can specify and test—we operate across three verticals.
 
@@ -237,7 +239,7 @@ So what concerns WG3? What engineers can specify and test—we operate across th
 
 ## 24. Standards agree a method. Harmonised standards link it to law.
 
-**16:30–17:10 · 3 speaking points**
+**16:50–17:30 · 3 speaking points**
 
 The key distinction is the connection to law: both are standards, but harmonised standards serve specific EU duties.
 
@@ -247,7 +249,7 @@ The key distinction is the connection to law: both are standards, but harmonised
 
 ## 25. The EU lists the method. You gain a legal starting point.
 
-**17:10–17:55 · 3 speaking points**
+**17:30–18:15 · 3 speaking points**
 
 The legal benefit starts when the EU officially lists the relevant standard.
 
@@ -257,7 +259,7 @@ The legal benefit starts when the EU officially lists the relevant standard.
 
 ## 26. Back to the loan: could anyone check the decision?
 
-**17:55–18:20 · 3 speaking points**
+**18:15–18:40 · 3 speaking points**
 
 Let’s bring the standards discussion back to the person refused a loan.
 
@@ -267,7 +269,7 @@ Let’s bring the standards discussion back to the person refused a loan.
 
 ## 27. The Brussels effect: rules travel with products.
 
-**18:20–19:05 · 4 speaking points**
+**18:40–19:25 · 4 speaking points**
 
 Europe’s market can carry its product rules well beyond its borders.
 
@@ -278,7 +280,7 @@ Europe’s market can carry its product rules well beyond its borders.
 
 ## 28. A cap stays put. AI keeps changing.
 
-**19:05–19:55 · 3 speaking points**
+**19:25–20:15 · 3 speaking points**
 
 Caps show how rules can travel; AI shows how much harder agreeing a useful test can be.
 
@@ -288,7 +290,7 @@ Caps show how rules can travel; AI shows how much harder agreeing a useful test 
 
 ## 29. From a proposal to rules and real standards.
 
-**19:55–20:50 · 3 speaking points**
+**20:15–21:10 · 3 speaking points**
 
 So, after five years, what has actually been built—and what remains unfinished?
 
@@ -298,17 +300,17 @@ So, after five years, what has actually been built—and what remains unfinished
 
 ## 30. The next standards are being shaped now.
 
-**20:50–21:20 · 3 speaking points**
+**21:10–21:40 · 3 speaking points**
 
 While we discuss these questions, the standards work is continuing this week in Winterthur.
 
-- JTC 21 is meeting at ZHAW in Switzerland from Tuesday 6 to Friday 9 October, with hybrid participation. This is the next step after the milestones we just saw.
+- JTC 21 is meeting at ZHAW in Switzerland from Tuesday 6 to Friday 9 October, with hybrid participation.
 - WG3’s agenda includes computer-vision tests, dataset quality, bias, robustness and functional safety. The aim is to turn broad duties into things engineers can check.
-- More standards are likely: the AI Board is considering further requests over the next twelve months. But I would not promise a second batch “soon”—agreement, publication and EU listing still have to happen.
+- The AI Board is considering further standardisation requests over the next twelve months. A second batch has no confirmed publication date: drafting, agreement and EU listing are separate steps.
 
 ## 31. Risk determines what companies must do.
 
-**21:20–22:20 · 3 speaking points**
+**21:40–22:40 · 3 speaking points**
 
 The framework gives companies different responsibilities according to the AI use and their role.
 
@@ -318,7 +320,7 @@ The framework gives companies different responsibilities according to the AI use
 
 ## 32. Is a home robot “high-risk”?
 
-**22:20–23:15 · 3 speaking points**
+**22:40–23:35 · 3 speaking points**
 
 Our home robot makes the difference between everyday danger and legal classification concrete.
 
@@ -328,7 +330,7 @@ Our home robot makes the difference between everyday danger and legal classifica
 
 ## 33. Before release: show the evidence
 
-**23:15–23:55 · 4 speaking points**
+**23:35–24:15 · 4 speaking points**
 
 For a high-risk provider, the path is: classify, demonstrate, assess, declare.
 
@@ -339,7 +341,7 @@ For a high-risk provider, the path is: classify, demonstrate, assess, declare.
 
 ## 34. Who checks the check?
 
-**23:55–24:45 · 3 speaking points**
+**24:15–25:05 · 3 speaking points**
 
 Evidence matters, but so does who is allowed to judge it.
 
@@ -349,7 +351,7 @@ Evidence matters, but so does who is allowed to judge it.
 
 ## 35. A legal category is not a risk assessment
 
-**24:45–25:30 · 3 speaking points**
+**25:05–25:50 · 3 speaking points**
 
 A legal category tells us which duties apply; it does not finish the safety analysis.
 
@@ -359,7 +361,7 @@ A legal category tells us which duties apply; it does not finish the safety anal
 
 ## 36. Would you let it into your home?
 
-**25:30–25:45 · 1 speaking point**
+**25:50–26:05 · 1 speaking point**
 
 Now you are the people deciding whether the evidence is enough.
 
@@ -367,27 +369,27 @@ Now you are the people deciding whether the evidence is enough.
 
 ## 37. Start with the chores.
 
-**25:45–27:25 · 3 speaking points**
+**26:05–27:45 · 3 speaking points**
 
 Start with a limited promise: this robot will help with household chores.
 
-- Fictional scenario: toys and laundry on one floor, with an adult present. No cooking, stairs or childcare; the real product image is only an illustration.
-- What is the single most important test or record you would ask for? [Give 20 seconds; take up to three answers.]
+- Imagine chores on one floor, with an adult present: toys and laundry, but no cooking, stairs or childcare. This is a hypothetical use, not a claim about the pictured product.
+- What is the single most important test or record you would ask for?
 - Approve with conditions, refuse or ask for more evidence. “Safe” is a goal; ask what observation would demonstrate it.
 
 ## 38. Now add a baby.
 
-**27:25–29:15 · 3 speaking points**
+**27:45–29:35 · 3 speaking points**
 
 Change one fact: the robot is now expected to look after a baby.
 
 - The adult now wants to go out and leave the robot watching the baby. Approval for chores does not cover that new task.
 - Does “watching” mean observe, alert or physically intervene? Who can respond, and how quickly?
-- What new evidence would change your answer? [Take two reasons.] Refusing this use is a legitimate outcome of the exercise.
+- What new evidence would change your answer? Refusing this use is a reasonable decision too.
 
 ## 39. “99.9% successful.” Would that convince you?
 
-**29:15–30:20 · 3 speaking points**
+**29:35–30:40 · 3 speaking points**
 
 A very high success rate sounds reassuring—until we ask what was measured.
 
@@ -397,27 +399,27 @@ A very high success rate sounds reassuring—until we ask what was measured.
 
 ## 40. Two more facts. Do you still approve?
 
-**30:20–31:25 · 3 speaking points**
+**30:40–31:45 · 3 speaking points**
 
 Approval can change when we learn who has access and what can be updated.
 
 - In our fictional scenario a remote operator can see inside the home, and an update expands capability. The connection is not guaranteed.
 - Assistance may reduce one risk while adding privacy, security and response-time concerns. Who authorises that access?
-- Which earlier evidence is no longer sufficient? [Take one or two answers.] Even “just stop” may be unsafe if the robot is holding something.
+- Which earlier evidence is no longer sufficient? Even “just stop” may be unsafe if the robot is holding something.
 
 ## 41. Turn concern into an approval record.
 
-**31:25–32:35 · 3 speaking points**
+**31:45–32:55 · 3 speaking points**
 
 Let’s turn your concerns into a decision somebody can inspect and challenge.
 
-- State the permitted use, supporting evidence, uncertainty, decision owner and review triggers. Do not leave approval as a vague yes.
-- Consider constrained chores after suitable evidence; withhold sole-childcare approval. This is an illustration, not necessarily the room’s consensus.
+- An approval needs a permitted use, supporting evidence, uncertainty, a decision owner and review triggers. A vague yes leaves too much unresolved.
+- I could consider constrained chores after suitable evidence, while withholding sole-childcare approval. You may reach a different decision; the reasons need to be visible.
 - Requirements, tests, documentation, oversight and change control. Which decisions came from evidence, and which still required a value judgement?
 
 ## 42. A human in the loop. Or a human on the poster?
 
-**32:35–33:05 · 3 speaking points**
+**32:55–33:25 · 3 speaking points**
 
 “Humans are in control” sounds reassuring. Is it tangible, or just an advertisement?
 
@@ -427,7 +429,7 @@ Let’s turn your concerns into a decision somebody can inspect and challenge.
 
 ## 43. The world does not follow the prompt.
 
-**33:05–33:10 · 1 speaking point**
+**33:25–33:30 · 1 speaking point**
 
 The world does not follow the prompt. Our robot has to deal with what actually happens.
 
@@ -435,7 +437,7 @@ The world does not follow the prompt. Our robot has to deal with what actually h
 
 ## 44. Embodied AI: sensing and acting.
 
-**33:10–33:45 · 3 speaking points**
+**33:30–34:05 · 3 speaking points**
 
 Imagine AI that senses and acts through a physical body. That is embodied AI.
 
@@ -445,7 +447,7 @@ Imagine AI that senses and acts through a physical body. That is embodied AI.
 
 ## 45. LeCun’s challenge: predict consequences
 
-**33:45–34:40 · 4 speaking points**
+**34:05–35:00 · 4 speaking points**
 
 This is why Yann LeCun argues that we need more than increasingly fluent language models.
 
@@ -456,7 +458,7 @@ This is why Yann LeCun argues that we need more than increasingly fluent languag
 
 ## 46. Can we simulate our way to safety?
 
-**34:40–35:05 · 3 speaking points**
+**35:00–35:25 · 3 speaking points**
 
 If reality is expensive and dangerous to learn from, can we practise inside a simulation?
 
@@ -466,7 +468,7 @@ If reality is expensive and dangerous to learn from, can we practise inside a si
 
 ## 47. Practise the dangerous moment before it happens.
 
-**35:05–35:50 · 3 speaking points**
+**35:25–36:10 · 3 speaking points**
 
 Waymo makes simulation useful by connecting it to events and measurements from the road.
 
@@ -476,7 +478,7 @@ Waymo makes simulation useful by connecting it to events and measurements from t
 
 ## 48. Real roads. Encouraging evidence.
 
-**35:50–36:25 · 3 speaking points**
+**36:10–36:45 · 3 speaking points**
 
 The US deployment gives us something we cannot get from a demonstration: measured outcomes on real roads.
 
@@ -486,7 +488,7 @@ The US deployment gives us something we cannot get from a demonstration: measure
 
 ## 49. Waiting has a cost. So does moving too fast.
 
-**36:25–37:05 · 3 speaking points**
+**36:45–37:25 · 3 speaking points**
 
 Places that let responsible trials happen can build experience while others are still debating how to begin.
 
@@ -496,7 +498,7 @@ Places that let responsible trials happen can build experience while others are 
 
 ## 50. No body. Still able to act.
 
-**37:05–37:45 · 3 speaking points**
+**37:25–38:05 · 3 speaking points**
 
 An agent does not need a robot body. Give it tools and it can change things outside the chat.
 
@@ -506,7 +508,7 @@ An agent does not need a robot body. Give it tools and it can change things outs
 
 ## 51. A million sensible agents. One unstable market?
 
-**37:45–38:40 · 3 speaking points**
+**38:05–39:00 · 3 speaking points**
 
 Imagine many people telling a portfolio agent: protect my savings when the market starts falling.
 
@@ -516,7 +518,7 @@ Imagine many people telling a portfolio agent: protect my savings when the marke
 
 ## 52. Who can stop the feedback loop?
 
-**38:40–39:25 · 3 speaking points**
+**39:00–39:45 · 3 speaking points**
 
 This brings us back to risk assessment: assess the use, the firms responsible and the system they create together.
 
@@ -526,7 +528,7 @@ This brings us back to risk assessment: assess the use, the firms responsible an
 
 ## 53. Who is in control? Show us.
 
-**Discussion · after 39:25 planned content · 3 speaking points**
+**Discussion · after 39:45 planned content · 3 speaking points**
 
 I want the breakthroughs. I also want control we can demonstrate when something goes wrong.
 
@@ -542,7 +544,7 @@ The arms-race analogy is useful if we also notice where it breaks down.
 
 - Strategic advantage, mistrust and pressure to move first. Nuclear governance also raises the difficult question of verifying restraint.
 - AI has broad civilian uses, copyable software and many private actors, although compute remains physical. Nuclear technology has civilian uses too.
-- Use the analogy to ask better questions about incentives and verification. Calling it a race does not tell us what a sensible finish line is.
+- The shared problems are incentives and verifying restraint. Calling it a race does not tell us what a sensible finish line is.
 
 ## 55. Can Europe afford to regulate?
 
@@ -582,7 +584,7 @@ We can address present harms while being honest about uncertain future capabilit
 
 - Security failures, deception, discrimination and unreliable decisions already give us harms to investigate.
 - More severe loss-of-control scenarios deserve attention, but their timing and likelihood remain disputed.
-- Separate observations from extrapolations. What evidence would change our assessment in either direction?
+- Observed harm and predictions about future harm need different evidence. What would change our assessment in either direction?
 
 ## 59. A conditional decision. Not a universal green light.
 
