@@ -16,6 +16,6 @@ A discussion-led seminar connecting production machine learning, European AI sta
 
 [Read the companion article]({{ '/blog/who-decides-when-ai-is-trustworthy/' | relative_url }}) · [Open the slides]({{ '/presentations/ucl-ai-trust/slides.html' | relative_url }}) · [Speaker notes and presenter view]({{ '/presentations/ucl-ai-trust/notes.html' | relative_url }})
 
-<a href="{{ '/presentations/ucl-ai-trust/slides.html' | relative_url }}"><img src="{{ '/assets/images/posts/2026/who-decides-ai-trust/human-consequences.png' | relative_url }}" alt="Slide from the UCL seminar: the decision is automated, the consequences are human." loading="lazy" width="1600" height="900" style="max-width:100%;height:auto" /></a>
+{% include seminar-slide.html key="original-12" title="The consequences of automated decisions" caption="Live HTML from the UCL seminar. Open full-size for a closer look." %}
 
 The slides are a working edition. For a linked presenter window, open the deck and press **V**. Use extended displays to keep your notes off the projector.

@@ -68,4 +68,4 @@ addEventListener('keydown',e=>{if(e.key.toLowerCase()==='v'&&!['INPUT','TEXTAREA
 setInterval(sendPresenterState,250);
 
 show((parseInt(location.hash.slice(1))||1)-1);setInterval(tick,250);
-</script></body></html>
+</script><script>const chosen=new URLSearchParams(location.search);if(chosen.has('preview')&&chosen.has('slide')){motion=false;document.body.classList.add('motion-paused');}const requested=DATA.findIndex(s=>s.key===chosen.get('slide'));if(requested>=0)show(requested);if(chosen.get('reveal')==='all'){step=maxStep();paintSteps();}</script></body></html>

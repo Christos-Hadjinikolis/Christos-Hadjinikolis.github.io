@@ -1,0 +1,6 @@
+<figure class="seminar-embed">
+  <div class="seminar-embed__frame">
+    <iframe src="{{ '/presentations/ucl-ai-trust/slides.html' | relative_url }}?preview=1&amp;slide={{ include.key | url_encode }}&amp;reveal=all" title="{{ include.title | escape }}" loading="lazy" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+  <figcaption>{{ include.caption }} <a href="{{ '/presentations/ucl-ai-trust/slides.html' | relative_url }}?slide={{ include.key | url_encode }}&amp;reveal=all" target="_blank" rel="noopener">Open this slide full-size ↗</a></figcaption>
+</figure>

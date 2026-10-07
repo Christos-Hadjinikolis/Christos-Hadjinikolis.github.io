@@ -43,3 +43,5 @@ Show the speaking-point count on each notes card and make anchors visually disti
 ## Public UCL edition
 
 The user authorised publishing the UCL deck and presenter notes on the website. After further slide edits, run `python3 scripts/export_ucl_seminar.py` to refresh `presentations/ucl-ai-trust/`. This exports only public fields and omits slides with `private_source`; never copy the entire preparation folder. The companion post is `content/_posts/2026-10-07-who-decides-when-ai-is-trustworthy.md`. Keep slide links and selected screenshots in step with numbering changes. Public presenter notes are accessible to everyone. Follow the publishing and Git skills before committing or pushing; an export alone does not deploy anything.
+
+For article illustrations, prefer the `seminar-slide.html` include with a stable slide key over screenshots. It embeds the actual slide HTML at 16:9 and includes a full-size link. Use images only where needed for social-card metadata; never stretch a slide image. The export checks that article embed keys still exist after cuts.

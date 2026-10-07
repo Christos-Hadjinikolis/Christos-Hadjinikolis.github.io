@@ -5,7 +5,7 @@ Run after editing/rebuilding tmp/ucl-seminar. Only the explicitly listed public
 fields are exported; a slide marked private_source is omitted entirely.
 """
 from pathlib import Path
-import json, shutil, subprocess, sys, tempfile
+import json, re, shutil, subprocess, sys, tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "tmp/ucl-seminar"
@@ -27,6 +27,11 @@ def main():
         item["cue"] = ""
         item["note"] = item["intro"] + "\n" + "\n".join(item["bullets"])
         public.append(item)
+    keys = {slide["key"] for slide in public}
+    for page in [ROOT / "content/_posts/2026-10-07-who-decides-when-ai-is-trustworthy.md", ROOT / "content/pages/presentations.md"]:
+        embedded = set(re.findall(r'include seminar-slide.html key="([^"]+)"', page.read_text()))
+        if embedded - keys:
+            raise ValueError(f"Update removed slide embeds in {page.name}: {sorted(embedded - keys)}")
     with tempfile.TemporaryDirectory(prefix="ucl-public-") as folder:
         work = Path(folder)
         (work / "research").mkdir()
@@ -38,6 +43,10 @@ def main():
         DEST.mkdir(parents=True, exist_ok=True)
         for filename in ["slides.html", "notes.html", "notes.md", "sources.md"]:
             text = (work / filename).read_text()
+            if filename == "slides.html":
+                # Stable identifiers survive slide cuts/reordering; article embeds show all builds.
+                init = "const chosen=new URLSearchParams(location.search);if(chosen.has('preview')&&chosen.has('slide')){motion=false;document.body.classList.add('motion-paused');}const requested=DATA.findIndex(s=>s.key===chosen.get('slide'));if(requested>=0)show(requested);if(chosen.get('reveal')==='all'){step=maxStep();paintSteps();}"
+                text = text.replace("</body>", "<script>" + init + "</script></body>")
             if filename == "sources.md":
                 text = text.replace("Historical extended notes are in archive/before-presenter-cues-2026-10-06/.", "Public presentation references and image credits.")
             for forbidden in ["private_source", "N1275", "/Users/", "Registration deadline passed"]:

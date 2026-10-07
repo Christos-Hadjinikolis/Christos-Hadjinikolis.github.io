@@ -1959,6 +1959,7 @@
 	}
 
 	.blog-figure img {
+		height: auto;
 		background: rgba(255, 255, 255, 0.82);
 		border: 1px solid rgba(30, 43, 52, 0.08);
 		border-radius: 1.2rem;
@@ -4318,3 +4319,10 @@
 			}
 
 	}
+
+// Live seminar slides retain the deck's 1600 × 900 canvas at every viewport.
+.seminar-embed { margin: 2rem auto; width: 100%; max-width: 58rem; }
+.seminar-embed__frame { position: relative; width: 100%; height: 0; padding-top: 56.25%; overflow: hidden; background: #121313; border-radius: .5rem; }
+.seminar-embed__frame iframe { position: absolute; inset: 0; display: block; width: 100%; height: 100%; min-height: 0; border: 0; }
+.seminar-embed figcaption { margin-top: .7rem; font-size: .86rem; line-height: 1.6; }
+.seminar-embed figcaption a { display: inline-block; margin-left: .25em; }
