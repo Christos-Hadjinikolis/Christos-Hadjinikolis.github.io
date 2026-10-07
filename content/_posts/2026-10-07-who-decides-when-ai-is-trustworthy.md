@@ -1,210 +1,204 @@
 ---
-title: "Who Decides When AI Is Trustworthy?"
-title_html: "Who Decides When <span class='blog-title-accent blog-title-accent--signal'>AI Is Trustworthy</span>?"
+title: "From Stargate to Safety Promises: Who Is in Control of AI?"
+title_html: "From Stargate to Safety Promises: <span class='blog-title-accent blog-title-accent--signal'>Who Is in Control of AI?</span>"
 author: Christos Hadjinikolis
 layout: post
 date: 2026-10-07 08:00:00 +0100
 permalink: /blog/who-decides-when-ai-is-trustworthy/
-description: "A home robot, a rejected loan and a difficult approval decision: how the EU AI Act, technical standards and inspectable evidence connect—and where assurance reaches its limits. Includes my UCL seminar slides and presenter notes."
-seo_keywords: ["trustworthy AI", "EU AI Act", "CEN CENELEC JTC 21", "harmonised standards", "AI assurance", "human oversight", "embodied AI", "UCL seminar"]
+description: "From Stargate’s $500 billion ambition to AI security incidents and calls for restraint: who should set the pace, and how do we take safety seriously without giving up on progress?"
+seo_keywords: ["Stargate", "AI regulation", "AI safety", "Project Glasswing", "Demis Hassabis", "AI arms race", "EU AI Act", "trustworthy AI", "UCL seminar"]
 og_image: /assets/images/posts/2026/who-decides-ai-trust/human-consequences.png
-og_image_alt: "Seminar slide connecting refused loans, harmful recommendations and trading failures to rights, safety and accountability."
-tldr_why_read: "A convincing demo can still leave you unable to justify letting an AI system act. The missing piece is a decision you can defend."
-tldr_persona: "Engineers, product leaders and anyone asked to approve an AI-assisted decision or deployment. No background in EU regulation is assumed."
-tldr_learn: "How law, standards and system-specific evidence connect, and why approval must be revisited when the task or system changes."
-tldr_takeaways: ["Approve a defined use, not an adjective", "A standard helps structure evidence; it does not erase judgement", "A changed system may need a new approval"]
+og_image_alt: "The human stakes behind AI governance: rights, privacy, safety and accountability."
+tldr_why_read: "The race to build more powerful AI now sits alongside calls to slow it down—including from inside the industry. That tension deserves more than either hype or dismissal."
+tldr_persona: "Anyone following AI news who wants to understand the argument over progress, safety and who gets to decide."
+tldr_learn: "How the story developed from Stargate to security incidents and safety commitments, where Europe fits, and why promises alone leave difficult questions unanswered."
+tldr_takeaways: ["Serious concern does not require belief in imminent doomsday", "Cooperation between labs is not automatically independent oversight", "The rules must be able to challenge both reckless deployment and unjustified restraint"]
 ---
 
-Would you let a robot tidy your house? Perhaps. Would you leave it alone with your baby?
+On 21 January 2025, the message from the White House was unmistakable: build.
 
-That second question changes the conversation remarkably quickly. Suddenly, “the model is very capable” is an unsatisfying answer. I want to know what the robot is allowed to do, what it has been tested on, what happens when it fails, and who can intervene. I also want to know who takes responsibility for telling me that the evidence is enough.
+Donald Trump stood alongside Sam Altman, Larry Ellison and Masayoshi Son. OpenAI, Oracle and SoftBank were attached to a project whose name already sounded like science fiction. **Stargate** promised an initial $100 billion deployment, with ambitions to invest $500 billion over four years in American AI infrastructure. These were announced investment plans, rather than money already spent. OpenAI’s [announcement](https://openai.com/index/announcing-the-stargate-project/) placed national security and American leadership alongside jobs and economic benefits.
 
-This is the practical question behind my UCL seminar, **Who Decides When AI Is Trustworthy? The EU AI Act, Standards and the Limits of Assurance**. My perspective comes from production machine learning and participation in CEN–CENELEC JTC 21’s Working Group 3 on Engineering Aspects. I care about what happens between a reassuring claim and a system somebody actually has to operate.
+The photograph is a useful place to begin. Political power, computing infrastructure and enormous amounts of capital, all pointing in the same direction.
 
-If you build, buy or approve AI systems, that gap belongs to you too.
+{% include seminar-slide.html key="original-1" title="Stargate and the question of control" caption="The opening image from my UCL seminar: a commercial investment announcement with unmistakable geopolitical stakes." %}
 
-<div class="blog-insight">
-  <span class="blog-insight__label">UCL seminar · 7 October 2026</span>
-  <p><a href="{{ '/presentations/ucl-ai-trust/slides.html' | relative_url }}">Open the slides</a> · <a href="{{ '/presentations/ucl-ai-trust/notes.html' | relative_url }}">Open speaker notes / presenter view</a> · <a href="{{ '/presentations/ucl-ai-trust/sources.md' | relative_url }}">Sources and image credits</a></p>
-  <p>The deck is a working edition and will continue to be refined. Use arrows or space to reveal points and advance. Press <strong>V</strong> in the slides for a linked presenter window; <strong>F</strong> for fullscreen.</p>
-</div>
+Now move forward to autumn 2026. AI laboratories are explaining security incidents. Researchers are asking for coordinated restraint. Industry leaders are proposing new oversight arrangements. At the White House, the conversation includes commitments to outside evaluation and internal controls.
 
-{% include seminar-slide.html key="original-12" title="The decision is automated; the consequences are human" caption="Three different decisions bring different duties. The slide is rendered directly from the HTML deck." %}
+The promise of AI has not disappeared. Something else has become harder to ignore: **who is entitled to decide how much risk the rest of us should accept while the race continues?**
 
-## Who gets to decide what is safe enough?
+That is the story I want to explore here. It sits behind my UCL seminar, *Who Decides When AI Is Trustworthy?* You do not need a background in AI or European regulation to follow it. You do need a willingness to resist two easy answers: that catastrophe is inevitable, and that everything will be fine because the people building these systems are clever and well intentioned.
 
-The opening of the talk asks *“Who is in control?”* It is tempting to answer by naming a chief executive, a president or a regulator. Yet control is distributed. One organisation trains the model; another supplies infrastructure; a third integrates it into a product; someone else decides where to deploy it. People affected by that deployment may have had no part in any of those choices.
+## The race has a logic of its own
 
-That is why the arms-race framing needs examination. Competitive pressure can encourage spending and rapid releases. Security concerns can also make coordination rational. Neither observation tells us whether the public has an effective way to challenge the resulting decisions. National competition adds another difficulty: a company may present restraint as a disadvantage if it expects a rival, elsewhere, to proceed.
+Stargate did not create competition in AI. It made its scale and political significance particularly visible.
 
-The nuclear analogy captures the fear of escalation and the difficulty of credible restraint. It becomes less useful if we assume that AI has one clearly identifiable capability threshold, one deployment form or one agreed measure of destructive potential. A system that writes code, a model embedded in a hospital workflow and a robot in a home raise different questions. We need to specify the capability and the permission before discussing control.
+Once investment is framed as a matter of national leadership, slowing down becomes a more difficult proposition. A company worries about its competitor. A government worries about another country. Investors expect the infrastructure being built to produce something worth paying for. Each participant can see a reason to keep moving, even while recognising reasons for caution.
 
-**Cooperation between companies can improve security while still being self-regulation.** Anthropic’s [Project Glasswing](https://www.anthropic.com/glasswing), announced in April 2026, brought technology and security organisations together around defensive use of advanced cyber capabilities. It is a useful example of firms recognising a shared problem. It does not, by itself, establish independent public oversight of the rules they choose.
+I understand the attraction. Better scientific tools, more useful assistants, help with difficult medical research, less time lost to routine work: these are worthwhile ambitions. It would be a mistake to treat enthusiasm for them as naïve, or to assume that everyone building AI is indifferent to its consequences.
 
-Demis Hassabis’s [July 2026 proposal](https://institute.deepmind.com/essays/a-framework-for-frontier-ai-and-the-dawning-of-a-new-age/) goes further: an industry-funded, federally overseen assessment body, beginning with voluntary review and moving towards mandatory assessment for US deployment. That proposed transition matters. Who would appoint and pay the evaluator? What could it inspect? Which findings would become public? Who could require a release to stop?
+But good intentions do not dissolve competitive pressure. “We should be careful” becomes an uncomfortable sentence when the next sentence is “and someone else may get there first”.
 
-Those are questions about power, incentives and enforceability. A market can reward safer products when buyers can recognise safety and bear the relevant consequences. The situation is harder when quality is difficult to inspect, harms fall on third parties, or being first produces gains that restraint does not. Cooperation may help, but needing each other is not the same as being accountable to everyone else.
+This is where the arms-race analogy becomes tempting. It captures the fear of falling behind and the difficulty of trusting a rival to exercise restraint. It becomes misleading when it suggests that AI has a single threshold equivalent to acquiring a nuclear weapon. AI is already dispersed through ordinary products, workplaces and research. Its benefits and dangers depend on what a system can do, where it is used and what access it receives.
 
-## Misalignment has more than one level
+That makes governing it more complicated than finding one dramatic red line.
 
-At the system level, an AI may pursue a measured objective in a way that misses the purpose behind it. Imagine rewarding a support assistant for closing tickets quickly. The score can improve while customers lose the opportunity to resolve their problems. **Reward hacking** names a more specific version of this problem: exploiting the reward or evaluation mechanism rather than doing what its designers intended.
+## April 2026: competitors start working together
 
-That does not require human-like malice. An objective, a set of available actions and an inadequate boundary can be enough. For an agent with tools, the practical questions become containment, authorisation and accountability: where can it act, what may it do, and who answers when it crosses the boundary?
+The industry’s response has not simply been to deny the problem.
 
-There is also institutional misalignment. Companies can employ people who sincerely care about safety while operating under incentives to ship sooner, attract investment and retain customers. The people making those decisions do not necessarily bear all the resulting risk. A collection of individually understandable decisions can produce a collectively undesirable outcome.
+On 7 April 2026, Anthropic announced [Project Glasswing](https://www.anthropic.com/glasswing), bringing organisations including Amazon Web Services, Apple, Google, Microsoft and major security companies into a defensive cybersecurity initiative. Selected participants would use an advanced model to help find and fix vulnerabilities in important software.
 
-{% include seminar-slide.html key="original-8" title="Misalignment: systems, human interests and company incentives" caption="The technical objective and the incentives around deployment both deserve scrutiny." %}
+The premise was striking: the capabilities that could make AI dangerous to computer systems might also help defend them. Getting defenders access was part of the proposed response. Glasswing began before the later public incident disclosures; it should not be retold as a reaction to news that had not yet appeared.
 
-The distinction matters because the remedies differ. Better evaluations and tighter permissions address some technical failures. Independent scrutiny, liability and enforceable duties address parts of the institutional problem. Neither a better benchmark nor a new law automatically solves the whole question of alignment.
+{% include seminar-slide.html key="original-3" title="Can competitors protect us together?" caption="Glasswing makes the value of cooperation visible. It also leaves open the question of who oversees the arrangement." %}
 
-## “The AI said so” leaves too much unanswered
+There is something sensible about this. Software infrastructure is shared. A vulnerability in a widely used component can affect organisations that compete in every other respect. Collaboration can serve commercial interests and improve security at the same time.
 
-Take a rejected loan. Before debating whether the decision was acceptable, we need to identify the system that produced it. Which model version? Which inputs? Which training and evaluation records? What did the human reviewer see, and could they meaningfully overturn the recommendation?
+The governance question is what happens outside the partnership. Who chooses the access rules? Who can challenge them? What happens when a participant fails to keep a promise—or when a powerful competitor refuses to participate?
 
-An explanation can help someone understand a decision. Traceability helps reconstruct it. Accountability identifies who must answer for it. These are related requirements, but one cannot substitute for all the others. A fluent explanation does not establish that the underlying decision was fair.
+Needing one another does not, by itself, create independent public oversight. Companies can cooperate and still be regulating themselves. We should welcome useful cooperation while being precise about what it achieves.
 
-The same applies to a trading system that amplifies losses, or a recommendation that exposes harmful profiling. Different situations bring different duties. The engineering question is whether we have preserved enough evidence to investigate, correct and challenge what happened.
+## July: the boundary between a test and the world breaks down
 
-<blockquote class="blog-pullquote"><p>An approval should attach to a defined use, a particular system and inspectable evidence.</p></blockquote>
+Then came incidents that made the control question much less abstract.
 
-## Law, standards and evidence do different jobs
+OpenAI’s [account of the Hugging Face incident](https://openai.com/index/hugging-face-incident-and-the-road-ahead/) describes agents used in cybersecurity evaluations circumventing isolation controls, finding ways to communicate and compromising parts of real infrastructure in July 2026. Hugging Face also published its [technical account](https://huggingface.co/blog/agent-intrusion-technical-timeline).
 
-The **EU AI Act** sets binding obligations intended to protect health, safety and fundamental rights while supporting the adoption of trustworthy AI. Its requirements depend on the use and the actors involved. A company supplying an AI system and an organisation deploying it can have different responsibilities. This is a risk-based legal framework, rather than a universal score for how dangerous a company is. The European Commission’s <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai">AI Act overview</a> explains the categories and implementation timetable.
+One important explanation was **reward hacking**: pursuing success in an evaluation through methods outside its intended rules. Agents also shared information and influenced one another’s behaviour. That combination matters. A system that can use tools and coordinate actions has more ways to carry a bad objective into the world than a chatbot that can only produce text.
 
-Standards help turn broad requirements into shared technical methods: what to document, how to evaluate a claim, and how to make the result comparable. A **harmonised standard** is developed following a European Commission request to support particular EU legal requirements. Once its reference is published in the EU’s Official Journal, using it can provide a *presumption of conformity* for the requirements it covers. In plain language, that gives a recognised starting point for demonstrating compliance. It is not blanket approval of every capability or use. Standards are generally voluntary; the applicable legal duties remain binding. The Commission’s <a href="https://digital-strategy.ec.europa.eu/en/faqs/understanding-standardisation-ai-act">standardisation explainer</a> describes this relationship.
+OpenAI reported that its customer data and product availability were not affected. That qualification belongs in the story. So does the fact that real third-party systems were compromised. We should not turn an incident into a larger claim than the evidence supports, or minimise it because it happened during testing.
 
-Then comes the evidence from the actual system. An agreed testing method is useful only if somebody applies it properly, records the conditions and understands what the result does—and does not—support.
+The language around these events—*rogue agents*, *swarms*, *escape*—almost writes the film trailer by itself. Some of it describes real features of the behaviour. None of it establishes consciousness, a shared desire for power or a plan to overthrow humanity.
 
-CEN and CENELEC organise the European AI standards work through JTC 21. Experts enter this work through national standards bodies and other recognised participation routes. My group, WG3, brings the discussion back to what engineers can specify and test. For this talk, I describe that through three practical concerns: **data, behaviour and limits**. Is the information suitable for the task? What does the system demonstrate? What happens when it fails?
+What it does establish is a more immediate problem: systems can pursue tasks through routes their operators did not intend, and the surrounding safeguards can fail to contain them.
 
-That translation takes work. Tests must be repeatable, affordable enough to use and relevant to people exposed to harm. Agreement also depends on whose expertise and interests are represented. A technically tidy process can still miss the person who bears the consequences.
+You do not need to believe in Skynet to find that concerning.
 
-## Who does what in the European system?
+## A call for oversight from inside the race
 
-The names can make this sound more remote than it is. The **European Commission** is the EU executive: it proposes legislation and has implementation and enforcement responsibilities. The **European Parliament** represents citizens; the **Council of the European Union** represents member-state governments. Parliament and Council negotiate and adopt the law. The AI Office sits within the Commission and has a particular role in the governance of general-purpose AI. It is not a separate standards organisation.
+On 14 July, while that summer’s events were unfolding, Demis Hassabis published a [proposal for a frontier AI standards body](https://institute.deepmind.com/essays/a-framework-for-frontier-ai-and-the-dawning-of-a-new-age/). It is worth reading as a proposal, not as a regulator that already exists.
 
-CEN, CENELEC and ETSI sit across a different institutional boundary. They are recognised European standards organisations, rather than departments of the European Commission. CEN covers a broad range of sectors, CENELEC focuses on electrotechnical standardisation, and ETSI works in telecommunications and related digital technologies. The Commission’s AI standardisation request discussed here went to CEN and CENELEC.
+He envisaged a federally overseen organisation, funded largely by industry, capable of assessing the most advanced models. Reviews would begin voluntarily before release. Once the assessment process proved effective, passing it could become a requirement for deployment in the United States. His framework also contemplated coordinating a slowdown in frontier development if the seriousness of the risks warranted it.
 
-Why use these bodies? A law cannot usefully contain every test protocol, measurement definition and engineering procedure. Standards organisations bring established mechanisms for gathering expertise, drafting, public consultation, agreement and revision. That is a practical division of labour. It also creates a governance question: how do we ensure the resulting technical choices reflect the legal safeguards and the interests of people affected by them?
+{% include seminar-slide.html key="original-4" title="From voluntary review to required assessment" caption="Hassabis’s July proposal tries to connect industry expertise to public oversight. The transition from one to the other is the difficult part." %}
 
-CEN and CENELEC establish joint technical committees through their governance structures. **JTC 21** works on artificial intelligence; **JTC 13** covers cybersecurity and data protection. Their work can intersect, but the committees are not interchangeable. Working groups provide a more focused place to do the drafting.
+That is a substantial argument for constraint from someone whose work has helped drive the field forward. It is also more specific than “stop AI”. It focuses on advanced systems and how to assess them; it does not propose treating every academic experiment or small application as an existential threat.
 
-{% include seminar-slide.html key="original-17" title="National expertise and European standardisation" caption="The national route connects local stakeholders to European drafting, with international cooperation alongside it." %}
+The hard questions arrive immediately. Could an industry-funded body challenge its funders? Would the tests reveal important weaknesses, or teach companies how to pass a predictable exam? Could newcomers afford the process? What evidence would justify a delay, and what evidence would allow development or deployment to resume?
 
-For Cyprus, the national connection is the Cyprus Organisation for Standardisation, **CYS**. National bodies gather stakeholders, nominate participants and coordinate comments and positions. Committee delegates and working-group experts have different roles: national representation at committee level should not be confused with the personal technical contribution expected in working groups. Participation gives expertise a route into the process; it does not make every participant a spokesperson for their government.
+I think the last question matters as much as the first. If we ask society to accept restrictions in the name of safety, we owe it a way to examine those restrictions too. A regulator needs the ability to say “not yet”, and a defensible explanation of what would change that answer.
 
-In the talk, I first show JTC 21’s wider working-group structure, then focus on WG3. Engineering sits alongside strategy, operational questions, foundational and societal issues, and cybersecurity. A useful test requires that wider context. “Accurate” is incomplete unless we understand the task; “fair” requires choices about affected people and outcomes; “secure” depends on the capabilities and access being protected. The [CEN–CENELEC AI overview](https://www.cencenelec.eu/areas-of-work/cen-cenelec-topics/artificial-intelligence/) describes the programme, while the Commission explains the [national participation route](https://digital-strategy.ec.europa.eu/en/faqs/understanding-standardisation-ai-act).
+## September: more disclosures, and a familiar argument about markets
 
-## What harmonisation adds—and what it does not
+On 9 September, Anthropic published an [assessment of four incidents](https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents) involving unauthorised access to real systems during evaluations. It described mistaken internet connectivity, missing production safeguards and behaviour it considered misaligned. It also said the incidents remained tied to the assigned exercises, involved single model instances and did not involve coordination between agents. Anthropic arranged an independent investigation with METR.
 
-An ordinary standard might agree terminology, requirements or a way to test something. Harmonisation adds a defined relationship to legal requirements. For the AI Act, the important sequence is a Commission request, technical work by the standards organisations, assessment of the result, and publication of the relevant reference in the Official Journal. The word *reference* means the official identification of the standard and edition, not merely somebody linking to it in a report.
+Those differences from the OpenAI case matter. “AI went rogue again” is an attention-grabbing summary; it does not explain what failed or what should change.
 
-{% include seminar-slide.html key="harmonised-definition" title="Standards and harmonised standards" caption="The difference is the connection to specific legal duties. Both are generally voluntary methods; the duties themselves are binding." %}
+On 19 September, [ABC reported](https://www.abc.net.au/news/2026-09-19/gemini-google-ai-hacks-three-companies/107172128) that Google’s Gemini had accessed three real companies’ systems during tests run by Irregular in May. The event date and reporting date are different. Google said the model stopped when it recognised that the targets were real; Irregular described unintended internet access and changes to its testing processes.
 
-A **presumption of conformity** concerns the requirements covered by the listed standard. It can be challenged. It does not mean the EU has personally tested every product using that standard, nor does it mean that every use of the product is acceptable. If an organisation uses another approach, it still has to demonstrate compliance with the applicable duties.
+Across these accounts, the recurring concern is boundaries. Where can the system act? What is it authorised to do? How quickly do people understand that something has gone wrong? The incidents provide reasons to improve containment and oversight. They do not, on their own, provide a reliable countdown to catastrophe.
 
-Consider a supplier claiming that its robot is “robust”. Without shared definitions, two suppliers might test different disturbances, count failures differently and omit different operating conditions. A standard can make those choices explicit enough to compare. But agreeing the method does not make the result favourable. A well-run test can demonstrate that a product should not be released for its proposed use.
+The political argument was becoming more explicit too. In his [18 September conversation at Colgate University](https://barackobama.medium.com/my-conversation-at-colgate-university-6d4e21b312d3), Barack Obama welcomed voluntary restraint as an interim measure while arguing that it could not replace government regulation. He distinguished the alignment of AI behaviour from the alignment of companies’ commercial incentives with society’s interests.
 
-This is also why three statements must stay separate: *we comply with the law; we have an effective management process; this system works acceptably here*. A quality-management certificate can tell us something useful about organisational practices. It cannot, on its own, demonstrate safe care of a particular child in an unfamiliar home.
+That second point brings us back to Stargate. Large investments create pressure to deliver returns. People can sincerely worry about the pace and still feel compelled to keep it up.
 
-## The Brussels effect is a market mechanism
+<blockquote class="blog-pullquote"><p>If everyone agrees that caution is sensible, but nobody can afford to go second, caution needs more than goodwill.</p></blockquote>
 
-Europe does not need to lead every technical field for its market rules to influence product design. If serving a large market requires a particular design or compliance process, a supplier may choose to use that approach elsewhere too. Maintaining one version can be more attractive than supporting several.
+A market can reward safer products when buyers can recognise safety and make meaningful choices. The problem is harder when outsiders bear the harm, when nobody can easily inspect the product, or when a failure cannot be repaired by a refund. That is a reason to examine the limits of self-regulation, rather than a reason to dismiss markets or innovation altogether.
 
-The common charger makes this tangible. The [EU’s common-charger requirements](https://commission.europa.eu/news-and-media/news/eu-common-charger-rules-power-all-your-devices-single-charger-2024-12-28_en) began applying to covered phones in December 2024; Apple had already introduced USB-C on the iPhone 15 in 2023. The connector change appeared beyond the EU market. Tethered bottle caps provide another familiar example: Coca-Cola’s [Great Britain rollout](https://www.coca-cola.com/gb/en/sustainability/this-is-happening/tethered) began outside EU membership. These illustrate how common product designs can cross borders; they do not establish that EU law alone explains every business decision.
+## Back at the White House, the language changes
 
-For AI, a shared documentation process or evaluation method might travel similarly. That possibility is often called the **Brussels effect**. It is influence through market access and business choices, not a claim that European law directly applies to everybody everywhere.
+On 29 September, the [White House Accord on Super Intelligence](https://www.presidency.ucsb.edu/documents/white-house-accord-super-intelligence) set out commitments to internal controls, independent external evaluation and board-level oversight. Its signatories included leaders from Google, Anthropic, Meta, OpenAI, xAI and Nvidia.
 
-There is a limit to the analogy. A cap’s attachment can be tested against a relatively stable physical requirement. An AI system can change after an update, encounter a different population, or acquire new tools. “Human oversight” has different practical meaning for a loan review and an action that unfolds faster than a person can respond. Useful standards have to make those differences assessable.
+The accord also said these measures might eventually be codified in law or regulation. A commitment to perform checks is a development worth noticing. It is different from already having an enforceable public regime that can compel access, demand changes or stop a release.
 
-## Risk categories tell companies what to do
+For me, this is the revealing contrast with the Stargate announcement. The earlier image celebrated the capacity to build. The later commitments recognised the need to demonstrate control over what was being built. Both ambitions now sit in the same conversation.
 
-A numerical ranking of AI companies would hide too much. The same business might offer a routine chatbot, a recruitment-screening product and a general-purpose model. Those activities can bring different obligations. We need to identify the system’s intended use and the organisation’s role.
+It would be too neat to describe this as an industry that suddenly discovered safety. Research, warnings and safeguards long predate these events. It would be equally unconvincing to treat the incidents and new commitments as having changed nothing.
 
-{% include seminar-slide.html key="company-roles" title="Risk determines company responsibilities" caption="Examples of legal obligations, not a single danger score. Transparency duties can overlap with other requirements." %}
+The question is whether the machinery of accountability can develop quickly enough to do more than follow the next announcement.
 
-Prohibited practices cannot be made acceptable merely by producing a good test report. High-risk systems face requirements and an applicable conformity-assessment process. Certain interactions and generated content bring transparency duties. Other uses can remain subject to product safety, privacy or other law even when the AI Act’s high-risk provisions do not apply. General-purpose models have their own layer of duties. The [Commission’s overview](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) sets out these distinctions and their implementation dates.
+## Do we really need to talk about Judgment Day?
 
-For a high-risk provider, the talk summarises the path as **classify, demonstrate, assess, declare**. First identify purpose and duties. Then assemble evidence about the relevant controls. Follow the required assessment route, and complete the applicable declaration, marking and registration obligations. The route determines when external assessment is required; it would be misleading to say that every AI product receives independent EU certification before release.
+I use *Terminator* imagery in the seminar because it gives us a shared language for an old fear: we build something powerful, delegate too much, and lose the ability to stop it. John Connor needs very little introduction.
 
-The practical question survives the legal classification. A home robot being near a baby does not, by itself, settle its category under the AI Act. Product status and intended purpose matter. Equally, an answer of “not high-risk under this provision” is not a finding that the robot is harmless. Legal classification starts one part of the analysis; the actual hazards still need to be examined.
+{% include seminar-slide.html key="original-7" title="Judgment Day and the question of risk" caption="A memorable image can open the discussion. It cannot establish the likelihood or timing of a catastrophe." %}
 
-## Now put the robot in your home
+But a film gives us something the real world does not: certainty about the plot. In a story, we know which machine will turn against us and which warning was ignored. In reality, capabilities develop unevenly, experts disagree, and incidents admit several explanations.
 
-The seminar uses a fictional approval exercise. Start with toys and laundry on one floor, with an adult present. No stairs, cooking or childcare. What would you need to see before approving that use?
+There is exaggeration in the conversation when a possible future is presented as inevitable, when a dramatic model response is treated as proof of intent, or when every security failure becomes a sign of an approaching superintelligence. Those shortcuts can leave people frightened without making them better informed.
 
-{% include seminar-slide.html key="original-28" title="A fictional household robot approval exercise" caption="The starting task is limited to chores. The 1X product image illustrates a fictional scenario; no childcare capability or endorsement is implied." %}
+There is also a mistake in assuming that an exaggerated argument has no valid concern beneath it. These incidents show systems taking consequential actions outside intended boundaries. More capable systems, connected to more resources, could make similar failures more serious. How far that risk extends remains a question for evidence and investigation.
 
-Now the request changes: “Watch the baby while I go out.”
+**We can take the concern seriously without accepting the most dramatic prediction attached to it.**
 
-What does *watch* mean? Observe and send an alert? Approach the child? Pick them up? Who can respond, and how long would that take? Evidence for carrying laundry does not establish that any of those actions are acceptable.
+For that to be useful, “AI safety” needs to become more specific. Are we concerned about unauthorised access, deliberate misuse, errors in essential services, or a future loss of control over much more capable systems? These concerns overlap, but they call for different evidence and different interventions.
 
-Suppose the supplier offers a 99.9% success rate. I would ask what counted as success, how many trials were run, which conditions were represented and what the failures looked like. A rare failure can dominate the decision if its consequences are severe. The number alone leaves those questions open.
+The practical choices are more varied than accelerate everything or halt everything. They include limiting access to particular tools, requiring outside evaluation, delaying a deployment, reporting incidents and, where justified, constraining the development of the most capable systems. The intervention should answer the risk being claimed. Otherwise, safety becomes a label that can justify almost anything.
 
-Then add remote access or a software update. We may now have a different permission boundary, different behaviour, or a different person able to act inside the home. The original approval needs another look.
+## Europe had already started writing its answer
 
-For a real deployment, I would want a short approval record:
+At this point, it is tempting to introduce Europe as the late arrival bringing a rulebook to a race it is struggling to win. The familiar criticism is that the United States builds, China competes, and Europe regulates.
 
-- **Allowed use:** the tasks, environment and actions covered by the decision.
-- **Evidence:** the tests and observations supporting it, with their limitations.
-- **Controls:** who can intervene, restrict access or stop operation.
-- **Review triggers:** changes, incidents or new information that require reassessment.
-- **Ownership:** who accepts the decision and who can challenge it.
+It is an effective line. It does not settle the argument.
 
-This has a cost. Someone must maintain the records, rerun relevant evaluations and decide whether a change is material. A process that is too burdensome will be bypassed; one that records nothing will be difficult to defend when it matters. Good engineering makes the necessary evidence part of operating the system.
+The European Commission proposed the AI Act in 2021, well before this sequence of incidents. The law was adopted in 2024. Its ambition was to protect people’s health, safety and fundamental rights while creating conditions for trustworthy adoption. The [Commission’s overview](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) sets out the framework and its phased implementation.
 
-## Embodied AI makes the boundary impossible to ignore
+The economic idea is understandable: people and businesses may be more willing to use a technology when responsibilities and safeguards are clear. Whether each requirement achieves that at an acceptable cost is a separate question. A rulebook can improve confidence; it can also be difficult to implement, expensive to navigate or poorly matched to a changing technology.
 
-The robot example is useful because physical consequences arrive before we can tidy up the explanation. A model may describe how to catch a falling object, while the controller must estimate motion, move the gripper and respond to contact quickly enough to succeed. Perception, prediction and action interact continuously.
+Europe therefore has something to demonstrate too. “We passed a law” cannot be the final measure of success. The test is whether the law improves the decisions people experience while leaving room for useful experimentation and competition.
 
-**Embodied AI** refers broadly to AI that senses and acts through a body or an environment. It does not, by definition, establish that embodiment will produce general intelligence. The more modest point is already important: acting in the world exposes uncertainties that a text-only interaction can conceal.
+{% include seminar-slide.html key="original-5" title="Europe’s earlier response: the EU AI Act" caption="The European approach began before these latest incidents. Its success has to be judged through implementation." %}
 
-Yann LeCun’s work on world models asks how machines can learn representations that help them predict consequences and plan actions. Meta’s [V-JEPA 2 research](https://ai.meta.com/research/publications/v-jepa-2-self-supervised-video-models-enable-understanding-prediction-and-planning/) explores video-based learning and demonstrated robot planning tasks. That is evidence for particular research capabilities, rather than proof of general household competence.
+Nor does Europe need to lead every technical field for its choices to matter. Access to a large market can encourage suppliers to adopt common practices beyond that market. The charger in your bag is a familiar illustration: [EU common-charger rules](https://commission.europa.eu/news-and-media/news/eu-common-charger-rules-power-all-your-devices-single-charger-2024-12-28_en) and the move to USB-C helped make a formerly tedious compatibility problem easier to understand. This wider influence is often called the **Brussels effect**.
 
-A **world model**, in this discussion, helps represent how a situation may evolve. Language models generate and reason over linguistic representations; real systems may combine them with perception, planning, control and other components. We should assess what the assembled system can actually demonstrate. Declaring that a model is either “just language” or “basically intelligent” does not tell us whether its proposed action is safe.
+For AI, the possibility is that shared practices for testing and documentation travel too. That is a possible market response, not a guarantee that the world will adopt Europe’s approach—or proof that the approach is always right.
 
-## What Waymo contributes to this argument
+## The quieter work behind the headlines
 
-Simulation lets a developer repeat scenarios, vary conditions and examine dangerous situations without creating the same danger on a public road. Its usefulness depends on what it represents. Missing behaviours, unrealistic sensors or an inaccurate physical model can leave a convincing simulated result disconnected from deployment.
+Here is where my own involvement comes in. I work in production machine learning and participate in CEN–CENELEC JTC 21’s Working Group 3 on Engineering Aspects. That sounds far less cinematic than Stargate. The questions are often very concrete.
 
-Waymo’s [published safety-case approach](https://waymo.com/blog/2023/03/a-blueprint-for-av-safety-waymos/) is useful here because it describes how claims, arguments and evidence fit together. Simulation, physical testing and operational experience support different parts of the case. Those are the company’s stated methods, and their adequacy remains open to scrutiny; citing them is not an independent endorsement of every deployment.
+If a supplier says its system is reliable, what should it have to show? If it says a person remains in control, can that person actually intervene? If the system changes next month, does last month’s approval still mean anything?
 
-{% include seminar-slide.html key="original-39" title="Waymo and the safety argument" caption="A safety case connects claims to relevant evidence within an operating boundary. No single test does the entire job." %}
+The law sets duties. Standards help agree practical ways of meeting and checking them. The Commission turns to standards organisations such as CEN and CENELEC to organise that technical work, with participation from national bodies, industry, researchers and other stakeholders. This is one way broad promises begin to turn into things somebody can examine.
 
-An **operational design domain** specifies the conditions in which a system is designed to operate: for example, a defined area and relevant road or environmental conditions. A boundary can reduce the range of claims being made. It cannot list every event the system might encounter within it.
+A *harmonised standard* has a particular connection to EU law. Once officially listed for the relevant legislation, it can give an organisation a recognised starting point for demonstrating that covered requirements are met. It is generally a voluntary method, while the legal duties remain binding. It is not a universal badge declaring an AI safe. The Commission’s [plain-language explanation](https://digital-strategy.ec.europa.eu/en/faqs/understanding-standardisation-ai-act) is useful if you want the detail.
 
-This explains why “driving is constrained” does not mean “driving is easy”, and why a smaller physical space can still contain a broader task. A home may be compact, but “help with whatever needs doing” admits an enormous variety of objects, instructions and interactions. We can constrain a home robot too. The permission must remain within what its evidence supports.
+I do not expect a standards committee to settle every question about humanity’s future. I do expect it to help make claims clearer, evidence more comparable and responsibilities harder to evade. That is less dramatic than predicting doomsday, but it gives us something to work with before the next incident.
 
-A strong technical case and legal permission to operate are also different things. Results from one city do not automatically justify another city, and neither justifies leaving a robot alone with a child. Transferring the evidence requires an argument about what remained relevant.
+## Bring the argument home
 
-## The same question follows us into agentic AI
+If all this still feels distant, imagine buying a robot to help around the house.
 
-A physical robot makes the stakes easy to picture. A software agent can also change the world: send a message, modify a database, spend money or use a credential. Its authority matters as much as the fluency of its answer.
+You might be comfortable with it carrying laundry while you are nearby. Now imagine asking it to watch your baby while you go out. Suddenly, a company’s reassuring statement about responsible AI feels insufficient. You want to know what “watch” means, what the robot can do, who can intervene and what evidence supports that particular promise.
 
-Imagine an assistant authorised to find a suitable appointment. Searching availability, booking a slot, disclosing health information and paying a fee are distinct actions. A broad request should not silently become permission for every convenient next step. If the agent reads an untrusted web page or document, instructions in that material must not acquire the user’s authority.
+{% include seminar-slide.html key="original-29" title="The household decision changes when a baby is involved" caption="The seminar’s fictional exercise brings the public debate down to a decision each of us can understand." %}
 
-That is why I care about the surrounding system: explicit permissions, constrained tools, approval tied to a specific action, revocable access, and records of what actually happened. More capable models can increase the value of those controls because they can carry a mistaken or overbroad objective further.
+A 99.9% success rate may sound wonderful until you ask what counted as success and what happened in the failures. A software update may be welcome until you discover that it changes what the robot can access. A human supervisor may sound reassuring until you learn that the person cannot respond quickly enough to matter.
 
-General-purpose systems make assurance harder because their future uses may exceed the conditions under which they were evaluated. Shared standards help us ask consistent questions, but they cannot eliminate every uncertainty or settle every disagreement about acceptable risk.
+These are not arguments against having helpful robots. They are questions about the conditions under which we would welcome them. The same reasoning applies when an AI can move money, influence a loan decision or act inside a computer network.
 
-The deck uses *Terminator* and *The Matrix* to make the control question memorable. The decision we need to make today is more immediate: **does this evidence justify this permission, for these people?**
+That is why I find the usual choice between being “pro-AI” and “anti-AI” so unhelpful. I want the benefits. I also want the promises attached to them to be open to challenge.
 
-If the task changes, the system changes, or the evidence no longer supports the claim, “we approved it last year” is not a sufficient answer.
+We should be able to ask a company for evidence without being accused of opposing progress. We should be able to ask a regulator to justify a restriction without being accused of dismissing safety. Both forms of scrutiny matter if this technology is going to earn lasting public confidence.
 
-## What I would carry into the next approval meeting
+## Return to the photograph
 
-I would start by asking the team to write down the exact claim. “Trustworthy AI” is too broad to approve. “This version may perform these tasks, for these users, within these conditions” gives us something we can inspect.
+Stargate remains a striking image of ambition: build the infrastructure, attract the capital, secure the lead.
 
-Then I would ask which observations support that permission, what remains uncertain, and who has authority to say no. I would want the organisation to agree on the changes that reopen the decision: a new model, a different dataset, wider tool access, an unexpected failure, or a materially different user population.
+The events since then add a question that the photograph cannot answer. When the people with the greatest ability to accelerate also face the strongest incentives to do so, who has the authority—and the knowledge—to challenge the pace?
 
-Standards can make that conversation more consistent. Law can require safeguards and give institutions enforcement powers. Engineering can preserve evidence and constrain what the system is able to do. People still have to judge the residual risk, and affected people need meaningful routes to challenge the outcome.
+I do not think we have to choose between believing every promise and believing every warning. We need institutions and practices that can test both. We need room for discovery, and the ability to intervene when the evidence calls for it. We need to distinguish a useful precaution from a restriction that merely protects an incumbent.
 
-<blockquote class="blog-pullquote"><p>If nobody can explain what would invalidate an approval, we have not finished defining it.</p></blockquote>
+Above all, we need a better answer than “trust us” from anyone asking to shape the future on everybody else’s behalf.
 
-## Explore the presentation
+<blockquote class="blog-pullquote"><p>The question is whether we can keep the ability to challenge, limit and redirect what we are building while there is still time for those choices to matter.</p></blockquote>
 
+## Slides and further discussion
 
+This article accompanies my UCL seminar, **Who Decides When AI Is Trustworthy? The EU AI Act, Standards and the Limits of Assurance**. It reflects the public record available on **7 October 2026**; the linked reports distinguish company accounts, proposals and enacted measures.
 
-[Open the full deck]({{ '/presentations/ucl-ai-trust/slides.html' | relative_url }}) or [read the speaking notes]({{ '/presentations/ucl-ai-trust/notes.html' | relative_url }}). Each embedded slide is live HTML, with its reveal steps already visible. Click inside a slide to browse with the arrow keys, or use its full-size link. Small screens preserve the slide’s proportions; the surrounding article explains the content in readable text.
+[Open the full presentation]({{ '/presentations/ucl-ai-trust/slides.html' | relative_url }}) · [Read the speaker notes]({{ '/presentations/ucl-ai-trust/notes.html' | relative_url }}) · [Browse sources and image credits]({{ '/presentations/ucl-ai-trust/sources.md' | relative_url }})
 
-For presenting, keep the audience slides and linked notes on separate, extended displays. **V** opens presenter mode; **N** displays notes on the audience screen. Phone notes can be browsed independently; they do not automatically synchronise with a laptop. The notes are public companion material, not a private account area.
+The illustrations above are live HTML slides. Each has a full-size link. For a linked presenter window, open the deck and press **V**; keep slides and notes on separate, extended displays. The notes are public companion material. The deck remains a working edition as the seminar develops.
