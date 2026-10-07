@@ -255,22 +255,18 @@ Visual: Terminator 2: Judgment Day · film excerpt via GIPHY
 
 - https://ai.meta.com/research/publications/v-jepa-2-self-supervised-video-models-enable-understanding-prediction-and-planning/
 
-## 44. A fluent explanation is not a motion plan.
+## 44. LeCun’s challenge: predict consequences
 
-- https://ai.meta.com/research/publications/v-jepa-2-self-supervised-video-models-enable-understanding-prediction-and-planning/
-- https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026
-
-## 45. LeCun’s challenge: predict consequences
-
-- https://ai.meta.com/blog/yann-lecun-advances-in-ai-research/
-- https://ai.meta.com/research/publications/v-jepa-2-self-supervised-video-models-enable-understanding-prediction-and-planning/
+- https://awards.acm.org/binaries/content/assets/press-releases/2019/march/turing-award-2018.pdf
+- https://www.linkedin.com/posts/yann-lecun_as-many-of-you-have-heard-through-rumors-activity-7397020300451749888-2lhA
 - https://amilabs.xyz/
-- https://creativecommons.org/licenses/by-sa/2.0/
+- https://yann.lecun.com/
+- https://ai.meta.com/blog/yann-lecun-advances-in-ai-research/
 - https://commons.wikimedia.org/wiki/File:Yann_LeCun_-_2025_(cropped).jpg
 
 Visual: Jeremy Barande / École polytechnique · 2025 · CC BY-SA 2.0 · cropped
 
-## 46. Can we simulate our way to safety?
+## 45. Can we simulate our way to safety?
 
 - https://www.waymo.com/research/collision-avoidance-testing-of-the-waymo-automated/
 - https://www.gov.uk/government/publications/self-driving-vehicle-pilot-scheme-information-for-applicants/self-driving-vehicle-pilot-scheme-information-for-applicants
@@ -278,83 +274,75 @@ Visual: Jeremy Barande / École polytechnique · 2025 · CC BY-SA 2.0 · cropped
 
 Visual: The Matrix (1999) · training scene via GIPHY
 
-## 47. Waymo: make the safety argument
+## 46. Practise the dangerous moment before it happens.
 
-- https://waymo.com/blog/2023/03/a-blueprint-for-av-safety-waymos/
 - https://www.waymo.com/research/collision-avoidance-testing-of-the-waymo-automated/
-- https://waymo.com/blog/shorts/autonomous-driving-in-london/
+- https://waymo.com/blog/2026/02/the-waymo-world-model-a-new-frontier-for-autonomous-driving-simulation/
+- https://waymo.com/blog/2023/03/a-blueprint-for-av-safety-waymos/
 - https://waymo.com/blog/2025/10/hello-london-your-waymo-ride-is-arriving/
 
 Visual: Waymo · London announcement image, October 2025 · promotional image, not evidence of approval
 
-## 48. Constrained does not mean simple.
+## 47. Real roads. Encouraging evidence.
 
-- https://www.waymo.com/research/collision-avoidance-testing-of-the-waymo-automated/
-- https://waymo.com/blog/2023/03/a-blueprint-for-av-safety-waymos/
+- https://blog.waymo.com/blog/shorts/safetydata-june26/
+- https://waymo.com/safety/impact/
 
-## 49. London: evidence is not the permit.
+## 48. Waiting has a cost. So does moving too fast.
 
+- https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32022R1426
+- https://www.gov.uk/government/publications/self-driving-vehicle-pilot-scheme-information-for-applicants
 - https://waymo.com/blog/2026/09/visionforlondon/
-- https://waymo.com/blog/shorts/autonomous-driving-in-london/
-- https://www.gov.uk/government/publications/self-driving-vehicle-pilot-scheme-information-for-applicants/self-driving-vehicle-pilot-scheme-information-for-applicants
-- https://www.gov.uk/government/publications/automated-passenger-service-permits-local-authority-and-transport-body-roles/automated-passenger-service-permits-local-authority-and-transport-body-roles
 
 Visual: Waymo · Vision for London, 24 September 2026 · company image
 
-## 50. No body. Still able to act.
-
-
-## 51. An agent changes something outside the chat.
-
-- https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse
-
-## 52. Muse: who authorises the action?
+## 49. No body. Still able to act.
 
 - https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/
 - https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse
+- https://nvidianews.nvidia.com/news/nvidia-dgx-spark-arrives-for-worlds-ai-developers
+- https://www.apple.com/newsroom/2026/03/apple-debuts-m5-pro-and-m5-max-to-supercharge-the-most-demanding-pro-workflows/
 
 Visual: Meta · Muse launch artwork, September 2026 · supplier illustration
 
-## 53. What if the uses will not stay bounded?
+## 50. A million sensible agents. One unstable market?
 
-- https://digital-strategy.ec.europa.eu/en/faqs/general-purpose-ai-models-ai-act-questions-answers
-- https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026
+- https://www.bis.org/speeches/20251008-artificial-intelligence-and-central-banks-monetary-and-financial-stability-implications
+- https://finance-faculty.wharton.upenn.edu/wdou/2023/05/19/ai-powered-trading-algorithmic-collusion-and-price-efficiency/
+- https://arxiv.org/abs/2410.08948
 
-## 54. The system changed. Does the approval survive?
+## 51. Who can stop the feedback loop?
 
-- https://giphy.com/stickers/thematrixmovie-the-matrix-thematrix-movie-AmACzwtjcoL0vBmecO
+- https://www.esma.europa.eu/press-news/esma-news/esma-issues-supervisory-briefing-algorithmic-trading
+- https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mifid-ii/article-17-algorithmic-trading
+- https://www.bis.org/speeches/20251008-artificial-intelligence-and-central-banks-monetary-and-financial-stability-implications
 
-Visual: The Matrix · black-cat GIF via official GIPHY channel
-
-## 55. Who decides what is enough?
+## 52. Who is in control? Show us.
 
 - https://giphy.com/gifs/thumbs-up-terminator-gFwZfXIqD0eNW
 
 Visual: Terminator 2: Judgment Day · film excerpt via GIPHY
 
-## 56. What would change your mind?
-
-
-## 57. Another arms race?
+## 53. Another arms race?
 
 - https://www.whitehouse.gov/releases/2025/07/white-house-unveils-americas-ai-action-plan/
 - https://fiia.fi/julkaisu/nuclear-arms-control-policies-and-safety-in-artificial-intelligence
 
-## 58. Can Europe afford to regulate?
+## 54. Can Europe afford to regulate?
 
 - https://hai.stanford.edu/ai-index/2026-ai-index-report
 
-## 59. Trustworthy enough to use.
+## 55. Trustworthy enough to use.
 
 - https://digital-strategy.ec.europa.eu/en/factpages/ai-continent-action-plan
 - https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
 
-## 60. Good score. Wrong outcome.
+## 56. Good score. Wrong outcome.
 
 - https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026
 
-## 61. Danger now. Uncertainty ahead.
+## 57. Danger now. Uncertainty ahead.
 
 - https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026
 
-## 62. A conditional decision. Not a universal green light.
+## 58. A conditional decision. Not a universal green light.

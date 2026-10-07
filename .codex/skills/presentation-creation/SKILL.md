@@ -11,7 +11,7 @@ Christos wants to glance at notes, understand the points he must communicate, an
 
 - Before the bullets, write one short spoken lead-in that introduces what the slide is about and prepares the points. It should sound natural aloud, connect to the preceding thought, and not duplicate the title. Keep it separate from the bullet count.
 - Give each slide a small, countable set of bullets. Each bullet is one meaningful speaking point.
-- Start with a short **bold reminder phrase**, followed by one or two speakable sentences. Include enough context to remember what the point means and why it matters.
+- Write each bullet as one or two plain, speakable sentences. Do not prepend mini-titles, bold reminder labels or editorial headings: Christos wants to read the words directly. Include the subject naturally in the sentence when it is needed for meaning.
 - Usually use three points on a content slide, one on a brief transition, and four or five only when the material needs them. These are guides, not quotas.
 - Follow the thought: premise, example or explanation, then implication or question. Adapt this order to the slide rather than imposing a formula.
 - Write in a direct, conversational voice. First-person phrasing is useful when appropriate. Leave space for the presenter to add his experience and respond to the audience.
@@ -21,15 +21,15 @@ Christos wants to glance at notes, understand the points he must communicate, an
 
 Weak cue: “Standards — quality.”
 
-Useful cue: “**Shared methods** — Two suppliers saying ‘robust’ may mean different things. Agreed tests let us compare the evidence.”
+Useful cue: “Two suppliers saying ‘robust’ may mean different things. Agreed tests let us compare the evidence.”
 
-The glance test: can the presenter read the reminder phrase, recover the intended point from its short explanation, look up, and continue in his own words? If understanding requires reading a long paragraph, revise it or move preparation material to background.
+The glance test: can the presenter read a short bullet, recover the intended point, look up, and continue in his own words? If understanding requires reading a long paragraph, revise it or move preparation material to background.
 
 ## Slides and delivery
 
 Each slide communicates one central idea with an eye-catching title, a little explanatory context and a clear reason to care. Use examples and visuals to make abstract ideas concrete. Follow the agreed theme; pop-culture imagery should support the point. Preserve the audience's space to think and discuss.
 
-Show the speaking-point count on each notes card and make anchors visually distinct. Support readable phone cards and a separate presenter window when the existing deck provides them. Distinguish independent phone browsing from genuine synchronisation; do not promise cross-device control without implementing it.
+Show the speaking-point count on each notes card and keep the lead-in separate from the plain bullets. Support readable phone cards and a separate presenter window when the existing deck provides them. Distinguish independent phone browsing from genuine synchronisation; do not promise cross-device control without implementing it.
 
 ## Repository workflow
 
@@ -37,11 +37,11 @@ Show the speaking-point count on each notes card and make anchors visually disti
 2. For the UCL seminar, edit `tmp/ucl-seminar/research/deck-content.json` as the source of truth. Keep its stable slide keys. The `intro` is the spoken lead-in before the bullets; `bullets` are live cues; `background` and `refs` are preparation.
 3. Rebuild with `research/build-deck.py` and `research/build-notes.py` inside that seminar directory. The notes template is `research/notes-viewer.html`. Keep HTML notes, Markdown notes and the audience notes overlay consistent.
 4. In an editorial rewrite, preserve audience content, timings, sources and factual meaning. If a substantive claim needs updating, verify it separately rather than silently changing it while shortening prose.
-5. Check every slide has meaningful cues, anchors and the correct count. Review representative phone and desktop renderings; check navigation, reveal-linked cues and presenter synchronisation when those components change.
+5. Check every slide has meaningful plain speaking cues and the correct count. Review representative phone and desktop renderings; check navigation, reveal-linked cues and presenter synchronisation when those components change.
 6. Keep private seminar output private. Do not publish or push unless requested. A notes-only edit does not require building the entire Jekyll site.
 
 ## Public UCL edition
 
-The user authorised publishing the UCL deck and presenter notes on the website. After further slide edits, run `python3 scripts/export_ucl_seminar.py` to refresh `presentations/ucl-ai-trust/`. This exports only public fields and omits slides with `private_source`; never copy the entire preparation folder. The companion post is `content/_posts/2026-10-07-who-decides-when-ai-is-trustworthy.md`. Keep slide links and selected screenshots in step with numbering changes. Public presenter notes are accessible to everyone. Follow the publishing and Git skills before committing or pushing; an export alone does not deploy anything.
+The user authorised publishing the UCL deck and presenter notes on the website. After further slide edits, run `python3 scripts/export_ucl_seminar.py` to refresh `presentations/ucl-ai-trust/`. This exports only public fields and omits slides with `private_source`; never copy the entire preparation folder. The companion post is `content/_posts/2026-10-07-who-decides-when-ai-is-trustworthy.md`. Keep stable slide links and embedded HTML illustrations in step with cuts. End the main presentation on the chosen closing image; keep optional backups outside the normal presentation flow. Public presenter notes are accessible to everyone. Follow the publishing and Git skills before committing or pushing; an export alone does not deploy anything.
 
 For article illustrations, prefer the `seminar-slide.html` include with a stable slide key over screenshots. It embeds the actual slide HTML at 16:9 and includes a full-size link. Use images only where needed for social-card metadata; never stretch a slide image. The export checks that article embed keys still exist after cuts.

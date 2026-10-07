@@ -11,7 +11,7 @@ og_image: /assets/images/posts/2026/who-decides-ai-trust/human-consequences.png
 og_image_alt: "The human stakes behind AI governance: rights, privacy, safety and accountability."
 tldr_why_read: "The race to build more powerful AI now sits alongside calls to slow it down—including from inside the industry. That tension deserves more than either hype or dismissal."
 tldr_persona: "Anyone following AI news who wants to understand the argument over progress, safety and who gets to decide."
-tldr_learn: "How the story developed from Stargate to security incidents and safety commitments, where Europe fits, and why promises alone leave difficult questions unanswered."
+tldr_learn: "How the story developed from Stargate to security incidents and safety commitments, where Europe fits, what real-world deployment can teach us, and why interacting agents raise a harder question about control."
 tldr_takeaways: ["Serious concern does not require belief in imminent doomsday", "Cooperation between labs is not automatically independent oversight", "The rules must be able to challenge both reckless deployment and unjustified restraint"]
 ---
 
@@ -175,7 +175,7 @@ You might be comfortable with it carrying laundry while you are nearby. Now imag
 
 {% include seminar-slide.html key="original-29" title="The household decision changes when a baby is involved" caption="The seminar’s fictional exercise brings the public debate down to a decision each of us can understand." %}
 
-A 99.9% success rate may sound wonderful until you ask what counted as success and what happened in the failures. A software update may be welcome until you discover that it changes what the robot can access. A human supervisor may sound reassuring until you learn that the person cannot respond quickly enough to matter.
+A 99.9% success rate may sound wonderful until you ask what counted as success and what happened in the failures. A software update may be welcome until you discover that it changes what the robot can access. A human supervisor may sound reassuring until you learn that the person cannot respond quickly enough to matter. Is human control tangible, or just an advertisement? Show me that the person can notice, intervene and leave the situation safe.
 
 These are not arguments against having helpful robots. They are questions about the conditions under which we would welcome them. The same reasoning applies when an AI can move money, influence a loan decision or act inside a computer network.
 
@@ -183,13 +183,63 @@ That is why I find the usual choice between being “pro-AI” and “anti-AI”
 
 We should be able to ask a company for evidence without being accused of opposing progress. We should be able to ask a regulator to justify a restriction without being accused of dismissing safety. Both forms of scrutiny matter if this technology is going to earn lasting public confidence.
 
+## The world does not follow the prompt
+
+The robot also exposes a gap between saying the right thing and knowing what will happen next. You can describe how to catch a ball without being able to catch one. A machine has to sense where it is, anticipate its movement and correct its own action before the opportunity has passed.
+
+This is part of what makes **embodied AI** exciting. Putting intelligence into a body forces difficult problems of perception, prediction and control to meet. Solving them could unlock further breakthroughs, perhaps towards more general intelligence. Attaching arms to a language model does not itself establish that those problems have been solved.
+
+Yann LeCun has been arguing for that broader research agenda for years. He shared the [2018 ACM Turing Award](https://awards.acm.org/binaries/content/assets/press-releases/2019/march/turing-award-2018.pdf) with Geoffrey Hinton and Yoshua Bengio for advances in deep learning. His criticism of language models comes from someone who helped create the field’s foundations.
+
+In his [departure announcement](https://www.linkedin.com/posts/yann-lecun_as-many-of-you-have-heard-through-rumors-activity-7397020300451749888-2lhA), LeCun said he would leave Meta at the end of 2025 to pursue his Advanced Machine Intelligence programme through an independent company. [AMI Labs](https://amilabs.xyz/) now focuses on systems that model the physical world, remember, reason and plan. The argument is that predicting language is insufficient on its own: machines need better ways to anticipate the consequences of actions. That is a research direction with real promise, rather than a settled recipe for AGI.
+
+## Waiting is not free
+
+There is an uncomfortable implication here. We cannot learn everything about the real world while refusing to let a system encounter it.
+
+Waymo offers a useful example of how simulation and deployment can support one another. Its [collision-testing methodology](https://www.waymo.com/research/collision-avoidance-testing-of-the-waymo-automated/) draws on road experience, test-track data and expert analysis. Its [February 2026 World Model](https://waymo.com/blog/2026/02/the-waymo-world-model-a-new-frontier-for-autonomous-driving-simulation/) lets engineers vary virtual road layouts, other drivers’ actions and unusual weather, generating camera and lidar scenes. An encounter with a wrong-way vehicle can become something to replay and investigate without recreating the danger on a public road.
+
+Simulation still has blind spots. A persuasive virtual scene does not establish that every relevant sensor failure, road surface or human response is represented. We need physical checks and measured outcomes too.
+
+In its [24 June 2026 report](https://blog.waymo.com/blog/shorts/safetydata-june26/), Waymo reported 94% fewer crashes causing serious or fatal injuries and 82% fewer crashes involving any reported injury than matched human-driver benchmarks. The analysis covered more than 220 million fully autonomous miles through March, across five US operating areas, regardless of fault. These are company-reported results within particular operating conditions. They are nevertheless encouraging evidence that deployment can produce safety benefits as well as risks.
+
+{% include seminar-slide.html key="original-40" title="Waymo’s reported US safety outcomes" caption="A reason to investigate and enable useful deployment, with the comparison’s scope kept visible." %}
+
+This is where I become impatient with the idea that waiting is automatically the responsible choice. Delay can cost us operational learning, useful services and improvements over a dangerous status quo. Places that enable carefully bounded trials can build experience while others are still discussing how to begin. That gives them an opportunity to innovate faster; it does not make every permissive policy a good one.
+
+Europe is not without rules for this: the EU already has an [automated-driving approval framework](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32022R1426), and the UK has its own [pilot scheme](https://www.gov.uk/government/publications/self-driving-vehicle-pilot-scheme-information-for-applicants). It would be misleading to blame every delay on the AI Act or to suggest nothing can happen until a new law arrives. My concern is whether the route from evidence to permission is clear, timely and usable.
+
+I want bounded trials, visible results and the ability to expand—or stop—when the evidence changes. Safety should help us learn how to deploy beneficial technology, rather than become an indefinite instruction to wait.
+
+## Now imagine a million assistants pressing “sell”
+
+Can we apply that same logic everywhere? An autonomous taxi operates within a defined service and fleet. A personal software agent can enter environments shared with vast numbers of other agents, firms and people.
+
+Meta’s [September Muse announcement](https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/) makes the shift from answering to acting tangible. Personal AI can carry out tasks through connected tools. Meta describes permission boundaries and checks for sensitive actions. Those claims deserve testing because convenience encourages us to delegate more authority over time.
+
+Local computing is widening the possibilities too. [NVIDIA’s DGX Spark](https://nvidianews.nvidia.com/news/nvidia-dgx-spark-arrives-for-worlds-ai-developers) and [Apple’s M5 Pro and M5 Max](https://www.apple.com/newsroom/2026/03/apple-debuts-m5-pro-and-m5-max-to-supercharge-the-most-demanding-pro-workflows/) support running AI workloads on personal machines. This does not establish that millions of people already have autonomous portfolio managers. It does mean we should stop imagining that consequential AI will only operate inside a few laboratories. With suitable software and account permissions, an agent can move from advice to action. Cloud access already offers another route.
+
+Imagine many users giving their agents the same reasonable instruction: protect my savings when the market starts falling. If the agents read similar signals and sell together, their orders can deepen the fall and trigger more selling. Each may be obeying its owner. The combined outcome can still be destructive.
+
+{% include seminar-slide.html key="original-45" title="How individual trading decisions can create a collective feedback loop" caption="A hypothetical market scenario: shared signals and similar responses can amplify one another without a central organiser." %}
+
+This is **herding**, and it does not require a conscious swarm or a secret agreement. The BIS has [warned about synchronised AI responses](https://www.bis.org/speeches/20251008-artificial-intelligence-and-central-banks-monetary-and-financial-stability-implications) amplifying financial stress. Researchers have also demonstrated [collusion between learning agents in model markets](https://finance-faculty.wharton.upenn.edu/wdou/2023/05/19/ai-powered-trading-algorithmic-collusion-and-price-efficiency/) and [shared conventions emerging in restricted LLM interaction experiments](https://arxiv.org/abs/2410.08948). The latter is a simple naming-game setting, far removed from a real stock exchange. These studies identify mechanisms to investigate; they do not prove that the imagined retail-agent crash has happened.
+
+Game theory makes the unsettling question clear: what happens when every participant’s sensible response changes what is sensible for everyone else? Testing a product alone may miss the problem created when many copies meet.
+
+Nor is finance an unregulated blank page. [ESMA’s February 2026 briefing](https://www.esma.europa.eu/press-news/esma-news/esma-issues-supervisory-briefing-algorithmic-trading) addresses AI within existing algorithmic-trading supervision, including testing, governance and controls before orders reach the market. The work is partly about applying existing responsibilities and partly about examining whether they cover the new patterns of interaction.
+
+A single danger score for an AI company would tell us too little. We need to examine the task, the permissions, the firms responsible and the exposures they share. Who can limit orders? Who can reconstruct a decision? Who watches the combined effect, and who can stop activity before local mistakes become a wider crisis?
+
+That is the tension I want to leave people with. We should make it easier to learn from responsible deployment. We should also recognise when scaling a useful product changes the nature of the risk.
+
 ## Return to the photograph
 
 Stargate remains a striking image of ambition: build the infrastructure, attract the capital, secure the lead.
 
 The events since then add a question that the photograph cannot answer. When the people with the greatest ability to accelerate also face the strongest incentives to do so, who has the authority—and the knowledge—to challenge the pace?
 
-I do not think we have to choose between believing every promise and believing every warning. We need institutions and practices that can test both. We need room for discovery, and the ability to intervene when the evidence calls for it. We need to distinguish a useful precaution from a restriction that merely protects an incumbent.
+I do not think we have to choose between believing every promise and believing every warning. We need institutions and practices that can test both. We need room for discovery and deployment that teaches us something, alongside the ability to intervene when the evidence calls for it. Waymo’s results and the prospect of interacting financial agents show why the answer cannot be one blanket permission—or one blanket refusal. We need to distinguish a useful precaution from a restriction that merely protects an incumbent.
 
 Above all, we need a better answer than “trust us” from anyone asking to shape the future on everybody else’s behalf.
 
