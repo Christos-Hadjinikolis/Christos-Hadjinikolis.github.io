@@ -296,9 +296,19 @@ So, after five years, what has actually been built—and what remains unfinished
 - Bans and model duties began in 2025. In 2026, transparency and enforcement expanded; EN 18286 supplied a concrete quality-management standard.
 - Publication alone does not confer presumption of conformity. High-risk deadlines now run to December 2027 and August 2028; next, which duties apply to whom?
 
-## 30. Risk determines what companies must do.
+## 30. The next standards are being shaped now.
 
-**20:50–21:50 · 3 speaking points**
+**20:50–21:20 · 3 speaking points**
+
+While we discuss these questions, the standards work is continuing this week in Winterthur.
+
+- JTC 21 is meeting at ZHAW in Switzerland from Tuesday 6 to Friday 9 October, with hybrid participation. This is the next step after the milestones we just saw.
+- WG3’s agenda includes computer-vision tests, dataset quality, bias, robustness and functional safety. The aim is to turn broad duties into things engineers can check.
+- More standards are likely: the AI Board is considering further requests over the next twelve months. But I would not promise a second batch “soon”—agreement, publication and EU listing still have to happen.
+
+## 31. Risk determines what companies must do.
+
+**21:20–22:20 · 3 speaking points**
 
 The framework gives companies different responsibilities according to the AI use and their role.
 
@@ -306,9 +316,9 @@ The framework gives companies different responsibilities according to the AI use
 - The provider builds or supplies the system; the deployer uses it. Their duties differ, and transparency can also apply to high-risk systems.
 - This is not a single company danger score. General-purpose model duties are separate; lower legal classification does not mean no possible harm.
 
-## 31. Is a home robot “high-risk”?
+## 32. Is a home robot “high-risk”?
 
-**21:50–22:45 · 3 speaking points**
+**22:20–23:15 · 3 speaking points**
 
 Our home robot makes the difference between everyday danger and legal classification concrete.
 
@@ -316,9 +326,9 @@ Our home robot makes the difference between everyday danger and legal classifica
 - For the product route, check the relevant listed product legislation and whether third-party conformity assessment is required. Both conditions matter.
 - A private-use exception does not erase supplier obligations. Product safety and privacy still matter even when the AI Act answer is narrower.
 
-## 32. Before release: show the evidence
+## 33. Before release: show the evidence
 
-**22:45–23:25 · 4 speaking points**
+**23:15–23:55 · 4 speaking points**
 
 For a high-risk provider, the path is: classify, demonstrate, assess, declare.
 
@@ -327,9 +337,9 @@ For a high-risk provider, the path is: classify, demonstrate, assess, declare.
 - CLICK 2 · Assess through the required conformity procedure; whether an external assessor is needed depends on the route.
 - CLICK 3 · Declare compliance and take responsibility through the required declaration, marking and registration.
 
-## 33. Who checks the check?
+## 34. Who checks the check?
 
-**23:25–24:15 · 3 speaking points**
+**23:55–24:45 · 3 speaking points**
 
 Evidence matters, but so does who is allowed to judge it.
 
@@ -337,9 +347,9 @@ Evidence matters, but so does who is allowed to judge it.
 - The provider remains responsible; assessors and authorities have defined roles and powers. Outsourcing a check does not outsource accountability.
 - Monitor performance and incidents. Changes can invalidate earlier evidence and require further assessment or intervention.
 
-## 34. A legal category is not a risk assessment
+## 35. A legal category is not a risk assessment
 
-**24:15–25:00 · 3 speaking points**
+**24:45–25:30 · 3 speaking points**
 
 A legal category tells us which duties apply; it does not finish the safety analysis.
 
@@ -347,17 +357,17 @@ A legal category tells us which duties apply; it does not finish the safety anal
 - Examine hazards, exposure, failure modes, uncertainty and controls. A precise-looking risk score cannot replace supporting evidence.
 - Let us apply those questions to a household robot and see what permission the available evidence actually justifies.
 
-## 35. Would you let it into your home?
+## 36. Would you let it into your home?
 
-**25:00–25:15 · 1 speaking point**
+**25:30–25:45 · 1 speaking point**
 
 Now you are the people deciding whether the evidence is enough.
 
 - Would you let this robot into your home? Keep one question in mind: what would you need to see before saying yes?
 
-## 36. Start with the chores.
+## 37. Start with the chores.
 
-**25:15–26:55 · 3 speaking points**
+**25:45–27:25 · 3 speaking points**
 
 Start with a limited promise: this robot will help with household chores.
 
@@ -365,9 +375,9 @@ Start with a limited promise: this robot will help with household chores.
 - What is the single most important test or record you would ask for? [Give 20 seconds; take up to three answers.]
 - Approve with conditions, refuse or ask for more evidence. “Safe” is a goal; ask what observation would demonstrate it.
 
-## 37. Now add a baby.
+## 38. Now add a baby.
 
-**26:55–28:45 · 3 speaking points**
+**27:25–29:15 · 3 speaking points**
 
 Change one fact: the robot is now expected to look after a baby.
 
@@ -375,9 +385,9 @@ Change one fact: the robot is now expected to look after a baby.
 - Does “watching” mean observe, alert or physically intervene? Who can respond, and how quickly?
 - What new evidence would change your answer? [Take two reasons.] Refusing this use is a legitimate outcome of the exercise.
 
-## 38. “99.9% successful.” Would that convince you?
+## 39. “99.9% successful.” Would that convince you?
 
-**28:45–29:50 · 3 speaking points**
+**29:15–30:20 · 3 speaking points**
 
 A very high success rate sounds reassuring—until we ask what was measured.
 
@@ -385,9 +395,9 @@ A very high success rate sounds reassuring—until we ask what was measured.
 - CLICK 1 · No infant-care trials, no network failures and few unusual homes. The result describes tested chores, not childcare safety.
 - What counted as failure, how severe was it, and where was testing weak? Averages can conceal rare but serious outcomes.
 
-## 39. Two more facts. Do you still approve?
+## 40. Two more facts. Do you still approve?
 
-**29:50–30:55 · 3 speaking points**
+**30:20–31:25 · 3 speaking points**
 
 Approval can change when we learn who has access and what can be updated.
 
@@ -395,9 +405,9 @@ Approval can change when we learn who has access and what can be updated.
 - Assistance may reduce one risk while adding privacy, security and response-time concerns. Who authorises that access?
 - Which earlier evidence is no longer sufficient? [Take one or two answers.] Even “just stop” may be unsafe if the robot is holding something.
 
-## 40. Turn concern into an approval record.
+## 41. Turn concern into an approval record.
 
-**30:55–32:05 · 3 speaking points**
+**31:25–32:35 · 3 speaking points**
 
 Let’s turn your concerns into a decision somebody can inspect and challenge.
 
@@ -405,9 +415,9 @@ Let’s turn your concerns into a decision somebody can inspect and challenge.
 - Consider constrained chores after suitable evidence; withhold sole-childcare approval. This is an illustration, not necessarily the room’s consensus.
 - Requirements, tests, documentation, oversight and change control. Which decisions came from evidence, and which still required a value judgement?
 
-## 41. A human in the loop. Or a human on the poster?
+## 42. A human in the loop. Or a human on the poster?
 
-**32:05–32:35 · 3 speaking points**
+**32:35–33:05 · 3 speaking points**
 
 “Humans are in control” sounds reassuring. Is it tangible, or just an advertisement?
 
@@ -415,17 +425,17 @@ Let’s turn your concerns into a decision somebody can inspect and challenge.
 - Show me the test: the robot gets something wrong, the person notices, stops it and leaves the situation safe. Who has the authority to do that?
 - If nobody can act before the harm, the human is only on the poster. That brings us to what the robot can anticipate before it moves.
 
-## 42. The world does not follow the prompt.
+## 43. The world does not follow the prompt.
 
-**32:35–32:40 · 1 speaking point**
+**33:05–33:10 · 1 speaking point**
 
 The world does not follow the prompt. Our robot has to deal with what actually happens.
 
 - It must predict, act and correct itself when reality differs from the plan. That is a much harder challenge than describing what it intends to do.
 
-## 43. Embodied AI: sensing and acting.
+## 44. Embodied AI: sensing and acting.
 
-**32:40–33:15 · 3 speaking points**
+**33:10–33:45 · 3 speaking points**
 
 Imagine AI that senses and acts through a physical body. That is embodied AI.
 
@@ -433,9 +443,9 @@ Imagine AI that senses and acts through a physical body. That is embodied AI.
 - Putting AI into that world forces us to tackle perception, prediction and control together. Solving those problems could unlock further breakthroughs—perhaps towards AGI.
 - But adding a body does not establish safe behaviour or general intelligence. The opportunity is in the problems it forces us to solve.
 
-## 44. LeCun’s challenge: predict consequences
+## 45. LeCun’s challenge: predict consequences
 
-**33:15–34:10 · 4 speaking points**
+**33:45–34:40 · 4 speaking points**
 
 This is why Yann LeCun argues that we need more than increasingly fluent language models.
 
@@ -444,9 +454,9 @@ This is why Yann LeCun argues that we need more than increasingly fluent languag
 - His argument is that predicting language alone does not give us dependable understanding of the physical world. A world model tries to predict what changes when we act.
 - Think of the falling ball: describing a catch is different from anticipating its path. LeCun’s approach is a research direction, not proof that AGI or safe household robots are solved.
 
-## 45. Can we simulate our way to safety?
+## 46. Can we simulate our way to safety?
 
-**34:10–34:35 · 3 speaking points**
+**34:40–35:05 · 3 speaking points**
 
 If reality is expensive and dangerous to learn from, can we practise inside a simulation?
 
@@ -454,9 +464,9 @@ If reality is expensive and dangerous to learn from, can we practise inside a si
 - But the simulator has assumptions too. A realistic picture does not prove that friction, sensors or human behaviour match reality.
 - So ask what was tested, what was missing, and how the virtual results were checked against the physical world.
 
-## 46. Practise the dangerous moment before it happens.
+## 47. Practise the dangerous moment before it happens.
 
-**34:35–35:20 · 3 speaking points**
+**35:05–35:50 · 3 speaking points**
 
 Waymo makes simulation useful by connecting it to events and measurements from the road.
 
@@ -464,9 +474,9 @@ Waymo makes simulation useful by connecting it to events and measurements from t
 - Its February 2026 World Model generates camera and lidar scenes, including unusual weather. Engineers can change road layouts and other drivers’ behaviour.
 - That widens the tests we can run. It cannot show that every important situation was included, so physical tests and observed road outcomes still matter.
 
-## 47. Real roads. Encouraging evidence.
+## 48. Real roads. Encouraging evidence.
 
-**35:20–35:55 · 3 speaking points**
+**35:50–36:25 · 3 speaking points**
 
 The US deployment gives us something we cannot get from a demonstration: measured outcomes on real roads.
 
@@ -474,9 +484,9 @@ The US deployment gives us something we cannot get from a demonstration: measure
 - It reports 94% fewer serious-or-fatal-injury crashes and 82% fewer crashes with any reported injury, versus matched human-driver benchmarks.
 - These are company-reported comparisons in defined conditions, not a guarantee everywhere. But evidence of fewer injuries is a reason to enable well-controlled learning.
 
-## 48. Waiting has a cost. So does moving too fast.
+## 49. Waiting has a cost. So does moving too fast.
 
-**35:55–36:35 · 3 speaking points**
+**36:25–37:05 · 3 speaking points**
 
 Places that let responsible trials happen can build experience while others are still debating how to begin.
 
@@ -484,9 +494,9 @@ Places that let responsible trials happen can build experience while others are 
 - Europe is not starting from zero: the EU already has automated-driving approval rules. The UK has a separate pilot route. The challenge is making permission workable, not simply removing safeguards.
 - My argument is to allow bounded trials, demand evidence and widen permission as results justify it. But can the same approach work when millions of agents share one market?
 
-## 49. No body. Still able to act.
+## 50. No body. Still able to act.
 
-**36:35–37:15 · 3 speaking points**
+**37:05–37:45 · 3 speaking points**
 
 An agent does not need a robot body. Give it tools and it can change things outside the chat.
 
@@ -494,9 +504,9 @@ An agent does not need a robot body. Give it tools and it can change things outs
 - Meta describes scoped access and approval for sensitive actions. I want to see whether those boundaries hold when the task gets complicated.
 - Local AI is also becoming practical on NVIDIA DGX Spark and Apple M5 hardware. The missing step to moving real money is account access—not acquiring a physical body.
 
-## 50. A million sensible agents. One unstable market?
+## 51. A million sensible agents. One unstable market?
 
-**37:15–38:10 · 3 speaking points**
+**37:45–38:40 · 3 speaking points**
 
 Imagine many people telling a portfolio agent: protect my savings when the market starts falling.
 
@@ -504,9 +514,9 @@ Imagine many people telling a portfolio agent: protect my savings when the marke
 - That is herding: swarm-like behaviour without a mastermind. Game theory asks how each agent’s best response changes the incentives for all the others.
 - Experiments show learned trading collusion and simple conventions emerging between agents. These are warnings about interaction—not evidence that a million retail agents have already crashed a market.
 
-## 51. Who can stop the feedback loop?
+## 52. Who can stop the feedback loop?
 
-**38:10–38:55 · 3 speaking points**
+**38:40–39:25 · 3 speaking points**
 
 This brings us back to risk assessment: assess the use, the firms responsible and the system they create together.
 
@@ -514,9 +524,9 @@ This brings us back to risk assessment: assess the use, the firms responsible an
 - Trading already has rules. ESMA’s February 2026 briefing addresses AI within algorithmic-trading supervision: firms, testing, governance and pre-trade controls.
 - For this scenario, I would ask for bounded order authority, traceable decisions and a way to stop activity. New models or permissions should reopen the assessment. Who monitors the combined effect?
 
-## 52. Who is in control? Show us.
+## 53. Who is in control? Show us.
 
-**Discussion · after 38:55 planned content · 3 speaking points**
+**Discussion · after 39:25 planned content · 3 speaking points**
 
 I want the breakthroughs. I also want control we can demonstrate when something goes wrong.
 
@@ -524,7 +534,7 @@ I want the breakthroughs. I also want control we can demonstrate when something 
 - Keep that permission open to challenge when the system, its use or its impact changes. Someone must be able to act on the evidence.
 - Arabella, over to you: what would change your mind—and who should have the power to say “not yet”?
 
-## 53. Another arms race?
+## 54. Another arms race?
 
 **Optional backup · 3 speaking points**
 
@@ -534,7 +544,7 @@ The arms-race analogy is useful if we also notice where it breaks down.
 - AI has broad civilian uses, copyable software and many private actors, although compute remains physical. Nuclear technology has civilian uses too.
 - Use the analogy to ask better questions about incentives and verification. Calling it a race does not tell us what a sensible finish line is.
 
-## 54. Can Europe afford to regulate?
+## 55. Can Europe afford to regulate?
 
 **Optional backup · 3 speaking points**
 
@@ -544,7 +554,7 @@ Europe has to make protection and innovation work together in practice.
 - Being “behind” can mean models, chips, research or adoption. Europe’s position is not identical across those measures.
 - Which rule, at what cost and with what benefit? Unreliable deployment can also undermine the adoption and economic value we want.
 
-## 55. Trustworthy enough to use.
+## 56. Trustworthy enough to use.
 
 **Optional backup · 3 speaking points**
 
@@ -554,7 +564,7 @@ Trustworthiness has to support a decision about a specific use.
 - Examine implementation, cost and outcomes. An attractive theory does not show that every rule works.
 - Safeguards sit alongside compute, data, skills and investment. Ask which combination enables productive, accountable use.
 
-## 56. Good score. Wrong outcome.
+## 57. Good score. Wrong outcome.
 
 **Optional backup · 3 speaking points**
 
@@ -564,7 +574,7 @@ A system can improve its measured score while missing what we really wanted.
 - Reward hacking exploits a gap between the measured objective and the real purpose. Malice or consciousness is not required.
 - Whose purpose matters: developer, buyer or affected person? Better optimisation does not settle their disagreement.
 
-## 57. Danger now. Uncertainty ahead.
+## 58. Danger now. Uncertainty ahead.
 
 **Optional backup · 3 speaking points**
 
@@ -574,7 +584,7 @@ We can address present harms while being honest about uncertain future capabilit
 - More severe loss-of-control scenarios deserve attention, but their timing and likelihood remain disputed.
 - Separate observations from extrapolations. What evidence would change our assessment in either direction?
 
-## 58. A conditional decision. Not a universal green light.
+## 59. A conditional decision. Not a universal green light.
 
 **Optional backup · 3 speaking points**
 

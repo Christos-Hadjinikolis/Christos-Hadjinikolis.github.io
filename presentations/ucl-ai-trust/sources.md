@@ -187,7 +187,16 @@ Visual: Original European Union identifier. Concept: Anu Bradford.
 - https://digital-strategy.ec.europa.eu/en/news/ai-omnibus-enters-force
 - https://digital-strategy.ec.europa.eu/en/policies/ai-board
 
-## 30. Risk determines what companies must do.
+## 30. The next standards are being shaped now.
+
+- https://ch.linkedin.com/company/scrai-swiss-centre-for-responsible-ai
+- https://www.zhaw.ch/de/engineering/ueber-uns/veranstaltungen/veranstaltung/event-news/networking-event-trust-by-design-standards-for-aligned-ai-governance
+- https://jtc21.eu/working-groups/
+- https://jtc21.eu/significant-milestone-for-european-ai-standardization/
+- https://digital-strategy.ec.europa.eu/en/policies/ai-board
+- https://www.openstreetmap.org/?mlat=47.49727&mlon=8.72935#map=11/47.43/8.65
+
+## 31. Risk determines what companies must do.
 
 - https://digital-strategy.ec.europa.eu/en/faqs/navigating-ai-act
 - https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-3
@@ -198,13 +207,13 @@ Visual: Original European Union identifier. Concept: Anu Bradford.
 - https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-6
 - https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50
 
-## 31. Is a home robot “high-risk”?
+## 32. Is a home robot “high-risk”?
 
 - https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng
 - https://digital-strategy.ec.europa.eu/en/faqs/navigating-ai-act
 - https://www.iso.org/standard/53820.html
 
-## 32. Before release: show the evidence
+## 33. Before release: show the evidence
 
 - https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-16
 - https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-43
@@ -212,50 +221,50 @@ Visual: Original European Union identifier. Concept: Anu Bradford.
 - https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-48
 - https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-49
 
-## 33. Who checks the check?
+## 34. Who checks the check?
 
 - https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-43
 - https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-72
 - https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-74
 
-## 34. A legal category is not a risk assessment
+## 35. A legal category is not a risk assessment
 
 
-## 35. Would you let it into your home?
+## 36. Would you let it into your home?
 
 
-## 36. Start with the chores.
+## 37. Start with the chores.
 
 - https://www.1x.tech/neo
 
 Visual: 1X · NEO marketing image · scenario fictional; no childcare capability or endorsement implied
 
-## 37. Now add a baby.
+## 38. Now add a baby.
 
 
-## 38. “99.9% successful.” Would that convince you?
+## 39. “99.9% successful.” Would that convince you?
 
 
-## 39. Two more facts. Do you still approve?
+## 40. Two more facts. Do you still approve?
 
 
-## 40. Turn concern into an approval record.
+## 41. Turn concern into an approval record.
 
 
-## 41. A human in the loop. Or a human on the poster?
+## 42. A human in the loop. Or a human on the poster?
 
 - https://giphy.com/gifs/terminator-2-john-connor-QswHqxRk7svjq
 
 Visual: Terminator 2: Judgment Day · film excerpt via GIPHY
 
-## 42. The world does not follow the prompt.
+## 43. The world does not follow the prompt.
 
 
-## 43. Embodied AI: sensing and acting.
+## 44. Embodied AI: sensing and acting.
 
 - https://ai.meta.com/research/publications/v-jepa-2-self-supervised-video-models-enable-understanding-prediction-and-planning/
 
-## 44. LeCun’s challenge: predict consequences
+## 45. LeCun’s challenge: predict consequences
 
 - https://awards.acm.org/binaries/content/assets/press-releases/2019/march/turing-award-2018.pdf
 - https://www.linkedin.com/posts/yann-lecun_as-many-of-you-have-heard-through-rumors-activity-7397020300451749888-2lhA
@@ -266,7 +275,7 @@ Visual: Terminator 2: Judgment Day · film excerpt via GIPHY
 
 Visual: Jeremy Barande / École polytechnique · 2025 · CC BY-SA 2.0 · cropped
 
-## 45. Can we simulate our way to safety?
+## 46. Can we simulate our way to safety?
 
 - https://www.waymo.com/research/collision-avoidance-testing-of-the-waymo-automated/
 - https://www.gov.uk/government/publications/self-driving-vehicle-pilot-scheme-information-for-applicants/self-driving-vehicle-pilot-scheme-information-for-applicants
@@ -274,7 +283,7 @@ Visual: Jeremy Barande / École polytechnique · 2025 · CC BY-SA 2.0 · cropped
 
 Visual: The Matrix (1999) · training scene via GIPHY
 
-## 46. Practise the dangerous moment before it happens.
+## 47. Practise the dangerous moment before it happens.
 
 - https://www.waymo.com/research/collision-avoidance-testing-of-the-waymo-automated/
 - https://waymo.com/blog/2026/02/the-waymo-world-model-a-new-frontier-for-autonomous-driving-simulation/
@@ -283,12 +292,12 @@ Visual: The Matrix (1999) · training scene via GIPHY
 
 Visual: Waymo · London announcement image, October 2025 · promotional image, not evidence of approval
 
-## 47. Real roads. Encouraging evidence.
+## 48. Real roads. Encouraging evidence.
 
 - https://blog.waymo.com/blog/shorts/safetydata-june26/
 - https://waymo.com/safety/impact/
 
-## 48. Waiting has a cost. So does moving too fast.
+## 49. Waiting has a cost. So does moving too fast.
 
 - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32022R1426
 - https://www.gov.uk/government/publications/self-driving-vehicle-pilot-scheme-information-for-applicants
@@ -296,7 +305,7 @@ Visual: Waymo · London announcement image, October 2025 · promotional image, n
 
 Visual: Waymo · Vision for London, 24 September 2026 · company image
 
-## 49. No body. Still able to act.
+## 50. No body. Still able to act.
 
 - https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/
 - https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse
@@ -305,44 +314,44 @@ Visual: Waymo · Vision for London, 24 September 2026 · company image
 
 Visual: Meta · Muse launch artwork, September 2026 · supplier illustration
 
-## 50. A million sensible agents. One unstable market?
+## 51. A million sensible agents. One unstable market?
 
 - https://www.bis.org/speeches/20251008-artificial-intelligence-and-central-banks-monetary-and-financial-stability-implications
 - https://finance-faculty.wharton.upenn.edu/wdou/2023/05/19/ai-powered-trading-algorithmic-collusion-and-price-efficiency/
 - https://arxiv.org/abs/2410.08948
 
-## 51. Who can stop the feedback loop?
+## 52. Who can stop the feedback loop?
 
 - https://www.esma.europa.eu/press-news/esma-news/esma-issues-supervisory-briefing-algorithmic-trading
 - https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mifid-ii/article-17-algorithmic-trading
 - https://www.bis.org/speeches/20251008-artificial-intelligence-and-central-banks-monetary-and-financial-stability-implications
 
-## 52. Who is in control? Show us.
+## 53. Who is in control? Show us.
 
 - https://giphy.com/gifs/thumbs-up-terminator-gFwZfXIqD0eNW
 
 Visual: Terminator 2: Judgment Day · film excerpt via GIPHY
 
-## 53. Another arms race?
+## 54. Another arms race?
 
 - https://www.whitehouse.gov/releases/2025/07/white-house-unveils-americas-ai-action-plan/
 - https://fiia.fi/julkaisu/nuclear-arms-control-policies-and-safety-in-artificial-intelligence
 
-## 54. Can Europe afford to regulate?
+## 55. Can Europe afford to regulate?
 
 - https://hai.stanford.edu/ai-index/2026-ai-index-report
 
-## 55. Trustworthy enough to use.
+## 56. Trustworthy enough to use.
 
 - https://digital-strategy.ec.europa.eu/en/factpages/ai-continent-action-plan
 - https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
 
-## 56. Good score. Wrong outcome.
+## 57. Good score. Wrong outcome.
 
 - https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026
 
-## 57. Danger now. Uncertainty ahead.
+## 58. Danger now. Uncertainty ahead.
 
 - https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026
 
-## 58. A conditional decision. Not a universal green light.
+## 59. A conditional decision. Not a universal green light.

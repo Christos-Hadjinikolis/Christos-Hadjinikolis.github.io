@@ -159,6 +159,8 @@ For AI, the possibility is that shared practices for testing and documentation t
 
 Here is where my own involvement comes in. I work in production machine learning and participate in CEN–CENELEC JTC 21’s Working Group 3 on Engineering Aspects. That sounds far less cinematic than Stargate. The questions are often very concrete.
 
+The work is continuing this week: JTC 21 is meeting in Winterthur on **6–9 October 2026**, with WG3 topics including computer-vision evaluation, dataset quality and bias. The [AI Board’s September update](https://digital-strategy.ec.europa.eu/en/policies/ai-board) also points to possible further standardisation requests. More work is in the pipeline; a confirmed “second batch” publication date is another matter. [See the meeting slide]({{ '/presentations/ucl-ai-trust/slides.html?slide=winterthur-2026' | relative_url }}).
+
 If a supplier says its system is reliable, what should it have to show? If it says a person remains in control, can that person actually intervene? If the system changes next month, does last month’s approval still mean anything?
 
 The law sets duties. Standards help agree practical ways of meeting and checking them. The Commission turns to standards organisations such as CEN and CENELEC to organise that technical work, with participation from national bodies, industry, researchers and other stakeholders. This is one way broad promises begin to turn into things somebody can examine.
