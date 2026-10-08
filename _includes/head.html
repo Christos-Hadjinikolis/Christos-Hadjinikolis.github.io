@@ -57,7 +57,7 @@
     "headline": {{ page.title | jsonify }},
     "description": {{ _page_description | jsonify }},
     "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
-    "dateModified": {{ page.date | date_to_xmlschema | jsonify }},
+    "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
     "author": {
       "@type": "Person",
       "name": {{ page.author | default: site.author | jsonify }}
@@ -98,6 +98,11 @@
   <!--[if lte IE 8]><link rel="stylesheet" href="{{- 'assets/css/ie8.css' | relative_url -}}" /><![endif]-->
   <!--[if lte IE 9]><link rel="stylesheet" href="{{- 'assets/css/ie9.css' | relative_url -}}" /><![endif]-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+
+  {% if page.story_timeline %}
+  <link rel="stylesheet" href="{{ '/assets/css/story-timeline.css' | relative_url }}" />
+  <script src="{{ '/assets/js/story-timeline.js' | relative_url }}" defer></script>
+  {% endif %}
 
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" defer></script>

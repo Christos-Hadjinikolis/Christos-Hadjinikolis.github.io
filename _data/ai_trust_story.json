@@ -1,0 +1,107 @@
+[
+  {
+    "id": "stargate",
+    "date": "21 JAN 2025",
+    "title": "State-backed ambition",
+    "slide": "original-1",
+    "summary": "OpenAI, Oracle and SoftBank bring infrastructure and geopolitical ambition into one room."
+  },
+  {
+    "id": "glasswing",
+    "date": "7 APR 2026",
+    "title": "Rivals cooperate",
+    "slide": "original-3",
+    "summary": "Glasswing pools defensive expertise. Who can challenge the rules outside the partnership?"
+  },
+  {
+    "id": "hugging-face",
+    "date": "JUL 2026",
+    "title": "Tests reach real systems",
+    "slide": "original-2",
+    "summary": "The Hugging Face incident turns containment and authorisation into immediate concerns."
+  },
+  {
+    "id": "hassabis",
+    "date": "14 JUL 2026",
+    "title": "A proposed regulator",
+    "slide": "original-4",
+    "summary": "Hassabis proposes a route from voluntary review to mandatory assessment."
+  },
+  {
+    "id": "incidents",
+    "date": "9–19 SEP 2026",
+    "title": "More disclosures",
+    "slide": "obama-incentives",
+    "summary": "Incident disclosures and Obama’s argument expose the gap between good intentions and incentives."
+  },
+  {
+    "id": "rrsi",
+    "date": "21 SEP 2026",
+    "title": "Agents improve their setup",
+    "slide": "rrsi",
+    "summary": "RRSI evolves the agent’s workflow around a fixed model. What evidence survives the change?"
+  },
+  {
+    "id": "accord",
+    "date": "29 SEP 2026",
+    "title": "Safety commitments",
+    "slide": "white-house-accord",
+    "summary": "The White House accord makes promises more explicit. Enforcement remains the harder question."
+  },
+  {
+    "id": "judgment-day",
+    "date": "THE QUESTION",
+    "title": "A countdown to what?",
+    "slide": "original-7",
+    "summary": "Take real failures seriously without turning uncertainty into a prediction of catastrophe."
+  },
+  {
+    "id": "europe",
+    "date": "BACKSTORY · 2021–24",
+    "title": "Europe’s earlier answer",
+    "slide": "original-5",
+    "summary": "The AI Act began before Stargate. Its test is protection and useful adoption in practice."
+  },
+  {
+    "id": "standards",
+    "date": "6–9 OCT 2026",
+    "title": "Standards in progress",
+    "slide": "winterthur-2026",
+    "summary": "Winterthur’s meetings connect broad legal duties to methods engineers can specify and test."
+  },
+  {
+    "id": "home-robot",
+    "date": "THE PERSONAL TEST",
+    "title": "Would you trust it at home?",
+    "slide": "original-29",
+    "summary": "A hypothetical robot moves from laundry to childcare. The evidence has to change with the task."
+  },
+  {
+    "id": "physical-world",
+    "date": "THE RESEARCH QUESTION",
+    "title": "Actions have consequences",
+    "slide": "original-35",
+    "summary": "Embodied AI forces prediction and control to meet the physical world."
+  },
+  {
+    "id": "waymo",
+    "date": "EVIDENCE · JUN 2026",
+    "title": "Learning on real roads",
+    "slide": "original-40",
+    "summary": "Waymo’s reported US safety comparisons make the cost of waiting worth examining too."
+  },
+  {
+    "id": "market-agents",
+    "date": "THE COLLECTIVE RISK",
+    "title": "A million agents act",
+    "slide": "original-45",
+    "summary": "Reasonable individual instructions can combine into an unstable market."
+  },
+  {
+    "id": "coexistence",
+    "date": "THE OPEN FUTURE",
+    "title": "Room for coexistence",
+    "slide": "original-47",
+    "summary": "Greater intelligence need not imply hostility. Cooperation remains a possibility worth pursuing."
+  }
+]

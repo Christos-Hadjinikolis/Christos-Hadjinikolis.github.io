@@ -1,0 +1,20 @@
+{% assign _story = site.data[page.story_timeline] %}
+<aside class="story-sidebar" aria-label="Article timeline and related slides">
+  <details class="story-rail" data-story-rail>
+    <summary><span class="story-rail__kicker">TIMELINE &amp; QUESTIONS</span><span data-story-current>Follow the story</span><span class="story-rail__toggle" aria-hidden="true">＋</span></summary>
+    <div class="story-rail__inside">
+      <nav class="story-rail__nav" aria-label="Jump to a turning point">
+        <ol>
+          {% for event in _story %}
+          <li><a href="#{{ event.id }}" data-story-point data-slide="{{ event.slide }}" data-summary="{{ event.summary | escape }}" data-title="{{ event.title | escape }}"><span class="story-rail__date">{{ event.date }}</span><span>{{ event.title }}</span></a></li>
+          {% endfor %}
+        </ol>
+      </nav>
+      <figure class="story-preview">
+        <div class="story-preview__frame"><iframe data-story-preview data-deck="{{ '/presentations/ucl-ai-trust/slides.html' | relative_url }}" title="Slide for the current chapter" tabindex="-1" aria-hidden="true" loading="lazy"></iframe></div>
+        <figcaption><p data-story-summary>{{ _story[0].summary }}</p><a data-story-slide href="{{ '/presentations/ucl-ai-trust/slides.html' | relative_url }}?slide={{ _story[0].slide }}&amp;reveal=all" target="_blank" rel="noopener">Open this slide ↗</a></figcaption>
+      </figure>
+      <div class="story-rail__controls"><a data-story-prev href="#{{ _story[0].id }}" aria-label="Previous chapter">← Previous</a><span data-story-position>1 / {{ _story.size }}</span><a data-story-next href="#{{ _story[1].id }}" aria-label="Next chapter">Next →</a></div>
+    </div>
+  </details>
+</aside>

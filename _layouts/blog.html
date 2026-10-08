@@ -1,7 +1,11 @@
 ---
 layout: default
 ---
-{%- assign _posts = site.posts | sort: 'date' | reverse -%}
+{%- if page.archive_collection -%}
+  {%- assign _posts = site[page.archive_collection] | sort: 'date' | reverse -%}
+{%- else -%}
+  {%- assign _posts = site.posts | sort: 'date' | reverse -%}
+{%- endif -%}
 {%- include header.html blog_posts=_posts -%}
 <!-- Main -->
 <div id="main">
@@ -13,7 +17,7 @@ layout: default
 					{%- if page.subtitle -%}<p>{{- page.subtitle -}}</p>{%- endif -%}
 				</header>
 				<div class="prose-block prose-block--intro">
-					{{- page.content -}}
+					{{- page.content | markdownify -}}
 				</div>
 			</div>
 		</section>

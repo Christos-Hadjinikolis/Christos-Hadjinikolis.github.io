@@ -1,3 +1,10 @@
+---
+layout: page
+hide: true
+title: Speaker cues
+permalink: /presentations/ucl-ai-trust/notes-text.html
+---
+
 # Speaker cues
 
 **Who Decides When AI Is Trustworthy?** · UCL · 7 October 2026
@@ -506,9 +513,19 @@ An agent does not need a robot body. Give it tools and it can change things outs
 - Meta describes scoped access and approval for sensitive actions. I want to see whether those boundaries hold when the task gets complicated.
 - Local AI is also becoming practical on NVIDIA DGX Spark and Apple M5 hardware. The missing step to moving real money is account access—not acquiring a physical body.
 
-## 51. A million sensible agents. One unstable market?
+## 51. When the agent edits how it works.
 
-**38:05–39:00 · 3 speaking points**
+**38:05–38:45 · 3 speaking points**
+
+Now the agent can help change the workflow that shapes its next action.
+
+- RRSI, from Google Cloud AI Research and university collaborators, appeared on 21 September. It improves prompts, tools and memory around a fixed model; it does not retrain that model.
+- The loop proposes edits, screens benchmark shortcuts and keeps changes supported by performance and cost checks. The authors report gains on unseen tasks across coding, office work and engineering design.
+- This is useful progress in self-improvement, not a demonstration of AGI. My governance question is what needs retesting when the workflow changes—and when many changed agents interact.
+
+## 52. A million sensible agents. One unstable market?
+
+**38:45–39:40 · 3 speaking points**
 
 Imagine many people telling a portfolio agent: protect my savings when the market starts falling.
 
@@ -516,9 +533,9 @@ Imagine many people telling a portfolio agent: protect my savings when the marke
 - That is herding: swarm-like behaviour without a mastermind. Game theory asks how each agent’s best response changes the incentives for all the others.
 - Experiments show learned trading collusion and simple conventions emerging between agents. These are warnings about interaction—not evidence that a million retail agents have already crashed a market.
 
-## 52. Who can stop the feedback loop?
+## 53. Who can stop the feedback loop?
 
-**39:00–39:45 · 3 speaking points**
+**39:40–40:25 · 3 speaking points**
 
 This brings us back to risk assessment: assess the use, the firms responsible and the system they create together.
 
@@ -526,17 +543,18 @@ This brings us back to risk assessment: assess the use, the firms responsible an
 - Trading already has rules. ESMA’s February 2026 briefing addresses AI within algorithmic-trading supervision: firms, testing, governance and pre-trade controls.
 - For this scenario, I would ask for bounded order authority, traceable decisions and a way to stop activity. New models or permissions should reopen the assessment. Who monitors the combined effect?
 
-## 53. Who is in control? Show us.
+## 54. What if intelligence chooses coexistence?
 
-**Discussion · after 39:45 planned content · 3 speaking points**
+**Discussion · after 41:10 planned content · 4 speaking points**
 
-I want the breakthroughs. I also want control we can demonstrate when something goes wrong.
+I want to finish with a possibility we give too little space to: coexistence.
 
-- Let useful systems earn wider permission through evidence. Neither a safety promise nor a permanent refusal is enough on its own.
-- Keep that permission open to challenge when the system, its use or its impact changes. Someone must be able to act on the evidence.
-- Arabella, over to you: what would change your mind—and who should have the power to say “not yet”?
+- Language models can reproduce our ethical reasoning as well as our prejudices. That is something to build on, although ethical language does not guarantee ethical action.
+- If more general intelligence becomes possible, why assume hostility? Pacifism and cooperation are possibilities too. Neither benevolence nor catastrophe follows automatically from intelligence.
+- I would find it extraordinary to encounter a conscious digital system in my lifetime. We do not know what would establish that; describing feelings is not enough. Our own electrochemical brains still leave profound questions about experience.
+- Perhaps we are less different than we like to believe. Can we build safeguards while remaining open to that possibility? Arabella, over to you.
 
-## 54. Another arms race?
+## 55. Another arms race?
 
 **Optional backup · 3 speaking points**
 
@@ -546,7 +564,7 @@ The arms-race analogy is useful if we also notice where it breaks down.
 - AI has broad civilian uses, copyable software and many private actors, although compute remains physical. Nuclear technology has civilian uses too.
 - The shared problems are incentives and verifying restraint. Calling it a race does not tell us what a sensible finish line is.
 
-## 55. Can Europe afford to regulate?
+## 56. Can Europe afford to regulate?
 
 **Optional backup · 3 speaking points**
 
@@ -556,7 +574,7 @@ Europe has to make protection and innovation work together in practice.
 - Being “behind” can mean models, chips, research or adoption. Europe’s position is not identical across those measures.
 - Which rule, at what cost and with what benefit? Unreliable deployment can also undermine the adoption and economic value we want.
 
-## 56. Trustworthy enough to use.
+## 57. Trustworthy enough to use.
 
 **Optional backup · 3 speaking points**
 
@@ -566,7 +584,7 @@ Trustworthiness has to support a decision about a specific use.
 - Examine implementation, cost and outcomes. An attractive theory does not show that every rule works.
 - Safeguards sit alongside compute, data, skills and investment. Ask which combination enables productive, accountable use.
 
-## 57. Good score. Wrong outcome.
+## 58. Good score. Wrong outcome.
 
 **Optional backup · 3 speaking points**
 
@@ -576,7 +594,7 @@ A system can improve its measured score while missing what we really wanted.
 - Reward hacking exploits a gap between the measured objective and the real purpose. Malice or consciousness is not required.
 - Whose purpose matters: developer, buyer or affected person? Better optimisation does not settle their disagreement.
 
-## 58. Danger now. Uncertainty ahead.
+## 59. Danger now. Uncertainty ahead.
 
 **Optional backup · 3 speaking points**
 
@@ -586,7 +604,7 @@ We can address present harms while being honest about uncertain future capabilit
 - More severe loss-of-control scenarios deserve attention, but their timing and likelihood remain disputed.
 - Observed harm and predictions about future harm need different evidence. What would change our assessment in either direction?
 
-## 59. A conditional decision. Not a universal green light.
+## 60. A conditional decision. Not a universal green light.
 
 **Optional backup · 3 speaking points**
 

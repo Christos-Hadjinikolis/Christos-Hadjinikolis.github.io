@@ -69,7 +69,16 @@ google_analytics_measurement_id: G-V1GSL7RBDQ
 # The following settings are NECESSARY for the Prologue theme to run:
 remote_theme: jekyll-theme-prologue
 collections_dir: content
-collections: [sections]
+collections:
+  sections:
+  talks:
+    output: true
+    permalink: /presentations/:name/
+defaults:
+  - scope:
+      path: presentations
+    values:
+      hide: true
 exclude:
   - .codex
   - _internal

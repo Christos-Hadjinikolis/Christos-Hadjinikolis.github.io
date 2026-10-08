@@ -47,3 +47,9 @@ The user authorised publishing the UCL deck and presenter notes on the website. 
 A companion article must stand on its own. Turn presentation material into direct storytelling and argument; do not explain why the presenter chose an image, advise how an event should be retold, or narrate the construction of the seminar. Keep optional deck and notes links in a short related-presentation footer.
 
 For article illustrations, prefer the `seminar-slide.html` include with a stable slide key over screenshots. It embeds the actual slide HTML at 16:9 and includes a full-size link. Use images only where needed for social-card metadata; never stretch a slide image. The export checks that article embed keys still exist after cuts.
+
+Keep main-slide and backup counts consistent in the deck, presenter view and phone notes. Use separately labelled menu groups and stop normal navigation at the final main slide. A backup must never look like missing main content.
+
+Public exports need explicit Jekyll metadata. Standalone slide/notes HTML uses `layout: null` and `hide: true`; text notes use a distinct permalink such as `notes-text.html` to avoid overwriting the notes application. Sources use an explicit `sources.html` route. Only the Presentations archive belongs in main navigation. Talk overview pages reuse the blog archive and post layouts. Run the presentation publishing audit before deploying.
+
+An article may use a scroll-linked timeline with a live slide preview. Keep the original reading order accessible through ordinary anchors, honour reduced motion, check a fresh mobile viewport, and preserve a readable article when JavaScript is disabled. Treat philosophical hopes about AGI and consciousness as possibilities; distinguish learned ethical language from dependable behaviour and subjective experience.

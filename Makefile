@@ -46,6 +46,7 @@ build: install
 
 audit: build
 	@python3 scripts/audit_post_social_images.py
+	@python3 scripts/audit_presentation_pages.py
 	@for forbidden in _site/scripts _site/cv _site/wip; do \
 		if [ -e "$$forbidden" ]; then \
 			echo "Unexpected published internal path: $$forbidden"; \

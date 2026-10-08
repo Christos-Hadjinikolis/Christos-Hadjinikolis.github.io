@@ -28,7 +28,7 @@ def main():
         item["note"] = item["intro"] + "\n" + "\n".join(item["bullets"])
         public.append(item)
     keys = {slide["key"] for slide in public}
-    for page in [ROOT / "content/_posts/2026-10-07-who-decides-when-ai-is-trustworthy.md", ROOT / "content/pages/presentations.md"]:
+    for page in [ROOT / "content/_posts/2026-10-07-who-decides-when-ai-is-trustworthy.md", ROOT / "content/pages/presentations.md", ROOT / "content/_talks/ucl-ai-trust.md"]:
         embedded = set(re.findall(r'include seminar-slide.html key="([^"]+)"', page.read_text()))
         if embedded - keys:
             raise ValueError(f"Update removed slide embeds in {page.name}: {sorted(embedded - keys)}")
@@ -52,6 +52,12 @@ def main():
             for forbidden in ["private_source", "N1275", "/Users/", "Registration deadline passed"]:
                 if forbidden in text:
                     raise ValueError(f"Private preparation marker in {filename}: {forbidden}")
+            if filename.endswith('.md'):
+                title = 'Speaker cues' if filename == 'notes.md' else 'Sources and visual credits'
+                slug = 'notes-text.html' if filename == 'notes.md' else 'sources.html'
+                text = f"---\nlayout: page\nhide: true\ntitle: {title}\npermalink: /presentations/ucl-ai-trust/{slug}\n---\n\n" + text
+            else:
+                text = "---\nlayout: null\nhide: true\n---\n" + text
             (DEST / filename).write_text(text.rstrip() + "\n")
         shutil.copytree(SOURCE / "assets/logos", DEST / "assets/logos", dirs_exist_ok=True)
     print(f"Exported {len(public)} slides with public speaker notes to {DEST.relative_to(ROOT)}")

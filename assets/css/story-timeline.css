@@ -1,0 +1,38 @@
+/* Opt-in article rail. Existing articles keep their reading layout. */
+#main>article.post-reading--timeline{overflow:visible}
+.story-layout{width:calc(100% - 5rem);max-width:1400px;margin-inline:auto;padding-inline:0}
+.story-text{min-width:0}.story-text h2[id]{scroll-margin-top:6.5rem}
+.story-sidebar{position:sticky;top:.75rem;z-index:5;align-self:start;margin-bottom:2rem;font-size:15px;line-height:1.45;letter-spacing:0}
+.story-rail{background:var(--panel);color:var(--ink-soft);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow-soft);overflow:hidden;margin:0}
+.story-rail summary{display:grid;grid-template-columns:1fr auto;padding:14px 18px;cursor:pointer;list-style:none;font-weight:700;color:var(--ink-strong);line-height:1.4}
+.story-rail summary::-webkit-details-marker{display:none}.story-rail__kicker{grid-column:1;font-size:10px;letter-spacing:1.6px;color:var(--accent-strong);margin-bottom:4px}
+.story-rail__toggle{grid-column:2;grid-row:1/3;align-self:center;font-size:22px}.story-rail[open] .story-rail__toggle{transform:rotate(45deg)}
+.story-rail__inside{padding:0 15px 15px;max-height:calc(82vh - 90px);overflow-y:auto;overscroll-behavior:contain}
+.story-rail__nav{max-height:230px;overflow-y:auto;scrollbar-width:thin;border-bottom:1px solid var(--line);overscroll-behavior:contain;padding-bottom:10px}
+.story-rail__nav ol{list-style:none;margin:0;padding:0}.story-rail__nav li{padding:0;margin:0;border-left:1px solid var(--line)}
+.story-rail__nav a{position:relative;display:block;padding:9px 10px 9px 17px;border:0!important;border-radius:0 7px 7px 0;color:var(--ink-soft)!important;line-height:1.35;text-decoration:none!important}
+.story-rail__nav a:before{content:'';position:absolute;width:7px;height:7px;border-radius:50%;left:-4px;top:17px;background:var(--ink-soft)}
+.story-rail__date{display:block;font-size:10px;letter-spacing:.6px;font-weight:700;margin-bottom:3px;opacity:.9}
+.story-rail__nav a[aria-current=location]{color:var(--ink-strong)!important;background:var(--accent-soft);font-weight:700}
+.story-rail__nav a[aria-current=location]:before{background:var(--accent-strong);box-shadow:0 0 0 3px var(--accent-soft)}
+.story-preview{margin:16px 0 0}.story-preview__frame{aspect-ratio:16/9;background:#121313;border-radius:7px;overflow:hidden}.story-preview iframe{width:100%;height:100%;border:0;pointer-events:none;display:block}
+.story-preview figcaption{font-size:13px;line-height:1.5;margin-top:12px}.story-preview p{font-size:13px!important;line-height:1.5!important;margin:0 0 10px!important}
+.story-preview a{font-weight:700;color:var(--accent-strong)!important}
+.story-rail__controls{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:16px;padding-top:12px;border-top:1px solid var(--line);font-size:12px;font-weight:700}
+.story-rail__controls a{padding:8px 0;border:0;color:var(--ink-strong)!important}.story-rail__controls [aria-disabled=true]{opacity:.35;pointer-events:none}
+.story-rail a:focus-visible,.story-rail summary:focus-visible{outline:3px solid var(--accent-strong);outline-offset:-3px}
+@media(min-width:1440px){.story-layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:45px;align-items:start}.story-text{grid-column:1;grid-row:1;font-size:20px;line-height:1.85}.story-sidebar{grid-column:2;grid-row:1;top:24px;margin:0}.story-rail__inside{max-height:calc(100vh - 140px)}.story-rail__nav{max-height:calc(100vh - 460px);min-height:160px}.story-text h2{font-size:1.65em;line-height:1.3}.story-text h2[id]{scroll-margin-top:30px}}
+@media(min-width:1881px){.story-layout{grid-template-columns:minmax(0,1fr) 370px;gap:65px}.story-text{font-size:23px}}
+@media(max-width:736px){.story-layout{width:calc(100% - 2.5rem)}.story-sidebar{top:10px}.story-rail__inside{max-height:65vh}.story-preview__frame{max-width:360px;margin-inline:auto}.story-text h2[id]{scroll-margin-top:105px}}
+@media(prefers-reduced-motion:reduce){.story-rail *{scroll-behavior:auto!important;transition:none!important}}
+@media print{.story-sidebar{display:none}.story-layout{display:block;width:auto}.story-text{font-size:inherit}}
+
+/* Clip horizontal overflow without creating a second scroll container. */
+@media(max-width:960px){html:has(.story-layout),body:has(.story-layout){overflow-x:clip}}
+@media(max-width:1439px){.story-layout{width:auto!important;margin-inline:2rem;padding-inline:0!important}}
+@media(max-width:736px){.story-layout{margin-inline:20px}.story-sidebar{top:60px}}
+@media(min-width:1440px){.story-rail[open] .story-rail__inside{display:flex;flex-direction:column;max-height:calc(100vh - 135px);overflow:hidden}.story-rail__nav{flex:1 1 auto;min-height:100px}.story-preview,.story-rail__controls{flex:0 0 auto}}
+
+@media(max-width:1439px){.story-rail[open] .story-rail__inside{display:flex;flex-direction:column;overflow:hidden}.story-rail__nav{flex:1 1 auto;min-height:80px}.story-preview,.story-rail__controls{flex:0 0 auto}}
+@media(max-width:736px){.story-text h2[id]{scroll-margin-top:155px}}
+@media(max-height:620px) and (max-width:1439px){.story-preview__frame{display:none}.story-sidebar{top:48px}.story-rail__inside{max-height:calc(100vh - 150px)}}

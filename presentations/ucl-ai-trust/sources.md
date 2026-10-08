@@ -1,3 +1,10 @@
+---
+layout: page
+hide: true
+title: Sources and visual credits
+permalink: /presentations/ucl-ai-trust/sources.html
+---
+
 # Sources and preparation details
 
 7 October 2026 revision. Preserves the source trail; dates within individual sources remain important. Speaking cues are in notes.md. Public presentation references and image credits.
@@ -318,44 +325,52 @@ Visual: Waymo · Vision for London, 24 September 2026 · company image
 
 Visual: Meta · Muse launch artwork, September 2026 · supplier illustration
 
-## 51. A million sensible agents. One unstable market?
+## 51. When the agent edits how it works.
+
+- https://arxiv.org/html/2609.24972v3
+- https://github.com/google-research/rrsi
+- https://regularized-rsi.com/
+
+## 52. A million sensible agents. One unstable market?
 
 - https://www.bis.org/speeches/20251008-artificial-intelligence-and-central-banks-monetary-and-financial-stability-implications
 - https://finance-faculty.wharton.upenn.edu/wdou/2023/05/19/ai-powered-trading-algorithmic-collusion-and-price-efficiency/
 - https://arxiv.org/abs/2410.08948
 
-## 52. Who can stop the feedback loop?
+## 53. Who can stop the feedback loop?
 
 - https://www.esma.europa.eu/press-news/esma-news/esma-issues-supervisory-briefing-algorithmic-trading
 - https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mifid-ii/article-17-algorithmic-trading
 - https://www.bis.org/speeches/20251008-artificial-intelligence-and-central-banks-monetary-and-financial-stability-implications
 
-## 53. Who is in control? Show us.
+## 54. What if intelligence chooses coexistence?
 
+- https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback
+- https://arxiv.org/abs/2308.08708
 - https://giphy.com/gifs/thumbs-up-terminator-gFwZfXIqD0eNW
 
 Visual: Terminator 2: Judgment Day · film excerpt via GIPHY
 
-## 54. Another arms race?
+## 55. Another arms race?
 
 - https://www.whitehouse.gov/releases/2025/07/white-house-unveils-americas-ai-action-plan/
 - https://fiia.fi/julkaisu/nuclear-arms-control-policies-and-safety-in-artificial-intelligence
 
-## 55. Can Europe afford to regulate?
+## 56. Can Europe afford to regulate?
 
 - https://hai.stanford.edu/ai-index/2026-ai-index-report
 
-## 56. Trustworthy enough to use.
+## 57. Trustworthy enough to use.
 
 - https://digital-strategy.ec.europa.eu/en/factpages/ai-continent-action-plan
 - https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
 
-## 57. Good score. Wrong outcome.
+## 58. Good score. Wrong outcome.
 
 - https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026
 
-## 58. Danger now. Uncertainty ahead.
+## 59. Danger now. Uncertainty ahead.
 
 - https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026
 
-## 59. A conditional decision. Not a universal green light.
+## 60. A conditional decision. Not a universal green light.

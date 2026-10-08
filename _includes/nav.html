@@ -13,6 +13,7 @@
     {%- unless _pages == null -%}
       {%- assign _pages = _pages | sort: 'order' -%}
       {%- for _page in _pages -%}
+        {%- if _page.url contains '/presentations/' and _page.url != '/presentations/' -%}{%- continue -%}{%- endif -%}
         {%- if _is_blog_archive and _page.url != '/' and _page.url != page.url -%}
           {%- continue -%}
         {%- endif -%}
@@ -59,7 +60,7 @@
           <section class="nav-year{% if forloop.first %} is-open{% endif %}">
             <button class="nav-year__toggle" type="button" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="{{- _year_panel_id -}}">
               <span class="nav-year__label">{{- _year_group.name -}}</span>
-              <span class="nav-year__count">{{ _post_count }} post{% if _post_count != 1 %}s{% endif %}</span>
+              <span class="nav-year__count">{{ _post_count }} {{ page.archive_item_label | default: 'post' }}{% if _post_count != 1 %}s{% endif %}</span>
             </button>
             <ul id="{{- _year_panel_id -}}" class="nav-year__posts"{% unless forloop.first %} hidden{% endunless %}>
               {%- for _post in _year_group.items -%}

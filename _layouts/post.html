@@ -5,7 +5,7 @@ layout: default
 <!-- Main -->
 <div id="main">
 	<!-- Post -->
-	<article class="shade-two post-reading">
+	<article class="shade-two post-reading{% if page.story_timeline %} post-reading--timeline{% endif %}">
 	  <div class="reading-hero">
 	    <div class="container">
 			<header class="reading-hero__header">
@@ -18,7 +18,8 @@ layout: default
 			</header>
 	    </div>
 	  </div>
-	  <div class="container reading-body">
+	  <div class="container reading-body{% if page.story_timeline %} story-layout{% endif %}">
+        {% if page.story_timeline %}{% include story-timeline.html %}<div class="story-text">{% endif %}
 	    {%- include post_tldr.html post=page -%}
 	    {{- content -}}
 		{% if page.linkedin_post_url or page.substack_post_url %}
@@ -41,6 +42,7 @@ layout: default
 			</div>
 		</div>
 		{% endif %}
+        {% if page.story_timeline %}</div>{% endif %}
 	  </div>
 	</article>
 </div>

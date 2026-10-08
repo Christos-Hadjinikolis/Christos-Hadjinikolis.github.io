@@ -10,7 +10,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-POST_DIRS = (ROOT / "content" / "_posts", ROOT / "content" / "review-room")
+POST_DIRS = (ROOT / "content" / "_posts", ROOT / "content" / "review-room", ROOT / "content" / "_talks")
 LOCAL_POST_IMAGE_RE = re.compile(r"assets/images/posts/[^'\"\)\s]+")
 FRONT_MATTER_RE = re.compile(r"\A---\s*\n(.*?)\n---\s*\n", re.DOTALL)
 DATE_PREFIX_RE = re.compile(r"(\d{4}-\d{2}-\d{2})-")
