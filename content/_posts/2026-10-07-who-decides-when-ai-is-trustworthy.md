@@ -286,6 +286,6 @@ I would like us to approach that possibility with curiosity as well as caution. 
 
 ## Related presentation
 
-For a visual exploration of these questions, **Who Decides When AI Is Trustworthy? The EU AI Act, Standards and the Limits of Assurance** includes the household-robot scenario, institutional diagrams and further sources. This article reflects the public record available on **8 October 2026**.
+For a visual exploration of these questions, **Who Decides When AI Is Trustworthy? The EU AI Act, Standards and the Limits of Assurance** includes the household-robot scenario, institutional diagrams and further sources. The [UCL event page](https://www.ucl.ac.uk/arts-humanities/events/2026/oct/who-decides-when-ai-trustworthy-eu-ai-act-standards-and-limits-assurance) lists the seminar at UCL Information Studies on **7 October 2026**. This article reflects the public record available on **8 October 2026**.
 
 [Open the full presentation]({{ '/presentations/ucl-ai-trust/slides.html' | relative_url }}) · [Read the speaker notes]({{ '/presentations/ucl-ai-trust/notes.html' | relative_url }}) · [Browse sources and image credits]({{ '/presentations/ucl-ai-trust/sources.html' | relative_url }})

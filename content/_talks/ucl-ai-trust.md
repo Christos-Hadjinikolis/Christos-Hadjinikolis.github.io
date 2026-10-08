@@ -15,14 +15,14 @@ tldr_learn: "How law, technical standards and system-specific evidence fit toget
 tldr_takeaways: ["Claims need evidence tied to a use", "Approval must survive changing systems", "Coexistence deserves room alongside caution"]
 ---
 
-**UCL · 7 October 2026**<br>
+**UCL Information Studies · 7 October 2026 · Online**<br>
 *The EU AI Act, Standards and the Limits of Assurance*
 
 What would count as convincing evidence that an AI system is trustworthy—and who should decide whether that evidence is sufficient?
 
 This discussion-led talk follows the route from public promises to legal duties, technical standards and decisions we can question. A hypothetical household robot makes the stakes personal: permission to carry laundry is one thing; permission to look after a baby is quite another.
 
-[Open the presentation]({{ '/presentations/ucl-ai-trust/slides.html' | relative_url }}) · [Read the article]({{ '/blog/who-decides-when-ai-is-trustworthy/' | relative_url }})
+[Official UCL event page](https://www.ucl.ac.uk/arts-humanities/events/2026/oct/who-decides-when-ai-trustworthy-eu-ai-act-standards-and-limits-assurance) · [Open the presentation]({{ '/presentations/ucl-ai-trust/slides.html' | relative_url }}) · [Read the article]({{ '/blog/who-decides-when-ai-is-trustworthy/' | relative_url }})
 
 {% include seminar-slide.html key="original-12" title="The consequences of automated decisions" caption="An automated decision still has human consequences." %}
 
