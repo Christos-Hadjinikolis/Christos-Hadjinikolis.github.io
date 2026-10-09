@@ -3,7 +3,7 @@ title: Professional Experience
 subtitle: How the scope evolved
 intro_theme: experience
 intro_kicker: "Narrative Timeline"
-intro_summary: "Not a second CV. This page shows how the scope widened over time: from teaching and research, into consulting under constraints, and then into engineering management for applied ML systems, model evaluation, reliability, and live data products."
+intro_summary: "From research and teaching to industry consulting in 2016, then Engineering Manager at Vortexa from February 2022: how responsibility grew across people, technical direction and delivery."
 intro_card_title: "What This Page Tracks"
 intro_points:
   - "How the scope changed"
@@ -19,10 +19,10 @@ permalink: /experience.html
   <section class="page-hero">
     <div class="page-panel page-panel--tinted">
       <div class="page-kicker">🧭 Professional Arc</div>
-      <h3>From research and teaching to Engineering Management for applied ML systems</h3>
+      <h3>From research and teaching to engineering management</h3>
       <p class="page-summary">
-        This page is intentionally not a second CV. It is the story of how the same pattern kept widening: make complex work understandable,
-        turn ambiguity into structure, and build the teams, interfaces, evaluation loops, and operating models needed to make ML useful in production.
+        My career has moved from research and teaching into hands-on consulting, technical leadership and engineering management.
+        Today I develop people, set technical direction and lead delivery for production ML and data platforms.
       </p>
       <ul class="page-pills">
         <li class="page-pill">🎓 Research roots</li>
@@ -53,8 +53,8 @@ permalink: /experience.html
           I learned how messy systems, unclear requirements, product pressure, and client constraints reshape "correct" engineering.
         </li>
         <li>
-          <strong>Current years: management and leverage</strong>
-          I now focus on people leadership, research-to-production ML delivery, evaluation loops, operational quality, stakeholder alignment, and repeatable delivery systems.
+          <strong>Current years: people, direction and delivery</strong>
+          I now manage six direct reports and lead a ten-person cross-functional team, combining career development, technical direction, stakeholder priorities and production ownership.
         </li>
       </ul>
     </div>
@@ -153,39 +153,41 @@ permalink: /experience.html
     <div class="experience-step">
       <div class="experience-era">
         <span class="period">12/2020–present</span>
-        <span class="label">Management<br>teams, systems, reliability</span>
+        <span class="label">ML engineering to management<br>teams, systems, delivery</span>
       </div>
       <article class="experience-card">
         <div class="experience-card-head">
           <div>
             <h4>🚢 Vortexa: managing teams and live ML/data systems at scale</h4>
-            <div class="experience-role">Engineering Manager / ML Systems Lead</div>
+            <div class="experience-role">Senior ML Engineer → Engineering Manager / ML Systems Lead</div>
             <div class="experience-location">London, UK</div>
           </div>
           <div class="experience-badge">Architecture · Delivery · People</div>
         </div>
         <p class="experience-hook">
-          At Vortexa, the centre of gravity shifted again: from delivering components to owning engineering strategy and delivery for a live ML/data estate, setting operating standards, managing 6 direct reports, and leading a 10-person cross-functional team around model quality, reliability, stakeholder alignment, and delivery maturity.
+          I joined Vortexa as a Senior ML Engineer in December 2020 and became Engineering Manager in February 2022. I now manage six direct reports and lead a ten-person cross-functional team, with responsibility for people development, technical direction and delivery of live ML and data services supporting maritime intelligence.
         </p>
         <div class="experience-columns">
           <div class="experience-mini-panel">
             <h5>What I lead</h5>
             <ul class="page-list">
               <li>6 direct reports across Product, SME analysis, Data Science, and Data Engineering, plus leadership of a 10-person cross-functional team.</li>
-              <li>Performance and career development, hiring for 6 roles, delivery accountability, sprint reviews, retrospectives, mentoring, and code pairing.</li>
+              <li>Performance reviews, career development and delivery priorities. Retained the full team and supported every member’s promotion or progression in the July 2026 team snapshot.</li>
+              <li>Hiring manager for six roles over time; shaped hiring practices, system-design interviews, onboarding and mentoring as Data Production grew from four to more than thirty people.</li>
               <li>Workshops across Product, SMEs, analysts, and engineers to turn model-quality disputes into shared definitions, measurable objectives, interface/SLA proposals, and OKR-linked workstreams.</li>
               <li>Team practices that reduce single-person ownership: clearer ownership, pairing, docs close to code, tests-as-docs, and onboarding that makes new joiners productive in production code quickly.</li>
             </ul>
           </div>
           <div class="experience-mini-panel">
-            <h5>What the estate requires</h5>
+            <h5>Engineering decisions and outcomes</h5>
             <ul class="page-list">
               <li>A live ML/data estate processing roughly 6M vessel-position records/hour into production intelligence for 13.5K monitored vessels.</li>
               <li>0-to-1 research-to-production delivery for destination and arrival-time sequence/transformer models in PyTorch.</li>
               <li>MLflow, model/data versioning, automated evaluation gates, replay, monitoring, and model-serving workflows.</li>
               <li>Batch/online model-evaluation and replay loops; failure-mode analysis with domain experts and Product to drive model, data, and interface improvements.</li>
-              <li>Kafka Streams-to-Flink as a strategic platform move, with signal-quality controls, rollback/fallback paths, shared on-call, and MTTR under 30 minutes.</li>
-              <li>Data contracts, repo archetypes, AWS CodeArtifact publishing, ADRs, dev containers, and local E2E tests to reduce ambiguity and improve delivery feedback loops.</li>
+              <li>Led the Kafka Streams-to-Flink migration, enabling compute scaling independent of Kafka partitioning and improving operational visibility and maintainability. Established shared on-call, runbooks and rollback/fallback practices.</li>
+              <li>Introduced local end-to-end tests and reusable data-access patterns, cutting a three-hour pipeline development feedback loop to under five minutes and reducing dependence on individual reviewers.</li>
+              <li>Started a weekly architecture forum to share decisions and reduce knowledge silos across teams.</li>
             </ul>
           </div>
         </div>
@@ -198,7 +200,7 @@ permalink: /experience.html
       <div class="page-kicker">🏛️ Beyond The Core Role</div>
       <h3>Standards and research</h3>
       <ul class="page-list">
-        <li><strong>Since 01/2021 · ISO/CEN-CENELEC JTC 21 WG3</strong><br>Committee Expert Member contributing to AI standards aligned with EU policy and international norms, including auditability, model/data versioning, explainability, and safer adoption.</li>
+        <li><strong>Since 2021 · ISO/CEN-CENELEC JTC 21 WG3</strong><br>Committee Expert Member contributing to AI standards aligned with EU policy and international norms, including auditability, model/data versioning, explainability, and safer adoption.</li>
         <li><strong>Since 10/2024 · UCL Department of Information Studies</strong><br>Associate Researcher helping expose students to practical AI applications and lecturing on AI standardisation, the AI Act, auditability, versioning, explainability, and safe adoption.</li>
       </ul>
     </div>

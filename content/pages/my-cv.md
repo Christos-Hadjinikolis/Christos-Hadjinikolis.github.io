@@ -3,12 +3,12 @@ title: My CV
 subtitle: Engineering Manager Snapshot
 intro_theme: cv
 intro_kicker: "Curated Overview"
-intro_summary: "A fast-read view of the same story as the PDF: applied ML systems leadership, research-to-production delivery, model evaluation, reliability, and practical AI standards."
+intro_summary: "Engineering Manager for production ML and data platforms: people development, technical direction and delivery, with explicit career progression and supported outcomes."
 intro_card_title: "What To Remember"
 intro_points:
-  - "Applied ML teams that turn research-grade models into product systems"
-  - "Evaluation, replay, monitoring, and reliability around live ML"
-  - "Responsible AI as engineering practice, not slogan"
+  - "Six direct reports and a ten-person cross-functional team"
+  - "Engineering Manager since February 2022; industry experience since 2016"
+  - "Team development, faster delivery feedback and reliable production ML"
 layout: "page"
 icon: fa-id-card
 icon_image: assets/images/site/icons/cv.svg
@@ -19,15 +19,15 @@ permalink: /my-cv.html
   <section class="page-hero">
     <div class="page-panel page-panel--tinted">
       <div class="page-kicker">🧠 Positioning</div>
-      <h3>ML Engineering Manager for applied ML systems and real-time data products</h3>
+      <h3>Engineering Manager for production ML and data platforms</h3>
       <p class="page-summary">
-        I lead cross-functional teams that translate research-grade models, noisy data, and ambiguous product requirements into reliable production systems. At Vortexa, that means managing 6 direct reports, leading a 10-person team, and keeping model quality, evaluation, reliability, and stakeholder alignment close to the engineering work.
+        I manage six direct reports and lead a ten-person cross-functional team at Vortexa, with responsibility for people development, technical direction and delivery. I became Engineering Manager in February 2022 after joining as a Senior ML Engineer in December 2020. My teams turn research and complex data into reliable products.
       </p>
       <ul class="page-pills">
         <li class="page-pill">👥 Team leadership</li>
         <li class="page-pill">🧠 Applied ML systems</li>
-        <li class="page-pill">📐 Model eval/replay</li>
-        <li class="page-pill">⚙️ Model serving</li>
+        <li class="page-pill">🌱 People development</li>
+        <li class="page-pill">🧭 Technical direction</li>
         <li class="page-pill">🛡️ Client-facing reliability</li>
         <li class="page-pill">🏛️ AI standards</li>
       </ul>
@@ -45,19 +45,19 @@ permalink: /my-cv.html
       <ul class="page-rule-list">
         <li>
           <strong>Build and manage technical teams</strong>
-          Direct management, hiring, mentoring, reviews, progression, onboarding, delivery accountability, and cross-functional operating rhythm.
+          Manage six direct reports, coach colleagues, run performance and career reviews, and set delivery priorities with a ten-person cross-functional team.
         </li>
         <li>
           <strong>Move ML work from research towards production</strong>
-          PyTorch sequence/transformer models, model-serving workflows, MLflow, model/data versioning, evaluation gates, replay, and monitoring.
+          Led delivery of destination and arrival-time models, with versioning, deployment, evaluation and monitoring so the team can improve production predictions.
         </li>
         <li>
-          <strong>Turn ML ambiguity into operating discipline</strong>
-          Batch/online evaluation loops, failure-mode analysis, domain-expert feedback, product semantics, and prediction trust.
+          <strong>Agree priorities across disciplines</strong>
+          Bring engineers, Product and domain experts together to resolve competing definitions of model quality and turn them into measurable objectives and prioritised work.
         </li>
         <li>
-          <strong>Make applied AI systems inspectable</strong>
-          Tool boundaries, schema validation, approval gates, durable state, traces, and runtime evidence for humans and LLM-assisted workflows.
+          <strong>Help teams deliver with confidence</strong>
+          Make changes easier to test and review, share architecture decisions, and reduce dependence on individual experts.
         </li>
       </ul>
     </div>
@@ -67,28 +67,31 @@ permalink: /my-cv.html
     <div class="page-panel">
       <h3>📌 Evidence Behind The CV</h3>
       <ul class="page-list">
-        <li><strong>People:</strong> manage 6 direct reports across Product, SME analysis, Data Science, and Data Engineering; lead a 10-person cross-functional team accountable for model quality, stakeholder alignment, reliability, and delivery maturity.</li>
+        <li><strong>People:</strong> manage six direct reports and lead a ten-person cross-functional team. Retained the full team and supported every member’s promotion or progression in the July 2026 team snapshot.</li>
+        <li><strong>Hiring and growth:</strong> hiring manager for six roles over time; shaped hiring, system-design interviews, onboarding and mentoring as Data Production grew from four to more than thirty people.</li>
+        <li><strong>Delivery:</strong> cut a three-hour pipeline development feedback loop to under five minutes through local end-to-end tests and reusable data-access patterns.</li>
         <li><strong>Estate:</strong> own engineering strategy and delivery for a live ML/data estate turning roughly 6M vessel-position records/hour into production intelligence for 13.5K monitored vessels.</li>
         <li><strong>ML delivery:</strong> led 0-to-1 research-to-production delivery for destination and arrival-time sequence/transformer models in PyTorch.</li>
         <li><strong>Evaluation:</strong> established batch/online model-evaluation and replay loops, analysed failure modes with domain experts and Product, and converted findings into model, data, and interface improvements.</li>
-        <li><strong>Reliability:</strong> protect production trust through Kafka Streams-to-Flink migration, monitoring, fallback/rollback paths, shared on-call, and MTTR kept under 30 minutes.</li>
+        <li><strong>Platform direction:</strong> led the Kafka Streams-to-Flink migration, enabling compute scaling independent of Kafka partitioning and improving operational visibility and maintainability; established shared on-call, runbooks and rollback/fallback practices.</li>
       </ul>
     </div>
 
     <div class="page-panel">
       <h3>🧪 Applied AI & Tooling</h3>
       <ul class="page-list">
-        <li><strong><a href="{{ '/2026/08/01/skeleton-replay-runtime-architecture-evidence.html' | relative_url }}">Promet</a>:</strong> private applied GenAI project shaping hands-on work around voice, memory, tool use, streaming interaction, local runtimes, Hugging Face-backed speech assets, schema validation, approval gates, durable state, traces, and replay/evaluation.</li>
+        <li><strong><a href="{{ '/2026/08/01/skeleton-replay-runtime-architecture-evidence.html' | relative_url }}">Promet</a>:</strong> personal project exploring local AI assistant runtimes, voice, tool execution, approval boundaries, durable state and trace/replay workflows.</li>
         <li><strong><a href="https://pypi.org/project/skeleton-replay/">skeleton-replay</a>:</strong> public Python tooling that turns script/pytest runs into traces, architecture snapshots, workflow evidence, and replayable reports for review, debugging, onboarding, and LLM-assisted code understanding.</li>
         <li><strong><a href="https://plugins.jetbrains.com/plugin/32807-skeleton-replay">Skeleton Replay plugin</a>:</strong> PyCharm/IntelliJ workflow that brings runtime evidence and source navigation into the IDE.</li>
-        <li><strong><a href="https://pypi.org/project/dynamicio/">dynamicio</a>:</strong> published PyPI library for making I/O seams and local/dev/prod dataset switching explicit in ML/data workflows.</li>
+        <li><strong><a href="https://pypi.org/project/dynamicio/">dynamicio</a>:</strong> Python library for explicit data-access boundaries and schema validation, used across 15+ repositories to support local testing and reusable ML/data workflows.</li>
       </ul>
     </div>
 
     <div class="page-panel">
       <h3>📚 Career Snapshot</h3>
       <ul class="page-timeline">
-        <li><strong>12/2020–present · Vortexa, London</strong><br>Engineering Manager / ML Systems Lead owning engineering strategy and delivery for a live ML/data estate, managing 6 direct reports, and leading a 10-person cross-functional team around model quality, reliability, stakeholder alignment, and delivery maturity.</li>
+        <li><strong>02/2022–present · Vortexa, London</strong><br>Engineering Manager / ML Systems Lead: six direct reports, a ten-person cross-functional team, and responsibility for people development, technical direction and delivery.</li>
+        <li><strong>12/2020–02/2022 · Vortexa, London</strong><br>Senior ML Engineer, before progressing into engineering management.</li>
         <li><strong>04/2016–12/2020 · Data Reply, London</strong><br>Senior Consultant and first London spin-off consultant; grew from data scientist into ML engineer while supporting team growth, client delivery, mentoring, and project leadership across Vodafone, CNHi, and UBS.</li>
         <li><strong>2010–2016 · KCL, UCL, GSM, David Game College</strong><br>Teaching and academic roles across computing, AI, software, and data subjects.</li>
       </ul>
@@ -98,7 +101,7 @@ permalink: /my-cv.html
       <h3>🏛️ Standards & Research</h3>
       <ul class="page-list">
         <li><strong>Since 10/2024 · UCL</strong><br>Associate Researcher helping students connect AI standards, the AI Act, auditability, explainability, and practical AI adoption.</li>
-        <li><strong>Since 01/2021 · ISO/CEN-CENELEC JTC 21 WG3</strong><br>Committee Expert Member contributing to AI standards aligned with EU policy and international norms, with emphasis on auditability, model/data versioning, explainability, and safer adoption.</li>
+        <li><strong>Since 2021 · ISO/CEN-CENELEC JTC 21 WG3</strong><br>Committee Expert Member contributing to AI standards aligned with EU policy and international norms, with emphasis on auditability, model/data versioning, explainability, and safer adoption.</li>
       </ul>
     </div>
 
@@ -128,7 +131,7 @@ permalink: /my-cv.html
       <ul class="page-list">
         <li><strong>Ph.D. in Computer Science · King’s College London</strong><br>Persuasion dialogues, opponent modelling, knowledge graphs, Bayesian techniques, and formal semantics.</li>
         <li><strong>Diploma (BEng) in Computer Engineering · University of Thessaly</strong><br>Polytechnic training with a strong focus on mathematics and artificial intelligence.</li>
-        <li><strong>Selected certifications</strong><br>AWS ML Specialty, Google Data Engineer, Process Mining, Graph Analytics for Big Data, Neo4j, and Elasticsearch.</li>
+        <li><strong>Selected historical credentials</strong><br>AWS Machine Learning Specialty (2020), Google Professional Data Engineer (2017), Apache Spark Developer (2016).</li>
       </ul>
     </div>
   </section>

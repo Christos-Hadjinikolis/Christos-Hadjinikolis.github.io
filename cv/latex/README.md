@@ -156,3 +156,21 @@ latexmk -xelatex -interaction=nonstopmode -synctex=1 cv.tex
 Edit source here.
 
 Do not treat `assets/pdfs/cv.pdf` as the editable source. It is only the published artifact used by the website.
+
+## Canonical positioning and evidence (October 2026)
+
+The main CV uses a two-page, single-column layout and leads with Engineering
+Manager responsibility for production ML and data platforms. It makes the
+December 2020 Vortexa joining date and February 2022 management progression
+explicit. Role variants retain their historical content and templates.
+
+For future updates, prioritise people development, delivery improvements and
+technical decisions with supported outcomes. Distinguish direct reports,
+cross-functional team size, hiring over time and contribution to wider company
+growth. Date historical team snapshots; do not turn platform throughput into
+inference throughput or development feedback into production latency.
+
+Keep the published PDF, `content/pages/my-cv.md`, `content/pages/experience.md`
+and the homepage intro/about sections consistent with the canonical source.
+Private application assessments belong in the ignored `context/positioning/`
+folder and must not enter the generated website.
