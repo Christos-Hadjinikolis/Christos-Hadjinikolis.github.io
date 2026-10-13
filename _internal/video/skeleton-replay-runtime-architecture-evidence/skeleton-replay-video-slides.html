@@ -1,0 +1,1865 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skeleton Replay Video Slides</title>
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --surface: #151920;
+      --surface-2: #202633;
+      --ink: #f8fafc;
+      --muted: #aeb8c7;
+      --line: rgba(248, 250, 252, 0.17);
+      --red: #ef4444;
+      --red-soft: rgba(239, 68, 68, 0.18);
+      --gold: #f5b84b;
+      --gold-soft: rgba(245, 184, 75, 0.16);
+      --cyan: #35c8d4;
+      --cyan-soft: rgba(53, 200, 212, 0.16);
+      --green: #4ade80;
+      --green-soft: rgba(74, 222, 128, 0.14);
+      --purple: #a78bfa;
+      --shadow: 0 26px 80px rgba(0, 0, 0, 0.4);
+      color-scheme: dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow: hidden;
+      background:
+        linear-gradient(110deg, rgba(239, 68, 68, 0.13), transparent 34%),
+        linear-gradient(270deg, rgba(53, 200, 212, 0.11), transparent 28%),
+        var(--bg);
+      color: var(--ink);
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .deck {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      padding: 58px 72px 54px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(42px) scale(0.992);
+      transition: opacity 420ms ease, transform 420ms ease, visibility 420ms ease;
+      overflow: hidden;
+    }
+
+    .slide::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 7px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--red), var(--gold), var(--cyan));
+      transform: scaleY(0);
+      transform-origin: top;
+      opacity: 0.82;
+    }
+
+    .slide.is-active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0) scale(1);
+      z-index: 1;
+    }
+
+    .slide.is-active::before {
+      animation: slide-mark 760ms ease-out both;
+    }
+
+    .slide__inner {
+      position: relative;
+      width: min(1430px, 100%);
+      height: min(805px, calc(100vh - 112px));
+      margin: auto;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 28px;
+      isolation: isolate;
+    }
+
+    .brand {
+      position: fixed;
+      top: 26px;
+      left: 44px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--ink);
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .kicker {
+      color: var(--gold);
+      font-size: 18px;
+      font-weight: 950;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      max-width: 1120px;
+      font-size: 108px;
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      max-width: 1160px;
+      font-size: 76px;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      font-size: 28px;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .accent-red {
+      color: var(--red);
+    }
+
+    .accent-gold {
+      color: var(--gold);
+    }
+
+    .accent-cyan {
+      color: var(--cyan);
+    }
+
+    .accent-green {
+      color: var(--green);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .headline {
+      display: grid;
+      gap: 10px;
+    }
+
+    .visual {
+      position: relative;
+      min-height: 0;
+      border: 1px solid rgba(248, 250, 252, 0.12);
+      border-radius: 8px;
+      background:
+        linear-gradient(120deg, rgba(255, 255, 255, 0.045), transparent 48%),
+        rgba(18, 22, 30, 0.72);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .notes {
+      display: none;
+    }
+
+    .slide.is-active .headline,
+    .slide.is-active .visual,
+    .slide.is-active .chip,
+    .slide.is-active .small-label {
+      animation: fade-lift 560ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+
+    .slide.is-active .visual {
+      animation-delay: 120ms;
+    }
+
+    .slide.is-active .system-node {
+      animation: path-pop 560ms ease-out both;
+    }
+
+    .controls,
+    .counter,
+    .progress {
+      position: fixed;
+      z-index: 20;
+    }
+
+    .controls {
+      left: 28px;
+      bottom: 22px;
+      display: flex;
+      gap: 8px;
+    }
+
+    .controls button {
+      width: 42px;
+      height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(21, 25, 32, 0.94);
+      color: var(--ink);
+      cursor: pointer;
+    }
+
+    .counter {
+      right: 32px;
+      bottom: 22px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .progress {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 7px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .progress__bar {
+      width: 0;
+      height: 100%;
+      background: linear-gradient(90deg, var(--red), var(--gold), var(--cyan));
+      transition: width 180ms ease;
+    }
+
+    body.recording-mode .controls,
+    body.recording-mode .counter,
+    body.recording-mode .progress {
+      display: none;
+    }
+
+    .title-layout {
+      display: grid;
+      grid-template-columns: 1fr 480px;
+      align-items: center;
+      gap: 42px;
+    }
+
+    .title-copy {
+      display: grid;
+      gap: 22px;
+    }
+
+    .title-tagline {
+      color: var(--muted);
+      font-size: 31px;
+      line-height: 1.24;
+      max-width: 780px;
+      font-weight: 750;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      border: 1px solid rgba(248, 250, 252, 0.18);
+      border-radius: 999px;
+      padding: 9px 13px;
+      background: rgba(255, 255, 255, 0.075);
+      color: var(--ink);
+      font-size: 15px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .title-diagram {
+      position: relative;
+      width: min(480px, 100%);
+      aspect-ratio: 1;
+      justify-self: center;
+    }
+
+    .title-orbit {
+      position: absolute;
+      inset: 34px;
+      border: 1px solid rgba(248, 250, 252, 0.13);
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(74, 222, 128, 0.16), transparent 28%),
+        rgba(255, 255, 255, 0.035);
+      opacity: 0;
+    }
+
+    .title-core,
+    .title-node {
+      position: absolute;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      font-weight: 950;
+      text-align: center;
+    }
+
+    .title-core {
+      left: 50%;
+      top: 50%;
+      z-index: 3;
+      width: 148px;
+      height: 148px;
+      transform: translate(-50%, -50%);
+      border: 4px solid rgba(74, 222, 128, 0.66);
+      background: rgba(74, 222, 128, 0.14);
+      color: var(--ink);
+      font-size: 34px;
+    }
+
+    .title-node {
+      z-index: 2;
+      width: 136px;
+      height: 72px;
+      border: 1px solid rgba(248, 250, 252, 0.16);
+      background: rgba(5, 7, 11, 0.7);
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .title-node--scenario { left: 11%; top: 43%; border-color: rgba(53, 200, 212, 0.42); }
+    .title-node--trace { left: calc(50% - 68px); top: 8%; border-color: rgba(245, 184, 75, 0.5); color: #f8e1b4; }
+    .title-node--review { right: 11%; top: 43%; border-color: rgba(239, 68, 68, 0.46); color: #fecaca; }
+
+    .slide.is-active .title-orbit {
+      animation: fade-lift 520ms ease-out 240ms both, slow-spin 15s linear 900ms infinite;
+    }
+
+    .slide.is-active .title-node {
+      animation: path-pop 540ms ease-out both;
+    }
+
+    .slide.is-active .title-core {
+      animation: center-pop 540ms ease-out 420ms both;
+    }
+
+    .slide.is-active .title-node--scenario { animation-delay: 660ms; }
+    .slide.is-active .title-node--trace { animation-delay: 820ms; }
+    .slide.is-active .title-node--review { animation-delay: 980ms; }
+
+    .storm-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+      height: 100%;
+      padding: 34px;
+    }
+
+    .code-storm,
+    .stale-map {
+      position: relative;
+      min-height: 0;
+      border: 1px solid rgba(248, 250, 252, 0.12);
+      border-radius: 8px;
+      background: rgba(5, 7, 11, 0.54);
+      overflow: hidden;
+    }
+
+    .small-label {
+      position: absolute;
+      left: 18px;
+      top: 16px;
+      z-index: 2;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 950;
+      text-transform: uppercase;
+    }
+
+    .file-token {
+      position: absolute;
+      min-width: 132px;
+      border: 1px solid rgba(53, 200, 212, 0.36);
+      border-radius: 8px;
+      background: rgba(53, 200, 212, 0.105);
+      padding: 10px 12px;
+      color: #d9fbff;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 15px;
+      font-weight: 850;
+      opacity: 0;
+      transform: translateY(26px);
+    }
+
+    .file-token:nth-child(2) { left: 8%; top: 18%; }
+    .file-token:nth-child(3) { left: 42%; top: 14%; }
+    .file-token:nth-child(4) { left: 18%; top: 34%; }
+    .file-token:nth-child(5) { left: 58%; top: 32%; }
+    .file-token:nth-child(6) { left: 9%; top: 52%; }
+    .file-token:nth-child(7) { left: 45%; top: 56%; }
+    .file-token:nth-child(8) { left: 24%; top: 72%; }
+    .file-token:nth-child(9) { left: 64%; top: 72%; }
+
+    .slide.is-active .file-token {
+      animation: token-rush 2.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+
+    .slide.is-active .file-token:nth-child(3) { animation-delay: 120ms; }
+    .slide.is-active .file-token:nth-child(4) { animation-delay: 240ms; }
+    .slide.is-active .file-token:nth-child(5) { animation-delay: 360ms; }
+    .slide.is-active .file-token:nth-child(6) { animation-delay: 480ms; }
+    .slide.is-active .file-token:nth-child(7) { animation-delay: 600ms; }
+    .slide.is-active .file-token:nth-child(8) { animation-delay: 720ms; }
+    .slide.is-active .file-token:nth-child(9) { animation-delay: 840ms; }
+
+    .map-node {
+      position: absolute;
+      z-index: 2;
+      width: 118px;
+      height: 66px;
+      display: grid;
+      place-items: center;
+      border: 2px solid rgba(248, 250, 252, 0.16);
+      border-radius: 8px;
+      background: #111821;
+      color: var(--ink);
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .map-node--1 { left: 41%; top: 18%; border-color: rgba(239, 68, 68, 0.58); }
+    .map-node--2 { left: 17%; top: 38%; border-color: rgba(53, 200, 212, 0.5); }
+    .map-node--3 { left: 58%; top: 41%; border-color: rgba(245, 184, 75, 0.55); }
+    .map-node--4 { left: 31%; top: 65%; border-color: rgba(167, 139, 250, 0.52); }
+
+    .map-svg,
+    .source-svg,
+    .runtime-svg,
+    .evidence-svg {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: visible;
+    }
+
+    .map-path,
+    .source-path,
+    .runtime-path,
+    .evidence-path {
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      opacity: 0;
+      stroke-dasharray: 760;
+      stroke-dashoffset: 760;
+      vector-effect: non-scaling-stroke;
+    }
+
+    .map-path {
+      stroke: rgba(248, 250, 252, 0.25);
+      stroke-width: 2;
+      --path-opacity: 0.36;
+    }
+
+    .source-path {
+      stroke: rgba(248, 250, 252, 0.24);
+      stroke-width: 2;
+      --path-opacity: 0.34;
+    }
+
+    .runtime-path {
+      stroke-width: 3;
+      --path-opacity: 0.92;
+    }
+
+    .runtime-path--a { stroke: var(--cyan); }
+    .runtime-path--b { stroke: var(--gold); }
+    .runtime-path--c { stroke: var(--red); }
+
+    .evidence-path {
+      stroke: rgba(248, 250, 252, 0.26);
+      stroke-width: 3;
+      --path-opacity: 0.55;
+    }
+
+    .question-mark {
+      position: absolute;
+      right: 52px;
+      bottom: 38px;
+      width: 122px;
+      height: 122px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      border: 4px solid rgba(245, 184, 75, 0.55);
+      color: var(--gold);
+      font-size: 78px;
+      font-weight: 950;
+    }
+
+    .slide.is-active .map-path,
+    .slide.is-active .source-path,
+    .slide.is-active .runtime-path,
+    .slide.is-active .evidence-path {
+      animation: svg-path-draw 900ms ease-out both;
+    }
+
+    .slide.is-active .map-path--a { animation-delay: 440ms; }
+    .slide.is-active .map-path--b { animation-delay: 600ms; }
+    .slide.is-active .map-path--c { animation-delay: 760ms; }
+    .slide.is-active .map-path--d { animation-delay: 920ms; }
+    .slide.is-active .map-path--e { animation-delay: 1080ms; }
+
+    .slide.is-active .source-path--a { animation-delay: 360ms; }
+    .slide.is-active .source-path--b { animation-delay: 520ms; }
+    .slide.is-active .source-path--c { animation-delay: 680ms; }
+    .slide.is-active .source-path--d { animation-delay: 840ms; }
+
+    .slide.is-active .runtime-path--a { animation-delay: 560ms; }
+    .slide.is-active .runtime-path--b { animation-delay: 920ms; }
+    .slide.is-active .runtime-path--c { animation-delay: 1280ms; }
+
+    .slide.is-active .evidence-path--trace { animation-delay: 360ms; }
+    .slide.is-active .evidence-path--snapshot { animation-delay: 500ms; }
+    .slide.is-active .evidence-path--workflow { animation-delay: 640ms; }
+    .slide.is-active .evidence-path--report { animation-delay: 780ms; }
+    .slide.is-active .evidence-path--quality { animation-delay: 920ms; }
+    .slide.is-active .evidence-path--session { animation-delay: 1060ms; }
+
+    .slide.is-active .question-mark {
+      animation: evidence-pulse 1.4s ease-in-out infinite;
+    }
+
+    .split-evidence {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      height: 100%;
+      padding: 34px;
+    }
+
+    .source-cloud,
+    .runtime-line {
+      position: relative;
+      border: 1px solid rgba(248, 250, 252, 0.12);
+      border-radius: 8px;
+      background: rgba(5, 7, 11, 0.48);
+      overflow: hidden;
+    }
+
+    .source-card {
+      position: absolute;
+      z-index: 2;
+      width: 148px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(248, 250, 252, 0.16);
+      border-radius: 8px;
+      background: #15181e;
+      color: var(--muted);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 14px;
+      font-weight: 850;
+    }
+
+    .source-card--a { left: 10%; top: 20%; }
+    .source-card--b { left: 53%; top: 18%; }
+    .source-card--c { left: 24%; top: 40%; }
+    .source-card--d { left: 60%; top: 50%; }
+    .source-card--e { left: 18%; top: 68%; }
+
+    .runtime-step {
+      position: relative;
+      z-index: 2;
+      width: 330px;
+      margin: 0 auto 22px;
+      border: 1px solid rgba(53, 200, 212, 0.42);
+      border-radius: 8px;
+      background: #0d242a;
+      padding: 16px 18px;
+      color: var(--ink);
+      font-size: 23px;
+      font-weight: 920;
+      text-align: center;
+      opacity: 0;
+    }
+
+    .runtime-step--one {
+      margin-top: 84px;
+    }
+
+    .runtime-step--io {
+      border-color: rgba(245, 184, 75, 0.52);
+      background: #2a2317;
+    }
+
+    .slide.is-active .runtime-step {
+      animation: path-pop 520ms ease-out both;
+    }
+
+    .slide.is-active .runtime-step--one { animation-delay: 320ms; }
+    .slide.is-active .runtime-step--two { animation-delay: 690ms; }
+    .slide.is-active .runtime-step--three { animation-delay: 1060ms; }
+    .slide.is-active .runtime-step--four { animation-delay: 1430ms; }
+
+    .demo-board,
+    .boundary-board,
+    .plugin-board,
+    .bridge-board,
+    .evidence-board,
+    .runner-board {
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .workflow-svg,
+    .ownership-svg {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: visible;
+    }
+
+    .workflow-path,
+    .ownership-path {
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 3.2;
+      opacity: 0;
+      stroke-dasharray: 760;
+      stroke-dashoffset: 760;
+    }
+
+    .workflow-path--primary,
+    .ownership-path--primary {
+      stroke: var(--cyan);
+    }
+
+    .workflow-path--persistence,
+    .ownership-path--persistence {
+      stroke: var(--gold);
+    }
+
+    .workflow-path--notify,
+    .ownership-path--notify {
+      stroke: var(--purple);
+    }
+
+    .workflow-path--resource,
+    .ownership-path--resource {
+      stroke: var(--green);
+    }
+
+    .workflow-path--domain {
+      stroke: var(--green);
+      stroke-dasharray: 10 16;
+    }
+
+    .slide.is-active .workflow-path,
+    .slide.is-active .ownership-path {
+      animation: svg-path-draw 900ms ease-out both;
+    }
+
+    .slide.is-active .workflow-path--app { animation-delay: 360ms; }
+    .slide.is-active .workflow-path--repo { animation-delay: 760ms; }
+    .slide.is-active .workflow-path--db { animation-delay: 1080ms; }
+    .slide.is-active .workflow-path--notify { animation-delay: 1280ms; }
+    .slide.is-active .workflow-path--stdout { animation-delay: 1600ms; }
+    .slide.is-active .workflow-path--domain { animation-delay: 1820ms; }
+
+    .slide.is-active .ownership-path--repo { animation-delay: 520ms; }
+    .slide.is-active .ownership-path--notifier { animation-delay: 680ms; }
+    .slide.is-active .ownership-path--domain { animation-delay: 840ms; }
+    .slide.is-active .ownership-path--file { animation-delay: 1120ms; }
+    .slide.is-active .ownership-path--db { animation-delay: 1240ms; }
+    .slide.is-active .ownership-path--stdout { animation-delay: 1360ms; }
+
+    .system-node {
+      position: absolute;
+      z-index: 3;
+      display: grid;
+      place-items: center;
+      border: 2px solid rgba(53, 200, 212, 0.48);
+      border-radius: 8px;
+      background: #10262c;
+      color: var(--ink);
+      font-size: 23px;
+      font-weight: 950;
+      text-align: center;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+    }
+
+    .node-app { left: 8%; top: 15%; width: 180px; height: 86px; border-color: rgba(239, 68, 68, 0.62); background: #351820; }
+    .node-service { left: 38%; top: 35%; width: 260px; height: 110px; border-color: rgba(53, 200, 212, 0.68); }
+    .node-repo { left: 72%; top: 16%; width: 210px; height: 92px; border-color: rgba(245, 184, 75, 0.62); background: #2e2717; }
+    .node-db { left: 79%; top: 42%; width: 142px; height: 76px; border-color: rgba(245, 184, 75, 0.62); background: #2e2717; }
+    .node-notifier { left: 72%; top: 65%; width: 210px; height: 92px; border-color: rgba(167, 139, 250, 0.58); background: #25223d; }
+    .node-stdout { left: 46%; top: 70%; width: 150px; height: 76px; border-color: rgba(74, 222, 128, 0.58); background: #142d22; }
+    .node-domain { left: 17%; top: 68%; width: 190px; height: 78px; border-color: rgba(74, 222, 128, 0.58); background: #142d22; }
+
+    .order-packet {
+      position: absolute;
+      left: 202px;
+      top: 176px;
+      z-index: 2;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.1), 0 0 22px rgba(245, 184, 75, 0.62);
+      opacity: 0;
+    }
+
+    .slide.is-active .order-packet {
+      animation: order-route 6.2s cubic-bezier(0.55, 0, 0.2, 1) 520ms infinite;
+    }
+
+    .runner-shell {
+      position: absolute;
+      left: 6%;
+      top: 12%;
+      width: 42%;
+      height: 68%;
+      border: 5px solid rgba(53, 200, 212, 0.5);
+      border-radius: 8px;
+      background: rgba(53, 200, 212, 0.055);
+    }
+
+    .runner-shell::before,
+    .runner-shell::after {
+      content: "";
+      position: absolute;
+      inset: 28px;
+      border: 2px solid rgba(53, 200, 212, 0.28);
+      border-radius: 8px;
+      opacity: 0;
+    }
+
+    .slide.is-active .runner-shell::before,
+    .slide.is-active .runner-shell::after {
+      animation: capture-ring 2.8s ease-out infinite;
+    }
+
+    .slide.is-active .runner-shell::after {
+      animation-delay: 850ms;
+    }
+
+    .terminal-box {
+      position: absolute;
+      right: 7%;
+      top: 17%;
+      width: 43%;
+      min-height: 260px;
+      border: 1px solid rgba(248, 250, 252, 0.14);
+      border-radius: 8px;
+      background: #05070b;
+      padding: 28px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 28px;
+      line-height: 1.5;
+      box-shadow: var(--shadow);
+    }
+
+    .terminal-line {
+      display: block;
+      width: max-content;
+      max-width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      color: #e5e7eb;
+    }
+
+    .prompt {
+      color: var(--green);
+    }
+
+    .slide.is-active .terminal-line {
+      animation: type-line 1000ms steps(34, end) both;
+    }
+
+    .slide.is-active .terminal-line:nth-child(2) {
+      animation-delay: 900ms;
+    }
+
+    .runner-chips {
+      position: absolute;
+      right: 8%;
+      bottom: 15%;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      width: 40%;
+    }
+
+    .evidence-center {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 3;
+      width: 148px;
+      height: 148px;
+      display: grid;
+      place-items: center;
+      transform: translate(-50%, -50%);
+      border: 4px solid rgba(74, 222, 128, 0.62);
+      border-radius: 50%;
+      background: #173524;
+      color: var(--ink);
+      font-size: 28px;
+      font-weight: 950;
+      text-align: center;
+    }
+
+    .artifact {
+      position: absolute;
+      z-index: 2;
+      width: 160px;
+      height: 82px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(248, 250, 252, 0.16);
+      border-radius: 8px;
+      background: #20252f;
+      color: var(--ink);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 18px;
+      font-weight: 900;
+      opacity: 0;
+    }
+
+    .artifact--trace { left: 12%; top: 21%; border-color: rgba(74, 222, 128, 0.46); }
+    .artifact--snapshot { left: 31%; top: 14%; border-color: rgba(53, 200, 212, 0.48); }
+    .artifact--workflow { right: 31%; top: 14%; border-color: rgba(245, 184, 75, 0.5); }
+    .artifact--report { right: 12%; top: 21%; border-color: rgba(239, 68, 68, 0.5); }
+    .artifact--quality { left: 23%; bottom: 17%; border-color: rgba(167, 139, 250, 0.52); }
+    .artifact--session { right: 23%; bottom: 17%; border-color: rgba(245, 184, 75, 0.5); }
+
+    .reader-row {
+      position: absolute;
+      left: 50%;
+      bottom: 22px;
+      display: flex;
+      gap: 12px;
+      transform: translateX(-50%);
+    }
+
+    .reader {
+      border: 1px solid rgba(53, 200, 212, 0.24);
+      border-radius: 999px;
+      padding: 9px 14px;
+      background: rgba(53, 200, 212, 0.09);
+      color: #d9fbff;
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .slide.is-active .artifact {
+      animation: artifact-in 650ms ease-out both;
+    }
+
+    .slide.is-active .artifact--trace { animation-delay: 360ms; }
+    .slide.is-active .artifact--snapshot { animation-delay: 500ms; }
+    .slide.is-active .artifact--workflow { animation-delay: 640ms; }
+    .slide.is-active .artifact--report { animation-delay: 780ms; }
+    .slide.is-active .artifact--quality { animation-delay: 920ms; }
+    .slide.is-active .artifact--session { animation-delay: 1060ms; }
+
+    .ownership {
+      position: absolute;
+      z-index: 2;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      font-weight: 950;
+      text-align: center;
+    }
+
+    .owner-service {
+      left: 40%;
+      top: 28%;
+      width: 260px;
+      height: 120px;
+      border: 3px solid rgba(53, 200, 212, 0.7);
+      background: #10262c;
+      font-size: 30px;
+    }
+
+    .owner-repo {
+      left: 12%;
+      top: 28%;
+      width: 250px;
+      height: 150px;
+      border: 3px solid rgba(245, 184, 75, 0.65);
+      background: #2e2717;
+      font-size: 28px;
+    }
+
+    .owner-notifier {
+      right: 12%;
+      top: 28%;
+      width: 250px;
+      height: 150px;
+      border: 3px solid rgba(167, 139, 250, 0.65);
+      background: #25223d;
+      font-size: 28px;
+    }
+
+    .owner-domain {
+      left: 40%;
+      bottom: 15%;
+      width: 260px;
+      height: 90px;
+      border: 3px solid rgba(74, 222, 128, 0.62);
+      background: #142d22;
+      color: #dcfce7;
+      font-size: 28px;
+    }
+
+    .io-chip {
+      position: absolute;
+      z-index: 3;
+      width: 94px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(245, 184, 75, 0.48);
+      border-radius: 999px;
+      background: rgba(5, 7, 11, 0.72);
+      color: var(--gold);
+      font-size: 17px;
+      font-weight: 950;
+    }
+
+    .io-file { left: 13%; top: 55%; }
+    .io-db { left: 25%; top: 55%; }
+    .io-stdout { right: 17%; top: 55%; }
+
+    .slide.is-active .ownership,
+    .slide.is-active .io-chip {
+      animation: path-pop 560ms ease-out both;
+    }
+
+    .slide.is-active .owner-repo { animation-delay: 260ms; }
+    .slide.is-active .owner-service { animation-delay: 420ms; }
+    .slide.is-active .owner-notifier { animation-delay: 580ms; }
+    .slide.is-active .owner-domain { animation-delay: 740ms; }
+    .slide.is-active .io-file { animation-delay: 960ms; }
+    .slide.is-active .io-db { animation-delay: 1100ms; }
+    .slide.is-active .io-stdout { animation-delay: 1240ms; }
+
+    .plugin-frame {
+      position: absolute;
+      inset: 42px;
+      display: grid;
+      grid-template-columns: 0.78fr 1.14fr 0.9fr;
+      gap: 18px;
+    }
+
+    .plugin-pane {
+      position: relative;
+      border: 1px solid rgba(248, 250, 252, 0.13);
+      border-radius: 8px;
+      background: rgba(5, 7, 11, 0.58);
+      overflow: hidden;
+      padding: 24px;
+    }
+
+    .plugin-pane h3 {
+      color: var(--ink);
+      font-size: 28px;
+    }
+
+    .plugin-icon {
+      width: 78px;
+      height: 78px;
+      margin: 82px auto 0;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      border: 2px solid rgba(245, 184, 75, 0.58);
+      background: rgba(245, 184, 75, 0.13);
+      color: var(--gold);
+      font-size: 30px;
+      font-weight: 950;
+    }
+
+    .plugin-code {
+      margin-top: 34px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .plugin-graph {
+      margin: 86px auto 0;
+    }
+
+    .source-highlight {
+      display: block;
+      margin: 9px 0;
+      padding: 5px 8px;
+      border-left: 4px solid var(--cyan);
+      background: rgba(53, 200, 212, 0.13);
+      color: #d9fbff;
+    }
+
+    .plugin-packet {
+      position: absolute;
+      left: 22%;
+      top: 46%;
+      z-index: 5;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 0 0 9px rgba(255, 255, 255, 0.11), 0 0 30px rgba(53, 200, 212, 0.76);
+      opacity: 0;
+    }
+
+    .slide.is-active .plugin-packet {
+      animation: plugin-loop 5.4s cubic-bezier(0.55, 0, 0.2, 1) 650ms infinite;
+    }
+
+    .bridge-stream {
+      position: absolute;
+      left: 50%;
+      top: 18%;
+      bottom: 18%;
+      width: 6px;
+      transform: translateX(-50%);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .bridge-stream::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      transform: scaleY(0);
+      transform-origin: top;
+      border-radius: inherit;
+      background: linear-gradient(180deg, var(--cyan), var(--gold), var(--green));
+    }
+
+    .reader-card {
+      position: absolute;
+      top: 22%;
+      width: 360px;
+      height: 360px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(248, 250, 252, 0.16);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.065);
+      text-align: center;
+      font-size: 38px;
+      font-weight: 950;
+    }
+
+    .reader-human { left: 13%; }
+    .reader-llm { right: 13%; }
+
+    .reader-card small {
+      display: block;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 22px;
+      font-weight: 850;
+    }
+
+    .json-shape {
+      width: 160px;
+      height: 120px;
+      display: grid;
+      place-items: center;
+      border: 2px solid rgba(74, 222, 128, 0.52);
+      border-radius: 8px;
+      color: #bbf7d0;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 34px;
+    }
+
+    .graph-shape {
+      position: relative;
+      width: 190px;
+      height: 140px;
+    }
+
+    .graph-dot {
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 0 8px rgba(53, 200, 212, 0.15);
+    }
+
+    .graph-dot:nth-child(1) { left: 78px; top: 0; background: var(--red); }
+    .graph-dot:nth-child(2) { left: 12px; top: 88px; }
+    .graph-dot:nth-child(3) { right: 12px; top: 88px; background: var(--gold); }
+
+    .graph-shape::before,
+    .graph-shape::after {
+      content: "";
+      position: absolute;
+      left: 32px;
+      top: 64px;
+      width: 130px;
+      height: 4px;
+      background: rgba(248, 250, 252, 0.3);
+      transform-origin: center;
+    }
+
+    .graph-shape::before { transform: rotate(-33deg); }
+    .graph-shape::after { transform: rotate(33deg); }
+
+    .slide.is-active .bridge-stream::before {
+      animation: draw-down 1.8s ease-out 240ms both;
+    }
+
+    .slide.is-active .reader-card {
+      animation: fade-lift 560ms ease-out both;
+    }
+
+    .slide.is-active .reader-llm {
+      animation-delay: 220ms;
+    }
+
+    .closing-visual {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 420px;
+      gap: 54px;
+      align-items: center;
+      height: 100%;
+      padding: 24px 0;
+    }
+
+    .closing-copy {
+      display: grid;
+      gap: 28px;
+      align-content: center;
+    }
+
+    .end-screen-space {
+      width: 100%;
+      min-height: 360px;
+    }
+
+    .closing-line {
+      display: grid;
+      grid-template-columns: repeat(5, max-content);
+      align-items: center;
+      gap: 16px;
+      color: var(--muted);
+      font-size: 36px;
+      font-weight: 950;
+    }
+
+    .closing-dot {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 9px rgba(245, 184, 75, 0.12);
+    }
+
+    @keyframes slide-mark {
+      to { transform: scaleY(1); }
+    }
+
+    @keyframes fade-lift {
+      from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.986);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes token-rush {
+      0% {
+        opacity: 0;
+        transform: translateY(36px) scale(0.96);
+      }
+      38%, 100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes unstable-edge {
+      0%, 100% {
+        opacity: 0.22;
+        filter: blur(0);
+      }
+      50% {
+        opacity: 0.72;
+        filter: blur(0.4px);
+      }
+    }
+
+    @keyframes evidence-pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.08);
+      }
+    }
+
+    @keyframes draw-down {
+      to { transform: scaleY(1); }
+    }
+
+    @keyframes draw-across {
+      from { transform: scaleX(0) rotate(var(--angle, 0deg)); }
+      to { transform: scaleX(1) rotate(var(--angle, 0deg)); }
+    }
+
+    @keyframes svg-path-draw {
+      from {
+        opacity: 0;
+        stroke-dashoffset: 760;
+      }
+      12% {
+        opacity: var(--path-opacity, 0.94);
+      }
+      to {
+        opacity: var(--path-opacity, 0.94);
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes center-pop {
+      from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.92);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+
+    @keyframes slow-spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes path-pop {
+      from {
+        opacity: 0;
+        transform: translateY(14px) scale(0.96);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes order-route {
+      0%, 8% {
+        opacity: 0;
+        transform: translate(0, 0);
+      }
+      13% {
+        opacity: 0.9;
+      }
+      25% {
+        transform: translate(470px, 105px);
+      }
+      45% {
+        transform: translate(930px, -26px);
+      }
+      60% {
+        transform: translate(998px, 130px);
+      }
+      78% {
+        transform: translate(935px, 292px);
+      }
+      92% {
+        opacity: 0.9;
+        transform: translate(600px, 310px);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(600px, 310px);
+      }
+    }
+
+    @keyframes capture-ring {
+      0% {
+        opacity: 0;
+        transform: scale(0.82);
+      }
+      26% {
+        opacity: 0.74;
+      }
+      100% {
+        opacity: 0;
+        transform: scale(1.1);
+      }
+    }
+
+    @keyframes type-line {
+      from { clip-path: inset(0 100% 0 0); }
+      to { clip-path: inset(0 0 0 0); }
+    }
+
+    @keyframes artifact-in {
+      from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.94);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes plugin-loop {
+      0%, 8% {
+        opacity: 0;
+        transform: translate(0, 0);
+      }
+      18% {
+        opacity: 1;
+        transform: translate(315px, 0);
+      }
+      45% {
+        transform: translate(315px, 155px);
+      }
+      70% {
+        transform: translate(725px, 155px);
+      }
+      88% {
+        opacity: 1;
+        transform: translate(725px, 20px);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(725px, 20px);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 1ms !important;
+      }
+    }
+
+    @media (max-width: 980px) {
+      body {
+        overflow: auto;
+      }
+
+      .deck {
+        min-height: 100vh;
+      }
+
+      .slide {
+        min-height: 100vh;
+        padding: 82px 18px 80px;
+        overflow: auto;
+      }
+
+      .slide__inner {
+        height: auto;
+      }
+
+      h1 {
+        font-size: 58px;
+      }
+
+      h2 {
+        font-size: 42px;
+      }
+
+      .title-layout,
+      .storm-grid,
+      .split-evidence,
+      .closing-visual {
+        grid-template-columns: 1fr;
+      }
+
+      .visual {
+        min-height: 620px;
+      }
+
+      .brand span {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="brand">
+    <div>Skeleton <span>runtime evidence</span></div>
+  </div>
+
+  <div class="deck" id="deck">
+    <div class="slide slide--title is-active">
+      <div class="slide__inner title-layout">
+        <div class="title-copy">
+          <div class="kicker">Skeleton + skeleton-replay</div>
+          <h1>What <span class="accent-red">actually</span> ran?</h1>
+          <p class="title-tagline">Runtime evidence for Python systems moving faster than memory.</p>
+          <div class="chip-row">
+            <span class="chip">Python</span>
+            <span class="chip">runtime trace</span>
+            <span class="chip">architecture replay</span>
+          </div>
+        </div>
+        <div class="title-diagram" aria-hidden="true">
+          <div class="title-orbit"></div>
+          <div class="title-node title-node--scenario">scenario</div>
+          <div class="title-node title-node--trace">trace</div>
+          <div class="title-node title-node--review">review</div>
+          <div class="title-core">run</div>
+        </div>
+      </div>
+      <div class="notes">The opening is a question, not a product pitch. Say that AI makes code appear quickly, but the hard part becomes knowing whether the system that ran still matches the system in your head.</div>
+    </div>
+
+    <div class="slide">
+      <div class="slide__inner">
+        <div class="headline">
+          <div class="kicker">The pressure</div>
+          <h2>Fast code. <span class="accent-gold">Stale map.</span></h2>
+        </div>
+        <div class="visual">
+          <div class="storm-grid">
+            <div class="code-storm">
+              <div class="small-label">code appears</div>
+              <div class="file-token">service.py</div>
+              <div class="file-token">adapter.py</div>
+              <div class="file-token">client.py</div>
+              <div class="file-token">runner.py</div>
+              <div class="file-token">workflow.py</div>
+              <div class="file-token">tests.py</div>
+              <div class="file-token">models.py</div>
+              <div class="file-token">utils.py</div>
+            </div>
+            <div class="stale-map">
+              <div class="small-label">map lags behind</div>
+              <svg class="map-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <path class="map-path map-path--a" d="M 43.2 29.4 L 32.8 38"></path>
+                <path class="map-path map-path--b" d="M 54 29.4 L 62.6 41"></path>
+                <path class="map-path map-path--c" d="M 34.8 44.4 L 58 46.1"></path>
+                <path class="map-path map-path--d" d="M 28.9 49.4 L 36.9 64.9"></path>
+                <path class="map-path map-path--e" d="M 48.7 29.4 L 41.1 64.9"></path>
+              </svg>
+              <div class="map-node map-node--1">service</div>
+              <div class="map-node map-node--2">repo</div>
+              <div class="map-node map-node--3">agent</div>
+              <div class="map-node map-node--4">I/O</div>
+              <div class="question-mark">?</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">This slide should feel slightly busy. Say that the problem is not that generation is bad. The problem is that code can now grow faster than the team can rebuild ownership and runtime flow from source alone.</div>
+    </div>
+
+    <div class="slide">
+      <div class="slide__inner">
+        <div class="headline">
+          <div class="kicker">The distinction</div>
+          <h2><span class="accent-cyan">Could</span> happen is not <span class="accent-green">did</span> happen.</h2>
+        </div>
+        <div class="visual">
+          <div class="split-evidence">
+            <div class="source-cloud">
+              <div class="small-label">source view</div>
+              <svg class="source-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <path class="source-path source-path--a" d="M 32.3 24.2 L 53 23.2"></path>
+                <path class="source-path source-path--b" d="M 24.5 29.4 L 31.9 40"></path>
+                <path class="source-path source-path--c" d="M 46.3 45.9 L 60 52"></path>
+                <path class="source-path source-path--d" d="M 34.2 49.3 L 30.2 67.9"></path>
+              </svg>
+              <div class="source-card source-card--a">app.py</div>
+              <div class="source-card source-card--b">service.py</div>
+              <div class="source-card source-card--c">repo.py</div>
+              <div class="source-card source-card--d">notifier.py</div>
+              <div class="source-card source-card--e">domain.py</div>
+            </div>
+            <div class="runtime-line">
+              <div class="small-label">runtime evidence</div>
+              <svg class="runtime-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                  <marker id="runtime-arrow-cyan" markerWidth="1.8" markerHeight="1.8" refX="1.7" refY="0.9" orient="auto" markerUnits="userSpaceOnUse">
+                    <path d="M 0 0 L 1.8 0.9 L 0 1.8 z" fill="#35c8d4"></path>
+                  </marker>
+                  <marker id="runtime-arrow-gold" markerWidth="1.8" markerHeight="1.8" refX="1.7" refY="0.9" orient="auto" markerUnits="userSpaceOnUse">
+                    <path d="M 0 0 L 1.8 0.9 L 0 1.8 z" fill="#f5b84b"></path>
+                  </marker>
+                  <marker id="runtime-arrow-red" markerWidth="1.8" markerHeight="1.8" refX="1.7" refY="0.9" orient="auto" markerUnits="userSpaceOnUse">
+                    <path d="M 0 0 L 1.8 0.9 L 0 1.8 z" fill="#ef4444"></path>
+                  </marker>
+                </defs>
+                <path class="runtime-path runtime-path--a" d="M 50 25 L 50 28.8" marker-end="url(#runtime-arrow-cyan)"></path>
+                <path class="runtime-path runtime-path--b" d="M 50 39.3 L 50 43.1" marker-end="url(#runtime-arrow-gold)"></path>
+                <path class="runtime-path runtime-path--c" d="M 50 53.5 L 50 57.3" marker-end="url(#runtime-arrow-red)"></path>
+              </svg>
+              <div class="runtime-step runtime-step--one">entrypoint</div>
+              <div class="runtime-step runtime-step--two">service</div>
+              <div class="runtime-step runtime-step--three runtime-step--io">database</div>
+              <div class="runtime-step runtime-step--four runtime-step--io">stdout</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">Use the left side as possibility space and the right side as the observed path. Say that reading code is still necessary, but it does not prove which object, adapter, or branch participated in one scenario.</div>
+    </div>
+
+    <div class="slide">
+      <div class="slide__inner">
+        <div class="headline">
+          <div class="kicker">The example</div>
+          <h2>One order, a few <span class="accent-cyan">owners</span>.</h2>
+        </div>
+        <div class="visual">
+          <div class="demo-board">
+            <svg class="workflow-svg" viewBox="0 0 1000 420" aria-hidden="true">
+              <defs>
+                <marker id="workflow-arrow-cyan" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 8 4 L 0 8 z" fill="#35c8d4"></path>
+                </marker>
+                <marker id="workflow-arrow-gold" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 8 4 L 0 8 z" fill="#f5b84b"></path>
+                </marker>
+                <marker id="workflow-arrow-purple" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 8 4 L 0 8 z" fill="#a78bfa"></path>
+                </marker>
+                <marker id="workflow-arrow-green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 8 4 L 0 8 z" fill="#4ade80"></path>
+                </marker>
+              </defs>
+              <path class="workflow-path workflow-path--primary workflow-path--app" d="M 143 91 L 380 182" marker-end="url(#workflow-arrow-cyan)"></path>
+              <path class="workflow-path workflow-path--persistence workflow-path--repo" d="M 562 182 L 720 97" marker-end="url(#workflow-arrow-gold)"></path>
+              <path class="workflow-path workflow-path--persistence workflow-path--db" d="M 793 127 L 840 177" marker-end="url(#workflow-arrow-gold)"></path>
+              <path class="workflow-path workflow-path--notify workflow-path--notify-route" d="M 562 182 L 720 302" marker-end="url(#workflow-arrow-purple)"></path>
+              <path class="workflow-path workflow-path--resource workflow-path--stdout" d="M 720 302 L 564 318" marker-end="url(#workflow-arrow-green)"></path>
+              <path class="workflow-path workflow-path--domain" d="M 471 217 L 302 311"></path>
+            </svg>
+            <div class="system-node node-app">app</div>
+            <div class="system-node node-service">OrderService</div>
+            <div class="system-node node-repo">Repository</div>
+            <div class="system-node node-db">DB</div>
+            <div class="system-node node-notifier">Notifier</div>
+            <div class="system-node node-stdout">stdout</div>
+            <div class="system-node node-domain">Order</div>
+            <div class="order-packet"></div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">Introduce the sample app without walking through a file tree on screen. Say: app composes, service coordinates, repository owns persistence, notifier owns stdout, domain stays quiet. The moving packet is the order scenario.</div>
+    </div>
+
+    <div class="slide">
+      <div class="slide__inner">
+        <div class="headline">
+          <div class="kicker">The capture boundary</div>
+          <h2>Wrap the run.</h2>
+        </div>
+        <div class="visual">
+          <div class="runner-board">
+            <div class="runner-shell">
+              <div class="system-node node-app">app</div>
+              <div class="system-node node-service">service</div>
+              <div class="system-node node-repo">repo</div>
+              <div class="system-node node-db">I/O</div>
+            </div>
+            <div class="terminal-box">
+              <span class="terminal-line"><span class="prompt">$</span> pip install skeleton-replay</span>
+              <span class="terminal-line"><span class="prompt">$</span> skeleton run app.py</span>
+            </div>
+            <div class="runner-chips">
+              <span class="chip">no decorators</span>
+              <span class="chip">project calls</span>
+              <span class="chip">safe values</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">This is the non-invasive point. Say that Skeleton starts at the runner boundary. The app does not become a Skeleton app; Skeleton observes one Python execution and filters it into project-local runtime evidence.</div>
+    </div>
+
+    <div class="slide">
+      <div class="slide__inner">
+        <div class="headline">
+          <div class="kicker">The product</div>
+          <h2>A run becomes <span class="accent-green">evidence</span>.</h2>
+        </div>
+        <div class="visual">
+          <div class="evidence-board">
+            <svg class="evidence-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <marker id="evidence-arrow" markerWidth="1.6" markerHeight="1.6" refX="1.5" refY="0.8" orient="auto" markerUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 1.6 0.8 L 0 1.6 z" fill="#cbd5e1" opacity="0.7"></path>
+                </marker>
+              </defs>
+              <path class="evidence-path evidence-path--trace" d="M 44.8 46.4 L 23.2 31.2" marker-end="url(#evidence-arrow)"></path>
+              <path class="evidence-path evidence-path--snapshot" d="M 44.9 38.6 L 39.4 26.6" marker-end="url(#evidence-arrow)"></path>
+              <path class="evidence-path evidence-path--workflow" d="M 55.1 38.6 L 60.6 26.6" marker-end="url(#evidence-arrow)"></path>
+              <path class="evidence-path evidence-path--report" d="M 55.2 46.4 L 76.8 31.2" marker-end="url(#evidence-arrow)"></path>
+              <path class="evidence-path evidence-path--quality" d="M 44.8 56.5 L 33.6 70.4" marker-end="url(#evidence-arrow)"></path>
+              <path class="evidence-path evidence-path--session" d="M 55.2 56.5 L 66.4 70.4" marker-end="url(#evidence-arrow)"></path>
+            </svg>
+            <div class="evidence-center">one run</div>
+            <div class="artifact artifact--trace">trace.jsonl</div>
+            <div class="artifact artifact--snapshot">snapshot.json</div>
+            <div class="artifact artifact--workflow">workflow.md</div>
+            <div class="artifact artifact--report">report.html</div>
+            <div class="artifact artifact--quality">quality.json</div>
+            <div class="artifact artifact--session">session.json</div>
+            <div class="reader-row">
+              <span class="reader">human</span>
+              <span class="reader">IDE</span>
+              <span class="reader">LLM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">Name the artifacts quickly. Do not explain every file on screen. Say that the point is several surfaces from the same run: raw trace, graph snapshot, human narrative, quality anchors, browser report, and IDE handoff.</div>
+    </div>
+
+    <div class="slide">
+      <div class="slide__inner">
+        <div class="headline">
+          <div class="kicker">The review question</div>
+          <h2>I/O needs <span class="accent-gold">owners</span>.</h2>
+        </div>
+        <div class="visual">
+          <div class="boundary-board">
+            <svg class="ownership-svg" viewBox="0 0 1000 420" aria-hidden="true">
+              <defs>
+                <marker id="owner-arrow-cyan" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 8 4 L 0 8 z" fill="#35c8d4"></path>
+                </marker>
+                <marker id="owner-arrow-gold" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 8 4 L 0 8 z" fill="#f5b84b"></path>
+                </marker>
+                <marker id="owner-arrow-green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 8 4 L 0 8 z" fill="#4ade80"></path>
+                </marker>
+              </defs>
+              <path class="ownership-path ownership-path--primary ownership-path--repo" d="M 400 156 L 295 166" marker-end="url(#owner-arrow-cyan)"></path>
+              <path class="ownership-path ownership-path--primary ownership-path--notifier" d="M 582 156 L 720 166" marker-end="url(#owner-arrow-cyan)"></path>
+              <path class="ownership-path ownership-path--resource ownership-path--domain" d="M 491 195 L 491 294" marker-end="url(#owner-arrow-green)"></path>
+              <path class="ownership-path ownership-path--persistence ownership-path--file" d="M 185 214 L 163 231" marker-end="url(#owner-arrow-gold)"></path>
+              <path class="ownership-path ownership-path--persistence ownership-path--db" d="M 230 214 L 283 231" marker-end="url(#owner-arrow-gold)"></path>
+              <path class="ownership-path ownership-path--persistence ownership-path--stdout" d="M 793 214 L 797 231" marker-end="url(#owner-arrow-gold)"></path>
+            </svg>
+            <div class="ownership owner-repo">Repository</div>
+            <div class="ownership owner-service">Service</div>
+            <div class="ownership owner-notifier">Notifier</div>
+            <div class="ownership owner-domain">Domain</div>
+            <div class="io-chip io-file">file</div>
+            <div class="io-chip io-db">db</div>
+            <div class="io-chip io-stdout">stdout</div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">This is where the quality signal becomes useful. Say that a hotspot is not a verdict. It is a review anchor. The useful question is whether persistence and stdout are behind intentional adapters, or whether I/O has leaked into the wrong actor.</div>
+    </div>
+
+    <div class="slide">
+      <div class="slide__inner">
+        <div class="headline">
+          <div class="kicker">The IDE loop</div>
+          <h2>Start at <span class="accent-gold">session.json</span>.</h2>
+        </div>
+        <div class="visual">
+          <div class="plugin-board">
+            <div class="plugin-frame">
+              <div class="plugin-pane">
+                <h3>session</h3>
+                <div class="plugin-icon">{ }</div>
+              </div>
+              <div class="plugin-pane">
+                <h3>report</h3>
+                <div class="graph-shape plugin-graph">
+                  <div class="graph-dot"></div>
+                  <div class="graph-dot"></div>
+                  <div class="graph-dot"></div>
+                </div>
+              </div>
+              <div class="plugin-pane">
+                <h3>source</h3>
+                <div class="plugin-code">
+                  service.register()<br>
+                  <span class="source-highlight">repository.save()</span>
+                  notifier.announce()
+                </div>
+              </div>
+            </div>
+            <div class="plugin-packet"></div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">Keep this as a concept slide, not a product tour. Say the plugin does not own tracing. It uses session.json to find the generated report and artifacts, then ties report selection back to source and trace-window export.</div>
+    </div>
+
+    <div class="slide">
+      <div class="slide__inner">
+        <div class="headline">
+          <div class="kicker">The bridge</div>
+          <h2>Same evidence. <span class="accent-cyan">Two readers.</span></h2>
+        </div>
+        <div class="visual">
+          <div class="bridge-board">
+            <div class="bridge-stream"></div>
+            <div class="reader-card reader-human">
+              <div>
+                <div class="graph-shape">
+                  <div class="graph-dot"></div>
+                  <div class="graph-dot"></div>
+                  <div class="graph-dot"></div>
+                </div>
+                Human
+                <small>visual workflow</small>
+              </div>
+            </div>
+            <div class="reader-card reader-llm">
+              <div>
+                <div class="json-shape">{ }</div>
+                LLM
+                <small>structured trace</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">This is the bridge idea. Say that humans need perception: a graph, a path, a workflow. LLMs need structured evidence: event ids, nodes, edges, safe summaries. The same run should feed both.</div>
+    </div>
+
+    <div class="slide slide--closing">
+      <div class="slide__inner">
+        <div class="closing-visual">
+          <div class="closing-copy">
+            <div class="kicker">The takeaway</div>
+            <h1>Run. Replay. Ask from <span class="accent-green">evidence.</span></h1>
+            <div class="closing-line">
+              <span>scenario</span>
+              <span class="closing-dot"></span>
+              <span>trace</span>
+              <span class="closing-dot"></span>
+              <span>review</span>
+            </div>
+          </div>
+          <div class="end-screen-space" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="notes">Close with the practical question: does the system that ran match the system we thought we had? The final CTA is not hype. It is a review method: run the scenario, replay the workflow, ask from evidence.</div>
+    </div>
+  </div>
+
+  <div class="controls" aria-label="Slide controls">
+    <button type="button" id="prev" aria-label="Previous slide">&lt;</button>
+    <button type="button" id="restart" aria-label="Restart slide animation">R</button>
+    <button type="button" id="next" aria-label="Next slide">&gt;</button>
+  </div>
+  <div class="counter" id="counter"></div>
+  <div class="progress"><div class="progress__bar" id="progress"></div></div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const counter = document.getElementById("counter");
+    const progress = document.getElementById("progress");
+    const params = new URLSearchParams(window.location.search);
+    let index = 0;
+
+    if (params.get("record") === "1") {
+      document.body.classList.add("recording-mode");
+    }
+
+    function restartCurrentSlide() {
+      const slide = slides[index];
+      slide.classList.remove("is-active");
+      void slide.offsetWidth;
+      slide.classList.add("is-active");
+    }
+
+    function showSlide(nextIndex) {
+      const previous = index;
+      index = Math.max(0, Math.min(slides.length - 1, nextIndex));
+      document.body.dataset.direction = index >= previous ? "forward" : "back";
+      slides.forEach((slide, slideIndex) => {
+        slide.classList.toggle("is-active", slideIndex === index);
+      });
+      counter.textContent = `${index + 1} / ${slides.length}`;
+      progress.style.width = `${((index + 1) / slides.length) * 100}%`;
+      window.location.hash = `slide-${index + 1}`;
+    }
+
+    document.getElementById("prev").addEventListener("click", () => showSlide(index - 1));
+    document.getElementById("restart").addEventListener("click", restartCurrentSlide);
+    document.getElementById("next").addEventListener("click", () => showSlide(index + 1));
+
+    window.addEventListener("keydown", (event) => {
+      if (["ArrowRight", "PageDown", " "].includes(event.key)) {
+        event.preventDefault();
+        showSlide(index + 1);
+      }
+      if (["ArrowLeft", "PageUp", "Backspace"].includes(event.key)) {
+        event.preventDefault();
+        showSlide(index - 1);
+      }
+      if (event.key === "Home") {
+        showSlide(0);
+      }
+      if (event.key === "End") {
+        showSlide(slides.length - 1);
+      }
+      if (event.key.toLowerCase() === "r") {
+        restartCurrentSlide();
+      }
+      if (event.key.toLowerCase() === "c") {
+        document.body.classList.toggle("recording-mode");
+      }
+    });
+
+    const initial = window.location.hash.match(/slide-(\d+)/);
+    showSlide(initial ? Number(initial[1]) - 1 : 0);
+  </script>
+</body>
+</html>

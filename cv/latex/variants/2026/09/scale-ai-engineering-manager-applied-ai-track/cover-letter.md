@@ -1,0 +1,16 @@
+Dear Scale team,
+
+I enjoyed speaking with Claudio about the work Scale is doing in applied AI. As we discussed, I am seeking an Engineering Manager role where I can lead a team while staying close to architecture, implementation and production delivery.
+
+That is how I work at Vortexa. I manage six direct reports and lead a ten-person cross-functional team across engineering, data science, Product and domain analysis. My responsibilities cover people's development, technical direction and delivery, including the work needed to keep our systems reliable after they reach production.
+
+I remain hands-on. For our move from Kafka Streams to Flink, I researched the trade-offs, wrote the proposal and personally built the first replacement application. After getting it into production and working with Platform to standardise deployment, I developed the RFC and agreed an incremental migration roadmap with Product. It is a good example of how I lead: get close enough to the problem to establish a workable approach, then give the team a clear foundation to build on.
+
+A substantial part of my role is helping engineers, data scientists and domain experts agree on what we are trying to improve and how we will know it has worked. I have introduced evaluation and model-lifecycle practices, built reusable tooling, and worked to make testing and production support shared responsibilities. I care about developing people who can take ownership and make sound decisions themselves.
+
+Scale's focus on reliable AI and practical evaluation is a strong reason for my interest. My AI standards work and research and teaching at UCL reinforce that interest, while my personal work on Promet keeps me actively building with local models, tool execution and auditability.
+
+I would welcome a further conversation about where my experience could fit an Engineering Manager role at Scale, particularly within applied AI or production AI platforms.
+
+Best,
+Christos Hadjinikolis

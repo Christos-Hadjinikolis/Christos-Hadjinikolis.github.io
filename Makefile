@@ -47,7 +47,7 @@ build: install
 audit: build
 	@python3 scripts/audit_post_social_images.py
 	@python3 scripts/audit_presentation_pages.py
-	@for forbidden in _site/scripts _site/cv _site/wip; do \
+	@for forbidden in _site/scripts _site/cv _site/wip _site/.codex _site/_internal _site/tmp _site/out _site/assets/images/posts/2026/skeleton-replay-runtime-architecture-evidence/video; do \
 		if [ -e "$$forbidden" ]; then \
 			echo "Unexpected published internal path: $$forbidden"; \
 			exit 1; \
