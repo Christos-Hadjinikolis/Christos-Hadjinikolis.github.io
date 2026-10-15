@@ -19,6 +19,14 @@ Start by reading:
 
 Treat `cv/latex/cv.tex` as the master CV source. Do not overwrite it unless the user explicitly asks for a master CV update.
 
+Preserve the established Friggeri design using `cv/latex/friggeri-cv.cls`.
+Use `cv/latex/variants/2026/09/permutable-ai-senior-engineering-leadership/cv.tex`
+and its PDF as the design reference: charcoal header, sidebar, detailed experience,
+and the full second-page career sections. Tailor content within that structure.
+Do not substitute a generic single-column layout or remove career sections for
+ATS optimisation unless the user explicitly requests that change. Compare the
+rendered result with the reference PDF, not only with the source text.
+
 Treat `assets/pdfs/cv.pdf` as the website-published artifact. Do not update it unless the user explicitly asks to publish or refresh the website CV.
 
 Use repository/project evidence only when it is relevant and inspectable. If live company systems, Jira, Confluence, dashboards, or external pages are unavailable, state that limitation instead of treating them as verified.

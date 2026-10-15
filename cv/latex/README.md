@@ -159,8 +159,17 @@ Do not treat `assets/pdfs/cv.pdf` as the editable source. It is only the publish
 
 ## Canonical positioning and evidence (October 2026)
 
-The main CV uses a two-page, single-column layout and leads with Engineering
-Manager responsibility for production ML and data platforms. It makes the
+The main CV uses `friggeri-cv.cls` and preserves the established two-page design:
+charcoal name/header band, first-page sidebar and detailed experience, followed
+by the full education, public tooling, affiliations, talks and credentials sections.
+The design reference is
+`variants/2026/09/permutable-ai-senior-engineering-leadership/cv.tex` and its PDF.
+Preserve this structure, typography and career depth when updating the master or
+creating variants. Do not replace it with a generic single-column CV or remove
+sections for ATS optimisation unless explicitly requested.
+
+The main CV leads with Engineering Manager responsibility for production ML and
+data platforms. It makes the
 December 2020 Vortexa joining date and February 2022 management progression
 explicit. Role variants retain their historical content and templates.
 
