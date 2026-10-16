@@ -71,12 +71,15 @@ remote_theme: jekyll-theme-prologue
 collections_dir: content
 collections:
   sections:
+  presentations:
+    output: true
+    permalink: /presentations/:path:output_ext
   talks:
     output: true
     permalink: /presentations/:name/
 defaults:
   - scope:
-      path: presentations
+      type: presentations
     values:
       hide: true
 exclude:

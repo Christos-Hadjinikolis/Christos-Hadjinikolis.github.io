@@ -9,7 +9,7 @@ import json, re, shutil, subprocess, sys, tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "tmp/ucl-seminar"
-DEST = ROOT / "presentations/ucl-ai-trust"
+DEST = ROOT / "content/_presentations/ucl-ai-trust"
 PUBLIC_FIELDS = {"key", "id", "title", "body", "kind", "img", "credit", "alt",
                  "group", "appendix", "sec", "intro", "bullets", "refs", "context"}
 BUILD_FILES = ["build-deck.py", "build-notes.py", "notes-viewer.html",
@@ -28,7 +28,7 @@ def main():
         item["note"] = item["intro"] + "\n" + "\n".join(item["bullets"])
         public.append(item)
     keys = {slide["key"] for slide in public}
-    for page in [ROOT / "content/_posts/2026-10-07-who-decides-when-ai-is-trustworthy.md", ROOT / "content/pages/presentations.md", ROOT / "content/_talks/ucl-ai-trust.md"]:
+    for page in [ROOT / "content/_posts/2026-10-07-who-decides-when-ai-is-trustworthy.md", ROOT / "content/_talks/ucl-ai-trust.md"]:
         embedded = set(re.findall(r'include seminar-slide.html key="([^"]+)"', page.read_text()))
         if embedded - keys:
             raise ValueError(f"Update removed slide embeds in {page.name}: {sorted(embedded - keys)}")

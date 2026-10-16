@@ -31,15 +31,24 @@ def deck_data(text):
 
 
 def main():
-    for route in ['index.html', 'blog.html', 'presentations/index.html',
+    if (ROOT / 'presentations').exists():
+        raise SystemExit('Presentation sources belong under content/_presentations')
+    if (SITE / 'presentations/index.html').exists():
+        raise SystemExit('The removed presentations index must not be published')
+    for route in ['index.html', 'blog.html',
                   'blog/who-decides-when-ai-is-trustworthy/index.html',
                   'presentations/ucl-ai-trust/index.html']:
         parser = MainNavigation()
         parser.feed((SITE / route).read_text())
-        leaks = [url for url in parser.links if url.startswith('/presentations/') and url != '/presentations/']
+        leaks = [url for url in parser.links if url.startswith('/presentations/')]
         if leaks:
             raise SystemExit(f'Presentation resource leaked into main navigation in {route}: {leaks}')
     public = SITE / 'presentations/ucl-ai-trust'
+    for asset in (ROOT / 'content/_presentations/ucl-ai-trust/assets').rglob('*'):
+        if asset.is_file():
+            published = public / asset.relative_to(ROOT / 'content/_presentations/ucl-ai-trust')
+            if not published.exists() or published.read_bytes() != asset.read_bytes():
+                raise SystemExit(f'Missing or changed presentation asset: {published}')
     slides = (public / 'slides.html').read_text()
     notes = (public / 'notes.html').read_text()
     for name, text in [('slides', slides), ('notes', notes)]:
