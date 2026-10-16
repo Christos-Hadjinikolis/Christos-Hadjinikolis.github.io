@@ -1,0 +1,49 @@
+---
+layout: null
+title: Catch up with Christos
+permalink: /catch-up/
+hide: true
+sitemap: false
+robots: noindex, nofollow
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Catch up with Christos Hadjinikolis</title>
+  <meta name="description" content="Choose a time for a catch-up with Christos.">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/catch-up.css' | relative_url }}">
+  <script src="{{ '/assets/js/catch-up.js' | relative_url }}" defer></script>
+</head>
+<body>
+  <main>
+    <header class="intro">
+      <div>
+        <p class="eyebrow">Christos Hadjinikolis</p>
+        <h1>Let’s catch up.</h1>
+        <p>Pick a time that works for you. Looking forward to our conversation.</p>
+      </div>
+    </header>
+    <section aria-label="Book a catch-up">
+      <div class="booking-bar">
+        <h2>Choose a slot</h2>
+        <a href="https://cal.com/christos-hadjinikolis-htrxr6/15min">Only need 15 minutes?</a>
+      </div>
+      <div id="catch-up-calendar"></div>
+      <p class="fallback">Calendar not loading? <a href="https://cal.com/christos-hadjinikolis-htrxr6/30min">Book directly on Cal.com</a>.</p>
+      <noscript><p>Use either booking link above to choose a time on Cal.com.</p></noscript>
+    </section>
+    <footer>
+      <label for="share-url">Link to this page</label>
+      <div class="share">
+        <input id="share-url" type="url" readonly value="{{ '/catch-up/' | absolute_url }}" aria-label="Shareable catch-up page URL">
+        <button id="copy-link" type="button" hidden>Copy link</button>
+      </div>
+      <p id="copy-status" role="status" aria-live="polite"></p>
+    </footer>
+  </main>
+</body>
+</html>
