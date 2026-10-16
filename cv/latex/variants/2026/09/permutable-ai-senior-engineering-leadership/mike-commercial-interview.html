@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Mike Brisley · Study & meeting guide</title><style>
+:root{color-scheme:dark;--bg:#08131f;--panel:#102334;--line:#2a4659;--ink:#edf4f7;--muted:#adc2ce;--teal:#68e0cb;--gold:#f2cf8b;--blue:#b2c2ff}*{box-sizing:border-box}html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}body{overflow:hidden}button,select,textarea{font:inherit;color:inherit}button,select{background:#142c3e;border:1px solid #36586a;border-radius:8px;padding:8px 11px;cursor:pointer}button:hover,summary:hover{border-color:var(--teal);color:var(--teal)}button[aria-pressed=true]{background:#22564f;border-color:var(--teal)}button:disabled{opacity:.35;cursor:default}button:focus-visible,select:focus-visible,summary:focus-visible,a:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:3px}a{color:var(--teal);text-underline-offset:3px}p{margin:0;line-height:1.5}strong{color:#fff}em{color:var(--teal);font-style:normal}.app{height:100%;height:100dvh;display:flex;flex-direction:column;background:radial-gradient(ellipse at 80% 0,#173b4a55,transparent 55%)}.topbar{flex:none;padding:12px 22px 9px;border-bottom:1px solid var(--line);background:#081521}.toolbar,.context{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-size:13px;letter-spacing:.1em;color:var(--teal);font-weight:750;white-space:nowrap}.brand small{display:block;font-size:10px;color:var(--muted);letter-spacing:.12em;margin-top:4px}.toolbar nav{display:flex;gap:6px;flex-wrap:wrap}.toolbar button{font-size:13px}.context{font-size:12px;letter-spacing:.05em;color:var(--muted);margin-top:11px}#sectionLabel{color:var(--gold);font-weight:750}.stage{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding:22px;scrollbar-color:#416173 #0a1723}.slide{max-width:1120px;min-height:100%;margin:auto;padding:30px 36px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(135deg,#112739,#0c1d2d);display:flex;flex-direction:column;justify-content:center;gap:22px;box-shadow:0 15px 50px #0003}.slide-head h1{font-size:clamp(30px,3vw,44px);line-height:1.12;letter-spacing:-.035em;margin:10px 0 0;max-width:25ch}.eyebrow,.label{font-size:11px;line-height:1.4;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--gold)}.slide-body{display:flex;flex-direction:column;gap:20px;min-width:0}.lead{font-size:19px;color:#c8d9e2;max-width:80ch}.flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.node{border:1px solid #3d716e;background:#173b415c;border-radius:12px;padding:22px 18px;position:relative}.node:not(:last-child):after{content:'→';position:absolute;right:-21px;top:40%;color:var(--teal);font-size:22px}.node b,.tile b{display:block;font-size:19px;line-height:1.3;color:var(--teal);margin-bottom:10px}.node span,.tile p{font-size:17px;line-height:1.45;color:#ccdae3}.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:13px}.tile{background:#162d40;border:1px solid #355365;padding:22px 18px;border-radius:12px}.learn,.recall{border:1px solid #365266;border-radius:10px;font-size:15px}.learn{margin-top:0;color:var(--muted)}.recall{border-color:#6e6449;background:#3b322628}.learn summary,.recall summary{padding:12px 15px;cursor:pointer;line-height:1.45}.recall summary{color:var(--gold)}.expanded{border-top:1px solid var(--line);padding:16px;max-height:260px;overflow:auto;font-size:16px;line-height:1.55}.expanded p+p{margin-top:13px}.source-links{font-size:14px}.divider{border:0;box-shadow:none;background:none;position:relative;padding:24px 30px;gap:26px}.divider .slide-head h1{font-size:clamp(36px,4.3vw,62px);max-width:24ch;line-height:1.07}.divider .eyebrow{color:var(--teal)}.divider-intro{font-size:22px;color:#c7dce3}.chapter-route{list-style:none;padding:0;margin:0;display:grid;gap:10px;max-width:700px}.chapter-route li{border-bottom:1px solid var(--line);padding:8px 0;font-size:19px;display:flex;gap:16px;align-items:center}.chapter-route li span{font-size:13px;color:var(--teal);font-weight:800}.chapter-route small{margin-left:auto;color:var(--muted);font-size:14px}.route-note{font-size:17px;max-width:72ch;color:var(--muted)}.keys{font-size:13px;color:var(--muted)}kbd{font:inherit;border:1px solid #4d6a79;border-bottom-width:2px;border-radius:4px;padding:1px 5px;color:var(--ink)}.meeting-route{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.meeting-route div{border-top:2px solid var(--teal);padding:13px 0}.meeting-route b{display:block;color:var(--teal);font-size:30px;margin-bottom:10px}.meeting-route span{font-size:18px;line-height:1.5;color:#c7dce3}.evidence-map{display:grid;grid-template-columns:1fr 1fr;gap:18px}.evidence-map>div{border:1px solid #4b6a70;border-radius:12px;background:#16323d;padding:21px;text-align:center;display:grid;gap:18px}.evidence-map b{font-size:21px}.evidence-map span{color:var(--muted);font-size:17px}.evidence-map strong{color:var(--gold)}.history-map{display:grid;grid-template-columns:1fr 1.7fr 1fr;align-items:stretch;gap:12px}.history-map>div{padding:22px 16px;display:flex;flex-direction:column;gap:10px;text-align:center;border-radius:12px}.snapshot{border:2px solid #429887;background:#17433d55}.history-map b{font-size:21px;color:var(--teal)}.history-map span{font-size:17px}.gap{border:2px dashed #8a784e;background:#51412422}.gap b{color:var(--gold)}.gap .dotted{font-size:14px;color:var(--muted)}.diagram-caption{font-size:16px;color:var(--muted);line-height:1.45}.clock-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.clock-grid>div{border-left:3px solid var(--teal);border-radius:6px;padding:16px;background:#193042}.clock-grid b{font-size:18px;display:block;margin-bottom:5px}.clock-grid span{font-size:16px;color:var(--muted)}.ir-chart{margin:0;border:1px solid var(--line);border-radius:12px;padding:22px;background:#0b1b28}.ir-chart figcaption{font-size:16px;font-weight:750;color:var(--gold);margin-bottom:23px}.bar-row{display:grid;grid-template-columns:150px minmax(0,1fr) 52px;gap:14px;align-items:center;margin:18px 0}.bar-row>span{font-size:16px;color:#c4d6e0}.bar-row>b{font-size:24px;font-variant-numeric:tabular-nums}.bar-track{height:30px;background:repeating-linear-gradient(to right,transparent 0,transparent calc(50% - 1px),#3a536655 calc(50% - 1px),#3a536655 50%),#162d3d;border-left:1px solid #76939e}.bar{height:100%;display:block;background:var(--teal)}.bar.baseline{background:#8197aa}.chart-axis{display:flex;justify-content:space-between;margin-left:164px;margin-right:66px;color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}.card{gap:18px}.card .slide-head h1{font-size:30px;max-width:35ch}.card .slide-body{gap:17px}.question-hero{background:linear-gradient(120deg,#20544e,#15323f);border:1px solid #4b8c81;border-radius:12px;padding:21px 24px;font-size:clamp(23px,2.5vw,33px);line-height:1.25;letter-spacing:-.02em}.followups{padding:0 5px}.followups ul{margin:7px 0 0;padding-left:22px;display:grid;gap:8px;font-size:18px;color:#cadbe3;line-height:1.4}.conversation-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.conversation-grid>div{border-left:3px solid var(--teal);background:#15343d;border-radius:5px;padding:16px}.conversation-grid .experience{border-color:var(--blue);background:#1a2c45}.conversation-grid .label{color:var(--teal)}.conversation-grid .experience .label{color:var(--blue)}.conversation-grid p{font-size:17px;margin-top:8px;line-height:1.45}.spoken{border-left:2px solid var(--gold);padding:7px 18px;font-size:19px;color:#e5dfce}.response{padding:12px 16px;border:1px solid #6e654d;border-radius:9px}.response p{font-size:17px;margin-top:6px}.emergency-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:22px}.anchors ol{padding-left:22px;font-size:17px;line-height:1.5;margin:9px 0 0}.anchors li{padding-bottom:6px}.short-answers p{font-size:15px;line-height:1.4;margin-top:7px;color:#c7d7e1}.short-answers b{color:#fff}.card[data-slide-id="meeting-emergency"] .slide-body{gap:13px}.card[data-slide-id="meeting-emergency"] .question-hero{font-size:25px;padding:16px 20px}.card[data-slide-id="meeting-emergency"] .conversation-grid p{font-size:15px}.bottomnav{flex:none;padding:10px 22px;border-top:1px solid var(--line);display:flex;align-items:center;gap:13px;background:#081521;font-size:13px}.bottomnav select{min-width:0;max-width:440px;flex:1}.bottomnav #counter{white-space:nowrap;color:var(--muted);font-variant-numeric:tabular-nums}.progress{height:4px;background:#1f384b;flex:1;min-width:25px;border-radius:4px;overflow:hidden}#progressBar{height:100%;background:var(--teal)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}dialog{position:fixed;inset:0 0 0 auto;margin:0;width:min(540px,100%);height:100%;max-height:100dvh;max-width:100%;border:0;border-left:1px solid #3b6476;background:#102333;color:var(--ink);padding:24px;overflow:auto;box-shadow:-20px 0 60px #0005}dialog::backdrop{background:#020b13aa}dialog h2{font-size:26px;letter-spacing:-.03em;margin:0}dialog .drawer-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}dialog p{font-size:15px;color:var(--muted);margin:12px 0}dialog h3{font-size:18px;color:var(--teal);margin:26px 0 10px}#noteTopic{font-size:18px;color:var(--gold)}textarea{width:100%;min-height:45vh;resize:vertical;background:#091b29;border:1px solid #486777;border-radius:8px;padding:14px;line-height:1.5;font-size:17px}#storageStatus{font-size:13px;white-space:pre-wrap}dialog details{border-bottom:1px solid var(--line);padding:13px 0}dialog summary{cursor:pointer;color:var(--gold);line-height:1.4}dl{margin:12px 0;font-size:15px;line-height:1.5}dt{font-weight:750;color:var(--teal);margin-top:15px}dd{margin:4px 0 0;color:#c8d8e0}.source-list{display:grid;gap:17px;font-size:15px}.source-list a{line-height:1.4}.source-list p{margin:5px 0 0;font-size:14px}.drawer-note{padding:12px;background:#163b40;border-radius:8px}.legend{display:grid;gap:7px;font-size:14px;color:var(--muted)}noscript{display:block;margin:25px;font-size:20px}
+@media(max-width:1000px){.topbar{padding:10px 16px 8px}.brand{font-size:11px}.toolbar button{padding:7px 9px;font-size:12px}.stage{padding:16px}.slide{padding:24px;gap:18px}.slide-head h1{font-size:34px}.slide-body{gap:17px}.lead{font-size:18px}.node,.tile{padding:18px 15px}.divider{padding:16px 24px}.divider .slide-head h1{font-size:44px}.divider .slide-body{gap:15px}.chapter-route{gap:5px}.card{padding:24px}.card .slide-head h1{font-size:28px}.card .question-hero{font-size:27px;padding:18px 20px}.bottomnav{padding:9px 16px;gap:10px}.conversation-grid>div{padding:14px}.card[data-slide-id="meeting-emergency"]{gap:14px}.card[data-slide-id="meeting-emergency"] .question-hero{font-size:23px}.meeting-route{gap:12px}.meeting-route span{font-size:16px}}
+@media(max-width:620px){.topbar{padding:10px 12px}.toolbar{align-items:flex-start;flex-direction:column;gap:8px}.brand small{display:inline;margin-left:10px}.toolbar nav{gap:5px}.toolbar button{font-size:12px;padding:7px 8px}.context{font-size:10px;margin-top:9px;align-items:flex-start;gap:8px}#chapterLabel{text-align:right;max-width:60%}.stage{padding:12px}.slide{padding:20px 17px;justify-content:flex-start;border-radius:13px;gap:18px}.slide-head h1,.card .slide-head h1{font-size:29px}.eyebrow{font-size:10px}.lead{font-size:18px}.flow,.tiles,.conversation-grid,.evidence-map,.emergency-grid,.meeting-route{grid-template-columns:1fr}.flow{gap:18px}.node:not(:last-child):after{content:'↓';top:auto;bottom:-22px;left:50%;right:auto;font-size:20px}.node{padding:15px}.node b{margin-bottom:5px}.tile{padding:16px}.clock-grid{grid-template-columns:1fr}.history-map{grid-template-columns:1fr;gap:10px}.history-map>div{padding:15px}.divider{padding:20px 8px}.divider .slide-head h1{font-size:37px}.divider-intro{font-size:20px}.chapter-route li{font-size:17px;gap:11px}.chapter-route small{font-size:12px}.route-note{font-size:16px}.meeting-route{gap:6px}.meeting-route div{display:flex;align-items:center;gap:18px}.meeting-route b{font-size:26px;min-width:74px;margin:0}.ir-chart{padding:16px 12px}.bar-row{grid-template-columns:86px minmax(0,1fr) 42px;gap:8px}.bar-row>span{font-size:13px}.bar-row>b{font-size:20px}.chart-axis{margin-left:94px;margin-right:50px}.card .question-hero{font-size:25px;padding:17px}.followups ul{font-size:17px}.conversation-grid p{font-size:17px}.bottomnav{padding:9px 10px;gap:7px;flex-wrap:wrap}.bottomnav select{order:-1;flex-basis:100%;max-width:none;width:100%;font-size:12px}.bottomnav button{padding:6px 12px}.bottomnav #counter{margin-left:auto}.progress{max-width:90px}.expanded{max-height:330px}.card[data-slide-id="meeting-emergency"] .conversation-grid p,.short-answers p{font-size:16px}.emergency-grid{gap:17px}dialog{padding:20px}.keys{line-height:1.8}}
+@media(prefers-reduced-motion:no-preference){button{transition:background .12s}#progressBar{transition:width .15s}}
+</style></head><body>
+<div class="app"><header class="topbar"><div class="toolbar"><div class="brand">PERMUTABLE / MIKE<small>PRIVATE INTERVIEW GUIDE</small></div><nav aria-label="Deck tools"><button id="studyBtn" title="Study (S / P)">Study</button><button id="meetingBtn" title="Meeting (M / L)">Meeting</button><button id="emergencyBtn" title="Emergency card (C)">Emergency</button><button id="notesBtn" title="Notes (N)">Notes</button><button id="referencesBtn" title="References (R)">References</button><button id="fullscreenBtn" title="Fullscreen (F)" aria-label="Toggle fullscreen">⛶</button></nav></div><div class="context"><span id="sectionLabel"></span><span id="chapterLabel"></span></div></header>
+<main class="stage" id="stage" aria-label="Current slide"><article id="slide"></article></main>
+<footer class="bottomnav"><button id="prevBtn" aria-label="Previous slide">←</button><button id="nextBtn" aria-label="Next slide">→</button><label for="slideSelect" class="sr-only">Choose slide</label><select id="slideSelect"></select><span id="counter"></span><div id="progress" class="progress" role="progressbar" aria-label="Section progress"><div id="progressBar"></div></div></footer></div>
+<dialog id="notesPane" aria-labelledby="notesTitle"><div class="drawer-head"><h2 id="notesTitle">Your notes</h2><button id="closeNotesBtn">Close</button></div><p id="noteTopic"></p><label class="sr-only" for="notes">Notes for this topic</label><textarea id="notes" placeholder="Capture an example, decision or follow-up…"></textarea><p id="storageStatus" role="status"></p><button id="exportBtn">Export all notes</button><p>Stored only in this browser. Export includes recovered legacy notes. Export before moving the file or changing browsers.</p></dialog>
+<dialog id="referencesPane" aria-labelledby="referencesTitle"><div class="drawer-head"><h2 id="referencesTitle">References & glossary</h2><button id="closeReferencesBtn" aria-label="Close references">Close</button></div><p>Public pages checked 16 October 2026. Vendor descriptions establish what is advertised; they do not independently establish performance or traction.</p><div class="legend"><span><b>Public fact:</b> documented title, remit or dated background.</span><span><b>Vendor claim:</b> product description or vendor research.</span><span><b>Your experience / recollection:</b> CV-grounded work or an explicitly unverified interview memory.</span><span><b>Hypothesis / example:</b> a possible strategy, customer or discussion frame.</span></div><details id="glossary"><summary>Complete glossary · expand when a term is unfamiliar</summary><dl><dt>Alpha</dt><dd>Return beyond a specified benchmark or risk model. The definition and implementation costs matter.</dd><dt>Backtest</dt><dd>A simulation using historical inputs and decision rules. It needs realistic availability, costs and execution assumptions.</dd><dt>IC · information coefficient</dt><dd>Correlation between a signal and later returns, often rank correlation. A measure of prediction, not automatically of tradable profit.</dd><dt>IR · information ratio</dt><dd>Conventionally, mean active return divided by the variability of active return, with an appropriate annualisation. Strategy research may use its own convention; check the methodology before comparing studies.</dd><dt>Signal decay</dt><dd>How predictive usefulness changes as information ages. The useful horizon depends on the task.</dd><dt>Aggregation / evidence window</dt><dd>The span of eligible past information included in a calculation. It can differ from the interval between updates.</dd><dt>Processing latency</dt><dd>Elapsed processing time after an input is available. End-to-end delay also includes source, queue, publication and delivery delays.</dd><dt>Publication cadence</dt><dd>How often outputs are released. A fast calculation can still be published infrequently.</dd><dt>Point-in-time data</dt><dd>Data representing what was available at a specified historical decision time, including the relevant versions and availability timestamps.</dd><dt>Look-ahead bias / leakage</dt><dd>A historical test uses information that would not have been available at the simulated decision, including later corrections or model knowledge.</dd><dt>Immutable snapshot</dt><dd>A saved state that is not changed after capture. It establishes that captured state, not every intermediate historical state.</dd><dt>Novelty / relevance</dt><dd>Whether information is new, and how directly it concerns an entity or topic. Both require definitions and evaluation.</dd><dt>Provenance / lineage</dt><dd>Records of where information came from and how it was transformed into an output.</dd><dt>Revision / vintage</dt><dd>A changed output, or the particular version available at a recorded time. Research must respect when changes became available.</dd><dt>Breadth</dt><dd>The number or range of eligible opportunities. A narrower evidence window can leave too few assets for a diversified strategy.</dd><dt>Systematic / discretionary</dt><dd>Systematic approaches use explicit decision rules; discretionary approaches rely on a person’s judgement. Real workflows may combine both.</dd><dt>Exposure / hedge</dt><dd>Sensitivity to a market move; a position intended to offset some of that risk.</dd><dt>Out-of-sample evaluation</dt><dd>Testing on observations not used to fit or select the model or rule. Repeated tuning on the test set can compromise it.</dd><dt>API / data contract</dt><dd>A programmatic interface / an agreement about schema, meaning, quality and change behaviour.</dd><dt>Go to market / renewal</dt><dd>How a product reaches and wins customers / a customer’s decision to continue a contract.</dd><dt>SLA</dt><dd>A defined service commitment. A recalled processing time or target is not itself an SLA.</dd></dl></details><h3>Public sources</h3><div class="source-list"><div><a href="https://permutable.ai/permutable-welcomes-michael-brisely-chief-commerical-officer/" target="_blank" rel="noopener noreferrer">Mike’s appointment · 22 May 2025 ↗</a></div><div><a href="https://www.ravenpack.com/products/edge/data/news-analytics" target="_blank" rel="noopener noreferrer">RavenPack · News Analytics ↗</a></div><div><a href="https://www.ravenpack.com/blog/the-timing-edge-new-research-unlocks-stronger-alpha-from-news-sentiment" target="_blank" rel="noopener noreferrer">RavenPack · public timing research summary ↗</a></div><div><a href="https://permutable.ai/intelligence-engine/" target="_blank" rel="noopener noreferrer">Permutable · Intelligence Engine ↗</a></div><div><a href="https://permutable.ai/vision/" target="_blank" rel="noopener noreferrer">Permutable · Vision ↗</a></div><div><a href="https://professional.bloomberg.com/products/bloomberg-terminal/news/" target="_blank" rel="noopener noreferrer">Bloomberg · Terminal news ↗</a></div><div><a href="https://www.lseg.com/en/data-analytics/financial-news-service/text-analytics" target="_blank" rel="noopener noreferrer">LSEG · Text Analytics ↗</a></div></div><h3>Reading route</h3><p>Read all 20 lessons, trying the five recall questions before revealing the answers. If you have extra time, read Mike’s announcement, the RavenPack public summary, then Permutable’s production / vision distinction. Rehearse one Vortexa example. Switch to Meeting for the call.</p><h3>Evidence boundaries</h3><p>The gated RavenPack paper was not reviewed. The chart uses one period and a shared zero baseline. Customer scenarios and growth strategies are hypotheses. Operational records do not establish paying customers, revenue or retention.</p><p>Your experience is grounded in the existing CV variant. The eight-hour snapshot discussion examines the supplied premise; it does not certify continuous historical correctness. Recalled pipeline timings remain unverified.</p><h3>Navigation & notes</h3><p>Arrows / Page Up / Page Down navigate. S or P: Study. M or L: Meeting. C: emergency. N: notes. R: references. F: fullscreen. Shortcuts pause while typing or using a drawer. Escape closes drawers.</p><p>Notes are stored in this browser, for this origin. Use the same browser and file location to recover legacy notes. Original numeric notes are retained; unmatched or malformed entries remain recoverable in the export. Export before moving the file or changing browsers.</p><p class="drawer-note">Private preparation. Kept under the excluded CV directory; no public deployment is part of this revision.</p></dialog><div id="status" class="sr-only" role="status" aria-live="polite"></div><noscript>This guide needs JavaScript for slides and notes. Enable JavaScript in your browser to use the self-contained deck.</noscript>
+<script>
+const SLIDES = [
+  {
+    "id": "study-start",
+    "title": "Before the meeting: understand the business.",
+    "chapter": "Before you begin",
+    "body": "<p class=\"divider-intro\">20 short lessons. Five chapters. 30–45 minutes to prepare.</p><ol class=\"chapter-route\"><li><span>01</span> Understand Mike <small>5 minutes</small></li><li><span>02</span> Understand the customer <small>6 minutes</small></li><li><span>03</span> Understand the competition <small>7 minutes</small></li><li><span>04</span> Understand signal quality <small>8 minutes</small></li><li><span>05</span> Understand the evidence <small>7 minutes</small></li></ol><p class=\"route-note\">Read the takeaway and example, then try each chapter’s recall question. Use “Learn more” for depth. Keep the final 5–10 minutes for rehearsal.</p><p class=\"keys\">Press <kbd>→</kbd> to begin · <kbd>M</kbd> meeting · <kbd>C</kbd> emergency · <kbd>R</kbd> references</p>",
+    "tag": "01 / Study · private preparation",
+    "kind": "divider",
+    "section": "study"
+  },
+  {
+    "id": "mike-background",
+    "title": "Mike brings a financial-data commercial background.",
+    "chapter": "1 · Understand Mike",
+    "body": "<p class=\"lead\">Michael Brisley is Permutable’s <strong>Chief Commercial Officer</strong>. His appointment announcement describes more than 15 years in fintech, across data, analytics, research and trading solutions.</p><div class=\"tiles\"><div class=\"tile\"><b>Career background</b><p>Senior roles at Bloomberg, CreditSights, Macrobond and ISI Markets.</p></div><div class=\"tile\"><b>A useful starting point</b><p>Expect familiarity with how financial institutions evaluate data. Ask which lessons apply here.</p></div></div><details class=\"learn\"><summary>Learn more · context & sources</summary><div class=\"expanded\"><p>The announcement is dated 22 May 2025. It establishes his title and stated background. It does not tell us his interview agenda or which parts of your experience he will prioritise.</p><p class=\"source-links\"><a href=\"https://permutable.ai/permutable-welcomes-michael-brisely-chief-commerical-officer/\" target=\"_blank\" rel=\"noopener noreferrer\">Mike’s appointment · 22 May 2025 ↗</a></p></div></details>",
+    "tag": "Public fact · company appointment announcement",
+    "kind": "lesson",
+    "section": "study"
+  },
+  {
+    "id": "mike-remit",
+    "title": "His remit connects the product to adoption.",
+    "chapter": "1 · Understand Mike",
+    "body": "<p class=\"lead\">Permutable says Mike leads go-to-market initiatives and expands adoption among financial institutions and trading desks globally. That makes the customer’s path from interest to regular use a useful discussion frame.</p><div class=\"flow\"><div class=\"node\"><b>Go to market</b><span>Reach a relevant buyer</span></div><div class=\"node\"><b>Earn adoption</b><span>Fit a real decision</span></div><div class=\"node\"><b>Support use</b><span>Make delivery dependable</span></div></div><details class=\"learn\"><summary>Learn more · context & sources</summary><div class=\"expanded\"><p>The first sentence paraphrases his documented remit. The three-step diagram is our interpretation of the commercial work, not a published division of responsibilities. Pricing, account ownership, renewal targets and partnerships are topics to understand from Mike.</p><p class=\"source-links\"><a href=\"https://permutable.ai/permutable-welcomes-michael-brisely-chief-commerical-officer/\" target=\"_blank\" rel=\"noopener noreferrer\">Mike’s appointment · 22 May 2025 ↗</a></p></div></details>",
+    "tag": "Public remit · diagram is interpretation",
+    "kind": "lesson",
+    "section": "study"
+  },
+  {
+    "id": "mike-assessment",
+    "title": "He may test your judgement under commercial pressure.",
+    "chapter": "1 · Understand Mike",
+    "body": "<p class=\"lead\">An engineering leader must turn a promising request into a credible commitment. Mike may explore how you understand a customer, compare options and communicate a delivery decision. These are interview hypotheses.</p><div class=\"flow\"><div class=\"node\"><b>A request</b><span>“Can this be live next week?”</span></div><div class=\"node\"><b>Your judgement</b><span>Outcome, scope, evidence, risk</span></div><div class=\"node\"><b>A commitment</b><span>An owner, a date, a check</span></div></div><details class=\"learn\"><summary>Learn more · context & sources</summary><div class=\"expanded\"><p>Practise explaining a trade-off in business terms: which decision the customer needs to make, what a narrow delivery would enable, and what would justify a larger investment. Avoid promising architecture changes before understanding the constraint.</p></div></details>",
+    "tag": "Hypothesis · possible interview criteria",
+    "kind": "lesson",
+    "section": "study"
+  },
+  {
+    "id": "your-bridge",
+    "title": "Your bridge is making ML dependable in daily use.",
+    "chapter": "1 · Understand Mike",
+    "body": "<p class=\"lead\">Your CV describes leading Vortexa’s post-ingestion ML/data estate while staying close to implementation. Connect that work to a customer’s need for understandable outputs and predictable delivery.</p><div class=\"flow\"><div class=\"node\"><b>Production ML</b><span>Evaluation, replay, monitoring</span></div><div class=\"node\"><b>Hands-on leadership</b><span>Technical direction and coaching</span></div><div class=\"node\"><b>Commercial relevance</b><span>Clear limits and credible plans</span></div></div><details class=\"recall\"><summary>Recall · What connects your work to Mike’s remit?</summary><div class=\"expanded\">You help turn complex ML into dependable data products and clear delivery commitments. Explain that contribution without claiming ownership of accounts, revenue or renewals.</div></details><details class=\"learn\"><summary>Learn more · context & sources</summary><div class=\"expanded\"><p>Grounding: the existing Permutable CV variant, Vortexa experience section. Use model/data versioning, evaluation gates, monitoring and stakeholder workshops as examples. These support engineering leadership and collaboration; they do not establish commercial ownership or a quantified revenue effect.</p></div></details>",
+    "tag": "Your experience · CV-grounded",
+    "kind": "lesson",
+    "section": "study"
+  },
+  {
+    "id": "customer-systematic",
+    "title": "A systematic researcher needs a fair historical test.",
+    "chapter": "2 · Understand the customer",
+    "body": "<p class=\"lead\">Imagine a researcher testing whether a news signal helps predict tomorrow’s returns. A <strong>backtest</strong> applies rules to historical data; it is only useful if those inputs were available before each simulated decision.</p><div class=\"flow\"><div class=\"node\"><b>Question</b><span>Does this add useful information?</span></div><div class=\"node\"><b>Test</b><span>Freeze data, rules and costs</span></div><div class=\"node\"><b>Decision</b><span>Trial in a live workflow</span></div></div><details class=\"learn\"><summary>Learn more · context & sources</summary><div class=\"expanded\"><p><strong>Alpha</strong> is return beyond a chosen benchmark or risk model; a good-looking backtest is not proof of durable alpha. <strong>IC</strong> (information coefficient) measures correlation between a signal and subsequent returns, often using ranks. A high IC does not by itself establish profitable trading after costs.</p><p>Ask about historical timestamps, revisions, identifiers, delivery and an agreed evaluation protocol. This is a hypothetical customer, not evidence of a Permutable account.</p></div></details>",
+    "tag": "Illustrative example",
+    "kind": "lesson",
+    "section": "study"
+  },
+  {
+    "id": "customer-discretionary",
+    "title": "A discretionary trader needs an explanation to investigate.",
+    "chapter": "2 · Understand the customer",
+    "body": "<p class=\"lead\">Imagine a trader seeing a sudden change in an oil-market narrative. They want to understand what happened, inspect the evidence and decide whether it changes their view. A score alone may leave that work unfinished.</p><div class=\"flow\"><div class=\"node\"><b>Alert</b><span>A narrative changed</span></div><div class=\"node\"><b>Evidence</b><span>Sources, timing, uncertainty</span></div><div class=\"node\"><b>Judgement</b><span>Investigate, act or wait</span></div></div><details class=\"learn\"><summary>Learn more · context & sources</summary><div class=\"expanded\"><p>“Discretionary” means a person uses judgement to make the decision. Useful engineering work could include a traceable alert, readable source links, clear revisions and a way to inspect the relevant event. Whether this saves time or changes decisions needs observation with the intended user.</p></div></details>",
+    "tag": "Illustrative example",
+    "kind": "lesson",
+    "section": "study"
+  },
+  {
+    "id": "customer-energy",
+    "title": "An energy desk asks what a development changes.",
+    "chapter": "2 · Understand the customer",
+    "body": "<p class=\"lead\">Imagine a desk assessing whether sanctions could disrupt a supply route. The question is exposure: which assets, locations and time horizons matter? The signal must connect a development to the desk’s decision.</p><div class=\"flow\"><div class=\"node\"><b>Development</b><span>A possible supply restriction</span></div><div class=\"node\"><b>Exposure</b><span>Relevant routes and positions</span></div><div class=\"node\"><b>Decision</b><span>Review a hedge or scenario</span></div></div><details class=\"learn\"><summary>Learn more · context & sources</summary><div class=\"expanded\"><p>A desk may combine news with physical flows, prices, inventories and its own positions. This illustration is not a forecast or trading recommendation. The engineering question is which entity mappings, coverage, timestamps and explanations make the information useful within that workflow.</p><p>The user, budget holder and integration owner may be different people. Establish all three before interpreting product feedback.</p></div></details>",
+    "tag": "Illustrative example",
+    "kind": "lesson",
+    "section": "study"
+  },
+  {
+    "id": "customer-journey",
+    "title": "A successful trial must survive integration and daily use.",
+    "chapter": "2 · Understand the customer",
+    "body": "<p class=\"lead\">A persuasive evaluation is only one step. The researcher may be the user, a desk head the buyer, and a data team the integration owner. Each needs a different reason to proceed.</p><div class=\"flow\"><div class=\"node\"><b>Evaluate</b><span>Agree a useful test</span></div><div class=\"node\"><b>Integrate</b><span>Fit data and support needs</span></div><div class=\"node\"><b>Renew</b><span>Show continuing usefulness</span></div></div><details class=\"recall\"><summary>Recall · Which need changes between a trial and renewal?</summary><div class=\"expanded\">The trial needs credible evidence of value. Integration needs stable interfaces and ownership. Renewal needs continued usefulness and dependable service; ask what actually drives each here.</div></details><details class=\"learn\"><summary>Learn more · context & sources</summary><div class=\"expanded\"><p>A trial may stall because its success criteria are vague. Integration may stall on entitlements, identifiers, schema changes or support capacity. Renewal may depend on workflow use, research value or a budget decision. These are possibilities to investigate, not claims about Permutable’s sales funnel.</p></div></details>",
+    "tag": "Hypothesis · customer journey",
+    "kind": "lesson",
+    "section": "study"
+  },
+  {
+    "id": "competition-ravenpack",
+    "title": "RavenPack already offers much of the expected toolkit.",
+    "chapter": "3 · Understand the competition",
+    "body": "<p class=\"lead\">RavenPack dates its sentiment-analysis work to 2003. It advertises historical and real-time feeds with entity, event, relevance and novelty analytics. These are capabilities to compare carefully in an evaluation.</p><div class=\"tiles\"><div class=\"tile\"><b>Identify</b><p>Which company or event? How relevant?</p></div><div class=\"tile\"><b>Interpret</b><p>Sentiment, novelty and temporal scoring.</p></div><div class=\"tile\"><b>Research</b><p>Historical feeds alongside live delivery.</p></div></div><details class=\"learn\"><summary>Learn more · context & sources</summary><div class=\"expanded\"><p>Novelty helps distinguish new information from repeated reporting. Its availability at an incumbent means “we deduplicate” or “we identify entities” does not establish a unique advantage. Compare quality, coverage, history, workflow fit and economics in the intended use case.</p><p>This is RavenPack’s product description, not an independent accuracy assessment.</p><p class=\"source-links\"><a href=\"https://www.ravenpack.com/products/edge/data/news-analytics\" target=\"_blank\" rel=\"noopener noreferrer\">RavenPack · News Analytics ↗</a></p></div></details>",
+    "tag": "Vendor claims · RavenPack product documentation",
+    "kind": "lesson",
+    "section": "study"
+  },
+  {
+    "id": "competition-alternatives",
+    "title": "The alternative may already be inside the customer’s workflow.",
+    "chapter": "3 · Understand the competition",
+    "body": "<p class=\"lead\">Bloomberg’s Terminal offers news tools; LSEG advertises news analytics and historical data. A customer might also combine licensed feeds with internal research. The relevant comparison depends on what they already use.</p><div class=\"tiles\"><div class=\"tile\"><b>Bloomberg / LSEG</b><p>Existing news, analytics and workflows.</p></div><div class=\"tile\"><b>Internal development</b><p>Tailored logic; ongoing engineering cost.</p></div><div class=\"tile\"><b>The evaluation question</b><p>Add a capability or replace a provider?</p></div></div><details class=\"learn\"><summary>Learn more · context & sources</summary><div class=\"expanded\"><p>Bloomberg advertises news-volume and sentiment tools. LSEG advertises sentiment, relevance and novelty analytics, archives and machine-readable news. These products need not be direct substitutes for every Permutable dataset.</p><p>Internal development is a strategic alternative, not a named customer fact. It can offer control while requiring licensed inputs, maintenance, evaluation and operational ownership. Ask Mike which alternatives actually appear in evaluations.</p><p class=\"source-links\"><a href=\"https://professional.bloomberg.com/products/bloomberg-terminal/news/\" target=\"_blank\" rel=\"noopener noreferrer\">Bloomberg · Terminal news ↗</a> · <a href=\"https://www.lseg.com/en/data-analytics/financial-news-service/text-analytics\" target=\"_blank\" rel=\"noopener noreferrer\">LSEG · Text Analytics ↗</a></p></div></details>",
+    "tag": "Vendor claims · internal-build trade-off is a hypothesis",
+    "kind": "lesson",
+    "section": "study"
+  },
+  {
+    "id": "competition-permutable",
+    "title": "Separate the advertised product from the proposed future.",
+    "chapter": "3 · Understand the competition",
+    "body": "<p class=\"lead\">Permutable advertises macro, commodity and geopolitical intelligence feeds with source-linked evidence. Its vision page distinguishes the production intelligence layer from proposed simulation and a longer-term world model.</p><div class=\"tiles\"><div class=\"tile\"><b>Today · advertised</b><p>Structured signals, event records and research datasets; API / Excel / files.</p></div><div class=\"tile\"><b>Next · proposed</b><p>Agentic simulation of economic interactions.</p></div><div class=\"tile\"><b>Ultimately · vision</b><p>A continuously evolving world model.</p></div></div><details class=\"learn\"><summary>Learn more · context & sources</summary><div class=\"expanded\"><p>The Intelligence Engine page describes historical and live data delivery. Its claims about point-in-time construction and source traceability require evaluation. Model/version details and revision handling depend on the dataset and deployment.</p><p>The Vision page describes simulation as proposed and the living world model as long-term. A roadmap is evidence of direction, not evidence that a customer can use those capabilities today.</p><p class=\"source-links\"><a href=\"https://permutable.ai/intelligence-engine/\" target=\"_blank\" rel=\"noopener noreferrer\">Permutable · Intelligence Engine ↗</a> · <a href=\"https://permutable.ai/vision/\" target=\"_blank\" rel=\"noopener noreferrer\">Permutable · Vision ↗</a></p></div></details>",
+    "tag": "Vendor claims · production offering / proposal / vision",
+    "kind": "lesson",
+    "section": "study"
+  },
+  {
+    "id": "competition-strategies",
+    "title": "Each possible growth route creates different engineering work.",
+    "chapter": "3 · Understand the competition",
+    "body": "<p class=\"lead\">Three plausible strategies are worth testing with Mike. A specialist dataset, an analyst workflow and distribution partnerships can each create value, but they require different investments and trade-offs.</p><div class=\"tiles\"><div class=\"tile\"><b>Specialist dataset</b><p>Benefit: a focused advantage.<br>Cost: deep coverage and evaluation.</p></div><div class=\"tile\"><b>Analyst workflow</b><p>Benefit: routine use.<br>Cost: UX, support and integration.</p></div><div class=\"tile\"><b>Distribution partners</b><p>Benefit: broader reach.<br>Cost: shared economics and less control.</p></div></div><details class=\"recall\"><summary>Recall · Why does the market strategy change your priorities?</summary><div class=\"expanded\">A dataset needs defensible coverage and history; a workflow needs usability and adoption; distribution needs stable integration and partner operations. Confirm the chosen route before proposing a roadmap.</div></details><details class=\"learn\"><summary>Learn more · context & sources</summary><div class=\"expanded\"><p>These are strategic hypotheses, not a report of Permutable’s revenue model or current customer base. Ask where demand is strongest, which route has repeatable evidence, and what engineering constraint most limits it. The routes can coexist, but trying to build all three at once has a capacity cost.</p></div></details>",
+    "tag": "Hypotheses · benefits and costs to test with Mike",
+    "kind": "lesson",
+    "section": "study"
+  },
+  {
+    "id": "quality-shock",
+    "title": "One announcement can produce many different signals.",
+    "chapter": "4 · Understand signal quality",
+    "body": "<p class=\"lead\">Suppose a sanctions announcement arrives at 10:00. Early reporting suggests a broad restriction; later detail narrows its scope. A useful system tracks what changed, what it knew and what it told the customer.</p><div class=\"flow\"><div class=\"node\"><b>10:00 · announcement</b><span>Initial interpretation</span></div><div class=\"node\"><b>10:08 · reporting</b><span>Copies and new evidence</span></div><div class=\"node\"><b>10:20 · clarification</b><span>Revise affected signals</span></div></div><details class=\"learn\"><summary>Learn more · context & sources</summary><div class=\"expanded\"><p>All times and events in this example are invented. The engineering questions are practical: can we connect articles to the same event, inspect evidence, update the interpretation and communicate a revision? The right publication policy depends on the customer’s decision and tolerance for uncertainty.</p></div></details>",
+    "tag": "Hypothetical sanctions example",
+    "kind": "lesson",
+    "section": "study"
+  },
+  {
+    "id": "quality-evidence",
+    "title": "Ten copies are not ten independent confirmations.",
+    "chapter": "4 · Understand signal quality",
+    "body": "<p class=\"lead\">If ten sites repeat the same wire story, they may add reach without adding evidence. A separate report may add a new fact. Preserve provenance so the model can distinguish repetition, corroboration and correction.</p><div class=\"evidence-map\"><div><b>One original report</b><span>↙ copy &nbsp; ↓ copy &nbsp; ↘ copy</span><strong>One shared claim</strong></div><div><b>Independent document</b><span>New origin + relevant detail</span><strong>Potential new evidence</strong></div></div><details class=\"learn\"><summary>Learn more · context & sources</summary><div class=\"expanded\"><p>Independence is not a count of domain names. Check whether articles cite the same source and whether the new material changes the claim. Even independent confirmation does not mechanically increase predictive value. A correction may require retracting a prior contribution instead of adding another score.</p></div></details>",
+    "tag": "Hypothetical example · evidence quality",
+    "kind": "lesson",
+    "section": "study"
+  },
+  {
+    "id": "quality-history",
+    "title": "A saved snapshot proves a state at that moment.",
+    "chapter": "4 · Understand signal quality",
+    "body": "<p class=\"lead\">Immutable eight-hour snapshots preserve recorded states at those times. They do not establish what was available between snapshots, which model existed historically, or whether a backtest accidentally used future information.</p><div class=\"history-map\"><div class=\"snapshot\"><b>00:00</b><span>Saved state A</span></div><div class=\"gap\"><b>05:00 decision</b><span>What was available then?</span><span class=\"dotted\">Unknown without more records</span></div><div class=\"snapshot\"><b>08:00</b><span>Saved state B</span></div></div><p class=\"diagram-caption\">Using state B at 05:00 may introduce look-ahead bias.</p><details class=\"learn\"><summary>Learn more · context & sources</summary><div class=\"expanded\"><p>This examines the supplied eight-hour-snapshot premise; it does not certify a company’s historical dataset. To replay a decision, retain source publication and receipt times, signal publication times, original versions and corrections, plus model/version provenance.</p><p>Distinguish a historical reconstruction made today from a signal actually available then. Even a perfectly preserved output snapshot does not establish the historical availability of the model or every input. “Immutable” means the saved object stays unchanged, not that its contents are free of leakage.</p></div></details>",
+    "tag": "Historical-data caveat · supplied snapshot premise",
+    "kind": "lesson",
+    "section": "study"
+  },
+  {
+    "id": "quality-clocks",
+    "title": "Define which clock must improve for the customer.",
+    "chapter": "4 · Understand signal quality",
+    "body": "<p class=\"lead\">A four-hour evidence window can be recomputed every minute. Processing can take seconds while publication remains hourly. The commercial question is when useful information reaches someone who can still act on it.</p><div class=\"clock-grid\"><div><b>Evidence window</b><span>How much history enters?</span></div><div><b>Processing latency</b><span>How long does computation take?</span></div><div><b>Publication cadence</b><span>How often is output released?</span></div><div><b>Decision time</b><span>When does the user need it?</span></div></div><details class=\"recall\"><summary>Recall · Does a five-minute pipeline imply five-minute value?</summary><div class=\"expanded\">No. Identify the customer deadline, source and delivery delays, publication policy and required evidence. Measure the path that prevents a useful decision before selecting an engineering change.</div></details><details class=\"learn\"><summary>Learn more · context & sources</summary><div class=\"expanded\"><p><strong>Signal decay</strong> is the loss of predictive usefulness as information gets older. Its shape depends on the signal, market and holding period. A shorter window may discard useful evidence; faster processing may help only if it changes availability before a real decision.</p><p><strong>Interview recollection — confirm:</strong> the earlier technical discussion described approximately 25 minutes of pipeline time and a possible five-minute target. This is neither a measured SLA nor proof of commercial value. Compare targeted tuning, shorter batches or streaming only after measuring the bottleneck.</p></div></details>",
+    "tag": "Conceptual distinction · recalled timings are unverified",
+    "kind": "lesson",
+    "section": "study"
+  },
+  {
+    "id": "evidence-experiment",
+    "title": "RavenPack varied the evidence window while holding the strategy fixed.",
+    "chapter": "5 · Understand the evidence",
+    "body": "<p class=\"lead\">The public summary describes a US-equity experiment: the same signal and portfolio rules, with different news lookbacks. It tests which recent information enters the decision, rather than how quickly a pipeline runs.</p><div class=\"flow\"><div class=\"node\"><b>Hold fixed</b><span>Signal and portfolio construction</span></div><div class=\"node\"><b>Vary</b><span>Previous-cutoff interval; 6 / 4 / 2 / 1 hours</span></div><div class=\"node\"><b>Compare</b><span>Risk-adjusted strategy results</span></div></div><details class=\"learn\"><summary>Learn more · context & sources</summary><div class=\"expanded\"><p>The reported sample is January 2010–August 2026, using a point-in-time universe of the 1,000 largest US stocks and decisions before open and close. The baseline uses eligible news since the preceding cutoff; it is not a fixed 24-hour window.</p><p>Only the public research summary was reviewed. The gated paper, underlying data and full implementation were not reviewed or independently reproduced.</p><p class=\"source-links\"><a href=\"https://www.ravenpack.com/blog/the-timing-edge-new-research-unlocks-stronger-alpha-from-news-sentiment\" target=\"_blank\" rel=\"noopener noreferrer\">RavenPack · public timing research summary ↗</a></p></div></details>",
+    "tag": "Vendor research · public summary only",
+    "kind": "lesson",
+    "section": "study"
+  },
+  {
+    "id": "evidence-results",
+    "title": "Four hours beat the baseline; one hour lost breadth.",
+    "chapter": "5 · Understand the evidence",
+    "body": "<p class=\"lead\"><strong>IR</strong> (information ratio) expresses return relative to its variability, under the study’s convention. RavenPack reports higher post-2020 IR with a four-hour window. The shortest window was not the strongest portfolio result.</p><figure class=\"ir-chart\" aria-label=\"Reported IR from 2020 onward: previous-cutoff interval 0.93, four-hour window 1.60. Common scale zero to two.\"><figcaption>Reported IR · from 2020 onward</figcaption><div class=\"bar-row\"><span>Previous cutoff</span><div class=\"bar-track\"><i class=\"bar baseline\" style=\"width:46.5%\"></i></div><b>0.93</b></div><div class=\"bar-row\"><span>Four hours</span><div class=\"bar-track\"><i class=\"bar\" style=\"width:80%\"></i></div><b>1.60</b></div><div class=\"chart-axis\"><span>0</span><span>1.0</span><span>2.0</span></div></figure><p class=\"diagram-caption\">Across the full sample, one hour left about 45 stocks on average: less breadth can offset a stronger predictive correlation.</p><details class=\"learn\"><summary>Learn more · context & sources</summary><div class=\"expanded\"><p>The one-hour explanation concerns the full sample; its IR is 1.82 versus 2.09 for four hours. Do not compare that 1.82 directly with the post-2020 bars. Improvements mainly concerned open-to-close returns.</p><p>This vendor study does not prove a Permutable advantage, commodity-market performance, or that faster publication always helps. The full paper was not reviewed; implementation, costs and robustness need scrutiny before relying on the result.</p><p class=\"source-links\"><a href=\"https://www.ravenpack.com/blog/the-timing-edge-new-research-unlocks-stronger-alpha-from-news-sentiment\" target=\"_blank\" rel=\"noopener noreferrer\">RavenPack · public timing research summary ↗</a></p></div></details>",
+    "tag": "Vendor research · periods clearly separated",
+    "kind": "lesson",
+    "section": "study"
+  },
+  {
+    "id": "evidence-advantage",
+    "title": "A competitive advantage needs a relevant comparison.",
+    "chapter": "5 · Understand the evidence",
+    "body": "<p class=\"lead\">Choose one customer decision and an agreed baseline. Evaluate useful coverage, historical integrity and live delivery under the same conditions. Evidence of better research or workflow outcomes would make the commercial story stronger.</p><div class=\"flow\"><div class=\"node\"><b>Agree the test</b><span>Use case, baseline, success criteria</span></div><div class=\"node\"><b>Measure fairly</b><span>Same cutoff, costs and revisions</span></div><div class=\"node\"><b>Observe use</b><span>Integration, utility and repeatability</span></div></div><details class=\"learn\"><summary>Learn more · context & sources</summary><div class=\"expanded\"><p>For a systematic customer, compare out-of-sample signal usefulness and robustness after realistic costs. For an analyst, observe time to inspect evidence and complete the intended task. For an energy desk, test relevant event coverage and exposure mapping.</p><p>Operational records can show recorded activity or system behaviour. They do not establish paying customers, revenue, retention or a causal business benefit. This deck contains no customer-level operational records.</p></div></details>",
+    "tag": "Proposed evaluation · no commercial outcome assumed",
+    "kind": "lesson",
+    "section": "study"
+  },
+  {
+    "id": "evidence-recall",
+    "title": "Start with the decision, then choose the engineering priority.",
+    "chapter": "5 · Understand the evidence",
+    "body": "<p class=\"lead\">An engineering roadmap becomes easier to defend when every improvement serves a specific user decision. Test your recall by connecting the three customer examples to the first thing you would investigate.</p><div class=\"tiles\"><div class=\"tile\"><b>Researcher</b><p>Can this signal survive a fair test?</p></div><div class=\"tile\"><b>Trader</b><p>Can I understand what changed?</p></div><div class=\"tile\"><b>Energy desk</b><p>Does this affect my exposure?</p></div></div><details class=\"recall\"><summary>Recall · What would you prioritise for each customer—and why?</summary><div class=\"expanded\">Researcher: historical availability, versioning and reproducible evaluation. Trader: timely, source-linked explanations and revisions. Energy desk: relevant coverage, entity mapping and decision deadlines. Confirm the constraint with the user before choosing a solution.</div></details><details class=\"learn\"><summary>Learn more · context & sources</summary><div class=\"expanded\"><p>Final rehearsal: explain Mike’s remit in one sentence; give one incumbent capability; distinguish a window from latency; explain why snapshots alone do not remove leakage; connect one Vortexa example to a customer need.</p><p>Then switch to Meeting. Pick two or three questions to follow naturally, leave space for Mike’s agenda, and use the emergency card if you lose your place.</p></div></details>",
+    "tag": "Chapter recall · apply the lessons",
+    "kind": "lesson",
+    "section": "study"
+  },
+  {
+    "id": "meeting-start",
+    "title": "During the meeting: have a useful conversation.",
+    "chapter": "Conversation guide",
+    "body": "<p class=\"divider-intro\">30 minutes. A private aid beside the call.</p><div class=\"meeting-route\"><div><b>3 min</b><span>Open and hear his agenda</span></div><div><b>12 min</b><span>Follow two or three useful threads</span></div><div><b>10 min</b><span>Leave room for his questions</span></div><div><b>5 min</b><span>Outcomes and close</span></div></div><p class=\"route-note\">The eight cards are options, not a script to deliver. Ask, listen, reflect one point, then connect relevant experience. Let Mike lead somewhere useful.</p><p class=\"keys\"><kbd>→</kbd> opening card · <kbd>C</kbd> emergency · <kbd>N</kbd> notes · <kbd>S</kbd> study</p>",
+    "tag": "02 / Meeting · flexible timing",
+    "kind": "divider",
+    "section": "meeting"
+  },
+  {
+    "id": "meeting-open",
+    "title": "Open naturally. Then give him room.",
+    "chapter": "Discussion cards",
+    "body": "<div class=\"question-hero\">“What would be most useful for us to cover today?”</div><p class=\"spoken\">“Good to meet you, Mike. I’ve enjoyed learning about the engineering side. I’m keen to understand the business from your perspective.”</p><div class=\"conversation-grid\"><div class=\"listen\"><span class=\"label\">Listen for</span><p>His priorities and what he wants to understand about you.</p></div><div class=\"experience\"><span class=\"label\">My experience</span><p>I lead production ML and data engineering at Vortexa, combining technical direction, delivery and people leadership.</p></div></div>",
+    "tag": "Private prompt · adapt to Mike’s agenda",
+    "kind": "card",
+    "section": "meeting"
+  },
+  {
+    "id": "meeting-customer",
+    "title": "Find the customer and the decision.",
+    "chapter": "Discussion cards",
+    "body": "<div class=\"question-hero\">“Where are you seeing the strongest demand today?”</div><div class=\"followups\"><span class=\"label\">If useful</span><ul><li>Who uses the product, and who makes the buying decision?</li><li>What decision are they trying to improve?</li></ul></div><div class=\"conversation-grid\"><div class=\"listen\"><span class=\"label\">Listen for</span><p>A concrete workflow, user and buyer; the difference between an evaluation and regular use.</p></div><div class=\"experience\"><span class=\"label\">My experience</span><p>I work across Product, SMEs, data science and engineering to turn ambiguous needs into deliverable work.</p></div></div>",
+    "tag": "Private prompt · adapt to Mike’s agenda",
+    "kind": "card",
+    "section": "meeting"
+  },
+  {
+    "id": "meeting-adoption",
+    "title": "Understand what turns interest into use.",
+    "chapter": "Discussion cards",
+    "body": "<div class=\"question-hero\">“What most often determines whether a trial becomes regular use?”</div><div class=\"followups\"><span class=\"label\">If useful</span><ul><li>Where does integration tend to slow down?</li><li>What makes customers continue or expand their use?</li></ul></div><div class=\"conversation-grid\"><div class=\"listen\"><span class=\"label\">Listen for</span><p>An agreed success test, integration friction, support expectations and evidence of continuing value.</p></div><div class=\"experience\"><span class=\"label\">My experience</span><p>Data contracts, replay, monitoring and stakeholder clarity are practical parts of my production work.</p></div></div>",
+    "tag": "Private prompt · adapt to Mike’s agenda",
+    "kind": "card",
+    "section": "meeting"
+  },
+  {
+    "id": "meeting-differentiation",
+    "title": "Let him define the comparison.",
+    "chapter": "Discussion cards",
+    "body": "<div class=\"question-hero\">“Which alternatives come up most often in customer evaluations?”</div><div class=\"followups\"><span class=\"label\">If useful</span><ul><li>Why would a client add Permutable alongside an existing provider?</li><li>What evidence makes the difference in that decision?</li></ul></div><div class=\"conversation-grid\"><div class=\"listen\"><span class=\"label\">Listen for</span><p>A specific use case and proof; whether the alternative is RavenPack, a broader platform or internal work.</p></div><div class=\"experience\"><span class=\"label\">My experience</span><p>I translate model-quality disputes into measurable workstreams with analysts and engineers.</p></div></div>",
+    "tag": "Private prompt · adapt to Mike’s agenda",
+    "kind": "card",
+    "section": "meeting"
+  },
+  {
+    "id": "meeting-value",
+    "title": "Connect speed and quality to a real deadline.",
+    "chapter": "Discussion cards",
+    "body": "<div class=\"question-hero\">“Whose decision would improve if useful information arrived sooner?”</div><div class=\"followups\"><span class=\"label\">If useful</span><ul><li>What must remain trustworthy as delivery gets faster?</li><li>Would a news-shock example help make that concrete?</li></ul></div><div class=\"conversation-grid\"><div class=\"listen\"><span class=\"label\">Listen for</span><p>The decision deadline, evidence needed, publication policy and tolerance for revisions.</p></div><div class=\"experience\"><span class=\"label\">My experience</span><p>I would measure the customer-visible delay and quality constraint before choosing a change to the pipeline.</p></div></div>",
+    "tag": "Private prompt · adapt to Mike’s agenda",
+    "kind": "card",
+    "section": "meeting"
+  },
+  {
+    "id": "meeting-working",
+    "title": "Show how you turn pressure into a practical plan.",
+    "chapter": "Discussion cards",
+    "body": "<div class=\"question-hero\">“When an urgent customer request arrives, how do commercial and engineering agree the commitment?”</div><div class=\"followups\"><span class=\"label\">If useful</span><ul><li>Where would you most value an engineering partner’s judgement?</li></ul></div><div class=\"response\"><span class=\"label\">My approach to an urgent request</span><p>Clarify the customer outcome and deadline. Compare a narrow delivery with the broader change. Agree scope, owner and a check-in.</p></div><div class=\"conversation-grid\"><div class=\"listen\"><span class=\"label\">Listen for</span><p>Shared context, clear ownership, honest trade-offs and a workable escalation path.</p></div><div class=\"experience\"><span class=\"label\">My experience</span><p>At Vortexa, I have brought Product, SMEs and engineers together to turn model-quality concerns into measurable work.</p></div></div>",
+    "tag": "Private prompt · adapt to Mike’s agenda",
+    "kind": "card",
+    "section": "meeting"
+  },
+  {
+    "id": "meeting-outcomes",
+    "title": "Close on outcomes and the working relationship.",
+    "chapter": "Discussion cards",
+    "body": "<div class=\"question-hero\">“Six months in, what would you most want this engineering leader to have made possible?”</div><div class=\"followups\"><span class=\"label\">If useful</span><ul><li>What would a strong working relationship between us look like?</li><li>Is there anything in my background you would like to explore further?</li></ul></div><div class=\"conversation-grid\"><div class=\"listen\"><span class=\"label\">Listen for</span><p>Two or three concrete priorities, the first constraint to remove and how decisions will be shared.</p></div><div class=\"experience\"><span class=\"label\">My experience</span><p>I combine technical direction with delivery and team development; I would align the first priorities with the team and business.</p></div></div>",
+    "tag": "Private prompt · adapt to Mike’s agenda",
+    "kind": "card",
+    "section": "meeting"
+  },
+  {
+    "id": "meeting-emergency",
+    "title": "Pause. Choose one useful question.",
+    "chapter": "Discussion cards",
+    "body": "<div class=\"question-hero\">“Could you give me an example from a recent customer conversation?”</div><div class=\"emergency-grid\"><div class=\"anchors\"><span class=\"label\">Five anchors</span><ol><li>Where is demand strongest?</li><li>What turns trials into regular use?</li><li>Why add or replace a provider?</li><li>Which engineering constraint matters?</li><li>What should change in six months?</li></ol></div><div class=\"short-answers\"><span class=\"label\">If he asks me</span><p><b>Market knowledge:</b> I know energy-data engineering; I’d deepen market judgement with your specialists.</p><p><b>Hands-on:</b> I stay close to implementation while building team ownership.</p><p><b>Growth:</b> Find the engineering constraint on adoption, then measure whether removing it helps.</p><p><b>Motivation:</b> I’m interested in making strong ML useful and dependable as a team grows.</p></div></div><div class=\"conversation-grid\"><div class=\"listen\"><span class=\"label\">Listen for</span><p>A decision, a constraint and the evidence that matters.</p></div><div class=\"experience\"><span class=\"label\">My experience</span><p>Production ML, technical judgement and hands-on team leadership.</p></div></div>",
+    "tag": "Private prompt · adapt to Mike’s agenda",
+    "kind": "card",
+    "section": "meeting"
+  }
+];
+// Stable topic IDs keep personal notes independent of deck order.
+const NOTE_KEY = 'permutable-mike-notes-v2';
+const LEGACY_NOTE_KEY = 'permutable-mike-notes-v20261016';
+const LEGACY_TOPICS = [
+  ['study-start', 'Your objective today'],
+  ['mike-background', 'Who Mike is'],
+  ['mike-assessment', 'What he will likely judge'],
+  ['competition-permutable', 'Permutable in one picture'],
+  ['customer-systematic', 'Who buys? Who uses?'],
+  ['customer-journey', 'Why a customer pays'],
+  ['customer-journey', 'The customer-critical path'],
+  [null, 'The market vocabulary'],
+  ['competition-alternatives', 'Competitive landscape'],
+  ['competition-ravenpack', 'RavenPack is formidable'],
+  ['evidence-experiment', 'RavenPack’s September 2026 research'],
+  ['quality-clocks', 'Three kinds of “speed”'],
+  ['quality-shock', 'News shock → signal quality'],
+  ['evidence-advantage', 'Where Permutable might win'],
+  ['competition-strategies', 'Roadmap & route to market'],
+  ['your-bridge', 'What you bring from Vortexa'],
+  ['meeting-emergency', 'Likely questions from Mike'],
+  ['meeting-start', 'Before the call'],
+  ['meeting-start', 'Switch to LIVE mode'],
+  ['meeting-customer', '0–8 minutes · Who buys?'],
+  ['meeting-differentiation', '8–16 minutes · Why Permutable?'],
+  ['meeting-value', '16–24 minutes · Commercial ↔ engineering'],
+  ['meeting-outcomes', '24–30 minutes · An executive close'],
+  ['meeting-emergency', 'Quick-reference card'],
+  [null, 'Sources & reading']
+];
+const slideIndex = new Map(SLIDES.map((slide, index) => [slide.id, index]));
+const stage = document.getElementById('stage');
+const selector = document.getElementById('slideSelect');
+const notesPane = document.getElementById('notesPane');
+const referencesPane = document.getElementById('referencesPane');
+const textarea = document.getElementById('notes');
+const storageStatus = document.getElementById('storageStatus');
+const status = document.getElementById('status');
+let idx = 0;
+let noteState = { version: 2, notes: Object.create(null), recovered: Object.create(null), legacyImported: false };
+let storageWritable = true;
+let storageWarning = '';
+let unsavedNotes = false;
+
+function isRecord(value) {
+  return value !== null && typeof value === 'object' && !Array.isArray(value);
+}
+function noteText(value) {
+  return typeof value === 'string' ? value : JSON.stringify(value, null, 2);
+}
+function recoverNote(label, value) {
+  let key = label;
+  let suffix = 2;
+  while (Object.prototype.hasOwnProperty.call(noteState.recovered, key)) key = `${label} (${suffix++})`;
+  noteState.recovered[key] = noteText(value);
+}
+function announce(message) {
+  status.textContent = `${message}${storageWarning ? ` ${storageWarning}` : ''}`;
+}
+function updateStorageStatus() {
+  const count = Object.keys(noteState.recovered).length;
+  const recovery = count ? ` ${count} recovered ${count === 1 ? 'entry is' : 'entries are'} included in every export.` : '';
+  storageStatus.textContent = (storageWarning || (unsavedNotes ? 'Changes are not saved. Export your notes before closing this tab.' : 'Notes are saved locally in this browser.')) + recovery;
+  storageStatus.dataset.state = storageWarning || unsavedNotes ? 'warning' : 'saved';
+}
+function saveNotes() {
+  if (!storageWritable) {
+    unsavedNotes = true;
+    updateStorageStatus();
+    return false;
+  }
+  try {
+    localStorage.setItem(NOTE_KEY, JSON.stringify(noteState));
+    unsavedNotes = false;
+    storageWarning = '';
+    updateStorageStatus();
+    return true;
+  } catch (error) {
+    unsavedNotes = true;
+    storageWarning = 'Notes are not saved in this browser. Keep this tab open and export your notes before leaving.';
+    updateStorageStatus();
+    announce('Local storage is unavailable.');
+    return false;
+  }
+}
+function loadAndMigrateNotes() {
+  let raw = null;
+  let legacyRaw = null;
+  try {
+    raw = localStorage.getItem(NOTE_KEY);
+    legacyRaw = localStorage.getItem(LEGACY_NOTE_KEY);
+  } catch (error) {
+    storageWritable = false;
+    storageWarning = 'Browser storage cannot be read. New notes remain in this tab only; export them before leaving.';
+  }
+  if (raw !== null) {
+    try {
+      const saved = JSON.parse(raw);
+      if (!isRecord(saved) || saved.version !== 2 || !isRecord(saved.notes) || (saved.recovered !== undefined && !isRecord(saved.recovered))) throw new Error('Unrecognised notes format');
+      for (const [id, value] of Object.entries(saved.notes)) {
+        if (slideIndex.has(id) && typeof value === 'string') noteState.notes[id] = value;
+        else recoverNote(`Unmatched saved topic: ${id}`, value);
+      }
+      for (const [label, value] of Object.entries(saved.recovered || {})) recoverNote(label, value);
+      noteState.legacyImported = saved.legacyImported === true;
+    } catch (error) {
+      recoverNote('Original v2 storage — requires recovery (verbatim)', raw);
+      storageWritable = false;
+      storageWarning = 'Existing notes have an unreadable format and have not been overwritten. Current edits remain in this tab; export to recover both.';
+    }
+  }
+  if (!noteState.legacyImported) {
+    if (legacyRaw !== null) {
+      try {
+        const legacy = JSON.parse(legacyRaw);
+        if (legacy === null || typeof legacy !== 'object') throw new Error('Unrecognised legacy notes');
+        for (const [key, value] of Object.entries(legacy)) {
+          const text = noteText(value);
+          if (text === '') continue;
+          const entry = /^(0|[1-9]\d*)$/.test(key) ? LEGACY_TOPICS[Number(key)] : null;
+          if (entry && entry[0]) {
+            const [id, title] = entry;
+            const migrated = `[From original slide ${Number(key) + 1}: ${title}]\n${text}`;
+            noteState.notes[id] = [noteState.notes[id], migrated].filter(Boolean).join('\n\n');
+          } else {
+            recoverNote(entry ? `Original slide ${Number(key) + 1}: ${entry[1]}` : `Unmatched original note: ${key}`, text);
+          }
+        }
+      } catch (error) {
+        recoverNote('Original legacy storage — requires recovery (verbatim)', legacyRaw);
+      }
+    }
+    noteState.legacyImported = true;
+    saveNotes();
+  }
+  updateStorageStatus();
+}
+
+function populateSlideSelection() {
+  selector.replaceChildren();
+  let group;
+  let previousLabel;
+  SLIDES.forEach((slide) => {
+    const label = `${slide.section === 'study' ? 'Study' : 'Meeting'} · ${slide.chapter}`;
+    if (label !== previousLabel) {
+      group = document.createElement('optgroup');
+      group.label = label;
+      selector.appendChild(group);
+      previousLabel = label;
+    }
+    const option = document.createElement('option');
+    option.value = slide.id;
+    option.textContent = slide.title;
+    group.appendChild(option);
+  });
+}
+function syncNotes() {
+  const slide = SLIDES[idx];
+  textarea.value = noteState.notes[slide.id] || '';
+  document.getElementById('noteTopic').textContent = slide.title;
+  updateStorageStatus();
+}
+function renderSlide() {
+  const slide = SLIDES[idx];
+  let article = document.getElementById('slide');
+  if (!article) {
+    article = document.createElement('article');
+    article.id = 'slide';
+    stage.appendChild(article);
+  }
+  article.className = `slide ${slide.kind}`;
+  article.dataset.section = slide.section;
+  article.dataset.slideId = slide.id;
+  article.setAttribute('aria-labelledby', 'slideTitle');
+  article.replaceChildren();
+  const header = document.createElement('header');
+  header.className = 'slide-head';
+  const tag = document.createElement('p');
+  tag.className = 'eyebrow';
+  tag.textContent = slide.tag;
+  const heading = document.createElement('h1');
+  heading.id = 'slideTitle';
+  if (slide.kind === 'divider') {
+    const colon = slide.title.indexOf(':');
+    const emphasis = document.createElement('em');
+    emphasis.textContent = slide.title.slice(colon + 1).trim();
+    heading.append(document.createTextNode(slide.title.slice(0, colon + 1)), document.createElement('br'), emphasis);
+  } else heading.textContent = slide.title;
+  header.append(tag, heading);
+  const body = document.createElement('div');
+  body.className = 'slide-body';
+  body.innerHTML = slide.body;
+  article.append(header, body);
+  const items = SLIDES.filter(item => item.section === slide.section && item.kind !== 'divider');
+  const position = slide.kind === 'divider' ? 0 : items.findIndex(item => item.id === slide.id) + 1;
+  const sectionName = slide.section === 'study' ? 'Study' : 'Meeting';
+  const countText = `${sectionName} ${String(position).padStart(2, '0')} / ${String(items.length).padStart(2, '0')}`;
+  document.getElementById('sectionLabel').textContent = slide.section === 'study' ? 'Before the meeting' : 'During the meeting';
+  document.getElementById('chapterLabel').textContent = slide.chapter;
+  document.getElementById('counter').textContent = countText;
+  const progress = document.getElementById('progress');
+  progress.setAttribute('aria-valuemin', '0');
+  progress.setAttribute('aria-valuemax', String(items.length));
+  progress.setAttribute('aria-valuenow', String(position));
+  progress.setAttribute('aria-valuetext', countText);
+  document.getElementById('progressBar').style.width = `${100 * position / items.length}%`;
+  document.getElementById('studyBtn').setAttribute('aria-pressed', String(slide.section === 'study'));
+  document.getElementById('meetingBtn').setAttribute('aria-pressed', String(slide.section === 'meeting'));
+  document.getElementById('emergencyBtn').setAttribute('aria-pressed', String(slide.id === 'meeting-emergency'));
+  document.getElementById('prevBtn').disabled = idx === 0;
+  document.getElementById('nextBtn').disabled = idx === SLIDES.length - 1;
+  selector.value = slide.id;
+  document.title = `${slide.title} · Mike interview preparation`;
+  syncNotes();
+  stage.scrollTop = 0;
+  window.scrollTo(0, 0);
+  announce(`${countText}: ${slide.title}.`);
+}
+function canonicalUrl(id) {
+  const url = new URL(location.href);
+  url.searchParams.delete('slide');
+  url.searchParams.delete('mode');
+  url.hash = id;
+  return url;
+}
+function go(target, historyMode = 'push') {
+  const nextIndex = typeof target === 'number' ? Math.max(0, Math.min(SLIDES.length - 1, target)) : slideIndex.get(target);
+  if (nextIndex === undefined) return;
+  idx = nextIndex;
+  const url = canonicalUrl(SLIDES[idx].id);
+  if (historyMode === 'replace') history.replaceState(null, '', url);
+  else if (historyMode === 'push' && url.href !== location.href) history.pushState(null, '', url);
+  renderSlide();
+}
+function next() { go(idx + 1); }
+function prev() { go(idx - 1); }
+function study() { go('study-start'); }
+function meeting() { go('meeting-start'); }
+function emergency() { go('meeting-emergency'); }
+function openNotes() {
+  if (referencesPane.open) referencesPane.close();
+  syncNotes();
+  if (!notesPane.open) notesPane.showModal();
+  textarea.focus();
+}
+function openReferences() {
+  if (notesPane.open) notesPane.close();
+  if (!referencesPane.open) referencesPane.showModal();
+}
+function readLocation() {
+  const url = new URL(location.href);
+  let hash;
+  try { hash = decodeURIComponent(url.hash.slice(1)); } catch (error) { hash = ''; }
+  if (slideIndex.has(hash)) return { id: hash };
+  if (url.searchParams.get('mode') === 'live') return { id: 'meeting-start' };
+  const oldNumber = url.searchParams.get('slide');
+  if (oldNumber && /^\d+$/.test(oldNumber)) {
+    const entry = LEGACY_TOPICS[Number(oldNumber) - 1];
+    if (entry) return { id: entry[0] || 'study-start', references: entry[0] === null };
+  }
+  return { id: 'study-start' };
+}
+function restoreLocation() {
+  const requested = readLocation();
+  go(requested.id, 'replace');
+  if (requested.references) openReferences();
+}
+function buildNotesExport() {
+  const lines = ['Mike interview notes', `Exported: ${new Date().toISOString()}`, ''];
+  if (storageWarning) lines.push(`Storage notice: ${storageWarning}`, '');
+  let count = 0;
+  for (const slide of SLIDES) {
+    const text = noteState.notes[slide.id];
+    if (typeof text === 'string' && text.length) {
+      count++;
+      lines.push(`# ${slide.title}`, `Topic: ${slide.id}`, text, '');
+    }
+  }
+  const recovered = Object.entries(noteState.recovered);
+  if (recovered.length) {
+    lines.push('RECOVERED NOTES / ORIGINAL DATA', 'These entries were retained because they could not be assigned safely to one new topic.', '');
+    for (const [label, text] of recovered) lines.push(`## ${label}`, text, '');
+  }
+  if (!count && !recovered.length) lines.push('No notes yet.');
+  return lines.join('\n');
+}
+function exportNotes() {
+  const data = new Blob([buildNotesExport()], { type: 'text/plain;charset=utf-8' });
+  const url = URL.createObjectURL(data);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `mike-meeting-notes-${new Date().toISOString().slice(0, 10)}.txt`;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+  const count = Object.keys(noteState.recovered).length;
+  announce(`Notes export prepared${count ? `, including ${count} recovered ${count === 1 ? 'entry' : 'entries'}` : ''}.`);
+}
+async function toggleFullscreen() {
+  try {
+    if (document.fullscreenElement) await document.exitFullscreen();
+    else if (document.documentElement.requestFullscreen) await document.documentElement.requestFullscreen();
+    else announce('Fullscreen is unavailable in this browser.');
+  } catch (error) { announce('Fullscreen could not be opened. Use the browser’s fullscreen command.'); }
+}
+
+textarea.addEventListener('input', () => {
+  noteState.notes[SLIDES[idx].id] = textarea.value;
+  unsavedNotes = true;
+  saveNotes();
+});
+selector.addEventListener('change', () => go(selector.value));
+document.getElementById('studyBtn').addEventListener('click', study);
+document.getElementById('meetingBtn').addEventListener('click', meeting);
+document.getElementById('emergencyBtn').addEventListener('click', emergency);
+document.getElementById('prevBtn').addEventListener('click', prev);
+document.getElementById('nextBtn').addEventListener('click', next);
+document.getElementById('notesBtn').addEventListener('click', openNotes);
+document.getElementById('referencesBtn').addEventListener('click', openReferences);
+document.getElementById('fullscreenBtn').addEventListener('click', toggleFullscreen);
+document.getElementById('exportBtn').addEventListener('click', exportNotes);
+document.getElementById('closeNotesBtn').addEventListener('click', () => notesPane.close());
+document.getElementById('closeReferencesBtn').addEventListener('click', () => referencesPane.close());
+document.addEventListener('keydown', (event) => {
+  // Native dialogs own Escape and focus; typing and browser shortcuts never navigate.
+  if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey || notesPane.open || referencesPane.open) return;
+  const active = document.activeElement;
+  if (active && (active.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(active.tagName))) return;
+  if ((event.key === ' ' || event.key === 'Enter') && active && active.closest('button,a,summary')) return;
+  const actions = { ArrowRight: next, PageDown: next, ' ': next, ArrowLeft: prev, PageUp: prev, s: study, p: study, l: meeting, m: meeting, c: emergency, n: openNotes, r: openReferences, f: toggleFullscreen };
+  const action = actions[event.key];
+  if (action) { event.preventDefault(); action(); }
+});
+window.addEventListener('popstate', restoreLocation);
+window.addEventListener('hashchange', restoreLocation);
+window.addEventListener('beforeunload', (event) => {
+  if (unsavedNotes) { event.preventDefault(); event.returnValue = ''; }
+});
+loadAndMigrateNotes();
+populateSlideSelection();
+restoreLocation();
+
+</script></body></html>
