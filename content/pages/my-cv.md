@@ -32,6 +32,7 @@ permalink: /my-cv.html
         <li class="page-pill">🏛️ AI standards</li>
       </ul>
       <div class="page-actions">
+        <a href="{{ '/catch-up/' | relative_url }}" class="button">Book a Catch-up</a>
         <a href="{{ '/assets/pdfs/cv.pdf' | relative_url }}" class="button scrolly">Download PDF CV</a>
         <a href="{{ '/experience.html' | relative_url }}" class="button scrolly">Open Experience Timeline</a>
       </div>

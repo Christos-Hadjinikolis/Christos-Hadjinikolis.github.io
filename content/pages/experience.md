@@ -33,6 +33,7 @@ permalink: /experience.html
         <li class="page-pill">🏛️ Standards work</li>
       </ul>
       <div class="page-actions">
+        <a href="{{ '/catch-up/' | relative_url }}" class="button">Book a Catch-up</a>
         <a href="{{ '/assets/pdfs/cv.pdf' | relative_url }}" class="button scrolly">View Latest CV</a>
         <a href="{{ '/my-cv.html' | relative_url }}" class="button scrolly">Back to CV Snapshot</a>
       </div>

@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: Presentations
+hide: true
 subtitle: Talks, slides and the questions behind them
 icon: fa-desktop
 order: 5

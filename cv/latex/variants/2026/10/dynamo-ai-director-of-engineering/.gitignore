@@ -1,0 +1,8 @@
+_role-context/
+*.aux
+*.log
+*.out
+*.xdv
+*.fls
+*.fdb_latexmk
+*.synctex.gz
